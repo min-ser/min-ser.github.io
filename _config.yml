@@ -1,5 +1,5 @@
 # Site settings
-title: "MADness"
+title: "BlackCode For Dream"
 description: A Template for Jekyll
 
 # Files
@@ -24,10 +24,10 @@ wpm: 200
 
 # Owner/author information
 owner:
-  name:   MADness
+  name:   김민서
   avatar: avatar.jpg
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    MAD for Jekyll
+  description:    The BlackCode for Dream
 
 # Social networking links used in footer. Update and remove as you like.
 twitter_username: MAD4Jekyll
