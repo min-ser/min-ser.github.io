@@ -1,39 +1,52 @@
-# Github Blog Info 
-[IIBLACKCODE GIT BLOG URL](https://iiblackcode.github.io)
+# MAD4Jekyll - Theme for Jekyll 
 
-=====
+> !!! Configured for **USER** pages !!!
 
-Open source stylish, minimalistic theme for jekyll.  
-Demo: http://dbtek.github.io/dbyll/
+## Welcome to MAD4Jekyll!
+     
 
-## New
-- Dbyll for Ghost is now available. Get it [here](https://github.com/dbtek/dbyll-ghost) now.
-- :new: Check out [Paper](https://github.com/dbtek/paper), new Material Design Jekyll theme.
+### 'MAD4Jekyll' is a theme for [Jekyll](https://github.com/jekyll/)
 
-### Features
-- Responsive layout.
-- Supports tags and categories.
-- Social profile and bio of author.
-- Bootstrap based.
-- Glyphicon and Font-Awesome Icons.
-- Pagination.
-- Syntax highlighting with pygments.
-- Disqus comments.
-- :new: Custom sidebar background image.
+> The template has been revised as of August 27th, 2016.
+
+----------
+
+> A big thank you to <a href="https://github.com/patmuk">Patrick Mukherjee</a> for his contribution on regenerating the code.
 
 
-### Download
-* [Download dbyll](https://github.com/dbtek/dbyll/archive/master.zip)
+### It is based on [Clean Blog](http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/) theme by [Start Bootstrap](http://startbootstrap.com/).
 
-### Install
-- You need to have [ruby](https://www.ruby-lang.org/en/documentation/installation/) installed in your system.
-- Install bundler which helps in specifying and installing dependencies of any Ruby project. ```gem install bundler```
-- Go to the root of the repo and run this - ```bundle install```
-- Then - ```bundle exec jekyll serve```
+     
+#  Homepage  
 
-### Screenshots
-![dbyll-screenshot](assets/media/dbyll-ss.png)
+#### Header Image
 
-### License
-- [MIT](http://opensource.org/licenses/MIT)
+#### A brief description
 
+#### A slider (it is turned off by default, since there is a also a separate section for a gallery)
+
+#### Contact Info
+            
+
+#  Navbar 
+
+#### A logo on the left side
+ 
+#### 3 Pages for <a href="{{ site.baseurl }}/writing/">'blogging'</a>, <a href="{{ site.baseurl }}/gallery/">'gallery sliders'</a>, <a href="{{ site.baseurl }}/about/">'about'</a>.
+       
+
+#####  Search page, with all the tags and categories at the bottom
+
+##### Footnotes poping up.
+
+>## !!! IMPORTANT !!! Before You Begin
+>
+>####  Set the **_config.yml** file, with your personal info!
+
+## What's Included
+
+#### A full Jekyll environment is included with this theme. If you have Jekyll installed, simply run `jekyll serve` in your command line and preview the build in your browser. You can use `jekyll serve --watch` to watch for changes in the source files as well.
+
+#### A Grunt environment is also included. There are a number of tasks it performs like minification of the JavaScript, compiling of the LESS files, adding banners to keep the Apache 2.0 license intact, and watching for changes. Run the grunt default task by entering `grunt` into your command line which will build the files. You can use `grunt watch` if you are working on the JavaScript or the LESS.
+
+#### You can run `jekyll serve --watch` and `grunt watch` at the same time to watch for changes and then build them all at once.
