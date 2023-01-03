@@ -1,4 +1,6 @@
-dbyll
+# Github Blog Info 
+[IIBLACKCODE GIT BLOG URL](https://iiblackcode.github.io)
+
 =====
 
 Open source stylish, minimalistic theme for jekyll.  
