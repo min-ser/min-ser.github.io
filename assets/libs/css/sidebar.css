@@ -1,0 +1,67 @@
+/* https: //www.youtube.com/watch?v=IvXuk5Sh4GE */
+input[id="menuicon"]{
+    display: none;
+}
+input[id="menuicon"] + label {
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: fixed;
+    left: 0;
+    top:calc(50% - 25px);
+    transition:all .35s;
+    cursor: pointer;
+}
+input[id="menuicon"] + label span {
+    display: block;
+    position: absolute;
+    width:100%;
+    height:5px;
+    border-radius: 30px;
+    background: rgb(99, 24, 24);
+    transition: all .35s;
+}
+input[id="menuicon"]+label span:nth-child(1) {
+    top:0
+}
+input[id="menuicon"]+label span:nth-child(2) {
+    top:50%;
+    transform: translateY(-50%);
+}
+input[id="menuicon"]+label span:nth-child(3) {
+    bottom: 0;
+}
+
+/* 사이드바 메뉴버튼 클릭 */
+input[id="menuicon"]:checked + label {
+    z-index: 2;
+    left: 300px;
+}
+input[id="menuicon"]:checked + label span:nth-child(1) {
+    top:50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="menuicon"]:checked + label span:nth-child(3) {
+    bottom: 50%;
+    transform:translateY(50%) rotate(-45deg);
+}
+
+/* https: //www.youtube.com/watch?v=AcDKkaorPvU&t=97s */
+/* 사이드바 */
+div[class="sidebar"] {
+    width: 300px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    z-index: 1;
+    transition: all .35s;
+}
+
+input[id="menuicon"]:checked + label + div {
+    left:0;
+}

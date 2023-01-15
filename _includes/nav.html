@@ -2,6 +2,17 @@
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
+
+        <input type="checkbox" id="menuicon" onclick="w3_open()" >
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            {% include sidebar.html %}
+        </div>
+
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <i class="fa fa-bars fa-lg"></i>
@@ -13,34 +24,22 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right" style="text-shadow: 2px 2px rgba(0, 0, 0, 0.75);">
                 
-<li>
+                <li>
                     <a href="{{ root_url }}/writing/">WRITING</a>
                 </li>
-<li>
+                <li>
                     <a href="{{ root_url }}/gallery/">GALLERY</a>
                 </li>
-<li>
+                <li>
                     <a href="{{ root_url }}/about/">ABOUT</a>
                 </li>
-<li>
-                    <a href="{{ root_url }}/search/" class="nav-search-link" title="SEARCH">
-		    <span class="fa fa-search nav-search-icon"></span>
-		  </a>
-		</li>
-
-
-
-              <!-- {% for page in site.pages %}{% if page.title %}
                 <li>
-                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                    <a href="{{ root_url }}/search/" class="nav-search-link" title="SEARCH">
+                        <span class="fa fa-search nav-search-icon"></span>
+                    </a>
                 </li>
-                {% endif %}{% endfor %} ...
-
-
-
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
 </nav>

@@ -7,8 +7,7 @@
 </head>
 
 <body>
-
-
+    
     {% include nav.html %}
 
     {{ content }}
@@ -16,6 +15,16 @@
     {% include footer.html %}
 
 {% include Scroll_to_Top.html %}
+
+<script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
 
 </body>
 
