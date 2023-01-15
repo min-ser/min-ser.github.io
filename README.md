@@ -1,3 +1,6 @@
+---
+# [Demo Theme URL](http://madforjekyll.github.io/)
+
 # MAD4Jekyll - Theme for Jekyll 
 
 > !!! Configured for **USER** pages !!!
