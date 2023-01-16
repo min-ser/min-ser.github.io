@@ -31,7 +31,7 @@ permalink: /search/
         font-size: 0.8em;
               }
 
-    </style>
+</style>
 
 <!-- Html Elements for Search -->
 <input type="text" id="search-input" placeholder="Enter keywords...">
@@ -55,11 +55,11 @@ permalink: /search/
     </script>
 
 <br>
-  <div id="tags">
-  	<h5>tag cloud</h5>
-   {% assign tags = site.tags | sort %}
-{% for tag in tags %}
- <span class="site-tag">
+<div id="tags">
+  <h5>tag cloud</h5>
+  {% assign tags = site.tags | sort %}
+  {% for tag in tags %}
+  <span class="site-tag">
     <a href="/writing/tag/{{ tag | first | slugify }}/"
         style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
             {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
@@ -77,15 +77,15 @@ permalink: /search/
 </style>
 
 <br>
-  <div id="categories">
-  	<h5>categories</h5>
-   {% assign categories = site.categories | sort %}
-{% for category in categories %}
- <span class="site-category">
-    <a href="/writing/category/{{ category | first | slugify }}/">
-            {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
-    </a>
-</span>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
+<div id="categories">
+  <h5>categories</h5>
+  {% assign categories = site.categories | sort %}
+  {% for category in categories %}
+  <span class="site-category">
+  <a href="/writing/category/{{ category | first | slugify }}/">
+  {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
+  </a>
+  </span>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
 
 </div>
 
