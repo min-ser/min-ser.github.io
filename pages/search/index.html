@@ -85,7 +85,8 @@ permalink: /search/
   <a href="/writing/category/{{ category | first | slugify }}/">
   {{ category[0] | replace:'-', ' ' }} ({{ category | last | size }})
   </a>
-  </span>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
+  </span>
+  {% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
 
 </div>
 
