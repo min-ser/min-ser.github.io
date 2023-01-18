@@ -8,8 +8,8 @@ header-img: "assets/owner/blog/header/post-bg-01.jpg"
 thumbnail: /assets/owner/blog/thumbs/thumb01.png
 tags: [tag-name-one, tag-name-two]
 category: [cat03]
-comments: false
-share: false
+comments: true # 댓글 차단
+share: false    # 공유 차단
 gallery1: 
   - image_path: /assets/owner/blog/galleries/g01/bg1.jpg
     image-caption: IMAGE TITLE

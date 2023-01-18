@@ -30,7 +30,14 @@ layout: default
                         <div class="site-heading">
                             <h1>{% if post.title %}{{ post.title }}{% else %}{{ site.title }}{% endif %}</h1>
                             <hr class="small">
-                            <span class="subheading">{{ page.description }}</span>
+                            <h2>{{ post.subtitle }}</h2>
+                            <span class="subheading">{{ post.description }}</span>
+                            <hr>
+                            <ul>
+                                <li>Category : {{ post.category }}</li>
+                                <li>Tag : {{ post.tags }}</li>
+                            </ul>
+                            <hr>
                         </div>
                     </div>
                 </div>
