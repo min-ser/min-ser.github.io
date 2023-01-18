@@ -1,5 +1,9 @@
 # [BlackCode GitBlogs](https://iiblackcode.github.io/)
 
+## Jekyll Local Server start 명령어
+
+    bundle exec jekyll serve
+
 ---
 # [Demo Theme URL](http://madforjekyll.github.io/)
 
