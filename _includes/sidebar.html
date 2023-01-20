@@ -1,13 +1,22 @@
-<div class="sidebar-wapper1">
+<div class="sidebar-wapper1" style="overflow: hidden">
 <div class="sidebar-wapper2">
 	<div class="sidebar-item sidebar-header">
+		<hr>
+		<!-- 
 		<div class='sidebar-brand'>
 			<a href="/">{{ site.title }}</a>
 		</div>
-		<p class="lead"><a href="https://github.com/IIBlackCode">Blackcode-Git</a></p>
-		<p class="lead"><a href="https://blackcode42.pythonanywhere.com/">Blackcode-Site</a></p>
-		<!-- <p class="lead"><a href="https://minuetchoi-music.github.io/">minuetchoi-music</a></p>
-		<p class="lead"><a href="https://minuetchoi-study.github.io/">minuetchoi-study</a></p> -->
+		<p class="nav-item sidebar-li"><a href="https://github.com/IIBlackCode">Blackcode-Git</a></p>
+		<p class="nav-item sidebar-li"><a href="https://blackcode42.pythonanywhere.com/">Blackcode-Site</a></p>
+		 -->
+		
+		<details open>
+			<summary><a>{{ site.title }}</a></summary>
+			<ul class="nav">
+				<li><a class="nav-item sidebar-li" href="https://github.com/IIBlackCode">Blackcode-Git</a></li>
+				<li><a class="nav-item sidebar-li" href="https://blackcode42.pythonanywhere.com/">Blackcode-Site</a></li>
+			</ul>
+		</details>
 		
 		{%- if social.github -%}
 			<a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}">
@@ -17,44 +26,86 @@
 		{%- endif -%}
 	</div>
 
+	<hr>
+
 	<!-- Pages List -->
-	<ul class="nav">
-		<li class="nav-title">Pages</li>
-		{% assign pages_list = site.pages %}
-		{% for node in pages_list %}
+	<details>
+		<summary><a>Pages</a></summary>
+		<ul class="nav">
+			<!-- <li class="nav-title">Pages</li> -->
+			{% assign pages_list = site.pages %}
+			{% for node in pages_list %}
 			{% if node.title != null %}
 			{% if node.layout == "page" %}
 				<li>
-					<a class="nav-item" href="{{ node.url }}">
+					<a class="nav-item sidebar-li" href="{{ node.url }}">
 						{{ node.title }}
 					</a>
 				</li>
 			{% endif %}
 			{% endif %}
-		{% endfor %}
-	</ul>
+			{% endfor %}
+		</ul>
+	</details>
+
+	<hr>
 
 	<!-- Categories List -->
-	<ul class="nav">
-			<li class="nav-title">Categories</li>
-		{% for category in site.categories %}
-		<li>
-			<!-- 
-				2023-01-17 
-				내용 : Category 페이지로 정상이동 수정
-				개발자 : 김민서
-				<a class="nav-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}"> 
-			-->
-			<a class="nav-item" href="/writing/category/{{ category | first | slugify }}/">
-				<span class="name">{{ category | first }}</span>
-				<span class="badge">{{ category | last | size }}</span>
-			</a>
-		</li>
-		{% endfor %}
-	</ul>
+	<details open>
+		<summary><a>Categories</a></summary>
+		<ul class="nav">
+			<!-- <li class="nav-title">Categories</li> -->
+			{% assign categories = site.categories | sort %}
+			{% for category in site.categories %}
+			<li>
+				<!-- 
+					2023-01-17 
+					내용 : Category 페이지로 정상이동 수정
+					개발자 : 김민서
+					<a class="nav-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}"> 
+				-->
+				<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
+					<span class="name">{{ category[0] | replace:'-', ' ' }} {{ category | first }}</span>
+					<span class="badge">{{ category | last | size }}</span>
+				</a>
+			</li>
+			<!-- {% unless forloop.last %}&nbsp;{% endunless %} -->
+			{% endfor %}
+		</ul>
+	</details>
+
+	<hr>
+
+	<!-- Tag List -->
+	<details>
+		<summary><a>TAG</a></summary>
+		<ul class="nav">
+			<!-- <li class="nav-title">Categories</li> -->
+			{% assign tags = site.tags | sort %}
+			{% for tag in site.tags %}
+			<li>
+				<!-- 
+						2023-01-17 
+						내용 : Category 페이지로 정상이동 수정
+						개발자 : 김민서
+						<a class="nav-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}"> 
+					-->
+				<a class="nav-item sidebar-li" href="/writing/tag/{{ tag | first | slugify }}/">
+					<span class="name">{{ tag | first }}</span>
+					<span class="badge">{{ tag | last | size }}</span>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</details>
+
+	<hr>
 
 	<div class="sidebar-item sidebar-footer">
 		<p>BlackCode <a href="https://github.com/IIBlackCode">Github</a></p>
 	</div>
+
+	<hr>
+
 </div>
 </div>
