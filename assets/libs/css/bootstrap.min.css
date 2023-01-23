@@ -1823,7 +1823,7 @@ html {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.42857143;
   color: #dddddd;
   background-color: #30292B;
@@ -1839,7 +1839,7 @@ textarea {
 }
 
 a {
-  color: #008989;
+  color: #941111;
     transition: color .3s;
 }
 
@@ -1896,7 +1896,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #3b2525;
+  border-top: 1px solid #3b3925;
 }
 
 .sr-only {
@@ -2023,7 +2023,8 @@ h6 small {
 
 .h1,
 h1 {
-  font-size: 36px
+  font-size: 36px;
+  border-bottom: 1px solid white;
 }
 
 .h2,

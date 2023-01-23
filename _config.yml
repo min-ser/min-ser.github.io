@@ -41,9 +41,9 @@ instagram_username: MAD4Jekyll
  
 # Internal nav
 nav:
- writing: "root_url/writing/"
- gallery: "root_url/gallery/"
- about: "root_url/about/"
+  writing: "root_url/writing/"
+  gallery: "root_url/gallery/"
+  about: "root_url/about/"
 
 
 # Server

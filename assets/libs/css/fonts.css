@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Diploma';
+    src: url('../fonts/Diploma.woff')
+}
+
+.diploma {
+    font-family: 'Diploma'
+}

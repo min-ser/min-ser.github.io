@@ -1,54 +1,62 @@
 /* https: //www.youtube.com/watch?v=IvXuk5Sh4GE */
-input[id="menuicon"]{
+input[id="menuicon"] {
     display: none;
 }
-input[id="menuicon"] + label {
+
+input[id="menuicon"]+label {
     display: block;
     width: 30px;
     height: 30px;
     position: fixed;
     left: 0;
-    top:calc(50% - 25px);
+    top: calc(50% - 25px);
     transition: all .35s;
     cursor: pointer;
 }
-input[id="menuicon"] + label span {
+
+input[id="menuicon"]+label span {
     margin-top: 10px;
     margin-left: 10px;
     display: block;
     position: absolute;
-    width:100%;
-    height:5px;
+    width: 100%;
+    height: 5px;
     border-radius: 30px;
     background: rgb(218, 207, 207);
     transition: all .35s;
 }
+
 input[id="menuicon"]+label span:nth-child(1) {
-    top:0
+    top: 0
 }
+
 input[id="menuicon"]+label span:nth-child(2) {
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
 }
+
 input[id="menuicon"]+label span:nth-child(3) {
     bottom: -10px;
 }
 
 /* 사이드바 메뉴버튼 클릭 */
-input[id="menuicon"]:checked + label {
+input[id="menuicon"]:checked+label {
     z-index: 2;
-    left: 300px;
+    left: 290px;
 }
-input[id="menuicon"]:checked + label span:nth-child(1) {
-    top:19%;
+
+input[id="menuicon"]:checked+label span:nth-child(1) {
+    top: 19%;
     transform: translateY(-50%) rotate(45deg);
 }
-input[id="menuicon"]:checked + label span:nth-child(2) {
+
+input[id="menuicon"]:checked+label span:nth-child(2) {
     opacity: 0;
 }
-input[id="menuicon"]:checked + label span:nth-child(3) {
+
+input[id="menuicon"]:checked+label span:nth-child(3) {
     bottom: 50%;
-    transform:translateY(50%) rotate(-45deg);
+    transform: translateY(50%) rotate(-45deg);
 }
 
 /* https: //www.youtube.com/watch?v=AcDKkaorPvU&t=97s */
@@ -64,20 +72,62 @@ div[class="sidebar"] {
     overflow: auto;
 }
 
-input[id="menuicon"]:checked + label + div {
-    left:0;
+input[id="menuicon"]:checked+label+div {
+    left: 0;
 }
+
 div[class="sidebar-wapper1"] {
-    background-color: black;
 }
+
 div[class="sidebar-wapper2"] {
+    border: 1px solid #ffd90094;
+    width: 280px;
+    margin: 10px;
+    padding: 10;
+    background-color: black;
+    position: absolute;
+}
+
+.nav li a {
+    color: rgb(218, 207, 207);
+    display: block;
     margin: 10px;
 }
 
-.test {
-    margin-left: 10px !important;
+.sidebar-wapper2 a {
+    padding: 10px;
+}
+.sidebar-wapper2 p {
+    text-align: center;
+    font-family: 'Diploma'
 }
 
-.sidebar-li{
+.sidebar-wapper2 .name {
+    /* padding: 10px; */
+    position: absolute;
+    /* left: 20px; */
+    color:rgb(218, 207, 207);
+    top: 2px;
+}
+
+.sidebar-wapper2 .badge {
+    position: absolute;
+    top: 2px;
+    left:88%;
+}
+
+.logo {
+    margin-left: 10px !important;
+    font-family: 'Diploma';
+    font-size: 28px;
+    color: rgb(70, 63, 63) !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    position: absolute;
+    top: 29px;
+    left:44px;
+}
+
+.sidebar-li {
     padding: 10px !important;
 }

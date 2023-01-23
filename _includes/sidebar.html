@@ -56,14 +56,8 @@
 		<ul class="nav">
 			<!-- <li class="nav-title">Categories</li> -->
 			{% assign categories = site.categories | sort %}
-			{% for category in site.categories %}
+			{% for category in categories %}
 			<li>
-				<!-- 
-					2023-01-17 
-					내용 : Category 페이지로 정상이동 수정
-					개발자 : 김민서
-					<a class="nav-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}"> 
-				-->
 				<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
 					<span class="name">{{ category[0] | replace:'-', ' ' }}</span>
 					<span class="badge">{{ category | last | size }}</span>
@@ -84,12 +78,6 @@
 			{% assign tags = site.tags | sort %}
 			{% for tag in site.tags %}
 			<li>
-				<!-- 
-						2023-01-17 
-						내용 : Category 페이지로 정상이동 수정
-						개발자 : 김민서
-						<a class="nav-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}"> 
-					-->
 				<a class="nav-item sidebar-li" href="/writing/tag/{{ tag | first | slugify }}/">
 					<span class="name">{{ tag | first }}</span>
 					<span class="badge">{{ tag | last | size }}</span>
