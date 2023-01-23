@@ -43,7 +43,7 @@ instagram_username: MAD4Jekyll
 nav:
   writing: "root_url/writing/"
   gallery: "root_url/gallery/"
-  releasenote: "root_url/releasenote/"
+  releasenote: "root_url/note/"
   about: "root_url/about/"
 
 
