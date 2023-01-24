@@ -1825,7 +1825,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
   line-height: 1.42857143;
-  color: #dddddd;
+  /* color: #dddddd; */
+  /* color: #c18a25; */
   background-color: #030000;
 }
 

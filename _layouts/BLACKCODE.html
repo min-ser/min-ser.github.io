@@ -25,7 +25,7 @@ layout: default
         <!-- <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')"> -->
         <header class="intro-header" style=" overflow: hidden; margin: 0px auto; position: relative;">
             <!-- CSS 동영상 추가 -->
-            <div style="position: absolute; top: 0%; width: 100%;">
+            <div style="position: absolute; top: 0%; width: 100%; z-index:0;">
                 <video muted autoplay loop style="height: 100%;">
                     <source
                         src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"
