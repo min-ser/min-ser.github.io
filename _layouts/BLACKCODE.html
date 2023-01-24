@@ -22,8 +22,16 @@ layout: default
     <article>
 
         <!-- Page Header -->
-        <header class="intro-header"
-            style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+        <!-- <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')"> -->
+        <header class="intro-header" style=" overflow: hidden; margin: 0px auto; position: relative;">
+            <!-- CSS 동영상 추가 -->
+            <div style="position: absolute; top: 0%; width: 100%;">
+                <video muted autoplay loop style="height: 100%;">
+                    <source
+                        src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"
+                        type="video/mp4">
+                </video>
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
