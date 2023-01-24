@@ -26,9 +26,11 @@ layout: default
         <header class="intro-header" style=" overflow: hidden; margin: 0px auto; position: relative;">
             <!-- CSS 동영상 추가 -->
             <div style="position: absolute; top: 0%; width: 100%; z-index:0;">
-                <video muted autoplay loop style="height: 100%;" playsinline>
+                <video muted autoplay loop playsinline 
+                poster="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"
+                style="height: 100%;">
                     <source
-                        src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"
+                        src="{{ site.baseurl }}/{% if page.header-video %}{{ page.header-video }}{% else %}{{ site.header-video }}{% endif %}"
                         type="video/mp4">
                 </video>
             </div>
