@@ -1827,7 +1827,7 @@ body {
   line-height: 1.42857143;
   /* color: #dddddd; */
   /* color: #c18a25; */
-  background-color: #030000;
+  background-color: #ffffff;
 }
 
 button,
@@ -1840,7 +1840,7 @@ textarea {
 }
 
 a {
-  color: #941111;
+  color: #a81212;
     transition: color .3s;
 }
 
@@ -1897,7 +1897,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #3b3925;
+  border-top: 1px solid #d5c420;
 }
 
 .sr-only {
@@ -2025,7 +2025,7 @@ h6 small {
 .h1,
 h1 {
   font-size: 36px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #b34848;
 }
 
 .h2,

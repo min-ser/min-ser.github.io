@@ -48,7 +48,8 @@
 .highlight .kt { color: #445588; font-weight: bold; }
 .highlight .m { color: #009999; }
 .highlight .s { color: #f9bf9b; }
-.highlight .n { color: #333333; }
+/* .highlight .n { color: #333333; } */
+.highlight .n { color: #000000; }
 .highlight .na { color: teal; }
 .highlight .nb { color: #0086b3; }
 .highlight .nc { color: #445588; font-weight: bold; }
