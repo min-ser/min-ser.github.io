@@ -48,55 +48,6 @@ permalink: ./index.html
 
 <body class="diploma" style="background-color: #FFFFFF !important; color:#d59a9a !important;">
 
-  <div id="player" style="z-index: 1;">
-    <script src="https://www.youtube.com/iframe_api"></script>
-  </div>
-  
-  <script>
-    var player;
-
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        videoId: 'LKQ-18LoFQk',
-        playerVars: {
-          'autoplay': 1,
-          'rel': 0,
-          'showinfo': 0,
-          'modestbranding': 1,
-          'playsinline': 1,
-          'showinfo': 0,
-          'rel': 0,
-          'controls': 1,
-          'color': 'white',
-          'loop': 1,
-          'mute': 0,
-          // 'origin': 'https://meeranblog24x7.blogspot.com/'
-        },
-        events: {
-          'onReady': onPlayerReady,
-          // 'onStateChange': onPlayerStateChange
-        }
-      });
-    }
-
-    function onPlayerReady(event) {
-      player.playVideo();
-      player.mute();
-    } var done = false;
-
-    function onPlayerStateChange(event) {
-      if (event.data == YT.PlayerState.PLAYING && !done) {
-        setTimeout(stopVideo, 6000);
-        done = true;
-      }
-    }
-
-    function stopVideo() {
-      player.stopVideo();
-    }
-
-  </script>
-
   <img 
   style="
     height: 100%;
@@ -105,6 +56,7 @@ permalink: ./index.html
     left: 50% !important;
     transform: translate(-50%, -50%);
     top: 50%;
+    z-index: -1;
     "
   src="../assets/img/kisspng-christian-cross-crucifixion-black-and-white-crows-heart.png">
   <div class="intro">
