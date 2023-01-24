@@ -7,7 +7,7 @@ layout: default
 <header class="intro-header" style=" overflow: hidden; margin: 0px auto; position: relative;">
     <!-- CSS 동영상 추가 -->
     <div style="position: absolute; top: 0%; width: 100%; z-index:0; opacity:0.7;">
-        <video muted autoplay loop=""
+        <video muted autoplay playsinline loop=""
         poster="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"
         style="height: 100%; filter:britness(10%);">
             <source src="{{ site.baseurl }}/{% if page.header-video %}{{ page.header-video }}{% else %}{{ site.header-video }}{% endif %}" type="video/mp4">
