@@ -280,7 +280,8 @@ hr.small {
 }
 footer {
   padding: 50px 0 65px;
-  background-color: #062e03;
+  /* background-color: #062e03; */
+  background-color: #000000;
 }
 footer .list-inline {
   margin: 0;
