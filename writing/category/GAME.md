@@ -1,6 +1,6 @@
 ---
 layout: "writing_by_category"
-category: "김민서"
-permalink: "/writing/category/김민서/"
+category: "game"
+permalink: "/writing/category/game/"
 header-img: "assets/owner/hero/archive-bg.jpg"
 ---
