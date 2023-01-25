@@ -15,7 +15,7 @@ category: [Azure-Error]
 ---
 
 # 사건 개요
-    VSCode 에서 Azure Potal 연동시도중 발생
+VSCode 에서 Azure Potal 연동시도중 발생
 
 ![error](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Azure/img/error_1-1.PNG?raw=true)
 
