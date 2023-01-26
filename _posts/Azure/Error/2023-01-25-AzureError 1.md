@@ -1,6 +1,6 @@
 ---
 layout:     BLACKCODE
-title:      "[Azure] 모듈 로드 Error"
+title:      "[Azure] 1. 모듈 로드 Error"
 subtitle:   "-"
 description: "https://learn.microsoft.com/ko-kr/azure/aks/hybrid/create-pods"
 date:       2023-01-25 01:00:00
