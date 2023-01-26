@@ -9,7 +9,7 @@ header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
 thumbnail: /assets/owner/blog/thumbs/thumb01.png
 tags: [Azure]
-category: [AzureError]
+category: [Azure-Error]
 # comments: false
 # share: false
 ---
