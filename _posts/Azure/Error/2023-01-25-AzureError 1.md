@@ -1,7 +1,7 @@
 ---
 layout:     BLACKCODE
 title:      "[Azure] 1. 모듈 로드 Error"
-subtitle:   "-"
+subtitle:   ""
 description: "https://learn.microsoft.com/ko-kr/azure/aks/hybrid/create-pods"
 date:       2023-01-25 01:00:00
 author:     "MADness"
@@ -9,7 +9,7 @@ header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
 thumbnail: /assets/owner/blog/thumbs/thumb01.png
 tags: [Azure]
-category: [Azure-Error]
+category: [Azure]
 # comments: false
 # share: false
 ---
