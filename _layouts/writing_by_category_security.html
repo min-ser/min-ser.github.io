@@ -2,17 +2,49 @@
 layout: page
 title: it archive
 ---
-<label>암호를 입력하려면 버튼을 클릭해 주세요.</label>
-<input type='button' value='open' id='btnOpen'>
-
+<!-- <label>암호를 입력하려면 버튼을 클릭해 주세요.</label>
+<input type='button' value='open' id='btnOpen'> -->
+<input id="passwordAnswer" type="hidden" value="test">
 <div id='modal'>
     <div id='content'>
-        <input type='button' value='X' class="close" id='btnClose' />
-        <label>암호를 입력하세요</label><br />
-        <input type='password' id='pwd' value='1234' />
+        <!-- <input type='button' value='X' class="close" id='btnClose' /> -->
+        <label>Please enter your password {{ password }}</label><br />
+        <input type='password' id='passwordEnter' value='' />
         <input type='button' value='check' id='btnCheck' />
     </div>
 </div>
+
+<script>
+    var btnOpen = document.getElementById('btnOpen');
+    var btnCheck = document.getElementById('btnCheck');
+    var btnClose = document.getElementById('btnClose');
+
+    // modal 창을 감춤
+    var closeRtn = function () {
+        const passwordEnter = document.getElementById('passwordEnter').value;
+        const passwordAnswer = document.getElementById('passwordAnswer').value;
+        console.log(passwordEnter)
+        if(passwordEnter == passwordAnswer){
+            console.log("일치");
+            var modal = document.getElementById('modal');
+            modal.style.display = 'none';
+        }else{ 
+            console.log("불일치");
+            alert("Need to check password")
+        }
+    }
+
+    // modal 창을 보여줌
+    /*
+    btnOpen.onclick = function () {
+        var modal = document.getElementById('modal');
+        modal.style.display = 'block';
+    }
+    */
+
+    btnCheck.onclick = closeRtn;
+    btnClose.onclick = closeRtn;
+</script>
 
 <div id="post-content">
     {% if site.categories[page.category] %}
