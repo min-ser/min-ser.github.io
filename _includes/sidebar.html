@@ -68,6 +68,27 @@
 		</ul>
 	</details>
 
+	<!-- Security Categories List -->
+	<details>
+		<summary><a>Security[개발중]</a></summary>
+		<a>{{ site }}</a>
+		<a>{{ site.categories }}</a>
+		<a>{{ site.tags }}</a>
+		<ul class="nav">
+			<!-- <li class="nav-title">Categories</li> -->
+			{% assign securities = site.categories | sort %}
+			{% for security in securities %}
+			<li>
+				<a class="nav-item sidebar-li" href="/writing/security/{{ security | first | slugify }}/">
+					<span class="name">{{ security[0] | replace:'-', ' ' }}</span>
+					<span class="badge">{{ security | last | size }}</span>
+				</a>
+			</li>
+			<!-- {% unless forloop.last %}&nbsp;{% endunless %} -->
+			{% endfor %}
+		</ul>
+	</details>
+
 	<hr>
 
 	<!-- Tag List -->
