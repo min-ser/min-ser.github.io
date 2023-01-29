@@ -50,41 +50,51 @@
 
 	<hr>
 
-	<!-- Categories List -->
+	<!-- categoryList -->
+	
 	<details open>
-		<summary><a>Categories</a></summary>
+		<summary><a>Category</a></summary>
 		<ul class="nav">
-			<!-- <li class="nav-title">Categories</li> -->
-			{% assign categories = site.categories | sort %}
-			{% for category in categories %}
+			<!-- <li class="nav-title">categoryList</li> -->
+			<!-- 카테고리 리스트 변수 선언 -->
+			{% assign categoryList = site.categories | sort %}
+			{% for category in categoryList %}
+				{% if category[0] != "securitiestest" and category[0] != "Megazone" %}
 			<li>
 				<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
 					<span class="name">{{ category[0] | replace:'-', ' ' }}</span>
 					<span class="badge">{{ category | last | size }}</span>
 				</a>
 			</li>
+				{% endif %}
 			<!-- {% unless forloop.last %}&nbsp;{% endunless %} -->
 			{% endfor %}
 		</ul>
 	</details>
 
-	<!-- Security Categories List -->
-	<details>
+	<!-- Security categoryList  -->
+	<details open>
 		<summary><a>Security[개발중]</a></summary>
-		<a>{{ site }}</a>
-		<a>{{ site.categories }}</a>
-		<a>{{ site.tags }}</a>
 		<ul class="nav">
-			<!-- <li class="nav-title">Categories</li> -->
-			{% assign securities = site.categories | sort %}
-			{% for security in securities %}
-			<li>
-				<a class="nav-item sidebar-li" href="/writing/security/{{ security | first | slugify }}/">
-					<span class="name">{{ security[0] | replace:'-', ' ' }}</span>
-					<span class="badge">{{ security | last | size }}</span>
-				</a>
-			</li>
-			<!-- {% unless forloop.last %}&nbsp;{% endunless %} -->
+			<!-- <li class="nav-title">categoryList</li> -->
+			<!-- 카테고리 리스트 변수 선언 -->
+			{% for category in categoryList %}
+				{% if category[0] == "Megazone" %}
+				<li>
+					<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
+						<span class="name">{{ category[0] | replace:'-', ' ' }}</span>
+						<span class="badge">{{ category | last | size }}</span>
+					</a>
+				</li>
+				{% endif %}
+				{% if category[0] == "securitiestest" %}
+				<li>
+					<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
+						<span class="name">{{ category[0] | replace:'-', ' ' }}</span>
+						<span class="badge">{{ category | last | size }}</span>
+					</a>
+				</li>
+				{% endif %}
 			{% endfor %}
 		</ul>
 	</details>
@@ -95,7 +105,7 @@
 	<details>
 		<summary><a>TAG</a></summary>
 		<ul class="nav">
-			<!-- <li class="nav-title">Categories</li> -->
+			<!-- <li class="nav-title">categoryList</li> -->
 			{% assign tags = site.tags | sort %}
 			{% for tag in site.tags %}
 			<li>
