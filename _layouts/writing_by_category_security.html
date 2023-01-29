@@ -4,11 +4,11 @@ title: it archive
 ---
 <!-- <label>암호를 입력하려면 버튼을 클릭해 주세요.</label>
 <input type='button' value='open' id='btnOpen'> -->
-<input id="passwordAnswer" type="hidden" value="test">
+<input id="passwordAnswer" type="hidden" value="{{ site.password }}">
 <div id='modal'>
     <div id='content'>
         <!-- <input type='button' value='X' class="close" id='btnClose' /> -->
-        <label>Please enter your password {{ password }}</label><br />
+        <label>Please enter your password {{ site.password }}</label><br />
         <input type='password' id='passwordEnter' value='' />
         <input type='button' value='check' id='btnCheck' />
     </div>
