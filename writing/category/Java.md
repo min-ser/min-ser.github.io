@@ -6,5 +6,5 @@ category: "Java"
 permalink: "/writing/category/java/"
 header-img: "assets/owner/hero/archive-bg.jpg"
 header-video: "assets/video/metrix2.mp4"
-title: "Kubernetes"
+title: "Java"
 ---
