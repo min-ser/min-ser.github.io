@@ -1,7 +1,7 @@
 ---
 layout: "writing_by_category"
-category: "Azure"
-permalink: "/writing/category/azure/"
+category: "Project"
+permalink: "/writing/category/project/"
 header-img: "assets/owner/hero/archive-bg.jpg"
-title: "Microsoft Azure"
+title: "프로젝트 기획"
 ---
