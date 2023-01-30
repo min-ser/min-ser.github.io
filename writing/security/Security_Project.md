@@ -1,8 +1,8 @@
 ---
 layout: "writing_by_category_security"
-category: "securitiestest"
-permalink: "/writing/category/securitiestest/"
+category: "Security_Project"
+permalink: "/writing/category/security-project/"
 header-img: "assets/owner/hero/archive-bg.jpg"
 header-video: "assets/video/metrix2.mp4"
-title: "Security Post"
+title: "Security Project"
 ---

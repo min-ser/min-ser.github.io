@@ -9,7 +9,7 @@ header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
 thumbnail: /assets/owner/blog/thumbs/thumb01.png
 tags: []
-category: [Project]
+category: [Security_Project]
 # comments: false
 # share: false
 ---
