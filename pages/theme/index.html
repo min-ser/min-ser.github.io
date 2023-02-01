@@ -1,0 +1,36 @@
+---
+layout: page
+title: "HTML Theme"
+description: "all-time favorites"
+header-img: "assets/owner/hero/gallery-bg.jpg"
+permalink: /theme/
+---
+<html class="no-js" lang="en">
+<head>
+
+<div id="Context">
+  test
+</div>
+
+<a onclick="ajaxTest()" type="button">test</a>
+
+<script type="text/javascript">
+
+    function ajaxTest() {
+        $.ajax({
+        type: "GET",
+        url: "/note",
+        dataType: "text",
+        error: function () {
+            alert('통신실패!!');
+        },
+        success: function (data) {
+            $('#Context').html(data);
+        }
+
+        });
+    }
+</script>
+
+
+</body></html>

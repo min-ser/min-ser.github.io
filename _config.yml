@@ -48,7 +48,7 @@ nav:
   gallery: "root_url/gallery/"
   releasenote: "root_url/note/"
   about: "root_url/about/"
-
+  theme: "root_url/theme/"
 
 # Server
 destination:      	 ./_site

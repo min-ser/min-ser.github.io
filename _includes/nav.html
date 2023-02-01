@@ -37,6 +37,9 @@
                     <a href="{{ root_url }}/note">Release Note</a>
                 </li>
                 <li>
+                    <a href="{{ root_url }}/theme">Theme</a>
+                </li>
+                <li>
                     <a href="{{ root_url }}/search/" class="nav-search-link" title="SEARCH">
                         <span class="fa fa-search nav-search-icon"></span>
                     </a>
@@ -47,3 +50,20 @@
     <!-- /.container -->
 </nav>
 
+<script type="text/javascript">
+
+    function ajaxTest() {
+        $.ajax({
+            type: "GET",
+            url: "/note",
+            dataType: "text",
+            error: function () {
+                alert('통신실패!!');
+            },
+            success: function (data) {
+                $('#Context').html(data);
+            }
+
+        });
+    }
+</script>
