@@ -72,10 +72,12 @@
 	100% {transform:translate(-50%,-50%) rotate(-360deg)  scale(1);}
 }
 
-.hoverbox .screen .hud01-ban {animation:rolling01-ban 10s linear infinite;width:80%;}
-.hoverbox .screen .hud01 {animation:rolling01 10s linear infinite;width:80%;}
+/*큰원*/
+.hoverbox .screen .hud01-circle01 {animation:rolling01-ban 15s linear infinite;width:80%;}
+.hoverbox .screen .hud01-circle02 {animation:rolling01 10s linear infinite;width:80%;}
+.hoverbox .screen .hud01-circle03 {animation:rolling01-ban 10s linear infinite;width:80%;}
 
-
+/*중간원*/
 .hoverbox .screen .hud01-5 {animation:rolling01 5s linear infinite;width:80%;}
 .hoverbox .screen .hud01-7 {animation:rolling01 7s linear infinite;width:80%;}
 .hoverbox .screen .hud02 {animation:rolling02 10s infinite alternate;}
@@ -87,5 +89,5 @@
 
 .hoverbox .screen .hud11-ban {animation:rolling01-ban 7s linear infinite;}
 .hoverbox .screen .hud11 {animation:rolling01 7s linear infinite;}
-.hoverbox .screen .hud03-ban {animation:rollandscale-ban 7s linear infinite;}
+.hoverbox .screen .hud03-ban {animation:rollandscale-ban 10s linear infinite;}
 .hoverbox .screen .hud04-ban {animation: rolling01 10s linear infinite;}
