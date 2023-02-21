@@ -1,3 +1,6 @@
+<!-- 카테고리 리스트 변수 선언 -->
+{% assign categoryList = site.categories | sort %}
+
 <div class="sidebar-wapper1" style="overflow: hidden">
 <div class="sidebar-wapper2">
 	<div class="sidebar-item sidebar-header">
@@ -13,6 +16,16 @@
 		<details open>
 			<summary><a>{{ site.title }}</a></summary>
 			<ul class="nav">
+				{% for category in categoryList %}
+					{% if category[0] == "김민서" %}
+					<li>
+						<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
+							<span class="name">{{ category[0] | replace:'-', ' ' }}</span>
+							<span class="badge">{{ category | last | size }}</span>
+						</a>
+					</li>
+					{% endif %}
+				{% endfor %}
 				<li><a class="nav-item sidebar-li" href="https://github.com/IIBlackCode">Blackcode-Git</a></li>
 				<li><a class="nav-item sidebar-li" href="https://blackcode42.pythonanywhere.com/">Blackcode-Site</a></li>
 			</ul>
@@ -56,13 +69,13 @@
 		<summary><a>Category</a></summary>
 		<ul class="nav">
 			<!-- <li class="nav-title">categoryList</li> -->
-			<!-- 카테고리 리스트 변수 선언 -->
-			{% assign categoryList = site.categories | sort %}
 			{% for category in categoryList %}
 				{% if 
-					category[0] != "securitiestest" 
+					category[0] != "김민서" 
 				and category[0] != "Megazone"  
 				and category[0] != "Security_Project" 
+				and category[0] != "MegazoneCloud" 
+				and category[0] != "securitiestest" 
 				%}
 			<li>
 				<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
@@ -76,14 +89,15 @@
 		</ul>
 	</details>
 
+	<hr>
+
 	<!-- Security categoryList  -->
 	<details open>
 		<summary><a>Security[개발중]</a></summary>
 		<ul class="nav">
 			<!-- <li class="nav-title">categoryList</li> -->
-			<!-- 카테고리 리스트 변수 선언 -->
 			{% for category in categoryList %}
-				{% if category[0] == "Megazone" %}
+				{% if category[0] == "MegazoneCloud" %}
 				<li>
 					<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
 						<span class="name">{{ category[0] | replace:'-', ' ' }}</span>
@@ -131,6 +145,7 @@
 	</details>
 
 	<hr>
+	
 	<div class="sidebar-item">
 		<embed
 		src="https://www.youtube.com/v/WVCM2o0E9ps?version=3&autoplay=1&mute=1&autohide=0&showinfo=0&loop=1&playlist=WVCM2o0E9ps&hl=ko_KR&rel=0"
