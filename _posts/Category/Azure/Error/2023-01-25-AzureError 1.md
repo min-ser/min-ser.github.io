@@ -12,6 +12,7 @@ tags: [Azure]
 category: [Azure-Error]
 # comments: false
 # share: false
+# img url : /assets/category/Azure/2023/
 ---
 
 # 사건 개요
