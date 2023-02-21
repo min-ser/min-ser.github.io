@@ -20,7 +20,7 @@
 					{% if category[0] == "김민서" %}
 					<li>
 						<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
-							<span class="name">{{ category[0] | replace:'-', ' ' }}</span>
+							{{ category[0] | replace:'-', ' ' }}
 							<span class="badge">{{ category | last | size }}</span>
 						</a>
 					</li>
