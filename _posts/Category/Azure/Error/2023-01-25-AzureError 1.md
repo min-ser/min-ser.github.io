@@ -17,7 +17,7 @@ category: [Azure-Error]
 # 사건 개요
 VSCode 에서 Azure Potal 연동시도중 발생
 
-![error](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Azure/img/error_1-1.PNG?raw=true)
+![error](/assets/category/Azure/2023/01/25/error_1-1.PNG?raw=true)
 
 
 ## Windows PowerShell ISE를 실행
@@ -82,6 +82,6 @@ MachinePolicy       Undefined
 
 정상적으로 Azure 계정 정보를 받아 연동이 됨을 확인
 
-![error](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Azure/img/error_1-2.PNG?raw=true)
+![error](/assets/category/Azure/2023/01/25/error_1-2.PNG?raw=true)
 
 [출처 MS-Docs](https://learn.microsoft.com/ko-kr/azure/aks/hybrid/create-pods)
