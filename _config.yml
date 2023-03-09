@@ -77,7 +77,7 @@ kramdown:
      - footnotes
     input:          GFM
 sass:
-    style:          :compressed
+    style: compressed
 paginate: 5
 paginate_path: "/writing/page:num/"
 permalink: "/writing/:title/"
