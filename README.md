@@ -1,5 +1,10 @@
 # [BlackCode GitBlogs](https://iiblackcode.github.io/)
 
+## Setting process
+1. ruby install 3.1
+2. gem install jekyll
+3. 
+
 ### Theme preview
 - [adminkit](https://IIBlackCode.github.io/Template/html/adminkit/static/index.html)
 - [AMIN](https://IIBlackCode.github.io/Template/html/Game/index.html)
@@ -9,9 +14,11 @@
 - [quickloud](https://IIBlackCode.github.io/Template/html/quickloud/index.html)
 
 ## Jekyll Local Server start 명령어
-
+### gem "jekyll", "~> 2.4"
+```
     bundle exec jekyll serve
-
+    install `faraday-retry` gem
+```
 ---
 # [Demo Theme URL](http://madforjekyll.github.io/)
 
