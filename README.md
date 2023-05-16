@@ -6,7 +6,8 @@
 3. 
 
 ### Theme preview
-- [adminkit](https://IIBlackCode.github.io/Template/html/adminkit/static/index.html)
+- [Admin-kit](https://IIBlackCode.github.io/Template/html/Admin-kit/static/index.html)
+- [Admin-startbootstrap](https://iiblackcode.github.io/Template/html/Admin-startbootstrap/index.html)
 - [AMIN](https://IIBlackCode.github.io/Template/html/Game/index.html)
 - [elegence](https://IIBlackCode.github.io/Template/html/elegence/index.html)
 - [industrious](https://IIBlackCode.github.io/Template/html/industrious/index.html)
