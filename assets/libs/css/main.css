@@ -167,7 +167,8 @@ hr.small {
 .intro-header .site-heading h1,
 .intro-header .page-heading h1 {
   margin-top: 0;
-  font-size: 50px;
+  /* font-size: 50px; */
+  font-size: 25px;
   text-shadow: 1px 1px 4px #000;
 }
 .intro-header .site-heading .subheading,
