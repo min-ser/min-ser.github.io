@@ -67,7 +67,7 @@ div[class="sidebar"] {
     height: 950px;
     position: fixed;
     /* top: 0; */
-    top: 5%;
+    top: 13%;
     left: -300px;
     z-index: 1;
     transition: all .35s;
