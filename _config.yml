@@ -96,6 +96,6 @@ analytics:
   provider               : "google-gtag" 
                           # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          : "G-DVMTFH4DJK"
+    tracking_id          : "G-LNHNDTXBCV"
     anonymize_ip         : false 
                           # true, false (default)
