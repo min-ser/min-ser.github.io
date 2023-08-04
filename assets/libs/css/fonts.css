@@ -6,3 +6,31 @@
 .diploma {
     font-family: 'Diploma'
 }
+
+@font-face {
+    font-family: 'DS-DIGII';
+    src: url('../fonts/ds_digital/DS-DIGIB.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#clock {
+    font-family: 'DS-DIGII';
+}
+
+.clock-ani {
+    /* animation: clock-ani 5s linear forwards; */
+    animation: clock-ani;
+    animation-duration: 1s;
+}
+
+@keyframes clock-ani {
+	from {
+		/* transform: translate(0, 0); */
+        font-size: 33px;
+	}
+	to {
+		/* transform: translate(0, 100px); */
+        font-size: 35px;
+	}
+}

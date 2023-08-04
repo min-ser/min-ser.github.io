@@ -17,10 +17,53 @@ layout: default
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                <div class="site-heading" style="height:200px">
+                    <h1 id="index-title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
                     <hr class="small">
-                    <span class="subheading">{{ page.description }}</span>
+                    <span class="subheading" id="clock" onmouseover="fmouseOver()" onmouseout="fmouseOut()">{{ page.description }}</span>
+                    <script>
+                        var count = 0;
+                        function fmouseOver(){
+                            count++;
+                            console.log(count)
+                            let timetext = document.querySelector('#clock'); 
+                            let index_title = document.querySelector('#index-title'); 
+                            let today = new Date(); 
+                            let H = today.getHours();
+                            let M = today.getMinutes();
+                            let S = today.getSeconds();
+                            if(H < 10 ){
+                                H = "0"+H
+                            }
+                            if(M < 10 ){
+                                M = "0"+M
+                            }
+                            if(S < 10 ){
+                                S = "0"+S
+                            }
+
+                            if(count == 1){
+                                timetext.innerHTML = "<h2>Youth isn’t always all it’s touted to be. – Lawana Blackwell</h2>";
+                            }else if (count == 2){
+                                timetext.style.color="rgb(217, 39, 39)"
+                                index_title.style.color="rgb(217, 39, 39)"
+                                index_title.innerHTML="<h1 class='diploma'>The Black Code</h1>"
+                            }else if (count == 3){
+                                timetext.innerHTML = "<h2>그리고, 지나간 시간은 돌아오지 않는다.</h2>";
+                            }else if (count >= 4){
+                                timetext.innerHTML = "<h1 class='clock-ani'>"+ H + ":" + M + ":" + S+"</h1>";
+                                timetext.style.color="rgb(39, 39, 39)"
+                                index_title.style.color="rgb(39, 39, 39)"
+                            }
+                        }
+                        setInterval(fmouseOver,1000); 
+
+                        function fmouseOut(){
+                            let timetext = document.querySelector('#clock'); 
+                            timetext.innerHTML = "<h3>시간은 기다려주지 않는다.</h3>"; 
+                            timetext.style.color="rgb(217, 39, 39)"
+                        }
+                    </script>
                 </div>
             </div>
         </div>
