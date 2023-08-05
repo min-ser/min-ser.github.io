@@ -1,6 +1,6 @@
 ---
 layout: "writing_by_category"
-category: "MicroServiceArchitecture"
+category: "MSA"
 
 # url에 대문자 섞이면 post와 연결이 안됨
 permalink: "/writing/category/msa/"
