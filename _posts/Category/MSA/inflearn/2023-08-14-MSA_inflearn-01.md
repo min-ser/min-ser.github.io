@@ -39,7 +39,7 @@ category: [MSA]
 
 ## [Eureka SpringBoot 프로젝트 생성](https://start.spring.io/)
 
-## mvn 명령어
+## [WINDOW]mvn 명령어
 
 ### maven 명령어로 실행
 
