@@ -3,7 +3,7 @@ layout: BLACKCODE
 title: "[Section 1.] Service Discovery"
 subtitle: ""
 description: ""
-date: 2023-08-05 01:00:00
+date: 2023-08-14 01:00:00
 author: "김민서"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
@@ -70,3 +70,11 @@ java -jar '-Dserver.port=9002' <jar 파일>
 java -jar '-Dserver.port=9002' .\user-service-0.0.1-SNAPSHOT.jar
 java -jar '-Dserver.port=9003' .\user-service-0.0.1-SNAPSHOT.jar
 ```
+
+## Spring Boot에서 지원하는 Ramdom Port
+
+- application.yml
+  - ```
+    server:
+      port: 0 # port를 0번으로 지정시 랜덤으로 port가 할당됨
+    ```
