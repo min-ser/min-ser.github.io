@@ -2,7 +2,7 @@
 layout: BLACKCODE
 title: "[Section 2.] API Gateway Service"
 subtitle: ""
-description: ""
+description: "https://incheol-jung.gitbook.io/docs/q-and-a/spring/stereo-type"
 date: 2023-08-21 01:00:00
 author: "김민서"
 header-img: "assets/owner/hero/home-bg.jpg"
