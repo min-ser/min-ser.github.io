@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Klever media documentation v1</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
+		<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js"></script>
+		<script src="js/shBrushCss.js"></script>
+		<script src="js/shBrushPhp.js"></script>
+		<script src="js/shBrushPlain.js"></script>
+		<script src="js/shBrushJScript.js"></script>
+		<script src="js/shBrushXml.js"></script>
+		<!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+		<script type="text/javascript">
+		     SyntaxHighlighter.all()
+		</script>
+		<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+		<link href="css/shCoreDefault.css" rel="stylesheet" type="text/css" />
+
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="http://www.klevermedia.co.uk" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+				<p>Thank you for purchasing my Craft Beer Nation HTML template. If you have any questions that are beyond the scope of this help file, please feel free to head over to our <a href="http://www.klevethemes.co.uk">support forums</a>.</p>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+			<!-- One -->
+				<section id="one">
+					<header class="major">
+						<h2>The Craft Beer Nation HTML template documentation</h2>
+					</header>
+					<p>Craft Beer Nation is a professionally designed HTML template aimed at craft beer clubs, small beer brewers & beer shop owners.</p>
+
+					<p>It’s designed on the bootstrap 3 grid system and is fully responsive to mobile devices. The template is unique and modern and a great fit for any craft beer brewers alike.</p>
+
+					<p>The template contains all necessary elements required for creating a professional and appealing website for you audience and will portray your company as professional and innovative.</p>
+				</section>
+
+			<!-- Two -->
+				<section id="two">
+					<h2>Adding a hero slide</h2>
+					<p>The homepage hero slider utilises the bootstrap carousel. You can create a new slide by including the HTML below on line 55 of index.html</p>
+<pre>
+&lt;div class="item" style="background-image: url(images/hero-3.jpg)"&gt;
+	&lt;div class="container"&gt;
+		&lt;div class="row blurb scrollme animateme" data-when="exit" data-from="0" data-to="1" data-opacity="0" data-translatey="100"&gt;
+			&lt;div class="col-md-10 col-md-offset-1"&gt;
+				&lt;h1&gt;The perfect template to compliment&lt;/h1&gt;
+				&lt;h2&gt;Your brewery&lt;/h2&gt;
+				&lt;a href="#" class="btn btn-default"&gt;
+					&lt;span&gt;Buy template&lt;/span&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+				</section>
+
+			<!-- Two -->
+				<section id="two">
+					<h2>Adding an owl carousel</h2>
+					<p>The owl carousel is used for items such as product sliders. You can add multiple carousels to the tamplate using the HTML below. You can also add a unique ID which allows you to modify the sliders ettings vis javascript.</p>
+<pre>
+&lt;div class="owl-carousel" id="MyCarousel"&gt;
+	&lt;!-- Products --&gt;
+	&lt;div class="product item"&gt;
+		&lt;a href="our-beer.html"&gt;
+			&lt;span&gt;Buy it&lt;/span&gt;
+			&lt;img src="images/can-1.png" alt="Beer can mockup"&gt;
+		&lt;/a&gt;
+		&lt;h3&gt;Pale ale&lt;/h3&gt;
+		&lt;h4&gt;&dollar;4.75&lt;/h4&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>Once you have included your HTML, you will then need to include the following JavaScript to enable the carousel.</p>
+
+<pre>
+$("#myCarousel").owlCarousel({
+	loop: true,
+	autoplay: true,
+	autoplayTimeout: 4000,
+	autoplaySpeed: 500,
+	autoplayHoverPause: true,
+	responsive : {
+		480 : { items : 1  },
+		768 : { items : 3  },
+		1024 : { items : 4 }
+	},
+});
+</pre>
+
+<p><em>Please follow <a href="https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html">this link</a> for further instrcutions on using owl carousel.</em></p>
+
+				</section>
+
+			<!-- Two -->
+				<section id="two">
+					<h2>Parallax</h2>
+					<p><strong>Craft Beer Nation</strong> makes use of <i>Scrollme</i> which creates awesome parallax effects for on-page elements. Please take a look at the <a href="http://scrollme.nckprsn.com/">plugin homepage</a> for more examples of how to use this as well as the examples within the HTML template.</p>
+					<p>You can add parallax elements by including two classes and a set of data attributes like so.</p>
+					<pre>&lt;div class="scrollme animateme" data-when="exit" data-from="0" data-to="1" data-opacity="0"&gt;</pre>
+				</section>
+
+			<!-- Three -->
+				<section id="three">
+					<h2>Imagery</h2>
+					<p><strong>Craft Beer Nation</strong> use a mnay free commerical images which you can find on various websites below to resuse. </p>
+					<ul>
+						<li><a href="https://unsplash.com/search/beer" target="_blank">Unspalsh</a></li>
+						<li><a href="https://pixabay.com/en/photos/?q=beer&image_type=&cat=&min_width=&min_height=" target="_blank">Pixabay</a></li>
+						<li><a href="https://www.pexels.com/search/beer/" target="_blank">Pexels</a></li>
+					</ul>
+				</section>
+
+			<!-- Four -->
+				<section id="four">
+					<h2>Fonts</h2>
+					<p><strong>Craft Beer Nation</strong> implements googles free web fonts making implmentation easy when developing.</p>
+					<div class="row">
+						<article class="12u 12u$(xsmall)">
+							<ul>
+								<li><a href="https://fonts.google.com/specimen/Grand+Hotel">Grand Hotel</a></li>
+								<li><a href="https://fonts.google.com/specimen/Catamaran">Catamaran</a></li>
+							</ul>
+						</article>
+					</div>
+				</section>
+
+				<!-- Five -->
+				<section id="five">
+					<h2>Icons</h2>
+					<p><strong>Craft Beer Nation</strong> implements an icon font called FontAwsome, allowing many colour and sizing options when developing.</p>
+					<p>We also use a Beer icons font which allows you to use more custom fonts. Please refer to icons.html on available icons, and add them as an image.</p>
+					<div class="row">
+						<article class="12u 12u$(xsmall)">
+							<ul>
+								<li><a href="http://fontawesome.io/icons/">FontAwsome</a></li>
+							</ul>
+						</article>
+					</div>
+				</section>
+
+				<!-- Six -->
+				<section id="six">
+					<h2>Credits</h2>
+					<p>I would like to thank the following, as this design wouldn't be possible without them.</p>
+					<div class="row">
+						<article class="12u 12u$(xsmall)">
+							<ul>
+								<li>Google web fonts</li>
+								<li>FontAwsome</li>
+								<li>Envato</li>
+								<li>Davooda (Beer icons)</li>
+							</ul>
+						</article>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="http://www.twitter.com/klevermediauk" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="http://www.facebook.com/klevermediauk" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="http://www.dribbble.com/lee-grant" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="http://www.instagram.com/klevermediauk" class="icon fa-instagram"><span class="label">Dribbble</span></a></li>	
+					<li><a href="http://www.kleverthemes.co.uk" class="icon fa-life-ring"><span class="label">Support</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Klevermedia Ltd</li>
+				</ul>
+			</footer>
+
+	</body>
+</html>
