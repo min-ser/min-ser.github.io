@@ -7,25 +7,26 @@
 
 ### Theme preview
 - ADMIN
-    - [AdminLTE-2.3.11](https://iiblackcode.github.io/Template/html/Admin/AdminLTE-2.3.11/index.html)
-    - [janux](https://iiblackcode.github.io/Template/html/Admin/janux/index.html)
-    - [klorofil](https://iiblackcode.github.io/Template/html/Admin/klorofil-free-dashboard-template-v2.0/index.html)
-    - [robust](https://iiblackcode.github.io/Template/html/Admin/robust-free-bootstrap-admin-template-master/html/ltr/index.html)
-    - [target](https://iiblackcode.github.io/Template/html/Admin/target-free-admin-template/index.html)
-
-    - [Admin-kit](https://IIBlackCode.github.io/Template/html/Admin/Admin-kit/static/index.html)
-    - [Admin-startbootstrap](https://iiblackcode.github.io/Template/html/Admin/Admin-startbootstrap/index.html)
-    - [sb-admin-2](https://iiblackcode.github.io/Template/html/Admin/startbootstrap-sb-admin-2-gh-pages/index.html)
-    - [sb-admin-gh](https://iiblackcode.github.io/Template/html/Admin/startbootstrap-sb-admin-gh-pages/index.html)
-    - [BootstrapThemes](https://iiblackcode.github.io/Template/html/Admin/light-bootstrap-dashboard-master/dashboard.html)
+    - PRO
+        - [AdminLTE-2.3.11](https://iiblackcode.github.io/Template/Admin/pro/AdminLTE-2.3.11/index.html)
+        - [janux](https://iiblackcode.github.io/Template/Admin/pro/janux/index.html)
+        - [klorofil](https://iiblackcode.github.io/Template/Admin/pro/klorofil-free-dashboard-template-v2.0/index.html)
+        - [robust](https://iiblackcode.github.io/Template/Admin/pro/robust-free-bootstrap-admin-template-master/html/ltr/index.html)
+        - [target](https://iiblackcode.github.io/Template/Admin/pro/target-free-admin-template/index.html)
+    - Free
+        - [Admin-kit](https://IIBlackCode.github.io/Template/Admin/free/Admin-kit/static/index.html)
+        - [sb-admin-2](https://iiblackcode.github.io/Template/Admin/free/startbootstrap-sb-admin-2-gh-pages/index.html)
+        - [sb-admin-gh](https://iiblackcode.github.io/Template/Admin/free/startbootstrap-sb-admin-gh-pages/index.html)
+        - [BootstrapThemes](https://iiblackcode.github.io/Template/Admin/free/light-bootstrap-dashboard-master/dashboard.html)
 - HTML Template
     - Elements
-        - [industrious](https://IIBlackCode.github.io/Template/html/industrious/index.html)
-        - [retrospect](https://IIBlackCode.github.io/Template/html/retrospect/index.html)
-- [AMIN](https://IIBlackCode.github.io/Template/html/Game/index.html)
-- [elegence](https://IIBlackCode.github.io/Template/html/elegence/index.html)
-- [matter css X](https://IIBlackCode.github.io/Template/html/matter/src/views/index.html)
-- [quickloud](https://IIBlackCode.github.io/Template/html/quickloud/index.html)
+        - [industrious](https://IIBlackCode.github.io/Template/Theme/Elements/industrious/index.html)
+        - [retrospect](https://IIBlackCode.github.io/Template/Theme/Elements/retrospect/index.html)
+    - Not Elements
+        - [AMIN](https://IIBlackCode.github.io/Template/Theme/No_Elements/AMIN/index.html)
+        - [elegence](https://IIBlackCode.github.io/Template/Theme/No_Elements/elegence/index.html)
+        - [matter css X](https://IIBlackCode.github.io/Template/Theme/No_Elements/matter/src/views/index.html)
+        - [quickloud](https://IIBlackCode.github.io/Template/Theme/No_Elements/quickloud/index.html)
 
 ## Jekyll Local Server start 명령어
 ### gem "jekyll", "~> 2.4"
