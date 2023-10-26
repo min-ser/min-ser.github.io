@@ -14,7 +14,7 @@
         - [robust](https://iiblackcode.github.io/Template/Admin/pro/robust-free-bootstrap-admin-template-master/html/ltr/index.html)
         - [target](https://iiblackcode.github.io/Template/Admin/pro/target-free-admin-template/index.html)
         - [darkpan-1.0.0](https://iiblackcode.github.io/Template/Admin/pro/darkpan-1.0.0/index.html)
-        - [dashtreme-master](https://iiblackcode.github.io/Template/Admin/free/dashtreme-master/index.html)
+        - [dashtreme-master](https://iiblackcode.github.io/Template/Admin/pro/dashtreme-master/index.html)
     - Free
         - [Admin-kit](https://IIBlackCode.github.io/Template/Admin/free/Admin-kit/static/index.html)
         - [sb-admin-2](https://iiblackcode.github.io/Template/Admin/free/startbootstrap-sb-admin-2-gh-pages/index.html)
