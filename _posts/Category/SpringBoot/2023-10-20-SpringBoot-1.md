@@ -8,8 +8,8 @@ author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
 thumbnail: /assets/owner/blog/thumbs/thumb01.png
-tags: [Spring]
-category: [Spring]
+tags: [SpringBoot]
+category: [SpringBoot]
 
 # img url : ![img](/assets/category/Azure/2023/02/08/01.PNG)
 ---

@@ -3,13 +3,13 @@ layout:     BLACKCODE
 title:      "Docker 설치부터 SpringBoot 배포까지"
 subtitle:   ""
 description: "https://leveloper.tistory.com/9"
-date:       2023-03-30 1:10:01
+date:       2023-10-26 1:10:01
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
 thumbnail: /assets/owner/blog/thumbs/thumb01.png
-tags: [Spring]
-category: [Spring]
+tags: [SpringBoot]
+category: [SpringBoot]
 
 # img url : ![img](/assets/category/Azure/2023/02/08/01.PNG)
 ---
@@ -62,7 +62,7 @@ sudo docker rmi <이미지ID>
 
 ## 이미지 모두 삭제
 ```
-sudo docker rmi <docker ps -a -q>
+docker rmi `docker images -a -q`
 ```
 
 ## 컨테이너 접속
@@ -125,3 +125,5 @@ sudo docker push <docker hub id>/<application name>
 ```
 docker image tag <image id를 docker hub id로 변경><new application name>
 ```
+
+az aks get-credentials --resource-group kn3-kbh-dev-ocareplus-hic-fr-rg --name kn3-kbh-dev-ocareplus-hic-fr-cl --admin
