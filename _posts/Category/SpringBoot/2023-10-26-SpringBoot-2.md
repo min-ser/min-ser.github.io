@@ -83,7 +83,7 @@ sudo docker images
 ```
 sudo docker run -d -p 8080:8080 <docker hub id>/<application name>:<tag>
 
-sudo docker run -d -p 8081:8080 iiblackcode/springboot-mysql-replica:kbhc 
+sudo docker run -d -p 8081:8080 iiblackcode/springboot-mysql-replica:kbhc
 
 sudo docker run -i -t --name replica --net host iiblackcode/springboot-mysql-replica:kbhc
 
