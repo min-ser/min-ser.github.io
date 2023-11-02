@@ -127,3 +127,11 @@ docker image tag <image id를 docker hub id로 변경><new application name>
 ```
 
 az aks get-credentials --resource-group kn3-kbh-dev-ocareplus-hic-fr-rg --name kn3-kbh-dev-ocareplus-hic-fr-cl --admin
+
+az acr login --name kbhchicdevacr33
+
+VA60QOVFl+ag0NZzrw2D3nrACVdYWjgEXrOtwiZZPM+ACRD5GIsg
+cYQEIsg4bIk73b9fupjDNHqmQXMOMVIrFTtO6Wm4Dc+ACRCEzloT
+
+docker tag iiblackcode/xforwardedfor:kbhc kbhchicdevacr33.azurecr.io/iiblackcode/xforwardedfor:kbhc
+docker push kbhchicdevacr33.azurecr.io/iiblackcode/xforwardedfor:kbhc
