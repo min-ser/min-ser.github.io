@@ -8,7 +8,7 @@ author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
 thumbnail: /assets/owner/blog/thumbs/thumb01.png
-tags: [Azure]
+tags: [따배쿠]
 category: [Kubernetes]
 # comments: false
 # share: false
@@ -61,6 +61,50 @@ minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 
 ## VSCode 연동작업 완료
 
 ---
+
+# 목차
+
+---
+# K8s namespace
+- namespace
+    - 클러스터 하나를 여러 개의 논리적인단위로 나눠서 사용
+- 쿠버네티스 클러스터 하나를 여러 팀이나사용자가 함께 공유
+- 용도에 따라 실행해야 하는 앱을 구분할 때 사용
+
+# 네임스페이스 사용하기
+- namespace `생성`
+1. CLI 방식으로 namespace 생성
+```
+kubectl create namespace blue
+kubectl get namespaces
+```
+2. yaml파일을 생성하여 namespace 생성
+```
+kubectl create namespace green --dey-run -o yaml>green-ns.yaml
+vim green-ns.yaml
+kubectl create -f green-ns.yaml
+```
+
+- namespace 관리
+```
+kubectl get namespace
+kubectl delete namespace
+```
+
+3. nginx.yaml 파일
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+   - image: nginx:1.14
+      name: nginx
+	  ports:
+	  - containerPort: 80
+	  - containerPort: 443
+```
 
 # yaml 템플릿
 - 사람이 쉽게 읽을 수 있는 데이터 직렬화 양식
