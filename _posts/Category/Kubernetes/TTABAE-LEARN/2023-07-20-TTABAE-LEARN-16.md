@@ -14,155 +14,23 @@ category: [Kubernetes]
 # share: false
 # 이미지 : ![img](/assets/category/Kubernetes/2023/07/17-03.PNG)
 ---
+# 학습내용
+- Replication Controller
+- ReplicaSet
+- Deployment
+- DaemonSet
+- StatefulSet
+- Job
+- CronJob
 
-# Pod의 환경변수 설정하기
+# Controller란?
+- Pod의 개수를 보장
+- 특정 application 실행하는 pod가  application을 몇개 운영할것인지 결정하고 보장해주는 역할
 
-## 환경변수
-- Pod내의 컨테이너가 실행될 때 필요로 하는 변수
-- 컨테이너 제작 시 미리 정의
-    - NGINX Dockerfile의 예
-        - ENV NGINX_VERSION 1.19.2
-		- ENV NJS_VERSION 0.4.3
-- POD 실행 시 미리 정의된 컨테이너 환경변수를 변경할 수 있다.
+# Controller의 종류
 
-# 환경변수 예시
-- pod-nginx-env.yaml
-	```
-	apiVersion: v1
-	kind: Pod
-	metadata:
-	  name: nginx-pod-env
-	spec:
-	containers:
-	- name: nginx-container
-		image: nginx:1.14
-		ports:
-		- containerPort: 80
-		  protocol: TCP
-		env:
-		- name: MYVAR
-		value: "testvalue"
-	```
-```
-kubectl get pods
-kubectl exec nginx-pod-env --env
-```
+# Replication Controller
 
-# 환경변수 실습
-- pod 전체 삭제
-	```
-	kubectl delete pods --all
-	```
+# Replication Controller 실습
 
-- pod yaml 작성
-```
-# 기존 pod yaml 활용
-cat > pod-nginx-resources.yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx-pod-env
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx:1.14
-    ports:
-    - containerPort: 80
-      protocol: TCP
-    env:
-    - name: MYVAR
-      value: "testvalue"
-    resources:
-      requests:
-        memory: 500Mi
-        cpu: 200m
-```
-
-- pod 생성
-	```
-	kubectl create -f pod-nginx-resources.yaml
-	```
-
-- nginx-pod-env에 bashshell로 접속
-	```
-	kubectl exec nginx-pod-env -it -- /bin/bash
-	```
-- [nginx-pod-env 컨테이너] 환경변수 조회후 생성한 환경변수 조회 
-	- env
-	```
-	  - name: MYVAR
-	  value: "testvalue"
-	```
-	- 명령어 실행 결과
-	```
-	root@nginx-pod-env:/# env
-	MYDB_SERVICE_PORT=80
-	MYSERVICE_PORT_80_TCP_PROTO=tcp
-	MYSERVICE_SERVICE_HOST=10.96.136.12
-	HOSTNAME=nginx-pod-env
-	MYSERVICE_SERVICE_PORT=80
-	NJS_VERSION=1.14.2.0.2.6-1~stretch
-	MYDB_PORT=tcp://10.102.106.242:80
-	NGINX_VERSION=1.14.2-1~stretch
-	KUBERNETES_PORT_443_TCP_PROTO=tcp
-	KUBERNETES_PORT_443_TCP_ADDR=10.96.0.1
-	MYDB_SERVICE_HOST=10.102.106.242
-	MYSERVICE_PORT_80_TCP=tcp://10.96.136.12:80
-	MYVAR=testvalue
-	KUBERNETES_PORT=tcp://10.96.0.1:443
-	PWD=/
-	HOME=/root
-	KUBERNETES_SERVICE_PORT_HTTPS=443
-	MYDB_PORT_80_TCP_PORT=80
-	KUBERNETES_PORT_443_TCP_PORT=443
-	MYSERVICE_PORT_80_TCP_PORT=80
-	MYSERVICE_PORT=tcp://10.96.136.12:80
-	KUBERNETES_PORT_443_TCP=tcp://10.96.0.1:443
-	TERM=xterm
-	MYSERVICE_PORT_80_TCP_ADDR=10.96.136.12
-	SHLVL=1
-	KUBERNETES_SERVICE_PORT=443
-	MYDB_PORT_80_TCP_PROTO=tcp
-	PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-	KUBERNETES_SERVICE_HOST=10.96.0.1
-	MYDB_PORT_80_TCP=tcp://10.102.106.242:80
-	MYDB_PORT_80_TCP_ADDR=10.102.106.242
-	_=/usr/bin/env
-	```
-		- MYVAR=testvalue
-
-# Pod 구성패턴의 종류 3가지
-## 1. POD 실행패턴
-- Pod를 구성하고 실행하는 패턴
-- multi-container Pod
-	- Sidecar
-		- 두개의 컨테이너가 함께 동작해서 구현
-	- Adapter
-		- 
-	- Ambassador
-## 2.
-## 3.
-
-# Pod 강의 총정리(5장)
-## 학습내용
-	- Pod 개념 및 사용하기
-	- livenessProbe를 사용한 self-healing Pod
-	- init container
-	- infra container(pause) 이해하기
-	- static pod 만들기
-	- Pod에 resource 할당하기
-	- 환경변수를 이용해 컨테이너에 데이터 전달하기
-	- pod 구성 패턴의 종류
-	
-# Pod 운영 실습
-- Create a static pod on node01 called mydb with image redis.
-- Create this pod on node01 and make sure that it is recreated/restarted automatically in case of a failure.
-	- Use/etc/kubernetes/manifests as the Static Podpath for example.
-	- kubelet Configured for Static Pod
-	- Pod mydb-node01 is Up and running
-
-- 다음과 같은 조건에 맞는 Pod를 생성하시오
-	- Pod name: myweb, image:nginx:1.14
-	- CPU200m, Memory 500Mi를 요구하고, CPU 1core, 1Gi제한받는다.
-	- Application 동작에 필요한 환경변수 DB=mydb 를 포함한다.
-	- namespace product에서 동작되어야 한다.
+# 
