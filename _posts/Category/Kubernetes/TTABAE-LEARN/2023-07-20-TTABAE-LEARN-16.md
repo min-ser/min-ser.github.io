@@ -15,50 +15,6 @@ category: [Kubernetes]
 # 이미지 : ![img](/assets/category/Kubernetes/2023/07/17-03.PNG)
 ---
 
-# *** K8S 명령어 실습전 AKS 환경 준비 ***
-
-## VSCODE에서 Azure Potal 접속
-1. VSCode에서 명령어 실행
-```
-Connect-AzAccount
-```
-
-2. 계정 선택 및 로그인 진행
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/Connect-AzAccount.PNG?raw=true)
-
-* 아래와 같이 연동작업 
-
-```
-PS D:\GIT> Connect-AzAccount
-경고: Unable to acquire token for tenant '4aed9820-113d-4f48-9f53-4d91f37ad279' with error 'SharedTokenCacheCredential authentication unavailable. Token acquisition 
-failed for user minseo_kim89@megazone.com. Ensure that you have authenticated with a developer tool that supports Azure single sign on.'
-
-Account                   SubscriptionName TenantId                             Environment
--------                   ---------------- --------                             -----------
-minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx AzureCloud
-```
-3. [AzurePotal] Azure Potal에 접속
-    
-    1). 상단에 있는 Cloud Shell을 클릭하여 `스토리지 생성`
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/AzureCloudShell.png?raw=true)<br>
-    2). 스토리지 만들기 클릭
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/createStorage.PNG?raw=true)<br>
-    3). Cloud Shell 진입
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/AccessAzureCloudShell.png?raw=true)
-
-4. VSCODE에서 Azure Cloud Shell 클릭
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_1.png?raw=true)
-
-5. 상단에 구독 선택
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_2.png?raw=true)
-
-6. VSCode에서 접속 성공한 모습
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_3.png?raw=true)
-
-## VSCode 연동작업 완료
-
----
-
 # Pod의 환경변수 설정하기
 
 ## 환경변수
