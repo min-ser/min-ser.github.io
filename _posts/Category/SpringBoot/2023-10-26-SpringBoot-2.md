@@ -82,14 +82,13 @@ sudo docker images
 ## 컨테이너 실행(image 사전 생성 필요)
 ```
 sudo docker run -d -p 8080:8080 <docker hub id>/<application name>:<tag>
-
-sudo docker run -d -p 8081:8080 iiblackcode/springboot-mysql-replica:kbhc
-
 sudo docker run -i -t --name replica --net host iiblackcode/springboot-mysql-replica:kbhc
+```
 
-# -p : 8080포트로 실행해서 8081로 포트포워딩(외부에서 8081로 접근)
-# --name : container name 설정 : x-forwarded-for
-# :kbhc : tag값이 kbhc
+- -p : 8080포트로 실행해서 8081로 포트포워딩(외부에서 8081로 접근)
+- --name : container name 설정 : x-forwarded-for
+- :kbhc : tag값이 kbhc
+```
 sudo docker run -d -p 8081:8080 --name x-forwarded-for iiblackcode/xforwardedfor:kbhc
 ```
 
@@ -102,7 +101,6 @@ sudo docker inspect <container name or id>
 sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" <container name or id>
 sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" x-forwarded-for
 ```
-
 ---
 
 ## Docker hub로 image 업로드
@@ -126,4 +124,15 @@ sudo docker push <docker hub id>/<application name>
 docker image tag <image id를 docker hub id로 변경><new application name>
 ```
 
+## MEMO
+```
 az aks get-credentials --resource-group kn3-kbh-dev-ocareplus-hic-fr-rg --name kn3-kbh-dev-ocareplus-hic-fr-cl --admin
+
+az acr login --name kbhchicdevacr33
+
+VA60QOVFl+ag0NZzrw2D3nrACVdYWjgEXrOtwiZZPM+ACRD5GIsg
+cYQEIsg4bIk73b9fupjDNHqmQXMOMVIrFTtO6Wm4Dc+ACRCEzloT
+
+docker tag iiblackcode/xforwardedfor:kbhc kbhchicdevacr33.azurecr.io/iiblackcode/xforwardedfor:kbhc
+docker push kbhchicdevacr33.azurecr.io/iiblackcode/xforwardedfor:kbhc
+```

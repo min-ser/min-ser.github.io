@@ -8,7 +8,7 @@ author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
 thumbnail: /assets/owner/blog/thumbs/thumb01.png
-tags: [Azure]
+tags: [따배쿠]
 category: [Kubernetes]
 # comments: false
 # share: false
