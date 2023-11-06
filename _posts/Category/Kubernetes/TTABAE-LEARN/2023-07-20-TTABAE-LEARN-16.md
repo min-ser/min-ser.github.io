@@ -148,12 +148,11 @@ kubectl create -f rc-nginx.yaml
 명령어 : kubectl get rc
 ```
 
-- 실습
+- 실습화면
 ```
 DESIRED : replica 수 3개 요구
 CURRENT : 현재 3개 실행중
 READY   : 준비된 상태 3개
-
 master@master:kubectl get replicationcontrollers
 NAME       DESIRED   CURRENT   READY   AGE
 rc-nginx   3         3         3       99s
@@ -172,7 +171,6 @@ kubectl run redis --image=redis --labels=app=webui --dry-run -o yaml > redis.yam
 - vi redis.yaml
 ```
 dd : 라인 삭제
-
 apiVersion: v1
 kind: Pod
 metadata:
