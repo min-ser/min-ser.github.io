@@ -144,3 +144,71 @@ spec:
 ### 파드 삭제 시 ReplicationController가 하는 일은?
 - kubectl get pods
 - kubectl delete pod rc-nginx-XXXX
+
+## ReplicationController example(2)
+- kubectl `edit` rc rc-nginx
+```
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: rc-nginx
+spec:
+  replicas: 3 >> 4
+  selector:
+    app: webui
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: webui
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:1.14
+```
+- kubectl `scale` rc rc-nginx `--replicas=3`
+### 현재 동작중인 Pod 수는?
+
+- kubectl describe rc rc-nginx
+
+## ReplicationController example(3)
+- kubectl `edit` rc rc-nginx
+```
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: rc-nginx
+spec:
+  replicas: 4
+  selector:
+    app: webui
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: webui
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:1.14 >> 1.15
+```
+
+- kubectl describe pod rc-nginx-xxxxx
+> 동작중인 컨테이너 이미지는?
+
+- kubectl delete pod rc-nginx-xxxx
+- kubectl describe pod rc-nginx-yyyy
+> pod 삭제 시 새로운 pod가 생성된다.
+> 생성된 pod image는?
+
+- kubectl delete rc rc-nginx
+
+# QUESTION & ANSWER
+1. 다음의 조건으로 ReplicationController를 사용하는 rc-lab.yaml파일을 생성하고 동작시킵니다.
+- labels(name: apache, app:main, rel:stable)를 가지는 httpd:2.2 버전의 Pod를 2개 운영합니다.
+    - rc name: rc-mainui
+    - container: httpd:2.2
+- 혅재 디렉토리에 rc-lab.yaml파일이 생성되어야 하고, 애플리케이션 동작은 파일을 이용해 실행합니다.
+
+2. 동작되는 http:2.2 버전의 컨테이너를 3개로 확장하는 명령을 적고 실행하세요.
+CLI#
