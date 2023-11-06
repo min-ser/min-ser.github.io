@@ -2025,31 +2025,37 @@ h6 small {
 .h1,
 h1 {
   font-size: 35px;
+  color: #ffd700;
   border-bottom: 1px solid #b34848;
 }
 
 .h2,
 h2 {
+  color: #ffd700;
   font-size: 25px
 }
 
 .h3,
 h3 {
+  color: #ffd700;
   font-size: 20px
 }
 
 .h4,
 h4 {
+  color: #ffd700;
   font-size: 18px
 }
 
 .h5,
 h5 {
+  color: #ffd700;
   font-size: 14px
 }
 
 .h6,
 h6 {
+  color: #ffd700;
   font-size: 12px
 }
 
