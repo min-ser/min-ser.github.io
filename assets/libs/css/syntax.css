@@ -18,8 +18,8 @@
  * GitHub style for Pygments syntax highlighter, for use with Jekyll
  * Courtesy of GitHub.com
  */
-
-.highlight pre, pre, .highlight .hll { background-color: #5d4242; border: 1px solid #896262; padding: 6px 10px; border-radius: 3px; }
+/* .highlight pre, pre, .highlight .hll { background-color: #5d4242; border: 1px solid #896262; padding: 6px 10px; border-radius: 3px; } */
+.highlight pre, pre, .highlight .hll { background-color: #493d00e6; border: 1px solid #770000; padding: 6px 10px; border-radius: 3px; }
 .highlight .c { color: #999988; font-style: italic; }
 .highlight .err { color: #a61717; background-color: #e3d2d2; }
 .highlight .k { font-weight: bold; }
