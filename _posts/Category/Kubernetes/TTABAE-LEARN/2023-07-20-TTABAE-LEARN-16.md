@@ -142,9 +142,13 @@ spec:
 kubectl create -f rc-nginx.yaml
 ```
 
-- 명령어 : kubectl get replicationcontrollers
-- kubectl get rc
-> replicationController 정보보기
+- replicationController 정보보기
+```
+명령어 : kubectl get replicationcontrollers
+명령어 : kubectl get rc
+```
+
+- 실습
 ```
 DESIRED : replica 수 3개 요구
 CURRENT : 현재 3개 실행중
@@ -155,8 +159,10 @@ NAME       DESIRED   CURRENT   READY   AGE
 rc-nginx   3         3         3       99s
 ```
 
-- kubectl run redis --image=redis --dry-run
-> --dry-run 명령어 실행에 (문법)이상유무 확인 가능
+- --dry-run 명령어 실행으로 (문법)이상유무 확인 가능
+```
+kubectl run redis --image=redis --dry-run
+```
 
 - redis.yaml 생성 명령어
 ```
@@ -186,7 +192,7 @@ kubectl get pod --show-labels
 
 - edit명령어를 이용한 ReplicaController 수정하기
 ```
-> 아래 명령어 실행 후 spec 아래에 있는 replicas의 수 수정
+아래 명령어 실행 후 spec 아래에 있는 replicas의 수 수정
 kubectl edit rc rc-nginx
 
 spec:
@@ -195,7 +201,7 @@ spec:
 
 - 명령어로 간단하게 replicas의 숫자 수정하기
 ```
-> 자유롭게 scale up, down이 가능
+자유롭게 scale up, down이 가능
 kubectl scale rc rc-nginx --replicas=2
 ```
 
