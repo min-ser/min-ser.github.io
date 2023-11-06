@@ -168,20 +168,21 @@ kubectl run redis --image=redis --dry-run
 kubectl run redis --image=redis --labels=app=webui --dry-run -o yaml > redis.yaml
 ```
 
-- vi redis.yaml
-```
-dd : 라인 삭제
-apiVersion: v1
-kind: Pod
-metadata:
-  labels:
-    app: webui
-  name: redis
-spec:
-  containers:
-  - image: redis
-    name: redis
-```
+- vi redis.yaml    
+    - vi편집기 단축키
+        - dd : 라인 삭제
+            ```
+            apiVersion: v1
+            kind: Pod
+            metadata:
+            labels:
+                app: webui
+            name: redis
+            spec:
+            containers:
+            - image: redis
+                name: redis
+            ```
 
 - label 정보 확인
 ```
@@ -190,9 +191,11 @@ kubectl get pod --show-labels
 
 - edit명령어를 이용한 ReplicaController 수정하기
 ```
-아래 명령어 실행 후 spec 아래에 있는 replicas의 수 수정
 kubectl edit rc rc-nginx
+```
 
+- 명령어 실행 후 spec 아래에 있는 replicas의 수 수정
+```
 spec:
   replicas: 4
 ```
