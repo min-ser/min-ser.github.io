@@ -114,4 +114,33 @@ spec:
 
 # ReplicationController 실습
 
-# 
+## ReplicationController example(1)
+- cat rc-nginx.yaml
+```
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: rc-nginx
+spec:
+  replicas: 3
+  selector:
+    app: webui
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: webui
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:1.14
+```
+- kubectl create -f rc-nginx.yaml
+- watch kubectl get pods -o -wide
+- kubectl get replicationcontrollers
+- kubectl get rc
+- kubectl describe rc rc-nginx
+
+### 파드 삭제 시 ReplicationController가 하는 일은?
+- kubectl get pods
+- kubectl delete pod rc-nginx-XXXX
