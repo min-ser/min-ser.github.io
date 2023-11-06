@@ -113,6 +113,91 @@ spec:
 ```
 
 # ReplicationController 실습
+- watch kubectl get pods -o wide
+    > 실시간으로 kubectl get pods -o wide 명령어 확인
+
+- cat rc-nginx.yaml에 대한 설명
+```
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: rc-nginx
+spec:
+  replicas: 3   # replica 갯수 3개, app: webui를 3개 보장
+  selector:
+    app: webui
+  template:     # app: webui가 3개가 아닐경우 template를 통해 생성
+    metadata:
+      name: nginx-pod
+      labels:
+        app: webui
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:1.14
+```
+
+- rc-nginx.yaml 동작
+```
+kubectl create -f rc-nginx.yaml
+```
+
+- 명령어 : kubectl get replicationcontrollers
+- kubectl get rc
+> replicationController 정보보기
+```
+DESIRED : replica 수 3개 요구
+CURRENT : 현재 3개 실행중
+READY   : 준비된 상태 3개
+
+master@master:kubectl get replicationcontrollers
+NAME       DESIRED   CURRENT   READY   AGE
+rc-nginx   3         3         3       99s
+```
+
+- kubectl run redis --image=redis --dry-run
+> --dry-run 명령어 실행에 (문법)이상유무 확인 가능
+
+- redis.yaml 생성 명령어
+```
+kubectl run redis --image=redis --labels=app=webui --dry-run -o yaml > redis.yaml
+```
+
+- vi redis.yaml
+```
+dd : 라인 삭제
+
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: webui
+  name: redis
+spec:
+  containers:
+  - image: redis
+    name: redis
+```
+
+- label 정보 확인
+```
+kubectl get pod --show-labels
+```
+
+- edit명령어를 이용한 ReplicaController 수정하기
+```
+> 아래 명령어 실행 후 spec 아래에 있는 replicas의 수 수정
+kubectl edit rc rc-nginx
+
+spec:
+  replicas: 4
+```
+
+- 명령어로 간단하게 replicas의 숫자 수정하기
+```
+> 자유롭게 scale up, down이 가능
+kubectl scale rc rc-nginx --replicas=2
+```
 
 ## ReplicationController example(1)
 - cat rc-nginx.yaml
@@ -208,7 +293,40 @@ spec:
 - labels(name: apache, app:main, rel:stable)를 가지는 httpd:2.2 버전의 Pod를 2개 운영합니다.
     - rc name: rc-mainui
     - container: httpd:2.2
-- 혅재 디렉토리에 rc-lab.yaml파일이 생성되어야 하고, 애플리케이션 동작은 파일을 이용해 실행합니다.
+- 현재 디렉토리에 rc-lab.yaml파일이 생성되어야 하고, 애플리케이션 동작은 파일을 이용해 실행합니다.
+
+## 1. 실행중인 pod 삭제
+- kubectl delete all --all
+- kubectl get rc
+- kubectl delete rc {복사한이름}
+
+## 2. yaml 파일 생성
+kubectl run redis --image=redis --labels=app=webui --dry-run -o yaml > rc-lab.yaml
+```
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: rc-mainui
+spec:
+  replicas: 2  
+  selector:
+    app: main
+  template:     
+    metadata:
+      labels:
+        name: apache
+        app: main
+        rel: stable
+    spec:
+      containers:
+      - name: httpd-container
+        image: httpd:2.2
+```
+kubectl create -f rc-nginx.yaml
+
 
 2. 동작되는 http:2.2 버전의 컨테이너를 3개로 확장하는 명령을 적고 실행하세요.
 CLI#
+```
+kubectl scale rc rc-lab --replicas=3
+```
