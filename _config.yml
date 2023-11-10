@@ -99,3 +99,6 @@ analytics:
     tracking_id          : "G-LNHNDTXBCV"
     anonymize_ip         : false 
                           # true, false (default)
+# 플러그인
+plugins:
+  - jekyll-paginate
