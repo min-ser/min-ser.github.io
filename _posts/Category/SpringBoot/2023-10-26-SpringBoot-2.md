@@ -80,14 +80,14 @@ sudo docker images
 ```
 
 ## 컨테이너 실행(image 사전 생성 필요)
-```
-sudo docker run -d -p 8080:8080 <docker hub id>/<application name>:<tag>
+```bash
+sudo docker run -d -p 8080:8080 [docker hub id]/[application name]:[tag]
 sudo docker run -i -t --name replica --net host iiblackcode/springboot-mysql-replica:kbhc
 ```
 
 - -p : 8080포트로 실행해서 8081로 포트포워딩(외부에서 8081로 접근)
 - --name : container name 설정 : x-forwarded-for
-- :kbhc : tag값이 kbhc
+- kbhc : tag값이 kbhc
 ```
 sudo docker run -d -p 8081:8080 --name x-forwarded-for iiblackcode/xforwardedfor:kbhc
 ```
