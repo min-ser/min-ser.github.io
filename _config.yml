@@ -56,8 +56,8 @@ port:             	 4000
 
 
 #dependencies
-# Gems
-gems:
+# Gems > Plugins 수정 2024.01.08
+plugins:
   - jekyll-paginate
 
 
