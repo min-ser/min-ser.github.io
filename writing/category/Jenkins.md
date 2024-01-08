@@ -6,7 +6,7 @@ category: "Jenkins"
 permalink: "/writing/category/jenkins/"
 
 ## Logo 이미지 경로
-header-img: "assets/img/Jenkins"
+header-img: "assets/category/Jenkins/1280px-Jenkins_logo_with_title.svg.png"
 
 ## Logo 동영상 경로
 # header-video: "assets/video/JavaScript.mp4"

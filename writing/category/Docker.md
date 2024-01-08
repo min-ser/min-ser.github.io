@@ -6,7 +6,7 @@ category: "Docker"
 permalink: "/writing/category/docker/"
 
 ## Logo 이미지 경로
-header-img: "assets/img/Docker"
+header-img: "assets/category/Docker/do1298d74a--logo--logos-.png"
 
 ## Logo 동영상 경로
 # header-video: "assets/video/JavaScript.mp4"

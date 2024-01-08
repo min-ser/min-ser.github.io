@@ -4,7 +4,7 @@ category: "Terraform"
 permalink: "/writing/category/terraform/"
 
 ## Logo 이미지 경로
-header-img: "assets/img/categoryLogo/Terraform.png"
+header-img: "assets/category/Terraform/Terraform.png"
 
 ## Logo 동영상 경로
 # header-video: "assets/video/JavaScript.mp4"
