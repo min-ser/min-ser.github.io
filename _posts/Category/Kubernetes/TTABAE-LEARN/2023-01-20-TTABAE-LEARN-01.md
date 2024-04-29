@@ -81,6 +81,12 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
 - 어디서나 실행 가능 - 온프레미스, 퍼블릭 클라우드(AKS, EKS, GKE등)
 - 선언적 API
 
+# 선언적 API
+
+    쿠버네티스에게 명령어를 통해 요청
+    예)노드 생성 및 실행 명령어 동작
+
+---
 ---
 
 ## 컨테이너 이미지 생성 예시
