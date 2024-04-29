@@ -54,25 +54,24 @@ category: [Kubernetes]
         * pod
         * service
 
-    * name : 자원의 이름
+    * name : 자원의 이름(node, pod, service ...)
     * flags : 부가적으로 설정할 옵션
         * --help
         * -o option
 
 ## 명령어 예시    
-```
-    kubectl get pod webserver -o wide
+```bash
+kubectl get pod webserver -o wide
 ```
 ## kubectl 명령어 자동완성
 
 - BASH
+```bash
+source<(kubectl completion bash)
+source<(kubectl completion bash)
 
-```    
-    source<(kubectl completion bash)
-    source<(kubectl completion bash)
-
-    echo "source<(kubectl completion bash)">>~/.bashrc
-    echo "source<(kubectlm completion bash)">>~/.bashrc
+echo "source<(kubectl completion bash)">>~/.bashrc
+echo "source<(kubectlm completion bash)">>~/.bashrc
 ```
 
 ## kubectl commands
