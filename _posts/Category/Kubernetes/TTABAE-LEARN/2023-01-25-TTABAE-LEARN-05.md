@@ -18,14 +18,14 @@ category: [Kubernetes]
 
 ---
 ```
-    안녕하세요, 이성미 강사입니다!
-    어렵게만 느껴지는 쿠버네티스,
-    따라하면서 배우면 어느새 지식이 되어 있을 겁니다!
+안녕하세요, 이성미 강사입니다!
+어렵게만 느껴지는 쿠버네티스,
+따라하면서 배우면 어느새 지식이 되어 있을 겁니다!
 
-    오늘은 3-1강에 이어 kubectl command를 알아보고, 직접 pod 생성까지 !
-    영상의 길이가 조금 길지만 그래도 화이팅 해주시기 바랍니다 !!
+오늘은 3-1강에 이어 kubectl command를 알아보고, 직접 pod 생성까지 !
+영상의 길이가 조금 길지만 그래도 화이팅 해주시기 바랍니다 !!
 
-    이 영상을 보기 전 이전 영상을 꼭 시청해 주세요:)
+이 영상을 보기 전 이전 영상을 꼭 시청해 주세요:)
 ```
 ---
 
@@ -43,7 +43,249 @@ category: [Kubernetes]
 kubectl api-resources
 ```
 
+2. kubectl 명령어 보기
+
+```
+kubectl logs --help
+kubectl describe nodes master 
+```
+
+3. 컨테이너를 실행하면서 kubectl 명령어 사용하기
+
+- run : container pod를 만드는 명령어
+```bash
+kubectl run webserver --image=nginx:1.14 --port 80
+``` 
+
+- pod 확인
+```bash
+# 명령어
+kubectl get pods -o wide
+
+# 결과화면
+NAME        READY   STATUS    RESTARTS   AGE   IP           NODE     NOMINATED NODE   READINESS GATES
+webserver   1/1     Running   0          2m    10.244.2.2   node02   <none>           <none>
+
+```
+
+- pod 자세히 확인
+```bash
+kubectl describe pods
+```
+
+4. 명령어 형식으로 쓸 수 있는 웹 브라우저
+```bash
+curl 10.244.2.2
+```
+
+5. 브라우저 확인하는 프로그램 설치
+```bash
+# 설치
+sudo su -
+sudo apt-get update
+elinks
+apt install elinks
+
+# elinks 명령어 실행
+elinks 10.244.2.2
+```
+
+6. create 명령어
+- run : 컨테이너를 한개 실행시 사용
+- create : 여러개 배포하는경우 사용
+- httpd : 아파치 웹서버
+- httpd:latest : latest생략시 latest버전으로 실행됨
+- replicas : 같은서버 3개 실행
+```bash
+kubectl create deployment mainui --image=httpd --replicas=3
+```
+
+- 실행
+```bash
+root@MASTER:~# kubectl get pods -o wide
+NAME                      READY   STATUS    RESTARTS   AGE     IP           NODE     NOMINATED NODE   READINESS GATES
+mainui-5886756f68-5mqdq   1/1     Running   0          2m26s   10.244.1.6   node01   <none>           <none>
+mainui-5886756f68-6gx6z   1/1     Running   0          2m26s   10.244.2.3   node02   <none>           <none>
+mainui-5886756f68-hrqkr   1/1     Running   0          2m26s   10.244.2.4   node02   <none>           <none>
+webserver                 1/1     Running   0          13m     10.244.2.2   node02   <none>           <none>
+root@MASTER:~# kubectl get pod mainui-5886756f68-5mqdq -o wide
+NAME                      READY   STATUS    RESTARTS   AGE     IP           NODE     NOMINATED NODE   READINESS GATES
+mainui-5886756f68-5mqdq   1/1     Running   0          2m37s   10.244.1.6   node01   <none>           <none>
+root@MASTER:~# curl 10.244.1.6
+<html><body><h1>It works!</h1></body></html>
+```
+
+7. yaml 형태로 보기
+
+```bash
+kubectl get pod webserver -o yaml
+```
+
+8. json형태로 보기
+
+```bash
+kubectl get pod webserver -o json
+
+```
+
+9. 웹페이지 수정하기위해 컨테이너 접속
+- exec : pod에서만 실행 가능한 명령어
+```bash
+kubectl exec webserver -it -- /bin/bash
+```
+
+- 실행
+```bash
+root@MASTER:~# kubectl exec webserver -it -- /bin/bash
+root@webserver:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@webserver:/# cd /usr/share/nginx/html/
+root@webserver:/usr/share/nginx/html# ls
+50x.html  index.html
+root@webserver:/usr/share/nginx/html# cat index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+root@webserver:/usr/share/nginx/html# echo "<h1>BLACKCODE web</h1>" > index.html
+root@webserver:/usr/share/nginx/html# ls
+50x.html  index.html
+root@webserver:/usr/share/nginx/html# cat index.html
+<h1>BLACKCODE web</h1>
+root@webserver:/usr/share/nginx/html# exit
+exit
+root@MASTER:~# curl 10.244.2.2
+<h1>BLACKCODE web</h1>
+```
+
+10.  컨테이너에서 동작한 로그보기
+
+```bash
+kubectl logs webserver
+10.244.0.0 - - [30/Apr/2024:01:42:12 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.68.0" "-"
+10.244.0.0 - - [30/Apr/2024:01:45:53 +0000] "GET / HTTP/1.1" 200 612 "-" "ELinks/0.13.1 (textmode; Linux 5.15.0-1061-azure x86_64; 197x59-2)" "-"
+10.244.0.0 - - [30/Apr/2024:02:00:12 +0000] "GET / HTTP/1.1" 200 23 "-" "curl/7.68.0" "-"
+```
+
+11. 포트포워딩
+
+```bash
+kubectl port-forward webserver 8080:80
+
+Forwarding from 127.0.0.1:8080 -> 80
+Forwarding from [::1]:8080 -> 80
+```
+
+12. 배포된 pod 갯수 조절
+- edit : 동작중인 object 수정
+
+```bash
+
+kubectl get deployments.apps
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+mainui   3/3     3            3           22m
+
+# deployment 수정
+kubectl edit deployments.app mainui
+
+# 접속 후 replica 3 > 5로 수정(vi편집기)
+root@MASTER:~# kubectl edit deployments.apps mainui
+deployment.apps/mainui edited
+root@MASTER:~# kubectl get pods
+NAME                      READY   STATUS    RESTARTS   AGE
+mainui-5886756f68-5mqdq   1/1     Running   0          23m
+mainui-5886756f68-6gx6z   1/1     Running   0          23m
+mainui-5886756f68-gmwhh   1/1     Running   0          4s
+mainui-5886756f68-hrqkr   1/1     Running   0          23m
+mainui-5886756f68-zztkg   1/1     Running   0          4s
+webserver                 1/1     Running   0          34m
+
+```
+
+13. yaml파일 생성 명령어
+- dry-run : 실행가능여부 체크만
+```bash
+kubectl run webserver --image=nginx:1.14 --port 80 --dry-run -o yaml > webserver-pod.yaml
+```
+
+14. 기존 webserver pod삭제 후 yaml을 통해 pod 생성
+
+```bash
+# 명령어
+kubectl delete pod webserver
+
+root@MASTER:~# kubectl get pods
+NAME                      READY   STATUS    RESTARTS   AGE
+mainui-5886756f68-5mqdq   1/1     Running   0          123m
+mainui-5886756f68-6gx6z   1/1     Running   0          123m
+mainui-5886756f68-gmwhh   1/1     Running   0          100m
+mainui-5886756f68-hrqkr   1/1     Running   0          123m
+mainui-5886756f68-zztkg   1/1     Running   0          100m
+webserver                 1/1     Running   0          134m
+root@MASTER:~# kubectl delete pod webserver
+pod "webserver" deleted
+root@MASTER:~# ^C
+root@MASTER:~# ^C
+root@MASTER:~# kubectl get pod
+NAME                      READY   STATUS    RESTARTS   AGE
+mainui-5886756f68-5mqdq   1/1     Running   0          127m
+mainui-5886756f68-6gx6z   1/1     Running   0          127m
+mainui-5886756f68-gmwhh   1/1     Running   0          103m
+mainui-5886756f68-hrqkr   1/1     Running   0          127m
+mainui-5886756f68-zztkg   1/1     Running   0          103m
+```
+
+15. deployment까지 삭제
+
+```bash
+# 명령어
+kubectl delete deployments.apps mainui
+
+deployment.apps "mainui" deleted
+root@MASTER:~# kubectl get pods
+No resources found in default namespace.
+```
+
+16.  yaml파일로 배포
+
+```bash
+# 명령어
+root@MASTER:~# kubectl create -f webserver-pod.yaml
+
+root@MASTER:~# kubectl create -f webserver-pod.yaml
+pod/webserver created
+root@MASTER:~# kubectl get pods
+NAME        READY   STATUS    RESTARTS   AGE
+webserver   1/1     Running   0          3s
+root@MASTER:~# kubectl get pods -o wide
+NAME        READY   STATUS    RESTARTS   AGE   IP           NODE     NOMINATED NODE   READINESS GATES
+webserver   1/1     Running   0          8s    10.244.2.6   node02   <none>           <none>
+```
+
 ---
+---
+
 # kubectl 명령어 실습
 
 ## 1. Nginx컨테이너 생성 명령어
