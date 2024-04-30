@@ -66,11 +66,11 @@ kubectl get pod webserver -o wide
 ## kubectl 명령어 자동완성
 
 ```bash
-source<(kubectl completion bash)
-source<(kubectl completion bash)
+source <(kubectl completion bash)
+source <(kubeadm completion bash)
 
 echo "source<(kubectl completion bash)">>~/.bashrc
-echo "source<(kubectlm completion bash)">>~/.bashrc
+echo "source<(kubeadm completion bash)">>~/.bashrc
 ```
 
 ## kubectl commands
