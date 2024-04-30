@@ -3,7 +3,7 @@ layout:     BLACKCODE
 title:      "[따배쿠] 2-2. 도커 쿠버네티스 설치 / PC에 직접 설치하기 [4/36]"
 subtitle:   "[따배쿠] 2-2. 도커 쿠버네티스 설치 / PC에 직접 설치하기"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
-date:       2023-01-21 12:00:00
+date:       2023-01-02 13:00:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"

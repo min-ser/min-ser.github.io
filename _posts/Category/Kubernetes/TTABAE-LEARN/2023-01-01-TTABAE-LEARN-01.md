@@ -3,7 +3,7 @@ layout:     BLACKCODE
 title:      "[따배쿠] 1. Kubernetes (쿠버네티스)소개 [2/36]"
 subtitle:   "[따배쿠] 1. Kubernetes (쿠버네티스)소개"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
-date:       2023-01-20 12:00:00
+date:       2023-01-01 12:00:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"

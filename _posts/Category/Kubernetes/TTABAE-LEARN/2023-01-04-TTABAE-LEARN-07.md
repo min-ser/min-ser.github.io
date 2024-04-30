@@ -3,7 +3,7 @@ layout:     BLACKCODE
 title:      "[따배쿠] 4-2. 쿠버네티스 아키텍처 - namespace [8/36]"
 subtitle:   "[따배쿠] 4-2. 쿠버네티스 아키텍처 - namespace"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
-date:       2023-01-31 1:10:00
+date:       2023-01-04 2:10:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"

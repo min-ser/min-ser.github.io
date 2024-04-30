@@ -3,7 +3,7 @@ layout:     BLACKCODE
 title:      "[따배쿠] 4-1. 쿠버네티스 아키텍처 - Kubernetes 동작원리 [7/36]"
 subtitle:   "[따배쿠] 4-1. 쿠버네티스 아키텍처 - Kubernetes 동작원리"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
-date:       2023-01-30 1:10:00
+date:       2023-01-04 1:00:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"

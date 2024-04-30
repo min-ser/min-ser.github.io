@@ -3,7 +3,7 @@ layout:     BLACKCODE
 title:      "[따배쿠] 2-1. 쿠버네티스 설치 / 설치없이 웹에서 실습하기 [3/36]"
 subtitle:   "[따배쿠] 2-1. 쿠버네티스 설치 / 설치없이 웹에서 실습하기"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
-date:       2023-01-21 12:00:00
+date:       2023-01-02 12:00:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"

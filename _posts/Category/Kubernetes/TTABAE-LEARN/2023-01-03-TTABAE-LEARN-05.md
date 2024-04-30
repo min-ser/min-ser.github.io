@@ -3,7 +3,7 @@ layout:     BLACKCODE
 title:      "[따배쿠] 3-2. kubectl command / pod 생성하기 [6/36]"
 subtitle:   "[따배쿠] 3-2. kubectl command / pod 생성하기"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
-date:       2023-01-25 1:10:00
+date:       2023-01-03 2:10:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
