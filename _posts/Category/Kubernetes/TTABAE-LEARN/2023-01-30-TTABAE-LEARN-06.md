@@ -1,6 +1,6 @@
 ---
 layout:     BLACKCODE
-title:      "Kubernetes [7/36] AKS로 실습"
+title:      "[따배쿠] 4-1. 쿠버네티스 아키텍처 - Kubernetes 동작원리 [7/36]"
 subtitle:   "[따배쿠] 4-1. 쿠버네티스 아키텍처 - Kubernetes 동작원리"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
 date:       2023-01-30 1:10:00
@@ -18,50 +18,6 @@ category: [Kubernetes]
 
 ---
 
-# *** K8S 명령어 실습전 AKS 환경 준비 ***
-
-## VSCODE에서 Azure Potal 접속
-1. VSCode에서 명령어 실행
-```
-Connect-AzAccount
-```
-
-2. 계정 선택 및 로그인 진행
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/Connect-AzAccount.PNG?raw=true)
-
-* 아래와 같이 연동작업 
-
-```
-PS D:\GIT> Connect-AzAccount
-경고: Unable to acquire token for tenant '4aed9820-113d-4f48-9f53-4d91f37ad279' with error 'SharedTokenCacheCredential authentication unavailable. Token acquisition 
-failed for user minseo_kim89@megazone.com. Ensure that you have authenticated with a developer tool that supports Azure single sign on.'
-
-Account                   SubscriptionName TenantId                             Environment
--------                   ---------------- --------                             -----------
-minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx AzureCloud
-```
-3. [AzurePotal] Azure Potal에 접속
-    
-    1). 상단에 있는 Cloud Shell을 클릭하여 `스토리지 생성`
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/AzureCloudShell.png?raw=true)<br>
-    2). 스토리지 만들기 클릭
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/createStorage.PNG?raw=true)<br>
-    3). Cloud Shell 진입
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/AccessAzureCloudShell.png?raw=true)
-
-4. VSCODE에서 Azure Cloud Shell 클릭
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_1.png?raw=true)
-
-5. 상단에 구독 선택
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_2.png?raw=true)
-
-6. VSCode에서 접속 성공한 모습
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_3.png?raw=true)
-
-## VSCode 연동작업 완료
-
----
-
 # 목차
 - 쿠버네티스 동작원리
 - namespace
@@ -69,9 +25,10 @@ minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 
 - api version
 
 ---
+
 # 쿠버네티스 동작원리
 ## 쿠버네티스에서 컨테이너 동작 FLOW
-![쿠버네티스에서 컨테이너 동작 FLOW](./img/6/01.PNG)
+![쿠버네티스에서 컨테이너 동작 FLOW](./img/06/01.PNG)
 
 1. 개발자가 컨테이너 Build
     - mainui
@@ -100,9 +57,13 @@ minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 
     - 쿠버네티스는 컨테이너를 POD단위로 관리
 
 ## 쿠버네티스 컴포넌트
-- 마스터 컴포넌트
+- 마스터 컴포넌트(Control-Plane )
     - `etcd`
         - key-value 타입의 저장소
+        - wocker node의 정보들을 보관하고 있음
+        1. api서버로부터 요청시 갖고있는 worker node의 정보를 api에 전달해줌
+        2. api가 전달받은 worker node정보를 다시 `스케쥴러`에게 전달하여 작업이 가능한지 확인
+        3. 작업가능여부 확인 후 worker node의 kubelet에게 작업 요청
     - `kube-apiserver`
         - k8s API를 사용하도록 요청을 받고 요청이 유효한지 검사
     - `kube-scheduler`
@@ -122,7 +83,7 @@ minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 
         - docker, containerd, runc
 
 ## 쿠버네티스 아키텍쳐
-
+![쿠버네티스 아키텍쳐](./img/06/02.PNG)
 - Control plane
     - API : kubectl 요청을 받음 `Nginx 실행` 명령
         - 사용자의 명령어를 문법, 권한 체크 후 실행
@@ -151,7 +112,8 @@ minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 
     - CNI - weave, calico, flaneid, kube-route ...
 - dns 애드온
     - coreDNS
-- 대시보드 doemdhs
+- 대시보드 애드온
+    - [Kubernetes Dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 - 컨테이너 자원 모니터링
     - cAdvisor
 - 클러스터 로깅
