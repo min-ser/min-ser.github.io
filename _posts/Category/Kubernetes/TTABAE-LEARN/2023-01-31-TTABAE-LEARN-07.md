@@ -1,6 +1,6 @@
 ---
 layout:     BLACKCODE
-title:      "Kubernetes [8/36] AKS로 실습"
+title:      "[따배쿠] 4-2. 쿠버네티스 아키텍처 - namespace [8/36]"
 subtitle:   "[따배쿠] 4-2. 쿠버네티스 아키텍처 - namespace"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
 date:       2023-01-31 1:10:00
