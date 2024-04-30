@@ -28,7 +28,7 @@ category: [Kubernetes]
 
 # 쿠버네티스 동작원리
 ## 쿠버네티스에서 컨테이너 동작 FLOW
-![쿠버네티스에서 컨테이너 동작 FLOW](./img/06/01.PNG)
+![쿠버네티스에서 컨테이너 동작 FLOW](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/TTABAE-LEARN/img/06/01.png?raw=true)
 
 1. 개발자가 컨테이너 Build
     - mainui
@@ -83,7 +83,7 @@ category: [Kubernetes]
         - docker, containerd, runc
 
 ## 쿠버네티스 아키텍쳐
-![쿠버네티스 아키텍쳐](./img/06/02.PNG)
+![쿠버네티스 아키텍쳐](https://raw.githubusercontent.com/IIBlackCode/IIBlackCode.github.io/master/_posts/Category/Kubernetes/TTABAE-LEARN/img/06/02.png)
 - Control plane
     - API : kubectl 요청을 받음 `Nginx 실행` 명령
         - 사용자의 명령어를 문법, 권한 체크 후 실행
