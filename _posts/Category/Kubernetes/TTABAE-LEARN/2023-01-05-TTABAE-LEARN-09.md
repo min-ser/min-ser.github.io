@@ -3,7 +3,7 @@ layout:     BLACKCODE
 title:      "5-1-1. 쿠버네티스 Pod - Container 정리와 Single / Multi Container Pod 생성"
 subtitle:   "5-1-1. 쿠버네티스 Pod - Container 정리와 Single / Multi Container Pod 생성"
 description: "https://www.youtube.com/watch?v=0rYt3PcggzA&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&index=10"
-date:       2023-01-31 1:10:00
+date:       2023-01-05 1:10:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
@@ -71,7 +71,8 @@ minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 
 # Container와 Pod의 개념
 ## 1. Pod 개념 및 사용하기
 ### Container 정리
-```
+```powershell
+# app.js 생성
 cat > app.js
 const http = require('http');
 const os = require('os');
@@ -83,6 +84,7 @@ var handler = function(req, res) {
 var www = http.createServer(handler);
 www.listen(8080);
 
+# Dockerfile Build
 cat > Dockerfile
 FROM node:12
 COPY app.js/app/js
@@ -92,6 +94,7 @@ ENTRYPOINT ["node", "app.js"]
 - docker build -t smlinux/appjs .
 - docker push smlinux/appjs
 ```
+> 하나의 컨테이너 = 하나의 애플리케이션과 같다.
 
 ### Pod란?
 - 컨테이너를 표현하는 k8s api의 최소 단위   
@@ -100,39 +103,230 @@ ENTRYPOINT ["node", "app.js"]
 
 ### Pod 생성하기
 1. kubectl run명령(CLI)으로 생성
-    ```
-    kubectl run webserver --image=nginx:1.14
-    ```
+   
+```
+kubectl run web1 --image=nginx:1.14 --port=80
+```
+
 2. pod yaml을 이용해 생성
-    - nginx-pod.yaml파일 작성
-        ```
-        apiVersion: v1
-        kind: Pod
-        metadata:
-        name: nginx-pod
-        spec:
-        containers:
-        - name: nginx-container
-            image: nginx:1.14
-            ports:
-            - containerPort: 80
-            protocol: TCP
-        ```
-    - 명령어 
-        ```
-        # Pod 실행
-        kubectl create -f pod-nginx.yaml
+- nginx-pod.yaml파일 작성
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:1.14
+    ports:
+      - containerPort: 80
+        protocol: TCP
+```
+- 명령어 
+```powershell
+# Pod 실행
+kubectl create -f pod-nginx.yaml
 
-        # 현재 동작중인 pod 확인
-        kubectl get pods
-        kubectl get pods -o wide
-        kubectl get pods -o yaml
-        kubectl get pods -o json
-        kubectl get pods webserver -o json | grep -i podip
+# 현재 동작중인 pod 확인
+kubectl get pods
+kubectl get pods -o wide
+kubectl get pods -o yaml
+kubectl get pods -o json
+kubectl get pods webserver -o json | grep -i podip
 
-        # Pod에 접속해서 결과보기
-        curl <pod's IP address>
-        ```
+- yaml 파일형태로 pod 보기
+```powershell
+kubectl get pods -o yaml
+```
+
+- 위 명령어 기반으로 yaml 작성
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web1
+spec:
+  containers:
+  - image: nginx:1.14
+    imagePullPolicy: IfNotPresent
+    name: web1
+    ports:
+    - containerPort: 80
+      protocol: TCP
+```
+
+- 매 2초마다 pod 동작상태 보기
+```powershell
+# 명령어
+watch kubectl get pods -o wide
+
+# 실행결과
+Every 2.0s: kubectl get pods -o wide                                             MASTER: Tue May  7 06:18:16 2024
+
+NAME        READY   STATUS    RESTARTS   AGE   IP            NODE     NOMINATED NODE   READINESS GATES
+nginx-pod   1/1     Running   0          37m   10.244.2.12   node02   <none>           <none>
+web1        1/1     Running   0          44m   10.244.2.11   node02   <none>           <none>
+```
+
+# Pod에 접속해서 결과보기
+```powershell
+# 명령어
+curl <ip>
+
+# 실행결과
+master@MASTER:~$ curl 10.244.2.12
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and   
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+```
+
+- pod의 ip만 조회
+```powershell
+master@MASTER:~$ kubectl get pods web1 -o json | grep -i podip
+        "podIP": "10.244.2.11",
+        "podIPs": [
+```
+
+# multi-container Pod생성하기
+- yaml 파일
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multipod
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.14
+      ports:
+      - containerPort: 80
+    - name: centos-container
+      image: centos:7
+      command:
+      - sleep
+      - "10000"
+```
+
+- 명령어 참고
+```powershell
+kubectl create -f pod-multi.yaml
+kubectl get pods
+kubectl get pods -o wide
+kubectl exec multipod -it -c centos-container -- /bin/bash # centos-container pod로 접속
+kubectl exec multipod -it -c nginx-container -- /bin/bash # nginx-container pod로 접속
+/# curl http://localhost:80
+/# exit
+kubectl logs multipod -c nginx-container
+```
+
+- pod 접속 명령어
+  - -c : 컨테이너명 지정
+  - -it : interactive(상호작용)
+  - -- /bin/bash : bash shell 실행
+```powershell
+# 명령어
+kubectl exec multipod -it -c nginx-container -- /bin/bash
+
+# nginx-container pod접속 후 index.html 조회하기
+master@MASTER:~$ kubectl exec multipod -it -c nginx-container -- /bin/bash
+root@multipod:/# cat /usr/share/nginx/html/index.html 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+
+# index.html의 내용 수정
+root@multipod:/# cd /usr/share/nginx/html/           
+root@multipod:/usr/share/nginx/html# echo "TEST web" > index.html
+root@multipod:/usr/share/nginx/html# cat index.html 
+TEST web
+root@multipod:/usr/share/nginx/html# exit
+exit
+master@MASTER:~$ curl 10.244.2.13
+TEST web
+```
+
+## centos-contrainer pod 접속하기
+```powershell
+# 명령어
+kubectl exec multipod -c centos-container -it -- /bin/bash
+
+# 
+master@MASTER:~$ kubectl exec multipod -c centos-container -it -- /bin/bash
+[root@multipod /]# ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 06:41 ?        00:00:00 sleep 10000
+root           7       0  0 06:58 pts/0    00:00:00 /bin/bash
+root          21       7  0 06:59 pts/0    00:00:00 ps -ef
+[root@multipod /]# curl localhost:80
+TEST web
+```
+> multi-container pod에서 container들의 pod명과 ip는 동일
+
+## pod내에 container의 로그 출력
+```powershell
+# 명령어
+kubectl logs <pod명> -c <container명>
+
+# 멀티 컨테이너인 경우
+master@MASTER:~$ kubectl logs multipod -c nginx-container
+10.244.0.0 - - [07/May/2024:06:43:57 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.68.0" "-"
+10.244.0.0 - - [07/May/2024:06:56:38 +0000] "GET / HTTP/1.1" 200 9 "-" "curl/7.68.0" "-"
+127.0.0.1 - - [07/May/2024:06:59:11 +0000] "GET / HTTP/1.1" 200 9 "-" "curl/7.29.0" "-"
+
+# 싱글 컨테이너인 경우
+master@MASTER:~$ kubectl logs web1
+10.244.0.0 - - [07/May/2024:07:32:08 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.68.0" "-"
+10.244.0.0 - - [07/May/2024:07:32:09 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.68.0" "-"
+```
+
+
+---
+
 
 # 실습
 ## 1.14버전의 nginx이미지를 web1이름의 pod로 실행
