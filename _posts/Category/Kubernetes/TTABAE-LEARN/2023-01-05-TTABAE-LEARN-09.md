@@ -36,6 +36,7 @@ Account                   SubscriptionName TenantId                             
 -------                   ---------------- --------                             -----------
 minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx AzureCloud
 ```
+
 3. [AzurePotal] Azure Potal에 접속
     
     1). 상단에 있는 Cloud Shell을 클릭하여 `스토리지 생성`
@@ -72,7 +73,7 @@ minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 
 ## 1. Pod 개념 및 사용하기
 ### Container 정리
 
-```powershell
+```shell
 # app.js 생성
 cat > app.js
 const http = require('http');
@@ -103,13 +104,13 @@ ENTRYPOINT ["node", "app.js"]
 - pod에는 하나 또는 여러 개의 컨테이너가 포함될 수 있음   
 
 ### Pod 생성하기
-1. kubectl run명령(CLI)으로 생성
-   
+#### 1. kubectl run명령(CLI)으로 생성
+
 ```
 kubectl run web1 --image=nginx:1.14 --port=80
 ```
 
-2. pod yaml을 이용해 생성
+#### 2. pod yaml을 이용해 생성
 - nginx-pod.yaml파일 작성
 
 ```yaml
@@ -128,7 +129,7 @@ spec:
 
 - 명령어 
 
-```powershell
+```shell
 # Pod 실행
 kubectl create -f pod-nginx.yaml
 
@@ -138,13 +139,16 @@ kubectl get pods -o wide
 kubectl get pods -o yaml
 kubectl get pods -o json
 kubectl get pods webserver -o json | grep -i podip
+```
 
 - yaml 파일형태로 pod 보기
-```powershell
+
+```shell
 kubectl get pods -o yaml
 ```
 
 - 위 명령어 기반으로 yaml 작성
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -162,7 +166,7 @@ spec:
 
 - 매 2초마다 pod 동작상태 보기
 
-```powershell
+```shell
 # 명령어
 watch kubectl get pods -o wide
 
@@ -176,7 +180,7 @@ web1        1/1     Running   0          44m   10.244.2.11   node02   <none>    
 
 # Pod에 접속해서 결과보기
 
-```powershell
+```shell
 # 명령어
 curl <ip>
 
@@ -210,7 +214,8 @@ Commercial support is available at
 ```
 
 - pod의 ip만 조회
-```powershell
+
+```shell
 master@MASTER:~$ kubectl get pods web1 -o json | grep -i podip
         "podIP": "10.244.2.11",
         "podIPs": [
@@ -239,7 +244,7 @@ spec:
 
 - 명령어 참고
 
-```powershell
+```shell
 kubectl create -f pod-multi.yaml
 kubectl get pods
 kubectl get pods -o wide
@@ -255,7 +260,7 @@ kubectl logs multipod -c nginx-container
   - -it : interactive(상호작용)
   - -- /bin/bash : bash shell 실행
 
-```powershell
+```shell
 # 명령어
 kubectl exec multipod -it -c nginx-container -- /bin/bash
 
@@ -301,7 +306,7 @@ TEST web
 
 ## centos-contrainer pod 접속하기
 
-```powershell
+```shell
 # 명령어
 kubectl exec multipod -c centos-container -it -- /bin/bash
 
@@ -319,7 +324,7 @@ TEST web
 
 ## pod내에 container의 로그 출력
 
-```powershell
+```shell
 # 명령어
 kubectl logs <pod명> -c <container명>
 
@@ -335,7 +340,7 @@ master@MASTER:~$ kubectl logs web1
 10.244.0.0 - - [07/May/2024:07:32:09 +0000] "GET / HTTP/1.1" 200 612 "-" "curl/7.68.0" "-"
 ```
 
-
+---
 ---
 
 
@@ -402,13 +407,13 @@ spec:
 
 ## 실행결과
 
-```powershell
+```shell
 master@MASTER:~$ kubectl create -f pod-multi.yaml
 pod/multipod created
 ```
 > READY가 2/2인 멀티 컨테이너 표시를 볼 수 있다.
 
-```powershell
+```shell
 master@MASTER:~$ kubectl get pods -o wide
 NAME        READY   STATUS    RESTARTS   AGE    IP           NODE    NOMINATED NODE   READINESS GATES
 multipod    2/2     Running   0          96s    10.244.1.6   node1   <none>           <none>
@@ -419,7 +424,7 @@ web1        1/1     Running   1          5d2h   10.244.2.5   node2   <none>     
 > Multi container Pod에 Curl을 날리면?
 >> nginx가 80포트에 lesten되어있어 nginx의 화면이 나온다.
 
-```powershell
+```shell
 master@MASTER:~$ curl 10.244.1.6
 <!DOCTYPE html>
 <html>
@@ -451,9 +456,9 @@ Commercial support is available at
 ## nginx에 접근하기
 > 실행중인 컨테이너에 접속하려면?
 
-1. pod 자세히 조사
+#### 1. pod 자세히 조사
 
-```powershell
+```shell
 master@MASTER:~$ kubectl describe pod multipod
 Name:         multipod
 Namespace:    default
@@ -524,9 +529,9 @@ Events:
   Normal  Started    6m17s  kubelet            Started container centos-container
 ```
 
-2. pod내에 컨테이너 접속
+#### 2. pod내에 컨테이너 접속
 
-```powershell
+```shell
 # podname : multipod
 # -c nginx-container : container 이름이 nginx-container인것을 선택
 # -it : i(interactive) t(sudo)
@@ -534,9 +539,9 @@ Events:
 kubectl exec multipod -c nginx-container -it -- /bin/bash
 ```
 
-3. nginx의 index.html 경로로 이동
+#### 3. nginx의 index.html 경로로 이동
 
-```powershell
+```shell
 root@multipod:/# cd /usr/share/nginx/html/
 root@multipod:/usr/share/nginx/html# ls
 50x.html  index.html
@@ -570,17 +575,17 @@ Commercial support is available at
 </html>
 ```
 
-4. index.html 수정
+#### 4. index.html 수정
 
-```powershell
+```shell
 root@multipod:/usr/share/nginx/html# echo "Test WEB update by KMS" > index.html
 root@multipod:/usr/share/nginx/html# cat index.html
 Test WEB update by KMS
 ```
 
-5. 컨테이너에서 나간 후 pod를 통해 웹 접근 시도
+#### 5. 컨테이너에서 나간 후 pod를 통해 웹 접근 시도
 
-```powershell
+```shell
 root@multipod:/usr/share/nginx/html# exit
 exit
 command terminated with exit code 130
