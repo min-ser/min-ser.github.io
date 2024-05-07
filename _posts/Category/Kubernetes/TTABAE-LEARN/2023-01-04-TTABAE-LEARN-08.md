@@ -3,7 +3,7 @@ layout:     BLACKCODE
 title:      "[따배쿠] 4-3. 쿠버네티스 아키텍처 - yaml템플릿과 API [9/36]"
 subtitle:   "[따배쿠] 4-3. 쿠버네티스 아키텍처 - yaml템플릿과 API"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
-date:       2023-01-31 1:10:00
+date:       2023-01-04 3:10:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
@@ -113,7 +113,7 @@ ReplicationController | v1
 Service | v1
 PersistentVolume | v1
 
-```
+```yaml
 # 버전을 apps/v1이나 v2로 명시하면 Pod를 찾지못함
 apiVersion: v1 
 kind: Pod # v1으로 동작중
