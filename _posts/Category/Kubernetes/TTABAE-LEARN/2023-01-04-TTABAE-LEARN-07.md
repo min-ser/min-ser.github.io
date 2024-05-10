@@ -9,7 +9,7 @@ header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
 thumbnail: /assets/owner/blog/thumbs/thumb01.png
 tags: [따배쿠]
-category: [Kubernetes]
+category: [따배쿠]
 # comments: false
 # share: false
 ---
