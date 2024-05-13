@@ -20,11 +20,13 @@ permalink: /writing/
         {% endif %}
 
         <!-- 2. post의 title -->
-        <h2 class="post-title">  {{ root_url }}   {{ post.title }}</h2>
+        <!-- <h2 class="post-title">  {{ root_url }}   {{ post.title }}</h2> -->
+        <h2 class="post-title">{{ post.title }}</h2>
 
         <!-- 3. post의 subtitle 구간 -->
         {% if post.subtitle %}
-        <h3 class="post-subtitle">  {{ root_url }}{{ post.subtitle }}</h3>
+        <!-- <h3 class="post-subtitle">{{ root_url }}{{ post.subtitle }}</h3> -->
+        <h3 class="post-subtitle">{{ post.subtitle }}</h3>
         {% endif %}
 
     </a>
