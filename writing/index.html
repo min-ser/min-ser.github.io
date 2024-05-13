@@ -8,27 +8,25 @@ permalink: /writing/
 
 {% for post in paginator.posts %}
 
-
- {% assign post = site.posts.first %}
-  {% assign content = post.content %}
-  
-
+{% assign post = site.posts.first %}
+{% assign content = post.content %}
 
 <div class="post-preview">
-    
-<a href="{{ post.url | prepend: site.baseurl }}">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        
+        <!-- 1. thumbnail 구간 -->
         {% if post.thumbnail %}
-	<img src="{{ post.thumbnail }}" style="float: left; margin: 8px 10px 0px 10px;">
-	{% endif %}
- 
- 
-        <h2 class="post-title">  {{ root_url }}   {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">  {{ root_url }}
-            {{ post.subtitle }}
-        </h3>
+        <img src="{{ post.thumbnail }}" style="float: left; margin: 8px 10px 0px 10px;">
         {% endif %}
+
+        <!-- 2. post의 title -->
+        <h2 class="post-title">  {{ root_url }}   {{ post.title }}</h2>
+
+        <!-- 3. post의 subtitle 구간 -->
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">  {{ root_url }}{{ post.subtitle }}</h3>
+        {% endif %}
+
     </a>
     <p class="post-meta">Posted by {% if post.author %}{{ root_url }}{{ post.author }}{% else %}{{ root_url }}{{ site.title }}{% endif %} on {{ root_url }}{{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
