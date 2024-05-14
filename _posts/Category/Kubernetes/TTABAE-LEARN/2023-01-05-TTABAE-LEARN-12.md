@@ -3,7 +3,7 @@ layout:     BLACKCODE
 title:      "5-3, 4. 쿠버네티스 Pod - init container & infra container"
 subtitle:   ""
 description: "https://www.youtube.com/watch?v=0rYt3PcggzA&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&index=10"
-date:       2023-07-06 1:10:00
+date:       2023-01-05 3:10:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
