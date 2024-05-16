@@ -1,6 +1,6 @@
 ---
 layout:     BLACKCODE
-title:      "[따배쿠] 5-2. 쿠버네티스 Pod - livenessProbe를 이용해서 Self-healing Pod 만들기 [12/36]"
+title:      "[12/36] 5-2. 쿠버네티스 Pod - livenessProbe를 이용해서 Self-healing Pod 만들기"
 subtitle:   ""
 description: "https://www.youtube.com/watch?v=0rYt3PcggzA&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&index=10"
 date:       2023-01-05 2:00:00

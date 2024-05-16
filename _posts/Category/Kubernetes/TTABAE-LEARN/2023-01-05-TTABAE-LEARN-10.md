@@ -1,6 +1,6 @@
 ---
 layout:     BLACKCODE
-title:      "[따배쿠] 5-1-2. 쿠버네티스 Pod - Pod 동작 flow [11/36]"
+title:      "[11/36] 5-1-2. 쿠버네티스 Pod - Pod 동작 flow"
 subtitle:   "5-1-2. 쿠버네티스 Pod - Pod 동작 flow"
 description: "https://wikidocs.net/book/8953"
 date:       2023-01-05 1:20:00

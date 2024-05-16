@@ -1,6 +1,6 @@
 ---
 layout:     BLACKCODE
-title:      "[따배쿠] 4-3. 쿠버네티스 아키텍처 - yaml템플릿과 API [9/36]"
+title:      "[9/36] 4-3. 쿠버네티스 아키텍처 - yaml템플릿과 API"
 subtitle:   "[따배쿠] 4-3. 쿠버네티스 아키텍처 - yaml템플릿과 API"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
 date:       2023-01-04 3:10:00

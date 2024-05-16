@@ -1,6 +1,6 @@
 ---
 layout:     BLACKCODE
-title:      "[따배쿠] 4-1. 쿠버네티스 아키텍처 - Kubernetes 동작원리 [7/36]"
+title:      "[7/36] 4-1. 쿠버네티스 아키텍처 - Kubernetes 동작원리"
 subtitle:   "[따배쿠] 4-1. 쿠버네티스 아키텍처 - Kubernetes 동작원리"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
 date:       2023-01-04 1:00:00

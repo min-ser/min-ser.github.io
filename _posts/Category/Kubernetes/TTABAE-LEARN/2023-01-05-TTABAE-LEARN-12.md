@@ -1,6 +1,6 @@
 ---
 layout:     BLACKCODE
-title:      "5-3, 4. 쿠버네티스 Pod - init container & infra container"
+title:      "[13/36] 5-3, 4. 쿠버네티스 Pod - init container & infra container"
 subtitle:   ""
 description: "https://www.youtube.com/watch?v=0rYt3PcggzA&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&index=10"
 date:       2023-01-05 3:10:00
@@ -14,47 +14,34 @@ category: [따배쿠]
 # share: false
 ---
 
-# *** K8S 명령어 실습전 AKS 환경 준비 ***
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ChArV14J6Ek?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c" title="[따배쿠] 5-3, 4. 쿠버네티스 Pod - init container &amp; infra container" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## VSCODE에서 Azure Potal 접속
-1. VSCode에서 명령어 실행
-```
-Connect-AzAccount
-```
+# 수업내용
+## Part 1. 쿠버네티스 시작하기
+1. 쿠버네티스 소개
+2. 쿠버네티스 설치하기
+3. 쿠버네티스로 컨테이너 실행하기
+## Part 2. 쿠버네티스 기본 개념
+4. 쿠버네티스 아키텍처
+5. `파드`
+6. 컨트롤러
+7. 서비스
+8. 인그레스
+9. 레이블과 애너테이션
+10. 컨피그맵
+11. 시크릿 
+## Part 3. 쿠버네티스 한 걸음 더 들어가기
+12. 파드 스케쥴링
+13. 인증과 권한관리
+14. 데이터 저장
+15. 클러스터 네트워킹 구성
+16. 쿠버네티스 DNS
+17. 로깅과 모니터링
+18. 오토스케일링
+19. 사용자 정의 자원
+20. 쿠버네티스 기반으로 워드프레스 앱 실행하기
+21. 헬름 
 
-2. 계정 선택 및 로그인 진행
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/Connect-AzAccount.PNG?raw=true)
-
-* 아래와 같이 연동작업 
-
-```
-PS D:\GIT> Connect-AzAccount
-경고: Unable to acquire token for tenant '4aed9820-113d-4f48-9f53-4d91f37ad279' with error 'SharedTokenCacheCredential authentication unavailable. Token acquisition 
-failed for user minseo_kim89@megazone.com. Ensure that you have authenticated with a developer tool that supports Azure single sign on.'
-
-Account                   SubscriptionName TenantId                             Environment
--------                   ---------------- --------                             -----------
-minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx AzureCloud
-```
-3. [AzurePotal] Azure Potal에 접속
-    
-    1). 상단에 있는 Cloud Shell을 클릭하여 `스토리지 생성`
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/AzureCloudShell.png?raw=true)<br>
-    2). 스토리지 만들기 클릭
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/createStorage.PNG?raw=true)<br>
-    3). Cloud Shell 진입
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/AccessAzureCloudShell.png?raw=true)
-
-4. VSCODE에서 Azure Cloud Shell 클릭
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_1.png?raw=true)
-
-5. 상단에 구독 선택
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_2.png?raw=true)
-
-6. VSCode에서 접속 성공한 모습
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_3.png?raw=true)
-
-## VSCode 연동작업 완료
 
 ---
 
@@ -63,94 +50,77 @@ minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 
 [Kubernetes.io 초기화 컨테이너](https://kubernetes.io/ko/docs/concepts/workloads/pods/init-containers/)
 
 ## init container
-- 앱 컨테이너 실행 전에 미리 동작시킬 컨테이너
+- 앱 컨테이너(Main Container) 실행 전에 미리 동작시킬 컨테이너
 - 본 Container가 실행되기 전에 사전 작업이 필요할 경우 사용
 - 초기화 컨테이너가 모두 실행된 후에 앱 컨테이너를 실행
 - https://kubernetes.io/ko/docs/concepts/workloads/pods/init-containers/
-    - myapp.yaml
 
-        ```
-        apiVersion: v1
-        kind: Pod
-        metadata:
-        name: myapp-pod
-        labels:
-            app.kubernetes.io/name: MyApp
-        spec:
-        containers: # Main Container
-        - name: myapp-container
-            image: busybox:1.28
-            command: ['sh', '-c', 'echo The app is running! && sleep 3600']
-        
-        # init Container 정의
-        initContainers: 
-        # 첫 번째 init container
-        - name: init-myservice  
-            image: busybox:1.28
-            command: ['sh', '-c', "until nslookup myservice.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for myservice; sleep 2; done"]
-            # until : 명령어가 성공할때까지 계속 시도
-        # 두 번째 init container의 이름
-        - name: init-mydb       
-            image: busybox:1.28
-            command: ['sh', '-c', "until nslookup mydb.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for mydb; sleep 2; done"]
-            # until : 명령어가 성공할때까지 계속 시도
-        ```
-    - 실습
-    
-        ```
-        apiVersion: v1
-        kind: Pod
-        metadata:
-        name: myapp-pod
-        labels:
-            app.kubernetes.io/name: MyApp
-        spec:
-        containers:
-        - name: myapp-container
-            image: busybox:1.28
-            command: ['sh', '-c', 'echo The app is running! && sleep 3600']
-        initContainers:
-        - name: init-myservice
-            image: busybox:1.28
-            command: ['sh', '-c', "until nslookup myservice.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for myservice; sleep 2; done"]
-        - name: init-mydb
-            image: busybox:1.28
-            command: ['sh', '-c', "until nslookup mydb.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for mydb; sleep 2; done"]
-        ```
-
-- pod-init.yaml
-
-    ```
-    apiVersion: v1
-    kind: Pod
-    metadata:
-    name: kubernetes-simple-pod
-    labels:
-        app: kubernetes-simple-pod
-    spec:
-    initContainers:
-    - name: init-myservice
-        image: arisu1000/simple-container-app:latest
-        command: ['sh', '-c', 'sleep 2; echo helloworld01;']
-    - name: init-mydb
-        image: arisu1000/simple-container-app:latest
-        command: ['sh', '-c', 'sleep 2; echo helloworld02;']
-    containers:
-    - name: kubernetes-simple-pod 
-        image: arisu1000/simple-container-app:latest
-        command: ['sh', '-c', 'echo The app is running! && sleep 3600']
-    ```
-
-## yaml 파일로 배포 명령어
-```
-kubectl delete pod --all
-kubectl create -f myapp.yaml
+### init-container-exam.yaml 구조 설명
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app.kubernetes.io/name: MyApp
+spec:
+  containers: # Main Container
+  - name: myapp-container
+    image: busybox:1.28
+    command: ['sh', '-c', 'echo The app is running! && sleep 3600']
+ 
+  # init Container(초기화 Container) 정의
+  initContainers: 
+  # 첫 번째 init container
+  - name: init-myservice  
+    image: busybox:1.28
+    command: ['sh', '-c', "until nslookup myservice.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for myservice; sleep 2; done"]
+    # until : myservice가 성공할때까지 계속 시도, 실행되면 종료
+  # 두 번째 init container의 이름
+  - name: init-mydb       
+    image: busybox:1.28
+    command: ['sh', '-c', "until nslookup mydb.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for mydb; sleep 2; done"]
+    # until : mydb가 성공할때까지 계속 시도, mydb가 실행되면 종료 
+    # 두개의 initContainer가 실행되면 main Container 실행
 ```
 
-## [myservice POD 배포] init-container-exam-svc.yaml 파일 생성
-```
-cat > init-container-exam-svc.yaml
+## init-container-exam 배포
 
+- init-container-exam.yaml
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app.kubernetes.io/name: MyApp
+spec:
+  containers:
+  - name: myapp-container
+    image: busybox:1.28
+    command: ['sh', '-c', 'echo The app is running! && sleep 3600']
+  initContainers:
+  - name: init-myservice
+    image: busybox:1.28
+    command: ['sh', '-c', "until nslookup myservice.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for myservice; sleep 2; done"]
+  - name: init-mydb
+    image: busybox:1.28
+    command: ['sh', '-c', "until nslookup mydb.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for mydb; sleep 2; done"]
+```
+
+- 명령어
+
+```shell
+# watch 명령어를 통해 실시간 pod 모니터링
+watch kubectl get pod -o wide
+kubectl create -f init-container-exam.yaml
+```
+
+## myservice 배포
+
+- init-container-exam-svc.yaml
+
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -160,6 +130,152 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 9376
+```
+
+- 명령어
+```shell
+kubectl create -f init-container-exam-svc.yaml
+```
+
+### 위 명령어 실행 전
+```shell
+NAME        READY   STATUS     RESTARTS   AGE   IP            NODE     NOMINATED NODE   READINESS GATES
+myapp-pod   0/1     Init:0/2   0          35m   10.244.2.22   node02   <none>           <none>
+```
+
+### 명령어 실행 후
+```shell
+NAME        READY   STATUS     RESTARTS   AGE   IP            NODE     NOMINATED NODE   READINESS GATES
+myapp-pod   0/1     Init:1/2   0          35m   10.244.2.22   node02   <none>           <none>
+```
+
+## mydb서비스 배포
+
+- init-container-exam-svc-mydb.yaml
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: mydb
+spec:
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9377
+```
+
+- 명령어 실행 후 watch
+```shell
+NAME        READY   STATUS    RESTARTS   AGE   IP            NODE     NOMINATED NODE   READINESS GATES
+myapp-pod   1/1     Running   0          38m   10.244.2.22   node02   <none>           <none>
+```
+
+두개의 initContainer가 배포 완료되면서 MainContainer가 실행되는것을 볼 수 있다.
+
+---
+
+# infra container(pause) 이해하기
+
+- container와 pod의 차이
+ 
+컨테이너(Container)와 파드(Pod)는 쿠버네티스(Kubernetes) 클러스터에서 애플리케이션을 실행하는 데 사용되는 중요한 개념입니다. 이들 간에는 몇 가지 중요한 차이점이 있습니다.
+
+- 컨테이너(Container):
+
+컨테이너는 가볍고 독립적으로 실행되는 소프트웨어 패키지입니다. 이는 응용 프로그램을 실행하기 위해 필요한 모든 코드, 런타임, 시스템 도구, 시스템 라이브러리 및 설정을 포함합니다.
+컨테이너는 격리된 환경에서 실행되므로 호스트 시스템과 다른 컨테이너들과 상호작용할 수 있습니다.
+대표적으로 Docker, containerd, rkt 등의 컨테이너 런타임을 사용하여 생성하고 실행합니다.
+
+- 파드(Pod):
+
+파드는 쿠버네티스에서 가장 작은 배포 단위입니다. 파드는 하나 이상의 컨테이너 그룹을 포함하며, 이러한 컨테이너들은 동일한 호스트에서 실행됩니다.
+파드 안의 컨테이너들은 네트워크와 파일 시스템을 공유하며, 동일한 컨테이너 그룹 내에서 통신할 수 있습니다.
+파드는 단일 IP 주소와 동일한 호스트 이름을 공유하며, 파드의 생명주기는 파드 내의 모든 컨테이너들의 생명주기에 의존합니다.
+
+- 주요 차이점:
+    - 단위: 컨테이너는 애플리케이션을 실행하기 위한 단일 단위입니다. 반면에 파드는 하나 이상의 컨테이너 그룹을 포함하는 배포 단위입니다.
+    - 본질: 컨테이너는 실행되는 애플리케이션의 구성 요소입니다. 파드는 컨테이너의 그룹을 쿠버네티스에서 관리하기 위한 추상화입니다.
+    - 생명주기: 컨테이너는 독립적으로 실행될 수 있지만 파드 내의 컨테이너들은 함께 실행되며, 파드의 생명주기에 의존합니다.
+
+일반적으로 파드는 하나의 컨테이너만 포함할 수도 있지만, 복잡한 애플리케이션을 실행하는 경우 파드 내에 여러 개의 컨테이너를 배치하여 관련된 작업을 함께 실행할 수 있습니다.
+
+## infra container
+- Pod의 환경을 만들어주는 컨테이너
+
+## 실습 전 모든파드 삭제 후 nginx 실행
+```shell
+kubectl delete pod --all
+kubectl run webserver --image=nginx:1.14 --port=80
+```
+
+## 해당 컨테이너가 배포된 node에 접속하기
+- node02에 접속
+
+```shell 
+ssh node02
+```
+
+- docker container 정보보기
+
+```
+docker ps
+```
+
+---
+---
+
+# 이전 작성 내용
+
+- pod-init.yaml
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+name: kubernetes-simple-pod
+labels:
+    app: kubernetes-simple-pod
+spec:
+initContainers:
+- name: init-myservice
+    image: arisu1000/simple-container-app:latest
+    command: ['sh', '-c', 'sleep 2; echo helloworld01;']
+- name: init-mydb
+    image: arisu1000/simple-container-app:latest
+    command: ['sh', '-c', 'sleep 2; echo helloworld02;']
+containers:
+- name: kubernetes-simple-pod 
+    image: arisu1000/simple-container-app:latest
+    command: ['sh', '-c', 'echo The app is running! && sleep 3600']
+```
+
+## yaml 파일로 배포 명령어
+```shell
+kubectl delete pod --all
+kubectl create -f myapp.yaml
+```
+
+## [myservice POD 배포] init-container-exam-svc.yaml 파일 생성
+
+- init-container-exam-svc.yaml
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: myservice
+spec:
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9376
+```
+
+- 파일생성 명령어
+
+```shell
+cat > init-container-exam-svc.yaml
 ```
 
 ## [myservice POD 배포]

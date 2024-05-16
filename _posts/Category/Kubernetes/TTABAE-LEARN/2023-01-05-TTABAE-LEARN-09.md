@@ -1,6 +1,6 @@
 ---
 layout:     BLACKCODE
-title:      "[따배쿠] 5-1-1. 쿠버네티스 Pod - Container 정리와 Single / Multi Container Pod 생성 [10/36]"
+title:      "[10/36] 5-1-1. 쿠버네티스 Pod-Container 정리와 Single/Multi Container Pod생성"
 subtitle:   "5-1-1. 쿠버네티스 Pod - Container 정리와 Single / Multi Container Pod 생성"
 description: "https://www.youtube.com/watch?v=0rYt3PcggzA&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&index=10"
 date:       2023-01-05 1:10:00

@@ -1,6 +1,6 @@
 ---
 layout:     BLACKCODE
-title:      "[따배쿠] 3-1. kubectl 실습 / 실습환경 구성하기 [5/36]"
+title:      "[5/36] 3-1. kubectl 실습 / 실습환경 구성하기"
 subtitle:   "[따배쿠] 3-1. kubectl 실습 / 실습환경 구성하기"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
 date:       2023-01-03 01:00:00
