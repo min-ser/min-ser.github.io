@@ -1,6 +1,6 @@
 ---
 layout:     BLACKCODE
-title:      "[13/36] 5-5 쿠버네티스 Pod - static Pod(feat. kubelet daemon)"
+title:      "[14/36] 5-5 쿠버네티스 Pod - static Pod(feat. kubelet daemon)"
 subtitle:   ""
 description: "https://www.youtube.com/watch?v=0rYt3PcggzA&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&index=10"
 date:       2023-01-05 5:10:00
