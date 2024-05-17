@@ -1,9 +1,9 @@
 ---
 layout:     BLACKCODE
-title:      "5-5 쿠버네티스 Pod - static Pod(feat. kubelet daemon)"
+title:      "[13/36] 5-5 쿠버네티스 Pod - static Pod(feat. kubelet daemon)"
 subtitle:   ""
 description: "https://www.youtube.com/watch?v=0rYt3PcggzA&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&index=10"
-date:       2023-07-06 1:10:00
+date:       2023-01-05 5:10:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
@@ -14,51 +14,180 @@ category: [따배쿠]
 # share: false
 ---
 
-# *** K8S 명령어 실습전 AKS 환경 준비 ***
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/qEu_znIYCz0?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c" 
+title="[따배쿠] 5-5 쿠버네티스 Pod - static Pod(feat. kubelet daemon)" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## VSCODE에서 Azure Potal 접속
-1. VSCode에서 명령어 실행
-```
-Connect-AzAccount
-```
-
-2. 계정 선택 및 로그인 진행
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/Connect-AzAccount.PNG?raw=true)
-
-* 아래와 같이 연동작업 
-
-```
-PS D:\GIT> Connect-AzAccount
-경고: Unable to acquire token for tenant '4aed9820-113d-4f48-9f53-4d91f37ad279' with error 'SharedTokenCacheCredential authentication unavailable. Token acquisition 
-failed for user minseo_kim89@megazone.com. Ensure that you have authenticated with a developer tool that supports Azure single sign on.'
-
-Account                   SubscriptionName TenantId                             Environment
--------                   ---------------- --------                             -----------
-minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx AzureCloud
-```
-3. [AzurePotal] Azure Potal에 접속
-    
-    1). 상단에 있는 Cloud Shell을 클릭하여 `스토리지 생성`
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/AzureCloudShell.png?raw=true)<br>
-    2). 스토리지 만들기 클릭
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/createStorage.PNG?raw=true)<br>
-    3). Cloud Shell 진입
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/AccessAzureCloudShell.png?raw=true)
-
-4. VSCODE에서 Azure Cloud Shell 클릭
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_1.png?raw=true)
-
-5. 상단에 구독 선택
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_2.png?raw=true)
-
-6. VSCode에서 접속 성공한 모습
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_3.png?raw=true)
-
-## VSCode 연동작업 완료
+# 수업내용
+## Part 1. 쿠버네티스 시작하기
+1. 쿠버네티스 소개
+2. 쿠버네티스 설치하기
+3. 쿠버네티스로 컨테이너 실행하기
+## Part 2. 쿠버네티스 기본 개념
+4. 쿠버네티스 아키텍처
+5. `파드`
+6. 컨트롤러
+7. 서비스
+8. 인그레스
+9. 레이블과 애너테이션
+10. 컨피그맵
+11. 시크릿 
+## Part 3. 쿠버네티스 한 걸음 더 들어가기
+12. 파드 스케쥴링
+13. 인증과 권한관리
+14. 데이터 저장
+15. 클러스터 네트워킹 구성
+16. 쿠버네티스 DNS
+17. 로깅과 모니터링
+18. 오토스케일링
+19. 사용자 정의 자원
+20. 쿠버네티스 기반으로 워드프레스 앱 실행하기
+21. 헬름 
 
 ---
 
-# static Pod 만들기
+# 5-5 쿠버네티스 Pod - static Pod(feat. kubelet daemon)
+
+## static Pod 만들기
+- static container
+    - API 서버 없이 특정 노드에 있는 kubelet 데몬에 의해 직접 관리
+    - /etc/kubernetes/manifests/ 디렉토리에 k8s yaml파일을 저장 시 적용
+    - static pod 디렉토리 구성
+        ```shell
+        vi/var/lib/kubelet/config.yaml
+        ..
+        staticPodPath: /etc/kubernetes/manifests
+
+        디렉토리 수정시 kubelet 데몬 재실행
+        ``` 
+
+```shell
+master@master:~$ cat /var/lib/kubelet/config.yaml 
+apiVersion: kubelet.config.k8s.io/v1beta1   
+authentication:
+  anonymous:
+    enabled: false
+  webhook:
+    cacheTTL: 0s
+    enabled: true
+  x509:
+    clientCAFile: /etc/kubernetes/pki/ca.crt
+authorization:
+  mode: Webhook
+  webhook:
+    cacheAuthorizedTTL: 0s
+    cacheUnauthorizedTTL: 0s
+cgroupDriver: systemd
+clusterDNS:
+- 10.96.0.10
+clusterDomain: cluster.local
+containerRuntimeEndpoint: ""
+cpuManagerReconcilePeriod: 0s
+evictionPressureTransitionPeriod: 0s        
+fileCheckFrequency: 0s
+healthzBindAddress: 127.0.0.1
+healthzPort: 10248
+httpCheckFrequency: 0s
+imageMaximumGCAge: 0s
+imageMinimumGCAge: 0s
+kind: KubeletConfiguration
+logging:
+  flushFrequency: 0
+  options:
+    json:
+      infoBufferSize: "0"
+  verbosity: 0
+memorySwap: {}
+nodeStatusReportFrequency: 0s
+nodeStatusUpdateFrequency: 0s
+resolvConf: /run/systemd/resolve/resolv.conf
+rotateCertificates: true
+runtimeRequestTimeout: 0s
+shutdownGracePeriod: 0s
+shutdownGracePeriodCriticalPods: 0s
+staticPodPath: /etc/kubernetes/manifests # 해당 디렉토리에 pod yaml저징시 노드에서 동작되는 kubelet데몬이 pod를 실행시킴
+streamingConnectionIdleTimeout: 0s
+syncFrequency: 0s
+volumeStatsAggPeriod: 0s
+```
+
+### node2에 접속 후 staticPod 디렉토리 내에 nginx.yaml 생성
+
+- nginx.yaml 파일
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.14
+      ports:
+      - containerPort: 80
+      - containerPort: 443
+        protocol: TCP
+``` 
+
+- node2에 작업
+
+```shell
+root@node2:~# cd /etc/kubernetes/manifests/
+root@node2:/etc/kubernetes/manifests# ls
+root@node2:/etc/kubernetes/manifests# cat > nginx.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.14
+      ports:
+      - containerPort: 80
+      - containerPort: 443
+        protocol: TCP
+```
+
+- master node에서 관찰
+
+```shell
+NAME              READY   STATUS    RESTARTS   AGE    IP           NODE    NOMINATED NODE   READINESS GATES
+nginx-pod-node2   1/1     Running   0          2m8s   10.244.1.4   node2   <none>           <none>
+``` 
+
+### staticPod 디렉토리에 생성한 yaml파일 삭제시 실행중인 pod도 작세됨
+
+```shell
+root@node2:/etc/kubernetes/manifests# rm nginx.yaml
+```
+
+- master node에서 pod 조회시
+
+```shell
+master@master:~$ kubectl get pod -o wide
+No resources found in default namespace.
+```
+
+### master노드의 manifests 경로에 nginx.yaml생성
+
+```shell
+master@master:~$ cd /etc/kubernetes/manifests/
+master@master:/etc/kubernetes/manifests$ ls
+etcd.yaml  kube-apiserver.yaml  kube-controller-manager.yaml  kube-scheduler.yaml
+```
+
+해당 경로에 nginx.yaml파일을 생성하게 되면 master가 아닌 node들중 하나에 배치
+
+# 정리
+- API 도움 없이 kubelet Deamon으로 Pod 실행
+- 해당 디렉토리는 static Pod Path로 정의
+- 정의가 되어있는 해당 디렉토리에 pod yaml을 넣어주면 자동으로 pod를 동작시킨다.
+
+---
+---
 
 ## 기존 Pod의 운영방식
 ![img](/assets/category/Kubernetes/2023/07/13-01.png)
