@@ -3,7 +3,7 @@ layout:     BLACKCODE
 title:      "5-7 쿠버네티스 Pod - Pod 환경변수 설정과 실행 패턴"
 subtitle:   ""
 description: "https://www.youtube.com/watch?v=0rYt3PcggzA&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&index=10"
-date:       2023-07-19 1:10:00
+date:       2023-01-05 1:10:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
@@ -15,47 +15,38 @@ category: [따배쿠]
 # 이미지 : ![img](/assets/category/Kubernetes/2023/07/17-03.PNG)
 ---
 
-# *** K8S 명령어 실습전 AKS 환경 준비 ***
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/Uc-VnK19T7w?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c" title="[따배쿠] 5-7 쿠버네티스 Pod - Pod 환경변수 설정과 실행 패턴" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## VSCODE에서 Azure Potal 접속
-1. VSCode에서 명령어 실행
-```
-Connect-AzAccount
-```
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/Uc-VnK19T7w?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
+title="[따배쿠] 5-7 쿠버네티스 Pod - Pod 환경변수 설정과 실행 패턴"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-2. 계정 선택 및 로그인 진행
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/Connect-AzAccount.PNG?raw=true)
-
-* 아래와 같이 연동작업 
-
-```
-PS D:\GIT> Connect-AzAccount
-경고: Unable to acquire token for tenant '4aed9820-113d-4f48-9f53-4d91f37ad279' with error 'SharedTokenCacheCredential authentication unavailable. Token acquisition 
-failed for user minseo_kim89@megazone.com. Ensure that you have authenticated with a developer tool that supports Azure single sign on.'
-
-Account                   SubscriptionName TenantId                             Environment
--------                   ---------------- --------                             -----------
-minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx AzureCloud
-```
-3. [AzurePotal] Azure Potal에 접속
-    
-    1). 상단에 있는 Cloud Shell을 클릭하여 `스토리지 생성`
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/AzureCloudShell.png?raw=true)<br>
-    2). 스토리지 만들기 클릭
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/createStorage.PNG?raw=true)<br>
-    3). Cloud Shell 진입
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/AccessAzureCloudShell.png?raw=true)
-
-4. VSCODE에서 Azure Cloud Shell 클릭
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_1.png?raw=true)
-
-5. 상단에 구독 선택
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_2.png?raw=true)
-
-6. VSCode에서 접속 성공한 모습
-![img](https://github.com/IIBlackCode/IIBlackCode.github.io/blob/master/_posts/Category/Kubernetes/img/2023-01-25-Kubernetes-05_3.png?raw=true)
-
-## VSCode 연동작업 완료
+# 수업내용
+## Part 1. 쿠버네티스 시작하기
+1. 쿠버네티스 소개
+2. 쿠버네티스 설치하기
+3. 쿠버네티스로 컨테이너 실행하기
+## Part 2. 쿠버네티스 기본 개념
+4. 쿠버네티스 아키텍처
+5. `파드`
+6. 컨트롤러
+7. 서비스
+8. 인그레스
+9. 레이블과 애너테이션
+10. 컨피그맵
+11. 시크릿 
+## Part 3. 쿠버네티스 한 걸음 더 들어가기
+12. 파드 스케쥴링
+13. 인증과 권한관리
+14. 데이터 저장
+15. 클러스터 네트워킹 구성
+16. 쿠버네티스 DNS
+17. 로깅과 모니터링
+18. 오토스케일링
+19. 사용자 정의 자원
+20. 쿠버네티스 기반으로 워드프레스 앱 실행하기
+21. 헬름 
 
 ---
 

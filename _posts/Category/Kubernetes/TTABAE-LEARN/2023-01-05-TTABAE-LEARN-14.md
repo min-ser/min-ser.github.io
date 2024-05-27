@@ -143,7 +143,61 @@ kubectl get pod -o wide
 
 #### 자세히 조회
 ```shell
-kubectl describe pod nginx-pod-resources
+master@master:~$ kubectl describe pod nginx-pod-resource
+Name:             nginx-pod-resource
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             node1/10.0.1.4
+Start Time:       Fri, 17 May 2024 08:43:39 +0000
+Labels:           <none>
+Annotations:      <none>
+Status:           Running
+IP:               10.244.2.3
+IPs:
+  IP:  10.244.2.3
+Containers:
+  nginx-container:
+    Container ID:   containerd://a7e13f6039a29a9999ddcf67d844d55a5b198f02e9a6ccc2d58cfaf370699b97
+    Image:          nginx:1.14
+    Image ID:       docker.io/library/nginx@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Fri, 17 May 2024 08:43:39 +0000
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        1
+      memory:     500Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-pqmbj (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True
+  Initialized                 True
+  Ready                       True
+  ContainersReady             True
+  PodScheduled                True
+Volumes:
+  kube-api-access-pqmbj:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  4m37s  default-scheduler  Successfully assigned default/nginx-pod-resource to node1
+  Normal  Pulled     4m37s  kubelet            Container image "nginx:1.14" already present on machine
+  Normal  Created    4m37s  kubelet            Created container nginx-container
+  Normal  Started    4m37s  kubelet            Started container nginx-container
 ```
 
 - [MASTER] yaml 수정 후 다시 배포(vi 명령어 사용)
