@@ -1,9 +1,9 @@
 ---
 layout:     BLACKCODE
-title:      "5-7 쿠버네티스 Pod - Pod 환경변수 설정과 실행 패턴"
+title:      "[15/36] 5-6 쿠버네티스 Pod - Pod에 Resource 할당하기 (CPU/memory requests, limits)"
 subtitle:   ""
 description: "https://www.youtube.com/watch?v=0rYt3PcggzA&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&index=10"
-date:       2023-01-05 1:10:00
+date:       2023-01-05 6:10:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
@@ -12,14 +12,11 @@ tags: [따배쿠]
 category: [따배쿠]
 # comments: false
 # share: false
-# 이미지 : ![img](/assets/category/Kubernetes/2023/07/17-03.PNG)
 ---
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/Uc-VnK19T7w?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c" title="[따배쿠] 5-7 쿠버네티스 Pod - Pod 환경변수 설정과 실행 패턴" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 <iframe width="560" height="315" 
-src="https://www.youtube.com/embed/Uc-VnK19T7w?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
-title="[따배쿠] 5-7 쿠버네티스 Pod - Pod 환경변수 설정과 실행 패턴"
+src="https://www.youtube.com/embed/qEu_znIYCz0?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c" 
+title="[따배쿠] 5-5 쿠버네티스 Pod - static Pod(feat. kubelet daemon)" 
 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # 수업내용
@@ -50,53 +47,24 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
 
 ---
 
-# Pod의 환경변수 설정하기
+# 6. Pod에 Resource 할당하기
 
-## 환경변수
-- Pod내의 컨테이너가 실행될 때 필요로 하는 변수
-- 컨테이너 제작 시 미리 정의
-    - NGINX Dockerfile의 예
-        - ENV NGINX_VERSION 1.19.2
-		- ENV NJS_VERSION 0.4.3
-- POD 실행 시 미리 정의된 컨테이너 환경변수를 변경할 수 있다.
+# Pod Resource 요청 및 제한
+- Resource Requests
+    - 파드를 실행하기 위한 `최소 리소스 양`을 요청
+- Resource Limits
+    - 파드가 사용할 수 있는 `최대 리소스 양`을 제한
+    - Memory limit를 초과해서 사용되는 파드는 종료(OOM KILL)되며 다시 스케쥴링 된다.
+- https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/
 
-# 환경변수 예시
-- pod-nginx-env.yaml
-	```
-	apiVersion: v1
-	kind: Pod
-	metadata:
-	  name: nginx-pod-env
-	spec:
-	containers:
-	- name: nginx-container
-		image: nginx:1.14
-		ports:
-		- containerPort: 80
-		  protocol: TCP
-		env:
-		- name: MYVAR
-		value: "testvalue"
-	```
-```
-kubectl get pods
-kubectl exec nginx-pod-env --env
-```
+## Container Resource 설정 예
+- cat pod-nginx-resources.yaml
 
-# 환경변수 실습
-- pod 전체 삭제
-	```
-	kubectl delete pods --all
-	```
-
-- pod yaml 작성
-```
-# 기존 pod yaml 활용
-cat > pod-nginx-resources.yaml
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod-env
+  name: nginx-pod-resource
 spec:
   containers:
   - name: nginx-container
@@ -104,100 +72,142 @@ spec:
     ports:
     - containerPort: 80
       protocol: TCP
-    env:
-    - name: MYVAR
-      value: "testvalue"
+    resources:
+      requests:
+        cpu: 200m
+        memory: 250Mi
+      limits:
+        cpu: 1
+        memory: 500Mi
+```
+
+- 실행
+ 
+```shell
+kubectl get pods
+kubectl describe pod nginx-pod-resources
+```
+
+## 리소스에 대한 참고
+- Memory
+    - 1MB != 1024KB ?
+    - 1MB = 1000MB
+    - 1MiB(미리바이트) = 1024Kib
+
+- CPU
+    - cpu는 코어의 갯수를 count함
+    - cpu의 메모리는 m `밀리코어`단위로 표현
+    - 1Core를 mc(밀리코어)단위로 표현시
+        - 1000 m(밀리코어)
+    - 1core가 1000m인 경우 
+        - cpu:200m >> 실제 1개 코어의 1/5만큼 요청
+
+## 실습
+- [MASTER] yaml파일 작성
+ 
+```shell
+cat > pod-nginx-resources.yaml
+```
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod-resource
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:1.14
+    ports:
+    - containerPort: 80
+      protocol: TCP
     resources:
       requests:
         memory: 500Mi
-        cpu: 200m
+        cpu: 1
 ```
 
-- pod 생성
-	```
-	kubectl create -f pod-nginx-resources.yaml
-	```
+- [MASTER] POD 생성
 
-- nginx-pod-env에 bashshell로 접속
-	```
-	kubectl exec nginx-pod-env -it -- /bin/bash
-	```
-- [nginx-pod-env 컨테이너] 환경변수 조회후 생성한 환경변수 조회 
-	- env
-	```
-	  - name: MYVAR
-	  value: "testvalue"
-	```
-	- 명령어 실행 결과
-	```
-	root@nginx-pod-env:/# env
-	MYDB_SERVICE_PORT=80
-	MYSERVICE_PORT_80_TCP_PROTO=tcp
-	MYSERVICE_SERVICE_HOST=10.96.136.12
-	HOSTNAME=nginx-pod-env
-	MYSERVICE_SERVICE_PORT=80
-	NJS_VERSION=1.14.2.0.2.6-1~stretch
-	MYDB_PORT=tcp://10.102.106.242:80
-	NGINX_VERSION=1.14.2-1~stretch
-	KUBERNETES_PORT_443_TCP_PROTO=tcp
-	KUBERNETES_PORT_443_TCP_ADDR=10.96.0.1
-	MYDB_SERVICE_HOST=10.102.106.242
-	MYSERVICE_PORT_80_TCP=tcp://10.96.136.12:80
-	MYVAR=testvalue
-	KUBERNETES_PORT=tcp://10.96.0.1:443
-	PWD=/
-	HOME=/root
-	KUBERNETES_SERVICE_PORT_HTTPS=443
-	MYDB_PORT_80_TCP_PORT=80
-	KUBERNETES_PORT_443_TCP_PORT=443
-	MYSERVICE_PORT_80_TCP_PORT=80
-	MYSERVICE_PORT=tcp://10.96.136.12:80
-	KUBERNETES_PORT_443_TCP=tcp://10.96.0.1:443
-	TERM=xterm
-	MYSERVICE_PORT_80_TCP_ADDR=10.96.136.12
-	SHLVL=1
-	KUBERNETES_SERVICE_PORT=443
-	MYDB_PORT_80_TCP_PROTO=tcp
-	PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-	KUBERNETES_SERVICE_HOST=10.96.0.1
-	MYDB_PORT_80_TCP=tcp://10.102.106.242:80
-	MYDB_PORT_80_TCP_ADDR=10.102.106.242
-	_=/usr/bin/env
-	```
-		- MYVAR=testvalue
+```shell
+root@MASTER:~# kubectl create -f pod-nginx-resources.yaml
+pod/nginx-pod-resource created
+```
 
-# Pod 구성패턴의 종류 3가지
-## 1. POD 실행패턴
-- Pod를 구성하고 실행하는 패턴
-- multi-container Pod
-	- Sidecar
-		- 두개의 컨테이너가 함께 동작해서 구현
-	- Adapter
-		- 
-	- Ambassador
-## 2.
-## 3.
+- [MASTER] POD 조회
+ 
+```shell
+kubectl get pod -o wide
+```
+![img](/assets/category/Kubernetes/2023/07/17-03.PNG)
 
-# Pod 강의 총정리(5장)
-## 학습내용
-	- Pod 개념 및 사용하기
-	- livenessProbe를 사용한 self-healing Pod
-	- init container
-	- infra container(pause) 이해하기
-	- static pod 만들기
-	- Pod에 resource 할당하기
-	- 환경변수를 이용해 컨테이너에 데이터 전달하기
-	- pod 구성 패턴의 종류
-	
-# Pod 운영 실습
-- Create a static pod on node01 called mydb with image redis.
-- Create this pod on node01 and make sure that it is recreated/restarted automatically in case of a failure.
-	- Use/etc/kubernetes/manifests as the Static Podpath for example.
-	- kubelet Configured for Static Pod
-	- Pod mydb-node01 is Up and running
+#### 자세히 조회
+```shell
+master@master:~$ kubectl describe pod nginx-pod-resource
+Name:             nginx-pod-resource
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             node1/10.0.1.4
+Start Time:       Fri, 17 May 2024 08:43:39 +0000
+Labels:           <none>
+Annotations:      <none>
+Status:           Running
+IP:               10.244.2.3
+IPs:
+  IP:  10.244.2.3
+Containers:
+  nginx-container:
+    Container ID:   containerd://a7e13f6039a29a9999ddcf67d844d55a5b198f02e9a6ccc2d58cfaf370699b97
+    Image:          nginx:1.14
+    Image ID:       docker.io/library/nginx@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Fri, 17 May 2024 08:43:39 +0000
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        1
+      memory:     500Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-pqmbj (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True
+  Initialized                 True
+  Ready                       True
+  ContainersReady             True
+  PodScheduled                True
+Volumes:
+  kube-api-access-pqmbj:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  4m37s  default-scheduler  Successfully assigned default/nginx-pod-resource to node1
+  Normal  Pulled     4m37s  kubelet            Container image "nginx:1.14" already present on machine
+  Normal  Created    4m37s  kubelet            Created container nginx-container
+  Normal  Started    4m37s  kubelet            Started container nginx-container
+```
 
-- 다음과 같은 조건에 맞는 Pod를 생성하시오
-	- Pod name: myweb, image:nginx:1.14
-	- CPU200m, Memory 500Mi를 요구하고, CPU 1core, 1Gi제한받는다.
-	- Application 동작에 필요한 환경변수 DB=mydb 를 포함한다.
-	- namespace product에서 동작되어야 한다.
+- [MASTER] yaml 수정 후 다시 배포(vi 명령어 사용)
+```shell
+requests:
+  cpu: 1 >>>> 2로 수정
+```
+
+- [MASTER] POD 재배포
+```shell
+root@MASTER:~# kubectl create -f pod-nginx-resources.yaml
+pod/nginx-pod-resource created
+```

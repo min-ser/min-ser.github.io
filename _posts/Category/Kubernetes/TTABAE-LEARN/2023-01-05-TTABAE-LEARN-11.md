@@ -1,9 +1,9 @@
 ---
 layout:     BLACKCODE
-title:      "[12/36] 5-2. 쿠버네티스 Pod - livenessProbe를 이용해서 Self-healing Pod 만들기"
-subtitle:   ""
-description: "https://www.youtube.com/watch?v=0rYt3PcggzA&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&index=10"
-date:       2023-01-05 2:00:00
+title:      "[11/36] 5-1-2. 쿠버네티스 Pod - Pod 동작 flow"
+subtitle:   "5-1-2. 쿠버네티스 Pod - Pod 동작 flow"
+description: "https://wikidocs.net/book/8953"
+date:       2023-01-05 1:20:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
@@ -14,7 +14,7 @@ category: [따배쿠]
 # share: false
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-NeJS7wQu_Q?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c" title="[따배쿠] 5-2. 쿠버네티스 Pod - livenessProbe를 이용해서 Self-healing Pod 만들기" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nvBKnFfiy7M?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c" title="[따배쿠] 5-1-2. 쿠버네티스 Pod - Pod 동작 flow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # 수업내용
 ## Part 1. 쿠버네티스 시작하기
@@ -44,266 +44,426 @@ category: [따배쿠]
 
 ---
 
-# 5-2. 쿠버네티스 Pod - livenessProbe를 이용해서 Self-healing Pod 만들기
-- kubelet으로 컨테이너 진단하기
+# [05-1-2 쿠버네티스 Pod - Pod 동작 flow wikidocs.net](https://wikidocs.net/186118)
 
-## Self-healing
+![img](/assets/category/Kubernetes/TTABAE-LEARN/5-1-2/01.png)
 
-Restarts containers that fail, replaces and reschedules containers when nodes die, kills containers that don't respond to your user-defined health check, and doesn't advertise them to clients until they are ready to serve.
+1. Pending
+   1. API : pod api의 format에 맞는 문법인지 점검 후 node의 정보가 있는 etcd의 정보를 schduler에 전달
+   2. schduler : 각 node중 pod 실행환경에 맞는 node를 선택 
+2. Running
+   1. Succeeded
+   2. Failed
 
-장애가 발생한 컨테이너를 다시 시작하고, 노드가 중단될 때 컨테이너를 교체 및 일정 변경하고, 사용자 정의 상태 검사에 응답하지 않는 컨테이너를 종료하고, 서비스를 제공할 준비가 될 때까지 클라이언트에 알림을 표시하지 않습니다.
+- [참조](https://kubernetes.io/ko/docs/concepts/workloads/pods/pod-lifecycle/)
 
-## LivenessProbe(1)
-- Pod가 계속 실행할 수 있음을 보장
-- Pod의 spec에 정의
+## pod 생성 로그 관찰
+- 명령어
 
-### Pod-definition(Self healing기능 X)
+```shell
+master@MASTER:~$ kubectl create -f pod-nginx.yaml 
+pod/nginx-pod created
+``` 
 
-```yaml
+- 명령어 실행 결과
+```shell
+master@MASTER:~$ kubectl get pods -o wide --watch
+NAME        READY   STATUS              RESTARTS   AGE   IP             NODE     NOMINATED NODE   READINESS GATES
+nginx-pod   0/1     Pending             0          0s    <none>         <none>   <none>           <none>
+nginx-pod   0/1     Pending             0          0s    <none>         node02   <none>           <none>
+nginx-pod   0/1     ContainerCreating   0          0s    <none>         node02   <none>           <none>
+nginx-pod   1/1     Running             0          0s    10.244.2.17    node02   <none>           <none>
+```
+
+## 동작중인 pod 종료 로그 관찰
+- 명령어
+
+```shell
+master@MASTER:~$ kubectl delete pod nginx-pod
+pod "nginx-pod" deleted
+```
+
+- 명령어 실행 결과
+
+```shell
+nginx-pod   1/1     Terminating         0          4m19s   10.244.2.17   node02   <none>           <none>
+nginx-pod   0/1     Terminating         0          4m20s   <none>        node02   <none>           <none>
+nginx-pod   0/1     Terminating         0          4m20s   10.244.2.17   node02   <none>           <none>
+nginx-pod   0/1     Terminating         0          4m20s   10.244.2.17   node02   <none>           <none>
+nginx-pod   0/1     Terminating         0          4m20s   10.244.2.17   node02   <none>           <none>
+```
+
+---
+
+# Pod관리하기
+
+## 동작중인 파드 정보 보기
+- 명령어
+
+```shell
+kubectl get pods
+kubectl get pods -o wide
+kubectl describe pod <pod의 이름>
+```
+
+## 동작중인 파드 수정
+- 명령어
+
+```shell
+kubectl edit pod <pod명>
+```
+
+## 동작중인 파드 삭제
+- 명령어
+
+```shell
+kubectl delete pod <pod명>
+kubectl delete pod --all # 동작중인 pod 전부 삭제
+```
+
+- 명령어 실행 결과
+
+```shell
+master@MASTER:~$ kubectl delete pod --all
+pod "multipod" deleted
+pod "nginx-pod" deleted
+pod "web1" deleted
+```
+
+# QUESTION & ANSWER
+## 1. 현재 namespace에서 동작중인 Pod는 몇 개인가
+
+- 명령어
+
+```shell
+kubectl get pods
+```
+
+- 명령어 실행 결과
+
+```shell
+master@MASTER:~$ kubectl get pods 
+
+# default namespace 내에 생성된 pod는 없음
+No resources found in default namespace.
+``` 
+
+## 2. default에서 조회되지 않아 전체 namespace에서 동작중인 Pod 조회
+
+- 명령어
+
+```shell
+kubectl get pods --all-namespaces
+```
+
+- 명령어 실행 결과
+
+```shell
+master@MASTER:~$ kubectl get pods --all-namespaces
+NAMESPACE      NAME                             READY   STATUS    RESTARTS      AGE
+kube-flannel   kube-flannel-ds-8fzmm            1/1     Running   3 (68m ago)   8d
+kube-flannel   kube-flannel-ds-mm9n7            1/1     Running   3 (67m ago)   8d
+kube-flannel   kube-flannel-ds-xlt4q            1/1     Running   5 (67m ago)   8d
+kube-system    coredns-76f75df574-4nnch         1/1     Running   3 (67m ago)   8d
+kube-system    coredns-76f75df574-sgnzw         1/1     Running   3 (67m ago)   8d
+kube-system    etcd-master                      1/1     Running   3 (68m ago)   8d
+kube-system    kube-apiserver-master            1/1     Running   3 (68m ago)   8d
+kube-system    kube-controller-manager-master   1/1     Running   3 (68m ago)   8d
+kube-system    kube-proxy-7b7f8                 1/1     Running   3 (68m ago)   8d
+kube-system    kube-proxy-dxvgg                 1/1     Running   3 (68m ago)   8d
+kube-system    kube-proxy-lck57                 1/1     Running   3 (67m ago)   8d
+kube-system    kube-scheduler-master            1/1     Running   3 (68m ago)   8d
+```
+
+## 3. 컨테이너 nginx를 실행하는 nginx-pod라는 이름의 Pod를 생성하시오
+
+- 명령어
+
+```shell
+kubectl run nginx-pod --nginx-
+kubectl run nginx-pod --image=nginx:1.14
+```
+
+## 4. 앞에서 생성한 Pod의 image정보를 확인하는 명령은 무엇인가?
+
+- 명령어
+
+```shell
+kubectl describe pod nginx-pod
+```
+
+## 5. 앞에서 생성한 nginx-pod는 어느 node에 배치되었나?
+
+- 명령어
+
+```shell
+kubectl describe pod nginx-pod
+```
+
+## 6. 앞에서 생성한 Pod에는 몇 개의 컨테이너가 포함되어 있나?
+
+- 명령어
+
+```shell
+kubectl get pods 후 ready의 수
+kubectl describe pod nginx-pod
+```
+
+## 7. 앞에서 생성한 Pod의 현재 상태는 어떠한가?
+
+- 명령어
+
+```shell
+kubectl get pods 후 ready의 수
+kubectl describe pod nginx-pod
+```
+
+## 8. 새 포드의 컨테이너 상태는 어떻습니까?
+
+- 명령어
+
+```shell
+# describe를 통해 확인
+kubectl describe pod nginx-pod
+```
+
+## 9. `kubectl get pods`명령의 출력에서 READY열은 무엇을 의미하나?
+
+    현제 ready중인 컨테이너 / 전체 pod의 수
+
+## 10. 생성한 pod를 삭제하시오.
+
+- 명령어
+
+```shell
+kubectl delete pod <pod명>
+```
+
+## 11. 컨테이너 image `redis123`을 실행하는 pod`redis`를 redis.yaml을 이용해 생성하시오
+### 1. yaml 파일 생성전 테스트 명령어
+
+- --dry-run : 실행이 되는지 확인하는 옵션 명령어
+
+```shell
+kubectl run redis --image=redis123 --dry-run -o yaml
+```
+
+- 실행결과
+```shell
+root@MASTER:~# kubectl run redis --image=redis123 --dry-run -o yaml
+W0705 05:54:00.756921   67398 helpers.go:553] --dry-run is deprecated and can be replaced with --dry-run=client.
 apiVersion: v1
 kind: Pod
 metadata:
-name: nginx-pod
+creationTimestamp: null
+labels:
+    run: redis
+name: redis
 spec:
 containers:
-- name: nginx-container
-    image: nginx:1.14
+- image: redis123
+    name: redis
+    resources: {}
+dnsPolicy: ClusterFirst
+restartPolicy: Always
+status: {}
 ```
 
-### livenessProbe definition(Self healing기능 O)
+### 2. 옵션을 추가하여 yaml파일 생성
 
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx:1.14
-    livenessProbe:
-      httpGet:
-        path: /
-        port: 80
-```
-running중인 상태에 livenessProbe를 http 프로토콜 80번포트를 통해 주기적으로 신호를 보내 응답이 정상적으로오는지 자가진단
-
-# LivenessProbe(2)
-
-## livenessProbe 매커니즘
-- httpGet probe
-
-지정한 `ip주소`, port, path에 HTTP GET 요청을 보내, 해당 컨테이너가 응답하는지를 확인한다.
-`반환코드가 200`이 아닌 값이 나오면 오류, `컨테이너를 다시 시작`한다.
-연속해서 3번 실패한 컨테이너는 죽인 후 다시 컨테이너를 도커 허브로부터 받아 재 실행
-
-```yaml
-livenessProbe:
-  httpGet
-    path: /
-    port: 80
-```
-
-- tcpSocket probe
-
-지정된 `포트`에 TCP연결을 시도. 연결되지 않으면 컨테이너를 다시 시작한다.
-
-```yaml
-livenessProbe:
-  tcpSocker:
-    port:22
-```
-
-- exec porbe
-
-exec 명령을 전달하고 명령의 종료코드가 0이 아니면 컨테이너를 다시 시작한다.
-
-```yaml
-livenessProbe:
-  exec:
-    command:
-    - ls
-    - /data/file
-```
-
-# LivenessProbe(3)
-- liveness Probe 매개변수
-    - periodSeconds: health check 반복 실행 시간(초)
-    - initialDelaySeconds: Pod 실행 후 delay할 시간(초)
-    - timeoutSeconds: health check후 응답을 기다리는 시간(초)
-
-## Pod-definition
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx:1.14
-```
-## livenessProbe definition
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx:1.14
-    livenessProbe:
-      httpGet:
-        path: /
-        port: 80
-
-      initialDelaySeconds: 15
-      periodSeconds: 20   # 20초마다 검사
-      timeoutSeconds: 1   # 1초내에 무응답시 실패로 간주
-      successThreshold: 1 # 1번 실행했을때 성공시 성공으로 간주
-      failureThreshold: 3 # 3번까지 30초마다 검사시 실패로 인식
-```
-# 실습
-
-- pod-nginx-liveness.yaml
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx-pod-liveness
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx:1.14
-    ports:
-      - containerPort: 80
-        protocol: TCP
-    livenessProbe:
-      httpGet:
-        path: /
-        port: 80
-      successThreshold: 1
-      timeoutSeconds: 3
-      periodSeconds: 30
-      failureThreshold: 3
-```
-
----
-
-# LivenessProbe example
-liveness Probe는  Pod의 spec에 정의한다.
-아래 example에서 사용한 smlinux/unhealthy컨테이너는
-HTTP connection 있을 때 마다 내부 서버오류로 HTTP 500 ERROR를 발생
-
-- smlinux/unhealthy
-
-    smlinux/unhealthy컨테이너를 실행하여 5번까지 200번코드를 반환해서 성공으로 간주한다.
-    예) periodSeconds:10초로 세팅되어있는 경우 10초마다 검사해서 50초 정도 성공 60,70초에 에러 발생시 컨테이너가 restart를 시킨다.
-    오류를 일부러 발생하는 컨테이너
-
-## pod-liveness.yaml
-```yaml
-cat > pod-liveness.yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: liveness-pod
-spec:
-  containers:
-  - image: smlinux/unhealthy
-    name: unhealthy-container
-    ports:
-    - containerPort: 8080
-      protocol: TCP
-    livenessProbe:
-      httpGet:
-        path: /
-        port: 8080
-```
-
-## yaml 파일 실행
-```
-kubectl create -f pod-liveness.yaml
-```
-
-# 실습
 ```shell
-master@MASTER:~$ kubectl describe pod liveness-pod
-
-Liveness:       http-get http://:8080/ delay=0s timeout=1s period=10s #success=1 #failure=
-
-...
-
-Type     Reason     Age                   From               Message
-  ----     ------     ----                  ----               -------
-  Normal   Scheduled  40m                   default-scheduler  Successfully assigned default/liveness-pod to node02
-  Normal   Pulled     40m                   kubelet            Successfully pulled image "smlinux/unhealthy" in 24.728s (24.728s including waiting)      
-  Normal   Pulled     38m                   kubelet            Successfully pulled image "smlinux/unhealthy" in 1.482s (1.482s including waiting)        
-  Normal   Created    36m (x3 over 40m)     kubelet            Created container unhealthy-container
-  Normal   Started    36m (x3 over 40m)     kubelet            Started container unhealthy-container
-  Normal   Pulled     36m                   kubelet            Successfully pulled image "smlinux/unhealthy" in 1.449s (1.449s including waiting)        
-  Normal   Killing    35m (x3 over 38m)     kubelet            Container unhealthy-container failed liveness probe, will be restarted
-  Normal   Pulled     34m                   kubelet            Successfully pulled image "smlinux/unhealthy" in 1.457s (1.457s including waiting)        
-  Warning  Unhealthy  15m (x28 over 39m)    kubelet            Liveness probe failed: HTTP probe failed with statuscode: 500
-  Warning  BackOff    5m37s (x68 over 27m)  kubelet            Back-off restarting failed container unhealthy-container in pod liveness-pod_default(d7ea26d9-7af7-42cd-acd1-0e374a8e99c2)
-  Normal   Pulling    34s (x13 over 40m)    kubelet            Pulling image "smlinux/unhealthy"
+kubectl run redis --image=redis123 --dry-run -o yaml > redis.yaml
 ```
 
+### 3. vi 편집기로 생성한 yaml파일 수정
 
----
+- redis.yaml
 
-## 명령어 실행 예시
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+    name: redis
+spec:
+containers:
+- image: redis123
+    name: redis
+```
+
+### 4. yaml파일을 통한 pod 생성
 ```shell
-master@MASTER:~$ kubectl create -f pod-liveness.yaml
-pod/liveness-pod created
+kubectl create -f redis.yaml
+```
+### 5. 생성된 pod 확인
+```shell
+root@MASTER:~# kubectl get pods
+NAME    READY   STATUS         RESTARTS   AGE
+redis   0/1     ErrImagePull   0          10s
 ```
 
-# EXAMPLE
-아래의 liveness-exam.yaml 파일에 self-healing 기능을 추가하시오
-- 동작되는 Pod내의 컨테이너에 /tmp/healthy 파일이 있는지 5초마다 확인한다.
-- Pod 실행 후 10초 후 부터 검사한다.
-- 성공횟수는 1번, 실패횟수는 연속 2회로 구성한다.
+## 12.  앞서 만든 redis pod의 image를 redis로 수정하여 동작시키시오.
 
-## 샘플파일 : liveness-exam.yaml
-```
-apiVersion: v1
-kind: Pod
-metadata:
-  name: liveness-exam
-spec:
-  containers:
-  - name: busybox-container
-    image: busybox
-    args:
-    - /bin/sh
-    - -c
-    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
+1. 해당 pod의 세부적인 정보 확인
+> kubectl describe pod redis    
+    
+```shell
+root@MASTER:~# kubectl create redis.yaml
+Error: must specify one of -f and -k
+
+error: unknown command "redis.yaml"
+See 'kubectl create -h' for help and examples
+root@MASTER:~# kubectl create -f redis.yaml
+pod/redis created
+root@MASTER:~# kubectl get pods
+NAME    READY   STATUS         RESTARTS   AGE
+redis   0/1     ErrImagePull   0          10s
+root@MASTER:~# ^C
+root@MASTER:~# kubectl describe pod redis
+Name:         redis
+Namespace:    default
+Priority:     0
+Node:         node2/10.100.1.6
+Start Time:   Wed, 05 Jul 2023 05:59:06 +0000
+Labels:       <none>
+Annotations:  <none>
+Status:       Pending
+IP:           10.244.2.7
+IPs:
+IP:  10.244.2.7
+Containers:
+redis:
+    Container ID:
+    Image:          redis123
+    Image ID:
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+    Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+    /var/run/secrets/kubernetes.io/serviceaccount from default-token-qq2tk (ro)
+Conditions:
+Type              Status
+Initialized       True
+Ready             False
+ContainersReady   False
+PodScheduled      True
+Volumes:
+default-token-qq2tk:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-qq2tk
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+Type     Reason     Age                     From               Message
+----     ------     ----                    ----               -------
+Normal   Scheduled  9m33s                   default-scheduler  Successfully assigned default/redis to node2
+Normal   Pulling    7m58s (x4 over 9m32s)   kubelet            Pulling image "redis123"
+Warning  Failed     7m55s (x4 over 9m30s)   kubelet            Failed to pull image "redis123": rpc error: code = Unknown desc = Error response from daemon: pull access denied for redis123, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+Warning  Failed     7m55s (x4 over 9m30s)   kubelet            Error: ErrImagePull
+Warning  Failed     7m33s (x7 over 9m30s)   kubelet            Error: ImagePullBackOff
+Normal   BackOff    4m27s (x20 over 9m30s)  kubelet            Back-off pulling image "redis123"
 ```
 
-## 정답 [문제풀이]
+1. 결과 분석
 ```
-apiVersion: v1
-kind: Pod
-metadata:
-  name: liveness-exam
-spec:
-  containers:
-  - name: busybox-container
-    image: busybox
-    args:
-    - /bin/sh
-    - -c
-    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
-    livenessProbe:
-      exec:
-        command:
-        - ls
-        - /tmp/healthy
-      initialDelaySeconds: 10
-      failureThreshold: 2
-      periodSeconds: 5
-      successThreshold: 1
-      timeoutSeconds: 1
+Failed to pull image "redis123"
+```
+컨테이너 다운받는 도중에 문제가 발생했음을 볼 수 있다.
+
+1. redis Pod를 편집 해 보자
+> kubectl edit pod redis
+
+1. 위의 명령어 실행
+```
+root@MASTER:~# kubectl edit pod redis
+serviceAccount: default
+serviceAccountName: default
+terminationGracePeriodSeconds: 30
+tolerations:
+- effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+- effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+volumes:
+- name: default-token-qq2tk
+    secret:
+    defaultMode: 420
+    secretName: default-token-qq2tk
+status:
+conditions:
+- lastProbeTime: null
+    lastTransitionTime: "2023-07-05T05:59:06Z"
+    status: "True"
+    type: Initialized
+- lastProbeTime: null
+    lastTransitionTime: "2023-07-05T05:59:06Z"
+    message: 'containers with unready status: [redis]'
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+- lastProbeTime: null
+    lastTransitionTime: "2023-07-05T05:59:06Z"
+    message: 'containers with unready status: [redis]'
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+- lastProbeTime: null
+    lastTransitionTime: "2023-07-05T05:59:06Z"
+    status: "True"
+    type: PodScheduled
+containerStatuses:
+- image: redis123
+    imageID: ""
+    lastState: {}
+    name: redis
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+    waiting:
+        message: Back-off pulling image "redis123"
+        reason: ImagePullBackOff
+hostIP: 10.100.1.6
+phase: Pending
+podIP: 10.244.2.7
+podIPs:
+- ip: 10.244.2.7
+qosClass: BestEffort
+startTime: "2023-07-05T05:59:06Z"
+```
+
+2. spec > containers > image의 이름을 수정한다
+   - 수정전
+   ```
+   spec:
+     containers:
+     - image: redis123
+   ```
+
+   - 수정 후
+   ```
+   spec:
+     containers:
+     - image: redis
+   ```
+3. pod 확인
+   ```
+   kubectl get pods
+   ```
+
+## 정상적으로 수정됨
+```
+root@MASTER:~# kubectl get pods
+NAME    READY   STATUS    RESTARTS   AGE
+redis   1/1     Running   0          26m
 ```

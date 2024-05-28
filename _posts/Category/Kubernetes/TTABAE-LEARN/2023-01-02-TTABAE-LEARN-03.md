@@ -1,9 +1,9 @@
 ---
 layout:     BLACKCODE
-title:      "[04/36] 2-2. 도커 쿠버네티스 설치 / PC에 직접 설치하기"
-subtitle:   "[따배쿠] 2-2. 도커 쿠버네티스 설치 / PC에 직접 설치하기"
+title:      "[03/36] 2-1. 쿠버네티스 설치 / 설치없이 웹에서 실습하기"
+subtitle:   "[따배쿠] 2-1. 쿠버네티스 설치 / 설치없이 웹에서 실습하기"
 description: "https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c"
-date:       2023-01-02 13:00:00
+date:       2023-01-02 12:00:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
@@ -14,7 +14,10 @@ category: [따배쿠]
 # share: false
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lheclzO-G7k?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c" title="[따배쿠] 2-2. 도커 쿠버네티스 설치 / PC에 직접 설치하기" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/yAc6_ml4JCA?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c" 
+title="[따배쿠] 2-1. 쿠버네티스 설치 / 설치없이 웹에서 실습하기" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # 수업내용
 ## Part 1. 쿠버네티스 시작하기
@@ -40,62 +43,149 @@ category: [따배쿠]
 18. 오토스케일링
 19. 사용자 정의 자원
 20. 쿠버네티스 기반으로 워드프레스 앱 실행하기
-21. 헬름 
+21. 헬름
 
+---
+
+# 쿠버네티스 설치하기
+
+---
+
+## 설치없이 쿠버네티스 사용하기
+- 카타코다 쿠버네티스 플레이그라운드
+    - ~~https://www.katacoda.com/courses/kubernetes/playground~~ [폐쇄됨]
+    - Master, node1이 구성되어 있어 바로 사용가능
+
+- Play with Kubernetes
+    - docker에서 제공. docker hub 계정으로 로그인
+    - https://labs.play-with-k8s.com/
+    - 4시간 사용 가능. `Master`, `worker Node`를 직접 구성한 후 사용가능
+
+---
+
+# 실습환경 : Docker Playground
+### 복사 : ctrl + ins
+### 붙여넣기 : shift + ins
+
+1. Initializes cluster master node:
 ```
-    00:00 인트로
-    00:13 오늘 배울 내용 소개
-    00:18 쿠버네티스 설치툴
-    00:40 CNI이란?
-    04:16 쿠버네티스 구성
-    07:55 Docker 설치
-    18:30 Kubernetes 설치
-    25:32 kube-adm, ctl, let 설치
-    28:56 control-plane 구성
-    39:17 worker node 구성
-    44:30 설치 확인
-    46:15 Review
+kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16
+```
+
+2. Initialize cluster networking:
+```
+kubectl apply -f https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml
+```
+
+3. (Optional) Create an nginx deployment:
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/application/nginx-app.yaml
 ```
 
 ---
 
-# CNI(Container Network Interface)
-- Container간 통신을 지원하는 `VxLAN`. `Pod Network`라고 부름
-- 다양한 종류의 플러그인이 존재
-
-    쿠버네티스 CNI(Container Network Interface)는 컨테이너와 관련된 네트워크 설정을 관리하는 인터페이스입니다. 쿠버네티스는 CNI를 통해 다양한 네트워킹 솔루션을 사용하여 컨테이너 간의 통신을 구성합니다. CNI는 다음과 같은 기능을 제공합니다:
-
-1. 컨테이너 네트워킹 구성: CNI를 사용하여 컨테이너에 IP 주소를 할당하고 네트워크 인터페이스를 설정합니다. 이를 통해 컨테이너 간의 통신이 가능하게 됩니다.
-2. 네트워크 정책 설정: CNI를 통해 네트워크 정책을 설정하여 컨테이너 간의 트래픽을 제어할 수 있습니다. 이를 통해 보안 및 네트워크 세그먼테이션을 구현할 수 있습니다.
-3. 플러그인 지원: CNI는 다양한 네트워킹 플러그인을 지원합니다. 쿠버네티스 클러스터에서는 플러그인을 선택하여 사용할 수 있으며, 이를 통해 다양한 네트워킹 솔루션을 적용할 수 있습니다.
-4. 동적 네트워크 구성: CNI는 컨테이너가 생성되거나 삭제될 때 동적으로 네트워크 설정을 조정할 수 있습니다. 이를 통해 쿠버네티스 클러스터의 네트워크가 유연하게 관리됩니다.
-
-    일반적으로 쿠버네티스 클러스터에서는 CNI 플러그인을 설치하여 네트워크 설정을 관리합니다. 대표적인 CNI 플러그인으로는 Calico, Flannel, Weave 등이 있으며, 각각의 플러그인은 다양한 네트워킹 솔루션을 제공합니다.
-
-# 쿠버네티스 클러스터 구성
-- control plane(mater node)
-    - 워커 노드들의 상태를 관리하고 제어
-    - single master
-    - multi master(3,5개의 master node)
-- work node
-    - 도커 플랫폼을 통해 컨테이너를 동작하며 실제 서비스 제공
-
-# kubeadm을 이용한 쿠버네티스 설치 - 온프레미스
-1. Docker install
-2. Kubernetes install
-    1. 설치 전 환경설정
-    2. kubeadm, kubectl, kubelet설치
-    3. control-plane구성
-    4. worker node구성
-    5. 설치확인
-
-# 설치 확인
-
-```powershell
-root@MASTER:~# kubectl get nodes -o wide
-NAME     STATUS   ROLES           AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
-master   Ready    control-plane   3h11m   v1.29.4   10.0.0.4      <none>        Ubuntu 20.04.6 LTS   5.15.0-1061-azure   containerd://1.6.31
-node01   Ready    <none>          3h10m   v1.29.4   10.0.1.4      <none>        Ubuntu 20.04.6 LTS   5.15.0-1061-azure   containerd://1.6.31
-node02   Ready    <none>          3h9m    v1.29.4   10.0.2.4      <none>        Ubuntu 20.04.6 LTS   5.15.0-1061-azure   containerd://1.6.31
-
+1. ADD NEW INSTANCE 후 MASTER NODE(node1)에서 초기화 작업 진행
 ```
+kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16
+```
+* RESULT 화면
+```
+[node1 ~]$ kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16
+Initializing machine ID from random generator.
+I0121 13:13:31.032254     625 version.go:251] remote version is much newer: v1.26.1; falling back to: stable-1.20
+[init] Using Kubernetes version: v1.20.15
+[preflight] Running pre-flight checks
+        [WARNING Service-Docker]: docker service is not active, please run 'systemctl start docker.service'
+        [WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd". Please follow the guide at https://kubernetes.io/docs/setup/cri/
+        [WARNING FileContent--proc-sys-net-bridge-bridge-nf-call-iptables]: /proc/sys/net/bridge/bridge-nf-call-iptables does not exist
+[preflight] The system verification failed. Printing the output from the verification:
+KERNEL_VERSION: 4.4.0-210-generic
+DOCKER_VERSION: 20.10.1
+OS: Linux
+CGROUPS_CPU: enabled
+CGROUPS_CPUACCT: enabled
+CGROUPS_CPUSET: enabled
+CGROUPS_DEVICES: enabled
+CGROUPS_FREEZER: enabled
+CGROUPS_MEMORY: enabled
+CGROUPS_PIDS: enabled
+CGROUPS_HUGETLB: enabled
+```
+
+
+2. node1 에서 해당 명령어 복사
+```
+kubeadm join 192.168.0.8:6443 --token p80jz1.f0xe2tf37y9s701v \
+    --discovery-token-ca-cert-hash sha256:c76cbac49cd7be3b2fe9fea539e591c940f3cbc1c4326b76a7234fa052c662ce 
+```
+* RESULT 화면
+```
+[node2 ~]$ kubeadm join 192.168.0.8:6443 --token p80jz1.f0xe2tf37y9s701v \
+>     --discovery-token-ca-cert-hash sha256:c76cbac49cd7be3b2fe9fea539e591c940f3cbc1c4326b76a7234fa052c662ce
+Initializing machine ID from random generator.
+[preflight] Running pre-flight checks
+        [WARNING Service-Docker]: docker service is not active, please run 'systemctl start docker.service'
+        [WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd". Please follow the guide at https://kubernetes.io/docs/setup/cri/
+        [WARNING FileContent--proc-sys-net-bridge-bridge-nf-call-iptables]: /proc/sys/net/bridge/bridge-nf-call-iptables does not exist
+[preflight] The system verification failed. Printing the output from the verification:
+KERNEL_VERSION: 4.4.0-210-generic
+DOCKER_VERSION: 20.10.1
+OS: Linux
+CGROUPS_CPU: enabled
+CGROUPS_CPUACCT: enabled
+CGROUPS_CPUSET: enabled
+CGROUPS_DEVICES: enabled
+CGROUPS_FREEZER: enabled
+CGROUPS_MEMORY: enabled
+CGROUPS_PIDS: enabled
+CGROUPS_HUGETLB: enabled
+```
+
+3. 노드2 생성 후 노드1에서 복사한 명령어 실행
+```
+kubeadm join 192.168.0.8:6443 --token p80jz1.f0xe2tf37y9s701v \
+    --discovery-token-ca-cert-hash sha256:c76cbac49cd7be3b2fe9fea539e591c940f3cbc1c4326b76a7234fa052c662ce 
+```
+* RESULT 화면
+```
+[node2 ~]$ kubeadm join 192.168.0.8:6443 --token p80jz1.f0xe2tf37y9s701v \
+>     --discovery-token-ca-cert-hash sha256:c76cbac49cd7be3b2fe9fea539e591c940f3cbc1c4326b76a7234fa052c662ce
+Initializing machine ID from random generator.
+[preflight] Running pre-flight checks
+        [WARNING Service-Docker]: docker service is not active, please run 'systemctl start docker.service'
+        [WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd". Please follow the guide at https://kubernetes.io/docs/setup/cri/
+        [WARNING FileContent--proc-sys-net-bridge-bridge-nf-call-iptables]: /proc/sys/net/bridge/bridge-nf-call-iptables does not exist
+[preflight] The system verification failed. Printing the output from the verification:
+KERNEL_VERSION: 4.4.0-210-generic
+DOCKER_VERSION: 20.10.1
+OS: Linux
+CGROUPS_CPU: enabled
+CGROUPS_CPUACCT: enabled
+CGROUPS_CPUSET: enabled
+CGROUPS_DEVICES: enabled
+CGROUPS_FREEZER: enabled
+CGROUPS_MEMORY: enabled
+CGROUPS_PIDS: enabled
+CGROUPS_HUGETLB: enabled
+```
+
+4. Node1 정보 보기
+```
+kubectl get nodes -o wide
+```
+* RESULT 화면
+```
+[node1 ~]$ kubectl get nodes -o wide
+NAME    STATUS     ROLES                  AGE    VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION      CONTAINER-RUNTIME
+node1   NotReady   control-plane,master   4m2s   v1.20.1   192.168.0.8   <none>        CentOS Linux 7 (Core)   4.4.0-210-generic   docker://20.10.1
+node2   NotReady   <none>                 87s    v1.20.1   192.168.0.7   <none>        CentOS Linux 7 (Core)   4.4.0-210-generic   docker://20.10.1
+```
+
+* 전체 지우기 Ctrl+L
+
+---
+
+* 클라우드 서비스에서 제공하는 쿠버네티스 도구
+    * 구글 쿠버네티스 엔진(GKE)
+    * 아마존 쿠버네티스 일래스틱 컨테이너 서비스(EKS)
+    * 애저 쿠버네티스 서비스(AKS)

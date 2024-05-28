@@ -1,9 +1,9 @@
 ---
 layout:     BLACKCODE
-title:      "[따배쿠] 6-1 Controller - ReplicationController란?"
+title:      "[17/36] 6-1 Controller - ReplicationController란?"
 subtitle:   ""
 description: "https://www.youtube.com/watch?v=5X3t6VJH2vQ&list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c&index=17"
-date:       2023-07-19 1:10:00
+date:       2023-01-06 1:00:00
 author:     "MADness"
 header-img: "assets/owner/hero/home-bg.jpg"
 header-video: "assets/video/metrix.mp4"
@@ -14,7 +14,44 @@ category: [따배쿠]
 # share: false
 # 이미지 : ![img](/assets/category/Kubernetes/2023/07/17-03.PNG)
 ---
-# 학습내용
+
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/5X3t6VJH2vQ?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c" 
+title="[따배쿠] 6-1 Controller - ReplicationController란?"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+# 수업내용
+## Part 1. 쿠버네티스 시작하기
+1. 쿠버네티스 소개
+2. 쿠버네티스 설치하기
+3. 쿠버네티스로 컨테이너 실행하기
+
+## Part 2. 쿠버네티스 기본 개념
+4. 쿠버네티스 아키텍처
+5. 파드
+6. `컨트롤러`
+7. 서비스
+8. 인그레스
+9. 레이블과 애너테이션
+10. 컨피그맵
+11. 시크릿 
+
+## Part 3. 쿠버네티스 한 걸음 더 들어가기
+12. 파드 스케쥴링
+13. 인증과 권한관리
+14. 데이터 저장
+15. 클러스터 네트워킹 구성
+16. 쿠버네티스 DNS
+17. 로깅과 모니터링
+18. 오토스케일링
+19. 사용자 정의 자원
+20. 쿠버네티스 기반으로 워드프레스 앱 실행하기
+21. 헬름 
+
+---
+
+학습내용
+----
 - Replication Controller
 - ReplicaSet
 - Deployment
@@ -24,9 +61,10 @@ category: [따배쿠]
 - CronJob
 
 # Controller란?
-![img](/assets/category/Kubernetes/TTABAE-LEARN/16-01.ppm)
 - Pod의 개수를 보장
 - 특정 application 실행하는 pod가  application을 몇개 운영할것인지 결정하고 보장해주는 역할
+
+![img](/assets/category/Kubernetes/TTABAE-LEARN/6-1/01.png)
 - 명령어 실행 절차
     1. nginx 웹서버 3개 생성 요청 명령어를 api로 보냄
     ```
@@ -45,7 +83,7 @@ category: [따배쿠]
     9. 3개를 보장
 
 # Controller의 종류
-![img](/assets/category/Kubernetes/TTABAE-LEARN/16-02.png)
+![img](/assets/category/Kubernetes/TTABAE-LEARN/6-1/02.png)
 
 # ReplicationController
 - 요구하는 Pod의 개수를 보장하며 파드 집합의 실행을 항상 안정적으로 유지 하는 것을 목표
