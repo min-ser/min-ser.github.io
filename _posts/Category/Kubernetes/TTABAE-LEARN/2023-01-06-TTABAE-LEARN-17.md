@@ -108,7 +108,6 @@ template:
 ```
 
 # ReplicationController 동작원리
-![img](/assets/category/Kubernetes/TTABAE-LEARN/16-01.ppm)
 1. API에게 key: value를 app=webui로 가지고 있는 lable을 선택해서 nginx 웹 서버 3개 실행 요청
 ```
 kubectl create rc-exam --imager=nginx --replicas=3 --selector=app=webui
