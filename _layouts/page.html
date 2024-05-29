@@ -32,6 +32,7 @@ layout: default
                             let H = today.getHours();
                             let M = today.getMinutes();
                             let S = today.getSeconds();
+
                             if(H < 10 ){
                                 H = "0"+H
                             }
@@ -42,6 +43,7 @@ layout: default
                                 S = "0"+S
                             }
 
+                            /*
                             if(count == 1){
                                 timetext.innerHTML = "<h2>Youth isn’t always all it’s touted to be. – Lawana Blackwell</h2>";
                             }else if (count == 2){
@@ -52,6 +54,16 @@ layout: default
                                 timetext.innerHTML = "<h2>그리고, 지나간 시간은 돌아오지 않는다.</h2>";
                             }else if (count >= 4){
                                 timetext.innerHTML = "<h1 class='clock-ani'>"+ H + ":" + M + ":" + S+"</h1>";
+                                timetext.style.color="rgb(39, 39, 39)"
+                                index_title.style.color="rgb(39, 39, 39)"
+                                count = 1
+                            }
+                            */
+                            if (count >= 0){
+                                timetext.style.color="rgb(217, 39, 39)"
+                                index_title.style.color="rgb(217, 39, 39)"
+                                index_title.innerHTML="<h1 class='diploma'>The Black Code ["+ H + ":" + M + ":" + S+"]</h1> "
+                            }else if (count >= 1){
                                 timetext.style.color="rgb(39, 39, 39)"
                                 index_title.style.color="rgb(39, 39, 39)"
                             }
