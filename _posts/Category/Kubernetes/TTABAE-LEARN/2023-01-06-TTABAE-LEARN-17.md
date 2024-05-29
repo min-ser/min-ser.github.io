@@ -82,10 +82,10 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
     8. api는 다시 `schduler`를 통해 node1,2중 어디에 배치할지 결정
     9. 3개를 보장
 
-# Controller의 종류
+## Controller의 종류
 ![img](/assets/category/Kubernetes/TTABAE-LEARN/6-1/02.png)
 
-# ReplicationController
+## ReplicationController
 - 요구하는 Pod의 개수를 보장하며 파드 집합의 실행을 항상 안정적으로 유지 하는 것을 목표
     - 요구하는 Pod의 개수가 부족하면 template를 이용해 Pod를 추가
     - 요구하는 Pod 수 보다 많으면 최근에 생성된 Pod를 삭제
@@ -94,7 +94,7 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
     - replicas
     - template
 - yml 파일 형식
-```
+```yaml
 apiVersion: v1
 kind: ReplicationController
 metadata:
@@ -107,16 +107,16 @@ template:
   <컨테이너 템플릿>
 ```
 
-# ReplicationController 동작원리
-1. API에게 key: value를 app=webui로 가지고 있는 lable을 선택해서 nginx 웹 서버 3개 실행 요청
-```
+## ReplicationController 동작원리
+1. `API`에게 key: value를 app=webui로 가지고 있는 lable을 선택해서 nginx 웹 서버 3개 실행 요청
+```shell
 kubectl create rc-exam --imager=nginx --replicas=3 --selector=app=webui
 ```
 2. etcd와 sccheduler의 도움을 받아 현재 시스템에 `app: webui`라벨을 가지는 컨테이너를 3개의 node에 3개 실행
 
-# ReplicationController definition(정의)
-## Pod-definition
-```
+## ReplicationController definition(정의)
+### Pod-definition
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -128,8 +128,8 @@ spec:
   - name: nginx-container
     image: nginx:1.14
 ```
-## ReplicationController-definition
-```
+### ReplicationController-definition
+```yaml
 apiVersion: v1
 kind: ReplicationController
 metadata:
@@ -148,13 +148,9 @@ spec:
       - name: nginx-container
         image: nginx:1.14
 ```
-
-# ReplicationController 실습
-- watch kubectl get pods -o wide
-    > 실시간으로 kubectl get pods -o wide 명령어 확인
-
-- cat rc-nginx.yaml에 대한 설명
-```
+## ReplicationController example(1)
+### rc-nginx.yaml
+```yaml
 apiVersion: v1
 kind: ReplicationController
 metadata:
@@ -174,163 +170,348 @@ spec:
         image: nginx:1.14
 ```
 
-- rc-nginx.yaml 동작
-```
+### 명령어
+```shell
 kubectl create -f rc-nginx.yaml
+
+# 화면 분리 후 별도 실행, 현재 동작중인 pod 수는?
+watch kubectl get pods-o wide
+
+kubectl get replicationcontrollers
+kubectl get rc
+kubectl describe rc rc-nginx
+
+# 파드 삭제 시 ReplicationController가 하는 일은?
+kubectl get pods
+kubectl delete pod rc-nginx-xxxx
 ```
 
-- replicationController 정보보기
-```
-명령어 : kubectl get replicationcontrollers
-명령어 : kubectl get rc
+---
+
+# 실습
+## 모니터링
+```shell
+watch kubectl get pods -o wide
 ```
 
-- 실습화면
+## rc-nginx.yaml파일 배포
+```yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: rc-nginx
+spec:
+  replicas: 3   # replica 갯수 3개, app: webui를 3개 보장
+  selector:
+    app: webui
+  template:     # app: webui가 3개가 아닐경우 template를 통해 생성
+    metadata:
+      name: nginx-pod
+      labels:
+        app: webui
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:1.14
 ```
-DESIRED : replica 수 3개 요구
-CURRENT : 현재 3개 실행중
-READY   : 준비된 상태 3개
-master@master:kubectl get replicationcontrollers
+
+## 실습화면
+```shell
+# replicationController 정보보기
+kubectl get replicationcontrollers
+kubectl get rc
+
+
+# DESIRED : replica 수 3개 요구
+# CURRENT : 현재 3개 실행중
+# READY   : 준비된 상태 3개
+
+master@master:~$ kubectl create -f rc-nginx.yaml 
+replicationcontroller/rc-nginx created
+master@master:~$ kubectl get replicationcontrollers
 NAME       DESIRED   CURRENT   READY   AGE
-rc-nginx   3         3         3       99s
-```
+rc-nginx   3         3         3       16m
+master@master:~$ kubectl get rc
+NAME       DESIRED   CURRENT   READY   AGE
+rc-nginx   3         3         3       16m
 
-- --dry-run 명령어 실행으로 (문법)이상유무 확인 가능
-```
-kubectl run redis --image=redis --dry-run
-```
+# --dry-run 명령어 실행으로 (문법)이상유무 확인 가능
+master@master:~$ kubectl run redis --image=redis --dry-run
+W0529 04:53:05.923004   75148 helpers.go:704] --dry-run is deprecated and can be replaced with --dry-run=client.
+pod/redis created (dry run)
 
-- redis.yaml 생성 명령어
-```
+# redis.yaml파일 생성
 kubectl run redis --image=redis --labels=app=webui --dry-run -o yaml > redis.yaml
-```
 
-- vi redis.yaml    
-    - vi편집기 단축키
-        - dd : 라인 삭제
-            ```
-            apiVersion: v1
-            kind: Pod
-            metadata:
-            labels:
-                app: webui
-            name: redis
-            spec:
-            containers:
-            - image: redis
-                name: redis
-            ```
-
-- label 정보 확인
-```
-kubectl get pod --show-labels
-```
-
-- edit명령어를 이용한 ReplicaController 수정하기
-```
-kubectl edit rc rc-nginx
-```
-
-- 명령어 실행 후 spec 아래에 있는 replicas의 수 수정
-```
+# redis.yaml vi 편집
+# 라인삭제 : dd
+master@master:~$ vi redis.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: webui
+  name: redis
 spec:
-  replicas: 4
-```
+  containers:
+  - image: redis
+    name: redis
 
-- 명령어로 간단하게 replicas의 숫자 수정하기
-```
-자유롭게 scale up, down이 가능
-kubectl scale rc rc-nginx --replicas=2
-```
+# 1. Controller의 역할, redis.yaml 배포하면 어떻게 될까?
+Every 2.0s: kubectl get pods -o wide                                                                 master: Wed May 29 05:24:29 20244:24 20242024
+NAME             READY   STATUS        RESTARTS   AGE   IP            NODE    NOMINATED NODE   READINESS GATES
+rc-nginx-858vg   1/1     Running       0          38m   10.244.1.10   node2   <none>           <none>
+rc-nginx-9t5v4   1/1     Running       0          38m   10.244.2.7    node1   <none>           <none>
+rc-nginx-zqzt2   1/1     Running       0          38m   10.244.2.6    node1   <none>           <none>
+redis            0/1     Terminating   0          2s    <none>        node1   <none>           <none>
 
-## ReplicationController example(1)
-- cat rc-nginx.yaml
-```
+# Controller가 3개를 보장하면서 새로 생성된 pod를 죽임
+Every 2.0s: kubectl get pods -o wide                                                                 master: Wed May 29 05:24:29 20244:24 20242024
+
+NAME             READY   STATUS    RESTARTS   AGE   IP            NODE    NOMINATED NODE   READINESS GATES
+rc-nginx-858vg   1/1     Running   0          62m   10.244.1.10   node2   <none>           <none>
+rc-nginx-9t5v4   1/1     Running   0          62m   10.244.2.7    node1   <none>           <none>
+rc-nginx-zqzt2   1/1     Running   0          62m   10.244.2.6    node1   <none>           <none>
+
+# 2. Controller의 역할, scale-out
+
+# 아래 명령어를 통해 replica의 수를 3>4로 수정(i) 후 저장(wq)
+master@master:~$ kubectl edit rc rc-nginx
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be       
+# reopened with the relevant failures.
+#
 apiVersion: v1
 kind: ReplicationController
 metadata:
+  creationTimestamp: "2024-05-29T04:21:49Z"
+  generation: 2
+  labels:
+    app: webui
   name: rc-nginx
+  namespace: default
+  resourceVersion: "64873"
+  uid: 4fb36c51-103a-40c4-9320-fdbf563b35f4
 spec:
-  replicas: 3
+  replicas: 4 # 3에서 4로 변경
+  selector:
+    app: webui
+
+# watch 명령어 모니터링, horizontal scale-out을 통해 확장
+Every 2.0s: kubectl get pods -o wide                                                     master: Wed May 29 05:37:21 2024
+
+NAME             READY   STATUS    RESTARTS   AGE     IP            NODE    NOMINATED NODE   READINESS GATES        
+rc-nginx-858vg   1/1     Running   0          75m     10.244.1.10   node2   <none>           <none>
+rc-nginx-9t5v4   1/1     Running   0          75m     10.244.2.7    node1   <none>           <none>
+rc-nginx-f22kt   1/1     Running   0          5m27s   10.244.1.11   node2   <none>           <none>
+rc-nginx-zqzt2   1/1     Running   0          75m     10.244.2.6    node1   <none>           <none>
+
+# 3. Scale-down
+master@master:~$ kubectl scale rc rc-nginx --replicas=2
+replicationcontroller/rc-nginx scaled
+
+# Scale-down 결과
+Every 2.0s: kubectl get pods -o wide                                                     master: Wed May 29 05:40:03 2024
+
+NAME             READY   STATUS    RESTARTS   AGE   IP            NODE    NOMINATED NODE   READINESS GATES
+rc-nginx-858vg   1/1     Running   0          78m   10.244.1.10   node2   <none>           <none>
+rc-nginx-9t5v4   1/1     Running   0          78m   10.244.2.7    node1   <none>           <none>
+```
+
+## Controller의 역할
+1. Scale-out
+2. Scale-down
+
+운영기간중 이벤트를 통해 부하를 예측하여 기존에 있는 시스템을 Scale-out하거나 Scale-down을 통해 시스템의 하드웨어 리소스를 적절하게 사용할 수 있다.
+paas플랫폼의 base가 되는 기술
+
+## edit기능을 통해 nginx버전을 1.15로 올리면 적용이 될까?
+```shell
+master@master:~$ kubectl edit rc rc-nginx
+replicationcontroller/rc-nginx edit
+
+# Please edit the object below. Lines beginning with a '#' will be ignored, 
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  creationTimestamp: "2024-05-29T04:21:49Z"
+  generation: 4
+  labels:
+    app: webui
+  name: rc-nginx
+  namespace: default
+  resourceVersion: "66064"
+  uid: 4fb36c51-103a-40c4-9320-fdbf563b35f4
+spec:
+  replicas: 2
   selector:
     app: webui
   template:
     metadata:
-      name: nginx-pod
+      creationTimestamp: null
       labels:
         app: webui
-    spec:
-      containers:
-      - name: nginx-container
-        image: nginx:1.14
-```
-- kubectl create -f rc-nginx.yaml
-- watch kubectl get pods -o -wide
-- kubectl get replicationcontrollers
-- kubectl get rc
-- kubectl describe rc rc-nginx
-
-### 파드 삭제 시 ReplicationController가 하는 일은?
-- kubectl get pods
-- kubectl delete pod rc-nginx-XXXX
-
-## ReplicationController example(2)
-- kubectl `edit` rc rc-nginx
-```
-apiVersion: v1
-kind: ReplicationController
-metadata:
-  name: rc-nginx
-spec:
-  replicas: 3 >> 4
-  selector:
-    app: webui
-  template:
-    metadata:
       name: nginx-pod
-      labels:
-        app: webui
     spec:
       containers:
-      - name: nginx-container
-        image: nginx:1.14
-```
-- kubectl `scale` rc rc-nginx `--replicas=3`
-### 현재 동작중인 Pod 수는?
-
-- kubectl describe rc rc-nginx
-
-## ReplicationController example(3)
-- kubectl `edit` rc rc-nginx
-```
-apiVersion: v1
-kind: ReplicationController
-metadata:
-  name: rc-nginx
-spec:
-  replicas: 4
-  selector:
-    app: webui
-  template:
-    metadata:
-      name: nginx-pod
-      labels:
-        app: webui
-    spec:
-      containers:
-      - name: nginx-container
-        image: nginx:1.14 >> 1.15
+      - image: nginx:1.15 # 1.14 > 1.15로 수정
+        imagePullPolicy: IfNotPresent
+        name: nginx-container
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 2
+  fullyLabeledReplicas: 2
+  observedGeneration: 4
+  readyReplicas: 2
+  replicas: 2
 ```
 
-- kubectl describe pod rc-nginx-xxxxx
-> 동작중인 컨테이너 이미지는?
+Controller는 selector만 바라보기때문에 영향을 주지 않음
 
-- kubectl delete pod rc-nginx-xxxx
-- kubectl describe pod rc-nginx-yyyy
-> pod 삭제 시 새로운 pod가 생성된다.
-> 생성된 pod image는?
+```shell
+master@master:~$ kubectl get pods --show-labels
+NAME             READY   STATUS    RESTARTS   AGE   LABELS
+rc-nginx-858vg   1/1     Running   0          86m   app=webui
+rc-nginx-9t5v4   1/1     Running   0          86m   app=webui
 
-- kubectl delete rc rc-nginx
+# nginx 버전 확인
+master@master:~$ kubectl describe pod rc-nginx-858vg
+Name:             rc-nginx-858vg
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             node2/10.0.2.4
+Start Time:       Wed, 29 May 2024 04:21:49 +0000
+Labels:           app=webui
+Annotations:      <none>
+Status:           Running
+IP:               10.244.1.10
+IPs:
+  IP:           10.244.1.10
+Controlled By:  ReplicationController/rc-nginx
+Containers:
+  nginx-container:
+    Container ID:   containerd://5eb0f5f934821186263fa75df455ccba29642fb9a6443bde8f97332f4d7569d2
+    Image:          nginx:1.14 # 1.14로 변화없음
+    Image ID:       docker.io/library/nginx@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Wed, 29 May 2024 04:21:49 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-8mz5g (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True
+  Initialized                 True
+  Ready                       True
+  ContainersReady             True
+  PodScheduled                True
+Volumes:
+  kube-api-access-8mz5g:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:                      <none>
+```
+
+확인했던 pod를 삭제 후 다시 버전을 확인해본다.
+
+```shell
+# pod 삭제
+master@master:~$ kubectl delete pod rc-nginx-858vg
+pod "rc-nginx-858vg" deleted
+
+# 생성된 pod 확인
+master@master:~$ kubectl get pods --show-labels
+NAME             READY   STATUS    RESTARTS   AGE   LABELS
+rc-nginx-9t5v4   1/1     Running   0          90m   app=webui
+rc-nginx-q7dht   1/1     Running   0          15s   app=webui
+
+# 새로 생성된 pod를 describe 명령어로 조회
+master@master:~$ kubectl describe pod rc-nginx-q7dht
+Name:             rc-nginx-q7dht
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             node2/10.0.2.4
+Start Time:       Wed, 29 May 2024 05:52:10 +0000
+Labels:           app=webui
+Annotations:      <none>
+Status:           Running
+IP:               10.244.1.13
+IPs:
+  IP:           10.244.1.13
+Controlled By:  ReplicationController/rc-nginx
+Containers:
+  nginx-container:
+    Container ID:   containerd://e8063f636de9ffb8b4c16235f68b120a4f823a4c966f4cc87c0a3157b58664cd
+    Image:          nginx:1.15 # 버전이 바뀌어있다.
+    Image ID:       docker.io/library/nginx@sha256:23b4dcdf0d34d4a129755fc6f52e1c6e23bb34ea011b315d87e193033bcd1b68    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Wed, 29 May 2024 05:52:12 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-q28xr (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True
+  Initialized                 True
+  Ready                       True
+  ContainersReady             True
+  PodScheduled                True
+Volumes:
+  kube-api-access-q28xr:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  24s   default-scheduler  Successfully assigned default/rc-nginx-q7dht to node2
+  Normal  Pulled     22s   kubelet            Container image "nginx:1.15" already present on machine
+  Normal  Created    22s   kubelet            Created container nginx-container
+  Normal  Started    22s   kubelet            Started container nginx-container
+```
+
+서비스 동작중의 버전을 업그레이드 하였다. 이런 무중단 서비스 업데이트를 `rolling update`라고 한다.
+서비스가 중단되지 않고 비즈니스 연속성을 지원한다.
+Controller의 기본 속성중에 이러한 `rolling update`기능이 포함되어있다.
+
+## Controller의 역할
+1. Scale-out
+2. Scale-down
+3. rolling update
+
+---
 
 # QUESTION & ANSWER
 1. 다음의 조건으로 ReplicationController를 사용하는 rc-lab.yaml파일을 생성하고 동작시킵니다.
