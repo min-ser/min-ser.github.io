@@ -62,3 +62,93 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
 
 ---
 
+# Deployment
+- ReplicaSet을 컨트롤해서 Pod수를 조절
+- Rolling Update & Rolling Back
+
+# [Rolling Update란?](https://kubernetes.io/ko/docs/tutorials/kubernetes-basics/update/update-intro/)
+
+롤링 업데이트는 파드 인스턴스를 점진적으로 새로운 것으로 업데이트하여 디플로이먼트 업데이트가 서비스 중단 없이 이루어질 수 있도록 해준다. 새로운 파드는 가용한 자원을 보유한 노드로 스케줄될 것이다.
+
+![img](/assets/category/Kubernetes/TTABAE-LEARN/6-3/0module_06_rollingupdates4.svg)
+
+# Deployment definition
+
+ReplicaSet definition과 Deployment definition은 kind(api 이름)만 다름
+Deployment로 Rolling Update기능만 사용하지 않으면 ReplicaSet운영하듯 할 수 있다.
+
+## ReplicaSet definition
+```yaml
+apiVersion:apps/v1
+kind: ReplicaSet
+metadata:
+  name: rc-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webui
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: webui
+      spec:
+        containers:
+        - name: nginx-container
+          image: nginx:1.14
+```
+## Deployment definition
+```yaml
+apiVersion:apps/v1
+kind: Deployment
+metadata:
+  name: rc-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webui
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: webui
+      spec:
+        containers:
+        - name: nginx-container
+          image: nginx:1.14
+```
+
+# Deployment Example
+```shell
+
+cat > deploy-nginx.yaml
+apiVersion:apps/v1
+kind: Deployment
+metadata:
+  name: rc-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webui
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: webui
+      spec:
+        containers:
+        - name: nginx-container
+          image: nginx:1.14
+
+kubectl create -f deploy-nginx.yaml
+watch kubectl get pods -o wide
+
+kubectl get deployments
+kubectl get replicasets
+kubectl get pods
+
+kubectl delete deployment deploy-nginx
+```
