@@ -41,7 +41,7 @@ deviantart_username: MAD4Jekyll
 flickr_username: MAD4Jekyll
 instagram_username: MAD4Jekyll
 
- 
+
 # Internal nav
 nav:
   writing: "root_url/writing/"
@@ -66,15 +66,15 @@ highlighter:         rouge
 markdown:           kramdown
 kramdown:
     extensions:     
-     - Hard_wrap
-     - no_intra_emphasis
-     - strikethrough
-     - fenced_code_blocks
-     - autolink
-     - tables
-     - with_toc_data
-     - highlight
-     - footnotes
+      - Hard_wrap
+      - no_intra_emphasis
+      - strikethrough
+      - fenced_code_blocks
+      - autolink
+      - tables
+      - with_toc_data
+      - highlight
+      - footnotes
     input:          GFM
 sass:
     style: compressed
@@ -101,4 +101,4 @@ analytics:
                           # true, false (default)
 # 플러그인
 plugins:
-  - jekyll-paginate
+- jekyll-paginate
