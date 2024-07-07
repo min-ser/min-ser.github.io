@@ -30,7 +30,7 @@ owner:
   name:   김민서
   avatar: avatar.jpg
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    The BlackCode for Dream
+  description:    The BlackCode got Dream
 
 # Social networking links used in footer. Update and remove as you like.
 twitter_username: MAD4Jekyll
