@@ -18,7 +18,8 @@ layout: default
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading" style="height:200px">
-                    <h1 id="index-title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <!-- <h1 id="index-title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1> -->
+                    <div id="index-title"></div>
                     <hr class="small">
                     <span class="subheading" id="clock" onmouseover="fmouseOver()" onmouseout="fmouseOut()">{{ page.description }}</span>
                     <script>
@@ -72,7 +73,8 @@ layout: default
 
                         function fmouseOut(){
                             let timetext = document.querySelector('#clock'); 
-                            timetext.innerHTML = "<h3>시간은 기다려주지 않는다.</h3>"; 
+                            timetext.innerHTML = "<h3>Change is the end result of all true learning.</h3><span>- Leo Buscaglia -</span>"; 
+                            // timetext.innerHTML = "<span>- Leo Buscaglia -</span>"; 
                             timetext.style.color="rgb(217, 39, 39)"
                         }
                     </script>
