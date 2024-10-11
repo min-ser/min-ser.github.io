@@ -1,4 +1,5 @@
 # [BlackCode GitBlogs](https://iiblackcode.github.io/)
+# [BlackCode GitBlogs](https://kim-l-min-l-seo.github.io/)
 
 ## Setting process
 1. ruby install 3.1
