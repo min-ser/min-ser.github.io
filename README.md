@@ -1,10 +1,10 @@
 # [BlackCode GitBlogs](https://iiblackcode.github.io/)
 # [BlackCode GitBlogs](https://kim-l-min-l-seo.github.io/)
+# [BlackCode GitBlogs](https://min-ser.github.io/)
 
 ## Setting process
 1. ruby install 3.1
 2. gem install jekyll
-3. 
 
 ### Theme preview
 - ADMIN
