@@ -1,0 +1,12 @@
+{
+  "endpoint": "kms-prd-warehouse.datawarehouse.fabric.microsoft.com",
+  "database": "kms_demo_warehouse",
+  "workspace": "kms-prd-fabric",
+  "authentication": "WorkloadIdentityCredential",
+  "procedure": "dbo.usp_validation_gate",
+  "parameters": {
+    "environment": "prd",
+    "requestId": "kms-demo-001"
+  },
+  "demoMode": true
+}

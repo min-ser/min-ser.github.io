@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Storage Account | Validation Gate</title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/console.css">
+  <link rel="stylesheet" href="../../assets/css/animation.css">
+  <link rel="stylesheet" href="../../assets/css/pages/storage-account.css">
+</head>
+<body data-page="storage" data-depth="2">
+<div id="app">
+  <div id="appHeader"></div>
+  <div id="appSidebar"></div>
+  <main class="app-main storage-page">
+    <div class="breadcrumb"><span>Validation Gate</span><span>/</span><strong>Storage Account</strong></div>
+
+    <section class="page-intro">
+      <div>
+        <span class="section-kicker">AZURE STORAGE</span>
+        <h1>Storage Account</h1>
+        <p>실제 구현 UI의 인증 테스트와 Blob 이미지 처리 기능 틀을 유지한 정적 데모입니다.</p>
+      </div>
+      <span class="status-chip warning">NO REAL API CALL</span>
+    </section>
+
+    <section class="storage-feature-grid">
+      <article class="feature-card access-card">
+        <h2>1. Access Key 인증</h2>
+        <label for="connectionString">Connection String</label>
+        <input id="connectionString" value="DefaultEndpointsProtocol=https;AccountName=kms..." autocomplete="off">
+        <button type="button" data-action="access">인증 테스트</button>
+      </article>
+
+      <article class="feature-card workload-card">
+        <h2>2. Workload Identity 인증</h2>
+        <label for="workloadUrl">Account URL</label>
+        <input id="workloadUrl" value="https://kmsprdsa01.blob.core.windows.net" autocomplete="off">
+        <button type="button" data-action="workload">인증 테스트</button>
+      </article>
+
+      <article class="feature-card image-card">
+        <h2>이미지 가져오기</h2>
+        <label for="imageUrl">Account URL</label>
+        <input id="imageUrl" value="https://kmsprdsa01.blob.core.windows.net" autocomplete="off">
+        <label for="containerName">Container Name</label>
+        <input id="containerName" value="validation-demo" autocomplete="off">
+        <label for="blobName">Blob 파일경로/이름</label>
+        <input id="blobName" value="folder/sample.png" autocomplete="off">
+        <p class="local-sample-note">로컬 미리보기 경로: <code>assets/images/sample.png</code></p>
+        <button type="button" data-action="image">이미지 로드</button>
+      </article>
+
+      <article class="feature-card gpt-card">
+        <h2>Get Image with GPT 분석</h2>
+        <label for="gptUrl">Account URL</label>
+        <input id="gptUrl" value="https://kmsprdsa01.blob.core.windows.net" autocomplete="off">
+        <label for="gptContainer">Container Name</label>
+        <input id="gptContainer" value="validation-demo" autocomplete="off">
+        <label for="gptBlob">Blob 파일경로/이름</label>
+        <input id="gptBlob" value="folder/sample.png" autocomplete="off">
+        <button type="button" data-action="gpt">GPT 분석 요청</button>
+      </article>
+    </section>
+
+    <section class="storage-output-grid">
+      <article class="output-card result-card">
+        <h2>Validation Result</h2>
+        <div id="summaryBanner" class="result-message">대기 중입니다.</div>
+        <div id="imagePreview" class="image-preview" hidden>
+          <img id="sampleImage" alt="Storage sample preview">
+          <div><strong>Sample Image Preview</strong><span>assets/images/sample.png</span></div>
+        </div>
+        <pre id="rawResponse">{}</pre>
+      </article>
+      <article class="output-card console-card">
+        <header>
+          <h2>Unified Execution Console</h2>
+          <div>
+            <button id="clearLogs" type="button">Clear Console</button>
+            <button id="copyLogs" type="button">Copy Logs</button>
+          </div>
+        </header>
+        <div id="storageConsole" class="storage-console" role="log" aria-live="polite"></div>
+      </article>
+    </section>
+    <div id="appFooter"></div>
+  </main>
+</div>
+<script src="../../assets/js/router.js"></script>
+<script src="../../assets/js/utils.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/pages/storage-account.js"></script>
+</body>
+</html>

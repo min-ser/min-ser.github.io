@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Azure Cache for Redis authentication and TTL validation static portfolio demo">
+  <title>Cache for Redis | Validation Gate</title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/console.css">
+  <link rel="stylesheet" href="../../assets/css/animation.css">
+  <link rel="stylesheet" href="../../assets/css/pages/redis-cache.css">
+</head>
+<body data-page="redis" data-depth="2">
+  <div id="app">
+    <div id="appHeader"></div>
+    <div id="appSidebar"></div>
+
+    <main class="app-main redis-page">
+      <div class="redis-page-inner">
+      <div class="breadcrumb"><span>Validation Gate</span><span>/</span><strong>Cache for Redis</strong></div>
+
+      <section class="page-heading">
+        <div>
+          <span class="eyebrow">AZURE DATA SERVICE</span>
+          <h1>Azure Cache for Redis</h1>
+          <p>실제 구현 UI의 Access Key, Workload Identity, TTL 점검 구조를 유지한 정적 데모입니다.</p>
+        </div>
+        <span class="badge badge-warning">NO REAL API CALL</span>
+      </section>
+
+      <section class="redis-action-grid">
+        <article class="panel redis-action-card access-card">
+          <div class="redis-card-head">
+            <div>
+              <span class="redis-card-index">01</span>
+              <h2>Access Key 인증</h2>
+            </div>
+            <span class="redis-card-tag">KEY</span>
+          </div>
+          <form id="accessKeyForm" class="redis-form">
+            <label>Redis Host
+              <input id="accessHost" type="text" value="kms-prd-redis.redis.cache.windows.net" autocomplete="off">
+            </label>
+            <label>Redis Port
+              <input id="accessPort" type="number" value="6380" min="1" max="65535">
+            </label>
+            <label>Username
+              <input id="accessUsername" type="text" value="default" autocomplete="off">
+            </label>
+            <label>Password
+              <input id="accessPassword" type="password" value="KMS_DEMO_ACCESS_KEY_NOT_VALID" autocomplete="new-password">
+            </label>
+            <button class="btn redis-btn redis-btn-primary" type="submit">인증 테스트</button>
+          </form>
+        </article>
+
+        <article class="panel redis-action-card identity-card">
+          <div class="redis-card-head">
+            <div>
+              <span class="redis-card-index">02</span>
+              <h2>Workload Identity</h2>
+            </div>
+            <span class="redis-card-tag">ENTRA ID</span>
+          </div>
+          <form id="identityForm" class="redis-form">
+            <label>Redis Host
+              <input id="identityHost" type="text" value="kms-prd-redis.redis.cache.windows.net" autocomplete="off">
+            </label>
+            <label>Redis Port
+              <input id="identityPort" type="number" value="6380" min="1" max="65535">
+            </label>
+            <label>Client ID
+              <input id="identityClientId" type="text" value="00000000-0000-4000-8000-000000000005" autocomplete="off">
+            </label>
+            <p class="redis-help">Microsoft Entra ID 기반 Passwordless 인증 흐름을 정적으로 재현합니다.</p>
+            <button class="btn redis-btn redis-btn-cyan" type="submit">인증 테스트</button>
+          </form>
+        </article>
+
+        <article class="panel redis-action-card ttl-card">
+          <div class="redis-card-head">
+            <div>
+              <span class="redis-card-index">03</span>
+              <h2>TTL Check (Entra ID)</h2>
+            </div>
+            <span class="redis-card-tag">TTL</span>
+          </div>
+          <form id="ttlForm" class="redis-form">
+            <label>Redis Host
+              <input id="ttlHost" type="text" value="kms-prd-redis.redis.cache.windows.net" autocomplete="off">
+            </label>
+            <label>Redis Port
+              <input id="ttlPort" type="number" value="6380" min="1" max="65535">
+            </label>
+            <label>Key Pattern
+              <input id="ttlPattern" type="text" value="kms:validation:*" autocomplete="off">
+            </label>
+            <p class="redis-help">시연용 키를 조회하여 만료 시간 설정 여부와 TTL 분포를 진단합니다.</p>
+            <button class="btn redis-btn redis-btn-orange" type="submit">TTL 상태 점검</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="redis-output-grid">
+        <article class="panel redis-result-panel">
+          <div class="panel-head">
+            <span class="panel-title">Validation Result</span>
+            <span id="resultBadge" class="badge badge-purple">READY</span>
+          </div>
+          <div id="resultSummary" class="redis-result-summary">
+            <div class="result-empty">
+              <strong>대기 중입니다.</strong>
+              <span>위 검증 기능 중 하나를 실행하면 결과가 표시됩니다.</span>
+            </div>
+          </div>
+          <details class="raw-panel redis-raw" open>
+            <summary>Raw Result</summary>
+            <pre id="rawResult">{}</pre>
+          </details>
+        </article>
+
+        <article class="panel console-shell redis-console-panel">
+          <div class="panel-head">
+            <span class="panel-title">Unified Execution Console</span>
+            <div class="console-head-actions">
+              <button class="console-text-btn" id="loadSample" type="button">Sample</button>
+              <button class="console-text-btn" id="clearConsole" type="button">Clear</button>
+              <button class="console-text-btn" id="copyConsole" type="button">Copy</button>
+            </div>
+          </div>
+          <div id="redisConsole" class="redis-console" aria-live="polite"></div>
+        </article>
+      </section>
+
+      <section class="panel redis-flow-panel">
+        <div class="panel-head"><span class="panel-title">Validation Flow</span></div>
+        <div class="redis-flow">
+          <div><strong>INPUT</strong><span>Host · Port · Credential</span></div>
+          <b>→</b>
+          <div><strong>DNS / TCP / TLS</strong><span>6380 · TLS 1.2+</span></div>
+          <b>→</b>
+          <div><strong>AUTH</strong><span>Access Key · Entra ID</span></div>
+          <b>→</b>
+          <div><strong>COMMAND</strong><span>PING · SCAN · TTL</span></div>
+          <b>→</b>
+          <div><strong>REPORT</strong><span>Static Demo Result</span></div>
+        </div>
+      </section>
+
+      <div id="appFooter"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../assets/js/router.js"></script>
+  <script src="../../assets/js/utils.js"></script>
+  <script src="../../assets/js/theme.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script src="../../assets/js/api/redis.js"></script>
+  <script src="../../assets/js/pages/redis-cache.js"></script>
+</body>
+</html>

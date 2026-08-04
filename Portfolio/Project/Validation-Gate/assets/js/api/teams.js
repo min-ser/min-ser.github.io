@@ -1,0 +1,7 @@
+window.TeamsValidationApi = (() => {
+  const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+  function isValidWebhookUrl(url){return /^https:\/\/[a-z0-9.-]+\/(webhook|webhookb2)\//i.test(url) && !/\s/.test(url)}
+  async function validateWebhook(input){await wait(500); if(input.scenario==='invalid-url'||!isValidWebhookUrl(input.url)){return {ok:false,status:400,code:'INVALID_WEBHOOK_URL',message:'Webhook URL format validation failed.'}} if(input.scenario==='unauthorized'){return {ok:false,status:401,code:'UNAUTHORIZED',message:'Webhook authentication failed.'}} return {ok:true,status:200,code:'WEBHOOK_READY',message:'Webhook endpoint validation completed in demo mode.',tls:'TLS 1.2',dns:'Resolved'} }
+  async function sendAdaptiveCard(input){await wait(700);const map={success:{ok:true,status:202,code:'ACCEPTED',message:'Adaptive Card accepted by Teams webhook.'},'invalid-url':{ok:false,status:400,code:'INVALID_WEBHOOK_URL',message:'Webhook URL format validation failed.'},unauthorized:{ok:false,status:401,code:'UNAUTHORIZED',message:'Webhook authentication failed.'},throttled:{ok:false,status:429,code:'TOO_MANY_REQUESTS',message:'Webhook request was throttled.'},'server-error':{ok:false,status:500,code:'INTERNAL_SERVER_ERROR',message:'Webhook endpoint returned an error.'}};return {...map[input.scenario],requestId:'kms-'+Math.random().toString(16).slice(2,10),durationMs:Math.floor(120+Math.random()*280)}}
+  return {validateWebhook,sendAdaptiveCard,isValidWebhookUrl};
+})();

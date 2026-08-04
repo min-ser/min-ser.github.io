@@ -1,0 +1,6 @@
+heightweight = read.table("student_height_weight.txt", header=T)
+attach(heightweight)
+model = lm(formula = wt ~ ht)
+summary(model)
+predict(model, newdata=data.frame(ht=c(66, 67)))
+detach(heightweight)

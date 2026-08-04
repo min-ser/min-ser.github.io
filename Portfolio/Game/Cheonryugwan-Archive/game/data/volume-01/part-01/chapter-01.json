@@ -1,0 +1,328 @@
+{
+  "id": "volume-01-part-01-chapter-01",
+  "title": "비 내리는 산길",
+  "subtitle": "1부 — 흐르지 못한 검",
+  "status": "draft",
+  "canon": "pending",
+  "background": "rain-mountain",
+  "bgm": "rain-theme",
+  "scenes": [
+    {
+      "id": "c01-s001",
+      "speaker": "",
+      "text": "비는 산을 깎아낼 듯 쏟아지고 있었다.",
+      "effect": "fade-in",
+      "background": "rainy-mountain-road",
+      "ambient": "rain",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s002",
+      "speaker": "",
+      "text": "산허리를 휘감은 길은 오래전에 길의 모양을 잃었다. 흙탕물이 발목을 삼켰고, 검은 물줄기가 비탈 아래로 흘러내렸다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s003",
+      "speaker": "",
+      "text": "정파의 무인 열두 명이 검은 장포의 사내를 포위하고 있었다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s004",
+      "speaker": "정파 무인",
+      "text": "마교의 끄나풀이냐.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s005",
+      "speaker": "",
+      "text": "사내는 대답하지 않았다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s006",
+      "speaker": "정파 무인",
+      "text": "사파의 살수인가?",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s007",
+      "speaker": "",
+      "text": "기세도 없었다. 살기도 없었다. 그래서 더 불길했다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-choice-01",
+      "type": "choice",
+      "prompt": "폭우 속 검객을 바라보며 어떤 감정이 먼저 드는가?",
+      "choices": [
+        {
+          "label": "기세가 없어서 더 불길하다",
+          "set": {
+            "first_impression": "ominous"
+          },
+          "next": "c01-s008"
+        },
+        {
+          "label": "포위당한 쪽이 오히려 무인들처럼 보인다",
+          "set": {
+            "first_impression": "reversed"
+          },
+          "next": "c01-s008"
+        }
+      ],
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s008",
+      "speaker": "젊은 무인",
+      "text": "허세 부리지 마라!",
+      "effect": "shake",
+      "background": "rainy-mountain-road",
+      "sfx": "sword-draw",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s009",
+      "speaker": "",
+      "text": "젊은 무인의 검이 사내의 가슴을 향했다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s010",
+      "speaker": "",
+      "text": "사내는 거의 움직이지 않았다. 검집 끝이 아주 조금 기울었을 뿐이었다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s011",
+      "speaker": "",
+      "text": "검로가 반 치 어긋났다. 앞으로 뻗어야 할 힘이 되돌아와 젊은 무인의 팔과 어깨를 무너뜨렸다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s012",
+      "speaker": "젊은 무인",
+      "text": "왜……?",
+      "effect": "flash",
+      "background": "rainy-mountain-road",
+      "sfx": "sword-clash",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s013",
+      "speaker": "",
+      "text": "피가 빗물에 씻겨 산길 아래로 흘렀다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s014",
+      "speaker": "정파 무인",
+      "text": "사술이다! 기이한 수법에 흔들리지 마라!",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s015",
+      "speaker": "",
+      "text": "세 명이 동시에 달려들었다. 그러나 서로의 두려움과 분노는 완벽한 진형을 반 박자씩 어긋나게 했다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s016",
+      "speaker": "",
+      "text": "사내는 그 차이를 건드렸다. 협공은 자멸로 바뀌었다.",
+      "effect": "shake",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s017",
+      "speaker": "정파 무인",
+      "text": "웃고 있어…….",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s018",
+      "speaker": "",
+      "text": "사내의 눈은 웃지 않았다. 입꼬리는 웃음이 아니라 경련처럼 굳어 있었다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s019",
+      "speaker": "",
+      "text": "마지막 비명이 그친 뒤에도 비는 멈추지 않았다.",
+      "background": "rainy-mountain-after-battle",
+      "sfx": "thunder",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s020",
+      "speaker": "",
+      "text": "죽은 자들의 얼굴 위로 다른 얼굴들이 겹쳐졌다.",
+      "background": "rainy-mountain-road"
+    },
+    {
+      "id": "c01-s021",
+      "speaker": "그리운 목소리",
+      "text": "시기와 질투를 조심하라.",
+      "effect": "memory",
+      "background": "rainy-mountain-road",
+      "sfx": "memory-drone"
+    },
+    {
+      "id": "c01-s022",
+      "speaker": "그리운 목소리",
+      "text": "먼저 맞서지 마라.",
+      "background": "rainy-mountain-road"
+    },
+    {
+      "id": "c01-s023",
+      "speaker": "그리운 목소리",
+      "text": "선배를 존중하라.",
+      "background": "rainy-mountain-road"
+    },
+    {
+      "id": "c01-s024",
+      "speaker": "",
+      "text": "그는 검을 거두고 산길을 떠났다.",
+      "background": "rainy-mountain-road"
+    },
+    {
+      "id": "c01-s025",
+      "speaker": "",
+      "text": "훗날 살아남은 자는 말했다. 검은 장포의 검객은 사람을 죽이는 동안 웃고 있었다고.",
+      "background": "rainy-mountain-road"
+    },
+    {
+      "id": "c01-s026",
+      "speaker": "",
+      "text": "그 증언에서 단 하나만은 틀렸다.",
+      "background": "rainy-mountain-road"
+    },
+    {
+      "id": "c01-s027",
+      "speaker": "",
+      "text": "그는 웃고 있지 않았다.",
+      "effect": "fade-out",
+      "end": true,
+      "background": "rainy-mountain-road"
+    }
+  ],
+  "engineVersion": "0.6.1"
+}

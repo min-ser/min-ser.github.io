@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Profile | Kim Minseo</title>
+<meta name="description" content="Enterprise AI Platform Architect 김민서 상세 프로필">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07111f;--surface:#10213a;--surface2:#0b1728;--text:#f5f9ff;--muted:#93a9c1;--p:#2b9cff;--p2:#75d4ff;--green:#59dfa1;--border:rgba(255,255,255,.085)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,"Noto Sans KR",sans-serif;color:var(--text);background:radial-gradient(circle at 88% 3%,rgba(43,156,255,.15),transparent 24%),var(--bg);line-height:1.7}
+.container{width:min(1200px,calc(100% - 40px));margin:auto}.header{position:sticky;top:0;z-index:100;background:rgba(7,17,31,.86);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}.header-inner{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{text-decoration:none;font-weight:900;letter-spacing:.08em}.nav{display:flex;gap:20px}.nav a{text-decoration:none;color:var(--muted);font-size:13px;font-weight:700}.nav a:hover{color:#fff}
+.hero{position:relative;overflow:hidden;padding:110px 0 95px;border-bottom:1px solid var(--border)}.hero:before{content:"";position:absolute;inset:0;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent)}.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}.eyebrow{color:var(--p2);font-size:12px;font-weight:900;letter-spacing:.13em}.hero h1{font-size:clamp(54px,7vw,92px);line-height:.99;letter-spacing:-.072em;margin:18px 0}.gradient{background:linear-gradient(135deg,#fff,#7edaff,#2b9cff);-webkit-background-clip:text;color:transparent}.lead{color:#e0ebf7;font-size:20px}.hero-copy{color:var(--muted)}.hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:27px}.btn{display:inline-flex;padding:11px 16px;border-radius:11px;text-decoration:none;font-weight:800;font-size:13px}.btn-primary{color:#04111c;background:linear-gradient(135deg,var(--p),var(--p2))}.btn-secondary{border:1px solid var(--border);background:rgba(255,255,255,.03)}
+.profile-card{padding:28px;border:1px solid var(--border);border-radius:24px;background:linear-gradient(180deg,#10213a,#0b1728);box-shadow:0 28px 80px rgba(0,0,0,.32)}.profile-head{display:flex;gap:18px;align-items:center}.monogram{display:grid;place-items:center;width:90px;height:90px;border-radius:25px;color:#04111c;background:linear-gradient(135deg,var(--p),var(--p2));font-size:30px;font-weight:900}.profile-head h2{margin:0;font-size:30px}.profile-head p{margin:3px 0;color:var(--muted)}.status{display:flex;align-items:center;gap:8px;margin-top:22px;padding:13px;border:1px solid var(--border);border-radius:12px;color:var(--muted);font-size:12px}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 16px rgba(89,223,161,.8)}.profile-stats{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:18px}.profile-stats div{padding:16px;border:1px solid var(--border);border-radius:13px;background:rgba(255,255,255,.02)}.profile-stats strong{display:block;color:var(--p2);font-size:24px}.profile-stats span{color:var(--muted);font-size:11px}
+.metrics{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:-29px}.metric{padding:22px;border:1px solid var(--border);border-radius:17px;background:linear-gradient(180deg,#10213a,#0b1728);box-shadow:0 24px 70px rgba(0,0,0,.28)}.metric strong{display:block;color:var(--p2);font-size:25px}.metric span{color:var(--muted);font-size:12px}
+.section{padding:90px 0}.section.alt{background:rgba(255,255,255,.016);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.section-title{margin-bottom:34px}.section-title h2{font-size:clamp(38px,5vw,58px);line-height:1.08;letter-spacing:-.055em;margin:8px 0}.section-title p{max-width:830px;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}.about-main p{color:var(--muted);font-size:16px}.about-main .big{color:#fff;font-size:24px}.identity-box{padding:25px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(180deg,#10213a,#0b1728)}.identity-box h3{font-size:25px}.identity-box ul{padding-left:19px;color:var(--muted)}
+.strength-grid,.project-grid,.principle-grid,.asset-grid,.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.strength,.project-card,.principle,.asset,.skill-group,.edu{padding:25px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(180deg,#10213a,#0b1728)}.num,.client,.asset>span{color:var(--p2);font-size:11px;font-weight:900;letter-spacing:.1em}.strength h3,.project-card h3,.principle h3,.asset h3,.skill-group h3{font-size:22px}.strength p,.project-card p,.principle p,.asset p{color:var(--muted);font-size:13px}.project-card strong{display:block;color:#dceaff;font-size:12px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.chips span{padding:6px 9px;border:1px solid rgba(117,212,255,.16);border-radius:999px;color:#cceeff;background:rgba(43,156,255,.055);font-size:10px;font-weight:700}
+.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.journey-step{padding:25px;border-top:3px solid var(--p);background:rgba(255,255,255,.025)}.journey-step span{color:var(--p2);font-size:12px;font-weight:900}.journey-step h3{min-height:56px}.journey-step p{color:var(--muted);font-size:13px}
+.philosophy{display:grid;grid-template-columns:.75fr 1.25fr;gap:55px}.quote{font-size:clamp(34px,5vw,58px);line-height:1.12;letter-spacing:-.055em}.quote span{color:var(--p2)}.principle-grid{grid-template-columns:1fr 1fr}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.edu>span{color:var(--p2);font-size:11px;font-weight:900}.edu h3{font-size:21px}.edu strong{display:block}.edu p{color:var(--muted);font-size:13px}.credential-list{display:grid;gap:11px}.credential{display:grid;grid-template-columns:100px 1fr;gap:20px;padding:18px;border:1px solid var(--border);border-radius:13px;background:rgba(255,255,255,.02)}.credential>span{color:var(--p2);font-size:11px;font-weight:900}.credential h3{margin:0;font-size:17px}.credential p{margin:4px 0 0;color:var(--muted);font-size:12px}
+.goal{padding:100px 0;text-align:center}.goal h2{font-size:clamp(48px,7vw,80px);line-height:1;letter-spacing:-.065em;margin:12px 0}.goal p{max-width:780px;margin:auto;color:var(--muted)}.footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted);font-size:12px}.reveal{opacity:0;transform:translateY(18px)}.reveal.show{opacity:1;transform:none;transition:.65s ease}
+@media(max-width:1000px){.hero-grid,.about-grid,.philosophy{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.strength-grid,.project-grid,.asset-grid,.skill-grid,.edu-grid{grid-template-columns:repeat(2,1fr)}.journey{grid-template-columns:repeat(2,1fr)}}@media(max-width:680px){.nav{display:none}.metrics,.strength-grid,.project-grid,.principle-grid,.asset-grid,.skill-grid,.journey,.edu-grid{grid-template-columns:1fr}.profile-stats{grid-template-columns:1fr}.credential{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><div class="container header-inner"><a class="brand" href="../index.html">KIM MINSEO</a><nav class="nav"><a href="../index.html">Home</a><a href="./index.html">Profile</a><a href="./career.html">Career</a><a href="./projects.html">Projects</a><a href="./architecture.html">Architecture</a><a href="./skills.html">Skills</a><a href="./contact.html">Contact</a></nav></div></header>
+<main>
+<section class="hero"><div class="container hero-grid"><div class="reveal"><span class="eyebrow">CAREER-FOCUSED PROFILE · 2017—PRESENT</span><h1>운영에서 시작해<br><span class="gradient">Enterprise AI Platform Architect로.</span></h1><p class="lead">방송 관제, Mission Critical PMS, Enterprise Backend, Azure Infrastructure, AKS, DevOps, 생성형 AI, Microsoft Fabric을 거쳐 현재는 Enterprise AI Platform을 설계하고 운영합니다.</p><p class="hero-copy">현재 메가존클라우드에서 Manager, Platform Architect, Azure Part PL, Azure SME 역할을 수행하며 보안·네트워크·인증·배포·관측성을 포함한 운영 가능한 AI & Data Platform을 구축합니다.</p><div class="hero-actions"><a class="btn btn-primary" href="./projects.html">프로젝트 전체 보기</a><a class="btn btn-secondary" href="./career.html">경력 상세 보기</a><a class="btn btn-secondary" href="./contact.html">Contact</a></div></div><aside class="profile-card reveal"><div class="profile-head"><div class="monogram">KM</div><div><h2>김민서</h2><p>MegazoneCloud · Manager</p><p>Azure AI Platform Engineer</p></div></div><div class="status"><span class="dot"></span>Enterprise AI · Platform Engineering · DevOps/SRE</div><div class="profile-stats"><div><strong>6+</strong><span>Years in IT</span></div><div><strong>100+</strong><span>Azure/Fabric Issues</span></div><div><strong>12+</strong><span>Major Projects & Assets</span></div><div><strong>4.045</strong><span>AI Major GPA</span></div></div></aside></div></section>
+<div class="container metrics"><div class="metric"><strong>6+ Years</strong><span>Backend · Cloud · AI Platform 실무</span></div><div class="metric"><strong>12+</strong><span>주요 프로젝트 및 기술 자산</span></div><div class="metric"><strong>100+</strong><span>Azure / Fabric 기술 이슈 해결</span></div><div class="metric"><strong>PA · PL · SME</strong><span>현재 수행 역할</span></div><div class="metric"><strong>30m → 1m30s</strong><span>운영 Query 성능 개선</span></div></div>
+<section class="section"><div class="container about-grid"><div class="section-title reveal"><span class="eyebrow">PROFESSIONAL SUMMARY</span><h2>경력으로 증명하는<br>Hands-on Architect</h2></div><div class="about-main reveal"><p class="big">저는 개발, 운영, Cloud, AI Platform을 분리된 영역으로 보지 않는 Hands-on Architect입니다.</p><p>PMS 운영 시절부터 Application, OS, Web Server, Database, Container, CI/CD, 장애 대응을 함께 다뤘습니다. 이 경험 덕분에 현재도 AI 서비스를 단순한 모델 호출이 아니라 운영 가능한 Platform으로 바라봅니다.</p><p>Azure AI Foundry와 Microsoft Fabric 프로젝트에서는 Private Endpoint, DNS, NSG, RBAC, Workload Identity, APIM, AKS, Datadog, GitLab, ArgoCD를 결합해 Enterprise 보안 요구를 충족하고, 개발팀이 반복해서 사용할 수 있는 Sample Code와 Standard를 만듭니다.</p><div class="identity-box"><h3>Professional Identity</h3><ul><li>Backend를 이해하는 Platform Architect</li><li>운영 장애를 직접 해결해 본 Cloud Engineer</li><li>보안과 개발 생산성을 함께 고려하는 Azure AI Engineer</li><li>문제를 코드와 문서로 재사용 가능하게 만드는 기록형 엔지니어</li><li>개발자 지향의 DevOps/SRE·Azure 전문가</li></ul></div></div></div></section>
+
+<section class="section alt"><div class="container">
+  <div class="section-title reveal">
+    <span class="eyebrow">CURRENT RESPONSIBILITIES</span>
+    <h2>현재 수행 역할</h2>
+    <p>직함을 나열하기보다 실제로 책임지고 있는 기술 범위와 의사결정 역할을 중심으로 정리했습니다.</p>
+  </div>
+  <div class="strength-grid">
+    <article class="strength reveal"><span class="num">PA</span><h3>Platform Architect</h3><p>Azure AI Foundry, Microsoft Fabric, AKS, APIM을 운영 가능한 Enterprise AI/Data Platform으로 설계합니다.</p></article>
+    <article class="strength reveal"><span class="num">PL</span><h3>Azure Part Leader</h3><p>Azure 영역의 일정, 기술 범위, 이슈 우선순위와 고객·개발팀·보안팀 사이의 조율을 담당합니다.</p></article>
+    <article class="strength reveal"><span class="num">SME</span><h3>Azure Subject Matter Expert</h3><p>Identity, Networking, AKS, APIM, Fabric 등 고난이도 이슈의 원인을 분석하고 해결 방향을 제시합니다.</p></article>
+    <article class="strength reveal"><span class="num">DEV</span><h3>Hands-on Engineer</h3><p>FastAPI, Python, Java, Pipeline, CronJob, Kubernetes Manifest를 직접 작성해 아키텍처를 검증합니다.</p></article>
+    <article class="strength reveal"><span class="num">OPS</span><h3>Production Operations</h3><p>배포 이후의 장애 대응, 관측성, 비용, 보안, 변경 가능성까지 포함해 운영 기준을 수립합니다.</p></article>
+    <article class="strength reveal"><span class="num">DOC</span><h3>Engineering Documentation</h3><p>Issue, Root Cause, Resolution, Architecture Decision, Sample Code와 Runbook을 재사용 가능한 자산으로 남깁니다.</p></article>
+  </div>
+</div></section>
+<section class="section alt"><div class="container"><div class="section-title reveal"><span class="eyebrow">CORE STRENGTHS</span><h2>핵심 역량</h2></div><div class="strength-grid"><article class="strength reveal"><span class="num">01</span><h3>Enterprise AI Architecture</h3><p>Azure AI Foundry, Azure OpenAI, AI Search, Document Intelligence와 AKS·APIM·Microsoft Fabric을 하나의 운영 플랫폼으로 연결합니다.</p></article>
+<article class="strength reveal"><span class="num">02</span><h3>Zero Trust &amp; Identity</h3><p>Private Endpoint, Private DNS, NSG, RBAC, Managed Identity, Workload Identity를 기본값으로 설계합니다.</p></article>
+<article class="strength reveal"><span class="num">03</span><h3>Platform Engineering</h3><p>CI/CD, GitOps, 검증 자동화, Naming Rule, Runbook, Observability를 통해 반복 가능한 운영 체계를 만듭니다.</p></article>
+<article class="strength reveal"><span class="num">04</span><h3>Backend Development</h3><p>Java/Spring과 Python/FastAPI를 이용해 아키텍처를 실제 코드와 API로 검증합니다.</p></article>
+<article class="strength reveal"><span class="num">05</span><h3>Microsoft Fabric</h3><p>Warehouse, Lakehouse, Pipeline, Notebook, Eventstream, Capacity, Private Link, CI/CD를 다룹니다.</p></article>
+<article class="strength reveal"><span class="num">06</span><h3>Operations &amp; Troubleshooting</h3><p>DNS, TCP, TLS, Identity, Database, Kubernetes, Gateway, 방화벽 이슈를 계층별로 분리해 해결합니다.</p></article></div></div></section>
+<section class="section"><div class="container"><div class="section-title reveal"><span class="eyebrow">CAREER EVOLUTION</span><h2>역할의 확장 과정</h2></div><div class="journey"><article class="journey-step reveal"><span>2017 — 2018</span><h3>Operations Foundation</h3><p>SK브로드밴드 방송 관제 환경에서 Main/Backup 송출과 장비 상태를 모니터링하며 Failover와 실시간 장애 대응의 기본기를 익혔습니다.</p></article>
+<article class="journey-step reveal"><span>2019 — 2020</span><h3>Production Platform Engineer</h3><p>호텔 PMS의 Java/Spring 개발뿐 아니라 Linux, Nginx, Tomcat, Docker, Jenkins, CUBRID/MariaDB 운영과 장애 대응을 End-to-End로 수행했습니다.</p></article>
+<article class="journey-step reveal"><span>2021 — 2022</span><h3>Enterprise Backend Engineer</h3><p>현대백화점 온라인 식품몰에서 정기구독, 자동결제, 주문, 배송, 마이페이지, 관리자 기능을 개발했습니다.</p></article>
+<article class="journey-step reveal"><span>2022 — Present</span><h3>Azure AI Platform Architect</h3><p>메가존클라우드에서 Azure Infrastructure, AKS, DevOps, 생성형 AI, Microsoft Fabric, Zero Trust 기반 엔터프라이즈 플랫폼을 설계하고 있습니다.</p></article></div></div></section>
+<section class="section alt"><div class="container"><div class="section-title reveal"><span class="eyebrow">SELECTED EXPERIENCE</span><h2>대표 경험</h2><p>대표 프로젝트만 요약했으며 전체 구현 내용은 Projects 페이지에 시간순으로 정리했습니다.</p></div><div class="project-grid"><article class="project-card reveal">
+        <span class="client">아모레퍼시픽</span>
+        <h3>Enterprise Azure AI &amp; Data Platform</h3>
+        <strong>Platform Architect · Azure Part PL · Azure SME</strong>
+        <p>Azure AI Foundry, Microsoft Fabric, AKS, APIM, Datadog, Snowflake, AWS를 연결한 Enterprise AI/Data Platform을 설계하고 운영합니다.</p>
+        <div class="chips"><span>Workload Identity 표준화</span><span>Private Endpoint 기반 Zero Trust</span><span>Fabric CI/CD</span><span>Fabric Dynamic Autoscaling</span><span>FastAPI Validation Gate</span><span>Multi-Cloud Data Integration</span></div>
+    </article>
+<article class="project-card reveal">
+        <span class="client">삼성증권</span>
+        <h3>해외 투자정보 번역·요약 AI 서비스</h3>
+        <strong>Application Architect · AI &amp; Infra Engineer</strong>
+        <p>Azure OpenAI 기반 번역·요약 서비스를 Private Endpoint, APIM Premium, Managed Identity, Prompt Shield 중심으로 구축했습니다.</p>
+        <div class="chips"><span>Azure OpenAI</span><span>APIM Premium</span><span>Managed Identity</span><span>Prompt Shield</span><span>Content Safety</span><span>Azure Monitor</span></div>
+    </article>
+<article class="project-card reveal">
+        <span class="client">GenAI360</span>
+        <h3>생성형 AI RAG 플랫폼</h3>
+        <strong>Application Architect</strong>
+        <p>LangChain, FastAPI, Azure OpenAI, Azure AI Search를 활용해 문서 수집부터 검색·응답까지 연결되는 재사용 가능한 RAG 구조를 설계했습니다.</p>
+        <div class="chips"><span>Chunking</span><span>Embedding</span><span>Vector Search</span><span>Prompt Pipeline</span><span>FastAPI</span><span>Reusable Module</span></div>
+    </article>
+<article class="project-card reveal">
+        <span class="client">KB헬스케어</span>
+        <h3>B2B / B2C Healthcare Platform</h3>
+        <strong>Backend Engineer · Infra Engineer</strong>
+        <p>AKS, MySQL, PostgreSQL 환경에서 DB 이중화, Failover, JPA Replica, Kubernetes Proxy 장애 분석과 성능 검증을 수행했습니다.</p>
+        <div class="chips"><span>DB Failover</span><span>JPA Replica</span><span>AKS Networking</span><span>Spring Boot Load Test</span><span>Technical Guide</span><span>Partner Award</span></div>
+    </article>
+<article class="project-card reveal">
+        <span class="client">가제트코리아</span>
+        <h3>Azure Subscription Migration</h3>
+        <strong>Azure Solution Architect</strong>
+        <p>Azure Sponsorship 종료에 따른 CSP 전환을 위해 전체 리소스의 종속성, 이전 가능 여부, Risk와 Rollback 전략을 분석했습니다.</p>
+        <div class="chips"><span>Resource Assessment</span><span>Dependency Assessment</span><span>Migration Plan</span><span>Rollback</span><span>Azure SQL</span><span>Cosmos DB</span></div>
+    </article>
+<article class="project-card reveal">
+        <span class="client">코디더매니저</span>
+        <h3>Hotel PMS Platform</h3>
+        <strong>Backend · Production Platform Engineer</strong>
+        <p>호텔 PMS의 Application, OS, Web Server, Database, Container, CI/CD, 장애 대응을 전 영역에서 담당했습니다.</p>
+        <div class="chips"><span>Java/Spring</span><span>Linux</span><span>Nginx/Tomcat</span><span>Docker</span><span>Jenkins</span><span>CUBRID→MariaDB</span></div>
+    </article></div></div></section>
+<section class="section"><div class="container philosophy"><div class="reveal"><span class="eyebrow">ENGINEERING PHILOSOPHY</span><p class="quote">“작동하는 시스템보다<br><span>운영 가능한 시스템</span>을 만든다.”</p></div><div class="principle-grid"><article class="principle reveal"><h3>Identity First</h3><p>Access Key를 편리한 기본값으로 두지 않습니다. Managed Identity와 Workload Identity를 먼저 검토합니다.</p></article>
+<article class="principle reveal"><h3>Private by Default</h3><p>공용 네트워크 차단, Private Endpoint, DNS, NSG, 방화벽을 하나의 통신 경로로 설계합니다.</p></article>
+<article class="principle reveal"><h3>Build to Operate</h3><p>구축 완료가 아니라 배포 이후의 모니터링, 변경, 장애 대응, 비용까지 포함해 설계합니다.</p></article>
+<article class="principle reveal"><h3>Document the Decision</h3><p>무엇을 했는지보다 왜 그렇게 결정했는지 Architecture Decision과 Runbook으로 남깁니다.</p></article>
+<article class="principle reveal"><h3>Validate with Code</h3><p>설계는 FastAPI, Python, Java, Pipeline, CronJob 같은 실행 가능한 코드로 검증합니다.</p></article>
+<article class="principle reveal"><h3>Standardize Repetition</h3><p>반복되는 이슈는 Naming Rule, Sample Code, CI/CD Template, Validation Tool로 전환합니다.</p></article></div></div></section>
+<section class="section alt"><div class="container"><div class="section-title reveal"><span class="eyebrow">ENGINEERING ASSETS</span><h2>프로젝트에서 남긴 기술 자산</h2></div><div class="asset-grid"><article class="asset reveal"><span>ENGINEERING ASSET</span><h3>Validation Gate</h3><p>AKS 환경에서 DNS, TCP, TLS, Identity, Storage, Redis, AI Search, AI Foundry 연결을 단계별로 진단하는 FastAPI 도구</p></article>
+<article class="asset reveal"><span>ENGINEERING ASSET</span><h3>Fabric Autoscale</h3><p>Eventstream → Event Hub → AKS CronJob 구조로 Fabric Capacity 사용률을 수집하고 정책에 따라 SKU를 자동 조정</p></article>
+<article class="asset reveal"><span>ENGINEERING ASSET</span><h3>Fabric CI/CD</h3><p>Service Principal, Folder Mirror, Move API, Notebook/Pipeline 배포 규칙을 이용한 DEV·STG·PRD 자동화</p></article>
+<article class="asset reveal"><span>ENGINEERING ASSET</span><h3>Workload Identity Samples</h3><p>AI Search, Storage, Redis에 Key 없이 접근하는 AKS Workload Identity 샘플과 운영 가이드</p></article>
+<article class="asset reveal"><span>ENGINEERING ASSET</span><h3>Azure Naming Rule</h3><p>환경·리소스 유형·서비스 소유권을 일관되게 표현하는 Azure 리소스 네이밍 표준</p></article>
+<article class="asset reveal"><span>ENGINEERING ASSET</span><h3>Engineering Knowledge Base</h3><p>Issue, Root Cause, Resolution, Architecture Decision, Sample Code, Runbook 중심의 기술 기록 체계</p></article></div></div></section>
+<section class="section"><div class="container"><div class="section-title reveal"><span class="eyebrow">TECHNOLOGY</span><h2>Technology Landscape</h2></div><div class="skill-grid"><article class="skill-group reveal"><h3>Azure AI</h3><div class="chips"><span>Azure AI Foundry</span><span>Azure OpenAI</span><span>Azure AI Search</span><span>Document Intelligence</span><span>Content Safety</span><span>Prompt Shield</span><span>RAG</span></div></article>
+<article class="skill-group reveal"><h3>Data Platform</h3><div class="chips"><span>Microsoft Fabric</span><span>Warehouse</span><span>Lakehouse</span><span>Pipeline</span><span>Notebook</span><span>Eventstream</span><span>Semantic Model</span><span>Snowflake</span></div></article>
+<article class="skill-group reveal"><h3>Cloud Native</h3><div class="chips"><span>AKS</span><span>Kubernetes</span><span>APIM Premium</span><span>Private Endpoint</span><span>Private DNS</span><span>NSG</span><span>Workload Identity</span><span>Managed Identity</span></div></article>
+<article class="skill-group reveal"><h3>DevOps &amp; SRE</h3><div class="chips"><span>GitLab CI/CD</span><span>GitHub Actions</span><span>Jenkins</span><span>ArgoCD</span><span>Docker</span><span>Datadog</span><span>Azure Monitor</span><span>CronJob</span></div></article>
+<article class="skill-group reveal"><h3>Development</h3><div class="chips"><span>Python</span><span>FastAPI</span><span>Java</span><span>Spring Boot</span><span>JPA</span><span>MyBatis</span><span>REST API</span><span>SQL</span></div></article>
+<article class="skill-group reveal"><h3>Multi-Cloud</h3><div class="chips"><span>Azure</span><span>AWS S3</span><span>AWS RDS</span><span>Snowflake</span><span>OPDG</span><span>Azure Blob</span><span>Event Hub</span><span>WebSocket</span></div></article></div></div></section>
+<section class="section alt"><div class="container"><div class="section-title reveal"><span class="eyebrow">EDUCATION</span><h2>학력과 성장</h2></div><div class="edu-grid"><article class="edu reveal"><span>한국방송통신대학교 프라임칼리지</span><h3>AI 전공 · 2026.02 졸업 예정</h3><strong>GPA 4.045 / 4.5</strong><p>실무에서 다뤄온 생성형 AI, 데이터, 클라우드 경험을 학문적으로 확장하고 체계화했습니다.</p></article>
+<article class="edu reveal"><span>울산대학교</span><h3>경찰학과 · 2014.02 졸업</h3><strong></strong><p>제도와 조직, 문제 분석, 논리적 사고의 기반을 형성했습니다.</p></article>
+<article class="edu reveal"><span>경주대학교</span><h3>정보통신공학 전공 후 자퇴</h3><strong>GPA 3.54 / 4.5</strong><p>정보통신과 컴퓨팅의 기초를 학습했습니다.</p></article></div></div></section>
+<section class="section"><div class="container"><div class="section-title reveal"><span class="eyebrow">CERTIFICATIONS & RECOGNITION</span><h2>자격 및 수상</h2></div><div class="credential-list"><article class="credential reveal"><span>2024.11</span><div><h3>AZ-140</h3><p>Microsoft Azure Virtual Desktop Specialty</p></div></article>
+<article class="credential reveal"><span>2021.06</span><div><h3>정보처리기사</h3><p>한국산업인력공단</p></div></article>
+<article class="credential reveal"><span>2024.02</span><div><h3>Microsoft Partner Award Project</h3><p>KB헬스케어 프로젝트 참여</p></div></article>
+<article class="credential reveal"><span>2021.01</span><div><h3>대상</h3><p>딥러닝 기반 주가 예측 서비스</p></div></article>
+<article class="credential reveal"><span>2020.12</span><div><h3>우수상</h3><p>웹 기반 코로나 정보 공유 챗봇 서비스</p></div></article>
+<article class="credential reveal"><span>2021.01</span><div><h3>공로상</h3><p>대한상공회의소 서울기술교육센터</p></div></article></div></div></section>
+<section class="goal"><div class="container reveal"><span class="eyebrow">CAREER DIRECTION</span><h2>개발자 지향의<br><span class="gradient">Enterprise Platform Architect.</span></h2><p>앞으로도 Azure AI, Microsoft Fabric, AKS, DevOps/SRE 영역에서 개발자와 운영팀이 신뢰할 수 있는 플랫폼을 설계하고 직접 구현하는 엔지니어로 성장하고자 합니다.</p><div class="hero-actions" style="justify-content:center"><a class="btn btn-primary" href="./contact.html">Contact</a><a class="btn btn-secondary" href="./projects.html">Projects</a></div></div></section>
+</main>
+<footer class="footer"><div class="container">© 2026 Kim Minseo Portfolio · Backend · Azure · Enterprise AI · Microsoft Fabric</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+ const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');o.unobserve(e.target)}}),{threshold:.07});
+ document.querySelectorAll('.reveal').forEach(x=>o.observe(x));
+});
+</script>
+</body></html>

@@ -1,0 +1,4 @@
+[INFO] READY OPENAI_CHAT_VALIDATION_READY demoMode=true
+[PASS] AUTHENTICATION WORKLOAD_IDENTITY demo credential accepted
+[INFO] REQUEST Chat Completion request created
+[PASS] RESPONSE finish_reason=stop

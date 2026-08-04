@@ -1,0 +1,4 @@
+[INFO] REQUEST HYBRID query created
+[PASS] AUTHENTICATION WORKLOAD_IDENTITY demo credential accepted
+[INFO] VECTOR Demo query vector generated
+[PASS] RESULT 5 documents returned

@@ -1,0 +1,4 @@
+[INFO] REQUEST Teams Adaptive Card delivery started
+[DEBUG] HEADERS Content-Type=application/json
+[PASS] TLS TLS 1.2 demo handshake completed
+[PASS] RESPONSE 202 ACCEPTED

@@ -1,0 +1,7 @@
+{
+  "demoMode": true,
+  "operation": "workloadIdentityAuthentication",
+  "host": "kms-prd-redis.redis.cache.windows.net",
+  "port": 6380,
+  "clientId": "00000000-0000-4000-8000-000000000005"
+}

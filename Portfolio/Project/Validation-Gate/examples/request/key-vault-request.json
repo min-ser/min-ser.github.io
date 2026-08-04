@@ -1,0 +1,7 @@
+{
+  "vaultUrl": "https://kms-prd-kv.vault.azure.net",
+  "authentication": "WORKLOAD_IDENTITY",
+  "operation": "GET_SECRET",
+  "secretName": "kms-demo-secret",
+  "demoMode": true
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Cheonryugwan Archive",
+  "short_name": "Cheonryugwan",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f0e0c",
+  "theme_color": "#11100e",
+  "description": "천류관 세계관 아카이브와 인터랙티브 노벨 프로젝트",
+  "icons": []
+}

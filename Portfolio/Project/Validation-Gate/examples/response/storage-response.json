@@ -1,0 +1,16 @@
+{
+  "mode": "demo",
+  "endpoint": "https://kmsprdsa01.blob.core.windows.net/validation-demo",
+  "summary": {
+    "overall": "PASS",
+    "naming": "PASS",
+    "dns": "PASS",
+    "tcp": "PASS",
+    "tls": "PASS",
+    "auth": "PASS",
+    "api": "PASS",
+    "resolvedIp": "10.20.30.41",
+    "statusCode": 200
+  },
+  "securityNotice": "All identifiers and credentials are non-functional kms demo values."
+}

@@ -1,0 +1,104 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>서하린 | 캐릭터</title><link rel="stylesheet" href="../../../assets/css/common.css?v=0.8.4"><style>
+.character-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.character-card{display:block;text-decoration:none;color:inherit;border:1px solid rgba(211,180,119,.25);border-radius:12px;overflow:hidden;background:#15171b;transition:.2s transform,.2s border-color}
+.character-card:hover{transform:translateY(-4px);border-color:#d3b477}
+.character-card img{width:100%;height:420px;object-fit:cover;object-position:top;background:#111}
+.character-card .body{padding:16px}.character-card h2{margin:0 0 6px}.character-card p{color:#b9ad9d;line-height:1.6}
+.badge{display:inline-block;padding:4px 8px;border:1px solid rgba(211,180,119,.35);border-radius:999px;color:#d3b477;font-size:12px}
+.asset-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.asset-card{border:1px solid rgba(211,180,119,.2);border-radius:10px;overflow:hidden;background:#15171b}
+.asset-card button{display:block;width:100%;padding:0;border:0;background:none;cursor:pointer}
+.asset-card img{display:block;width:100%;height:420px;object-fit:contain;background:#101216}
+.asset-card .meta{padding:12px}.asset-card h3{margin:0 0 6px;font-size:16px}.asset-card small{display:block;color:#aaa;margin-top:6px}
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.filter-bar button{padding:8px 12px;border:1px solid #5a4d3c;background:#17181b;color:#eee;border-radius:999px;cursor:pointer}.filter-bar button.active{background:#d3b477;color:#111}
+.lightbox{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.88);padding:24px}.lightbox.open{display:flex}.lightbox img{max-width:92vw;max-height:88vh;object-fit:contain}.lightbox button{position:absolute;top:18px;right:18px;padding:10px 14px}
+@media(max-width:1200px){.character-grid{grid-template-columns:repeat(3,1fr)}.asset-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){.character-grid,.asset-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.character-grid,.asset-grid{grid-template-columns:1fr}.character-card img,.asset-card img{height:auto;max-height:620px}}
+</style></head>
+<body><header class="site-header"><a class="brand" href="../"><span class="brand-en">CHARACTERS</span><span class="brand-ko">서하린</span></a>
+<nav class="site-nav"><a href="../">캐릭터 목록</a><a href="../../../index.html">홈</a></nav></header>
+<main><section class="page-hero"><p class="eyebrow">천류관</p><h1>서하린</h1><p>천류관 소속의 중립 계열 여검사. 흑장발과 오른쪽 눈 밑 작은 점이 특징.</p>
+<p><strong>v0.8.4:</strong> 원본·자동 처리본은 보존하고, 가위/점선 흔적을 제거한 표정 8종과 투명화한 전투 9종을 추가했습니다.</p></section>
+<section class="content-wrap"><div class="filter-bar"><button class="active" data-filter="all">전체</button><button data-filter="최종 전투">최종 전투</button><button data-filter="최종 표정">최종 표정</button><button data-filter="기본">기본</button><button data-filter="레퍼런스">레퍼런스</button><button data-filter="전투">전투</button><button data-filter="표정">표정</button></div><div class="asset-grid"><article class="asset-card" data-category="기본">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-01.webp" data-title="기본 스탠딩"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-01.webp" alt="기본 스탠딩"></button>
+<div class="meta"><h3>기본 스탠딩</h3><span class="badge">기본</span><small>사용 후보</small></div></article><article class="asset-card" data-category="전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-02.webp" data-title="전투 대기"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-02.webp" alt="전투 대기"></button>
+<div class="meta"><h3>전투 대기</h3><span class="badge">전투</span><small>사용 후보</small></div></article><article class="asset-card" data-category="전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-03.webp" data-title="검 뽑기"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-03.webp" alt="검 뽑기"></button>
+<div class="meta"><h3>검 뽑기</h3><span class="badge">전투</span><small>사용 후보</small></div></article><article class="asset-card" data-category="전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-04.webp" data-title="방어"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-04.webp" alt="방어"></button>
+<div class="meta"><h3>방어</h3><span class="badge">전투</span><small>사용 후보</small></div></article><article class="asset-card" data-category="전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-05.webp" data-title="공격 준비"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-05.webp" alt="공격 준비"></button>
+<div class="meta"><h3>공격 준비</h3><span class="badge">전투</span><small>사용 후보</small></div></article><article class="asset-card" data-category="전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-06.webp" data-title="좌베기"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-06.webp" alt="좌베기"></button>
+<div class="meta"><h3>좌베기</h3><span class="badge">전투</span><small>사용 후보</small></div></article><article class="asset-card" data-category="전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-07.webp" data-title="우베기"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-07.webp" alt="우베기"></button>
+<div class="meta"><h3>우베기</h3><span class="badge">전투</span><small>사용 후보</small></div></article><article class="asset-card" data-category="전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-08.webp" data-title="피격"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-08.webp" alt="피격"></button>
+<div class="meta"><h3>피격</h3><span class="badge">전투</span><small>사용 후보</small></div></article><article class="asset-card" data-category="전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-09.webp" data-title="피격 직후"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-09.webp" alt="피격 직후"></button>
+<div class="meta"><h3>피격 직후</h3><span class="badge">전투</span><small>사용 후보</small></div></article><article class="asset-card" data-category="전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-10.webp" data-title="승리"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-10.webp" alt="승리"></button>
+<div class="meta"><h3>승리</h3><span class="badge">전투</span><small>사용 후보</small></div></article><article class="asset-card" data-category="표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-11.webp" data-title="표정 01"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-11.webp" alt="표정 01"></button>
+<div class="meta"><h3>표정 01</h3><span class="badge">표정</span><small>사용 후보</small></div></article><article class="asset-card" data-category="표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-12.webp" data-title="표정 02"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-12.webp" alt="표정 02"></button>
+<div class="meta"><h3>표정 02</h3><span class="badge">표정</span><small>사용 후보</small></div></article><article class="asset-card" data-category="표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-13.webp" data-title="표정 03"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-13.webp" alt="표정 03"></button>
+<div class="meta"><h3>표정 03</h3><span class="badge">표정</span><small>사용 후보</small></div></article><article class="asset-card" data-category="표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-14.webp" data-title="표정 04"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-14.webp" alt="표정 04"></button>
+<div class="meta"><h3>표정 04</h3><span class="badge">표정</span><small>사용 후보</small></div></article><article class="asset-card" data-category="표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-15.webp" data-title="표정 05"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-15.webp" alt="표정 05"></button>
+<div class="meta"><h3>표정 05</h3><span class="badge">표정</span><small>사용 후보</small></div></article><article class="asset-card" data-category="표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-16.webp" data-title="표정 06"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-16.webp" alt="표정 06"></button>
+<div class="meta"><h3>표정 06</h3><span class="badge">표정</span><small>사용 후보</small></div></article><article class="asset-card" data-category="표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-17.webp" data-title="표정 07"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-17.webp" alt="표정 07"></button>
+<div class="meta"><h3>표정 07</h3><span class="badge">표정</span><small>사용 후보</small></div></article><article class="asset-card" data-category="표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-18.webp" data-title="표정 08"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-18.webp" alt="표정 08"></button>
+<div class="meta"><h3>표정 08</h3><span class="badge">표정</span><small>사용 후보</small></div></article><article class="asset-card" data-category="레퍼런스">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/seo-harin-reference-01.webp" data-title="메인 비주얼 레퍼런스"><img src="../../../assets/images/characters/thumbnails/seo-harin/seo-harin-reference-01.webp" alt="메인 비주얼 레퍼런스"></button>
+<div class="meta"><h3>메인 비주얼 레퍼런스</h3><span class="badge">레퍼런스</span><small>원본 보존</small></div></article><article class="asset-card" data-category="최종 표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-expressions/expression-01.webp" data-title="표정 01 최종 수정본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-expressions/expression-01.webp" alt="표정 01 최종 수정본"></button>
+<div class="meta"><h3>표정 01 최종 수정본</h3><span class="badge">최종 표정</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-expressions/expression-02.webp" data-title="표정 02 최종 수정본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-expressions/expression-02.webp" alt="표정 02 최종 수정본"></button>
+<div class="meta"><h3>표정 02 최종 수정본</h3><span class="badge">최종 표정</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-expressions/expression-03.webp" data-title="표정 03 최종 수정본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-expressions/expression-03.webp" alt="표정 03 최종 수정본"></button>
+<div class="meta"><h3>표정 03 최종 수정본</h3><span class="badge">최종 표정</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-expressions/expression-04.webp" data-title="표정 04 최종 수정본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-expressions/expression-04.webp" alt="표정 04 최종 수정본"></button>
+<div class="meta"><h3>표정 04 최종 수정본</h3><span class="badge">최종 표정</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-expressions/expression-05.webp" data-title="표정 05 최종 수정본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-expressions/expression-05.webp" alt="표정 05 최종 수정본"></button>
+<div class="meta"><h3>표정 05 최종 수정본</h3><span class="badge">최종 표정</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-expressions/expression-06.webp" data-title="표정 06 최종 수정본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-expressions/expression-06.webp" alt="표정 06 최종 수정본"></button>
+<div class="meta"><h3>표정 06 최종 수정본</h3><span class="badge">최종 표정</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-expressions/expression-07.webp" data-title="표정 07 최종 수정본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-expressions/expression-07.webp" alt="표정 07 최종 수정본"></button>
+<div class="meta"><h3>표정 07 최종 수정본</h3><span class="badge">최종 표정</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 표정">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-expressions/expression-08.webp" data-title="표정 08 최종 수정본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-expressions/expression-08.webp" alt="표정 08 최종 수정본"></button>
+<div class="meta"><h3>표정 08 최종 수정본</h3><span class="badge">최종 표정</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-battle/battle-01.webp" data-title="전투 대기 최종 투명본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-battle/battle-01.webp" alt="전투 대기 최종 투명본"></button>
+<div class="meta"><h3>전투 대기 최종 투명본</h3><span class="badge">최종 전투</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-battle/battle-02.webp" data-title="검 뽑기 최종 투명본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-battle/battle-02.webp" alt="검 뽑기 최종 투명본"></button>
+<div class="meta"><h3>검 뽑기 최종 투명본</h3><span class="badge">최종 전투</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-battle/battle-03.webp" data-title="방어 최종 투명본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-battle/battle-03.webp" alt="방어 최종 투명본"></button>
+<div class="meta"><h3>방어 최종 투명본</h3><span class="badge">최종 전투</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-battle/battle-04.webp" data-title="공격 준비 최종 투명본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-battle/battle-04.webp" alt="공격 준비 최종 투명본"></button>
+<div class="meta"><h3>공격 준비 최종 투명본</h3><span class="badge">최종 전투</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-battle/battle-05.webp" data-title="좌베기 최종 투명본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-battle/battle-05.webp" alt="좌베기 최종 투명본"></button>
+<div class="meta"><h3>좌베기 최종 투명본</h3><span class="badge">최종 전투</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-battle/battle-06.webp" data-title="우베기 최종 투명본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-battle/battle-06.webp" alt="우베기 최종 투명본"></button>
+<div class="meta"><h3>우베기 최종 투명본</h3><span class="badge">최종 전투</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-battle/battle-07.webp" data-title="피격 최종 투명본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-battle/battle-07.webp" alt="피격 최종 투명본"></button>
+<div class="meta"><h3>피격 최종 투명본</h3><span class="badge">최종 전투</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-battle/battle-08.webp" data-title="피격 직후 무릎 최종 투명본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-battle/battle-08.webp" alt="피격 직후 무릎 최종 투명본"></button>
+<div class="meta"><h3>피격 직후 무릎 최종 투명본</h3><span class="badge">최종 전투</span><small>사용중</small></div></article><article class="asset-card" data-category="최종 전투">
+<button class="open-lightbox" data-full="../../../assets/images/characters/seo-harin/final-battle/battle-09.webp" data-title="승리 최종 투명본"><img src="../../../assets/images/characters/thumbnails/seo-harin/final-battle/battle-09.webp" alt="승리 최종 투명본"></button>
+<div class="meta"><h3>승리 최종 투명본</h3><span class="badge">최종 전투</span><small>사용중</small></div></article></div></section></main>
+<div class="lightbox" id="lightbox"><button id="close-lightbox">닫기</button><img id="lightbox-image" alt=""></div>
+<script>
+const bs=[...document.querySelectorAll('[data-filter]')],cs=[...document.querySelectorAll('.asset-card')];
+bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;cs.forEach(c=>c.style.display=(f==='all'||c.dataset.category===f)?'block':'none')});
+const lb=document.getElementById('lightbox'),im=document.getElementById('lightbox-image');
+document.querySelectorAll('.open-lightbox').forEach(b=>b.onclick=()=>{im.src=b.dataset.full;im.alt=b.dataset.title;lb.classList.add('open')});
+document.getElementById('close-lightbox').onclick=()=>lb.classList.remove('open');lb.onclick=e=>{if(e.target===lb)lb.classList.remove('open')};
+</script></body></html>

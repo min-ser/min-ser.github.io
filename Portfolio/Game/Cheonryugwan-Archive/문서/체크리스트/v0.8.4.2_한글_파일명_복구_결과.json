@@ -1,0 +1,129 @@
+{
+  "버전": "0.8.4.2",
+  "복구된_경로수": 476,
+  "복구된_텍스트파일수": 7,
+  "경로충돌수": 0,
+  "경로충돌": [],
+  "샘플": [
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/PROJECT_RULES.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/PROJECT_RULES.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/index.html",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/index.html"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/CONTRIBUTING.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/CONTRIBUTING.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/README.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/README.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/COPYRIGHT.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/COPYRIGHT.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/.gitignore",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/.gitignore"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/CHANGELOG.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/CHANGELOG.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/NOTICE",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/NOTICE"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/manifest.webmanifest",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/manifest.webmanifest"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/LICENSE",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/LICENSE"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/SECURITY.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/SECURITY.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/service-worker.js",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/service-worker.js"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/CANON.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/CANON.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/STORY_STANDARD.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/STORY_STANDARD.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/VISUAL_NOVEL_ENGINE.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/VISUAL_NOVEL_ENGINE.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/IMAGE_GUIDE.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/IMAGE_GUIDE.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/PROJECT_STANDARD.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/PROJECT_STANDARD.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/VERSION_POLICY.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/VERSION_POLICY.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/IMAGE_STANDARD.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/IMAGE_STANDARD.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/ZIP_HANDOFF_GUIDE.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/ZIP_HANDOFF_GUIDE.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/DEVELOPMENT_CHECKLIST.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/DEVELOPMENT_CHECKLIST.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/IDEA_WORKFLOW.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/IDEA_WORKFLOW.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/GAME_CONVERSION_GUIDE.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/GAME_CONVERSION_GUIDE.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/ARCHIVE_STORAGE_GUIDE.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/ARCHIVE_STORAGE_GUIDE.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/STORY_ANALYSIS_GUIDE.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/STORY_ANALYSIS_GUIDE.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/GIT_WORKFLOW.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/GIT_WORKFLOW.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/docs/NAMING_RULE.md",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/docs/NAMING_RULE.md"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/.vscode/settings.json",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/.vscode/settings.json"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/.vscode/extensions.json",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/.vscode/extensions.json"
+    },
+    {
+      "변경전": "Cheonryugwan-Archive-v0.8.4.1-Interaction-JS-Fix/tools/.gitkeep",
+      "변경후": "Cheonryugwan-Archive-v0.8.4.2-Unicode-Filename-Fix/tools/.gitkeep"
+    }
+  ]
+}

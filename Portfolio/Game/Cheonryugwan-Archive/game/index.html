@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0c0e">
+  <title>천류관 : 흐름의 기록</title>
+  <link rel="stylesheet" href="./styles.css?v=0.8.4.1">
+</head>
+<body>
+<main id="vn-app">
+  <section id="title-screen" class="screen active">
+    <div class="rain"></div>
+    <div class="title-wrap">
+      <p class="eyebrow">CHEONRYUGWAN ARCHIVE</p>
+      <h1>천류관</h1>
+      <p class="subtitle">흐름의 기록</p>
+      <p class="version">Engine Foundation · v0.8.0</p>
+      <div class="menu">
+        <button id="new-game">새로 시작</button>
+        <button id="continue-game">이어하기</button>
+        <button id="title-load">저장 불러오기</button>
+        <button id="title-settings">설정</button>
+        <a href="../index.html">프로젝트 홈</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="novel-screen" class="screen">
+    <div id="stage" class="stage">
+      <div id="background-layer" class="background-layer"></div>
+      <div id="character-layer" class="character-layer">
+        <img id="character-left" class="character left" alt="">
+        <img id="character-center" class="character center" alt="">
+        <img id="character-right" class="character right" alt="">
+      </div>
+      <div class="rain"></div>
+      <div class="vignette"></div>
+
+      <header class="topbar">
+        <button id="back-title">제목 화면</button>
+        <span id="chapter-title">1화 — 비 내리는 산길</span>
+        <div class="top-actions">
+          <span id="runtime-status" class="runtime-status">리소스 준비 중</span><button id="sound-test-btn">소리 테스트</button><button id="mute-btn">🔊</button>
+          <button id="save-btn">저장</button>
+          <button id="load-btn">불러오기</button>
+          <button id="settings-btn">설정</button>
+          <button id="log-btn">로그</button>
+          <button id="auto-btn">자동</button>
+        </div>
+      </header>
+
+      <div id="choice-panel" class="choice-panel hidden"></div>
+
+      <div id="dialogue-box" class="dialogue-box" role="button" tabindex="0">
+        <div id="speaker" class="speaker"></div>
+        <p id="dialogue"></p>
+        <span class="next-indicator">▼</span>
+      </div>
+    </div>
+  </section>
+
+  <dialog id="log-dialog"><header><h2>대화 기록</h2><button data-close="log-dialog">닫기</button></header><div id="log-list"></div></dialog>
+  <dialog id="save-dialog"><header><h2 id="save-dialog-title">저장</h2><button data-close="save-dialog">닫기</button></header><div id="save-slots" class="save-slots"></div></dialog>
+  <dialog id="settings-dialog">
+    <header><h2>설정</h2><button data-close="settings-dialog">닫기</button></header>
+    <label>텍스트 속도 <input id="text-speed" type="range" min="5" max="60" value="24"></label>
+    <label>음량 <input id="master-volume" type="range" min="0" max="100" value="55"></label>
+    <label><input id="rain-toggle" type="checkbox" checked> 빗소리 사용</label>
+  </dialog>
+</main>
+<script src="./engine/novel-engine.js?v=0.8.4.1"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "secretName": "kms-demo-secret",
+  "secretVersion": "latest",
+  "value": "***MASKED***",
+  "httpStatus": 200,
+  "demoMode": true
+}

@@ -1,0 +1,4 @@
+13:30:00.001 [INFO ] [REQUEST   ] Naming validation request received.
+13:30:00.091 [DEBUG] [INPUT     ] Resource type=openai, environment=prd, region=koreacentral.
+13:30:00.181 [TRACE] [NORMALIZE ] Trimming whitespace and normalizing case.
+13:30:00.271 [PASS ] [RESULT    ] All naming rules passed.

@@ -1,0 +1,10 @@
+{
+  "overall": "PASS",
+  "dns": "PASS",
+  "tcp": "PASS",
+  "tls": "PASS",
+  "privateEndpoint": true,
+  "resolvedIp": "10.10.20.15",
+  "httpStatus": 401,
+  "elapsedMs": 119
+}

@@ -1,0 +1,8 @@
+[INFO] REQUEST         STORED_PROCEDURE started; demoMode=true
+[INFO] CREDENTIAL      WorkloadIdentityCredential chain initialized
+[PASS] TOKEN           Demo access token acquired; HTTP 200
+[PASS] DNS             Warehouse endpoint resolved through Private DNS
+[PASS] TCP             Port 1433 connection simulated
+[PASS] TLS             TLS 1.2 handshake completed
+[DEBUG] SQL            EXEC [dbo].[usp_validation_gate]
+[PASS] RESULT          Stored Procedure returned 1 result row

@@ -1,0 +1,15 @@
+{
+  "environment": "prd",
+  "capacityName": "kms-prd-fabric",
+  "region": "Korea Central",
+  "currentSku": "F32",
+  "minSku": "F16",
+  "maxSku": "F64",
+  "average": 86.4,
+  "peak": 112.8,
+  "upThreshold": 80,
+  "downThreshold": 40,
+  "windowSize": "10 minutes",
+  "elapsed": "5 minutes",
+  "demoMode": true
+}

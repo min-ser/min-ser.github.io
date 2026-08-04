@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Validation Gate cloud validation portfolio dashboard">
+  <title>Validation Gate | MINSEO.KIM</title>
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/console.css">
+  <link rel="stylesheet" href="../assets/css/animation.css">
+  <link rel="stylesheet" href="../assets/css/pages/dashboard.css">
+</head>
+<body data-page="dashboard" data-depth="1">
+  <div id="app">
+    <div id="appHeader"></div>
+    <div id="appSidebar"></div>
+
+    <main class="app-main">
+      <div class="breadcrumb"><span>Validation Gate</span><span>/</span><strong>Dashboard</strong></div>
+
+      <section class="hero">
+        <div class="hero-content">
+          <span class="eyebrow">PORTFOLIO DEMO · STATIC VALIDATION TOOLKIT</span>
+          <h1>Validation Gate</h1>
+          <p>
+            Azure AI, Microsoft Fabric, 네트워크 및 인증 흐름을 개발자 관점에서 검증하는
+            실무 기반 포트폴리오 데모입니다. 모든 화면은 공통 Header, Sidebar,
+            Console Engine을 재사용하며 실제 API 대신 안전한 샘플 응답을 출력합니다.
+          </p>
+          <div class="actions">
+            <a class="btn btn-light" href="network/network-test.html">첫 번째 데모 열기</a>
+            <a class="btn btn-ghost" href="#modules">구현 모듈 보기</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="notice">
+        <strong>DEMO MODE</strong>
+        <span>Tenant ID, Subscription ID, Client ID, Token, Access Key, IP 및 Resource ID는 모두 시연용 값이며 실제 Azure 리소스와 무관합니다.</span>
+      </div>
+
+      <section class="stats">
+        <article class="card"><div class="stat-label">Planned Pages</div><div class="stat-value">14</div><div class="stat-meta">Dashboard 포함</div></article>
+        <article class="card"><div class="stat-label">Shared Components</div><div class="stat-value">3</div><div class="stat-meta">Header · Sidebar · Console</div></article>
+        <article class="card"><div class="stat-label">Azure Modules</div><div class="stat-value">6</div><div class="stat-meta">Identity · Data · AI</div></article>
+        <article class="card"><div class="stat-label">Fabric Modules</div><div class="stat-value">3</div><div class="stat-meta">Autoscale · WH · Agent</div></article>
+      </section>
+
+      <section class="section" id="modules">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Validation Modules</h2>
+            <p class="section-desc">각 페이지는 공통 디자인과 로그 엔진 위에 독립적인 검증 로직을 추가합니다.</p>
+          </div>
+          <span class="badge badge-warning">STATIC DEMO</span>
+        </div>
+
+        <div class="module-grid">
+          <article class="card module-card">
+            <div class="module-top"><div class="module-icon">⌁</div><span class="badge badge-success">READY</span></div>
+            <h3>Network Test</h3>
+            <p>입력 정규화, DNS, TCP, TLS, 인증서와 처리 시간을 상세 로그로 출력합니다.</p>
+            <a class="module-link" href="network/network-test.html">Open Module →</a>
+          </article>
+          <article class="card module-card">
+            <div class="module-top"><div class="module-icon">Aa</div><span class="badge badge-success">READY</span></div>
+            <h3>Azure Naming Rule</h3>
+            <p>리소스 유형별 길이, 문자, 구분자와 환경 코드 규칙을 검증하고 권장 이름을 생성합니다.</p>
+            <a class="module-link" href="azure/azure-naming-rule.html">Open Module →</a>
+          </article>
+          <article class="card module-card">
+            <div class="module-top"><div class="module-icon">▱</div><span class="badge badge-success">READY</span></div>
+            <h3>Storage Account</h3>
+            <p>Storage 이름, Private DNS, TLS, Entra ID·SAS·Access Key와 Blob API 요청 흐름을 검증합니다.</p>
+            <a class="module-link" href="storage/storage-account.html">Open Module →</a>
+          </article>
+          <article class="card module-card">
+            <div class="module-top"><div class="module-icon">◆</div><span class="badge badge-success">READY</span></div>
+            <h3>Cache for Redis</h3>
+            <p>Access Key·Workload Identity 인증과 Redis PING, TTL 상태 점검 흐름을 시뮬레이션합니다.</p>
+            <a class="module-link" href="redis/redis-cache.html">Open Module →</a>
+          </article>
+          <article class="card module-card">
+            <div class="module-top"><div class="module-icon">↕</div><span class="badge badge-success">READY</span></div>
+            <h3>Fabric Capacity Autoscale</h3>
+            <p>CU 사용률, 평균·피크 임계치와 SKU 정책을 기반으로 Scale 결정을 시뮬레이션합니다.</p>
+            <a class="module-link" href="fabric/autoscale.html">Open Module →</a>
+          </article>
+          <article class="card module-card">
+            <div class="module-top"><div class="module-icon">▤</div><span class="badge badge-success">READY</span></div>
+            <h3>Fabric Warehouse</h3>
+            <p>Private Link, Entra Token, ODBC 연결과 SQL 실행 흐름을 검증합니다.</p>
+            <a class="module-link" href="fabric/warehouse.html">Open Module →</a>
+          </article>
+          <article class="card module-card">
+            <div class="module-top"><div class="module-icon">◎</div><span class="badge badge-success">READY</span></div>
+            <h3>Fabric Data Agent</h3>
+            <p>URL 분석, Thread, Run Polling, 응답과 Citation 추출 과정을 재현합니다.</p>
+            <a class="module-link" href="fabric/data-agent.html">Open Module →</a>
+          </article>
+          <article class="card module-card">
+            <div class="module-top"><div class="module-icon">✦</div><span class="badge badge-success">READY</span></div>
+            <h3>Azure OpenAI</h3>
+            <p>Chat Completion과 Embedding의 인증, 요청 및 응답 분석 과정을 비교합니다.</p>
+            <a class="module-link" href="openai/chat-completion.html">Open Module →</a>
+          </article>
+          <article class="card module-card">
+            <div class="module-top"><div class="module-icon">⌕</div><span class="badge badge-success">READY</span></div>
+            <h3>Azure AI Search</h3>
+            <p>Access Key·Workload Identity 인증과 Keyword·Vector·Hybrid 검색을 시뮬레이션합니다.</p>
+            <a class="module-link" href="search/ai-search.html">Open Module →</a>
+          </article>
+          <article class="card module-card">
+            <div class="module-top"><div class="module-icon">▣</div><span class="badge badge-success">READY</span></div>
+            <h3>Azure Key Vault</h3>
+            <p>Workload Identity 인증, Secret 조회, RBAC 및 Private Endpoint 오류 흐름을 시뮬레이션합니다.</p>
+            <a class="module-link" href="keyvault/key-vault.html">Open Module →</a>
+          </article>
+          <article class="card module-card">
+            <div class="module-top"><div class="module-icon">◈</div><span class="badge badge-success">READY</span></div>
+            <h3>Teams Alert</h3>
+            <p>Webhook 분석, TLS, Adaptive Card Payload와 HTTP 응답을 검증합니다.</p>
+            <a class="module-link" href="teams/teams-webhook.html">Open Module →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Validation Workflow</h2>
+            <p class="section-desc">모든 모듈이 따르는 공통 처리 흐름입니다.</p>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="dashboard-workflow">
+            <div class="workflow-step"><strong>User Input</strong><span>Raw values</span></div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step"><strong>Normalize</strong><span>Parse & sanitize</span></div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step"><strong>Authenticate</strong><span>Key · Entra · WI</span></div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step"><strong>Generate Request</strong><span>Header & payload</span></div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step"><strong>Simulate API</strong><span>Static response</span></div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step"><strong>Analyze</strong><span>Result report</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="split-grid">
+          <div class="panel console-shell">
+            <div class="panel-head">
+              <span class="panel-title">Developer Console Preview</span>
+              <span class="badge badge-success">SHARED ENGINE</span>
+            </div>
+            <div class="console-toolbar">
+              <div class="console-toolbar-group">
+                <button class="console-control active" data-log-filter="ALL">All</button>
+                <button class="console-control" data-log-filter="INFO">INFO</button>
+                <button class="console-control" data-log-filter="DEBUG">DEBUG</button>
+                <button class="console-control" data-log-filter="WARN">WARN</button>
+                <button class="console-control" data-log-filter="ERROR">ERROR</button>
+              </div>
+              <div class="console-toolbar-group">
+                <button class="console-control" id="replayLogs">Replay</button>
+                <button class="console-control" id="clearLogs">Clear</button>
+                <button class="console-control" id="copyLogs">Copy Logs</button>
+              </div>
+            </div>
+            <div class="console-output" id="dashboardConsole" aria-live="polite"></div>
+            <details class="raw-panel">
+              <summary>Raw Demo Configuration</summary>
+              <pre>{
+  "demoMode": true,
+  "liveApiCalls": false,
+  "hosting": "GitHub Pages",
+  "secretPolicy": "sample-and-not-valid"
+}</pre>
+            </details>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head"><span class="panel-title">Technology Scope</span></div>
+            <div class="stack-list">
+              <div class="stack-item"><strong>Frontend</strong><span>HTML5 · CSS3 · Vanilla JavaScript</span></div>
+              <div class="stack-item"><strong>Azure</strong><span>Storage · Redis · OpenAI · AI Search · Key Vault</span></div>
+              <div class="stack-item"><strong>Microsoft Fabric</strong><span>Capacity · Warehouse · Data Agent</span></div>
+              <div class="stack-item"><strong>Authentication</strong><span>Access Key · Microsoft Entra ID · Workload Identity</span></div>
+              <div class="stack-item"><strong>Diagnostics</strong><span>DNS · TCP · TLS · HTTP · Structured Logs</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="appFooter"></div>
+    </main>
+  </div>
+
+  <script src="../assets/js/router.js"></script>
+  <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/console/demo-data.js"></script>
+  <script src="../assets/js/console/log-filter.js"></script>
+  <script src="../assets/js/console/log-renderer.js"></script>
+  <script src="../assets/js/console/log-engine.js"></script>
+  <script src="../assets/js/pages/dashboard.js"></script>
+</body>
+</html>

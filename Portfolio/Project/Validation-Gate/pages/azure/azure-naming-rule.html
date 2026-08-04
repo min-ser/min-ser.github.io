@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Azure Resource Naming Generator | Validation Gate</title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/animation.css">
+  <link rel="stylesheet" href="../../assets/css/pages/azure-naming-rule.css">
+</head>
+<body data-page="naming-rule" data-depth="2">
+<div id="app">
+  <div id="appHeader"></div>
+  <div id="appSidebar"></div>
+  <main class="app-main naming-page">
+    <div class="breadcrumb"><span>Validation Gate</span><span>/</span><strong>Azure Naming Rule</strong></div>
+
+    <section class="page-intro">
+      <div>
+        <span class="section-kicker">AZURE GOVERNANCE</span>
+        <h1>Azure Resource Naming Generator</h1>
+        <p>실제 구현 UI의 환경·리소스 검색·서비스명·히스토리·규정 구조를 유지합니다.</p>
+      </div>
+      <span class="status-chip success">KMS SANITIZED</span>
+    </section>
+
+    <section class="naming-layout">
+      <article class="generator-panel">
+        <h2>Azure 리소스 명칭 자동 생성기</h2>
+        <form id="namingForm">
+          <div class="field-group">
+            <label for="environment">환경 (Environment)</label>
+            <select id="environment">
+              <option value="dev">개발 (DEV)</option>
+              <option value="stg">스테이징 (STG)</option>
+              <option value="prd" selected>운영 (PRD)</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="resourceSearch">리소스 유형 검색 (Resource Type Search)</label>
+            <input id="resourceSearch" placeholder="검색어 입력 (예: sql, ai, network...)" autocomplete="off">
+          </div>
+
+          <div class="field-group resource-list-group">
+            <label for="resourceType">리소스 유형</label>
+            <select id="resourceType" size="8">
+              <option value="openai">Azure OpenAI (oai)</option>
+              <option value="search">AI Search (srch)</option>
+              <option value="redis">Redis (redis)</option>
+              <option value="storage">Storage Account (sa)</option>
+              <option value="postgres">PostgreSQL (psql)</option>
+              <option value="keyvault">Key Vault (kv)</option>
+              <option value="aks">AKS (aks)</option>
+              <option value="fabric">Microsoft Fabric (fabric)</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="serviceName">서비스명 (Service Name)</label>
+            <input id="serviceName" value="platform" placeholder="예: chatbot, billing" autocomplete="off">
+          </div>
+
+          <button class="generate-button" type="submit">규정 기반 명칭 생성</button>
+        </form>
+
+        <section id="nameResult" class="generated-result" aria-live="polite">
+          <span>생성 결과</span>
+          <strong>-</strong>
+          <code>-</code>
+        </section>
+      </article>
+
+      <aside class="naming-sidebar">
+        <section class="history-panel">
+          <h2>최근 생성 히스토리</h2>
+          <div id="historyList" class="history-list"><p>아직 생성된 항목이 없습니다.</p></div>
+          <button id="clearHistory" type="button">히스토리 전체 삭제</button>
+        </section>
+
+        <section class="policy-panel">
+          <h2>Azure 리소스 명명 규정 전문</h2>
+          <div class="policy-body">
+            <h3>제3조 명명 규칙의 구조 및 적용</h3>
+            <dl>
+              <div><dt>기본</dt><dd><code>[prefix]-[환경]-[유형]-[서비스]</code></dd></div>
+              <div><dt>Storage</dt><dd><code>[prefix][환경]sa[번호]</code> · 소문자/숫자만</dd></div>
+              <div><dt>Private Endpoint</dt><dd><code>[prefix]-[환경]-pep-[대상]</code></dd></div>
+              <div><dt>환경</dt><dd>dev · stg · prd</dd></div>
+              <div><dt>Prefix</dt><dd>모든 예시는 <code>kms</code> 사용</dd></div>
+            </dl>
+          </div>
+        </section>
+      </aside>
+    </section>
+    <div id="appFooter"></div>
+  </main>
+</div>
+<script src="../../assets/js/router.js"></script>
+<script src="../../assets/js/utils.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/pages/azure-naming-rule.js"></script>
+</body>
+</html>

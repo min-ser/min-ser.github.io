@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Azure OpenAI Embedding | Validation Gate</title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/console.css">
+  <link rel="stylesheet" href="../../assets/css/animation.css">
+  <link rel="stylesheet" href="../../assets/css/pages/openai.css">
+</head>
+<body data-page="openai-embedding" data-depth="2">
+<div id="app">
+  <div id="appHeader"></div><div id="appSidebar"></div>
+  <main class="app-main openai-page embedding-page"><div class="openai-page-inner">
+    <div class="breadcrumb"><span>Validation Gate</span><span>/</span><strong>Azure OpenAI Embedding</strong></div>
+    <section class="page-intro">
+      <div><span class="section-kicker">AZURE AI SERVICE</span><h1>Azure OpenAI Embedding</h1><p>Access Key와 Workload Identity 인증, 텍스트 벡터 생성 및 응답 구조를 재현한 정적 데모입니다.</p></div>
+      <span class="status-chip warning">NO REAL API CALL</span>
+    </section>
+
+    <section class="auth-shell">
+      <header class="section-header"><div><span class="section-number">01</span><h2>Embedding 인증 설정</h2></div><span class="section-tag">AUTHENTICATION</span></header>
+      <div class="auth-grid">
+        <article class="auth-panel key-panel">
+          <div class="panel-title"><h3>Access Key 방식</h3><span>KEY</span></div>
+          <label for="embeddingKeyEndpoint">Endpoint</label><input id="embeddingKeyEndpoint" value="https://kms-openai.openai.azure.com/" autocomplete="off">
+          <div class="two-column-fields"><div><label for="embeddingKeyVersion">API Version</label><input id="embeddingKeyVersion" value="2024-10-21"></div><div><label for="embeddingKeyDeployment">Deployment Name</label><input id="embeddingKeyDeployment" value="kms-text-embedding-3-small"></div></div>
+          <label for="embeddingApiKey">API Key</label><input id="embeddingApiKey" type="password" value="KMS_DEMO_KEY_NOT_VALID">
+          <button type="button" class="btn-key" data-embedding-auth="key">Access Key 연결 체크</button>
+        </article>
+        <article class="auth-panel workload-panel">
+          <div class="panel-title"><h3>Entra ID (Workload Identity)</h3><span>ENTRA ID</span></div>
+          <label for="embeddingWiEndpoint">Endpoint</label><input id="embeddingWiEndpoint" value="https://kms-openai.openai.azure.com/" autocomplete="off">
+          <div class="two-column-fields"><div><label for="embeddingWiVersion">API Version</label><input id="embeddingWiVersion" value="2024-10-21"></div><div><label for="embeddingWiDeployment">Deployment Name</label><input id="embeddingWiDeployment" value="kms-text-embedding-3-small"></div></div>
+          <label for="embeddingClientId">Client ID</label><input id="embeddingClientId" value="00000000-0000-4000-8000-000000000007">
+          <button type="button" class="btn-workload" data-embedding-auth="workload">Workload Identity 연결 체크</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="embedding-workspace">
+      <article class="embedding-input-card">
+        <header><div><span class="section-number">02</span><h2>Embedding Request</h2></div><span id="embeddingConnectionState" class="connection-state idle">NOT CONNECTED</span></header>
+        <div class="embedding-input-body">
+          <label for="embeddingInput">Input Text</label>
+          <textarea id="embeddingInput" rows="8" placeholder="벡터로 변환할 텍스트를 입력하세요.">Private Endpoint와 Workload Identity를 활용한 Azure AI 서비스 연결 검증</textarea>
+          <div class="embedding-options"><div><label for="embeddingDimensions">Dimensions</label><select id="embeddingDimensions"><option value="32">32 (Demo)</option><option value="64">64 (Demo)</option><option value="128">128 (Demo)</option></select></div><div><label for="embeddingEncoding">Encoding Format</label><select id="embeddingEncoding"><option value="float">float</option><option value="base64">base64</option></select></div></div>
+          <button id="generateEmbedding" type="button" class="embedding-run">Embedding 생성</button>
+        </div>
+      </article>
+
+      <article class="embedding-result-card">
+        <header><div><span class="section-number">03</span><h2>Vector Analysis</h2></div><span id="embeddingResultStatus" class="connection-state idle">READY</span></header>
+        <div class="embedding-stats">
+          <div><span>DIMENSIONS</span><strong id="statDimensions">-</strong></div><div><span>MIN</span><strong id="statMin">-</strong></div><div><span>MAX</span><strong id="statMax">-</strong></div><div><span>MEAN</span><strong id="statMean">-</strong></div>
+        </div>
+        <div id="vectorBars" class="vector-bars"><p>Embedding 생성 후 벡터 분포가 표시됩니다.</p></div>
+        <details class="vector-details"><summary>Vector Preview</summary><pre id="vectorPreview">[]</pre></details>
+      </article>
+    </section>
+
+    <section class="openai-workspace embedding-lower-grid">
+      <article class="raw-card"><header><div><span class="section-number">04</span><h2>Raw Response Log</h2></div><div><button id="copyEmbeddingRaw" type="button">Copy</button><button id="clearEmbeddingRaw" type="button">Clear</button></div></header><pre id="embeddingRawResponse">{
+  "status": "READY",
+  "demoMode": true
+}</pre></article>
+      <article class="execution-card embedding-console-card"><header><h2>Unified Execution Console</h2><div><button id="loadEmbeddingSample" type="button">Sample</button><button id="clearEmbeddingLogs" type="button">Clear</button><button id="copyEmbeddingLogs" type="button">Copy</button></div></header><div id="embeddingConsole" class="openai-console" role="log" aria-live="polite"></div></article>
+    </section>
+    <div id="appFooter"></div>
+  </div></main>
+</div>
+<script src="../../assets/js/router.js"></script><script src="../../assets/js/utils.js"></script><script src="../../assets/js/theme.js"></script><script src="../../assets/js/common.js"></script><script src="../../assets/js/api/openai.js"></script><script src="../../assets/js/pages/openai-embedding.js"></script>
+</body></html>

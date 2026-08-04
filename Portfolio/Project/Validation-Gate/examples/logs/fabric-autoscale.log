@@ -1,0 +1,8 @@
+[INFO] Fabric Capacity autoscale evaluation started
+[INFO] Target PRD / kms-prd-fabric
+[DEBUG] SKU range F16 -> F64, current=F32
+[PASS] Dynamic control window is active
+[INFO] 10m average=86.4%, peak=112.8%
+[PASS] SCALE_UP: F32 -> F64
+[DEBUG] PATCH capacity SKU F32 -> F64 (simulation only)
+[PASS] SCALE_UP completed in demo mode

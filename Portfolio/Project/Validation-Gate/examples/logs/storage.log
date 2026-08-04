@@ -1,0 +1,9 @@
+12:30:00.100 [INFO ] [REQUEST   ] Storage validation request received
+12:30:00.178 [PASS ] [VALIDATION] Storage naming constraints passed
+12:30:00.256 [INFO ] [DNS       ] Resolving kmsprdsa01.blob.core.windows.net
+12:30:00.334 [PASS ] [DNS       ] address=10.20.30.41
+12:30:00.412 [PASS ] [TCP       ] connected=true, elapsedMs=18
+12:30:00.490 [PASS ] [TLS       ] protocol=TLSv1.3
+12:30:00.568 [PASS ] [AUTHENTICATION] credentialReady=true, expiresIn=3540s
+12:30:00.646 [PASS ] [RESPONSE  ] status=200 OK
+12:30:00.724 [PASS ] [SUMMARY   ] Overall result=PASS

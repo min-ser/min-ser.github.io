@@ -1,0 +1,4 @@
+[INFO] REQUEST Workload Identity authentication started
+[PASS] AUTHENTICATION Token audience validated
+[INFO] AUTHORIZATION Secret read permission check started
+[PASS] MASKING Secret value rendered as masked output

@@ -1,0 +1,26 @@
+
+.dashboard-workflow {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+  align-items: center;
+  padding: 22px;
+}
+.workflow-step {
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 9px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-align: center;
+  background: var(--surface-alt);
+}
+.workflow-step strong { font-size: 12px; }
+.workflow-step span { margin-top: 4px; color: var(--muted); font-size: 10px; }
+.workflow-arrow { text-align: center; color: #8fa4b8; font-size: 18px; }
+@media (max-width: 1180px) {
+  .dashboard-workflow { grid-template-columns: 1fr; }
+  .workflow-arrow { transform: rotate(90deg); }
+}

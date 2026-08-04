@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Azure OpenAI Chat | Validation Gate</title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/console.css">
+  <link rel="stylesheet" href="../../assets/css/animation.css">
+  <link rel="stylesheet" href="../../assets/css/pages/openai.css">
+</head>
+<body data-page="openai-chat" data-depth="2">
+<div id="app">
+  <div id="appHeader"></div>
+  <div id="appSidebar"></div>
+  <main class="app-main openai-page">
+    <div class="openai-page-inner">
+      <div class="breadcrumb"><span>Validation Gate</span><span>/</span><strong>Azure OpenAI Chat</strong></div>
+
+      <section class="page-intro">
+        <div>
+          <span class="section-kicker">AZURE AI SERVICE</span>
+          <h1>Azure OpenAI Chat</h1>
+          <p>실제 구현 UI의 Access Key, Workload Identity, Chat Completion 테스트 흐름을 유지한 정적 데모입니다.</p>
+        </div>
+        <span class="status-chip warning">NO REAL API CALL</span>
+      </section>
+
+      <section class="auth-shell">
+        <header class="section-header">
+          <div><span class="section-number">01</span><h2>Azure OpenAI 인증 설정</h2></div>
+          <span class="section-tag">AUTHENTICATION</span>
+        </header>
+        <div class="auth-grid">
+          <article class="auth-panel key-panel">
+            <div class="panel-title"><h3>Access Key 방식</h3><span>KEY</span></div>
+            <label for="keyEndpoint">Endpoint</label>
+            <input id="keyEndpoint" value="https://kms-openai.openai.azure.com/" autocomplete="off">
+            <div class="two-column-fields">
+              <div><label for="keyApiVersion">API Version</label><input id="keyApiVersion" value="2024-10-21" autocomplete="off"></div>
+              <div><label for="keyDeployment">Deployment Name</label><input id="keyDeployment" value="kms-gpt-4o-mini" autocomplete="off"></div>
+            </div>
+            <label for="apiKey">API Key</label>
+            <input id="apiKey" type="password" value="KMS_DEMO_KEY_NOT_VALID" autocomplete="off">
+            <button type="button" class="btn-key" data-auth="key">Access Key 연결 체크</button>
+          </article>
+
+          <article class="auth-panel workload-panel">
+            <div class="panel-title"><h3>Entra ID (Workload Identity)</h3><span>ENTRA ID</span></div>
+            <label for="wiEndpoint">Endpoint</label>
+            <input id="wiEndpoint" value="https://kms-openai.openai.azure.com/" autocomplete="off">
+            <div class="two-column-fields">
+              <div><label for="wiApiVersion">API Version</label><input id="wiApiVersion" value="2024-10-21" autocomplete="off"></div>
+              <div><label for="wiDeployment">Deployment Name</label><input id="wiDeployment" value="kms-gpt-4o-mini" autocomplete="off"></div>
+            </div>
+            <label for="clientId">Client ID</label>
+            <input id="clientId" value="00000000-0000-4000-8000-000000000006" autocomplete="off">
+            <button type="button" class="btn-workload" data-auth="workload">Workload Identity 연결 체크</button>
+          </article>
+        </div>
+        <div class="test-type-row">
+          <strong>테스트 유형</strong>
+          <div class="segmented-control" role="group" aria-label="테스트 유형">
+            <button type="button" class="active" data-test-type="chat">Chat Completion</button>
+            <button type="button" data-test-type="embedding">Embedding Vector</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="openai-workspace">
+        <article class="chat-card">
+          <header><div><span class="section-number">02</span><h2>Test Console</h2></div><span id="connectionState" class="connection-state idle">NOT CONNECTED</span></header>
+          <div id="chatMessages" class="chat-messages" aria-live="polite">
+            <div class="message assistant"><span class="avatar">AI</span><div><strong>Validation Assistant</strong><p>인증 방식을 선택해 연결 체크한 뒤 메시지를 입력하세요.</p></div></div>
+          </div>
+          <div class="prompt-options">
+            <label for="systemPrompt">System Prompt</label>
+            <textarea id="systemPrompt" rows="2">You are a concise Azure validation assistant.</textarea>
+          </div>
+          <form id="chatForm" class="chat-form">
+            <input id="chatInput" placeholder="테스트할 메시지를 입력하세요." autocomplete="off">
+            <button type="submit">전송</button>
+          </form>
+        </article>
+
+        <article class="raw-card">
+          <header><div><span class="section-number">03</span><h2>Raw Response Log</h2></div><div><button id="copyRaw" type="button">Copy</button><button id="clearRaw" type="button">Clear</button></div></header>
+          <pre id="rawResponse">{
+  "status": "READY",
+  "demoMode": true
+}</pre>
+        </article>
+      </section>
+
+      <section class="execution-card">
+        <header><h2>Unified Execution Console</h2><div><button id="loadSample" type="button">Sample</button><button id="clearLogs" type="button">Clear</button><button id="copyLogs" type="button">Copy</button></div></header>
+        <div id="openaiConsole" class="openai-console" role="log" aria-live="polite"></div>
+      </section>
+      <div id="appFooter"></div>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/router.js"></script>
+<script src="../../assets/js/utils.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/api/openai.js"></script>
+<script src="../../assets/js/pages/openai-chat.js"></script>
+</body>
+</html>

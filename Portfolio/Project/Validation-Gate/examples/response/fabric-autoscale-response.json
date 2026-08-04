@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "status": "PASS",
+  "decision": "SCALE_UP",
+  "targetSku": "F64",
+  "reason": "10-minute average utilization exceeded 80%",
+  "controlWindow": true,
+  "demoMode": true
+}

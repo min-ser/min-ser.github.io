@@ -1,0 +1,424 @@
+{
+  "version": "0.8.3",
+  "characters": {
+    "seo-harin": {
+      "name": "서하린",
+      "faction": "천류관",
+      "summary": "천류관 소속의 중립 계열 여검사. 흑장발과 오른쪽 눈 밑 작은 점이 특징.",
+      "images": [
+        {
+          "title": "기본 스탠딩",
+          "category": "기본",
+          "web": "assets/images/characters/seo-harin/seo-harin-01.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-01.webp",
+          "source": "에셋/캐릭터/서하린/기본_스탠딩/서하린_기본_스탠딩.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "전투 대기",
+          "category": "전투",
+          "web": "assets/images/characters/seo-harin/seo-harin-02.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-02.webp",
+          "source": "에셋/캐릭터/서하린/전투_개별/01_전투_대기_쌍검.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "검 뽑기",
+          "category": "전투",
+          "web": "assets/images/characters/seo-harin/seo-harin-03.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-03.webp",
+          "source": "에셋/캐릭터/서하린/전투_개별/02_검_뽑기.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "방어",
+          "category": "전투",
+          "web": "assets/images/characters/seo-harin/seo-harin-04.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-04.webp",
+          "source": "에셋/캐릭터/서하린/전투_개별/03_방어.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "공격 준비",
+          "category": "전투",
+          "web": "assets/images/characters/seo-harin/seo-harin-05.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-05.webp",
+          "source": "에셋/캐릭터/서하린/전투_개별/04_공격_준비.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "좌베기",
+          "category": "전투",
+          "web": "assets/images/characters/seo-harin/seo-harin-06.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-06.webp",
+          "source": "에셋/캐릭터/서하린/전투_개별/05_좌베기.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "우베기",
+          "category": "전투",
+          "web": "assets/images/characters/seo-harin/seo-harin-07.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-07.webp",
+          "source": "에셋/캐릭터/서하린/전투_개별/06_우베기.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "피격",
+          "category": "전투",
+          "web": "assets/images/characters/seo-harin/seo-harin-08.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-08.webp",
+          "source": "에셋/캐릭터/서하린/전투_개별/07_피격.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "피격 직후",
+          "category": "전투",
+          "web": "assets/images/characters/seo-harin/seo-harin-09.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-09.webp",
+          "source": "에셋/캐릭터/서하린/전투_개별/08_피격_직후_무릎.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "승리",
+          "category": "전투",
+          "web": "assets/images/characters/seo-harin/seo-harin-10.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-10.webp",
+          "source": "에셋/캐릭터/서하린/전투_개별/09_승리.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "표정 01",
+          "category": "표정",
+          "web": "assets/images/characters/seo-harin/seo-harin-11.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-11.webp",
+          "source": "game/assets/images/characters/seo-harin/expressions/expression-01.webp",
+          "status": "사용 후보"
+        },
+        {
+          "title": "표정 02",
+          "category": "표정",
+          "web": "assets/images/characters/seo-harin/seo-harin-12.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-12.webp",
+          "source": "game/assets/images/characters/seo-harin/expressions/expression-02.webp",
+          "status": "사용 후보"
+        },
+        {
+          "title": "표정 03",
+          "category": "표정",
+          "web": "assets/images/characters/seo-harin/seo-harin-13.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-13.webp",
+          "source": "game/assets/images/characters/seo-harin/expressions/expression-03.webp",
+          "status": "사용 후보"
+        },
+        {
+          "title": "표정 04",
+          "category": "표정",
+          "web": "assets/images/characters/seo-harin/seo-harin-14.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-14.webp",
+          "source": "game/assets/images/characters/seo-harin/expressions/expression-04.webp",
+          "status": "사용 후보"
+        },
+        {
+          "title": "표정 05",
+          "category": "표정",
+          "web": "assets/images/characters/seo-harin/seo-harin-15.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-15.webp",
+          "source": "game/assets/images/characters/seo-harin/expressions/expression-05.webp",
+          "status": "사용 후보"
+        },
+        {
+          "title": "표정 06",
+          "category": "표정",
+          "web": "assets/images/characters/seo-harin/seo-harin-16.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-16.webp",
+          "source": "game/assets/images/characters/seo-harin/expressions/expression-06.webp",
+          "status": "사용 후보"
+        },
+        {
+          "title": "표정 07",
+          "category": "표정",
+          "web": "assets/images/characters/seo-harin/seo-harin-17.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-17.webp",
+          "source": "game/assets/images/characters/seo-harin/expressions/expression-07.webp",
+          "status": "사용 후보"
+        },
+        {
+          "title": "표정 08",
+          "category": "표정",
+          "web": "assets/images/characters/seo-harin/seo-harin-18.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-18.webp",
+          "source": "game/assets/images/characters/seo-harin/expressions/expression-08.webp",
+          "status": "사용 후보"
+        },
+        {
+          "title": "메인 비주얼 레퍼런스",
+          "category": "레퍼런스",
+          "web": "assets/images/characters/seo-harin/seo-harin-reference-01.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-reference-01.webp",
+          "source": "archive/characters/_SOURCE/2026-08-04/visual-references/seo-harin/seo-harin-front-reference-01.png",
+          "status": "원본 보존"
+        },
+        {
+          "title": "표정 01 최종 수정본",
+          "category": "최종 표정",
+          "web": "assets/images/characters/seo-harin/final-expressions/expression-01.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-01.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_01_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "표정 02 최종 수정본",
+          "category": "최종 표정",
+          "web": "assets/images/characters/seo-harin/final-expressions/expression-02.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-02.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_02_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "표정 03 최종 수정본",
+          "category": "최종 표정",
+          "web": "assets/images/characters/seo-harin/final-expressions/expression-03.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-03.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_03_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "표정 04 최종 수정본",
+          "category": "최종 표정",
+          "web": "assets/images/characters/seo-harin/final-expressions/expression-04.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-04.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_04_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "표정 05 최종 수정본",
+          "category": "최종 표정",
+          "web": "assets/images/characters/seo-harin/final-expressions/expression-05.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-05.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_05_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "표정 06 최종 수정본",
+          "category": "최종 표정",
+          "web": "assets/images/characters/seo-harin/final-expressions/expression-06.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-06.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_06_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "표정 07 최종 수정본",
+          "category": "최종 표정",
+          "web": "assets/images/characters/seo-harin/final-expressions/expression-07.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-07.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_07_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "표정 08 최종 수정본",
+          "category": "최종 표정",
+          "web": "assets/images/characters/seo-harin/final-expressions/expression-08.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-08.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_08_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "전투 대기 최종 투명본",
+          "category": "최종 전투",
+          "web": "assets/images/characters/seo-harin/final-battle/battle-01.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-01.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/01_전투_대기_쌍검_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "검 뽑기 최종 투명본",
+          "category": "최종 전투",
+          "web": "assets/images/characters/seo-harin/final-battle/battle-02.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-02.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/02_검_뽑기_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "방어 최종 투명본",
+          "category": "최종 전투",
+          "web": "assets/images/characters/seo-harin/final-battle/battle-03.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-03.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/03_방어_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "공격 준비 최종 투명본",
+          "category": "최종 전투",
+          "web": "assets/images/characters/seo-harin/final-battle/battle-04.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-04.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/04_공격_준비_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "좌베기 최종 투명본",
+          "category": "최종 전투",
+          "web": "assets/images/characters/seo-harin/final-battle/battle-05.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-05.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/05_좌베기_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "우베기 최종 투명본",
+          "category": "최종 전투",
+          "web": "assets/images/characters/seo-harin/final-battle/battle-06.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-06.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/06_우베기_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "피격 최종 투명본",
+          "category": "최종 전투",
+          "web": "assets/images/characters/seo-harin/final-battle/battle-07.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-07.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/07_피격_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "피격 직후 무릎 최종 투명본",
+          "category": "최종 전투",
+          "web": "assets/images/characters/seo-harin/final-battle/battle-08.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-08.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/08_피격_직후_무릎_최종_투명.png",
+          "status": "사용중"
+        },
+        {
+          "title": "승리 최종 투명본",
+          "category": "최종 전투",
+          "web": "assets/images/characters/seo-harin/final-battle/battle-09.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-09.webp",
+          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/09_승리_최종_투명.png",
+          "status": "사용중"
+        }
+      ]
+    },
+    "jeon-seoyul": {
+      "name": "전서율",
+      "faction": "천류관 설립자",
+      "summary": "흐름의 무공을 사용하는 비극적인 검사. 차갑고 고요한 존재감이 특징.",
+      "images": [
+        {
+          "title": "기본 스탠딩 4K",
+          "category": "기본",
+          "web": "assets/images/characters/jeon-seoyul/jeon-seoyul-01.webp",
+          "thumb": "assets/images/characters/thumbnails/jeon-seoyul/jeon-seoyul-01.webp",
+          "source": "에셋/캐릭터/전서율/기본_스탠딩/전서율_기본_스탠딩_4K.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "기본 스탠딩 일반",
+          "category": "기본",
+          "web": "assets/images/characters/jeon-seoyul/jeon-seoyul-02.webp",
+          "thumb": "assets/images/characters/thumbnails/jeon-seoyul/jeon-seoyul-02.webp",
+          "source": "에셋/캐릭터/전서율/기본_스탠딩/전서율_기본_스탠딩_일반.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "메인 비주얼 레퍼런스",
+          "category": "레퍼런스",
+          "web": "assets/images/characters/jeon-seoyul/jeon-seoyul-reference-01.webp",
+          "thumb": "assets/images/characters/thumbnails/jeon-seoyul/jeon-seoyul-reference-01.webp",
+          "source": "archive/characters/_SOURCE/2026-08-04/visual-references/jeon-seoyul/jeon-seoyul-reference-01.png",
+          "status": "원본 보존"
+        }
+      ]
+    },
+    "jeok-wola": {
+      "name": "적월아",
+      "faction": "마교",
+      "summary": "붉은 장발과 쌍검, 검붉은 의상이 특징인 강렬한 마교계 검사.",
+      "images": [
+        {
+          "title": "기본 스탠딩 01",
+          "category": "기본",
+          "web": "assets/images/characters/jeok-wola/jeok-wola-01.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/jeok-wola-01.webp",
+          "source": "에셋/캐릭터/적월아/기본_스탠딩/적월아_기본_스탠딩_01.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "기본 스탠딩 02",
+          "category": "기본",
+          "web": "assets/images/characters/jeok-wola/jeok-wola-02.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/jeok-wola-02.webp",
+          "source": "에셋/캐릭터/적월아/기본_스탠딩/적월아_기본_스탠딩_02.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "기본 스탠딩 4K",
+          "category": "기본",
+          "web": "assets/images/characters/jeok-wola/jeok-wola-basic-4k.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/jeok-wola-basic-4k.webp",
+          "source": "에셋/캐릭터/적월아/기본_스탠딩/적월아_기본_스탠딩_4K.png",
+          "status": "사용중"
+        },
+        {
+          "title": "메인 비주얼 레퍼런스",
+          "category": "레퍼런스",
+          "web": "assets/images/characters/jeok-wola/jeok-wola-reference-01.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/jeok-wola-reference-01.webp",
+          "source": "archive/characters/_SOURCE/2026-08-04/visual-references/jeok-wola/jeok-wola-front-reference-01.png",
+          "status": "원본 보존"
+        }
+      ]
+    },
+    "yeon-museol": {
+      "name": "연무설",
+      "faction": "사파",
+      "summary": "긴 흑발과 붉은 눈, 검붉은 복장으로 강한 카리스마를 지닌 검사.",
+      "images": [
+        {
+          "title": "기본 스탠딩 01",
+          "category": "기본",
+          "web": "assets/images/characters/yeon-museol/yeon-museol-01.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/yeon-museol-01.webp",
+          "source": "에셋/캐릭터/연무설/기본_스탠딩/연무설_기본_스탠딩_01.png",
+          "status": "사용 후보"
+        },
+        {
+          "title": "기본 스탠딩 교체본",
+          "category": "기본",
+          "web": "assets/images/characters/yeon-museol/yeon-museol-basic-replacement.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/yeon-museol-basic-replacement.webp",
+          "source": "에셋/캐릭터/연무설/기본_스탠딩/연무설_기본_스탠딩_교체본.png",
+          "status": "사용중"
+        },
+        {
+          "title": "메인 비주얼 레퍼런스",
+          "category": "레퍼런스",
+          "web": "assets/images/characters/yeon-museol/yeon-museol-reference-01.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/yeon-museol-reference-01.webp",
+          "source": "archive/characters/_SOURCE/2026-08-04/visual-references/yeon-museol/yeon-museol-front-reference-01.png",
+          "status": "원본 보존"
+        }
+      ]
+    },
+    "seol-yujin": {
+      "name": "설유진",
+      "faction": "정파",
+      "summary": "은백색 장발과 푸른 눈, 흑청 계열 복장이 특징인 차분하고 고결한 검사.",
+      "images": [
+        {
+          "title": "기본 스탠딩 4K",
+          "category": "기본",
+          "web": "assets/images/characters/seol-yujin/seol-yujin-basic-4k.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/seol-yujin-basic-4k.webp",
+          "source": "에셋/캐릭터/설유진/기본_스탠딩/설유진_기본_스탠딩_4K.png",
+          "status": "사용중"
+        },
+        {
+          "title": "메인 비주얼 레퍼런스",
+          "category": "레퍼런스",
+          "web": "assets/images/characters/seol-yujin/seol-yujin-reference-01.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/seol-yujin-reference-01.webp",
+          "source": "archive/characters/_SOURCE/2026-08-04/visual-references/seol-yujin/seol-yujin-front-reference-01.png",
+          "status": "원본 보존"
+        }
+      ]
+    }
+  }
+}

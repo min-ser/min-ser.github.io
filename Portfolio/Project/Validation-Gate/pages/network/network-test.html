@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Network Connection Test | Validation Gate</title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/console.css">
+  <link rel="stylesheet" href="../../assets/css/animation.css">
+  <link rel="stylesheet" href="../../assets/css/pages/network-test.css">
+</head>
+<body data-page="network-test" data-depth="2">
+<div id="app">
+  <div id="appHeader"></div>
+  <div id="appSidebar"></div>
+  <main class="app-main network-page">
+    <div class="breadcrumb"><span>Validation Gate</span><span>/</span><strong>Network Connection Test</strong></div>
+
+    <section class="page-intro">
+      <div>
+        <span class="section-kicker">COMMON VALIDATION</span>
+        <h1>Network Connection Test</h1>
+        <p>실제 구현 UI의 Ping, DNS Query, Port Scan 실행 구조를 유지하고 포트폴리오 디자인만 적용한 정적 시뮬레이션입니다.</p>
+      </div>
+      <span class="status-chip warning">DEMO MODE</span>
+    </section>
+
+    <section class="diagnostic-grid" aria-label="네트워크 진단 도구">
+      <article class="diagnostic-card">
+        <h2>[ ACCESS_PING ]</h2>
+        <label for="pingTarget">TARGET_ADDR</label>
+        <input id="pingTarget" value="kms-private-endpoint.local" autocomplete="off">
+        <button id="runPing" type="button">EXECUTE</button>
+      </article>
+
+      <article class="diagnostic-card">
+        <h2>[ DNS_QUERY ]</h2>
+        <label for="dnsDomain">DOMAIN</label>
+        <input id="dnsDomain" value="kms-storage.blob.core.windows.net" autocomplete="off">
+        <button id="runDns" type="button">RESOLVE</button>
+      </article>
+
+      <article class="diagnostic-card">
+        <h2>[ PORT_SCAN ]</h2>
+        <div class="host-port-grid">
+          <div>
+            <label for="portHost">HOST</label>
+            <input id="portHost" value="kms-storage.blob.core.windows.net" autocomplete="off">
+          </div>
+          <div>
+            <label for="portNumber">PORT</label>
+            <input id="portNumber" type="number" min="1" max="65535" value="443">
+          </div>
+        </div>
+        <button id="runPort" type="button">PROBE</button>
+      </article>
+    </section>
+
+    <section class="console-panel">
+      <header class="panel-command-bar">
+        <h2>[ LIVE_DECODING_FEED ]</h2>
+        <div class="command-actions">
+          <button id="loadSample" type="button">SAMPLE</button>
+          <button id="clearLogs" type="button">CLEAR</button>
+          <button id="copyLogs" type="button">COPY</button>
+        </div>
+      </header>
+      <div id="networkConsole" class="network-console" role="log" aria-live="polite"></div>
+    </section>
+
+    <section class="analysis-panel">
+      <header><h2>[ FINAL_ANALYSIS_REPORT ]</h2></header>
+      <div id="summaryBanner" class="analysis-summary">
+        <strong>[ REPORT_DECODED ]</strong>
+        <p>대기 중입니다. 위 진단 기능 중 하나를 실행하세요.</p>
+      </div>
+      <div class="raw-grid">
+        <details><summary>Raw Request</summary><pre id="rawRequest">{}</pre></details>
+        <details><summary>Raw Response</summary><pre id="rawResponse">{}</pre></details>
+      </div>
+    </section>
+    <div id="appFooter"></div>
+  </main>
+</div>
+<script src="../../assets/js/router.js"></script>
+<script src="../../assets/js/utils.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/pages/network-test.js"></script>
+</body>
+</html>

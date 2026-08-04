@@ -1,0 +1,6 @@
+{
+  "mode": "demo",
+  "capacity": "kms-prd-fabric-demo",
+  "sku": "F32",
+  "utilization": 48.46
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teams Alert Validation | Validation Gate</title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/console.css">
+  <link rel="stylesheet" href="../../assets/css/animation.css">
+  <link rel="stylesheet" href="../../assets/css/pages/teams.css">
+</head>
+<body data-page="teams" data-depth="2">
+<div id="app">
+  <div id="appHeader"></div>
+  <div id="appSidebar"></div>
+  <main class="app-main teams-page">
+    <div class="teams-inner">
+      <div class="page-title-row">
+        <div>
+          <div class="breadcrumb"><span>Validation Gate</span><span>/</span><strong>Teams Alert</strong></div>
+          <span class="eyebrow">INTEGRATION VALIDATION</span>
+          <h1>Microsoft Teams Alert Validation</h1>
+          <p>Webhook URL 검증, Adaptive Card Payload 생성, 전송 결과와 오류 흐름을 재현하는 정적 데모입니다.</p>
+        </div>
+        <span class="demo-badge">NO REAL WEBHOOK CALL</span>
+      </div>
+
+      <section class="status-grid fade-in">
+        <article class="status-card blue"><span>Webhook 상태</span><strong id="webhookStatus">미검증</strong><small id="webhookHint">연결 테스트 대기</small></article>
+        <article class="status-card cyan"><span>Payload 유형</span><strong id="payloadTypeStatus">Adaptive Card</strong><small>schema 1.5</small></article>
+        <article class="status-card orange"><span>마지막 응답</span><strong id="responseStatus">-</strong><small id="responseHint">전송 이력 없음</small></article>
+        <article class="status-card purple"><span>전송 횟수</span><strong id="sendCount">0</strong><small>현재 세션 기준</small></article>
+      </section>
+
+      <section class="teams-workspace fade-in">
+        <div class="left-column">
+          <article class="panel settings-panel">
+            <header class="panel-header"><h2>Teams Webhook 연결 설정</h2><span class="pill">DEMO</span></header>
+            <div class="form-grid">
+              <label class="full"><span>Webhook URL</span><input id="webhookUrl" value="https://kms-demo.webhook.office.com/webhookb2/DEMO_SIGNATURE_NOT_VALID" autocomplete="off"></label>
+              <label><span>HTTP Method</span><select id="httpMethod"><option selected>POST</option></select></label>
+              <label><span>Content-Type</span><select id="contentType"><option selected>application/json</option></select></label>
+              <label><span>Timeout (seconds)</span><input id="timeoutSeconds" type="number" value="10" min="1" max="60"></label>
+              <label><span>Validation Scenario</span><select id="scenario"><option value="success">정상 전송</option><option value="invalid-url">잘못된 URL</option><option value="unauthorized">401 인증 실패</option><option value="throttled">429 요청 제한</option><option value="server-error">500 서버 오류</option></select></label>
+            </div>
+            <div class="button-row">
+              <button id="validateWebhook" class="btn primary" type="button">Webhook 연결 테스트</button>
+              <button id="loadSample" class="btn ghost" type="button">샘플 불러오기</button>
+            </div>
+          </article>
+
+          <article class="panel payload-panel">
+            <header class="panel-header"><h2>Adaptive Card Payload</h2><div><button id="previewPayload" class="text-button">미리보기</button><button id="copyPayload" class="text-button">Copy</button></div></header>
+            <div class="form-grid payload-fields">
+              <label><span>제목</span><input id="alertTitle" value="Fabric Capacity Autoscale Alert"></label>
+              <label><span>Severity</span><select id="severity"><option>INFO</option><option selected>WARNING</option><option>CRITICAL</option></select></label>
+              <label class="full"><span>메시지</span><textarea id="alertMessage">Eventstream CU usage exceeded the configured threshold. Capacity scale-up was requested.</textarea></label>
+              <label><span>Environment</span><select id="environment"><option>DEV</option><option>STG</option><option selected>PRD</option></select></label>
+              <label><span>Resource</span><input id="resourceName" value="kms-prd-fabric"></label>
+              <label><span>Current SKU</span><select id="currentSku"><option>F2</option><option>F4</option><option>F8</option><option selected>F16</option><option>F32</option></select></label>
+              <label><span>Target SKU</span><select id="targetSku"><option>F4</option><option>F8</option><option>F16</option><option selected>F32</option><option>F64</option></select></label>
+            </div>
+            <div class="button-row"><button id="sendAlert" class="btn success" type="button">Teams 알림 전송</button><button id="clearPayload" class="btn ghost" type="button">입력 초기화</button></div>
+          </article>
+        </div>
+
+        <div class="right-column">
+          <article class="panel preview-panel">
+            <header class="panel-header"><h2>Adaptive Card Preview</h2><span id="previewSeverity" class="severity warning">WARNING</span></header>
+            <div id="cardPreview" class="adaptive-card-preview"></div>
+          </article>
+
+          <article class="panel result-panel">
+            <header class="panel-header"><h2>Validation Result</h2><span id="resultBadge" class="result-badge neutral">READY</span></header>
+            <div id="resultSummary" class="result-summary empty">Webhook 연결 테스트 또는 알림 전송을 실행하세요.</div>
+            <details class="raw-result"><summary>Raw Request / Response</summary><pre id="rawResult">{}</pre></details>
+          </article>
+        </div>
+      </section>
+
+      <section class="bottom-grid fade-in">
+        <article class="panel console-panel">
+          <header class="panel-header"><h2>Unified Execution Console</h2><div><button id="sampleLogs" class="text-button">Sample</button><button id="clearLogs" class="text-button">Clear</button><button id="copyLogs" class="text-button">Copy</button></div></header>
+          <div id="teamsConsole" class="teams-console" aria-live="polite"></div>
+        </article>
+        <article class="panel history-panel">
+          <header class="panel-header"><h2>Delivery History</h2><button id="clearHistory" class="text-button">전체 초기화</button></header>
+          <div class="history-table-wrap">
+            <table><thead><tr><th>시간</th><th>환경</th><th>리소스</th><th>상태</th><th>HTTP</th></tr></thead><tbody id="historyBody"><tr class="empty-row"><td colspan="5">전송 이력이 없습니다.</td></tr></tbody></table>
+          </div>
+        </article>
+      </section>
+      <div id="appFooter"></div>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/router.js"></script>
+<script src="../../assets/js/utils.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/api/teams.js"></script>
+<script src="../../assets/js/pages/teams-webhook.js"></script>
+</body>
+</html>

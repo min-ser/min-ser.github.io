@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>김민서 | Enterprise AI Platform Architect</title>
+  <meta name="description"
+        content="Azure AI Foundry, Microsoft Fabric, AKS, APIM, Zero Trust 기반의 Enterprise AI Platform Architect 김민서 포트폴리오">
+  <meta name="keywords"
+        content="Azure AI, Microsoft Fabric, Azure OpenAI, AKS, Platform Architect, Cloud Architect, AI Platform Engineer">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+  <style>
+/* common.css */
+:root{--bg:#07111f;--surface:#10213a;--text:#f5f9ff;--muted:#9bb0c7;--primary:#2b9cff;--primary2:#6ac7ff;--border:rgba(255,255,255,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,"Noto Sans KR",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit}.container{width:min(1180px,calc(100% - 40px));margin:auto}.narrow{width:min(920px,calc(100% - 40px))}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(7,17,31,.85);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.header-inner{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:.08em;text-decoration:none}
+.desktop-nav{display:flex;gap:22px}.desktop-nav a,.mobile-nav a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:600}
+.desktop-nav a:hover,.desktop-nav a.is-active{color:white}.mobile-menu-button{display:none;background:none;border:0;color:white;font-size:24px}.mobile-nav{display:none;padding:16px 20px;background:#091423}.mobile-nav.is-open{display:grid;gap:14px}
+.section{padding:96px 0}.section-heading{margin-bottom:36px}.section-heading h1,.section-heading h2{margin:8px 0 12px;font-size:clamp(36px,5vw,56px);line-height:1.1;letter-spacing:-.05em}.section-heading p{color:var(--muted)}
+.eyebrow{color:var(--primary2);font-weight:800;font-size:12px;letter-spacing:.12em}.btn{display:inline-flex;padding:13px 18px;border-radius:12px;text-decoration:none;font-weight:800}.btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#04111c}.btn-secondary{border:1px solid var(--border)}
+.badge{padding:7px 11px;border:1px solid rgba(106,199,255,.18);background:rgba(43,156,255,.08);border-radius:999px;font-size:12px}
+.site-footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted)}.footer-inner{display:flex;justify-content:space-between;gap:20px;font-size:13px}
+.reveal{opacity:0;transform:translateY(20px)}.reveal.show{opacity:1;transform:none;transition:.7s ease}
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}.filter-btn{padding:9px 14px;border-radius:999px;border:1px solid var(--border);background:#0f1d31;color:var(--muted);cursor:pointer}.filter-btn.active{background:var(--primary);color:#04111c}
+.architecture-block{margin-top:36px;padding:28px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.025)}.architecture-flow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.arch-node{padding:14px 16px;border:1px solid rgba(106,199,255,.2);border-radius:12px;background:rgba(43,156,255,.08);font-weight:700}.arch-arrow{color:var(--primary2);font-size:22px}
+.skill-tags{display:flex;gap:10px;flex-wrap:wrap}.skill-tags span{padding:9px 13px;border:1px solid var(--border);border-radius:10px;background:rgba(255,255,255,.04)}
+.skill-group{margin:24px 0;padding:26px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.025)}
+@media(max-width:850px){.desktop-nav{display:none}.mobile-menu-button{display:block}.footer-inner{flex-direction:column}.section{padding:70px 0}}
+
+
+/* cards.css */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}.card{background:linear-gradient(180deg,#12213a,#0d1828);border:1px solid var(--border);border-radius:18px;transition:.25s;overflow:hidden}.card:hover{transform:translateY(-5px);border-color:rgba(106,199,255,.35);box-shadow:0 22px 50px rgba(0,0,0,.28)}
+.card-header{padding:26px 26px 10px}.card-title{margin:0;font-size:24px}.card-subtitle{color:var(--muted)}.card-body{padding:18px 26px 26px;color:#d7e4f2}.card-body h3{color:var(--primary2)}.card-footer{padding:18px 26px;border-top:1px solid var(--border)}
+.feature-card{padding:28px;min-height:250px}.feature-icon{width:58px;height:58px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#04111c;font-weight:900}.feature-description{color:var(--muted)}
+.project-status{display:inline-flex;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:800;margin-bottom:12px}.status-running{background:rgba(76,209,138,.14);color:#6ceaaa}.status-completed{background:rgba(43,156,255,.14);color:#79caff}.status-poc{background:rgba(255,201,91,.14);color:#ffd570}
+.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.metric-card{padding:30px;text-align:center}.metric-number{font-size:42px;font-weight:900;display:block}.metric-label{color:var(--muted)}
+@media(max-width:850px){.metric-grid{grid-template-columns:1fr}}
+
+
+/* dark.css */
+::selection{background:rgba(106,199,255,.35);color:#fff}::-webkit-scrollbar{width:11px}::-webkit-scrollbar-track{background:#07111f}::-webkit-scrollbar-thumb{background:#214b74;border-radius:999px}
+
+
+/* home.css */
+.hero-enterprise {
+  position: relative;
+  overflow: hidden;
+  padding: 118px 0 105px;
+  background:
+    radial-gradient(circle at 85% 18%, rgba(43, 156, 255, .18), transparent 28%),
+    radial-gradient(circle at 12% 80%, rgba(53, 105, 255, .12), transparent 26%),
+    linear-gradient(180deg, #07111f 0%, #081525 100%);
+}
+
+.hero-grid-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .23;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.hero-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(330px, .75fr);
+  align-items: center;
+  gap: 64px;
+}
+
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid rgba(106,199,255,.18);
+  border-radius: 999px;
+  color: #9bdcff;
+  background: rgba(43,156,255,.07);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.status-dot,
+.availability-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #54e39a;
+  box-shadow: 0 0 18px rgba(84,227,154,.85);
+}
+
+.hero h1 {
+  margin: 24px 0;
+  max-width: 900px;
+  font-size: clamp(56px, 7.4vw, 102px);
+  line-height: .96;
+  letter-spacing: -.075em;
+}
+
+.gradient-title {
+  background: linear-gradient(135deg, #ffffff 10%, #88ddff 55%, #2b9cff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-description {
+  max-width: 780px;
+  margin: 0;
+  color: #e2edf8;
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+.hero-summary {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.btn-ghost {
+  color: var(--muted);
+}
+
+.hero-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 26px;
+}
+
+.hero-chip-row span,
+.tag-list span,
+.project-stack span,
+.technology-marquee span {
+  padding: 7px 11px;
+  border: 1px solid rgba(106,199,255,.16);
+  border-radius: 999px;
+  color: #ccecff;
+  background: rgba(43,156,255,.065);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hero-profile-card {
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(18,38,65,.94), rgba(10,23,40,.96));
+  box-shadow: 0 28px 80px rgba(0,0,0,.32);
+}
+
+.profile-card-top {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-monogram {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 24px;
+  color: #04111c;
+  background: linear-gradient(135deg, #2b9cff, #7ee1ff);
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.profile-role {
+  color: var(--primary-2);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.profile-card-top h2 {
+  margin: 4px 0 0;
+  font-size: 30px;
+}
+
+.profile-card-top p {
+  margin: 2px 0 0;
+  color: var(--muted);
+}
+
+.profile-focus {
+  margin: 26px 0;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,.025);
+}
+
+.profile-focus span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.profile-focus strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 17px;
+}
+
+.profile-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.profile-stat-grid div {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,.02);
+}
+
+.profile-stat-grid strong {
+  display: block;
+  font-size: 24px;
+}
+
+.profile-stat-grid span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 70px;
+}
+
+.about-story {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.about-lead {
+  color: white;
+  font-size: 24px;
+  line-height: 1.55;
+}
+
+.about-principles {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.about-principles div {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,.025);
+}
+
+.about-principles strong,
+.about-principles span {
+  display: block;
+}
+
+.about-principles span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.metric-section,
+.section-projects,
+.achievement-section {
+  background: rgba(255,255,255,.018);
+}
+
+.metric-showcase {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.metric-tile {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #10213a, #0b1728);
+}
+
+.metric-value {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--primary-2);
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -.04em;
+}
+
+.metric-tile strong {
+  display: block;
+}
+
+.metric-tile p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.section-heading.center {
+  max-width: 850px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.expertise-card {
+  min-height: 320px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #10213a, #0b1728);
+}
+
+.expertise-number {
+  color: rgba(255,255,255,.2);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.expertise-card h3 {
+  margin: 22px 0 12px;
+  font-size: 25px;
+}
+
+.expertise-card p {
+  color: var(--muted);
+}
+
+.tag-list,
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.featured-project-list {
+  display: grid;
+  gap: 22px;
+}
+
+.featured-project {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr) 190px;
+  gap: 26px;
+  align-items: start;
+  padding: 34px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #10213a, #0b1728);
+}
+
+.project-index {
+  color: rgba(255,255,255,.18);
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.project-client {
+  color: var(--primary-2);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .11em;
+}
+
+.project-main h3 {
+  margin: 8px 0 14px;
+  font-size: 30px;
+  letter-spacing: -.04em;
+}
+
+.project-main p,
+.project-main li {
+  color: var(--muted);
+}
+
+.project-result {
+  padding: 20px;
+  border: 1px solid rgba(106,199,255,.17);
+  border-radius: 16px;
+  background: rgba(43,156,255,.07);
+}
+
+.project-result strong,
+.project-result span {
+  display: block;
+}
+
+.project-result strong {
+  color: var(--primary-2);
+  font-size: 28px;
+}
+
+.project-result span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.section-cta {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.architecture-layout {
+  position: relative;
+}
+
+.architecture-board {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(43,156,255,.13), transparent 35%),
+    linear-gradient(180deg, #0e2037, #091524);
+}
+
+.architecture-column {
+  display: grid;
+  gap: 10px;
+}
+
+.architecture-label {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.architecture-node {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255,255,255,.025);
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.architecture-node.accent {
+  border-color: rgba(106,199,255,.28);
+  color: #dff6ff;
+  background: rgba(43,156,255,.1);
+}
+
+.architecture-arrow,
+.architecture-separator {
+  color: var(--primary-2);
+  text-align: center;
+}
+
+.architecture-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.architecture-principle-grid article {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,.02);
+}
+
+.architecture-principle-grid strong,
+.architecture-principle-grid span {
+  display: block;
+}
+
+.architecture-principle-grid span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.career-journey {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.career-step {
+  padding: 26px;
+  border-top: 3px solid var(--primary);
+  background: rgba(255,255,255,.025);
+}
+
+.career-year {
+  color: var(--primary-2);
+  font-weight: 900;
+}
+
+.career-step h3 {
+  min-height: 58px;
+}
+
+.career-step p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.achievement-card {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #10213a, #0b1728);
+}
+
+.achievement-label {
+  color: var(--primary-2);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.achievement-card strong {
+  display: block;
+  margin-top: 18px;
+  font-size: 24px;
+}
+
+.achievement-card p {
+  color: var(--muted);
+}
+
+.technology-marquee {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 11px;
+}
+
+.technology-marquee span {
+  padding: 11px 15px;
+  font-size: 13px;
+}
+
+.final-cta {
+  padding: 110px 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(43,156,255,.18), transparent 35%),
+    #081525;
+}
+
+.final-cta-inner {
+  text-align: center;
+}
+
+.final-cta h2 {
+  margin: 14px 0 20px;
+  font-size: clamp(48px, 7vw, 84px);
+  line-height: 1.02;
+  letter-spacing: -.065em;
+}
+
+.final-cta p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.final-cta .hero-actions {
+  justify-content: center;
+}
+
+@media (max-width: 1050px) {
+  .hero-layout,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-showcase,
+  .expertise-grid,
+  .architecture-principle-grid,
+  .career-journey,
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .architecture-board {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-separator {
+    transform: rotate(90deg);
+  }
+
+  .featured-project {
+    grid-template-columns: 55px 1fr;
+  }
+
+  .project-result {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-enterprise {
+    padding-top: 82px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 16vw, 72px);
+  }
+
+  .profile-card-top,
+  .profile-stat-grid,
+  .metric-showcase,
+  .expertise-grid,
+  .architecture-principle-grid,
+  .career-journey,
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-project {
+    grid-template-columns: 1fr;
+    padding: 26px;
+  }
+
+  .project-result {
+    grid-column: auto;
+  }
+
+  .project-index {
+    font-size: 24px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="김민서 포트폴리오 홈">
+        <span class="brand-mark">MEGAZONECLOUD</span>
+        <span class="brand-text">KIM MINSEO</span>
+      </a>
+
+      <button class="mobile-menu-button" type="button" aria-label="메뉴 열기">
+        ☰
+      </button>
+
+      <nav class="desktop-nav" aria-label="주요 메뉴">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#career">Career</a>
+        <a href="#achievements">Achievements</a>
+        <a href="./Profile/contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <nav class="mobile-nav" aria-label="모바일 메뉴">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#projects">Projects</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#career">Career</a>
+      <a href="#achievements">Achievements</a>
+      <a href="./Profile/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero hero-enterprise">
+      <div class="hero-grid-overlay"></div>
+
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <div class="hero-kicker">
+            <span class="status-dot"></span>
+            ENTERPRISE AI PLATFORM ARCHITECT
+          </div>
+
+          <h1>
+            Secure.<br>
+            Scalable.<br>
+            <span class="gradient-title">Production-Ready AI.</span>
+          </h1>
+
+          <p class="hero-description">
+            개발자로 시작해 백엔드·플랫폼 개발과 인프라 운영을 경험했고,
+            현재는 Azure AI Foundry와 Microsoft Fabric을 중심으로
+            엔터프라이즈 AI·데이터 플랫폼을 설계하고 운영합니다.
+          </p>
+
+          <p class="hero-summary">
+            Zero Trust 환경에서 AI 서비스, 데이터 플랫폼, 멀티 클라우드 연계,
+            CI/CD 자동화, 관측성, 운영 표준화를 실제 프로젝트에 적용해 왔습니다.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">대표 프로젝트</a>
+            <a class="btn btn-secondary" href="./Profile/index.html">상세 프로필</a>
+            <a class="btn btn-ghost" href="./Profile/contact.html">Contact</a>
+          </div>
+
+          <div class="hero-chip-row">
+            <span>Azure AI Foundry</span>
+            <span>Microsoft Fabric</span>
+            <span>Azure OpenAI</span>
+            <span>AKS</span>
+            <span>APIM</span>
+            <span>Workload Identity</span>
+          </div>
+        </div>
+
+        <aside class="hero-profile-card reveal">
+          <div class="profile-card-top">
+            <div class="profile-monogram">KMS</div>
+            <div>
+              <span class="profile-role">Platform Architect · AI Platform Engineer</span>
+              <h2>김민서</h2>
+              <p>MegazoneCloud · Manager</p>
+            </div>
+          </div>
+
+          <div class="profile-focus">
+            <span>Current Focus</span>
+            <strong>Enterprise AI & Data Platform</strong>
+          </div>
+
+          <div class="profile-stat-grid">
+            <div>
+              <strong>6+</strong>
+              <span>Years in IT</span>
+            </div>
+            <div>
+              <strong>100+</strong>
+              <span>Azure/Fabric Issues</span>
+            </div>
+            <div>
+              <strong>9+</strong>
+              <span>Major Projects</span>
+            </div>
+            <div>
+              <strong>4.045</strong>
+              <span>AI Major GPA</span>
+            </div>
+          </div>
+
+          <div class="availability">
+            <span class="availability-dot"></span>
+            Azure AI · Platform Architecture · DevOps/SRE
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-about">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <span class="eyebrow">ABOUT ME</span>
+          <h2>개발자 관점으로<br>플랫폼을 설계합니다.</h2>
+        </div>
+
+        <div class="about-story reveal">
+          <p class="about-lead">
+            Java Backend Engineer로 커리어를 시작해
+            플랫폼 개발, 운영, 인프라, 데이터베이스, 배포 자동화까지
+            End-to-End로 경험했습니다.
+          </p>
+
+          <p>
+            현재는 Azure AI Platform Engineer 및 Platform Architect로서
+            Azure AI Foundry, Azure OpenAI, Azure AI Search,
+            Microsoft Fabric, AKS 기반의 엔터프라이즈 AI·데이터 플랫폼을
+            설계하고 검증하며 운영 표준을 수립합니다.
+          </p>
+
+          <p>
+            특히 Public Network 사용이 제한된 Zero Trust 환경에서
+            Private Endpoint, Managed Identity, Workload Identity,
+            RBAC, NSG를 결합해 보안 구조를 현대화하고,
+            개발팀이 재사용할 수 있는 샘플 코드와 가이드로 정착시킨 경험이 강점입니다.
+          </p>
+
+          <div class="about-principles">
+            <div>
+              <strong>Identity First</strong>
+              <span>Access Key보다 Identity 기반 인증을 우선합니다.</span>
+            </div>
+            <div>
+              <strong>Private by Default</strong>
+              <span>엔터프라이즈 보안 요구를 설계의 기본값으로 봅니다.</span>
+            </div>
+            <div>
+              <strong>Operational Excellence</strong>
+              <span>배포 이후의 운영·관측·장애 대응까지 설계합니다.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS -->
+    <section class="section metric-section">
+      <div class="container metric-showcase">
+        <article class="metric-tile reveal">
+          <span class="metric-value">100+</span>
+          <strong>Azure / Fabric Technical Issues</strong>
+          <p>고난이도 네트워크, 인증, Private Link, Fabric 이슈 해결</p>
+        </article>
+
+        <article class="metric-tile reveal">
+          <span class="metric-value">30m → 1m30s</span>
+          <strong>Query Performance Optimization</strong>
+          <p>운영 리포트 병목 분석 및 데이터베이스 쿼리 최적화</p>
+        </article>
+
+        <article class="metric-tile reveal">
+          <span class="metric-value">195</span>
+          <strong>Azure Resources Assessed</strong>
+          <p>Subscription Migration 사전 분석 및 리스크 제거</p>
+        </article>
+
+        <article class="metric-tile reveal">
+          <span class="metric-value">DEV · STG · PRD</span>
+          <strong>Enterprise Operations</strong>
+          <p>환경별 배포·보안·검증 패턴 표준화</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section id="expertise" class="section">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">CORE EXPERTISE</span>
+          <h2>AI 서비스를 운영 가능한 플랫폼으로 전환합니다.</h2>
+          <p>
+            단일 서비스 구축이 아니라 보안, 네트워크, 인증, 배포,
+            관측성, 장애 대응을 포함한 전체 플랫폼 관점에서 접근합니다.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-card reveal">
+            <span class="expertise-number">01</span>
+            <h3>Enterprise AI Platform</h3>
+            <p>
+              Azure AI Foundry, Azure OpenAI, AI Search,
+              Document Intelligence를 결합한 엔터프라이즈 AI 서비스 구조
+            </p>
+            <div class="tag-list">
+              <span>Azure OpenAI</span>
+              <span>AI Search</span>
+              <span>RAG</span>
+              <span>Content Safety</span>
+            </div>
+          </article>
+
+          <article class="expertise-card reveal">
+            <span class="expertise-number">02</span>
+            <h3>Microsoft Fabric Engineering</h3>
+            <p>
+              Fabric Warehouse, Lakehouse, Pipeline, Notebook,
+              Eventstream, Capacity 운영 및 CI/CD 자동화
+            </p>
+            <div class="tag-list">
+              <span>Warehouse</span>
+              <span>Pipeline</span>
+              <span>Eventstream</span>
+              <span>Capacity</span>
+            </div>
+          </article>
+
+          <article class="expertise-card reveal">
+            <span class="expertise-number">03</span>
+            <h3>Zero Trust Architecture</h3>
+            <p>
+              Private Endpoint, Private DNS, Managed Identity,
+              Workload Identity, RBAC 기반의 보안 아키텍처
+            </p>
+            <div class="tag-list">
+              <span>Private Link</span>
+              <span>RBAC</span>
+              <span>W.I.</span>
+              <span>M.I.</span>
+            </div>
+          </article>
+
+          <article class="expertise-card reveal">
+            <span class="expertise-number">04</span>
+            <h3>Cloud Native & DevOps</h3>
+            <p>
+              AKS, APIM, GitLab CI/CD, ArgoCD, GitHub Actions를 활용한
+              배포 및 운영 자동화
+            </p>
+            <div class="tag-list">
+              <span>AKS</span>
+              <span>APIM</span>
+              <span>ArgoCD</span>
+              <span>GitLab</span>
+            </div>
+          </article>
+
+          <article class="expertise-card reveal">
+            <span class="expertise-number">05</span>
+            <h3>Multi-Cloud Integration</h3>
+            <p>
+              Azure, AWS, Snowflake를 Microsoft Fabric과 연결하는
+              데이터 이동 및 보안 구조 설계
+            </p>
+            <div class="tag-list">
+              <span>Azure</span>
+              <span>AWS S3</span>
+              <span>AWS RDS</span>
+              <span>Snowflake</span>
+            </div>
+          </article>
+
+          <article class="expertise-card reveal">
+            <span class="expertise-number">06</span>
+            <h3>Backend & Platform Engineering</h3>
+            <p>
+              Java/Spring, Python/FastAPI 기반 서비스 개발과
+              운영 플랫폼, 검증 도구, REST API 구현
+            </p>
+            <div class="tag-list">
+              <span>Java</span>
+              <span>Spring</span>
+              <span>Python</span>
+              <span>FastAPI</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">FEATURED PROJECTS</span>
+          <h2>대표 프로젝트</h2>
+          <p>
+            아키텍처 설계, 기술 리딩, 구현, 운영 안정화까지
+            실제 엔터프라이즈 환경에서 수행한 프로젝트입니다.
+          </p>
+        </div>
+
+        <div class="featured-project-list">
+          <article class="featured-project reveal">
+            <div class="project-index">01</div>
+            <div class="project-main">
+              <span class="project-client">AMOREPACIFIC</span>
+              <h3>Enterprise Azure AI & Data Platform</h3>
+              <p>
+                Azure Part PL 및 Azure SME로서 Azure AI Foundry,
+                Microsoft Fabric, AKS, APIM, Datadog을 연결한
+                엔터프라이즈 AI·데이터 플랫폼을 설계하고 운영했습니다.
+              </p>
+
+              <ul>
+                <li>Access Key 기반 인증을 Workload Identity 중심 구조로 전환</li>
+                <li>Private Endpoint 기반 Zero Trust 운영 구조 표준화</li>
+                <li>Fabric Capacity, Notebook, Warehouse, Pipeline 운영 안정화</li>
+                <li>Snowflake, AWS S3/RDS, Azure Blob 멀티 클라우드 연계</li>
+                <li>FastAPI 기반 Self-Service Validation Platform 구축</li>
+              </ul>
+
+              <div class="project-stack">
+                <span>Azure AI Foundry</span>
+                <span>Microsoft Fabric</span>
+                <span>AKS</span>
+                <span>APIM</span>
+                <span>Datadog</span>
+                <span>ArgoCD</span>
+              </div>
+            </div>
+            <div class="project-result">
+              <strong>100+</strong>
+              <span>Azure/Fabric Issues Resolved</span>
+            </div>
+          </article>
+
+          <article class="featured-project reveal">
+            <div class="project-index">02</div>
+            <div class="project-main">
+              <span class="project-client">SAMSUNG SECURITIES</span>
+              <h3>Azure OpenAI Translation & Summary Platform</h3>
+              <p>
+                해외 투자정보 번역·요약 서비스에서 Azure OpenAI 기반
+                AI 인프라 및 보안 아키텍처를 담당했습니다.
+              </p>
+
+              <ul>
+                <li>Azure OpenAI 및 Private Endpoint 구성</li>
+                <li>APIM Premium 기반 API 운영 표준 수립</li>
+                <li>Managed Identity 연동 및 개발 가이드 제공</li>
+                <li>Prompt Shield, Content Safety, PII 대응</li>
+              </ul>
+
+              <div class="project-stack">
+                <span>Azure OpenAI</span>
+                <span>APIM Premium</span>
+                <span>Managed Identity</span>
+                <span>Content Safety</span>
+              </div>
+            </div>
+            <div class="project-result">
+              <strong>Secure</strong>
+              <span>AI Service Architecture</span>
+            </div>
+          </article>
+
+          <article class="featured-project reveal">
+            <div class="project-index">03</div>
+            <div class="project-main">
+              <span class="project-client">KB HEALTHCARE</span>
+              <h3>B2B / B2C Healthcare Platform</h3>
+              <p>
+                AKS와 데이터베이스 기반 환경에서 Backend 및 Infra 기술 지원,
+                고가용성 검증, Kubernetes 네트워크 장애 분석을 수행했습니다.
+              </p>
+
+              <ul>
+                <li>MySQL / PostgreSQL 이중화 및 Failover 검증</li>
+                <li>JPA Replica 구성 및 성능 테스트</li>
+                <li>Kubernetes Proxy 장애 분석 및 운영 안정성 개선</li>
+                <li>Spring Boot 기반 부하 테스트 코드 개발</li>
+              </ul>
+
+              <div class="project-stack">
+                <span>Spring Boot</span>
+                <span>AKS</span>
+                <span>MySQL</span>
+                <span>PostgreSQL</span>
+                <span>JPA</span>
+              </div>
+            </div>
+            <div class="project-result">
+              <strong>Award</strong>
+              <span>Microsoft Partner Award Project</span>
+            </div>
+          </article>
+
+          <article class="featured-project reveal">
+            <div class="project-index">04</div>
+            <div class="project-main">
+              <span class="project-client">INTERNAL PLATFORM POC</span>
+              <h3>Microsoft Fabric Dynamic Autoscaling</h3>
+              <p>
+                Fabric Capacity의 실시간 사용량을 이벤트 기반으로 수집하고,
+                정책에 따라 SKU를 자동 상·하향하는 운영형 구조를 구현했습니다.
+              </p>
+
+              <ul>
+                <li>Fabric Eventstream → Event Hub → AKS CronJob 구조</li>
+                <li>평균 사용률 및 피크 사용률 기반 정책 엔진</li>
+                <li>Workload Identity 기반 Azure Resource Manager 호출</li>
+                <li>Notebook 세션 의존성을 제거한 즉시 실행형 아키텍처</li>
+              </ul>
+
+              <div class="project-stack">
+                <span>Fabric Eventstream</span>
+                <span>Event Hub</span>
+                <span>AKS CronJob</span>
+                <span>Python</span>
+                <span>Workload Identity</span>
+              </div>
+            </div>
+            <div class="project-result">
+              <strong>Dynamic</strong>
+              <span>Cost & Performance Control</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-cta reveal">
+          <a class="btn btn-primary" href="./Profile/projects.html">전체 프로젝트 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section id="architecture" class="section architecture-section">
+      <div class="container architecture-layout">
+        <div class="section-heading reveal">
+          <span class="eyebrow">ARCHITECTURE</span>
+          <h2>Enterprise AI Platform Pattern</h2>
+          <p>
+            사용자 요청부터 AI 서비스, 데이터 플랫폼, 관측성까지
+            하나의 운영 모델로 연결합니다.
+          </p>
+        </div>
+
+        <div class="architecture-board reveal">
+          <div class="architecture-column">
+            <span class="architecture-label">ENTRY</span>
+            <div class="architecture-node">User / Enterprise App</div>
+            <div class="architecture-arrow">↓</div>
+            <div class="architecture-node accent">API Management Premium</div>
+          </div>
+
+          <div class="architecture-separator">→</div>
+
+          <div class="architecture-column">
+            <span class="architecture-label">APPLICATION</span>
+            <div class="architecture-node">AKS / FastAPI</div>
+            <div class="architecture-arrow">↓</div>
+            <div class="architecture-node">Workload Identity</div>
+          </div>
+
+          <div class="architecture-separator">→</div>
+
+          <div class="architecture-column">
+            <span class="architecture-label">AI & DATA</span>
+            <div class="architecture-node accent">Azure AI Foundry</div>
+            <div class="architecture-node">Azure AI Search</div>
+            <div class="architecture-node accent">Microsoft Fabric</div>
+          </div>
+
+          <div class="architecture-separator">→</div>
+
+          <div class="architecture-column">
+            <span class="architecture-label">OPERATIONS</span>
+            <div class="architecture-node">Private Endpoint / DNS</div>
+            <div class="architecture-node">Datadog / Azure Monitor</div>
+            <div class="architecture-node">GitLab / ArgoCD</div>
+          </div>
+        </div>
+
+        <div class="architecture-principle-grid">
+          <article class="reveal">
+            <strong>Security</strong>
+            <span>Identity, RBAC, Private Link, NSG</span>
+          </article>
+          <article class="reveal">
+            <strong>Scalability</strong>
+            <span>AKS, Fabric Capacity, Event-driven Automation</span>
+          </article>
+          <article class="reveal">
+            <strong>Observability</strong>
+            <span>Structured Logging, Metrics, Validation</span>
+          </article>
+          <article class="reveal">
+            <strong>Automation</strong>
+            <span>CI/CD, ArgoCD, GitHub Actions, CronJob</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER -->
+    <section id="career" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">CAREER JOURNEY</span>
+          <h2>Backend에서 Enterprise AI Platform까지</h2>
+        </div>
+
+        <div class="career-journey">
+          <article class="career-step reveal">
+            <span class="career-year">2017</span>
+            <h3>Operations Foundation</h3>
+            <p>방송통신 장비 유지보수 및 관제 운영을 통해 장애 대응과 운영 기본기를 익혔습니다.</p>
+          </article>
+
+          <article class="career-step reveal">
+            <span class="career-year">2019</span>
+            <h3>Backend & Production Platform</h3>
+            <p>호텔 PMS의 Java/Spring 개발, Linux 운영, DB, Jenkins, Docker, 장애 대응을 End-to-End로 수행했습니다.</p>
+          </article>
+
+          <article class="career-step reveal">
+            <span class="career-year">2021</span>
+            <h3>Enterprise Backend Development</h3>
+            <p>현대백화점 온라인 식품몰의 정기구독, 주문, 자동결제, 배송 및 마이페이지 기능을 개발했습니다.</p>
+          </article>
+
+          <article class="career-step reveal">
+            <span class="career-year">2022—</span>
+            <h3>Azure AI Platform Architect</h3>
+            <p>대기업 고객을 대상으로 Azure AI, Microsoft Fabric, AKS, Zero Trust 기반 플랫폼 설계와 기술 리딩을 수행하고 있습니다.</p>
+          </article>
+        </div>
+
+        <div class="section-cta reveal">
+          <a class="btn btn-secondary" href="./Profile/career.html">전체 경력 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="section achievement-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">ACHIEVEMENTS</span>
+          <h2>기술적 결과로 증명합니다.</h2>
+        </div>
+
+        <div class="achievement-grid">
+          <article class="achievement-card reveal">
+            <span class="achievement-label">Performance</span>
+            <strong>30분 이상 → 약 1분 30초</strong>
+            <p>복잡한 운영 리포트 쿼리 병목을 분석하고 조회 성능을 개선했습니다.</p>
+          </article>
+
+          <article class="achievement-card reveal">
+            <span class="achievement-label">Architecture</span>
+            <strong>Zero Trust Standardization</strong>
+            <p>Access Key 중심 구조를 Workload Identity와 Managed Identity 중심으로 전환했습니다.</p>
+          </article>
+
+          <article class="achievement-card reveal">
+            <span class="achievement-label">Award</span>
+            <strong>Microsoft Partner Award Project</strong>
+            <p>KB헬스케어 플랫폼 프로젝트가 2023 Microsoft Partner Award 사례로 선정되었습니다.</p>
+          </article>
+
+          <article class="achievement-card reveal">
+            <span class="achievement-label">Education</span>
+            <strong>AI Major GPA 4.045 / 4.5</strong>
+            <p>한국방송통신대학교 프라임칼리지 AI 전공을 통해 실무 경험을 이론적으로 확장했습니다.</p>
+          </article>
+
+          <article class="achievement-card reveal">
+            <span class="achievement-label">Certification</span>
+            <strong>AZ-140 · 정보처리기사</strong>
+            <p>Azure 및 소프트웨어 개발 역량을 공식 자격으로 검증했습니다.</p>
+          </article>
+
+          <article class="achievement-card reveal">
+            <span class="achievement-label">Leadership</span>
+            <strong>Technical Guide & Standard</strong>
+            <p>아키텍처, 네이밍 규칙, 개발 샘플, 운영 가이드를 작성해 다수 프로젝트에서 재사용했습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section technology-section">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">TECHNOLOGY</span>
+          <h2>Technology Stack</h2>
+        </div>
+
+        <div class="technology-marquee reveal">
+          <span>Azure AI Foundry</span>
+          <span>Azure OpenAI</span>
+          <span>Microsoft Fabric</span>
+          <span>Azure AI Search</span>
+          <span>AKS</span>
+          <span>APIM</span>
+          <span>FastAPI</span>
+          <span>Python</span>
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>GitLab CI/CD</span>
+          <span>ArgoCD</span>
+          <span>Datadog</span>
+          <span>Snowflake</span>
+          <span>AWS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta">
+      <div class="container final-cta-inner reveal">
+        <span class="eyebrow">LET'S BUILD TOGETHER</span>
+        <h2>
+          Enterprise AI를<br>
+          운영 가능한 플랫폼으로.
+        </h2>
+        <p>
+          Azure AI Platform, Cloud Architecture,
+          Platform Engineering, DevOps/SRE 분야의
+          새로운 기회와 협업을 기다립니다.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="./Profile/contact.html">연락하기</a>
+          <a class="btn btn-secondary" href="./Profile/projects.html">프로젝트 보기</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Kim Minseo Portfolio</span>
+      <span>Azure AI · Microsoft Fabric · AKS · Platform Architecture</span>
+    </div>
+  </footer>
+
+  <script>
+/* common.js */
+(function(){
+const q=(s,p=document)=>p.querySelector(s),qa=(s,p=document)=>[...p.querySelectorAll(s)];
+document.addEventListener('DOMContentLoaded',function(){
+ const path=location.pathname.split('/').pop()||'index.html';
+ qa('nav a').forEach(function(a){if((a.getAttribute('href')||'').endsWith(path)){a.classList.add('is-active');a.setAttribute('aria-current','page');}});
+ const btn=q('.mobile-menu-button'),menu=q('.mobile-nav');
+ if(btn&&menu){btn.addEventListener('click',function(){menu.classList.toggle('is-open');});}
+ let top=document.createElement('button');top.textContent='↑';top.title='맨 위로';
+ Object.assign(top.style,{position:'fixed',right:'24px',bottom:'24px',width:'48px',height:'48px',border:'0',borderRadius:'50%',background:'#2b9cff',color:'#fff',fontSize:'20px',display:'none',cursor:'pointer',zIndex:'999'});
+ document.body.appendChild(top);top.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'});});
+ addEventListener('scroll',function(){top.style.display=scrollY>350?'block':'none';});
+});
+})();
+
+
+/* animation.js */
+document.addEventListener('DOMContentLoaded',function(){
+ const observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target);}});},{threshold:.12});
+ document.querySelectorAll('.reveal').forEach(function(el){observer.observe(el);});
+ document.querySelectorAll('[data-count]').forEach(function(el){let done=false;const target=Number(el.dataset.count||0);const o=new IntersectionObserver(function(entries){if(entries[0].isIntersecting&&!done){done=true;let n=0;const timer=setInterval(function(){n=Math.min(target,n+Math.max(1,Math.ceil(target/40)));el.textContent=n;if(n>=target)clearInterval(timer);},30);o.disconnect();}});o.observe(el);});
+});
+
+
+/* typing.js */
+document.addEventListener('DOMContentLoaded', () => {
+  const hero = document.querySelector('.hero-enterprise');
+
+  if (!hero) {
+    return;
+  }
+
+  hero.addEventListener('pointermove', (event) => {
+    const rect = hero.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+    hero.style.setProperty('--pointer-x', `${x}%`);
+    hero.style.setProperty('--pointer-y', `${y}%`);
+  });
+});
+
+  </script>
+</body>
+</html>

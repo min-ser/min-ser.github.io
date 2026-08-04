@@ -1,0 +1,39 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>설유진 | 캐릭터</title><link rel="stylesheet" href="../../../assets/css/common.css?v=0.8.4"><style>
+.character-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.character-card{display:block;text-decoration:none;color:inherit;border:1px solid rgba(211,180,119,.25);border-radius:12px;overflow:hidden;background:#15171b;transition:.2s transform,.2s border-color}
+.character-card:hover{transform:translateY(-4px);border-color:#d3b477}
+.character-card img{width:100%;height:420px;object-fit:cover;object-position:top;background:#111}
+.character-card .body{padding:16px}.character-card h2{margin:0 0 6px}.character-card p{color:#b9ad9d;line-height:1.6}
+.badge{display:inline-block;padding:4px 8px;border:1px solid rgba(211,180,119,.35);border-radius:999px;color:#d3b477;font-size:12px}
+.asset-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.asset-card{border:1px solid rgba(211,180,119,.2);border-radius:10px;overflow:hidden;background:#15171b}
+.asset-card button{display:block;width:100%;padding:0;border:0;background:none;cursor:pointer}
+.asset-card img{display:block;width:100%;height:420px;object-fit:contain;background:#101216}
+.asset-card .meta{padding:12px}.asset-card h3{margin:0 0 6px;font-size:16px}.asset-card small{display:block;color:#aaa;margin-top:6px}
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.filter-bar button{padding:8px 12px;border:1px solid #5a4d3c;background:#17181b;color:#eee;border-radius:999px;cursor:pointer}.filter-bar button.active{background:#d3b477;color:#111}
+.lightbox{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.88);padding:24px}.lightbox.open{display:flex}.lightbox img{max-width:92vw;max-height:88vh;object-fit:contain}.lightbox button{position:absolute;top:18px;right:18px;padding:10px 14px}
+@media(max-width:1200px){.character-grid{grid-template-columns:repeat(3,1fr)}.asset-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){.character-grid,.asset-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.character-grid,.asset-grid{grid-template-columns:1fr}.character-card img,.asset-card img{height:auto;max-height:620px}}
+</style></head>
+<body><header class="site-header"><a class="brand" href="../"><span class="brand-en">CHARACTERS</span><span class="brand-ko">설유진</span></a>
+<nav class="site-nav"><a href="../">캐릭터 목록</a><a href="../../../index.html">홈</a></nav></header>
+<main><section class="page-hero"><p class="eyebrow">정파</p><h1>설유진</h1><p>은백색 장발과 푸른 눈, 흑청 계열 복장이 특징인 차분하고 고결한 검사.</p></section>
+<section class="content-wrap"><div class="filter-bar"><button class="active" data-filter="all">전체</button><button data-filter="기본">기본</button><button data-filter="레퍼런스">레퍼런스</button></div><div class="asset-grid">
+        <article class="asset-card" data-category="기본">
+          <button class="open-lightbox" data-full="../../../assets/images/characters/seol-yujin/seol-yujin-basic-4k.webp" data-title="기본 스탠딩 4K"><img src="../../../assets/images/characters/thumbnails/seol-yujin/seol-yujin-basic-4k.webp" alt="기본 스탠딩 4K"></button>
+          <div class="meta"><h3>기본 스탠딩 4K</h3><span class="badge">기본</span><small>사용중</small></div>
+        </article>
+        <article class="asset-card" data-category="레퍼런스">
+          <button class="open-lightbox" data-full="../../../assets/images/characters/seol-yujin/seol-yujin-reference-01.webp" data-title="메인 비주얼 레퍼런스"><img src="../../../assets/images/characters/thumbnails/seol-yujin/seol-yujin-reference-01.webp" alt="메인 비주얼 레퍼런스"></button>
+          <div class="meta"><h3>메인 비주얼 레퍼런스</h3><span class="badge">레퍼런스</span><small>원본 보존</small></div>
+        </article></div></section></main>
+<div class="lightbox" id="lightbox"><button id="close-lightbox">닫기</button><img id="lightbox-image" alt=""></div>
+<script>
+const bs=[...document.querySelectorAll('[data-filter]')], cs=[...document.querySelectorAll('.asset-card')];
+bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;cs.forEach(c=>c.style.display=(f==='all'||c.dataset.category===f)?'block':'none')});
+const lb=document.getElementById('lightbox'), im=document.getElementById('lightbox-image');
+document.querySelectorAll('.open-lightbox').forEach(b=>b.onclick=()=>{im.src=b.dataset.full;im.alt=b.dataset.title;lb.classList.add('open')});
+document.getElementById('close-lightbox').onclick=()=>lb.classList.remove('open');lb.onclick=e=>{if(e.target===lb)lb.classList.remove('open')};
+</script></body></html>
