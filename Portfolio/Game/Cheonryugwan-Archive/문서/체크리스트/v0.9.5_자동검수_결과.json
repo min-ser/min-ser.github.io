@@ -1,0 +1,48 @@
+{
+  "version": "0.9.5",
+  "sourceProject": "Cheonryugwan-Archive-v0.9.4-Quality-Gate-Asset-Browser",
+  "sourceArchives": [
+    "서하린 이미지 원본.zip",
+    "설유진.zip",
+    "연무설.zip",
+    "적월아.zip"
+  ],
+  "jeonSeoyulSource": "전서율 스탠드 이미지 4k(2).png",
+  "characters": {
+    "seo-harin": {
+      "name": "서하린",
+      "imageCount": 21,
+      "gameExpressions": 9,
+      "gameBattleAssets": 10
+    },
+    "jeon-seoyul": {
+      "name": "전서율",
+      "imageCount": 1,
+      "gameExpressions": 1,
+      "gameBattleAssets": 0
+    },
+    "seol-yujin": {
+      "name": "설유진",
+      "imageCount": 3,
+      "gameExpressions": 2,
+      "gameBattleAssets": 0
+    },
+    "yeon-museol": {
+      "name": "연무설",
+      "imageCount": 3,
+      "gameExpressions": 2,
+      "gameBattleAssets": 0
+    },
+    "jeok-wola": {
+      "name": "적월아",
+      "imageCount": 3,
+      "gameExpressions": 2,
+      "gameBattleAssets": 0
+    }
+  },
+  "resourceValidation": "PASS: HTML links and manifest resources",
+  "projectValidation": "PASS",
+  "unicodePaths": "PASS",
+  "oldCharacterDirectoriesRemoved": true,
+  "totalFiles": 447
+}

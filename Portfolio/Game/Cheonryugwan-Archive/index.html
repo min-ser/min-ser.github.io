@@ -7,28 +7,12 @@
   <meta name="description" content="Cheonryugwan Archive - 천류관 세계관 아카이브와 인터랙티브 노벨 프로젝트">
   <title>Cheonryugwan Archive</title>
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./assets/css/common.css?v=0.8.4.1">
+  <link rel="stylesheet" href="assets/css/common.css?v=0.9.8.5">
   <link rel="stylesheet" href="./assets/css/home.css?v=0.8.4.1">
 </head>
 <body>
   <div id="app-shell">
-    <header class="site-header">
-      <a class="brand" href="./index.html">
-        <span class="brand-en">CHEONRYUGWAN ARCHIVE</span>
-        <span class="brand-ko">천류관 : 흐름의 기록</span>
-      </a>
-      <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button>
-      <nav class="site-nav" aria-label="주요 메뉴">
-        <a class="active" href="./index.html">홈</a>
-        <a href="./game/">게임</a>
-        <a href="./pages/archive/">아카이브</a>
-        <a href="./pages/story/">스토리</a>
-        <a href="./pages/characters/">캐릭터</a>
-        <a href="./pages/world/">세계관</a>
-        <a href="./pages/roadmap/">로드맵</a>
-        <a href="./pages/about/">소개</a>
-      </nav>
-    </header>
+    <header class="site-header" data-site-header data-active="home" data-subtitle="천류관 : 흐름의 기록"></header>
 
     <main>
       <section class="hero">
@@ -74,8 +58,8 @@
       <section class="status-panel">
         <div>
           <p class="eyebrow">CURRENT RELEASE</p>
-          <h2>v0.8.4.2 — Interaction & JavaScript Fix</h2>
-          <p>홈·게임·아카이브·스토리·캐릭터·로드맵 버튼의 클릭 안정성을 수정하고 로컬 캐시 충돌을 방지했습니다.</p>
+          <h2>v0.9.8.5.1 — Header & Version Synchronization</h2>
+          <p>현재 릴리스 표기와 모든 사이트 페이지의 공통 헤더를 동기화했습니다.</p>
         </div>
         <a class="text-link" href="./pages/roadmap/">진행 상황 보기 →</a>
       </section>
@@ -86,7 +70,7 @@
       <div>
         <a href="./pages/legal/">License & Copyright</a>
         <span>·</span>
-        <span>v0.8.4.2</span>
+        <span>v0.9.8.5.1</span>
       </div>
     </footer>
   </div>
@@ -96,5 +80,6 @@
     navigator.serviceWorker.register("./service-worker.js?v=0.8.4.1").catch(console.warn);
   }
 </script>
+<script src="assets/js/site-header.js?v=0.9.8.5"></script>
 </body>
 </html>

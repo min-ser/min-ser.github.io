@@ -1,40 +1,107 @@
 {
-  "jeon-seoyul": {
-    "name": "전서율",
+  "seo-harin": {
+    "name": "서하린",
     "assets": {
-      "default": "./assets/images/characters/jeon-seoyul/standing-runtime.webp"
+      "default": "./assets/images/characters/seo-harin/default.webp",
+      "expression-01": "./assets/images/characters/seo-harin/expressions/expression-01.webp",
+      "expression-02": "./assets/images/characters/seo-harin/expressions/expression-02.webp",
+      "expression-03": "./assets/images/characters/seo-harin/expressions/expression-03.webp",
+      "expression-04": "./assets/images/characters/seo-harin/expressions/expression-04.webp",
+      "expression-05": "./assets/images/characters/seo-harin/expressions/expression-05.webp",
+      "expression-06": "./assets/images/characters/seo-harin/expressions/expression-06.webp",
+      "expression-07": "./assets/images/characters/seo-harin/expressions/expression-07.webp",
+      "expression-08": "./assets/images/characters/seo-harin/expressions/expression-08.webp",
+      "face-expression-01": "./assets/images/characters/seo-harin/face-expressions/face-expression-01.webp",
+      "face-expression-02": "./assets/images/characters/seo-harin/face-expressions/face-expression-02.webp",
+      "face-expression-03": "./assets/images/characters/seo-harin/face-expressions/face-expression-03.webp",
+      "face-expression-04": "./assets/images/characters/seo-harin/face-expressions/face-expression-04.webp",
+      "face-expression-05": "./assets/images/characters/seo-harin/face-expressions/face-expression-05.webp",
+      "face-expression-06": "./assets/images/characters/seo-harin/face-expressions/face-expression-06.webp",
+      "face-expression-07": "./assets/images/characters/seo-harin/face-expressions/face-expression-07.webp",
+      "face-expression-08": "./assets/images/characters/seo-harin/face-expressions/face-expression-08.webp"
     },
     "defaultExpression": "default",
     "defaultPosition": "center",
-    "source": "author-provided-reference",
-    "runtimeNote": "Optimized WebP for game rendering; source PNG remains archived."
-  },
-  "seo-harin": {
-    "name": "서하린",
-    "defaultExpression": "expression-01",
-    "defaultPosition": "right",
-    "assets": {
-      "expression-01": "./assets/images/characters/seo-harin/expressions-final/expression-01.webp",
-      "expression-02": "./assets/images/characters/seo-harin/expressions-final/expression-02.webp",
-      "expression-03": "./assets/images/characters/seo-harin/expressions-final/expression-03.webp",
-      "expression-04": "./assets/images/characters/seo-harin/expressions-final/expression-04.webp",
-      "expression-05": "./assets/images/characters/seo-harin/expressions-final/expression-05.webp",
-      "expression-06": "./assets/images/characters/seo-harin/expressions-final/expression-06.webp",
-      "expression-07": "./assets/images/characters/seo-harin/expressions-final/expression-07.webp",
-      "expression-08": "./assets/images/characters/seo-harin/expressions-final/expression-08.webp"
-    },
-    "source": "author-provided-expression-sheet",
-    "status": "final-transparent-assets-v0.8.3",
+    "source": "user-provided-v0.9.5",
+    "status": "replaced",
     "battleAssets": {
-      "battle-01": "./assets/images/characters/seo-harin/battle-final/battle-01.webp",
-      "battle-02": "./assets/images/characters/seo-harin/battle-final/battle-02.webp",
-      "battle-03": "./assets/images/characters/seo-harin/battle-final/battle-03.webp",
-      "battle-04": "./assets/images/characters/seo-harin/battle-final/battle-04.webp",
-      "battle-05": "./assets/images/characters/seo-harin/battle-final/battle-05.webp",
-      "battle-06": "./assets/images/characters/seo-harin/battle-final/battle-06.webp",
-      "battle-07": "./assets/images/characters/seo-harin/battle-final/battle-07.webp",
-      "battle-08": "./assets/images/characters/seo-harin/battle-final/battle-08.webp",
-      "battle-09": "./assets/images/characters/seo-harin/battle-final/battle-09.webp"
+      "battle-01": "./assets/images/characters/seo-harin/battle/battle-01.webp",
+      "battle-02": "./assets/images/characters/seo-harin/battle/battle-02.webp",
+      "battle-03": "./assets/images/characters/seo-harin/battle/battle-03.webp",
+      "battle-04": "./assets/images/characters/seo-harin/battle/battle-04.webp",
+      "battle-05": "./assets/images/characters/seo-harin/battle/battle-05.webp",
+      "battle-06": "./assets/images/characters/seo-harin/battle/battle-06.webp",
+      "battle-07": "./assets/images/characters/seo-harin/battle/battle-07.webp",
+      "battle-08": "./assets/images/characters/seo-harin/battle/battle-08.webp",
+      "battle-08-2": "./assets/images/characters/seo-harin/battle/battle-08-2.webp",
+      "battle-99": "./assets/images/characters/seo-harin/battle/battle-99.webp"
     }
+  },
+  "jeon-seoyul": {
+    "name": "전서율",
+    "assets": {
+      "default": "./assets/images/characters/jeon-seoyul/default.webp"
+    },
+    "defaultExpression": "default",
+    "defaultPosition": "center",
+    "source": "user-provided-v0.9.5",
+    "status": "replaced"
+  },
+  "seol-yujin": {
+    "name": "설유진",
+    "assets": {
+      "default": "./assets/images/characters/seol-yujin/default.webp",
+      "training": "./assets/images/characters/seol-yujin/training.webp",
+      "expression-01": "./assets/images/characters/seol-yujin/expressions/expression-01.webp",
+      "expression-02": "./assets/images/characters/seol-yujin/expressions/expression-02.webp",
+      "expression-03": "./assets/images/characters/seol-yujin/expressions/expression-03.webp",
+      "expression-04": "./assets/images/characters/seol-yujin/expressions/expression-04.webp",
+      "expression-05": "./assets/images/characters/seol-yujin/expressions/expression-05.webp",
+      "expression-06": "./assets/images/characters/seol-yujin/expressions/expression-06.webp",
+      "expression-07": "./assets/images/characters/seol-yujin/expressions/expression-07.webp",
+      "expression-08": "./assets/images/characters/seol-yujin/expressions/expression-08.webp"
+    },
+    "defaultExpression": "default",
+    "defaultPosition": "center",
+    "source": "user-provided-v0.9.5",
+    "status": "replaced"
+  },
+  "yeon-museol": {
+    "name": "연무설",
+    "assets": {
+      "default": "./assets/images/characters/yeon-museol/default.webp",
+      "training": "./assets/images/characters/yeon-museol/training.webp",
+      "expression-01": "./assets/images/characters/yeon-museol/expressions/expression-01.webp",
+      "expression-02": "./assets/images/characters/yeon-museol/expressions/expression-02.webp",
+      "expression-03": "./assets/images/characters/yeon-museol/expressions/expression-03.webp",
+      "expression-04": "./assets/images/characters/yeon-museol/expressions/expression-04.webp",
+      "expression-05": "./assets/images/characters/yeon-museol/expressions/expression-05.webp",
+      "expression-06": "./assets/images/characters/yeon-museol/expressions/expression-06.webp",
+      "expression-07": "./assets/images/characters/yeon-museol/expressions/expression-07.webp",
+      "expression-08": "./assets/images/characters/yeon-museol/expressions/expression-08.webp"
+    },
+    "defaultExpression": "default",
+    "defaultPosition": "center",
+    "source": "user-provided-v0.9.5",
+    "status": "replaced"
+  },
+  "jeok-wola": {
+    "name": "적월아",
+    "assets": {
+      "default": "./assets/images/characters/jeok-wola/default.webp",
+      "training": "./assets/images/characters/jeok-wola/training.webp",
+      "expression-01": "./assets/images/characters/jeok-wola/expressions/expression-01.webp",
+      "expression-02": "./assets/images/characters/jeok-wola/expressions/expression-02.webp",
+      "expression-03": "./assets/images/characters/jeok-wola/expressions/expression-03.webp",
+      "expression-04": "./assets/images/characters/jeok-wola/expressions/expression-04.webp",
+      "expression-05": "./assets/images/characters/jeok-wola/expressions/expression-05.webp",
+      "expression-06": "./assets/images/characters/jeok-wola/expressions/expression-06.webp",
+      "expression-07": "./assets/images/characters/jeok-wola/expressions/expression-07.webp",
+      "expression-08": "./assets/images/characters/jeok-wola/expressions/expression-08.webp"
+    },
+    "defaultExpression": "default",
+    "defaultPosition": "center",
+    "source": "user-provided-v0.9.5",
+    "status": "replaced"
   }
 }

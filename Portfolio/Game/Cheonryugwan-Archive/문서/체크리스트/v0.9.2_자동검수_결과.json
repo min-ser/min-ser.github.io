@@ -1,0 +1,12 @@
+{
+  "version": "0.9.2",
+  "source": "Cheonryugwan-Archive-v0.9.1-Engine-Stabilization(1).zip",
+  "json_files_checked": 12,
+  "javascript_files_checked": 14,
+  "python_files_checked": 3,
+  "scene_schema": "PASS: 4 chapter files",
+  "project_validator_output": "PASS\nPASS: v0.9.1 modules\nPASS: story compiler output\nPASS: v0.9.2 scene commands\nPASS: 4 chapter files",
+  "story_compiler": "PASS",
+  "unicode_paths": "PASS",
+  "total_files": 513
+}

@@ -1,0 +1,15 @@
+{
+  "version": "0.9.5.1",
+  "factionCorrections": {
+    "연무설": "마교",
+    "적월아": "사파"
+  },
+  "expressionSplit": {
+    "설유진": 8,
+    "연무설": 8,
+    "적월아": 8
+  },
+  "originalSheetsPreserved": true,
+  "gameManifestUpdated": true,
+  "galleryUpdated": true
+}

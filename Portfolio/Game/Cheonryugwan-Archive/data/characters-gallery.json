@@ -1,422 +1,816 @@
 {
-  "version": "0.8.3",
+  "version": "0.9.8.2",
+  "sourcePolicy": "기존 캐릭터 이미지 삭제 후 사용자 제공 원본으로 전면 교체",
   "characters": {
     "seo-harin": {
       "name": "서하린",
       "faction": "천류관",
-      "summary": "천류관 소속의 중립 계열 여검사. 흑장발과 오른쪽 눈 밑 작은 점이 특징.",
+      "summary": "천류관 소속의 중립 계열 여검사. 업로드된 신규 원본만 사용합니다.",
+      "default": "assets/images/characters/seo-harin/default.webp",
       "images": [
         {
           "title": "기본 스탠딩",
           "category": "기본",
-          "web": "assets/images/characters/seo-harin/seo-harin-01.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-01.webp",
-          "source": "에셋/캐릭터/서하린/기본_스탠딩/서하린_기본_스탠딩.png",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/default.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/default.webp",
+          "source": "에셋/캐릭터/서하린/기본/서하린 스탠드 이미지.png",
+          "status": "인게임 사용중",
+          "width": 1024,
+          "height": 1536,
+          "mode": "RGBA",
+          "transparent": true
         },
         {
-          "title": "전투 대기",
+          "title": "전투 Idle (쌍검)",
           "category": "전투",
-          "web": "assets/images/characters/seo-harin/seo-harin-02.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-02.webp",
-          "source": "에셋/캐릭터/서하린/전투_개별/01_전투_대기_쌍검.png",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/battle/battle-01.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/battle/battle-01.webp",
+          "source": "에셋/캐릭터/서하린/전투/01. 전투 Idle (쌍검).png",
+          "status": "인게임 사용중",
+          "width": 2048,
+          "height": 3072,
+          "mode": "RGBA",
+          "transparent": true
         },
         {
-          "title": "검 뽑기",
+          "title": "검 뽑는 자세",
           "category": "전투",
-          "web": "assets/images/characters/seo-harin/seo-harin-03.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-03.webp",
-          "source": "에셋/캐릭터/서하린/전투_개별/02_검_뽑기.png",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/battle/battle-02.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/battle/battle-02.webp",
+          "source": "에셋/캐릭터/서하린/전투/02. 검 뽑는 자세.png",
+          "status": "인게임 사용중",
+          "width": 2048,
+          "height": 3072,
+          "mode": "RGBA",
+          "transparent": true
         },
         {
-          "title": "방어",
+          "title": "방어 자세",
           "category": "전투",
-          "web": "assets/images/characters/seo-harin/seo-harin-04.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-04.webp",
-          "source": "에셋/캐릭터/서하린/전투_개별/03_방어.png",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/battle/battle-03.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/battle/battle-03.webp",
+          "source": "에셋/캐릭터/서하린/전투/03. 방어 자세.png",
+          "status": "인게임 사용중",
+          "width": 2048,
+          "height": 3072,
+          "mode": "RGBA",
+          "transparent": true
         },
         {
           "title": "공격 준비",
           "category": "전투",
-          "web": "assets/images/characters/seo-harin/seo-harin-05.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-05.webp",
-          "source": "에셋/캐릭터/서하린/전투_개별/04_공격_준비.png",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/battle/battle-04.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/battle/battle-04.webp",
+          "source": "에셋/캐릭터/서하린/전투/04. 공격 준비.png",
+          "status": "인게임 사용중",
+          "width": 2048,
+          "height": 3072,
+          "mode": "RGBA",
+          "transparent": true
         },
         {
           "title": "좌베기",
           "category": "전투",
-          "web": "assets/images/characters/seo-harin/seo-harin-06.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-06.webp",
-          "source": "에셋/캐릭터/서하린/전투_개별/05_좌베기.png",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/battle/battle-05.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/battle/battle-05.webp",
+          "source": "에셋/캐릭터/서하린/전투/05. 좌베기.png",
+          "status": "인게임 사용중",
+          "width": 2048,
+          "height": 3072,
+          "mode": "RGBA",
+          "transparent": true
         },
         {
           "title": "우베기",
           "category": "전투",
-          "web": "assets/images/characters/seo-harin/seo-harin-07.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-07.webp",
-          "source": "에셋/캐릭터/서하린/전투_개별/06_우베기.png",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/battle/battle-06.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/battle/battle-06.webp",
+          "source": "에셋/캐릭터/서하린/전투/06. 우베기.png",
+          "status": "인게임 사용중",
+          "width": 2048,
+          "height": 3072,
+          "mode": "RGBA",
+          "transparent": true
         },
         {
           "title": "피격",
           "category": "전투",
-          "web": "assets/images/characters/seo-harin/seo-harin-08.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-08.webp",
-          "source": "에셋/캐릭터/서하린/전투_개별/07_피격.png",
-          "status": "사용 후보"
-        },
-        {
-          "title": "피격 직후",
-          "category": "전투",
-          "web": "assets/images/characters/seo-harin/seo-harin-09.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-09.webp",
-          "source": "에셋/캐릭터/서하린/전투_개별/08_피격_직후_무릎.png",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/battle/battle-07.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/battle/battle-07.webp",
+          "source": "에셋/캐릭터/서하린/전투/07. 피격.png",
+          "status": "인게임 사용중",
+          "width": 2048,
+          "height": 3072,
+          "mode": "RGBA",
+          "transparent": true
         },
         {
           "title": "승리",
           "category": "전투",
-          "web": "assets/images/characters/seo-harin/seo-harin-10.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-10.webp",
-          "source": "에셋/캐릭터/서하린/전투_개별/09_승리.png",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/battle/battle-08.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/battle/battle-08.webp",
+          "source": "에셋/캐릭터/서하린/전투/08-1. 승리.png",
+          "status": "인게임 사용중",
+          "width": 1024,
+          "height": 1535,
+          "mode": "RGBA",
+          "transparent": true
         },
         {
-          "title": "표정 01",
+          "title": "승리",
+          "category": "전투",
+          "web": "assets/images/characters/seo-harin/battle/battle-08-2.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/battle/battle-08-2.webp",
+          "source": "에셋/캐릭터/서하린/전투/08-2. 승리.png",
+          "status": "인게임 사용중",
+          "width": 1024,
+          "height": 1536,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "피격 직후",
+          "category": "전투",
+          "web": "assets/images/characters/seo-harin/battle/battle-99.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/battle/battle-99.webp",
+          "source": "에셋/캐릭터/서하린/전투/피격 직후.png",
+          "status": "인게임 사용중",
+          "width": 2244,
+          "height": 2804,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "서하린_반신_표정8종",
+          "category": "시트",
+          "web": "assets/images/characters/seo-harin/sheets/sheet-01.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/sheets/sheet-01.webp",
+          "source": "에셋/캐릭터/서하린/시트/서하린_반신_표정8종.png",
+          "status": "원본 시트 보관",
+          "width": 1536,
+          "height": 1024,
+          "mode": "RGB",
+          "transparent": false
+        },
+        {
+          "title": "서하린 표정 8종",
+          "category": "시트",
+          "web": "assets/images/characters/seo-harin/sheets/sheet-02.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/sheets/sheet-02.webp",
+          "source": "에셋/캐릭터/서하린/시트/서하린 표정 8종.png",
+          "status": "원본 시트 보관",
+          "width": 1535,
+          "height": 1024,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "얼굴 표정 01 · 당황",
+          "category": "얼굴 클로즈업 표정",
+          "web": "assets/images/characters/seo-harin/face-expressions/face-expression-01.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/face-expressions/face-expression-01.webp",
+          "source": "에셋/캐릭터/서하린/얼굴표정/얼굴표정_01_당황.png",
+          "status": "큰 얼굴 시트 분리 · 인게임 등록",
+          "width": 500,
+          "height": 620,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "face-expression-01"
+        },
+        {
+          "title": "얼굴 표정 02 · 미소",
+          "category": "얼굴 클로즈업 표정",
+          "web": "assets/images/characters/seo-harin/face-expressions/face-expression-02.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/face-expressions/face-expression-02.webp",
+          "source": "에셋/캐릭터/서하린/얼굴표정/얼굴표정_02_미소.png",
+          "status": "큰 얼굴 시트 분리 · 인게임 등록",
+          "width": 500,
+          "height": 620,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "face-expression-02"
+        },
+        {
+          "title": "얼굴 표정 03 · 눈 감고 미소",
+          "category": "얼굴 클로즈업 표정",
+          "web": "assets/images/characters/seo-harin/face-expressions/face-expression-03.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/face-expressions/face-expression-03.webp",
+          "source": "에셋/캐릭터/서하린/얼굴표정/얼굴표정_03_눈 감고 미소.png",
+          "status": "큰 얼굴 시트 분리 · 인게임 등록",
+          "width": 500,
+          "height": 620,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "face-expression-03"
+        },
+        {
+          "title": "얼굴 표정 04 · 붉은 안광",
+          "category": "얼굴 클로즈업 표정",
+          "web": "assets/images/characters/seo-harin/face-expressions/face-expression-04.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/face-expressions/face-expression-04.webp",
+          "source": "에셋/캐릭터/서하린/얼굴표정/얼굴표정_04_붉은 안광.png",
+          "status": "큰 얼굴 시트 분리 · 인게임 등록",
+          "width": 500,
+          "height": 620,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "face-expression-04"
+        },
+        {
+          "title": "얼굴 표정 05 · 부끄러움",
+          "category": "얼굴 클로즈업 표정",
+          "web": "assets/images/characters/seo-harin/face-expressions/face-expression-05.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/face-expressions/face-expression-05.webp",
+          "source": "에셋/캐릭터/서하린/얼굴표정/얼굴표정_05_부끄러움.png",
+          "status": "큰 얼굴 시트 분리 · 인게임 등록",
+          "width": 500,
+          "height": 620,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "face-expression-05"
+        },
+        {
+          "title": "얼굴 표정 06 · 결의",
+          "category": "얼굴 클로즈업 표정",
+          "web": "assets/images/characters/seo-harin/face-expressions/face-expression-06.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/face-expressions/face-expression-06.webp",
+          "source": "에셋/캐릭터/서하린/얼굴표정/얼굴표정_06_결의.png",
+          "status": "큰 얼굴 시트 분리 · 인게임 등록",
+          "width": 500,
+          "height": 620,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "face-expression-06"
+        },
+        {
+          "title": "얼굴 표정 07 · 울먹임",
+          "category": "얼굴 클로즈업 표정",
+          "web": "assets/images/characters/seo-harin/face-expressions/face-expression-07.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/face-expressions/face-expression-07.webp",
+          "source": "에셋/캐릭터/서하린/얼굴표정/얼굴표정_07_울먹임.png",
+          "status": "큰 얼굴 시트 분리 · 인게임 등록",
+          "width": 500,
+          "height": 620,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "face-expression-07"
+        },
+        {
+          "title": "얼굴 표정 08 · 눈물",
+          "category": "얼굴 클로즈업 표정",
+          "web": "assets/images/characters/seo-harin/face-expressions/face-expression-08.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/face-expressions/face-expression-08.webp",
+          "source": "에셋/캐릭터/서하린/얼굴표정/얼굴표정_08_눈물.png",
+          "status": "큰 얼굴 시트 분리 · 인게임 등록",
+          "width": 500,
+          "height": 620,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "face-expression-08"
+        },
+        {
+          "title": "반신 표정 01 · 당황",
           "category": "표정",
-          "web": "assets/images/characters/seo-harin/seo-harin-11.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-11.webp",
-          "source": "game/assets/images/characters/seo-harin/expressions/expression-01.webp",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/expressions/expression-01.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/expressions/expression-01.webp",
+          "source": "에셋/캐릭터/서하린/표정/표정_01_당황.png",
+          "status": "사용자 제공 개별 PNG · 인게임 사용중",
+          "width": 640,
+          "height": 920,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "expression-01"
         },
         {
-          "title": "표정 02",
+          "title": "반신 표정 02 · 비웃음",
           "category": "표정",
-          "web": "assets/images/characters/seo-harin/seo-harin-12.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-12.webp",
-          "source": "game/assets/images/characters/seo-harin/expressions/expression-02.webp",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/expressions/expression-02.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/expressions/expression-02.webp",
+          "source": "에셋/캐릭터/서하린/표정/표정_02_비웃음.png",
+          "status": "사용자 제공 개별 PNG · 인게임 사용중",
+          "width": 640,
+          "height": 920,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "expression-02"
         },
         {
-          "title": "표정 03",
+          "title": "반신 표정 03 · 눈 감고 미소",
           "category": "표정",
-          "web": "assets/images/characters/seo-harin/seo-harin-13.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-13.webp",
-          "source": "game/assets/images/characters/seo-harin/expressions/expression-03.webp",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/expressions/expression-03.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/expressions/expression-03.webp",
+          "source": "에셋/캐릭터/서하린/표정/표정_03_눈 감고 미소.png",
+          "status": "사용자 제공 개별 PNG · 인게임 사용중",
+          "width": 640,
+          "height": 920,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "expression-03"
         },
         {
-          "title": "표정 04",
+          "title": "반신 표정 04 · 붉은 안광(각성)",
           "category": "표정",
-          "web": "assets/images/characters/seo-harin/seo-harin-14.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-14.webp",
-          "source": "game/assets/images/characters/seo-harin/expressions/expression-04.webp",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/expressions/expression-04.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/expressions/expression-04.webp",
+          "source": "에셋/캐릭터/서하린/표정/표정_04_붉은 안광(각성).png",
+          "status": "사용자 제공 개별 PNG · 인게임 사용중",
+          "width": 640,
+          "height": 920,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "expression-04"
         },
         {
-          "title": "표정 05",
+          "title": "반신 표정 05 · 부끄러움",
           "category": "표정",
-          "web": "assets/images/characters/seo-harin/seo-harin-15.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-15.webp",
-          "source": "game/assets/images/characters/seo-harin/expressions/expression-05.webp",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/expressions/expression-05.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/expressions/expression-05.webp",
+          "source": "에셋/캐릭터/서하린/표정/표정_05_부끄러움.png",
+          "status": "사용자 제공 개별 PNG · 인게임 사용중",
+          "width": 640,
+          "height": 920,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "expression-05"
         },
         {
-          "title": "표정 06",
+          "title": "반신 표정 06 · 결의",
           "category": "표정",
-          "web": "assets/images/characters/seo-harin/seo-harin-16.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-16.webp",
-          "source": "game/assets/images/characters/seo-harin/expressions/expression-06.webp",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/expressions/expression-06.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/expressions/expression-06.webp",
+          "source": "에셋/캐릭터/서하린/표정/표정_06_결의.png",
+          "status": "사용자 제공 개별 PNG · 인게임 사용중",
+          "width": 640,
+          "height": 920,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "expression-06"
         },
         {
-          "title": "표정 07",
+          "title": "반신 표정 07 · 울먹임",
           "category": "표정",
-          "web": "assets/images/characters/seo-harin/seo-harin-17.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-17.webp",
-          "source": "game/assets/images/characters/seo-harin/expressions/expression-07.webp",
-          "status": "사용 후보"
+          "web": "assets/images/characters/seo-harin/expressions/expression-07.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/expressions/expression-07.webp",
+          "source": "에셋/캐릭터/서하린/표정/표정_07_울먹임.png",
+          "status": "사용자 제공 개별 PNG · 인게임 사용중",
+          "width": 640,
+          "height": 920,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "expression-07"
         },
         {
-          "title": "표정 08",
+          "title": "반신 표정 08 · 눈물",
           "category": "표정",
-          "web": "assets/images/characters/seo-harin/seo-harin-18.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-18.webp",
-          "source": "game/assets/images/characters/seo-harin/expressions/expression-08.webp",
-          "status": "사용 후보"
-        },
-        {
-          "title": "메인 비주얼 레퍼런스",
-          "category": "레퍼런스",
-          "web": "assets/images/characters/seo-harin/seo-harin-reference-01.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/seo-harin-reference-01.webp",
-          "source": "archive/characters/_SOURCE/2026-08-04/visual-references/seo-harin/seo-harin-front-reference-01.png",
-          "status": "원본 보존"
-        },
-        {
-          "title": "표정 01 최종 수정본",
-          "category": "최종 표정",
-          "web": "assets/images/characters/seo-harin/final-expressions/expression-01.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-01.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_01_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "표정 02 최종 수정본",
-          "category": "최종 표정",
-          "web": "assets/images/characters/seo-harin/final-expressions/expression-02.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-02.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_02_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "표정 03 최종 수정본",
-          "category": "최종 표정",
-          "web": "assets/images/characters/seo-harin/final-expressions/expression-03.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-03.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_03_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "표정 04 최종 수정본",
-          "category": "최종 표정",
-          "web": "assets/images/characters/seo-harin/final-expressions/expression-04.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-04.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_04_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "표정 05 최종 수정본",
-          "category": "최종 표정",
-          "web": "assets/images/characters/seo-harin/final-expressions/expression-05.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-05.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_05_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "표정 06 최종 수정본",
-          "category": "최종 표정",
-          "web": "assets/images/characters/seo-harin/final-expressions/expression-06.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-06.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_06_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "표정 07 최종 수정본",
-          "category": "최종 표정",
-          "web": "assets/images/characters/seo-harin/final-expressions/expression-07.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-07.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_07_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "표정 08 최종 수정본",
-          "category": "최종 표정",
-          "web": "assets/images/characters/seo-harin/final-expressions/expression-08.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-expressions/expression-08.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/표정_8종/표정_08_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "전투 대기 최종 투명본",
-          "category": "최종 전투",
-          "web": "assets/images/characters/seo-harin/final-battle/battle-01.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-01.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/01_전투_대기_쌍검_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "검 뽑기 최종 투명본",
-          "category": "최종 전투",
-          "web": "assets/images/characters/seo-harin/final-battle/battle-02.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-02.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/02_검_뽑기_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "방어 최종 투명본",
-          "category": "최종 전투",
-          "web": "assets/images/characters/seo-harin/final-battle/battle-03.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-03.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/03_방어_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "공격 준비 최종 투명본",
-          "category": "최종 전투",
-          "web": "assets/images/characters/seo-harin/final-battle/battle-04.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-04.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/04_공격_준비_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "좌베기 최종 투명본",
-          "category": "최종 전투",
-          "web": "assets/images/characters/seo-harin/final-battle/battle-05.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-05.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/05_좌베기_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "우베기 최종 투명본",
-          "category": "최종 전투",
-          "web": "assets/images/characters/seo-harin/final-battle/battle-06.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-06.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/06_우베기_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "피격 최종 투명본",
-          "category": "최종 전투",
-          "web": "assets/images/characters/seo-harin/final-battle/battle-07.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-07.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/07_피격_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "피격 직후 무릎 최종 투명본",
-          "category": "최종 전투",
-          "web": "assets/images/characters/seo-harin/final-battle/battle-08.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-08.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/08_피격_직후_무릎_최종_투명.png",
-          "status": "사용중"
-        },
-        {
-          "title": "승리 최종 투명본",
-          "category": "최종 전투",
-          "web": "assets/images/characters/seo-harin/final-battle/battle-09.webp",
-          "thumb": "assets/images/characters/thumbnails/seo-harin/final-battle/battle-09.webp",
-          "source": "에셋/캐릭터/서하린/최종_수정본/전투_개별/09_승리_최종_투명.png",
-          "status": "사용중"
+          "web": "assets/images/characters/seo-harin/expressions/expression-08.webp",
+          "thumb": "assets/images/characters/thumbnails/seo-harin/expressions/expression-08.webp",
+          "source": "에셋/캐릭터/서하린/표정/표정_08_눈물.png",
+          "status": "사용자 제공 개별 PNG · 인게임 사용중",
+          "width": 640,
+          "height": 920,
+          "mode": "RGBA",
+          "transparent": true,
+          "gameId": "expression-08"
         }
       ]
     },
     "jeon-seoyul": {
       "name": "전서율",
-      "faction": "천류관 설립자",
-      "summary": "흐름의 무공을 사용하는 비극적인 검사. 차갑고 고요한 존재감이 특징.",
+      "faction": "흐름의 검사",
+      "summary": "흐름을 거스른 자는 결국 흐름의 끝에 서게 된다는 신념을 지닌 검사.",
+      "default": "assets/images/characters/jeon-seoyul/default.webp",
       "images": [
         {
-          "title": "기본 스탠딩 4K",
+          "title": "기본 스탠딩",
           "category": "기본",
-          "web": "assets/images/characters/jeon-seoyul/jeon-seoyul-01.webp",
-          "thumb": "assets/images/characters/thumbnails/jeon-seoyul/jeon-seoyul-01.webp",
-          "source": "에셋/캐릭터/전서율/기본_스탠딩/전서율_기본_스탠딩_4K.png",
-          "status": "사용 후보"
-        },
-        {
-          "title": "기본 스탠딩 일반",
-          "category": "기본",
-          "web": "assets/images/characters/jeon-seoyul/jeon-seoyul-02.webp",
-          "thumb": "assets/images/characters/thumbnails/jeon-seoyul/jeon-seoyul-02.webp",
-          "source": "에셋/캐릭터/전서율/기본_스탠딩/전서율_기본_스탠딩_일반.png",
-          "status": "사용 후보"
-        },
-        {
-          "title": "메인 비주얼 레퍼런스",
-          "category": "레퍼런스",
-          "web": "assets/images/characters/jeon-seoyul/jeon-seoyul-reference-01.webp",
-          "thumb": "assets/images/characters/thumbnails/jeon-seoyul/jeon-seoyul-reference-01.webp",
-          "source": "archive/characters/_SOURCE/2026-08-04/visual-references/jeon-seoyul/jeon-seoyul-reference-01.png",
-          "status": "원본 보존"
-        }
-      ]
-    },
-    "jeok-wola": {
-      "name": "적월아",
-      "faction": "마교",
-      "summary": "붉은 장발과 쌍검, 검붉은 의상이 특징인 강렬한 마교계 검사.",
-      "images": [
-        {
-          "title": "기본 스탠딩 01",
-          "category": "기본",
-          "web": "assets/images/characters/jeok-wola/jeok-wola-01.webp",
-          "thumb": "assets/images/characters/thumbnails/jeok-wola/jeok-wola-01.webp",
-          "source": "에셋/캐릭터/적월아/기본_스탠딩/적월아_기본_스탠딩_01.png",
-          "status": "사용 후보"
-        },
-        {
-          "title": "기본 스탠딩 02",
-          "category": "기본",
-          "web": "assets/images/characters/jeok-wola/jeok-wola-02.webp",
-          "thumb": "assets/images/characters/thumbnails/jeok-wola/jeok-wola-02.webp",
-          "source": "에셋/캐릭터/적월아/기본_스탠딩/적월아_기본_스탠딩_02.png",
-          "status": "사용 후보"
-        },
-        {
-          "title": "기본 스탠딩 4K",
-          "category": "기본",
-          "web": "assets/images/characters/jeok-wola/jeok-wola-basic-4k.webp",
-          "thumb": "assets/images/characters/thumbnails/jeok-wola/jeok-wola-basic-4k.webp",
-          "source": "에셋/캐릭터/적월아/기본_스탠딩/적월아_기본_스탠딩_4K.png",
-          "status": "사용중"
-        },
-        {
-          "title": "메인 비주얼 레퍼런스",
-          "category": "레퍼런스",
-          "web": "assets/images/characters/jeok-wola/jeok-wola-reference-01.webp",
-          "thumb": "assets/images/characters/thumbnails/jeok-wola/jeok-wola-reference-01.webp",
-          "source": "archive/characters/_SOURCE/2026-08-04/visual-references/jeok-wola/jeok-wola-front-reference-01.png",
-          "status": "원본 보존"
-        }
-      ]
-    },
-    "yeon-museol": {
-      "name": "연무설",
-      "faction": "사파",
-      "summary": "긴 흑발과 붉은 눈, 검붉은 복장으로 강한 카리스마를 지닌 검사.",
-      "images": [
-        {
-          "title": "기본 스탠딩 01",
-          "category": "기본",
-          "web": "assets/images/characters/yeon-museol/yeon-museol-01.webp",
-          "thumb": "assets/images/characters/thumbnails/yeon-museol/yeon-museol-01.webp",
-          "source": "에셋/캐릭터/연무설/기본_스탠딩/연무설_기본_스탠딩_01.png",
-          "status": "사용 후보"
-        },
-        {
-          "title": "기본 스탠딩 교체본",
-          "category": "기본",
-          "web": "assets/images/characters/yeon-museol/yeon-museol-basic-replacement.webp",
-          "thumb": "assets/images/characters/thumbnails/yeon-museol/yeon-museol-basic-replacement.webp",
-          "source": "에셋/캐릭터/연무설/기본_스탠딩/연무설_기본_스탠딩_교체본.png",
-          "status": "사용중"
-        },
-        {
-          "title": "메인 비주얼 레퍼런스",
-          "category": "레퍼런스",
-          "web": "assets/images/characters/yeon-museol/yeon-museol-reference-01.webp",
-          "thumb": "assets/images/characters/thumbnails/yeon-museol/yeon-museol-reference-01.webp",
-          "source": "archive/characters/_SOURCE/2026-08-04/visual-references/yeon-museol/yeon-museol-front-reference-01.png",
-          "status": "원본 보존"
+          "web": "assets/images/characters/jeon-seoyul/default.webp",
+          "thumb": "assets/images/characters/thumbnails/jeon-seoyul/default.webp",
+          "source": "에셋/캐릭터/전서율/기본/전서율_기본_스탠딩.png",
+          "status": "인게임 사용중",
+          "width": 1365,
+          "height": 2048,
+          "mode": "RGBA",
+          "transparent": true
         }
       ]
     },
     "seol-yujin": {
       "name": "설유진",
       "faction": "정파",
-      "summary": "은백색 장발과 푸른 눈, 흑청 계열 복장이 특징인 차분하고 고결한 검사.",
+      "summary": "백은빛 장발과 청색 계열 무복이 특징인 검사.",
+      "default": "assets/images/characters/seol-yujin/default.webp",
       "images": [
         {
-          "title": "기본 스탠딩 4K",
+          "title": "기본 스탠딩",
           "category": "기본",
-          "web": "assets/images/characters/seol-yujin/seol-yujin-basic-4k.webp",
-          "thumb": "assets/images/characters/thumbnails/seol-yujin/seol-yujin-basic-4k.webp",
-          "source": "에셋/캐릭터/설유진/기본_스탠딩/설유진_기본_스탠딩_4K.png",
-          "status": "사용중"
+          "web": "assets/images/characters/seol-yujin/default.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/default.webp",
+          "source": "에셋/캐릭터/설유진/기본/설유진 기본 스탠딩 4k.png",
+          "status": "인게임 사용중",
+          "width": 2048,
+          "height": 3072,
+          "mode": "RGBA",
+          "transparent": true
         },
         {
-          "title": "메인 비주얼 레퍼런스",
-          "category": "레퍼런스",
-          "web": "assets/images/characters/seol-yujin/seol-yujin-reference-01.webp",
-          "thumb": "assets/images/characters/thumbnails/seol-yujin/seol-yujin-reference-01.webp",
-          "source": "archive/characters/_SOURCE/2026-08-04/visual-references/seol-yujin/seol-yujin-front-reference-01.png",
-          "status": "원본 보존"
+          "title": "훈련복 스탠딩",
+          "category": "기본",
+          "web": "assets/images/characters/seol-yujin/training.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/training.webp",
+          "source": "에셋/캐릭터/설유진/훈련복/설유진 기본 스탠딩_훈련복 4k.png",
+          "status": "인게임 등록",
+          "width": 2048,
+          "height": 3072,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "설유진 8종 표정",
+          "category": "표정 시트",
+          "web": "assets/images/characters/seol-yujin/sheets/sheet-01.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/sheets/sheet-01.webp",
+          "source": "에셋/캐릭터/설유진/표정시트/설유진 8종 표정.png",
+          "status": "원본 시트 보관",
+          "width": 1536,
+          "height": 1024,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 01 · 기본",
+          "category": "표정",
+          "web": "assets/images/characters/seol-yujin/expressions/expression-01.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/expressions/expression-01.webp",
+          "source": "에셋/캐릭터/설유진/표정/표정_01_기본.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 02 · 미소",
+          "category": "표정",
+          "web": "assets/images/characters/seol-yujin/expressions/expression-02.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/expressions/expression-02.webp",
+          "source": "에셋/캐릭터/설유진/표정/표정_02_미소.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 03 · 카리스마",
+          "category": "표정",
+          "web": "assets/images/characters/seol-yujin/expressions/expression-03.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/expressions/expression-03.webp",
+          "source": "에셋/캐릭터/설유진/표정/표정_03_카리스마.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 04 · 냉소",
+          "category": "표정",
+          "web": "assets/images/characters/seol-yujin/expressions/expression-04.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/expressions/expression-04.webp",
+          "source": "에셋/캐릭터/설유진/표정/표정_04_냉소.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 05 · 분노",
+          "category": "표정",
+          "web": "assets/images/characters/seol-yujin/expressions/expression-05.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/expressions/expression-05.webp",
+          "source": "에셋/캐릭터/설유진/표정/표정_05_분노.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 06 · 비웃음",
+          "category": "표정",
+          "web": "assets/images/characters/seol-yujin/expressions/expression-06.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/expressions/expression-06.webp",
+          "source": "에셋/캐릭터/설유진/표정/표정_06_비웃음.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 07 · 슬픔",
+          "category": "표정",
+          "web": "assets/images/characters/seol-yujin/expressions/expression-07.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/expressions/expression-07.webp",
+          "source": "에셋/캐릭터/설유진/표정/표정_07_슬픔.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 08 · 무심",
+          "category": "표정",
+          "web": "assets/images/characters/seol-yujin/expressions/expression-08.webp",
+          "thumb": "assets/images/characters/thumbnails/seol-yujin/expressions/expression-08.webp",
+          "source": "에셋/캐릭터/설유진/표정/표정_08_무심.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        }
+      ]
+    },
+    "yeon-museol": {
+      "name": "연무설",
+      "faction": "마교",
+      "summary": "검붉은 기운과 강한 카리스마를 지닌 마교의 핵심 무인.",
+      "default": "assets/images/characters/yeon-museol/default.webp",
+      "images": [
+        {
+          "title": "기본 스탠딩",
+          "category": "기본",
+          "web": "assets/images/characters/yeon-museol/default.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/default.webp",
+          "source": "에셋/캐릭터/연무설/기본/연무설_기본스탠드_전투복.png",
+          "status": "인게임 사용중",
+          "width": 1992,
+          "height": 3156,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "훈련복 스탠딩",
+          "category": "기본",
+          "web": "assets/images/characters/yeon-museol/training.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/training.webp",
+          "source": "에셋/캐릭터/연무설/훈련복/연무설_기본스탠드_훈련복.png",
+          "status": "인게임 등록",
+          "width": 1992,
+          "height": 3160,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "연무설 표정 8종",
+          "category": "표정 시트",
+          "web": "assets/images/characters/yeon-museol/sheets/sheet-01.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/sheets/sheet-01.webp",
+          "source": "에셋/캐릭터/연무설/표정시트/연무설 표정 8종.png",
+          "status": "원본 시트 보관",
+          "width": 1672,
+          "height": 941,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 01 · 기본",
+          "category": "표정",
+          "web": "assets/images/characters/yeon-museol/expressions/expression-01.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/expressions/expression-01.webp",
+          "source": "에셋/캐릭터/연무설/표정/표정_01_기본.png",
+          "status": "인게임 사용중",
+          "width": 402,
+          "height": 452,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 02 · 경계",
+          "category": "표정",
+          "web": "assets/images/characters/yeon-museol/expressions/expression-02.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/expressions/expression-02.webp",
+          "source": "에셋/캐릭터/연무설/표정/표정_02_경계.png",
+          "status": "인게임 사용중",
+          "width": 398,
+          "height": 452,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 03 · 미소",
+          "category": "표정",
+          "web": "assets/images/characters/yeon-museol/expressions/expression-03.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/expressions/expression-03.webp",
+          "source": "에셋/캐릭터/연무설/표정/표정_03_미소.png",
+          "status": "인게임 사용중",
+          "width": 398,
+          "height": 452,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 04 · 냉소",
+          "category": "표정",
+          "web": "assets/images/characters/yeon-museol/expressions/expression-04.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/expressions/expression-04.webp",
+          "source": "에셋/캐릭터/연무설/표정/표정_04_냉소.png",
+          "status": "인게임 사용중",
+          "width": 398,
+          "height": 452,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 05 · 분노",
+          "category": "표정",
+          "web": "assets/images/characters/yeon-museol/expressions/expression-05.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/expressions/expression-05.webp",
+          "source": "에셋/캐릭터/연무설/표정/표정_05_분노.png",
+          "status": "인게임 사용중",
+          "width": 402,
+          "height": 450,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 06 · 광소",
+          "category": "표정",
+          "web": "assets/images/characters/yeon-museol/expressions/expression-06.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/expressions/expression-06.webp",
+          "source": "에셋/캐릭터/연무설/표정/표정_06_광소.png",
+          "status": "인게임 사용중",
+          "width": 398,
+          "height": 450,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 07 · 슬픔",
+          "category": "표정",
+          "web": "assets/images/characters/yeon-museol/expressions/expression-07.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/expressions/expression-07.webp",
+          "source": "에셋/캐릭터/연무설/표정/표정_07_슬픔.png",
+          "status": "인게임 사용중",
+          "width": 398,
+          "height": 450,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 08 · 무심",
+          "category": "표정",
+          "web": "assets/images/characters/yeon-museol/expressions/expression-08.webp",
+          "thumb": "assets/images/characters/thumbnails/yeon-museol/expressions/expression-08.webp",
+          "source": "에셋/캐릭터/연무설/표정/표정_08_무심.png",
+          "status": "인게임 사용중",
+          "width": 398,
+          "height": 450,
+          "mode": "RGBA",
+          "transparent": true
+        }
+      ]
+    },
+    "jeok-wola": {
+      "name": "적월아",
+      "faction": "사파",
+      "summary": "붉은 머리와 쌍검을 사용하는 사파의 핵심 무인.",
+      "default": "assets/images/characters/jeok-wola/default.webp",
+      "images": [
+        {
+          "title": "기본 스탠딩",
+          "category": "기본",
+          "web": "assets/images/characters/jeok-wola/default.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/default.webp",
+          "source": "에셋/캐릭터/적월아/기본/적월아_기본스탠드_전투복.png",
+          "status": "인게임 사용중",
+          "width": 1882,
+          "height": 3344,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "훈련복 스탠딩",
+          "category": "기본",
+          "web": "assets/images/characters/jeok-wola/training.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/training.webp",
+          "source": "에셋/캐릭터/적월아/훈련복/적월아_기본스탠드_훈련복.png",
+          "status": "인게임 등록",
+          "width": 2048,
+          "height": 3070,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "적월아 8종 표정",
+          "category": "표정 시트",
+          "web": "assets/images/characters/jeok-wola/sheets/sheet-01.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/sheets/sheet-01.webp",
+          "source": "에셋/캐릭터/적월아/표정시트/적월아 8종 표정.png",
+          "status": "원본 시트 보관",
+          "width": 1536,
+          "height": 1024,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 01 · 기본",
+          "category": "표정",
+          "web": "assets/images/characters/jeok-wola/expressions/expression-01.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/expressions/expression-01.webp",
+          "source": "에셋/캐릭터/적월아/표정/표정_01_기본.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 02 · 미소",
+          "category": "표정",
+          "web": "assets/images/characters/jeok-wola/expressions/expression-02.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/expressions/expression-02.webp",
+          "source": "에셋/캐릭터/적월아/표정/표정_02_미소.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 03 · 카리스마",
+          "category": "표정",
+          "web": "assets/images/characters/jeok-wola/expressions/expression-03.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/expressions/expression-03.webp",
+          "source": "에셋/캐릭터/적월아/표정/표정_03_카리스마.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 04 · 냉소",
+          "category": "표정",
+          "web": "assets/images/characters/jeok-wola/expressions/expression-04.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/expressions/expression-04.webp",
+          "source": "에셋/캐릭터/적월아/표정/표정_04_냉소.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 05 · 분노",
+          "category": "표정",
+          "web": "assets/images/characters/jeok-wola/expressions/expression-05.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/expressions/expression-05.webp",
+          "source": "에셋/캐릭터/적월아/표정/표정_05_분노.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 06 · 비웃음",
+          "category": "표정",
+          "web": "assets/images/characters/jeok-wola/expressions/expression-06.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/expressions/expression-06.webp",
+          "source": "에셋/캐릭터/적월아/표정/표정_06_비웃음.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 07 · 슬픔",
+          "category": "표정",
+          "web": "assets/images/characters/jeok-wola/expressions/expression-07.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/expressions/expression-07.webp",
+          "source": "에셋/캐릭터/적월아/표정/표정_07_슬픔.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
+        },
+        {
+          "title": "표정 08 · 무심",
+          "category": "표정",
+          "web": "assets/images/characters/jeok-wola/expressions/expression-08.webp",
+          "thumb": "assets/images/characters/thumbnails/jeok-wola/expressions/expression-08.webp",
+          "source": "에셋/캐릭터/적월아/표정/표정_08_무심.png",
+          "status": "인게임 사용중",
+          "width": 376,
+          "height": 504,
+          "mode": "RGBA",
+          "transparent": true
         }
       ]
     }

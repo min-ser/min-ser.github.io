@@ -3,7 +3,7 @@
 > **천류관 : 흐름의 기록**  
 > 원본 소설을 기준으로 세계관, 캐릭터, 기록, 복선, 이미지, 분석 결과와 모바일 인터랙티브 노벨을 함께 관리하는 장기 IP 프로젝트입니다.
 
-현재 버전: **v0.8.4.2 — Interactive Novel Alpha**
+현재 버전: **v0.9.5 — Interactive Novel Alpha**
 
 ## 목표
 
@@ -221,7 +221,7 @@ story/manuscript/volume-01/part-01/chapter-01.md
 전서율, 태허진인, 진하연, 연서 설정집을 캐릭터별 문서로 분리했습니다. 서하린, 연무설, 적월아, 설유진은 폴더와 기본 프로필만 만들었으며 공식 정보는 원본 설정집 수령 후 확정합니다.
 
 
-## v0.8.4.2 플레이 방법
+## v0.9.5 플레이 방법
 
 루트 프로젝트를 Live Server로 실행한 뒤 다음 주소로 접속합니다.
 
@@ -251,7 +251,7 @@ game/data/volume-01/part-01/chapter-01.json
 Canon으로 확정하지 않습니다.
 
 
-## v0.8.4.2 캐릭터 비주얼 레퍼런스
+## v0.9.5 캐릭터 비주얼 레퍼런스
 
 작성자가 제공한 캐릭터 이미지를 원본 보존 정책에 따라 다음 위치에 저장했습니다.
 
@@ -282,7 +282,7 @@ archive/characters/_SOURCE/2026-08-04/visual-references/
 별도 생성하여 게임 JSON과 연결합니다.
 
 
-## v0.8.4.2 게임 엔진 기능
+## v0.9.5 게임 엔진 기능
 
 - 실제 SVG 배경 이미지 전환
 - 전서율 캐릭터 레이어 표시
@@ -306,13 +306,13 @@ http://127.0.0.1:5500/game/
 재생됩니다.
 
 
-## v0.8.4.2 실행 확인
+## v0.9.5 실행 확인
 
 게임 첫 장면부터 전서율 캐릭터가 표시됩니다. 상단의 `소리 테스트` 버튼을
 누르면 천둥 효과음과 빗소리를 즉시 확인할 수 있습니다.
 
 이전 버전을 같은 주소에서 실행했다면 브라우저가 오래된 Service Worker를
-사용할 수 있습니다. v0.8.4.2은 localhost 실행 시 기존 천류관 캐시와 Service
+사용할 수 있습니다. v0.9.5은 localhost 실행 시 기존 천류관 캐시와 Service
 Worker를 자동 해제합니다.
 
 확인 순서:
@@ -324,7 +324,7 @@ Worker를 자동 해제합니다.
 5. 3번째 문장까지 진행하여 캐릭터 레이어 유지 확인
 
 
-## v0.8.4.2 한글 에셋 관리 구조
+## v0.9.5 한글 에셋 관리 구조
 
 코드와 JSON 내부 ID는 호환성을 위해 영어로 유지하고, 그 외 에셋 관리와
 문서 영역은 한글화했습니다.
@@ -346,7 +346,7 @@ Worker를 자동 해제합니다.
 의미하지 않습니다.
 
 
-## v0.8.4.2 서하린 표정 스프라이트
+## v0.9.5 서하린 표정 스프라이트
 
 서하린 표정 8종 시트를 게임용 개별 리소스로 자동 분리했습니다.
 
@@ -365,7 +365,7 @@ game/assets/images/characters/seo-harin/expressions/
 가장자리는 수동 검수가 필요합니다.
 
 
-## v0.8.4.2 캐릭터 갤러리
+## v0.9.5 캐릭터 갤러리
 
 메인 페이지의 `Characters` 메뉴에서 생성한 캐릭터 이미지를 캐릭터별로
 확인할 수 있습니다.
@@ -388,17 +388,17 @@ game/assets/images/characters/seo-harin/expressions/
 `assets/images/characters/` 아래에 생성합니다.
 
 
-## v0.8.4.2 사이트 동기화
+## v0.9.5 사이트 동기화
 
 기존 정적 페이지가 과거 버전에서 멈춰 있던 문제를 수정했습니다.
 
-- `pages/roadmap/`: 실제 v0.1.0~v0.8.4.2 구현 이력
+- `pages/roadmap/`: 실제 v0.1.0~v0.9.5 구현 이력
 - `pages/story/`: 1~4부 기획과 1부 1화 게임 알파 상태
 - 공통 메뉴: 한글 명칭 통일
-- 모든 주요 페이지: 버전 v0.8.4.2 동기화
+- 모든 주요 페이지: 버전 v0.9.5 동기화
 
 
-## v0.8.4.2 캐릭터 레퍼런스·환경음
+## v0.9.5 캐릭터 레퍼런스·환경음
 
 - 연무설 기본 스탠딩 교체본 추가
 - 설유진 캐릭터 갤러리 추가
@@ -419,12 +419,12 @@ game/assets/audio/ambient/rain.mp3
 ```
 
 
-## v0.8.4.2 서하린 투명 에셋 수정
+## v0.9.5 서하린 투명 에셋 수정
 
 원본과 기존 자동 처리본을 보존하고, 표정 8종의 가위·점선 흔적 제거본과 전투 9종의 투명 배경 최종본을 추가했습니다. 웹에서는 `/pages/characters/seo-harin/`의 `최종 표정`, `최종 전투` 필터로 확인합니다.
 
 
-## v0.8.4.2 상호작용 안정화
+## v0.9.5 상호작용 안정화
 
 장식용 배경·비·비네트 레이어가 버튼을 가로채지 않도록 수정했습니다.
 Live Server에서는 이전 Service Worker와 캐시를 자동 정리합니다.
@@ -432,5 +432,176 @@ Live Server에서는 이전 Service Worker와 캐시를 자동 정리합니다.
 검수 문서:
 
 ```text
-문서/체크리스트/v0.8.4.2_버튼_상호작용_검수_보고서.md
+문서/체크리스트/v0.9.5_버튼_상호작용_검수_보고서.md
 ```
+
+
+## v0.9.5 Engine Consolidation
+
+엔진 모듈 분리, 챕터 선택, 서하린 테스트 챕터, 저장 키 마이그레이션, 진단창과 자동 검수 스크립트를 추가했습니다.
+
+체크리스트: `문서/체크리스트/앞으로_진행할_작업_체크리스트.md`
+
+
+## v0.9.5 Engine Stabilization
+
+- SceneManager·BackgroundManager·EffectManager·SaveManager 추가
+- Quick Save / Quick Load
+- F1 엔진 진단창
+- Markdown → Scene JSON 변환기
+- Markdown 변환 테스트 챕터
+- 배경 페이드와 추가 화면 효과 기반
+
+시나리오 변환 예시:
+
+```powershell
+python tools/story_compiler.py `
+  "story/게임_시나리오_원본/1부/서하린_엔진_테스트.md" `
+  "game/data/compiled/seo-harin-test.json" `
+  --id seo-harin-test `
+  --title "서하린 테스트"
+```
+
+
+## v0.9.5 Scene Command System
+
+장면 데이터에 조건·변수·플래그·점프·대기 명령을 추가했습니다.
+
+```text
+game/schema/chapter.schema.json
+game/engine/modules/condition-manager.js
+game/engine/modules/command-executor.js
+```
+
+다중 캐릭터 표시와 화자 강조, BGM·환경음 교차 전환도 지원합니다.
+
+장면 검증:
+
+```powershell
+python tools/validate_scene_schema.py
+```
+
+
+## v0.9.5 Save & Playback Convenience
+
+- 자동 저장 이력
+- 읽은 대사 기록과 Skip
+- 백로그 장면 이동
+- 캐릭터 입장·퇴장 애니메이션
+- 캐릭터 연출 테스트 챕터
+
+테스트 챕터:
+
+```text
+game/data/compiled/character-animation-test.json
+```
+
+
+## v0.9.5 Quality Gate & Asset Browser
+
+- 모듈 엔진 API 계약 통일
+- 저장 데이터 내보내기·가져오기
+- 배경·음향 갤러리
+- 링크와 매니페스트 리소스 검사
+- Playwright E2E Smoke Test
+- GitHub Actions Quality Gate
+
+검수:
+
+```powershell
+python tools/validate_project.py
+python tools/validate_resources.py
+npm install
+npx playwright install chromium
+npm run test:e2e
+```
+
+
+## v0.9.5 Character Asset Replacement
+
+- 기존 캐릭터 웹·게임 이미지 삭제
+- 사용자 제공 원본으로 5명 전면 교체
+- 전서율 신규 스탠딩 인게임 적용
+- 서하린 표정 8종·전투 이미지 연결
+- 캐릭터 갤러리와 매니페스트 재생성
+
+
+## v0.9.8.5.1 Header & Version Synchronization
+
+이 버전은 `Cheonryugwan-Archive-v0.9.5.1-Faction-Expression-Split`을 원본으로 다시 생성했습니다.
+
+- 홈 `CURRENT RELEASE`를 `v0.9.8.5.1`으로 수정
+- 캐릭터 목록과 캐릭터 개별 페이지에 공통 헤더 적용
+- 홈·아카이브·스토리·세계관·배경·음향·로드맵·소개 헤더 통일
+- 현재 페이지 메뉴 자동 강조
+- 모바일 메뉴 적용
+- v0.9.5.1 캐릭터 원본·웹·인게임 이미지의 SHA-256 해시 유지
+
+캐릭터 이미지는 재변환·재압축·재생성하지 않았습니다.
+
+
+## v0.9.8.5.1 Archive, Background Catalog & Seo Harin Expressions
+
+- 서하린 반신 표정 시트를 4×2 기준 8장으로 재분리
+- 자르기 선과 제목 영역 제외
+- 가장자리에 연결된 밝은 배경만 투명 처리
+- 기존 인게임 `expression-01~08` 교체
+- 1~4부 배경 목록 원본을 배경 갤러리에 등록
+- 아카이브 카드 전체를 실제 링크로 활성화
+- 캐릭터·배경·음향 바로가기 추가
+
+
+## v0.9.8.5.1 Image Split Showcase
+
+- 서하린 캐릭터 페이지 상단에 표정 8종 전용 섹션 추가
+- 표정 8개를 개별 카드로 강제 표시
+- 각 표정 카드에서 원본 개별 이미지 열기 지원
+- 1부 배경 목록 시트에서 29개 배경 분리
+- 분리된 PNG 원본·WebP 웹 이미지·썸네일 생성
+- 배경 페이지에 1부 개별 배경 29종 전용 섹션 추가
+- 기존 캐릭터 이미지 파일은 변경하지 않음
+
+
+## v0.9.8.5 Seo Harin Face Expression Split
+
+- 프로젝트에 보관된 `서하린 표정 8종.png` 원본 사용
+- 얼굴 클로즈업 표정 8개 개별 PNG 분리
+- 웹용·썸네일·인게임 WebP 생성
+- 인게임 `face-expression-01~08` 등록
+- 서하린 페이지에 얼굴 클로즈업 전용 섹션 추가
+- 기존 반신 표정 8종과 1부 배경 29종 유지
+
+## v0.9.8.5 서하린 반신 표정 교체
+- 기존 반신 표정 expression-01~08 삭제
+- 사용자 제공 개별 PNG 8장으로 교체
+- 웹·썸네일·인게임 리소스 갱신
+- 얼굴 클로즈업 face-expression-01~08 유지
+
+
+## v0.9.8.5 Part 1 Episode 1 Playable
+
+- 1부 1화 `비 내리는 산길` 플레이 가능
+- 선택지 제거 및 선형 진행
+- 원본 기반 28개 장면
+- 실제 1부 배경 01·03 연결
+- Story 페이지에서 바로 시작
+- URL 챕터 자동 시작 지원
+- 기존 캐릭터 이미지 변경 없음
+
+
+## v0.9.8.5
+- 원본 시나리오 4개를 `1권-N부.md`로 저장
+- 캐릭터는 본인 대사에서만 표시
+- 나레이션과 타인 대사에서 숨김
+
+
+## v0.9.8.5 — 1부 1화 확장 시나리오 및 장면 CG
+
+- 사용자 작성 확장 JSON을 실행 데이터로 적용
+- 총 277개 장면
+- 장면 ID 연결 CG 5종
+- CG 전용 인게임 레이어와 장면 ID 배지
+- 전서율 직접 대사 4개 추가
+- 전서율은 본인 대사 장면에서만 스탠딩 표시
+- 기억 장면·정파 보고실·암전 배경 등록
+- 장면 ID·CG 확인 웹 페이지 추가

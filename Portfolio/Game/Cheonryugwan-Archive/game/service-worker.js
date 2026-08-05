@@ -1,4 +1,4 @@
-const CACHE='cheonryugwan-game-v0.8.4.2';
+const CACHE='cheonryugwan-game-v0.9.8.5.1';
 const ASSETS=[
 './','./index.html','./styles.css','./engine/novel-engine.js',
 './data/volume-01/part-01/chapter-01.json',

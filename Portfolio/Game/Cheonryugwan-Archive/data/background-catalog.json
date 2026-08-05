@@ -1,0 +1,37 @@
+{
+  "version": "0.9.7",
+  "catalogs": [
+    {
+      "part": 1,
+      "title": "1부 배경 목록",
+      "path": "assets/images/backgrounds/catalog/part-1-background-list.png",
+      "width": 1536,
+      "height": 1024,
+      "status": "업로드 원본"
+    },
+    {
+      "part": 2,
+      "title": "2부 배경 목록",
+      "path": "assets/images/backgrounds/catalog/part-2-background-list.png",
+      "width": 1536,
+      "height": 1024,
+      "status": "업로드 원본"
+    },
+    {
+      "part": 3,
+      "title": "3부 배경 목록",
+      "path": "assets/images/backgrounds/catalog/part-3-background-list.png",
+      "width": 1536,
+      "height": 1024,
+      "status": "업로드 원본"
+    },
+    {
+      "part": 4,
+      "title": "4부 배경 목록",
+      "path": "assets/images/backgrounds/catalog/part-4-background-list.png",
+      "width": 1536,
+      "height": 1024,
+      "status": "업로드 원본"
+    }
+  ]
+}

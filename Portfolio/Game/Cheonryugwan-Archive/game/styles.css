@@ -73,3 +73,97 @@ dialog,dialog *{
 .menu button,.menu a{position:relative;z-index:21;cursor:pointer;touch-action:manipulation}
 .topbar{z-index:30}
 .dialogue-box{z-index:25}
+
+.chapter-list{display:grid;gap:12px}.chapter-item{padding:14px;border:1px solid #4a4338;border-radius:9px;background:#14161a}.chapter-item p{color:#b9b1a5}.debug-list{list-style:none;padding:0;max-height:440px;overflow:auto}.debug-list li{padding:8px 0;border-bottom:1px solid #333;font:12px Consolas,monospace}.debug-list time{color:#d3b477;margin-right:8px}.character.battle-pose{max-width:78%;max-height:94%}
+
+
+/* v0.9.1 Engine Stabilization */
+.background-layer.bg-fade{animation:bgFade .45s ease}
+@keyframes bgFade{from{opacity:.25}to{opacity:1}}
+
+#stage.zoom-in{animation:cameraZoom .75s ease}
+#stage.blackout::after,
+#stage.whiteout::after{
+  content:"";position:absolute;inset:0;z-index:90;pointer-events:none;
+}
+#stage.blackout::after{background:#000;animation:overlayPulse .8s ease}
+#stage.whiteout::after{background:#fff;animation:overlayPulse .8s ease}
+#stage.slow-motion{animation:slowMotion .9s ease}
+
+@keyframes cameraZoom{from{transform:scale(1)}to{transform:scale(1.035)}}
+@keyframes overlayPulse{0%{opacity:0}45%{opacity:1}100%{opacity:0}}
+@keyframes slowMotion{0%{filter:blur(0)}50%{filter:blur(1px) saturate(.65)}100%{filter:blur(0)}}
+
+.debug-state{
+  background:#101216;border:1px solid #4d4437;border-radius:8px;
+  padding:12px!important;line-height:1.75
+}
+.debug-list .warn{color:#e4c16f}
+.debug-list .error{color:#ef8d8d}
+
+
+/* v0.9.2 Scene Command System */
+.character{
+  transition:opacity .25s ease,filter .25s ease,transform .25s ease;
+}
+.character.speaker-active{
+  opacity:1;
+  filter:brightness(1.08) saturate(1.05);
+  transform:translateY(0) scale(1.01);
+}
+.character.speaker-dim{
+  opacity:.58;
+  filter:brightness(.62) saturate(.75);
+  transform:translateY(5px) scale(.985);
+}
+
+
+/* v0.9.3 Save & Playback Convenience */
+.character.enter-left{animation:characterEnterLeft .32s ease}
+.character.enter-right{animation:characterEnterRight .32s ease}
+.character.fade-in{animation:characterFadeIn .3s ease}
+.character.exit-left{animation:characterExitLeft .28s ease}
+.character.exit-right{animation:characterExitRight .28s ease}
+.character.fade-out{animation:characterFadeOut .28s ease}
+
+@keyframes characterEnterLeft{
+  from{opacity:0;transform:translateX(-48px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes characterEnterRight{
+  from{opacity:0;transform:translateX(48px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes characterFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes characterExitLeft{from{opacity:1}to{opacity:0;transform:translateX(-48px)}}
+@keyframes characterExitRight{from{opacity:1}to{opacity:0;transform:translateX(48px)}}
+@keyframes characterFadeOut{from{opacity:1}to{opacity:0}}
+
+.history-list{display:grid;gap:10px;max-height:62vh;overflow:auto}
+.history-item{
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+  padding:12px;border:1px solid #4a4338;border-radius:8px;background:#121419
+}
+.history-item p{margin:5px 0;color:#c6c0b6}
+.history-item small{color:#888}
+.history-item button{white-space:nowrap}
+
+.log-item{
+  display:grid;grid-template-columns:minmax(80px,auto) 1fr auto;
+  gap:10px;align-items:start
+}
+.log-item button{
+  padding:5px 8px;font-size:12px;white-space:nowrap
+}
+
+/* v0.9.8.5 Scene ID-linked CG */
+.scene-cg-layer{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;overflow:hidden;pointer-events:none;opacity:0;visibility:hidden;background:#05070a}
+.scene-cg-layer.visible{opacity:1;visibility:visible}
+.scene-cg-layer img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.82) contrast(1.04);transform:scale(1.015)}
+.scene-cg-layer.cg-fade{animation:sceneCgFade .55s ease-out both}
+.scene-cg-layer.cg-flash{animation:sceneCgFlash .42s ease-out both}
+.scene-id-badge{position:absolute;z-index:24;left:18px;top:74px;max-width:min(520px,calc(100% - 36px));padding:7px 11px;border:1px solid rgba(211,180,119,.44);border-radius:7px;background:rgba(5,7,10,.72);color:#dfc28a;font-size:12px;letter-spacing:.04em;opacity:0;transform:translateY(-4px);transition:.24s ease;pointer-events:none}
+.scene-id-badge.visible{opacity:1;transform:translateY(0)}
+@keyframes sceneCgFade{from{opacity:0;transform:scale(1.025)}to{opacity:1;transform:scale(1)}}
+@keyframes sceneCgFlash{0%{opacity:0;filter:brightness(2)}30%{opacity:1;filter:brightness(1.35)}100%{opacity:1;filter:brightness(1)}}
+@media(max-width:700px){.scene-id-badge{top:64px;font-size:10px}}

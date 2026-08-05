@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cheonryugwan.local/schema/chapter.schema.json",
+  "title": "천류관 챕터 데이터 v0.9.3",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "scenes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "engineVersion": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "dialogue",
+              "choice",
+              "command"
+            ]
+          },
+          "speaker": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "background": {
+            "type": "string"
+          },
+          "transition": {
+            "type": "string"
+          },
+          "character": {
+            "$ref": "#/$defs/characterCommand"
+          },
+          "characters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/characterCommand"
+            }
+          },
+          "hideCharacters": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "enum": [
+                    "left",
+                    "center",
+                    "right"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "required": [
+                    "position"
+                  ],
+                  "properties": {
+                    "position": {
+                      "enum": [
+                        "left",
+                        "center",
+                        "right"
+                      ]
+                    },
+                    "animation": {
+                      "enum": [
+                        "fade",
+                        "slide-left",
+                        "slide-right"
+                      ]
+                    },
+                    "duration": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "battle": {
+            "type": "object",
+            "required": [
+              "characterId",
+              "action"
+            ],
+            "properties": {
+              "characterId": {
+                "type": "string"
+              },
+              "action": {
+                "type": "string"
+              },
+              "position": {
+                "enum": [
+                  "left",
+                  "center",
+                  "right"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "ambient": {
+            "type": "string"
+          },
+          "bgm": {
+            "type": "string"
+          },
+          "stopBgm": {
+            "type": "boolean"
+          },
+          "stopAmbient": {
+            "type": "boolean"
+          },
+          "sfx": {
+            "type": "string"
+          },
+          "effect": {
+            "type": "string"
+          },
+          "effectDuration": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "wait": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "jump": {
+            "type": "string"
+          },
+          "elseJump": {
+            "type": "string"
+          },
+          "set": {
+            "type": "object"
+          },
+          "flag": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "value": {}
+            }
+          },
+          "if": {
+            "type": "object",
+            "required": [
+              "key"
+            ],
+            "properties": {
+              "source": {
+                "enum": [
+                  "variable",
+                  "flag"
+                ]
+              },
+              "key": {
+                "type": "string"
+              },
+              "operator": {
+                "enum": [
+                  "eq",
+                  "neq",
+                  "gt",
+                  "gte",
+                  "lt",
+                  "lte",
+                  "truthy",
+                  "falsy",
+                  "includes"
+                ]
+              },
+              "value": {}
+            }
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "choices": {
+            "type": "array"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "$defs": {
+    "characterCommand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "expression": {
+          "type": "string"
+        },
+        "position": {
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "speaking": {
+          "type": "boolean"
+        },
+        "animation": {
+          "enum": [
+            "fade",
+            "slide-left",
+            "slide-right"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

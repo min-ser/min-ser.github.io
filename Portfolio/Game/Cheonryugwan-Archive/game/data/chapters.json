@@ -1,0 +1,45 @@
+{
+  "version": "0.9.8.3",
+  "chapters": [
+    {
+      "id": "volume-01-part-01-chapter-01",
+      "title": "1부 1화 — 비 내리는 산길",
+      "part": "1부 「흐르지 못한 검」",
+      "status": "playable",
+      "path": "./data/volume-01/part-01/chapter-01.json",
+      "description": "원본 1부 1화 기반 · 선택지 없는 선형 플레이"
+    },
+    {
+      "id": "engine-test-seo-harin",
+      "title": "엔진 테스트 — 서하린",
+      "part": "개발 테스트",
+      "status": "playable",
+      "path": "./data/tests/seo-harin-test.json",
+      "description": "표정·전투 리소스 테스트"
+    },
+    {
+      "id": "seo-harin-markdown-test",
+      "title": "Markdown 변환 테스트 — 서하린",
+      "part": "개발 테스트",
+      "status": "playable",
+      "path": "./data/compiled/seo-harin-markdown-test.json",
+      "description": "Markdown 원고를 자동 변환한 테스트 장면"
+    },
+    {
+      "id": "condition-multi-character-test",
+      "title": "조건 분기·다중 캐릭터 테스트",
+      "part": "개발 테스트",
+      "status": "playable",
+      "path": "./data/compiled/condition-multi-character-test.json",
+      "description": "조건·플래그·점프·다중 캐릭터 명령 검증"
+    },
+    {
+      "id": "character-animation-test",
+      "title": "캐릭터 입퇴장·읽은 대사 테스트",
+      "part": "개발 테스트",
+      "status": "playable",
+      "path": "./data/compiled/character-animation-test.json",
+      "description": "등장·퇴장 애니메이션, 화자 강조, 읽은 대사 Skip 검증"
+    }
+  ]
+}

@@ -1,6 +1,185 @@
 # Changelog
 
-## v0.8.4.2 - Unicode Filename Fix
+## v0.9.8.5 - Episode 1 Expanded Scenario & Scene CG
+
+- 사용자 제공 확장 시나리오 반영
+- 1부 1화 277개 장면
+- 장면 ID 기반 CG 5종 연결
+- CG 레이어·전환·ID 배지 추가
+- 전서율 직접 대사 4개 추가
+- 화자 전용 캐릭터 표시 규칙 유지
+- 누락 배경 ID 등록
+- Story 페이지에 CG 확인 링크 추가
+
+
+## v0.9.8.5 - Original Markdown & Speaker-only Visibility
+
+- 1권-1부.md ~ 1권-4부.md 추가
+- 기존 비표준 원본 수신 파일 제거
+- 화자 일치 시에만 캐릭터 표시
+- 나레이션·타인 대사에서 캐릭터 숨김
+- 기존 이미지 변경 없음
+
+
+## v0.9.8.5 - Part 1 Episode 1 Playable
+
+- 1부 1화 선형 플레이 적용
+- 선택지 장면 제거
+- 원본 시나리오 순서 유지
+- 28개 장면 플레이 가능
+- 실제 비 오는 산길·피로 물든 산길 배경 연결
+- URL 챕터 자동 시작 기능 추가
+- Story 페이지 플레이 버튼 활성화
+- 기존 캐릭터 에셋 보존
+
+
+## v0.9.8.5 - Seo Harin Half-body Expression Replacement
+
+- 기존 서하린 반신 표정 8개 삭제
+- 사용자 제공 개별 투명 PNG 8개로 교체
+- expression-01~08 웹·썸네일·인게임 파일 갱신
+- 얼굴 클로즈업 표정 8종 유지
+- 다른 캐릭터 및 배경 이미지 변경 없음
+
+
+## v0.9.8.5 - Seo Harin Face Expression Split
+
+- 서하린 큰 얼굴 표정 시트 8개 개별 이미지 분리
+- 원본 투명 배경 유지
+- 개별 PNG·웹 WebP·썸네일·인게임 리소스 생성
+- 게임 매니페스트에 face-expression-01~08 등록
+- 서하린 캐릭터 페이지에 얼굴 클로즈업 표정 섹션 추가
+- 기존 반신 표정과 1부 배경 분리본 유지
+
+
+## v0.9.8.5.1 - Image Split Showcase
+
+- 서하린 표정 8종 전용 갤러리 섹션 추가
+- 서하린 표정 카드 8개를 캐릭터 페이지에 직접 렌더링
+- 1부 배경 목록에서 29개 이미지 분리
+- 1부 배경 PNG 원본 및 WebP 파생 이미지 생성
+- 배경 페이지에 29개 개별 카드 추가
+- 배경 번호·이름·분류·해상도 표시
+- 분리된 원본 클릭 확대 기능 추가
+- 기존 캐릭터 이미지 바이트 불변 검수
+
+
+## v0.9.8.5.1 - Archive, Background Catalog & Seo Harin Expressions
+
+- 서하린 반신 표정 시트 8개 개별 이미지 재분리
+- 가위·점선·제목 영역 제거
+- 서하린 표정 이미지 투명 배경 처리 및 인게임 교체
+- 1부·2부·3부·4부 배경 목록 원본 등록
+- 배경 페이지에 부별 목록 원본 섹션 추가
+- 아카이브 World 카드 활성화
+- 아카이브 Records 카드 활성화
+- 아카이브 Foreshadow 카드 활성화
+- 캐릭터·배경·음향 아카이브 바로가기 추가
+- 사이트 버전 v0.9.8.5.1 동기화
+
+
+## v0.9.8.5.1 - Header & Version Synchronization
+
+- v0.9.5.1 원본 프로젝트에서 재작업
+- 홈 CURRENT RELEASE의 v0.8.4.2 잔존 표기 수정
+- 캐릭터 목록 페이지 헤더를 공통 헤더로 교체
+- 캐릭터 개별 페이지 5개의 헤더를 공통 헤더로 교체
+- 전체 콘텐츠 페이지의 메뉴·브랜드·현재 페이지 강조 통일
+- 모바일 공통 메뉴 적용
+- 캐릭터 이미지 에셋 해시 불변 검수 추가
+- 캐릭터 원본·웹·인게임 이미지 변경 없음
+
+
+## v0.9.5 - Character Asset Replacement
+
+- 기존 캐릭터 이미지 전면 삭제 및 사용자 원본 교체
+- 전서율 신규 스탠딩 적용
+- 서하린 표정·전투 인게임 연결
+- 설유진·연무설·적월아 기본·훈련복 연결
+- 캐릭터 갤러리와 매니페스트 갱신
+
+
+## v0.9.4 - Quality Gate & Asset Browser
+
+- 엔진 모듈 API Export/Import 계약 통일
+- 실행 `app.js`를 모듈 엔진 구조로 재작성
+- v0.9.4 저장 키와 과거 저장 데이터 마이그레이션
+- 저장 데이터 JSON 내보내기·가져오기
+- 백로그 최대 300개 영구 보존
+- 배경 갤러리 추가
+- 음향 갤러리 추가
+- HTML 링크 및 매니페스트 리소스 검사기 추가
+- Playwright 브라우저 Smoke Test 추가
+- GitHub Actions Quality Gate 추가
+- 프로젝트 자동검수 통합
+- 향후 작업 체크리스트 갱신
+
+
+## v0.9.3 - Save & Playback Convenience
+
+- ReadingManager 추가
+- 읽은 대사 영구 기록
+- 읽은 대사 건너뛰기
+- 자동 저장 이력 30개 보관
+- 자동 저장 이력 불러오기
+- Quick Save 스키마 v3
+- 백로그 장면 이동
+- 캐릭터 슬라이드·페이드 등장
+- 캐릭터 슬라이드·페이드 퇴장
+- 캐릭터 애니메이션 테스트 챕터
+- Chapter Schema 애니메이션 명령 확장
+- 자동 검수 항목 추가
+- 향후 작업 체크리스트 갱신
+
+
+## v0.9.2 - Scene Command System
+
+- ConditionManager 추가
+- CommandExecutor 추가
+- 조건문·변수 비교·플래그·장면 점프·대기 명령 구현
+- 다중 캐릭터 동시 표시
+- 화자 강조와 비화자 디밍
+- 캐릭터 개별 숨김과 위치 이동 API
+- BGM·환경음 교차 전환
+- 오디오 페이드 정지
+- Markdown Story Compiler 명령 확장
+- 챕터 JSON Schema 추가
+- 장면 데이터 검증기 추가
+- 조건 분기·다중 캐릭터 테스트 챕터 추가
+- 자동 검수 스크립트 강화
+- 향후 작업 체크리스트 갱신
+
+
+## v0.9.1 - Engine Stabilization & Story Pipeline
+
+- SceneManager 모듈 추가
+- BackgroundManager 모듈 추가
+- EffectManager 모듈 추가
+- SaveManager 모듈 추가
+- Quick Save·Quick Load 구현
+- F1 엔진 진단창과 상태 정보 강화
+- Ctrl+F5·F9 단축키 추가
+- Markdown → Scene JSON 변환기 추가
+- 변환용 Markdown 샘플 및 컴파일 결과 추가
+- 컴파일된 테스트 챕터 등록
+- 배경 페이드와 추가 화면 효과 기반 구현
+- 프로젝트 검수 스크립트 확장
+- 향후 작업 체크리스트 갱신
+
+
+## v0.9.0 - Engine Consolidation
+
+- 엔진 모듈 분리
+- 챕터 선택 화면
+- 서하린 표정·전투 테스트 챕터
+- 저장 키 v0.9 마이그레이션
+- BGM Manager 구조
+- 진단창과 자동 검수 스크립트
+- 초기 프로토타입 legacy 분리
+- 향후 작업 체크리스트
+
+
+## v0.9.8.5.1 - Unicode Filename Fix
 
 - ZIP 내부에서 CP437로 잘못 해석된 한글 파일명 복구
 - `에셋`, `문서`, `캐릭터`, 캐릭터 이름과 이미지 파일명 정상화
@@ -10,7 +189,7 @@
 - v0.8.4.1 버튼·JavaScript 수정사항 유지
 
 
-## v0.8.4.2 - Interaction & JavaScript Fix
+## v0.9.8.5.1 - Interaction & JavaScript Fix
 
 - `novel-engine.js`에 남아 있던 중복 `catch` 구문 제거
 - 빗소리 정지 함수 `stopRain()` 문법과 예외 처리 수정

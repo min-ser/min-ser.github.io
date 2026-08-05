@@ -1,4 +1,10 @@
 {
   "rainy-mountain-road": "./assets/images/backgrounds/rainy-mountain-road.svg",
-  "rainy-mountain-after-battle": "./assets/images/backgrounds/rainy-mountain-after-battle.svg"
+  "rainy-mountain-after-battle": "./assets/images/backgrounds/rainy-mountain-after-battle.svg",
+  "part1-rainy-mountain-road": "./assets/images/backgrounds/part-1/bg-01.webp",
+  "part1-misty-mountain-road": "./assets/images/backgrounds/part-1/bg-02.webp",
+  "part1-bloodied-mountain-road": "./assets/images/backgrounds/part-1/bg-03.webp",
+  "part1-orthodox-report-room": "./assets/images/backgrounds/part-1/bg-24.webp",
+  "part1-memory-overlay": "./assets/images/backgrounds/part-1/memory-overlay.webp",
+  "part1-black": "./assets/images/backgrounds/part-1/black.svg"
 }

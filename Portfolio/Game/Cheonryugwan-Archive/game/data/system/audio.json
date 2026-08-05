@@ -11,5 +11,18 @@
     "sword-draw": "./assets/audio/generated/sword-draw.wav",
     "sword-clash": "./assets/audio/generated/sword-clash.wav",
     "memory-drone": "./assets/audio/generated/memory-drone.wav"
+  },
+  "version": "0.9.0",
+  "bgm": {
+    "title": {
+      "path": "./assets/audio/bgm/title-theme.mp3",
+      "loop": true,
+      "status": "placeholder"
+    },
+    "battle": {
+      "path": "./assets/audio/bgm/battle-theme.mp3",
+      "loop": true,
+      "status": "placeholder"
+    }
   }
 }

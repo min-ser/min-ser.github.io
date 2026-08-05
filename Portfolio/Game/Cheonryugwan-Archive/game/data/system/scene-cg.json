@@ -1,0 +1,51 @@
+{
+  "version": "0.9.8.5",
+  "chapterId": "volume-01-part-01-chapter-01",
+  "items": {
+    "c01-s005": {
+      "title": "폭우 속 포위",
+      "game": "./assets/images/scene-cg/volume-01/part-01/chapter-01/c01-s005.webp",
+      "web": "assets/images/scene-cg/volume-01/part-01/chapter-01/c01-s005.webp",
+      "source": "에셋/이벤트CG/1권-1부-1화/c01-s005.png",
+      "width": 1536,
+      "height": 1024,
+      "sceneId": "c01-s005"
+    },
+    "c01-s022": {
+      "title": "정파 추적대와의 대치",
+      "game": "./assets/images/scene-cg/volume-01/part-01/chapter-01/c01-s022.webp",
+      "web": "assets/images/scene-cg/volume-01/part-01/chapter-01/c01-s022.webp",
+      "source": "에셋/이벤트CG/1권-1부-1화/c01-s022.png",
+      "width": 1536,
+      "height": 1024,
+      "sceneId": "c01-s022"
+    },
+    "c01-s136": {
+      "title": "현재와 과거의 혼선",
+      "game": "./assets/images/scene-cg/volume-01/part-01/chapter-01/c01-s136.webp",
+      "web": "assets/images/scene-cg/volume-01/part-01/chapter-01/c01-s136.webp",
+      "source": "에셋/이벤트CG/1권-1부-1화/c01-s136.png",
+      "width": 1536,
+      "height": 1024,
+      "sceneId": "c01-s136"
+    },
+    "c01-s146": {
+      "title": "웃고 있다고 오해한 순간",
+      "game": "./assets/images/scene-cg/volume-01/part-01/chapter-01/c01-s146.webp",
+      "web": "assets/images/scene-cg/volume-01/part-01/chapter-01/c01-s146.webp",
+      "source": "에셋/이벤트CG/1권-1부-1화/c01-s146.png",
+      "width": 1536,
+      "height": 1024,
+      "sceneId": "c01-s146"
+    },
+    "c01-s156": {
+      "title": "최후의 집단 공격",
+      "game": "./assets/images/scene-cg/volume-01/part-01/chapter-01/c01-s156.webp",
+      "web": "assets/images/scene-cg/volume-01/part-01/chapter-01/c01-s156.webp",
+      "source": "에셋/이벤트CG/1권-1부-1화/c01-s156.png",
+      "width": 1536,
+      "height": 1024,
+      "sceneId": "c01-s156"
+    }
+  }
+}

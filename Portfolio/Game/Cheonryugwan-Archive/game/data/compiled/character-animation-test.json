@@ -1,0 +1,84 @@
+{
+  "id": "character-animation-test",
+  "engineVersion": "0.9.3",
+  "title": "캐릭터 입퇴장·읽은 대사 테스트",
+  "scenes": [
+    {
+      "id": "animation-test-001",
+      "speaker": "시스템",
+      "text": "서하린이 왼쪽에서 등장합니다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "seo-harin",
+        "expression": "expression-01",
+        "position": "left",
+        "visible": true,
+        "speaking": true,
+        "animation": "slide-left"
+      }
+    },
+    {
+      "id": "animation-test-002",
+      "speaker": "서하린",
+      "speakerId": "seo-harin",
+      "text": "등장 애니메이션과 읽은 대사 기록을 확인합니다.",
+      "background": "rainy-mountain-road",
+      "characters": [
+        {
+          "id": "seo-harin",
+          "expression": "expression-02",
+          "position": "left",
+          "visible": true,
+          "speaking": true
+        },
+        {
+          "id": "jeon-seoyul",
+          "expression": "default",
+          "position": "right",
+          "visible": true,
+          "speaking": false,
+          "animation": "fade"
+        }
+      ]
+    },
+    {
+      "id": "animation-test-003",
+      "speaker": "전서율",
+      "speakerId": "jeon-seoyul",
+      "text": "이제 화자 강조가 전환된다.",
+      "characters": [
+        {
+          "id": "seo-harin",
+          "expression": "expression-01",
+          "position": "left",
+          "visible": true,
+          "speaking": false
+        },
+        {
+          "id": "jeon-seoyul",
+          "expression": "default",
+          "position": "right",
+          "visible": true,
+          "speaking": true
+        }
+      ]
+    },
+    {
+      "id": "animation-test-004",
+      "speaker": "시스템",
+      "text": "전서율이 오른쪽으로 퇴장합니다.",
+      "hideCharacters": [
+        {
+          "position": "right",
+          "animation": "slide-right",
+          "duration": 280
+        }
+      ]
+    },
+    {
+      "id": "animation-test-005",
+      "speaker": "시스템",
+      "text": "이 챕터를 다시 실행하면 읽은 대사 건너뛰기를 시험할 수 있습니다."
+    }
+  ]
+}

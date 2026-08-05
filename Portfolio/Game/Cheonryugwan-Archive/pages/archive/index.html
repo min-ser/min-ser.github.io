@@ -1,48 +1,50 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Archive | Cheonryugwan Archive</title>
-  <link rel="stylesheet" href="../../assets/css/common.css?v=0.8.4">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>아카이브 | 천류관</title>
+<link rel="stylesheet" href="../../assets/css/common.css?v=0.9.7">
+<style>
+.archive-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.archive-card{position:relative;display:block;min-height:260px;padding:24px;border:1px solid #4b4235;border-radius:12px;color:inherit;text-decoration:none;background:#1a1b1f;transition:transform .18s,border-color .18s,background .18s}
+.archive-card:hover,.archive-card:focus-visible{transform:translateY(-4px);border-color:#a78143;background:#202126;outline:none}
+.archive-card .badge{display:inline-block;margin-bottom:28px;color:#d9b66a;letter-spacing:.14em}
+.archive-card h2{margin:0 0 12px;font-size:30px}.archive-card p{color:#c4b8a9;line-height:1.75}
+.archive-card strong{position:absolute;left:24px;bottom:22px;color:#e0b75f}
+.archive-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.archive-actions a{display:inline-flex;min-height:44px;align-items:center;padding:0 16px;border:1px solid #725c35;border-radius:8px;color:#ead8b5;text-decoration:none;background:#191a1e}
+@media(max-width:850px){.archive-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="../../index.html">
-      <span class="brand-en">CHEONRYUGWAN ARCHIVE</span>
-      <span class="brand-ko">천류관 : 흐름의 기록</span>
-    </a>
-    <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button>
-    <nav class="site-nav" aria-label="주요 메뉴"><a href="../../index.html">홈</a>
-<a href="../../game/">게임</a>
-<a class="active" href="../../pages/archive/">아카이브</a>
-<a href="../../pages/story/">스토리</a>
-<a href="../../pages/characters/">캐릭터</a>
-<a href="../../pages/world/">세계관</a>
-<a href="../../pages/roadmap/">로드맵</a>
-<a href="../../pages/about/">소개</a></nav>
-  </header>
-  <main>
-    <section class="page-hero">
-      <p class="eyebrow">CANON ARCHIVE</p>
-      <h1>Archive</h1>
-      <p>원본을 기준으로 승인된 세계관 정보만 Archive에 반영합니다.</p>
-    </section>
-    <section class="content-wrap">
-      
-<div class="card-grid">
-  <article class="info-card"><span class="badge">WORLD</span><h2>World</h2><p>역사, 세력, 지역, 무공 체계와 연표를 관리합니다.</p></article>
-  <article class="info-card"><span class="badge">RECORDS</span><h2>Records</h2><p>극중 기록, 금서, 문서와 해금 정보를 관리합니다.</p></article>
-  <article class="info-card"><span class="badge">FORESHADOW</span><h2>Foreshadow</h2><p>복선의 등장, 반복, 강화와 회수 상태를 추적합니다.</p></article>
+<header class="site-header" data-site-header data-active="archive" data-subtitle="천류관 : 흐름의 기록"></header>
+<main>
+<section class="page-hero"><p class="eyebrow">CANON ARCHIVE</p><h1>아카이브</h1>
+<p>세계관, 원본 기록, 복선과 개발 현황으로 실제 이동할 수 있습니다.</p></section>
+<section class="content-wrap">
+<div class="archive-grid">
+  <a class="archive-card" href="../world/">
+    <span class="badge">WORLD</span><h2>세계관</h2>
+    <p>세력, 지역, 역사, 용어와 연표를 확인합니다.</p><strong>세계관 열기 →</strong>
+  </a>
+  <a class="archive-card" href="../story/">
+    <span class="badge">RECORDS</span><h2>원본 기록</h2>
+    <p>업로드한 소설과 스토리 자료를 확인합니다.</p><strong>스토리 열기 →</strong>
+  </a>
+  <a class="archive-card" href="../roadmap/">
+    <span class="badge">FORESHADOW</span><h2>복선과 진행 현황</h2>
+    <p>복선 관리와 프로젝트 개발 진행 상태를 확인합니다.</p><strong>로드맵 열기 →</strong>
+  </a>
 </div>
-<div class="empty-state" style="margin-top:24px">원본 소설 분석 전이므로 공식 Archive 데이터는 아직 공개하지 않습니다.</div>
-
-    </section>
-  </main>
-  <footer class="site-footer">
-    <p>© 2026 Minseo Kim. Creative contents are All Rights Reserved.</p>
-    <div><a href="../../pages/legal/">License & Copyright</a><span>·</span><span>v0.8.1</span></div>
-  </footer>
-  <script src="../../assets/js/common.js?v=0.8.4"></script>
+<div class="archive-actions">
+  <a href="../characters/">캐릭터 아카이브</a>
+  <a href="../backgrounds/">배경 아카이브</a>
+  <a href="../sounds/">음향 아카이브</a>
+</div>
+</section>
+</main>
+<footer class="site-footer"><p>© 2026 Minseo Kim. All Rights Reserved.</p>
+<div><a href="../legal/">License & Copyright</a><span> · </span><span>v0.9.7</span></div></footer>
+<script src="../../assets/js/site-header.js?v=0.9.7"></script>
 </body>
 </html>
