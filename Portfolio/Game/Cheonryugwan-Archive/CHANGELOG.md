@@ -1,6 +1,270 @@
 # Changelog
 
-## v0.9.8.5 - Episode 1 Expanded Scenario & Scene CG
+## v0.9.10.7 - Background Gallery Restore
+
+- v0.9.10.6에서 누락된 웹 배경 갤러리 섹션 재구성
+- 1부 29 / 2부 32 / 3부 40 / 4부 46개, 총 147개 표시
+- 2부 bg-18 이미지 및 목록 항목 복원
+- 웹 등록 이미지는 게임 사용 여부와 무관하게 유지하는 정책 적용
+- 1~4부 동일 카드 배열: 데스크톱 4열 / 태블릿 2열 / 모바일 1열
+- 파일 중복 최적화와 웹 카드 노출 정책 분리
+
+## v0.9.10.6 - Background Gallery & Asset Mapping Cleanup
+
+- 깨진 인코딩의 구버전 폴더 `∞ùÉ∞àï/`, `δ¼╕∞ä£/` 제거
+- 약 142.2 MB의 불필요 구버전 자료 제거
+- `archive/`와 `archives/`는 서로 다른 용도로 사용 중이므로 유지
+- 2·3·4부 배경 갤러리를 1부와 동일한 4열 카드 배열로 통일
+- 갤러리 최대 폭 1440px, 태블릿 2열, 모바일 1열 적용
+- 모든 갤러리 카드 이미지 영역을 16:9로 통일
+- 2부 HD 배경을 실제 이미지 기준으로 이름 및 분류 재검수
+- 기존 배경 ID/파일 경로 유지로 시나리오 호환성 보존
+- 2부 `bg-18.webp`가 독립 배경이 아닌 목록 시트 조각임을 확인하여 제거
+- `docs/backgrounds/2부_배경_매핑_검수.md` 추가
+- `docs/backgrounds/v0.9.10.6_구조_정리.md` 추가
+
+## v0.9.10.5 - HD Background Asset Replacement
+
+- 업로드된 고화질 배경 에셋으로 기존 웹/게임 배경을 교체.
+- 1부: 29종 교체.
+- 2부: 31종 교체(업로드 ZIP 내 31종).
+- 3부: 40종 교체.
+- 4부: 29종 교체(업로드 ZIP에 포함된 번호만 적용).
+- `assets/`와 `game/assets/`를 동기화하여 사이트 갤러리와 인게임이 같은 고화질 에셋을 사용.
+- 원본 PNG가 번호 매핑 가능한 경우 `에셋/배경/<부>/개별`에도 반영.
+- 데이터 카탈로그의 해상도/status/version 메타데이터 갱신.
+
+## v0.9.10.3 - Part 4 Background Split
+
+- 4부 배경 목록 원본 1536×1024 별도 보존
+- 4부 본편 배경 46종 개별 PNG 분리
+- 4부 웹용 WebP 46종 및 썸네일 46종 생성
+- 시트 하단 공통 날씨·시간 11종 추가 분리
+- 공통 날씨·시간 PNG/WebP/썸네일 각각 11종 생성
+- `data/part-4-backgrounds.json` 추가
+- `data/common-weather-backgrounds.json` 추가
+- 배경 아카이브에서 4부와 공통 날씨 자산 확인/확대 지원
+- 이미지 에셋 체크리스트 완료 상태 갱신
+
+## v0.9.10.2 - Part 3 Background Split
+
+- 3부 배경 목록 원본 1536×1024 별도 보존
+- 원본 시트의 실제 배경 40종 개별 PNG 분리
+- 웹용 WebP 40종 및 썸네일 40종 생성
+- `data/part-3-backgrounds.json` 추가
+- 배경 아카이브에서 3부 40종 확인 및 확대 지원
+- 기존 체크리스트에서 빠져 있던 28번 `심연 같은 협곡` 추가
+- 3부 배경 체크리스트 완료 처리
+
+## v0.9.10.1 - Part 2 Background Split
+
+- 2부 배경 목록 원본 1536×1024 보존
+- 원본 시트에서 32개 배경을 개별 PNG로 분리
+- 웹용 WebP 및 썸네일 32종 생성
+- `data/part-2-backgrounds.json` 매니페스트 추가
+- 배경 아카이브에서 2부 32종을 직접 확인/확대 가능
+- 이미지 에셋 체크리스트의 2부 배경 32종 완료 처리
+
+## v0.9.10.0 - World Bible & UI Cleanup
+
+### Added
+- 1권 1부~4부 원본 소설 기반 World Bible 데이터
+- 세력: 정파 / 사파 / 마교 / 천류관
+- 무공·경지: 흐름 / 천류 / 화경
+- 장소: 비 내리는 산길 / 정파 무관 / 사파 도시 / 투기장 / 절·폐사찰
+- 핵심 개념: 무림 공적 / 마도 규정 / 기록 은폐 / 중립
+- 1~4부 사건 연표
+- 세계관 검색 / 카테고리 필터 / 상세 패널
+- 각 설정에서 해당 원본 Markdown Viewer로 직접 이동
+- UI Control Audit 도구 (`tools/audit-ui-controls.py`)
+
+### Changed
+- 세계관 페이지의 비기능성 정적 카드 3개를 실제 탐색 UI로 전면 교체
+- 아카이브 세계관 설명을 실제 원본 기반 기능에 맞게 수정
+- 홈 World Bible 설명과 Current Release 표기 갱신
+
+### Quality
+- 존재하지 않는 내부 링크 0건
+- disabled 버튼 0건
+- handler 없는 ID 버튼 0건
+
+## v0.9.9.5 - Integrated Scenario Workspace
+
+### Added
+- Original Story / Markdown Editor / JSON Converter / Scene Editor / Game Preview / Validation 통합 작업실
+- Manifest 기반 원본 목록 및 상태 필터
+- Workspace 내 Markdown 간이 편집/미리보기
+- 신규 Markdown 작업 및 로컬 Import
+- 파일명 권/부 자동 추출
+- 첫 H1 제목 자동 추출
+- 기본 Markdown → Scene JSON 변환
+- Scene Editor / Game Preview 상태 전달
+- Workspace 작업 상태 LocalStorage 저장
+- Scene / 대사 / 나레이션 / Asset / 예상 플레이 시간 통계
+- Speaker별 대사 통계
+- Background / Character / CG 사용 통계
+- Character 노출 규칙 / CG 충돌 기본 Validation
+- Markdown / Manifest Entry / JSON / Validation / Summary / Used Assets Export
+- 통합 Workspace 결과 JSON Export
+
+## v0.9.9.5 - Game Preview
+
+### Added
+- Scene Editor JSON 브라우저 메모리 즉시 실행
+- 로컬 JSON Preview Import
+- Scene Jump / Prev / Next
+- Auto Play 및 재생 속도 선택
+- Desktop / Tablet / Mobile Portrait / Mobile Landscape 프리뷰
+- 실제 Background 에셋 렌더링
+- 실제 Character / Expression 에셋 렌더링
+- Scene ID 기반 CG 자동 렌더링
+- CG 표시 중 Character 자동 숨김
+- BGM / Ambient / SFX Preview
+- Flash / Shake / Memory / Dark Vignette Effect Preview
+- Slow Zoom / Portrait Close-up Camera Preview
+- 현재 Scene ID 및 챕터 제목 표시
+- Scene Timeline
+- Asset Inspector
+- Missing Asset / 규칙 위반 Error 표시
+- Preview Console
+- Scene Editor ↔ Game Preview 왕복
+
+### Changed
+- Scene Editor의 Game Preview 버튼 활성화
+- 원본 스토리 작업 페이지에 Game Preview 진입 버튼 추가
+
+## v0.9.9.5 - Scene Editor
+
+### Added
+- Converter JSON 직접 불러오기
+- 로컬 JSON Import
+- 신규 Scene JSON 생성
+- Scene 카드 편집 UI
+- Drag 순서 변경
+- Scene 추가 / 복제 / 삭제
+- Scene ID 자동 재정렬
+- Speaker / Text 직접 편집
+- Character / Expression / Position 선택
+- Background / BGM / Ambient / SFX 선택
+- Effect / Camera 선택
+- CG 선택
+- JSON 원문 편집 모드
+- Scene 검색 및 유형 필터
+- JSON/Character/Expression/Background/Audio/CG 규칙 검증
+- 비화자 Character 노출 검사
+- CG + Character 동시 노출 검사
+- 수정 JSON 다운로드
+- Validation Report 다운로드
+
+### Changed
+- Markdown → JSON Converter에서 Scene Editor로 직접 전달 지원
+- 원본 스토리 페이지에 Scene Editor 진입 버튼 추가
+
+## v0.9.9.5 - Markdown → JSON Converter
+
+### Added
+- Markdown 구조 Parser
+- 장/화 문맥 분석
+- `인물명: 대사` 화자 분석
+- 인용문 대사 후보 분석 및 화자 미확정 경고
+- 긴 문단 자동 Scene 분할
+- Scene ID 자동 생성
+- Speaker 자동 생성
+- Character manifest 기반 캐릭터 매핑
+- 화자 본인 대사에서만 캐릭터 스탠딩 생성
+- Background manifest 기반 기본 배경 선택
+- 키워드 기반 배경 추천
+- BGM/환경음 기본값 선택
+- 키워드 기반 Effect/SFX 추천
+- 마지막 Scene 자동 `end: true`
+- JSON 다운로드 및 클립보드 복사
+- 예상 Scene 수 / 플레이 시간 / 대사·나레이션 통계
+- 변환 경고·추천 목록
+- Scene 카드 미리보기
+- 변환 분석 Markdown 보고서
+
+### Changed
+- Markdown Editor에서 현재 편집 내용을 JSON 변환기로 직접 전달 가능
+- 원본 스토리 페이지에 JSON 변환기 진입 버튼 추가
+
+## v0.9.9.5 - Markdown Scenario Editor
+
+### Added
+- manifest 기반 원본 문서 선택 및 불러오기
+- 신규 Markdown 문서 생성
+- 로컬 Markdown 파일 가져오기
+- 파일명 기반 권·부 자동 인식
+- 첫 번째 H1 기반 제목 자동 추출
+- 브라우저 Markdown 편집기
+- 실시간 Markdown 미리보기
+- 데스크톱 좌우 분할 및 모바일 탭 전환
+- 찾기·바꾸기·모두 바꾸기
+- 실행 취소·다시 실행
+- 브라우저 자동 임시 저장 및 복원
+- 전체 화면 편집 모드
+- 줄 단위 원본 Diff 및 변경 통계
+- Markdown 다운로드
+- 수정된 manifest 다운로드
+- Markdown·manifest·내보내기 메모 ZIP 다운로드
+
+### Changed
+- 공통 Header에 원본 스토리 메뉴 실제 등록
+- 원본 스토리 목록에 에디터 진입 버튼 추가
+
+## v0.9.8.9 - Chapter 2 Expanded & Mobile Bottom Sheet
+
+- 1권 1부 2장 JSON을 440장면으로 확장
+- 에피소드 4~6 전체 플레이 가능
+- 정파 조사와 기록 왜곡 서사 추가
+- 폐사찰 대화 및 유강 등장 추가
+- 전서율 대사·심리·과거 복선 확장
+- 1부 기존 배경 에셋 기반 11개 장면 ID 매핑
+- 챕터 목록과 Story 페이지에 2장 등록
+- 모바일 메뉴를 46vh 하단 시트로 축소
+- 게임 메뉴 제목 강제 한 줄 처리
+- 메뉴 카테고리 아코디언 적용
+- 기존 이미지 파일 변경 없음
+
+
+## v0.9.8.9 - Mobile Character Position Correction
+
+- 모바일 캐릭터 위치를 위쪽으로 보정
+- 캐릭터 매니페스트에 `mobileLayout` 추가
+- 기본·표정·얼굴 클로즈업·전투 유형 자동 판별
+- 캐릭터별 모바일 위치 및 스케일 분리
+- 세로 화면에서 대사창 뒤 캐릭터 가림 감소
+- 가로 화면 전용 위치 보정
+- 데스크톱 위치 유지
+- 기존 이미지 변경 없음
+
+
+## v0.9.8.9 - Mobile Control Panel
+
+- 모바일에서 상단 관리 메뉴 기본 숨김
+- 접이식 우측 제어 패널 추가
+- 메뉴 토글·닫기·배경 터치·ESC 닫기 구현
+- 메뉴 기능을 진행·저장·설정·고급 관리로 재분류
+- 모바일 터치 버튼 최소 높이 48px 적용
+- 모바일 안전 영역과 화면 회전 대응
+- 대사창 크기 및 모바일 글자 크기 재조정
+- 데스크톱 레이아웃 유지
+- 기존 이미지 및 시나리오 데이터 변경 없음
+
+
+## v0.9.8.9 - Scene ID CG Fix
+
+- `scene.id` 기반 CG 자동 조회 구현
+- CG 매니페스트를 단일 매핑 기준으로 변경
+- CG 장면에서 캐릭터 레이어 강제 숨김
+- CG 장면에서 전투 스탠딩 표시 차단
+- CG가 없는 다음 장면에서 즉시 원래 배경으로 복귀
+- 비동기 이미지 로딩 및 로드 충돌 방지 토큰 추가
+- CG 로딩 실패 로그 및 안전 해제 처리 추가
+- 명시적 `cg` 속성 5개 제거
+- 등록 CG 5종 ID 및 파일 경로 검증
+
+
+## v0.9.8.9 - Episode 1 Expanded Scenario & Scene CG
 
 - 사용자 제공 확장 시나리오 반영
 - 1부 1화 277개 장면
@@ -12,7 +276,7 @@
 - Story 페이지에 CG 확인 링크 추가
 
 
-## v0.9.8.5 - Original Markdown & Speaker-only Visibility
+## v0.9.8.9 - Original Markdown & Speaker-only Visibility
 
 - 1권-1부.md ~ 1권-4부.md 추가
 - 기존 비표준 원본 수신 파일 제거
@@ -21,7 +285,7 @@
 - 기존 이미지 변경 없음
 
 
-## v0.9.8.5 - Part 1 Episode 1 Playable
+## v0.9.8.9 - Part 1 Episode 1 Playable
 
 - 1부 1화 선형 플레이 적용
 - 선택지 장면 제거
@@ -33,7 +297,7 @@
 - 기존 캐릭터 에셋 보존
 
 
-## v0.9.8.5 - Seo Harin Half-body Expression Replacement
+## v0.9.8.9 - Seo Harin Half-body Expression Replacement
 
 - 기존 서하린 반신 표정 8개 삭제
 - 사용자 제공 개별 투명 PNG 8개로 교체
@@ -42,7 +306,7 @@
 - 다른 캐릭터 및 배경 이미지 변경 없음
 
 
-## v0.9.8.5 - Seo Harin Face Expression Split
+## v0.9.8.9 - Seo Harin Face Expression Split
 
 - 서하린 큰 얼굴 표정 시트 8개 개별 이미지 분리
 - 원본 투명 배경 유지
@@ -52,7 +316,7 @@
 - 기존 반신 표정과 1부 배경 분리본 유지
 
 
-## v0.9.8.5.1 - Image Split Showcase
+## v0.9.8.9.1 - Image Split Showcase
 
 - 서하린 표정 8종 전용 갤러리 섹션 추가
 - 서하린 표정 카드 8개를 캐릭터 페이지에 직접 렌더링
@@ -64,7 +328,7 @@
 - 기존 캐릭터 이미지 바이트 불변 검수
 
 
-## v0.9.8.5.1 - Archive, Background Catalog & Seo Harin Expressions
+## v0.9.8.9.1 - Archive, Background Catalog & Seo Harin Expressions
 
 - 서하린 반신 표정 시트 8개 개별 이미지 재분리
 - 가위·점선·제목 영역 제거
@@ -75,10 +339,10 @@
 - 아카이브 Records 카드 활성화
 - 아카이브 Foreshadow 카드 활성화
 - 캐릭터·배경·음향 아카이브 바로가기 추가
-- 사이트 버전 v0.9.8.5.1 동기화
+- 사이트 버전 v0.9.8.9.1 동기화
 
 
-## v0.9.8.5.1 - Header & Version Synchronization
+## v0.9.8.9.1 - Header & Version Synchronization
 
 - v0.9.5.1 원본 프로젝트에서 재작업
 - 홈 CURRENT RELEASE의 v0.8.4.2 잔존 표기 수정
@@ -179,7 +443,7 @@
 - 향후 작업 체크리스트
 
 
-## v0.9.8.5.1 - Unicode Filename Fix
+## v0.9.8.9.1 - Unicode Filename Fix
 
 - ZIP 내부에서 CP437로 잘못 해석된 한글 파일명 복구
 - `에셋`, `문서`, `캐릭터`, 캐릭터 이름과 이미지 파일명 정상화
@@ -189,7 +453,7 @@
 - v0.8.4.1 버튼·JavaScript 수정사항 유지
 
 
-## v0.9.8.5.1 - Interaction & JavaScript Fix
+## v0.9.8.9.1 - Interaction & JavaScript Fix
 
 - `novel-engine.js`에 남아 있던 중복 `catch` 구문 제거
 - 빗소리 정지 함수 `stopRain()` 문법과 예외 처리 수정

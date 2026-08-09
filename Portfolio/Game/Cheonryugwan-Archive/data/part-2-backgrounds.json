@@ -1,0 +1,614 @@
+{
+  "version": "0.9.10.7",
+  "part": 2,
+  "title": "2부 배경 개별 이미지",
+  "source": "에셋/배경/2부/목록원본/2부_배경_목록_원본.png",
+  "count": 32,
+  "items": [
+    {
+      "id": 1,
+      "name": "사파 성문",
+      "file": "01_사파_성문.png",
+      "web": "assets/images/backgrounds/part-2/bg-01.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        10,
+        47,
+        297,
+        200
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "사파 도시",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 2,
+      "name": "사파 거리 (낮)",
+      "file": "02_사파_거리_낮.png",
+      "web": "assets/images/backgrounds/part-2/bg-02.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        303,
+        47,
+        585,
+        200
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "사파 도시",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 3,
+      "name": "사파 거리 (밤)",
+      "file": "03_사파_거리_밤.png",
+      "web": "assets/images/backgrounds/part-2/bg-03.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        591,
+        47,
+        888,
+        200
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "사파 도시",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 4,
+      "name": "붉은 등불 거리",
+      "file": "04_붉은_등불_거리.png",
+      "web": "assets/images/backgrounds/part-2/bg-04.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        894,
+        47,
+        1186,
+        200
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "사파 도시",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 5,
+      "name": "중심 광장",
+      "file": "05_중심_광장.png",
+      "web": "assets/images/backgrounds/part-2/bg-05.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1192,
+        47,
+        1515,
+        200
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "사파 도시",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 6,
+      "name": "시장",
+      "file": "06_시장.png",
+      "web": "assets/images/backgrounds/part-2/bg-06.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        10,
+        204,
+        322,
+        353
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "사파 도시",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 7,
+      "name": "암시장",
+      "file": "07_암시장.png",
+      "web": "assets/images/backgrounds/part-2/bg-07.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        328,
+        204,
+        611,
+        353
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "사파 도시",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 8,
+      "name": "피로 물든 중앙 경기장",
+      "file": "08_골목길.png",
+      "web": "assets/images/backgrounds/part-2/bg-08.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        617,
+        204,
+        886,
+        353
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "투기장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 9,
+      "name": "좁은 붉은 뒷골목",
+      "file": "09_붉은_뒷골목.png",
+      "web": "assets/images/backgrounds/part-2/bg-09.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        892,
+        204,
+        1161,
+        353
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "사파 도시",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 10,
+      "name": "투기장 입구 외곽",
+      "file": "10_투기장_입구.png",
+      "web": "assets/images/backgrounds/part-2/bg-10.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1167,
+        204,
+        1515,
+        353
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "투기장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "medium",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 11,
+      "name": "절벽 길",
+      "file": "11_경기장_내부.png",
+      "web": "assets/images/backgrounds/part-2/bg-11.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        10,
+        376,
+        291,
+        515
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "전서율 여행",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 12,
+      "name": "혼자 걷는 산길",
+      "file": "12_중앙_경기장.png",
+      "web": "assets/images/backgrounds/part-2/bg-12.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        297,
+        376,
+        696,
+        515
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "2부 엔딩",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 13,
+      "name": "매화정 연못",
+      "file": "13_관객석.png",
+      "web": "assets/images/backgrounds/part-2/bg-13.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        702,
+        376,
+        1008,
+        515
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "혈천무후 진하연",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 14,
+      "name": "붉은 등불 골목",
+      "file": "14_VIP석.png",
+      "web": "assets/images/backgrounds/part-2/bg-14.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1014,
+        376,
+        1337,
+        515
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "사파 도시",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 15,
+      "name": "안개 낀 거리",
+      "file": "15_선수_대기실.png",
+      "web": "assets/images/backgrounds/part-2/bg-15.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1343,
+        376,
+        1515,
+        515
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "2부 엔딩",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 16,
+      "name": "투기장 입구 (밤)",
+      "file": "16_관리실.png",
+      "web": "assets/images/backgrounds/part-2/bg-16.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        10,
+        538,
+        169,
+        690
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "투기장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "medium",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 17,
+      "name": "불타는 거리와 도망치는 군중",
+      "file": "17_피로_물든_경기장.png",
+      "web": "assets/images/backgrounds/part-2/bg-17.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        175,
+        538,
+        515,
+        690
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "폭주 이후",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 18,
+      "name": "경기 종료 후",
+      "file": "18_경기_종료_후.png",
+      "web": "assets/images/backgrounds/part-2/bg-18.webp",
+      "width": 332,
+      "height": 152,
+      "sourceRect": [
+        521,
+        538,
+        853,
+        690
+      ],
+      "galleryStatus": "restored",
+      "note": "이전 웹 갤러리 노출 항목 보존"
+    },
+    {
+      "id": 19,
+      "name": "대련장",
+      "file": "19_사파_회의실.png",
+      "web": "assets/images/backgrounds/part-2/bg-19.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        859,
+        538,
+        1164,
+        690
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "혈천무후 진하연",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 20,
+      "name": "매화정",
+      "file": "20_진하연_집무실.png",
+      "web": "assets/images/backgrounds/part-2/bg-20.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1170,
+        538,
+        1515,
+        690
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "혈천무후 진하연",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 21,
+      "name": "불타는 거리",
+      "file": "21_전략실.png",
+      "web": "assets/images/backgrounds/part-2/bg-21.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        10,
+        715,
+        347,
+        852
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "폭주 이후",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 22,
+      "name": "중앙 경기장",
+      "file": "22_붉은_정원.png",
+      "web": "assets/images/backgrounds/part-2/bg-22.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        353,
+        715,
+        621,
+        852
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "투기장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 23,
+      "name": "경기장 내부",
+      "file": "23_매화정.png",
+      "web": "assets/images/backgrounds/part-2/bg-23.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        627,
+        715,
+        858,
+        852
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "투기장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 24,
+      "name": "관객석이 보이는 경기장",
+      "file": "24_연못.png",
+      "web": "assets/images/backgrounds/part-2/bg-24.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        864,
+        715,
+        1088,
+        852
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "투기장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 25,
+      "name": "VIP석",
+      "file": "25_대련장.png",
+      "web": "assets/images/backgrounds/part-2/bg-25.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1094,
+        715,
+        1515,
+        852
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "투기장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 26,
+      "name": "선수 대기실",
+      "file": "26_불타는_거리.png",
+      "web": "assets/images/backgrounds/part-2/bg-26.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        10,
+        875,
+        113,
+        1013
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "투기장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 27,
+      "name": "관리실",
+      "file": "27_시체가_남은_경기장.png",
+      "web": "assets/images/backgrounds/part-2/bg-27.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        119,
+        875,
+        234,
+        1013
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "투기장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "medium",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 28,
+      "name": "선수 준비실",
+      "file": "28_도망치는_군중.png",
+      "web": "assets/images/backgrounds/part-2/bg-28.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        240,
+        875,
+        592,
+        1013
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "투기장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "medium",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 29,
+      "name": "경기 종료 후",
+      "file": "29_새벽_거리.png",
+      "web": "assets/images/backgrounds/part-2/bg-29.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        598,
+        875,
+        992,
+        1013
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "투기장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 30,
+      "name": "야외 대련장",
+      "file": "30_도시_출구.png",
+      "web": "assets/images/backgrounds/part-2/bg-30.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        998,
+        875,
+        1095,
+        1013
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "혈천무후 진하연",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "medium",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 31,
+      "name": "사파 회의실",
+      "file": "31_절벽_길.png",
+      "web": "assets/images/backgrounds/part-2/bg-31.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1101,
+        875,
+        1316,
+        1013
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "사파 회의장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    },
+    {
+      "id": 32,
+      "name": "진하연 집무실",
+      "file": "32_혼자_걷는_산길.png",
+      "web": "assets/images/backgrounds/part-2/bg-32.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1322,
+        875,
+        1515,
+        1013
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "category": "사파 회의장",
+      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingConfidence": "high",
+      "version": "0.9.10.6"
+    }
+  ]
+}

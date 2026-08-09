@@ -7,6 +7,37 @@ export class CharacterManager {
     this.active = {};
   }
 
+
+  resolveAssetType(expression = "", isBattle = false) {
+    if (isBattle) return "battle";
+    if (String(expression).startsWith("face-expression-")) return "faceExpression";
+    if (String(expression).startsWith("expression-")) return "expression";
+    return "default";
+  }
+
+  applyMobileLayout(image, character, expression, isBattle = false, command = {}) {
+    if (!image || !character) return;
+
+    const assetType = this.resolveAssetType(expression, isBattle);
+    const configured = character.mobileLayout?.[assetType]
+      || character.mobileLayout?.default
+      || {};
+
+    const offsetY = command.mobileOffsetY ?? configured.offsetY ?? "-10vh";
+    const scale = Number(command.mobileScale ?? configured.scale ?? 1);
+
+    image.dataset.assetType = assetType;
+    image.style.setProperty("--mobile-character-offset-y", String(offsetY));
+    image.style.setProperty("--mobile-character-scale", String(scale));
+  }
+
+  clearMobileLayout(image) {
+    if (!image) return;
+    image.dataset.assetType = "";
+    image.style.removeProperty("--mobile-character-offset-y");
+    image.style.removeProperty("--mobile-character-scale");
+  }
+
   getImage(position) {
     return $(`#character-${position}`);
   }
@@ -15,6 +46,7 @@ export class CharacterManager {
     const image = this.getImage(position);
     if (!image) return;
     image.classList.remove("visible", "speaker-active", "speaker-dim", "battle-pose");
+    this.clearMobileLayout(image);
     delete this.active[position];
   }
 
@@ -76,6 +108,7 @@ export class CharacterManager {
     image.dataset.characterId = command.id;
     image.dataset.expression = expression;
     image.dataset.src = source;
+    this.applyMobileLayout(image, character, expression, false, command);
     image.classList.remove("enter-left", "enter-right", "fade-in");
     image.classList.add("visible");
     if (command.animation === "slide-left") image.classList.add("enter-left");
@@ -139,6 +172,10 @@ export class CharacterManager {
     image.alt = character.name;
     image.dataset.characterId = characterId;
     image.dataset.expression = action;
+    this.applyMobileLayout(image, character, action, true, {
+      mobileOffsetY: character.mobileLayout?.battle?.offsetY,
+      mobileScale: character.mobileLayout?.battle?.scale
+    });
     image.classList.add("visible", "battle-pose", "speaker-active");
     this.active[position] = characterId;
     return true;

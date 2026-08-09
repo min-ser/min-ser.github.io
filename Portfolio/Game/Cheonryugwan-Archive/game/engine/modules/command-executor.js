@@ -39,8 +39,15 @@ export class CommandExecutor {
       this.backgroundManager.change(scene.background, scene.transition || "fade");
     }
 
-    // 장면 ID에 연결된 CG를 표시하며 다음 일반 장면에서는 자동 해제한다.
-    this.sceneCgManager?.update(scene.cg || null);
+    // v0.9.8.6: scene.id를 CG 매니페스트에서 자동 조회한다.
+    // CG가 있는 정확한 장면에서만 표시하며, 다음 일반 장면에서 즉시 해제한다.
+    const hasSceneCg = Boolean(this.sceneCgManager?.resolve(scene));
+    if (hasSceneCg) {
+      this.characterManager.hideAll();
+      await this.sceneCgManager.updateScene(scene);
+    } else {
+      this.sceneCgManager?.hide();
+    }
 
     // v0.9.8.4: 캐릭터는 해당 캐릭터가 직접 말할 때만 표시한다.
     const speakerName = String(scene.speaker || "").trim();
@@ -52,10 +59,15 @@ export class CommandExecutor {
       return speakerId === command.id || speakerName === character.name || speakerName === command.id;
     };
 
-    if (scene.characters) {
+    if (hasSceneCg) {
+      // 이벤트 CG는 스탠딩보다 우선한다.
+      this.characterManager.hideAll();
+    } else if (scene.characters) {
       const speakingCharacters = scene.characters.filter(isSpeakingCharacter);
       if (speakingCharacters.length > 0) {
-        this.characterManager.showMany(speakingCharacters.map((command) => ({ ...command, speaking: true })));
+        this.characterManager.showMany(
+          speakingCharacters.map((command) => ({ ...command, speaking: true }))
+        );
       } else {
         this.characterManager.hideAll();
       }
@@ -80,7 +92,7 @@ export class CommandExecutor {
       }
     }
 
-    if (scene.battle) {
+    if (scene.battle && !hasSceneCg) {
       const battleCharacter = this.characterManager.manifest?.[scene.battle.characterId];
       const battleSpeakerMatches = Boolean(speakerName && battleCharacter && (speakerId === scene.battle.characterId || speakerName === battleCharacter.name || speakerName === scene.battle.characterId));
       if (battleSpeakerMatches) {

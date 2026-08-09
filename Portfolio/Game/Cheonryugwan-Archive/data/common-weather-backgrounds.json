@@ -1,0 +1,162 @@
+{
+  "version": "0.9.10.3",
+  "title": "공통 날씨·시간 배경",
+  "source": "에셋/배경/4부/목록원본/4부_배경_목록_원본.png",
+  "count": 11,
+  "items": [
+    {
+      "id": 1,
+      "name": "맑은 낮",
+      "file": "01_맑은_낮.png",
+      "web": "assets/images/backgrounds/common-weather/weather-01.webp",
+      "width": 83,
+      "height": 70,
+      "sourceRect": [
+        22,
+        914,
+        105,
+        984
+      ]
+    },
+    {
+      "id": 2,
+      "name": "흐린 낮",
+      "file": "02_흐린_낮.png",
+      "web": "assets/images/backgrounds/common-weather/weather-02.webp",
+      "width": 83,
+      "height": 70,
+      "sourceRect": [
+        109,
+        914,
+        192,
+        984
+      ]
+    },
+    {
+      "id": 3,
+      "name": "비 오는 낮",
+      "file": "03_비_오는_낮.png",
+      "web": "assets/images/backgrounds/common-weather/weather-03.webp",
+      "width": 82,
+      "height": 70,
+      "sourceRect": [
+        196,
+        914,
+        278,
+        984
+      ]
+    },
+    {
+      "id": 4,
+      "name": "폭우",
+      "file": "04_폭우.png",
+      "web": "assets/images/backgrounds/common-weather/weather-04.webp",
+      "width": 86,
+      "height": 70,
+      "sourceRect": [
+        282,
+        914,
+        368,
+        984
+      ]
+    },
+    {
+      "id": 5,
+      "name": "안개 낀 낮",
+      "file": "05_안개_낀_낮.png",
+      "web": "assets/images/backgrounds/common-weather/weather-05.webp",
+      "width": 86,
+      "height": 70,
+      "sourceRect": [
+        372,
+        914,
+        458,
+        984
+      ]
+    },
+    {
+      "id": 6,
+      "name": "눈 오는 낮",
+      "file": "06_눈_오는_낮.png",
+      "web": "assets/images/backgrounds/common-weather/weather-06.webp",
+      "width": 85,
+      "height": 70,
+      "sourceRect": [
+        462,
+        914,
+        547,
+        984
+      ]
+    },
+    {
+      "id": 7,
+      "name": "밤",
+      "file": "07_밤.png",
+      "web": "assets/images/backgrounds/common-weather/weather-07.webp",
+      "width": 86,
+      "height": 70,
+      "sourceRect": [
+        551,
+        914,
+        637,
+        984
+      ]
+    },
+    {
+      "id": 8,
+      "name": "붉은 노을",
+      "file": "08_붉은_노을.png",
+      "web": "assets/images/backgrounds/common-weather/weather-08.webp",
+      "width": 95,
+      "height": 70,
+      "sourceRect": [
+        643,
+        914,
+        738,
+        984
+      ]
+    },
+    {
+      "id": 9,
+      "name": "새벽",
+      "file": "09_새벽.png",
+      "web": "assets/images/backgrounds/common-weather/weather-09.webp",
+      "width": 94,
+      "height": 70,
+      "sourceRect": [
+        742,
+        914,
+        836,
+        984
+      ]
+    },
+    {
+      "id": 10,
+      "name": "보름달 밤",
+      "file": "10_보름달_밤.png",
+      "web": "assets/images/backgrounds/common-weather/weather-10.webp",
+      "width": 91,
+      "height": 70,
+      "sourceRect": [
+        840,
+        914,
+        931,
+        984
+      ]
+    },
+    {
+      "id": 11,
+      "name": "붉은 달 밤",
+      "file": "11_붉은_달_밤.png",
+      "web": "assets/images/backgrounds/common-weather/weather-11.webp",
+      "width": 92,
+      "height": 70,
+      "sourceRect": [
+        935,
+        914,
+        1027,
+        984
+      ]
+    }
+  ]
+}

@@ -1,0 +1,609 @@
+{
+  "version": "0.9.10.4",
+  "part": 3,
+  "title": "3부 배경 개별 이미지",
+  "source": "에셋/배경/3부/목록원본/3부_배경_목록_원본.png",
+  "count": 40,
+  "items": [
+    {
+      "id": 1,
+      "name": "황무지",
+      "file": "01_황무지.png",
+      "web": "assets/images/backgrounds/part-3/bg-01.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        14,
+        50,
+        262,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 2,
+      "name": "폐촌",
+      "file": "02_폐촌.png",
+      "web": "assets/images/backgrounds/part-3/bg-02.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        269,
+        50,
+        511,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 3,
+      "name": "버려진 산채",
+      "file": "03_버려진_산채.png",
+      "web": "assets/images/backgrounds/part-3/bg-03.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        518,
+        50,
+        770,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 4,
+      "name": "폐가",
+      "file": "04_폐가.png",
+      "web": "assets/images/backgrounds/part-3/bg-04.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        777,
+        50,
+        1005,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 5,
+      "name": "오래된 숲",
+      "file": "05_오래된_숲.png",
+      "web": "assets/images/backgrounds/part-3/bg-05.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1012,
+        50,
+        1262,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 6,
+      "name": "바위 협곡",
+      "file": "06_바위_협곡.png",
+      "web": "assets/images/backgrounds/part-3/bg-06.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1269,
+        50,
+        1522,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 7,
+      "name": "안개 숲",
+      "file": "07_안개_숲.png",
+      "web": "assets/images/backgrounds/part-3/bg-07.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        12,
+        230,
+        196,
+        372
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 8,
+      "name": "밤의 숲",
+      "file": "08_밤의_숲.png",
+      "web": "assets/images/backgrounds/part-3/bg-08.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        203,
+        230,
+        389,
+        372
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 9,
+      "name": "폐허",
+      "file": "09_폐허.png",
+      "web": "assets/images/backgrounds/part-3/bg-09.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        396,
+        230,
+        586,
+        372
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 10,
+      "name": "계곡 길",
+      "file": "10_계곡_길.png",
+      "web": "assets/images/backgrounds/part-3/bg-10.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        593,
+        230,
+        788,
+        372
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 11,
+      "name": "산길 눈",
+      "file": "11_산길_눈.png",
+      "web": "assets/images/backgrounds/part-3/bg-11.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        795,
+        230,
+        972,
+        372
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 12,
+      "name": "주막 내부",
+      "file": "12_주막_내부.png",
+      "web": "assets/images/backgrounds/part-3/bg-12.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        989,
+        230,
+        1154,
+        372
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 13,
+      "name": "정보상 거리",
+      "file": "13_정보상_거리.png",
+      "web": "assets/images/backgrounds/part-3/bg-13.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1161,
+        230,
+        1333,
+        372
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 14,
+      "name": "게시판",
+      "file": "14_게시판.png",
+      "web": "assets/images/backgrounds/part-3/bg-14.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1340,
+        230,
+        1522,
+        372
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 15,
+      "name": "붉은 노을 전장",
+      "file": "15_붉은_노을_전장.png",
+      "web": "assets/images/backgrounds/part-3/bg-15.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        12,
+        402,
+        186,
+        551
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 16,
+      "name": "무너진 마을",
+      "file": "16_무너진_마을.png",
+      "web": "assets/images/backgrounds/part-3/bg-16.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        193,
+        402,
+        361,
+        551
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 17,
+      "name": "피바람이 부는 평원",
+      "file": "17_피바람이_부는_평원.png",
+      "web": "assets/images/backgrounds/part-3/bg-17.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        368,
+        402,
+        529,
+        551
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 18,
+      "name": "비 내리는 들판",
+      "file": "18_비_내리는_들판.png",
+      "web": "assets/images/backgrounds/part-3/bg-18.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        536,
+        402,
+        694,
+        551
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 19,
+      "name": "불타는 마을",
+      "file": "19_불타는_마을.png",
+      "web": "assets/images/backgrounds/part-3/bg-19.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        701,
+        402,
+        864,
+        551
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 20,
+      "name": "강가 이상 흐름",
+      "file": "20_강가_이상_흐름.png",
+      "web": "assets/images/backgrounds/part-3/bg-20.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        871,
+        402,
+        1035,
+        551
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 21,
+      "name": "외딴 절집",
+      "file": "21_외딴_절집.png",
+      "web": "assets/images/backgrounds/part-3/bg-21.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1054,
+        402,
+        1198,
+        551
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 22,
+      "name": "동굴",
+      "file": "22_동굴.png",
+      "web": "assets/images/backgrounds/part-3/bg-22.webp",
+      "width": 1448,
+      "height": 1086,
+      "sourceRect": [
+        1205,
+        402,
+        1346,
+        551
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 23,
+      "name": "절벽 위 공터",
+      "file": "23_절벽_위_공터.png",
+      "web": "assets/images/backgrounds/part-3/bg-23.webp",
+      "width": 1448,
+      "height": 1086,
+      "sourceRect": [
+        1353,
+        402,
+        1522,
+        551
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 24,
+      "name": "왜곡된 전장",
+      "file": "24_왜곡된_전장.png",
+      "web": "assets/images/backgrounds/part-3/bg-24.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        12,
+        583,
+        187,
+        718
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 25,
+      "name": "혈공이 꼬이는 장소",
+      "file": "25_혈공이_꼬이는_장소.png",
+      "web": "assets/images/backgrounds/part-3/bg-25.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        194,
+        583,
+        369,
+        718
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 26,
+      "name": "살기가 충돌하는 들판",
+      "file": "26_살기가_충돌하는_들판.png",
+      "web": "assets/images/backgrounds/part-3/bg-26.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        376,
+        583,
+        545,
+        718
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 27,
+      "name": "안개 낀 계곡",
+      "file": "27_안개_낀_계곡.png",
+      "web": "assets/images/backgrounds/part-3/bg-27.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        552,
+        583,
+        722,
+        718
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 28,
+      "name": "심연 같은 협곡",
+      "file": "28_심연_같은_협곡.png",
+      "web": "assets/images/backgrounds/part-3/bg-28.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        729,
+        583,
+        927,
+        718
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 29,
+      "name": "정파 문서고",
+      "file": "29_정파_문서고.png",
+      "web": "assets/images/backgrounds/part-3/bg-29.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        949,
+        583,
+        1132,
+        718
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 30,
+      "name": "연구실",
+      "file": "30_연구실.png",
+      "web": "assets/images/backgrounds/part-3/bg-30.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1139,
+        583,
+        1316,
+        718
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 31,
+      "name": "연구 분석 대청",
+      "file": "31_연구_분석_대청.png",
+      "web": "assets/images/backgrounds/part-3/bg-31.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1323,
+        583,
+        1522,
+        718
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 32,
+      "name": "마교 대문",
+      "file": "32_마교_대문.png",
+      "web": "assets/images/backgrounds/part-3/bg-32.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        12,
+        750,
+        187,
+        894
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 33,
+      "name": "천마 연서의 집무실",
+      "file": "33_천마_연서의_집무실.png",
+      "web": "assets/images/backgrounds/part-3/bg-33.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        194,
+        750,
+        369,
+        894
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 34,
+      "name": "마교 회의실",
+      "file": "34_마교_회의실.png",
+      "web": "assets/images/backgrounds/part-3/bg-34.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        376,
+        750,
+        557,
+        894
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 35,
+      "name": "아무도 없는 산길",
+      "file": "35_아무도_없는_산길.png",
+      "web": "assets/images/backgrounds/part-3/bg-35.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        573,
+        750,
+        722,
+        894
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 36,
+      "name": "버려진 초가",
+      "file": "36_버려진_초가.png",
+      "web": "assets/images/backgrounds/part-3/bg-36.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        729,
+        750,
+        876,
+        894
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 37,
+      "name": "흐름의 흔적",
+      "file": "37_흐름의_흔적.png",
+      "web": "assets/images/backgrounds/part-3/bg-37.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        883,
+        750,
+        1036,
+        894
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 38,
+      "name": "하늘이 뒤틀린 마을",
+      "file": "38_하늘이_뒤틀린_마을.png",
+      "web": "assets/images/backgrounds/part-3/bg-38.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1054,
+        750,
+        1198,
+        894
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 39,
+      "name": "붉은 달 아래 숲",
+      "file": "39_붉은_달_아래_숲.png",
+      "web": "assets/images/backgrounds/part-3/bg-39.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1205,
+        750,
+        1346,
+        894
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 40,
+      "name": "재앙의 기운이 흐르는 장소",
+      "file": "40_재앙의_기운이_흐르는_장소.png",
+      "web": "assets/images/backgrounds/part-3/bg-40.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1353,
+        750,
+        1522,
+        894
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    }
+  ]
+}

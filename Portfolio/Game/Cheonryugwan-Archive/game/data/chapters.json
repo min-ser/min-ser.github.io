@@ -1,5 +1,5 @@
 {
-  "version": "0.9.8.3",
+  "version": "0.9.8.9",
   "chapters": [
     {
       "id": "volume-01-part-01-chapter-01",
@@ -8,6 +8,14 @@
       "status": "playable",
       "path": "./data/volume-01/part-01/chapter-01.json",
       "description": "원본 1부 1화 기반 · 선택지 없는 선형 플레이"
+    },
+    {
+      "id": "volume-01-part-01-chapter-02",
+      "title": "1부 2장 — 흐르지 못한 밤",
+      "part": "1부 「흐르지 못한 검」",
+      "status": "playable",
+      "path": "./data/volume-01/part-01/chapter-02.json",
+      "description": "에피소드 4~6 완성 · 440개 장면 · 선택지 없는 선형 플레이"
     },
     {
       "id": "engine-test-seo-harin",

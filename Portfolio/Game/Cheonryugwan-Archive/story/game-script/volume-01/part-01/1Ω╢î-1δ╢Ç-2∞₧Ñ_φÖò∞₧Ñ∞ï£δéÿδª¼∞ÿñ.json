@@ -1,0 +1,3026 @@
+{
+  "id": "volume-01-part-01-chapter-02",
+  "title": "흐르지 못한 밤",
+  "subtitle": "1부 — 흐르지 못한 검",
+  "chapter": 2,
+  "status": "playable",
+  "canon": "source-based-expanded",
+  "background": "part1-rainy-forest-night",
+  "bgm": "lonely-rain-theme",
+  "episodes": [
+    {
+      "episode": 4,
+      "title": "추격",
+      "startScene": "c02-s001"
+    },
+    {
+      "episode": 5,
+      "title": "이름 없는 보고",
+      "startScene": "c02-s181"
+    },
+    {
+      "episode": 6,
+      "title": "검 끝의 떨림",
+      "startScene": "c02-s321"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "c02-s001",
+      "speaker": "",
+      "text": "비는 여전히 멈추지 않았다.",
+      "effect": "fade-in",
+      "background": "part1-rainy-forest-night",
+      "ambient": "heavy-rain",
+      "bgm": "lonely-rain-theme"
+    },
+    {
+      "id": "c02-s002",
+      "speaker": "",
+      "text": "산길을 뒤덮은 빗소리는 조금 전의 비명도, 검이 살을 가르던 소리도, 진흙 위로 몸이 무너지던 둔탁한 충격도 모두 삼켜버렸다.",
+      "background": "part1-rainy-forest-night",
+      "ambient": "heavy-rain"
+    },
+    {
+      "id": "c02-s003",
+      "speaker": "",
+      "text": "검은 장포의 사내는 숲으로 이어지는 길을 따라 걸었다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "tracking-back"
+    },
+    {
+      "id": "c02-s004",
+      "speaker": "",
+      "text": "그가 지나간 자리에는 깊지 않은 발자국이 남았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s005",
+      "speaker": "",
+      "text": "그러나 발자국은 오래 버티지 못했다. 고인 빗물이 가장자리부터 스며들더니, 이내 그가 지나간 흔적을 깨끗하게 지워버렸다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "ground-close-up"
+    },
+    {
+      "id": "c02-s006",
+      "speaker": "",
+      "text": "마치 처음부터 아무도 이 길을 걷지 않았던 것처럼.",
+      "effect": "slow-fade",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s007",
+      "speaker": "",
+      "text": "사내는 뒤를 돌아보지 않았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s008",
+      "speaker": "",
+      "text": "산길에 남겨둔 시체도, 부러진 검도, 꺼져가는 횃불도 확인하지 않았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s009",
+      "speaker": "",
+      "text": "살아남은 사람이 있는지도 살피지 않았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s010",
+      "speaker": "",
+      "text": "모든 것이 이미 지나간 일인 것처럼 걸었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s011",
+      "speaker": "",
+      "text": "그러나 그의 걸음은 조금 전보다 무거워져 있었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s012",
+      "speaker": "",
+      "text": "왼발이 진흙에서 빠져나오는 데 평소보다 긴 시간이 걸렸다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "foot-close-up"
+    },
+    {
+      "id": "c02-s013",
+      "speaker": "",
+      "text": "오른쪽 어깨가 미세하게 내려앉았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s014",
+      "speaker": "",
+      "text": "검을 쥐었던 손은 장포 안에 감춰져 있었지만, 손끝의 떨림까지 숨기지는 못했다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "hand-close-up"
+    },
+    {
+      "id": "c02-s015",
+      "speaker": "",
+      "text": "빗물이 손등을 타고 흘렀다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s016",
+      "speaker": "",
+      "text": "손가락 사이에 남아 있던 붉은 흔적이 천천히 묽어졌다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s017",
+      "speaker": "",
+      "text": "물이 붉어졌다가, 곧 아무 색도 남지 않았다.",
+      "effect": "memory-pulse",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s018",
+      "speaker": "",
+      "text": "피는 사라졌다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s019",
+      "speaker": "",
+      "text": "감촉은 남았다.",
+      "effect": "memory",
+      "background": "part1-memory-overlay",
+      "sfx": "memory-drone-low"
+    },
+    {
+      "id": "c02-s020",
+      "speaker": "",
+      "text": "검이 살을 가르고 지나갈 때 손목으로 전해지던 미세한 저항.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c02-s021",
+      "speaker": "",
+      "text": "뼈에 닿기 직전 검의 울림이 달라지던 순간.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c02-s022",
+      "speaker": "",
+      "text": "끊어진 호흡이 목 안쪽에서 긁혀 나오던 소리.",
+      "background": "part1-memory-overlay",
+      "sfx": "breath-fragment"
+    },
+    {
+      "id": "c02-s023",
+      "speaker": "",
+      "text": "진흙 위에 쓰러진 몸이 마지막으로 떨리던 모습.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c02-s024",
+      "speaker": "",
+      "text": "사내의 손가락이 갑자기 굽어졌다.",
+      "effect": "flash",
+      "background": "part1-rainy-forest-night",
+      "camera": "hand-close-up",
+      "sfx": "heartbeat-heavy"
+    },
+    {
+      "id": "c02-s025",
+      "speaker": "",
+      "text": "검병을 쥐고 있지 않았는데도, 손은 여전히 검을 쥔 모양을 하고 있었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s026",
+      "speaker": "",
+      "text": "그는 손가락을 펴려고 했다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s027",
+      "speaker": "",
+      "text": "한 번.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s028",
+      "speaker": "",
+      "text": "두 번.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s029",
+      "speaker": "",
+      "text": "세 번째가 되어서야 손가락이 천천히 풀렸다.",
+      "effect": "slow-release",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s030",
+      "speaker": "",
+      "text": "숲은 어두웠다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "wide-shot"
+    },
+    {
+      "id": "c02-s031",
+      "speaker": "",
+      "text": "먹구름이 달빛을 가렸고, 빽빽한 나뭇가지가 남은 빛마저 잘게 찢어놓았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s032",
+      "speaker": "",
+      "text": "길 양옆으로 늘어선 나무는 사람보다 오래된 침묵을 품고 있었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s033",
+      "speaker": "",
+      "text": "비에 젖은 줄기마다 검은 그림자가 들러붙어 있었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s034",
+      "speaker": "",
+      "text": "바람이 불 때마다 나뭇잎이 서로 비벼졌다.",
+      "background": "part1-rainy-forest-night",
+      "ambient": "rain-wind-leaves"
+    },
+    {
+      "id": "c02-s035",
+      "speaker": "",
+      "text": "누군가 아주 가까운 곳에서 낮게 웃는 것 같은 소리가 났다.",
+      "effect": "memory-pulse",
+      "background": "part1-rainy-forest-night",
+      "sfx": "distant-laughter"
+    },
+    {
+      "id": "c02-s036",
+      "speaker": "",
+      "text": "사내의 걸음이 멎었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s037",
+      "speaker": "",
+      "text": "그는 고개를 들지 않았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s038",
+      "speaker": "",
+      "text": "검을 뽑지도 않았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s039",
+      "speaker": "",
+      "text": "그저 빗소리 사이에 섞인 소리를 들었다.",
+      "background": "part1-rainy-forest-night",
+      "bgm": "silence"
+    },
+    {
+      "id": "c02-s040",
+      "speaker": "",
+      "text": "웃음은 다시 들리지 않았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s041",
+      "speaker": "",
+      "text": "대신 다른 목소리가 들렸다.",
+      "effect": "memory",
+      "background": "part1-memory-overlay",
+      "sfx": "memory-drone"
+    },
+    {
+      "id": "c02-s042",
+      "speaker": "오래된 목소리",
+      "text": "분위기를 읽어라.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c02-s043",
+      "speaker": "",
+      "text": "낯설지 않은 목소리였다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c02-s044",
+      "speaker": "",
+      "text": "그러나 그리운 목소리도 아니었다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c02-s045",
+      "speaker": "",
+      "text": "따뜻함이 없는 말이었다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c02-s046",
+      "speaker": "",
+      "text": "말의 모양만 가르침을 닮아 있었다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c02-s047",
+      "speaker": "오래된 목소리",
+      "text": "모두가 괜찮다는데 너만 불편하다고 말하면 되겠느냐.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c02-s048",
+      "speaker": "",
+      "text": "사내의 눈동자가 흔들렸다.",
+      "background": "part1-memory-overlay",
+      "camera": "eye-close-up"
+    },
+    {
+      "id": "c02-s049",
+      "speaker": "오래된 목소리",
+      "text": "네가 조금 참으면 끝날 일이다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c02-s050",
+      "speaker": "",
+      "text": "주변의 나무들이 순간 사람의 형상으로 보였다.",
+      "effect": "memory-distortion",
+      "background": "part1-memory-forest-figures"
+    },
+    {
+      "id": "c02-s051",
+      "speaker": "",
+      "text": "검은 나무줄기가 장포를 입은 사람처럼 서 있었다.",
+      "background": "part1-memory-forest-figures"
+    },
+    {
+      "id": "c02-s052",
+      "speaker": "",
+      "text": "가지 사이로 드러난 흰 껍질은 빗속에서 사람의 얼굴처럼 번졌다.",
+      "background": "part1-memory-forest-figures"
+    },
+    {
+      "id": "c02-s053",
+      "speaker": "",
+      "text": "입을 가리고 웃는 얼굴.",
+      "background": "part1-memory-forest-figures"
+    },
+    {
+      "id": "c02-s054",
+      "speaker": "",
+      "text": "무언가를 보았지만 고개를 돌리는 얼굴.",
+      "background": "part1-memory-forest-figures"
+    },
+    {
+      "id": "c02-s055",
+      "speaker": "",
+      "text": "눈이 마주치자 먼저 시선을 피하는 얼굴.",
+      "background": "part1-memory-forest-figures"
+    },
+    {
+      "id": "c02-s056",
+      "speaker": "",
+      "text": "사내는 눈을 감았다.",
+      "effect": "fade-to-black",
+      "background": "part1-black",
+      "sfx": "heartbeat-heavy"
+    },
+    {
+      "id": "c02-s057",
+      "speaker": "",
+      "text": "어둠 속에서도 얼굴들은 사라지지 않았다.",
+      "background": "part1-black"
+    },
+    {
+      "id": "c02-s058",
+      "speaker": "",
+      "text": "오히려 더 가까워졌다.",
+      "background": "part1-black",
+      "effect": "slow-zoom"
+    },
+    {
+      "id": "c02-s059",
+      "speaker": "",
+      "text": "웃는 입.",
+      "background": "part1-black"
+    },
+    {
+      "id": "c02-s060",
+      "speaker": "",
+      "text": "움직이지 않는 눈.",
+      "background": "part1-black"
+    },
+    {
+      "id": "c02-s061",
+      "speaker": "",
+      "text": "말하지 않는 입술.",
+      "background": "part1-black"
+    },
+    {
+      "id": "c02-s062",
+      "speaker": "",
+      "text": "그리고 누군가의 손.",
+      "effect": "memory-flash",
+      "background": "part1-memory-hand"
+    },
+    {
+      "id": "c02-s063",
+      "speaker": "",
+      "text": "그 손은 사내를 밀어내지 않았다.",
+      "background": "part1-memory-hand"
+    },
+    {
+      "id": "c02-s064",
+      "speaker": "",
+      "text": "오히려 뒤로 숨기려는 듯 펼쳐져 있었다.",
+      "background": "part1-memory-hand"
+    },
+    {
+      "id": "c02-s065",
+      "speaker": "",
+      "text": "가느다란 손목.",
+      "background": "part1-memory-hand"
+    },
+    {
+      "id": "c02-s066",
+      "speaker": "",
+      "text": "비에 젖은 흰 소매.",
+      "background": "part1-memory-hand"
+    },
+    {
+      "id": "c02-s067",
+      "speaker": "",
+      "text": "손끝이 심하게 떨리고 있었다.",
+      "background": "part1-memory-hand",
+      "camera": "hand-close-up"
+    },
+    {
+      "id": "c02-s068",
+      "speaker": "",
+      "text": "그 너머로 무언가가 번뜩였다.",
+      "effect": "flash",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s069",
+      "speaker": "",
+      "text": "정파의 문양이 새겨진 금속패였다.",
+      "background": "part1-memory-courtyard",
+      "camera": "object-close-up"
+    },
+    {
+      "id": "c02-s070",
+      "speaker": "",
+      "text": "패를 든 사람의 얼굴은 보이지 않았다.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s071",
+      "speaker": "",
+      "text": "빗물이 얼굴을 가린 것인지.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s072",
+      "speaker": "",
+      "text": "기억이 얼굴만 지워버린 것인지.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s073",
+      "speaker": "",
+      "text": "알 수 없었다.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s074",
+      "speaker": "정파 집행자",
+      "text": "길을 비켜라.",
+      "effect": "memory",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s075",
+      "speaker": "",
+      "text": "흰 소매의 손이 더욱 크게 펼쳐졌다.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s076",
+      "speaker": "",
+      "text": "누군가를 자신의 등 뒤에 완전히 숨기려는 몸짓이었다.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s077",
+      "speaker": "정파 집행자",
+      "text": "마도를 비호하는 자도 같은 죄를 묻는다.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s078",
+      "speaker": "",
+      "text": "문이 부서지는 소리가 들렸다.",
+      "effect": "shake",
+      "background": "part1-memory-courtyard",
+      "sfx": "wooden-door-break"
+    },
+    {
+      "id": "c02-s079",
+      "speaker": "",
+      "text": "커다란 나무문이 안쪽으로 넘어졌다.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s080",
+      "speaker": "",
+      "text": "젖은 마당 위로 문짝이 떨어지며 흙탕물을 높이 튀겼다.",
+      "effect": "splash",
+      "background": "part1-memory-courtyard",
+      "sfx": "wood-impact-mud"
+    },
+    {
+      "id": "c02-s081",
+      "speaker": "",
+      "text": "흙탕물 속에서 검은 신발들이 움직였다.",
+      "background": "part1-memory-courtyard",
+      "camera": "ground-close-up"
+    },
+    {
+      "id": "c02-s082",
+      "speaker": "",
+      "text": "한 사람.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s083",
+      "speaker": "",
+      "text": "두 사람.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s084",
+      "speaker": "",
+      "text": "그 뒤로 더 많은 발이 마당 안으로 들어왔다.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s085",
+      "speaker": "",
+      "text": "모두 같은 문양을 달고 있었다.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s086",
+      "speaker": "",
+      "text": "질서정연한 간격.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s087",
+      "speaker": "",
+      "text": "흐트러지지 않는 호흡.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s088",
+      "speaker": "",
+      "text": "자신들이 옳다고 믿는 자들의 걸음이었다.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s089",
+      "speaker": "정파 집행자",
+      "text": "마도는 뿌리째 뽑아야 한다.",
+      "effect": "memory-echo",
+      "background": "part1-memory-courtyard",
+      "sfx": "memory-drone-heavy"
+    },
+    {
+      "id": "c02-s090",
+      "speaker": "",
+      "text": "사내의 호흡이 갑자기 끊겼다.",
+      "effect": "flash",
+      "background": "part1-rainy-forest-night",
+      "sfx": "heartbeat-stop"
+    },
+    {
+      "id": "c02-s091",
+      "speaker": "",
+      "text": "그는 현실로 돌아와 있었다.",
+      "effect": "memory-end",
+      "background": "part1-rainy-forest-night",
+      "ambient": "heavy-rain"
+    },
+    {
+      "id": "c02-s092",
+      "speaker": "",
+      "text": "눈앞에는 부서진 문도, 흰 소매도, 정파의 집행패도 없었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s093",
+      "speaker": "",
+      "text": "비에 젖은 나무와 어두운 숲길만이 있었다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "wide-shot"
+    },
+    {
+      "id": "c02-s094",
+      "speaker": "",
+      "text": "그런데도 사내의 시선은 한동안 허공에 머물렀다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s095",
+      "speaker": "",
+      "text": "마치 아직 보이지 않는 사람과 마주 서 있는 것처럼.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s096",
+      "speaker": "",
+      "text": "그의 입술이 열렸다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "portrait-close-up"
+    },
+    {
+      "id": "c02-s097",
+      "speaker": "전서율",
+      "text": "……비켜.",
+      "background": "part1-rainy-forest-night",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "hollow",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c02-s098",
+      "speaker": "",
+      "text": "누구에게 한 말인지는 알 수 없었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s099",
+      "speaker": "",
+      "text": "눈앞에는 아무도 없었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s100",
+      "speaker": "",
+      "text": "하지만 그는 누군가가 길을 막고 있는 것처럼 한동안 움직이지 못했다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s101",
+      "speaker": "",
+      "text": "빗물이 머리카락을 타고 눈가로 흘렀다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "portrait-close-up"
+    },
+    {
+      "id": "c02-s102",
+      "speaker": "",
+      "text": "그는 눈을 깜빡이지 않았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s103",
+      "speaker": "",
+      "text": "눈물이었는지 빗물이었는지 구분할 수 없는 물방울 하나가 턱 끝에서 떨어졌다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s104",
+      "speaker": "",
+      "text": "손이 다시 검병으로 향했다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "hand-close-up"
+    },
+    {
+      "id": "c02-s105",
+      "speaker": "",
+      "text": "검을 뽑기 위해서가 아니었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s106",
+      "speaker": "",
+      "text": "검이 아직 그곳에 있는지 확인하려는 듯한 움직임이었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s107",
+      "speaker": "",
+      "text": "검병의 차가운 감촉이 손바닥에 닿았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s108",
+      "speaker": "",
+      "text": "그제야 손끝의 떨림이 조금 가라앉았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s109",
+      "speaker": "",
+      "text": "검은 그에게 무기가 아니었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s110",
+      "speaker": "",
+      "text": "적어도 지금 이 순간에는.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s111",
+      "speaker": "",
+      "text": "현실이 아직 손에 잡히는 형태로 남아 있다는 증거에 가까웠다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s112",
+      "speaker": "",
+      "text": "사내는 다시 걸었다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "tracking-back"
+    },
+    {
+      "id": "c02-s113",
+      "speaker": "",
+      "text": "이번에는 조금 더 빠르게.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s114",
+      "speaker": "",
+      "text": "기억이 다시 따라오기 전에 숲을 벗어나려는 사람처럼.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s115",
+      "speaker": "",
+      "text": "그러나 기억은 발보다 빨랐다.",
+      "effect": "memory-pulse",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s116",
+      "speaker": "정파 집행자",
+      "text": "대를 남겨선 안 된다.",
+      "effect": "memory-echo",
+      "background": "part1-memory-courtyard",
+      "sfx": "memory-drone-heavy"
+    },
+    {
+      "id": "c02-s117",
+      "speaker": "",
+      "text": "사내의 발이 진흙 속에서 미끄러졌다.",
+      "effect": "shake-small",
+      "background": "part1-rainy-forest-night",
+      "sfx": "foot-slip-mud"
+    },
+    {
+      "id": "c02-s118",
+      "speaker": "",
+      "text": "몸이 옆으로 기울었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s119",
+      "speaker": "",
+      "text": "그는 가까운 나무줄기를 붙잡았다.",
+      "background": "part1-rainy-forest-night",
+      "sfx": "hand-grab-bark"
+    },
+    {
+      "id": "c02-s120",
+      "speaker": "",
+      "text": "손톱이 젖은 나무껍질 사이로 깊게 파고들었다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "hand-close-up"
+    },
+    {
+      "id": "c02-s121",
+      "speaker": "",
+      "text": "숨이 짧아졌다.",
+      "background": "part1-rainy-forest-night",
+      "sfx": "strained-breath"
+    },
+    {
+      "id": "c02-s122",
+      "speaker": "",
+      "text": "들이마신 공기가 목에서 걸렸다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s123",
+      "speaker": "",
+      "text": "가슴이 움직였지만 숨은 충분히 들어오지 않았다.",
+      "effect": "dark-vignette",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s124",
+      "speaker": "",
+      "text": "빗소리가 점점 멀어졌다.",
+      "background": "part1-rainy-forest-night",
+      "ambient": "rain-muffled"
+    },
+    {
+      "id": "c02-s125",
+      "speaker": "",
+      "text": "대신 자신의 심장 소리만 지나치게 크게 들렸다.",
+      "background": "part1-rainy-forest-night",
+      "sfx": "heartbeat-heavy"
+    },
+    {
+      "id": "c02-s126",
+      "speaker": "",
+      "text": "쿵.",
+      "effect": "heartbeat-pulse",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s127",
+      "speaker": "",
+      "text": "쿵.",
+      "effect": "heartbeat-pulse",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s128",
+      "speaker": "",
+      "text": "쿵.",
+      "effect": "heartbeat-pulse-heavy",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s129",
+      "speaker": "",
+      "text": "심장이 뛸 때마다 기억 속 마당이 잠깐씩 나타났다.",
+      "effect": "memory-flash",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s130",
+      "speaker": "",
+      "text": "부서진 문.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s131",
+      "speaker": "",
+      "text": "흰 소매.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s132",
+      "speaker": "",
+      "text": "정파의 문양.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s133",
+      "speaker": "",
+      "text": "붉은 물.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s134",
+      "speaker": "",
+      "text": "누군가 넘어지는 그림자.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s135",
+      "speaker": "",
+      "text": "그러나 그림자가 누구인지는 보이지 않았다.",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s136",
+      "speaker": "",
+      "text": "얼굴에 닿기 직전마다 기억이 끊어졌다.",
+      "effect": "memory-distortion",
+      "background": "part1-memory-courtyard"
+    },
+    {
+      "id": "c02-s137",
+      "speaker": "전서율",
+      "text": "보지 마.",
+      "effect": "whisper",
+      "background": "part1-rainy-forest-night",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "distressed",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c02-s138",
+      "speaker": "",
+      "text": "그가 누구에게 말한 것인지 알 수 없었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s139",
+      "speaker": "",
+      "text": "기억 속 사람에게 한 말인지.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s140",
+      "speaker": "",
+      "text": "자신에게 한 말인지.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s141",
+      "speaker": "",
+      "text": "혹은 눈앞에 없는 누군가가 자신을 보고 있다고 생각한 것인지.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s142",
+      "speaker": "",
+      "text": "대답하는 사람은 없었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s143",
+      "speaker": "",
+      "text": "잠시 뒤, 빗소리가 다시 가까워졌다.",
+      "effect": "memory-end",
+      "background": "part1-rainy-forest-night",
+      "ambient": "heavy-rain",
+      "sfx": "heartbeat-fade"
+    },
+    {
+      "id": "c02-s144",
+      "speaker": "",
+      "text": "사내는 나무에서 손을 뗐다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s145",
+      "speaker": "",
+      "text": "손톱 밑에 검은 나무껍질이 박혀 있었다.",
+      "background": "part1-rainy-forest-night",
+      "camera": "hand-close-up"
+    },
+    {
+      "id": "c02-s146",
+      "speaker": "",
+      "text": "손바닥에는 나무껍질에 긁힌 가느다란 상처가 생겨 있었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s147",
+      "speaker": "",
+      "text": "상처에서 나온 피는 빗물 한 줄기에 곧바로 지워졌다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s148",
+      "speaker": "",
+      "text": "사내는 한동안 자신의 손바닥을 바라보았다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s149",
+      "speaker": "",
+      "text": "통증은 분명했다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s150",
+      "speaker": "",
+      "text": "그 분명함이 오히려 안도처럼 느껴졌다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s151",
+      "speaker": "",
+      "text": "적어도 이 상처는 지금 생긴 것이었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s152",
+      "speaker": "",
+      "text": "기억 속의 상처가 아니었다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s153",
+      "speaker": "",
+      "text": "그는 손을 내려 장포 소매 안에 감췄다.",
+      "background": "part1-rainy-forest-night"
+    },
+    {
+      "id": "c02-s154",
+      "speaker": "",
+      "text": "숲길은 두 갈래로 갈라져 있었다.",
+      "background": "part1-forest-fork-night",
+      "camera": "wide-shot"
+    },
+    {
+      "id": "c02-s155",
+      "speaker": "",
+      "text": "왼쪽 길은 산 아래 민가로 이어졌다.",
+      "background": "part1-forest-fork-night"
+    },
+    {
+      "id": "c02-s156",
+      "speaker": "",
+      "text": "멀리 나무 사이로 작은 불빛 몇 개가 흔들렸다.",
+      "background": "part1-forest-fork-night"
+    },
+    {
+      "id": "c02-s157",
+      "speaker": "",
+      "text": "사람이 사는 곳의 불빛이었다.",
+      "background": "part1-forest-fork-night"
+    },
+    {
+      "id": "c02-s158",
+      "speaker": "",
+      "text": "오른쪽 길은 더 깊은 숲으로 이어졌다.",
+      "background": "part1-forest-fork-night"
+    },
+    {
+      "id": "c02-s159",
+      "speaker": "",
+      "text": "길 끝에는 지붕이 무너진 작은 건물이 검은 윤곽으로 보였다.",
+      "background": "part1-forest-fork-night",
+      "camera": "slow-zoom-right"
+    },
+    {
+      "id": "c02-s160",
+      "speaker": "",
+      "text": "오래전에 버려진 사찰이었다.",
+      "background": "part1-abandoned-temple-exterior"
+    },
+    {
+      "id": "c02-s161",
+      "speaker": "",
+      "text": "사내는 민가 쪽을 바라보았다.",
+      "background": "part1-forest-fork-night"
+    },
+    {
+      "id": "c02-s162",
+      "speaker": "",
+      "text": "따뜻한 불빛이 빗속에서 희미하게 떨렸다.",
+      "background": "part1-forest-fork-night"
+    },
+    {
+      "id": "c02-s163",
+      "speaker": "",
+      "text": "잠시 후, 그의 시선이 사찰 쪽으로 움직였다.",
+      "background": "part1-forest-fork-night"
+    },
+    {
+      "id": "c02-s164",
+      "speaker": "",
+      "text": "사람이 없는 곳.",
+      "background": "part1-forest-fork-night"
+    },
+    {
+      "id": "c02-s165",
+      "speaker": "",
+      "text": "불빛이 없는 곳.",
+      "background": "part1-forest-fork-night"
+    },
+    {
+      "id": "c02-s166",
+      "speaker": "",
+      "text": "누구도 말을 걸지 않는 곳.",
+      "background": "part1-forest-fork-night"
+    },
+    {
+      "id": "c02-s167",
+      "speaker": "",
+      "text": "사내는 오른쪽으로 몸을 돌렸다.",
+      "background": "part1-forest-fork-night"
+    },
+    {
+      "id": "c02-s168",
+      "speaker": "",
+      "text": "민가의 불빛을 등지고 버려진 사찰로 향했다.",
+      "background": "part1-abandoned-temple-path",
+      "camera": "tracking-back"
+    },
+    {
+      "id": "c02-s169",
+      "speaker": "",
+      "text": "한 걸음 옮길 때마다 불빛은 나무 뒤로 하나씩 사라졌다.",
+      "background": "part1-abandoned-temple-path"
+    },
+    {
+      "id": "c02-s170",
+      "speaker": "",
+      "text": "마지막 불빛까지 보이지 않게 되었을 때.",
+      "background": "part1-abandoned-temple-path"
+    },
+    {
+      "id": "c02-s171",
+      "speaker": "",
+      "text": "숲은 다시 완전한 어둠에 잠겼다.",
+      "effect": "dim",
+      "background": "part1-abandoned-temple-path"
+    },
+    {
+      "id": "c02-s172",
+      "speaker": "",
+      "text": "사내는 멈추지 않았다.",
+      "background": "part1-abandoned-temple-path"
+    },
+    {
+      "id": "c02-s173",
+      "speaker": "",
+      "text": "그의 뒤편, 멀리 떨어진 숲에서 가지 하나가 부러졌다.",
+      "background": "part1-abandoned-temple-path",
+      "sfx": "branch-snap-distant"
+    },
+    {
+      "id": "c02-s174",
+      "speaker": "",
+      "text": "작은 소리였다.",
+      "background": "part1-abandoned-temple-path"
+    },
+    {
+      "id": "c02-s175",
+      "speaker": "",
+      "text": "빗소리에 묻혀 누구도 듣지 못할 만큼 작았다.",
+      "background": "part1-abandoned-temple-path"
+    },
+    {
+      "id": "c02-s176",
+      "speaker": "",
+      "text": "그러나 사내의 발이 아주 잠깐 느려졌다.",
+      "background": "part1-abandoned-temple-path"
+    },
+    {
+      "id": "c02-s177",
+      "speaker": "",
+      "text": "그는 뒤를 돌아보지 않았다.",
+      "background": "part1-abandoned-temple-path"
+    },
+    {
+      "id": "c02-s178",
+      "speaker": "",
+      "text": "검을 뽑지도 않았다.",
+      "background": "part1-abandoned-temple-path"
+    },
+    {
+      "id": "c02-s179",
+      "speaker": "",
+      "text": "다시 걸음을 옮겼다.",
+      "background": "part1-abandoned-temple-path"
+    },
+    {
+      "id": "c02-s180",
+      "speaker": "",
+      "text": "그가 사라진 뒤, 나무 그림자 사이에서 젖은 장포를 입은 인영 하나가 조심스럽게 모습을 드러냈다.",
+      "effect": "fade-out",
+      "background": "part1-hidden-pursuer-forest",
+      "bgm": "pursuit-low-theme",
+      "endEpisode": true,
+      "nextScene": "c02-s181"
+    },
+    {
+      "speaker": "",
+      "text": "새벽이 가까워졌지만 하늘은 조금도 밝아지지 않았다.",
+      "background": "part1-bloodied-mountain-road",
+      "effect": "fade-in",
+      "ambient": "rain-soft",
+      "bgm": "investigation-low-theme",
+      "id": "c02-s181"
+    },
+    {
+      "speaker": "",
+      "text": "정파의 후속 조사대가 피로 물든 산길에 도착했을 때, 비는 이미 절반 이상의 흔적을 씻어낸 뒤였다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s182"
+    },
+    {
+      "speaker": "",
+      "text": "그러나 비가 지우지 못한 것들도 있었다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "wide-shot",
+      "id": "c02-s183"
+    },
+    {
+      "speaker": "",
+      "text": "부러진 검 열한 자루. 진흙 속에 반쯤 파묻힌 시신 열두 구. 그리고 한 방향으로 이어지다가 숲 입구에서 사라진 얕은 발자국.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s184"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "횃불을 낮춰라. 빛이 강하면 빗물 위의 흔적이 먼저 사라진다. 누구도 시신을 옮기지 말고, 검도 뽑지 마라.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s185"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "이미 비가 너무 많이 왔습니다. 지금 남은 것으로 검로를 읽을 수 있겠습니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s186"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "사람은 거짓말을 해도 상처는 거짓말하지 않는다. 문제는 상처를 읽는 자가 무엇을 보고 싶어 하느냐지.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s187"
+    },
+    {
+      "speaker": "",
+      "text": "조사관은 첫 번째 시신 앞에 무릎을 꿇었다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "ground-close-up",
+      "id": "c02-s188"
+    },
+    {
+      "speaker": "",
+      "text": "목의 상처는 얕았고, 치명상은 가슴 아래에서 시작해 등 뒤로 빠져나간 찌르기였다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s189"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "이 상처를 낸 검은 검은 장포의 사내가 들고 있던 것이 아니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s190"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "어떻게 단정하십니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s191"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "검폭이 다르다. 그리고 각도가 너무 익숙하다. 같은 진형 안에서 뒤를 맡던 자가 찌른 상처다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s192"
+    },
+    {
+      "speaker": "",
+      "text": "기록관의 붓끝이 종이 위에서 멎었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s193"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "그렇다면… 이들은 서로를 공격했다는 뜻입니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s194"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "서로를 공격한 게 아니다. 한 사람을 공격하려다 서로의 검로가 어긋난 거다. 누군가 그 어긋남을 정확히 건드렸다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s195"
+    },
+    {
+      "speaker": "",
+      "text": "두 번째 시신의 손에는 동료의 옷자락이 찢긴 채 남아 있었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s196"
+    },
+    {
+      "speaker": "",
+      "text": "세 번째 시신의 검 끝에는 검은 장포가 아니라 정파 무복의 섬유가 감겨 있었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s197"
+    },
+    {
+      "speaker": "",
+      "text": "네 번째 시신은 자신의 검에 베이지 않았다. 그러나 옆에 쓰러진 동료의 검이 갈비뼈 사이에 박혀 있었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s198"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "이것을 한 사람이 만들었다고요?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s199"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "힘으로 만든 것이 아니다. 흐름을 읽은 거다. 두려움, 조급함, 서로에 대한 불신까지도.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s200"
+    },
+    {
+      "speaker": "",
+      "text": "조사관은 진흙 위에 손가락으로 열두 개의 점을 찍었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s201"
+    },
+    {
+      "speaker": "",
+      "text": "점 사이에 선을 긋자 포위진이 만들어졌다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s202"
+    },
+    {
+      "speaker": "",
+      "text": "그는 한가운데 작은 원을 그리고, 원을 거의 움직이지 않은 채 바깥의 선 몇 개만 비틀었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s203"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "가운데 있는 자가 한 걸음도 움직이지 않아도 된다. 이 선이 반 치만 틀어지면, 다음 선은 반드시 동료를 향한다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s204"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "그런 검법이 존재합니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s205"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "검법인지조차 모르겠다. 검을 쓰는 사람보다 사람을 먼저 읽는 방식에 가깝다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s206"
+    },
+    {
+      "speaker": "",
+      "text": "멀리서 들것을 들고 오던 무인 하나가 급히 달려왔다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s207"
+    },
+    {
+      "speaker": "정파 무인",
+      "text": "생존자가 있습니다! 계곡 아래 바위틈에 끼어 있었습니다. 숨은 붙어 있습니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s208"
+    },
+    {
+      "speaker": "",
+      "text": "조사관은 즉시 몸을 일으켰다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s209"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "입을 열게 하려고 흔들지 마라. 의식이 돌아오기 전까지 상처부터 막아.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s210"
+    },
+    {
+      "speaker": "",
+      "text": "생존자는 오른팔이 부러졌고, 허벅지에는 깊은 자상이 있었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s211"
+    },
+    {
+      "speaker": "",
+      "text": "하지만 치명상은 피했다. 두려움에 뒤로 물러나다 비탈 아래로 굴러떨어진 것이 오히려 목숨을 구했다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s212"
+    },
+    {
+      "speaker": "생존 무인",
+      "text": "그가… 웃고 있었습니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s213"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "누가 웃었다는 거지?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s214"
+    },
+    {
+      "speaker": "생존 무인",
+      "text": "검은 장포… 그자가 사람을 죽이면서 웃었습니다. 눈앞에서 동료들이 쓰러지는데도… 계속.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s215"
+    },
+    {
+      "speaker": "",
+      "text": "생존자의 동공은 조사관이 아니라 그 뒤의 어둠을 보고 있었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s216"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "그자의 눈도 웃고 있었나?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s217"
+    },
+    {
+      "speaker": "생존 무인",
+      "text": "눈은… 모르겠습니다. 입이 웃었습니다. 분명히 봤습니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s218"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "비가 눈에 들어갔을 가능성은?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s219"
+    },
+    {
+      "speaker": "생존 무인",
+      "text": "제가 미쳤다고 생각하십니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s220"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "네가 미쳤는지 묻는 것이 아니다. 네 기억이 공포에게 얼마나 먹혔는지 확인하는 중이다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s221"
+    },
+    {
+      "speaker": "",
+      "text": "생존자는 이를 악물었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s222"
+    },
+    {
+      "speaker": "생존 무인",
+      "text": "그자는 마교의 요인입니다. 아니면 사파의 살수입니다. 평범한 검객이 그런 짓을 할 수는 없습니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s223"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "이름은 들었습니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s224"
+    },
+    {
+      "speaker": "생존 무인",
+      "text": "아무 말도 하지 않았습니다. 우리를 사람처럼 보지도 않았습니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s225"
+    },
+    {
+      "speaker": "",
+      "text": "그 말에 조사관의 눈이 잠시 가늘어졌다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s226"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "사람처럼 보지 않은 자가 왜 너를 확인하지 않고 떠났지?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s227"
+    },
+    {
+      "speaker": "생존 무인",
+      "text": "…….",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s228"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "죽이려 했다면 계곡 아래까지 내려갔을 것이다. 그런데 그는 떠났다. 네가 살아남을 가능성을 알면서도.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s229"
+    },
+    {
+      "speaker": "생존 무인",
+      "text": "그자가 저를 살려줬다는 말입니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s230"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "아니다. 다만 네가 원하는 모양과 현장의 모양이 다르다는 말이다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s231"
+    },
+    {
+      "speaker": "",
+      "text": "생존자는 갑자기 몸을 일으키려다 상처가 벌어져 신음을 삼켰다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s232"
+    },
+    {
+      "speaker": "생존 무인",
+      "text": "보고서에 똑바로 쓰십시오. 검은 장포의 마인이 정파 무인 열두 명을 학살했다고.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s233"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "보고서에는 내가 본 것을 쓴다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s234"
+    },
+    {
+      "speaker": "생존 무인",
+      "text": "그렇게 쓰면 누가 책임집니까? 우리가 서로를 죽였다고 쓰면 죽은 이들의 문파가 가만있을 것 같습니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s235"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "사실이 책임을 피하기 위해 바뀌는 순간, 다음 죽음은 이미 시작된 거다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s236"
+    },
+    {
+      "speaker": "",
+      "text": "멀리서 말발굽 소리가 들렸다.",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "horse-approach",
+      "id": "c02-s237"
+    },
+    {
+      "speaker": "",
+      "text": "정파 본단의 감찰패를 단 무인들이 빗속을 가르며 산길로 올라왔다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s238"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "현장 지휘자는 누구인가?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s239"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "접니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s240"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "지금부터 이 사건은 본단 감찰부가 인계한다. 시신과 유품, 생존자와 기록을 모두 넘겨라.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s241"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "조사가 끝나지 않았습니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s242"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "끝났다. 마교 잔당의 습격으로 결론이 내려졌다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s243"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "현장을 보지도 않고 결론이 내려졌다는 말입니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s244"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "말을 조심해라. 결론은 현장보다 위에서 내려오는 법이다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s245"
+    },
+    {
+      "speaker": "",
+      "text": "조사관은 감찰관의 젖은 장포 아래 달린 금속패를 바라보았다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "object-close-up",
+      "id": "c02-s246"
+    },
+    {
+      "speaker": "",
+      "text": "기억 속 정파 집행패와 같은 문양이었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s247"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "검흔이 맞지 않습니다. 사망자 대부분은 동료의 검에 쓰러졌습니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s248"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "마공에 정신을 빼앗겨 서로를 공격했다. 그렇게 쓰면 된다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s249"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "마공의 흔적은 없습니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s250"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "흔적이 없다는 사실이 흔적일 수도 있다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s251"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "그건 어떤 결론도 증명할 수 있고, 어떤 거짓도 숨길 수 있는 말입니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s252"
+    },
+    {
+      "speaker": "",
+      "text": "감찰관의 시선이 차갑게 굳었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s253"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "자네가 진실을 밝힌다고 믿는 동안, 열두 문파는 서로 책임을 묻기 시작할 것이다. 사파와 마교는 그 틈을 파고들겠지.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s254"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "그래서 거짓을 하나 세워 모두가 같은 방향을 보게 만들겠다는 겁니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s255"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "질서는 때로 정확한 사실보다 먼저 지켜져야 한다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s256"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "그 질서 때문에 누군가 다시 검을 든다면요?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s257"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "그때는 그 검을 든 자를 죄인으로 기록하면 된다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s258"
+    },
+    {
+      "speaker": "",
+      "text": "빗소리가 두 사람 사이를 채웠다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s259"
+    },
+    {
+      "speaker": "",
+      "text": "젊은 기록관은 품속의 종이를 천천히 접었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s260"
+    },
+    {
+      "speaker": "",
+      "text": "공식 기록지와는 다른, 아무 인장도 찍히지 않은 얇은 종이였다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s261"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "검은 장포의 사내가 향한 방향은 숲입니다. 추적대를 보내시겠습니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s262"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "보내지 않는다. 정체를 모르는 자를 성급히 자극할 이유가 없다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s263"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "공식적으로는 마교의 살수라면서 추적하지 않는군.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s264"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "공식 기록과 실제 판단은 다를 수 있다. 그 차이를 이해하지 못하면 오래 살아남지 못해.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s265"
+    },
+    {
+      "speaker": "",
+      "text": "감찰관은 생존자에게 다가가 낮은 목소리로 말했다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s266"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "네가 본 것은 마교의 사술이었다. 동료들은 끝까지 정파의 명예를 지키며 싸웠고, 너는 그 사실을 전할 유일한 증인이다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s267"
+    },
+    {
+      "speaker": "생존 무인",
+      "text": "……예.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s268"
+    },
+    {
+      "speaker": "",
+      "text": "조금 전까지 흔들리던 생존자의 눈이 그 말에 기묘하게 안정됐다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s269"
+    },
+    {
+      "speaker": "",
+      "text": "진실보다 견디기 쉬운 이야기를 건네받은 사람의 얼굴이었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s270"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "기억까지 대신 정해주는군.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s271"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "사람은 견딜 수 있는 기억으로 살아간다. 자네도 언젠가 알게 될 거다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s272"
+    },
+    {
+      "speaker": "",
+      "text": "현장은 빠르게 정리되기 시작했다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s273"
+    },
+    {
+      "speaker": "",
+      "text": "시신은 문파별로 분류됐고, 서로의 검에 남은 혈흔은 빗물로 씻겨 내려갔다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s274"
+    },
+    {
+      "speaker": "",
+      "text": "부러진 검들은 한 상자에 섞여 들어갔다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s275"
+    },
+    {
+      "speaker": "",
+      "text": "진형을 설명하던 진흙 위의 선도 장화에 밟혀 사라졌다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s276"
+    },
+    {
+      "speaker": "",
+      "text": "젊은 기록관은 공식 보고서에 붓을 들었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s277"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "제목은 무엇으로 적습니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s278"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "사도 연합 잔당에 의한 산길 습격 사건.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s279"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "사도 연합이 관여했다는 증거가 없습니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s280"
+    },
+    {
+      "speaker": "정파 감찰관",
+      "text": "증거는 이후에 발견될 것이다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s281"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "발견되는 겁니까, 만들어지는 겁니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s282"
+    },
+    {
+      "speaker": "",
+      "text": "조사관이 기록관의 팔을 가볍게 잡았다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s283"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "지금은 적어.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s284"
+    },
+    {
+      "speaker": "",
+      "text": "기록관은 입술을 깨물고 공식 문장을 써 내려갔다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s285"
+    },
+    {
+      "speaker": "",
+      "text": "그러나 종이를 한 장 더 밑에 깔아두었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s286"
+    },
+    {
+      "speaker": "",
+      "text": "붓의 압력이 아래 종이에 희미한 자국을 남겼다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s287"
+    },
+    {
+      "speaker": "",
+      "text": "그는 공식 기록이 끝난 뒤, 그 눌린 자국을 따라 별도의 문장을 복원했다.",
+      "background": "part1-orthodox-report-room",
+      "effect": "cross-fade",
+      "id": "c02-s288"
+    },
+    {
+      "speaker": "",
+      "text": "문서에는 제목도, 작성자도, 인장도 없었다.",
+      "background": "part1-orthodox-report-room",
+      "id": "c02-s289"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "사망자 열두 명. 직접적인 단일 검객의 참격으로 확인되는 상처는 세 곳 이하.",
+      "background": "part1-orthodox-report-room",
+      "id": "c02-s290"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "나머지는 동료의 병장기 또는 진형 붕괴로 인한 치명상. 현장에는 내공 폭주와 독공, 환술의 흔적 없음.",
+      "background": "part1-orthodox-report-room",
+      "id": "c02-s291"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "생존자는 대상이 웃었다고 진술했으나, 눈과 표정에 대한 진술은 일관되지 않음.",
+      "background": "part1-orthodox-report-room",
+      "id": "c02-s292"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "대상은 생존자를 확인하지 않고 현장을 이탈. 살육 자체가 목적이었다고 단정하기 어려움.",
+      "background": "part1-orthodox-report-room",
+      "id": "c02-s293"
+    },
+    {
+      "speaker": "",
+      "text": "그는 마지막 문장을 앞에 두고 오랫동안 붓을 움직이지 못했다.",
+      "background": "part1-orthodox-report-room",
+      "id": "c02-s294"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "대상은 사람의 검보다 먼저, 사람이 이미 무너지고 있는 방향을 본다.",
+      "background": "part1-orthodox-report-room",
+      "id": "c02-s295"
+    },
+    {
+      "speaker": "",
+      "text": "문장을 읽던 조사관이 낮게 물었다.",
+      "background": "part1-orthodox-report-room",
+      "id": "c02-s296"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "그 기록을 어디에 둘 생각이지?",
+      "background": "part1-orthodox-report-room",
+      "id": "c02-s297"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "공식 기록 보관실에는 둘 수 없습니다.",
+      "background": "part1-orthodox-report-room",
+      "id": "c02-s298"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "가지고 있으면 네 목이 위험하다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s299"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "없애면 다음 사람이 같은 거짓을 믿게 됩니다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s300"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "진실은 남긴다고 살아남는 것이 아니다. 누가 읽을 수 있는 곳에 남겨야 한다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s301"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "그런 곳이 있습니까?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s302"
+    },
+    {
+      "speaker": "",
+      "text": "조사관은 잠시 대답하지 않았다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s303"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "아직은 없다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s304"
+    },
+    {
+      "speaker": "",
+      "text": "그는 문서를 접어 아무 표식도 없는 회색 봉투에 넣었다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s305"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "이름을 쓰지 마라. 이름이 없으면 사람들은 중요하지 않은 기록이라고 생각한다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s306"
+    },
+    {
+      "speaker": "젊은 기록관",
+      "text": "그러다 정말 아무도 읽지 않으면요?",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s307"
+    },
+    {
+      "speaker": "정파 조사관",
+      "text": "언젠가 같은 상처를 본 사람이 찾을 것이다.",
+      "background": "part1-bloodied-mountain-road",
+      "id": "c02-s308"
+    },
+    {
+      "speaker": "",
+      "text": "봉투는 기록 보관실 가장 아래 칸, 폐기 예정 문서 사이에 끼워졌다.",
+      "background": "part1-record-archive",
+      "camera": "slow-zoom",
+      "id": "c02-s309"
+    },
+    {
+      "speaker": "",
+      "text": "공식 장부에는 존재하지 않는 보고였다.",
+      "background": "part1-record-archive",
+      "id": "c02-s310"
+    },
+    {
+      "speaker": "",
+      "text": "그러나 종이는 남았다.",
+      "background": "part1-record-archive",
+      "id": "c02-s311"
+    },
+    {
+      "speaker": "",
+      "text": "그날 밤 누군가가 기록실 문틈 너머에서 두 사람을 지켜보고 있었다.",
+      "background": "part1-record-archive",
+      "sfx": "floor-creak",
+      "id": "c02-s312"
+    },
+    {
+      "speaker": "",
+      "text": "문이 열렸을 때 복도에는 아무도 없었다.",
+      "background": "part1-orthodox-corridor",
+      "id": "c02-s313"
+    },
+    {
+      "speaker": "",
+      "text": "젖은 발자국 하나만이 복도 끝을 향해 이어졌다.",
+      "background": "part1-orthodox-corridor",
+      "camera": "ground-close-up",
+      "id": "c02-s314"
+    },
+    {
+      "speaker": "",
+      "text": "기록관은 먹이 마를 때까지 종이에서 눈을 떼지 않았다.",
+      "background": "part1-record-archive",
+      "id": "c02-s315"
+    },
+    {
+      "speaker": "",
+      "text": "빗물이 처마 끝에서 일정한 간격으로 떨어졌다.",
+      "background": "part1-orthodox-corridor",
+      "id": "c02-s316"
+    },
+    {
+      "speaker": "",
+      "text": "누군가 지나간 듯 등잔불이 아주 잠깐 흔들렸다.",
+      "background": "part1-orthodox-corridor",
+      "id": "c02-s317"
+    },
+    {
+      "speaker": "",
+      "text": "기록관은 먹이 마를 때까지 종이에서 눈을 떼지 않았다.",
+      "background": "part1-record-archive",
+      "id": "c02-s318"
+    },
+    {
+      "speaker": "",
+      "text": "빗물이 처마 끝에서 일정한 간격으로 떨어졌다.",
+      "background": "part1-orthodox-corridor",
+      "id": "c02-s319"
+    },
+    {
+      "speaker": "",
+      "text": "발자국은 정파 본단 밖이 아니라, 더 깊은 내부를 향하고 있었다.",
+      "background": "part1-orthodox-corridor",
+      "effect": "fade-out",
+      "endEpisode": true,
+      "nextScene": "c02-s321",
+      "id": "c02-s320"
+    },
+    {
+      "speaker": "",
+      "text": "버려진 사찰의 문은 반쯤 기울어진 채 빗물에 흔들리고 있었다.",
+      "background": "part1-abandoned-temple-interior",
+      "effect": "fade-in",
+      "ambient": "rain-roof",
+      "bgm": "temple-embers-theme",
+      "id": "c02-s321"
+    },
+    {
+      "speaker": "",
+      "text": "전서율은 문을 밀지 않았다. 손끝으로 썩은 나무의 결을 확인한 뒤, 가장 적게 소리가 나는 틈으로 몸을 통과시켰다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s322"
+    },
+    {
+      "speaker": "",
+      "text": "법당 안에는 불상이 없었다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s323"
+    },
+    {
+      "speaker": "",
+      "text": "누군가 오래전에 머리와 두 팔을 잘라 가져갔고, 남은 몸통만 검은 그림자로 앉아 있었다.",
+      "background": "part1-abandoned-temple-interior",
+      "camera": "slow-zoom",
+      "id": "c02-s324"
+    },
+    {
+      "speaker": "",
+      "text": "지붕에서 떨어진 빗물이 돌바닥 위의 낡은 향로를 일정한 간격으로 두드렸다.",
+      "background": "part1-abandoned-temple-interior",
+      "sfx": "water-metal-drop",
+      "id": "c02-s325"
+    },
+    {
+      "speaker": "",
+      "text": "전서율은 가장 안쪽 기둥에 등을 기대고 앉았다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s326"
+    },
+    {
+      "speaker": "",
+      "text": "검을 무릎 위에 올려놓자 손끝의 떨림이 다시 보였다.",
+      "background": "part1-abandoned-temple-interior",
+      "camera": "hand-close-up",
+      "id": "c02-s327"
+    },
+    {
+      "speaker": "",
+      "text": "그는 젖은 천으로 검신을 닦으려 했다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s328"
+    },
+    {
+      "speaker": "",
+      "text": "첫 번째로 천을 댔을 때 검 끝이 향로를 건드렸다.",
+      "background": "part1-abandoned-temple-interior",
+      "sfx": "sword-metal-tick",
+      "id": "c02-s329"
+    },
+    {
+      "speaker": "",
+      "text": "맑고 작은 소리가 텅 빈 법당 안에서 지나치게 오래 울렸다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s330"
+    },
+    {
+      "speaker": "전서율",
+      "text": "……조용히 해.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s331"
+    },
+    {
+      "speaker": "",
+      "text": "검에게 한 말인지, 자신의 손에게 한 말인지 알 수 없었다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s332"
+    },
+    {
+      "speaker": "",
+      "text": "그는 다시 천을 댔다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s333"
+    },
+    {
+      "speaker": "",
+      "text": "검신에 남은 피는 거의 없었지만, 검을 닦는 손은 피를 닦을 때보다 더 느렸다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s334"
+    },
+    {
+      "speaker": "",
+      "text": "천이 검 끝에 도달했을 때 바깥에서 돌 하나가 굴렀다.",
+      "background": "part1-abandoned-temple-interior",
+      "sfx": "stone-roll-distant",
+      "id": "c02-s335"
+    },
+    {
+      "speaker": "",
+      "text": "전서율의 손이 멎었다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s336"
+    },
+    {
+      "speaker": "",
+      "text": "검은 뽑혀 있었지만 그는 문을 향해 들지 않았다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s337"
+    },
+    {
+      "speaker": "전서율",
+      "text": "들어와.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s338"
+    },
+    {
+      "speaker": "",
+      "text": "대답은 없었다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s339"
+    },
+    {
+      "speaker": "전서율",
+      "text": "빗속에서 숨을 참으면 심장 소리가 더 크게 들린다. 숨을 쉬어.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s340"
+    },
+    {
+      "speaker": "",
+      "text": "문밖에서 억눌린 숨이 새어 나왔다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s341"
+    },
+    {
+      "speaker": "",
+      "text": "젖은 장포를 입은 남자가 빈손을 보이며 법당 안으로 들어왔다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s342"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "산길에서 열두 명을 죽인 자가 낯선 사람에게 숨을 쉬라고 충고할 줄은 몰랐군.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s343"
+    },
+    {
+      "speaker": "전서율",
+      "text": "열둘 모두를 내가 죽인 것은 아니다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s344"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "그 말이 변명인가?",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s345"
+    },
+    {
+      "speaker": "전서율",
+      "text": "설명이다. 믿으라는 뜻은 아니다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s346"
+    },
+    {
+      "speaker": "",
+      "text": "추적자는 문과 전서율 사이의 거리를 재듯 시선을 움직였다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s347"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "검을 거두면 나도 한 걸음 더 들어가겠다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s348"
+    },
+    {
+      "speaker": "전서율",
+      "text": "그 자리에서 말해.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s349"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "정파의 후속대가 현장을 정리하고 있다. 공식 기록에는 네가 마교의 살수로 남을 거다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s350"
+    },
+    {
+      "speaker": "전서율",
+      "text": "이름도 모르면서.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s351"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "그래서 따라왔다. 이름을 확인하려고.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s352"
+    },
+    {
+      "speaker": "",
+      "text": "전서율의 눈이 처음으로 추적자의 얼굴을 똑바로 향했다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s353"
+    },
+    {
+      "speaker": "전서율",
+      "text": "이름을 알면 무엇이 달라지지?",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s354"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "이름 없는 괴물은 누구나 마음대로 꾸밀 수 있다. 이름이 생기면 적어도 한 사람의 과거를 찾아볼 수 있지.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s355"
+    },
+    {
+      "speaker": "전서율",
+      "text": "과거를 찾으면 지금의 시체가 살아나나?",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s356"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "아니. 하지만 왜 그런 시체가 생겼는지는 알 수 있다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s357"
+    },
+    {
+      "speaker": "",
+      "text": "전서율은 검을 닦던 천을 접어 검집 옆에 내려놓았다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s358"
+    },
+    {
+      "speaker": "전서율",
+      "text": "사람들은 이유를 알면 죽음을 견딜 수 있다고 믿는다. 대부분은 이유를 얻은 뒤 더 쉽게 죽인다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s359"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "그 말은 경험에서 나온 것 같군.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s360"
+    },
+    {
+      "speaker": "전서율",
+      "text": "돌아가.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s361"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "돌아가면 네 뒤를 쫓는 자들에게 잡힌다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s362"
+    },
+    {
+      "speaker": "전서율",
+      "text": "나를 쫓은 건 네 선택이다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s363"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "아니. 나는 너를 쫓은 게 아니라, 네 뒤에서 지워지는 흔적을 쫓았다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s364"
+    },
+    {
+      "speaker": "",
+      "text": "추적자는 품에서 작은 금속 조각을 꺼냈다.",
+      "background": "part1-abandoned-temple-interior",
+      "camera": "object-close-up",
+      "id": "c02-s365"
+    },
+    {
+      "speaker": "",
+      "text": "부서진 정파 집행패의 절반이었다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s366"
+    },
+    {
+      "speaker": "",
+      "text": "전서율의 손가락이 검집 위에서 굳었다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s367"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "산길의 시체에게서 나온 것이 아니다. 네가 숲에서 멈춰 섰던 자리, 나무뿌리 아래에 묻혀 있었다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s368"
+    },
+    {
+      "speaker": "전서율",
+      "text": "그걸 내려놔.",
+      "background": "part1-abandoned-temple-interior",
+      "effect": "dark-vignette",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s369"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "이 문양을 아나?",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s370"
+    },
+    {
+      "speaker": "전서율",
+      "text": "내려놓으라고 했다.",
+      "background": "part1-abandoned-temple-interior",
+      "effect": "shake-small",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s371"
+    },
+    {
+      "speaker": "",
+      "text": "검 끝이 아주 조금 들렸다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s372"
+    },
+    {
+      "speaker": "",
+      "text": "추적자는 금속 조각을 바닥에 놓고 두 손을 보였다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s373"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "알겠군. 네가 쫓기는 이유는 산길의 열두 명 때문만이 아니야.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s374"
+    },
+    {
+      "speaker": "전서율",
+      "text": "입을 다물어.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s375"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "정파 집행부가 오래전에 지운 사건이 있다. 문 하나가 부서지고, 한 가문이 마도 비호죄로 사라진 사건.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s376"
+    },
+    {
+      "speaker": "",
+      "text": "법당의 돌바닥이 순간 빗속의 마당으로 겹쳐 보였다.",
+      "background": "part1-memory-courtyard",
+      "effect": "memory-distortion",
+      "id": "c02-s377"
+    },
+    {
+      "speaker": "정파 집행자",
+      "text": "대를 남겨선 안 된다.",
+      "background": "part1-memory-courtyard",
+      "effect": "memory-echo",
+      "id": "c02-s378"
+    },
+    {
+      "speaker": "",
+      "text": "흰 소매가 전서율의 시야를 가렸다.",
+      "background": "part1-memory-courtyard",
+      "id": "c02-s379"
+    },
+    {
+      "speaker": "전서율",
+      "text": "그만.",
+      "background": "part1-memory-courtyard",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s380"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "나는 그 사건의 기록을 찾고 있다.",
+      "background": "part1-abandoned-temple-interior",
+      "effect": "memory-end",
+      "id": "c02-s381"
+    },
+    {
+      "speaker": "전서율",
+      "text": "기록은 없어.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s382"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "공식 기록은 그렇지. 하지만 누군가 이름 없는 보고를 남겼다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s383"
+    },
+    {
+      "speaker": "전서율",
+      "text": "누가?",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s384"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "그 질문을 한다는 건, 네가 아무것도 잊은 게 아니라는 뜻인가?",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s385"
+    },
+    {
+      "speaker": "전서율",
+      "text": "잊은 것과 떠오르지 않는 것은 다르다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s386"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "그럼 기억나는 만큼만 말해.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s387"
+    },
+    {
+      "speaker": "전서율",
+      "text": "말하면 네가 살아서 나갈 수 없을지도 모른다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s388"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "협박인가?",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s389"
+    },
+    {
+      "speaker": "전서율",
+      "text": "경고다. 나 때문이 아니라, 그 말을 듣고 네가 찾아갈 사람들 때문에.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s390"
+    },
+    {
+      "speaker": "",
+      "text": "추적자는 잠시 침묵했다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s391"
+    },
+    {
+      "speaker": "의문의 추적자",
+      "text": "내 이름은 유강이다. 이름을 먼저 내놓으면 네가 조금은 믿을 줄 알았는데.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s392"
+    },
+    {
+      "speaker": "전서율",
+      "text": "이름은 믿음의 증거가 아니다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s393"
+    },
+    {
+      "speaker": "유강",
+      "text": "그래도 부르기는 편하지.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s394"
+    },
+    {
+      "speaker": "",
+      "text": "전서율은 대답하지 않았다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s395"
+    },
+    {
+      "speaker": "유강",
+      "text": "네 이름은?",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s396"
+    },
+    {
+      "speaker": "",
+      "text": "빗물이 지붕의 깨진 틈에서 두 사람 사이로 떨어졌다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s397"
+    },
+    {
+      "speaker": "전서율",
+      "text": "전서율.",
+      "background": "part1-abandoned-temple-interior",
+      "effect": "slow-fade",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s398"
+    },
+    {
+      "speaker": "",
+      "text": "유강은 그 이름을 입 안에서 한 번 굴렸다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s399"
+    },
+    {
+      "speaker": "유강",
+      "text": "전서율. 기록에는 없는 이름이군.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s400"
+    },
+    {
+      "speaker": "전서율",
+      "text": "기록에 남지 않는 편이 나았다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s401"
+    },
+    {
+      "speaker": "유강",
+      "text": "이제는 늦었어. 산길의 생존자가 네 얼굴을 기억한다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s402"
+    },
+    {
+      "speaker": "전서율",
+      "text": "그는 내 얼굴보다 자신이 살아남았다는 사실을 더 오래 기억할 거다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s403"
+    },
+    {
+      "speaker": "유강",
+      "text": "그리고 그 사실을 견디기 위해 너를 괴물로 만들겠지.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s404"
+    },
+    {
+      "speaker": "전서율",
+      "text": "괴물이라고 부르면 자신들이 먼저 검을 든 이유를 생각하지 않아도 되니까.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s405"
+    },
+    {
+      "speaker": "",
+      "text": "유강은 바닥의 집행패 조각을 다시 바라봤다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s406"
+    },
+    {
+      "speaker": "유강",
+      "text": "그 문양을 지닌 자들이 네 가족을 죽였나?",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s407"
+    },
+    {
+      "speaker": "",
+      "text": "전서율의 표정은 변하지 않았다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s408"
+    },
+    {
+      "speaker": "",
+      "text": "그러나 무릎 위의 검 끝이 아주 미세하게 떨렸다.",
+      "background": "part1-abandoned-temple-interior",
+      "camera": "sword-tip-close-up",
+      "id": "c02-s409"
+    },
+    {
+      "speaker": "전서율",
+      "text": "그 질문을 다시 하면 네 목소리가 그들의 목소리로 들릴 거다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s410"
+    },
+    {
+      "speaker": "유강",
+      "text": "그때는 나를 죽일 건가?",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s411"
+    },
+    {
+      "speaker": "전서율",
+      "text": "그래서 묻지 말라는 거다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s412"
+    },
+    {
+      "speaker": "",
+      "text": "유강의 얼굴에서 가벼운 웃음이 사라졌다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s413"
+    },
+    {
+      "speaker": "유강",
+      "text": "알겠다. 대신 하나만 말하지. 지금 사찰 밖으로 다섯 명이 접근하고 있다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s414"
+    },
+    {
+      "speaker": "",
+      "text": "전서율은 이미 알고 있었다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s415"
+    },
+    {
+      "speaker": "",
+      "text": "빗소리 사이에 섞인 발걸음이 하나씩 분리되어 들렸다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s416"
+    },
+    {
+      "speaker": "",
+      "text": "다섯 명. 서로 다른 호흡. 그러나 같은 속도로 움직이는 훈련된 자들.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s417"
+    },
+    {
+      "speaker": "유강",
+      "text": "정파 감찰부다. 나를 쫓았는지, 너를 쫓았는지는 모르겠군.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s418"
+    },
+    {
+      "speaker": "전서율",
+      "text": "둘 다다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s419"
+    },
+    {
+      "speaker": "유강",
+      "text": "싸울 건가?",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s420"
+    },
+    {
+      "speaker": "전서율",
+      "text": "싸우지 않으면 물러날 사람들인가?",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s421"
+    },
+    {
+      "speaker": "유강",
+      "text": "아니.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s422"
+    },
+    {
+      "speaker": "전서율",
+      "text": "그럼 질문이 틀렸다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s423"
+    },
+    {
+      "speaker": "",
+      "text": "전서율은 검을 검집에 넣었다.",
+      "background": "part1-abandoned-temple-interior",
+      "sfx": "sword-sheathe",
+      "id": "c02-s424"
+    },
+    {
+      "speaker": "유강",
+      "text": "검을 넣고 싸우겠다는 건가?",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s425"
+    },
+    {
+      "speaker": "전서율",
+      "text": "이 안에서 검을 휘두르면 지붕이 무너진다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s426"
+    },
+    {
+      "speaker": "유강",
+      "text": "그 와중에 건물을 걱정하는군.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s427"
+    },
+    {
+      "speaker": "전서율",
+      "text": "무너지면 비를 피할 곳이 없어진다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s428"
+    },
+    {
+      "speaker": "",
+      "text": "유강이 짧게 웃었다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s429"
+    },
+    {
+      "speaker": "유강",
+      "text": "네가 웃었다는 증언은 틀렸지만, 농담을 못한다는 기록은 맞을 것 같군.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s430"
+    },
+    {
+      "speaker": "전서율",
+      "text": "농담이 아니다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s431"
+    },
+    {
+      "speaker": "",
+      "text": "사찰 밖에서 낮은 명령이 들렸다.",
+      "background": "part1-abandoned-temple-interior",
+      "sfx": "men-surround",
+      "id": "c02-s432"
+    },
+    {
+      "speaker": "정파 감찰무인",
+      "text": "안에 있는 자는 무기를 버리고 나와라. 저항하면 마도 잔당으로 간주한다.",
+      "background": "part1-abandoned-temple-exterior",
+      "id": "c02-s433"
+    },
+    {
+      "speaker": "유강",
+      "text": "나가면 이미 마도 잔당이고, 안 나가면 저항한 마도 잔당이군.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s434"
+    },
+    {
+      "speaker": "전서율",
+      "text": "그들은 결론을 들고 왔다.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s435"
+    },
+    {
+      "speaker": "유강",
+      "text": "그럼 우리는 무엇을 들고 나가지?",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s436"
+    },
+    {
+      "speaker": "전서율",
+      "text": "살아남을 방향.",
+      "background": "part1-abandoned-temple-interior",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      },
+      "id": "c02-s437"
+    },
+    {
+      "speaker": "",
+      "text": "전서율은 법당 뒤편의 무너진 벽을 바라봤다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s438"
+    },
+    {
+      "speaker": "",
+      "text": "빗물이 들어오는 틈 너머로 계곡으로 내려가는 좁은 비탈이 보였다.",
+      "background": "part1-abandoned-temple-interior",
+      "id": "c02-s439"
+    },
+    {
+      "speaker": "",
+      "text": "그러나 그 떨림이 향한 방향은 단 한 번도 어긋나지 않았다.",
+      "background": "part1-abandoned-temple-interior",
+      "effect": "fade-out",
+      "endEpisode": true,
+      "end": true,
+      "id": "c02-s440"
+    }
+  ],
+  "engineVersion": "0.9.8.9",
+  "dataVersion": "2.0.0",
+  "playMode": "linear",
+  "choices": false,
+  "characterDisplayRule": "speaker-only",
+  "currentProgress": {
+    "chapter": 2,
+    "completedScenes": 440,
+    "nextScene": null,
+    "nextEpisode": null,
+    "nextEpisodeTitle": null
+  },
+  "nextChapter": "volume-01-part-01-chapter-03",
+  "backgroundMappingVersion": "0.9.8.9"
+}

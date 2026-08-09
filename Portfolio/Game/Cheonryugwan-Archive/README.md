@@ -526,11 +526,11 @@ npm run test:e2e
 - 캐릭터 갤러리와 매니페스트 재생성
 
 
-## v0.9.8.5.1 Header & Version Synchronization
+## v0.9.8.9.1 Header & Version Synchronization
 
 이 버전은 `Cheonryugwan-Archive-v0.9.5.1-Faction-Expression-Split`을 원본으로 다시 생성했습니다.
 
-- 홈 `CURRENT RELEASE`를 `v0.9.8.5.1`으로 수정
+- 홈 `CURRENT RELEASE`를 `v0.9.8.9.1`으로 수정
 - 캐릭터 목록과 캐릭터 개별 페이지에 공통 헤더 적용
 - 홈·아카이브·스토리·세계관·배경·음향·로드맵·소개 헤더 통일
 - 현재 페이지 메뉴 자동 강조
@@ -540,7 +540,7 @@ npm run test:e2e
 캐릭터 이미지는 재변환·재압축·재생성하지 않았습니다.
 
 
-## v0.9.8.5.1 Archive, Background Catalog & Seo Harin Expressions
+## v0.9.8.9.1 Archive, Background Catalog & Seo Harin Expressions
 
 - 서하린 반신 표정 시트를 4×2 기준 8장으로 재분리
 - 자르기 선과 제목 영역 제외
@@ -551,7 +551,7 @@ npm run test:e2e
 - 캐릭터·배경·음향 바로가기 추가
 
 
-## v0.9.8.5.1 Image Split Showcase
+## v0.9.8.9.1 Image Split Showcase
 
 - 서하린 캐릭터 페이지 상단에 표정 8종 전용 섹션 추가
 - 표정 8개를 개별 카드로 강제 표시
@@ -562,7 +562,7 @@ npm run test:e2e
 - 기존 캐릭터 이미지 파일은 변경하지 않음
 
 
-## v0.9.8.5 Seo Harin Face Expression Split
+## v0.9.8.9 Seo Harin Face Expression Split
 
 - 프로젝트에 보관된 `서하린 표정 8종.png` 원본 사용
 - 얼굴 클로즈업 표정 8개 개별 PNG 분리
@@ -571,14 +571,14 @@ npm run test:e2e
 - 서하린 페이지에 얼굴 클로즈업 전용 섹션 추가
 - 기존 반신 표정 8종과 1부 배경 29종 유지
 
-## v0.9.8.5 서하린 반신 표정 교체
+## v0.9.8.9 서하린 반신 표정 교체
 - 기존 반신 표정 expression-01~08 삭제
 - 사용자 제공 개별 PNG 8장으로 교체
 - 웹·썸네일·인게임 리소스 갱신
 - 얼굴 클로즈업 face-expression-01~08 유지
 
 
-## v0.9.8.5 Part 1 Episode 1 Playable
+## v0.9.8.9 Part 1 Episode 1 Playable
 
 - 1부 1화 `비 내리는 산길` 플레이 가능
 - 선택지 제거 및 선형 진행
@@ -589,13 +589,13 @@ npm run test:e2e
 - 기존 캐릭터 이미지 변경 없음
 
 
-## v0.9.8.5
+## v0.9.8.9
 - 원본 시나리오 4개를 `1권-N부.md`로 저장
 - 캐릭터는 본인 대사에서만 표시
 - 나레이션과 타인 대사에서 숨김
 
 
-## v0.9.8.5 — 1부 1화 확장 시나리오 및 장면 CG
+## v0.9.8.9 — 1부 1화 확장 시나리오 및 장면 CG
 
 - 사용자 작성 확장 JSON을 실행 데이터로 적용
 - 총 277개 장면
@@ -605,3 +605,104 @@ npm run test:e2e
 - 전서율은 본인 대사 장면에서만 스탠딩 표시
 - 기억 장면·정파 보고실·암전 배경 등록
 - 장면 ID·CG 확인 웹 페이지 추가
+
+
+## v0.9.8.9 — Scene ID CG Fix
+
+- 장면 JSON의 `scene.id`를 기준으로 CG 자동 매핑
+- JSON의 개별 `cg` 속성 없이 `scene-cg.json`만으로 동작
+- CG 장면 진입 시 모든 스탠딩 캐릭터 즉시 숨김
+- CG가 있는 정확한 장면에서만 CG 표시
+- 다음 대사 장면으로 진행하면 CG 즉시 해제
+- CG 종료 후 일반 배경 및 화자 스탠딩 규칙 복귀
+- 등록 CG 5종의 장면 ID와 파일 경로 전수 검증
+- 이미지 사전 로드 및 실패 처리 강화
+
+
+## v0.9.8.9 — 모바일 제어 패널
+
+- 모바일 상단 메뉴 기본 접힘
+- `☰ 메뉴` 버튼으로 패널 열기·닫기
+- 외부 영역 터치 및 ESC로 메뉴 닫기
+- 진행·저장·설정·고급 관리로 기능 분류
+- 저장 내보내기·가져오기·진단을 고급 관리로 이동
+- 모바일 버튼 크기와 간격 통일
+- iPhone 안전 영역 반영
+- 세로·가로 모바일 레이아웃 최적화
+- 데스크톱에서는 기존 상단 버튼 방식 유지
+
+
+## v0.9.8.9 — 모바일 캐릭터 위치 보정
+
+- 모바일에서 캐릭터 기준점을 위로 이동
+- 전신·반신 표정·얼굴 클로즈업·전투 스탠딩별 보정값 분리
+- 캐릭터별 `mobileLayout` 오프셋 및 스케일 지원
+- 장면 데이터의 `mobileOffsetY`, `mobileScale` 개별 재정의 지원
+- 전서율 기본 스탠딩 약 12vh 상향
+- 서하린 반신 표정 약 15vh 상향
+- 모바일 세로·가로 방향별 위치 보정
+- 데스크톱 캐릭터 위치 유지
+- 기존 접이식 모바일 메뉴 유지
+
+
+## v0.9.8.9 — 1부 2장 완성 및 모바일 Bottom Sheet
+
+### 1부 2장
+
+- 사용자 제공 180장면을 원본 기준으로 보존
+- 에피소드 5 「이름 없는 보고」 140장면 추가
+- 에피소드 6 「검 끝의 떨림」 120장면 추가
+- 전체 440장면
+- 정파 조사관·젊은 기록관·감찰관·생존자·유강 대화 확장
+- 전서율의 긴 대사와 심리 묘사 추가
+- 이름 없는 보고서와 정파 기록 왜곡 복선 추가
+- 폐사찰 대치 및 집행패 과거 사건 복선 추가
+- 기존 1부 배경 11종에 신규 ID 매핑
+- 화자 본인 대사에서만 캐릭터 스탠딩 표시
+
+### 모바일 메뉴
+
+- 우측 전체 패널을 하단 Bottom Sheet로 변경
+- 최대 높이 46vh로 제한
+- 게임 메뉴 제목 한 줄 고정
+- 진행·저장·설정 카테고리 아코디언 적용
+- 진행 메뉴만 기본 펼침
+- 고급 관리 별도 접기 유지
+
+
+## v0.9.9.5 — Markdown Scenario Editor
+
+- `pages/manuscript/editor/` 시나리오 편집기 추가
+- 원본·신규·로컬 Markdown 편집 지원
+- 실시간 미리보기 및 원본 Diff
+- 자동 임시 저장 및 작업 복원
+- Markdown·manifest·작업 ZIP 내보내기
+- 정적 GitHub Pages 환경을 고려해 서버 원본은 직접 덮어쓰지 않음
+
+
+## v0.9.9.5 — Markdown → JSON Converter
+
+- `pages/manuscript/converter/` 추가
+- Markdown을 천류관 게임 Scene JSON으로 자동 변환
+- 명시적 화자, 캐릭터, 배경, BGM, Effect 기본 매핑
+- 변환 결과·경고·예상 플레이 시간 확인 및 JSON 다운로드
+- Markdown Editor에서 현재 작업본을 변환기로 직접 전달
+
+
+## v0.9.9.5 — Scene Editor
+
+- `pages/manuscript/scene-editor/` 추가
+- Scene 카드 기반 JSON 편집
+- Drag/추가/복제/삭제/ID 재정렬
+- Character·Expression·Background·Audio·Effect·Camera·CG 선택
+- 에셋 및 게임 표시 규칙 Validation
+- 수정 JSON과 Validation Report 내보내기
+
+
+## v0.9.9.5 — Game Preview
+
+- `pages/manuscript/game-preview/` 추가
+- Scene Editor JSON을 프로젝트 파일 교체 없이 즉시 플레이
+- 실제 Background / Character / Expression / CG / Audio 렌더링
+- Desktop / Tablet / Mobile 반응형 프리뷰
+- Scene 이동 / 자동 진행 / Timeline / Debug / Missing Asset 검사

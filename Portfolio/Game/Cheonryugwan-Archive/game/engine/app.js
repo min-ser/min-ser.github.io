@@ -440,6 +440,36 @@ async function autoStartFromUrl() {
   return true;
 }
 
+
+function setControlMenu(open) {
+  const panel = $("#top-actions");
+  const toggle = $("#control-menu-toggle");
+  const backdrop = $("#control-menu-backdrop");
+
+  if (!panel || !toggle || !backdrop) return;
+
+  panel.classList.toggle("open", open);
+  panel.setAttribute("aria-hidden", String(!open));
+  toggle.setAttribute("aria-expanded", String(open));
+  backdrop.hidden = !open;
+  document.body.classList.toggle("control-menu-open", open);
+
+  if (open) {
+    $("#control-menu-close")?.focus();
+  } else {
+    toggle.focus({ preventScroll: true });
+  }
+}
+
+function closeControlMenu() {
+  setControlMenu(false);
+}
+
+function toggleControlMenu() {
+  const panel = $("#top-actions");
+  setControlMenu(!panel?.classList.contains("open"));
+}
+
 async function initialize() {
   try {
     setRuntimeStatus("엔진 초기화 중");
@@ -494,6 +524,9 @@ async function initialize() {
     bindClick("#title-load", () => openSlots("load"));
     bindClick("#title-settings", () => $("#settings-dialog").showModal());
     bindClick("#back-title", () => finishChapter());
+    bindClick("#control-menu-toggle", toggleControlMenu);
+    bindClick("#control-menu-close", closeControlMenu);
+    bindClick("#control-menu-backdrop", closeControlMenu);
     bindClick("#save-btn", () => openSlots("save"));
     bindClick("#load-btn", () => openSlots("load"));
     bindClick("#settings-btn", () => $("#settings-dialog").showModal());
@@ -523,6 +556,51 @@ async function initialize() {
     bindClick("#export-save-btn", exportSaveFile);
     bindClick("#import-save-btn", () => $("#import-save-file").click());
 
+
+    [
+      "#sound-test-btn", "#export-save-btn", "#import-save-btn", "#save-btn",
+      "#quick-save-btn", "#quick-load-btn", "#auto-history-btn", "#load-btn",
+      "#settings-btn", "#log-btn", "#debug-btn", "#auto-btn", "#skip-btn"
+    ].forEach((selector) => {
+      $(selector)?.addEventListener("click", () => {
+        if (window.matchMedia("(max-width: 900px)").matches) {
+          closeControlMenu();
+        }
+      });
+    });
+
+    window.matchMedia("(min-width: 901px)").addEventListener?.("change", (event) => {
+      if (event.matches) closeControlMenu();
+    });
+
+
+    $$(".control-group h2").forEach((heading, index) => {
+      heading.setAttribute("role", "button");
+      heading.setAttribute("tabindex", "0");
+      heading.setAttribute("aria-expanded", String(index === 0));
+
+      const toggleGroup = () => {
+        const group = heading.closest(".control-group");
+        const open = !group?.classList.contains("expanded");
+        $$(".control-group").forEach((item) => item.classList.remove("expanded"));
+        $$(".control-group h2").forEach((item) => item.setAttribute("aria-expanded", "false"));
+        if (open && group) {
+          group.classList.add("expanded");
+          heading.setAttribute("aria-expanded", "true");
+        }
+      };
+
+      heading.addEventListener("click", toggleGroup);
+      heading.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          toggleGroup();
+        }
+      });
+
+      if (index === 0) heading.closest(".control-group")?.classList.add("expanded");
+    });
+
     $("#import-save-file")?.addEventListener("change", (event) => {
       importSaveFile(event.target.files?.[0]);
       event.target.value = "";
@@ -537,6 +615,12 @@ async function initialize() {
     });
 
     document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && $("#top-actions")?.classList.contains("open")) {
+        event.preventDefault();
+        closeControlMenu();
+        return;
+      }
+
       if (event.key === "F1") {
         event.preventDefault();
         runtime.debug.render();
@@ -561,7 +645,7 @@ async function initialize() {
     $("#master-volume")?.addEventListener("input", saveSettings);
     $("#rain-toggle")?.addEventListener("change", saveSettings);
 
-    document.documentElement.dataset.gameReady = "v0.9.8.5";
+    document.documentElement.dataset.gameReady = "v0.9.8.9";
     setRuntimeStatus("엔진 준비 완료", "ok");
     runtime.debug.log("엔진 초기화 완료");
     await autoStartFromUrl();

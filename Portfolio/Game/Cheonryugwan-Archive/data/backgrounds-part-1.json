@@ -1,5 +1,5 @@
 {
-  "version": "0.9.8",
+  "version": "0.9.10.4",
   "source": "에셋/배경/1부/목록원본/1부_배경_목록_원본.png",
   "count": 29,
   "backgrounds": [
@@ -11,9 +11,9 @@
       "source": "에셋/배경/1부/개별/01_비_오는_산길_밤.png",
       "web": "assets/images/backgrounds/part-1/bg-01.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-01.webp",
-      "width": 296,
-      "height": 181,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-02",
@@ -23,9 +23,9 @@
       "source": "에셋/배경/1부/개별/02_안개_낀_산길.png",
       "web": "assets/images/backgrounds/part-1/bg-02.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-02.webp",
-      "width": 297,
-      "height": 181,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-03",
@@ -35,9 +35,9 @@
       "source": "에셋/배경/1부/개별/03_피가_흐르는_산길.png",
       "web": "assets/images/backgrounds/part-1/bg-03.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-03.webp",
-      "width": 298,
-      "height": 181,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-04",
@@ -47,9 +47,9 @@
       "source": "에셋/배경/1부/개별/04_숲속_입구.png",
       "web": "assets/images/backgrounds/part-1/bg-04.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-04.webp",
-      "width": 298,
-      "height": 181,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-05",
@@ -59,9 +59,9 @@
       "source": "에셋/배경/1부/개별/05_폭우_속_숲.png",
       "web": "assets/images/backgrounds/part-1/bg-05.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-05.webp",
-      "width": 295,
-      "height": 181,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-06",
@@ -71,9 +71,9 @@
       "source": "에셋/배경/1부/개별/06_산길_전투.png",
       "web": "assets/images/backgrounds/part-1/bg-06.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-06.webp",
-      "width": 367,
-      "height": 159,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-07",
@@ -83,9 +83,9 @@
       "source": "에셋/배경/1부/개별/07_숲속_공터.png",
       "web": "assets/images/backgrounds/part-1/bg-07.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-07.webp",
-      "width": 331,
-      "height": 159,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-08",
@@ -95,9 +95,9 @@
       "source": "에셋/배경/1부/개별/08_계곡_근처.png",
       "web": "assets/images/backgrounds/part-1/bg-08.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-08.webp",
-      "width": 364,
-      "height": 159,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-09",
@@ -107,9 +107,9 @@
       "source": "에셋/배경/1부/개별/09_절벽_끝.png",
       "web": "assets/images/backgrounds/part-1/bg-09.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-09.webp",
-      "width": 345,
-      "height": 159,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-10",
@@ -119,9 +119,9 @@
       "source": "에셋/배경/1부/개별/10_정문.png",
       "web": "assets/images/backgrounds/part-1/bg-10.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-10.webp",
-      "width": 263,
-      "height": 138,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-11",
@@ -131,9 +131,9 @@
       "source": "에셋/배경/1부/개별/11_교정.png",
       "web": "assets/images/backgrounds/part-1/bg-11.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-11.webp",
-      "width": 276,
-      "height": 138,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-12",
@@ -143,9 +143,9 @@
       "source": "에셋/배경/1부/개별/12_수련장.png",
       "web": "assets/images/backgrounds/part-1/bg-12.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-12.webp",
-      "width": 291,
-      "height": 138,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-13",
@@ -155,9 +155,9 @@
       "source": "에셋/배경/1부/개별/13_무기_보관소.png",
       "web": "assets/images/backgrounds/part-1/bg-13.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-13.webp",
-      "width": 330,
-      "height": 138,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-14",
@@ -167,9 +167,9 @@
       "source": "에셋/배경/1부/개별/14_교관_연무장.png",
       "web": "assets/images/backgrounds/part-1/bg-14.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-14.webp",
-      "width": 327,
-      "height": 138,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-15",
@@ -179,9 +179,9 @@
       "source": "에셋/배경/1부/개별/15_복도.png",
       "web": "assets/images/backgrounds/part-1/bg-15.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-15.webp",
-      "width": 263,
-      "height": 125,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-16",
@@ -191,9 +191,9 @@
       "source": "에셋/배경/1부/개별/16_생활관.png",
       "web": "assets/images/backgrounds/part-1/bg-16.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-16.webp",
-      "width": 276,
-      "height": 125,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-17",
@@ -203,9 +203,9 @@
       "source": "에셋/배경/1부/개별/17_식당.png",
       "web": "assets/images/backgrounds/part-1/bg-17.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-17.webp",
-      "width": 291,
-      "height": 125,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-18",
@@ -215,9 +215,9 @@
       "source": "에셋/배경/1부/개별/18_의무실.png",
       "web": "assets/images/backgrounds/part-1/bg-18.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-18.webp",
-      "width": 330,
-      "height": 125,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-19",
@@ -227,9 +227,9 @@
       "source": "에셋/배경/1부/개별/19_뒷마당.png",
       "web": "assets/images/backgrounds/part-1/bg-19.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-19.webp",
-      "width": 327,
-      "height": 125,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-20",
@@ -239,9 +239,9 @@
       "source": "에셋/배경/1부/개별/20_피로_물든_교정.png",
       "web": "assets/images/backgrounds/part-1/bg-20.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-20.webp",
-      "width": 184,
-      "height": 150,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-21",
@@ -251,9 +251,9 @@
       "source": "에셋/배경/1부/개별/21_무너진_연무장.png",
       "web": "assets/images/backgrounds/part-1/bg-21.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-21.webp",
-      "width": 165,
-      "height": 150,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-22",
@@ -263,9 +263,9 @@
       "source": "에셋/배경/1부/개별/22_불타는_건물.png",
       "web": "assets/images/backgrounds/part-1/bg-22.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-22.webp",
-      "width": 154,
-      "height": 150,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-23",
@@ -275,9 +275,9 @@
       "source": "에셋/배경/1부/개별/23_쓰러진_매화나무.png",
       "web": "assets/images/backgrounds/part-1/bg-23.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-23.webp",
-      "width": 188,
-      "height": 150,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-24",
@@ -287,9 +287,9 @@
       "source": "에셋/배경/1부/개별/24_장문인_회의실.png",
       "web": "assets/images/backgrounds/part-1/bg-24.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-24.webp",
-      "width": 108,
-      "height": 139,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-25",
@@ -299,9 +299,9 @@
       "source": "에셋/배경/1부/개별/25_긴_회의_테이블.png",
       "web": "assets/images/backgrounds/part-1/bg-25.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-25.webp",
-      "width": 117,
-      "height": 139,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-26",
@@ -311,9 +311,9 @@
       "source": "에셋/배경/1부/개별/26_기록_보관실.png",
       "web": "assets/images/backgrounds/part-1/bg-26.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-26.webp",
-      "width": 119,
-      "height": 139,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-27",
@@ -323,9 +323,9 @@
       "source": "에셋/배경/1부/개별/27_매화정원.png",
       "web": "assets/images/backgrounds/part-1/bg-27.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-27.webp",
-      "width": 134,
-      "height": 139,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-28",
@@ -335,9 +335,9 @@
       "source": "에셋/배경/1부/개별/28_고요한_연무장.png",
       "web": "assets/images/backgrounds/part-1/bg-28.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-28.webp",
-      "width": 138,
-      "height": 139,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     },
     {
       "id": "part1-bg-29",
@@ -347,9 +347,9 @@
       "source": "에셋/배경/1부/개별/29_비_오는_대련장.png",
       "web": "assets/images/backgrounds/part-1/bg-29.webp",
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-29.webp",
-      "width": 144,
-      "height": 139,
-      "status": "1부 시트에서 개별 분리"
+      "width": 1672,
+      "height": 941,
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
     }
   ]
 }

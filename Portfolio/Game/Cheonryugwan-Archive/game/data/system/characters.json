@@ -35,6 +35,24 @@
       "battle-08": "./assets/images/characters/seo-harin/battle/battle-08.webp",
       "battle-08-2": "./assets/images/characters/seo-harin/battle/battle-08-2.webp",
       "battle-99": "./assets/images/characters/seo-harin/battle/battle-99.webp"
+    },
+    "mobileLayout": {
+      "default": {
+        "offsetY": "-10vh",
+        "scale": 1.0
+      },
+      "expression": {
+        "offsetY": "-15vh",
+        "scale": 1.03
+      },
+      "faceExpression": {
+        "offsetY": "-10vh",
+        "scale": 1.08
+      },
+      "battle": {
+        "offsetY": "-9vh",
+        "scale": 0.96
+      }
     }
   },
   "jeon-seoyul": {
@@ -45,7 +63,25 @@
     "defaultExpression": "default",
     "defaultPosition": "center",
     "source": "user-provided-v0.9.5",
-    "status": "replaced"
+    "status": "replaced",
+    "mobileLayout": {
+      "default": {
+        "offsetY": "-12vh",
+        "scale": 0.96
+      },
+      "expression": {
+        "offsetY": "-12vh",
+        "scale": 0.98
+      },
+      "faceExpression": {
+        "offsetY": "-9vh",
+        "scale": 1.04
+      },
+      "battle": {
+        "offsetY": "-9vh",
+        "scale": 0.94
+      }
+    }
   },
   "seol-yujin": {
     "name": "설유진",
@@ -64,7 +100,25 @@
     "defaultExpression": "default",
     "defaultPosition": "center",
     "source": "user-provided-v0.9.5",
-    "status": "replaced"
+    "status": "replaced",
+    "mobileLayout": {
+      "default": {
+        "offsetY": "-11vh",
+        "scale": 0.98
+      },
+      "expression": {
+        "offsetY": "-14vh",
+        "scale": 1.02
+      },
+      "faceExpression": {
+        "offsetY": "-9vh",
+        "scale": 1.07
+      },
+      "battle": {
+        "offsetY": "-9vh",
+        "scale": 0.95
+      }
+    }
   },
   "yeon-museol": {
     "name": "연무설",
@@ -83,7 +137,25 @@
     "defaultExpression": "default",
     "defaultPosition": "center",
     "source": "user-provided-v0.9.5",
-    "status": "replaced"
+    "status": "replaced",
+    "mobileLayout": {
+      "default": {
+        "offsetY": "-11vh",
+        "scale": 0.98
+      },
+      "expression": {
+        "offsetY": "-14vh",
+        "scale": 1.02
+      },
+      "faceExpression": {
+        "offsetY": "-9vh",
+        "scale": 1.07
+      },
+      "battle": {
+        "offsetY": "-9vh",
+        "scale": 0.95
+      }
+    }
   },
   "jeok-wola": {
     "name": "적월아",
@@ -102,6 +174,24 @@
     "defaultExpression": "default",
     "defaultPosition": "center",
     "source": "user-provided-v0.9.5",
-    "status": "replaced"
+    "status": "replaced",
+    "mobileLayout": {
+      "default": {
+        "offsetY": "-11vh",
+        "scale": 0.98
+      },
+      "expression": {
+        "offsetY": "-14vh",
+        "scale": 1.02
+      },
+      "faceExpression": {
+        "offsetY": "-9vh",
+        "scale": 1.07
+      },
+      "battle": {
+        "offsetY": "-9vh",
+        "scale": 0.95
+      }
+    }
   }
 }

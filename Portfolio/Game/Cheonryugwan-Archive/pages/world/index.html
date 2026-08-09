@@ -1,34 +1,36 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>World | Cheonryugwan Archive</title>
-  <link rel="stylesheet" href="../../assets/css/common.css?v=0.9.6.1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>세계관 | 천류관</title>
+<link rel="stylesheet" href="../../assets/css/common.css?v=0.9.10.0">
+<link rel="stylesheet" href="./world.css?v=0.9.10.0">
 </head>
 <body>
-  <header class="site-header" data-site-header data-active="world" data-subtitle="천류관 : 흐름의 기록"></header>
-  <main>
-    <section class="page-hero">
-      <p class="eyebrow">WORLD BIBLE</p>
-      <h1>World</h1>
-      <p>세력, 역사, 장소, 용어와 연표를 정리합니다.</p>
-    </section>
-    <section class="content-wrap">
-      
-<div class="card-grid">
-  <article class="info-card"><h2>Factions</h2><p>세력과 조직의 관계를 원본 기준으로 정리합니다.</p></article>
-  <article class="info-card"><h2>Timeline</h2><p>사건의 실제 시간 순서와 서술 순서를 분리합니다.</p></article>
-  <article class="info-card"><h2>Glossary</h2><p>고유명사, 무공, 직위와 세계관 용어를 관리합니다.</p></article>
+<header class="site-header" data-site-header data-active="world" data-subtitle="천류관 : 세계관 아카이브"></header>
+<main>
+<section class="page-hero world-hero"><p class="eyebrow">WORLD BIBLE · SOURCE BASED</p><h1>천류관 세계관</h1>
+<p>빈 설정집이 아니라 <strong>1권 1부~4부 원본 소설에서 실제로 등장한 설정</strong>을 세력·무공·장소·개념·연표로 재구성했습니다.</p></section>
+<section class="content-wrap">
+<div class="world-toolbar">
+ <input id="world-search" type="search" placeholder="정파, 천류, 투기장, 공적…">
+ <button class="world-filter active" data-category="all">전체</button>
+ <button class="world-filter" data-category="factions">세력</button>
+ <button class="world-filter" data-category="martial">무공·경지</button>
+ <button class="world-filter" data-category="places">장소</button>
+ <button class="world-filter" data-category="concepts">핵심 개념</button>
+ <button class="world-filter" data-category="timeline">연표</button>
 </div>
-
-    </section>
-  </main>
-  <footer class="site-footer">
-    <p>© 2026 Minseo Kim. Creative contents are All Rights Reserved.</p>
-    <div><a href="../../pages/legal/">License & Copyright</a><span>·</span><span>v0.8.1</span></div>
-  </footer>
-  <script src="../../assets/js/common.js?v=0.8.4"></script>
-<script src="../../assets/js/site-header.js?v=0.9.6.1"></script>
-</body>
-</html>
+<div class="world-layout">
+ <div>
+  <div id="world-summary" class="world-summary"></div>
+  <div id="world-grid" class="world-grid"></div>
+ </div>
+ <aside id="world-detail" class="world-detail"><p class="empty-detail">카드를 선택하면 소설 기반 상세 설정과 원문 출처를 확인할 수 있습니다.</p></aside>
+</div>
+</section>
+</main>
+<footer class="site-footer"><p>© 2026 Minseo Kim. All Rights Reserved.</p><div><a href="../legal/">License & Copyright</a><span> · </span><span>v0.9.10.0</span></div></footer>
+<script src="../../assets/js/site-header.js?v=0.9.10.0"></script>
+<script type="module" src="./world.js?v=0.9.10.0"></script>
+</body></html>

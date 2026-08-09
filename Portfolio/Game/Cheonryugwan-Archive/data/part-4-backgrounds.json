@@ -1,0 +1,682 @@
+{
+  "version": "0.9.10.4",
+  "part": 4,
+  "title": "4부 배경 개별 이미지",
+  "source": "에셋/배경/4부/목록원본/4부_배경_목록_원본.png",
+  "count": 46,
+  "items": [
+    {
+      "id": 1,
+      "name": "연합 회의장",
+      "file": "01_연합_회의장.png",
+      "web": "assets/images/backgrounds/part-4/bg-01.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        17,
+        86,
+        319,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 2,
+      "name": "정파 임시 심문실",
+      "file": "02_정파_임시_심문실.png",
+      "web": "assets/images/backgrounds/part-4/bg-02.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        339,
+        86,
+        508,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 3,
+      "name": "정파 기록 보관실",
+      "file": "03_정파_기록_보관실.png",
+      "web": "assets/images/backgrounds/part-4/bg-03.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        514,
+        86,
+        682,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 4,
+      "name": "장문인 회의실",
+      "file": "04_장문인_회의실.png",
+      "web": "assets/images/backgrounds/part-4/bg-04.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        688,
+        86,
+        860,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 5,
+      "name": "지하 감옥",
+      "file": "05_지하_감옥.png",
+      "web": "assets/images/backgrounds/part-4/bg-05.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        882,
+        86,
+        1076,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 6,
+      "name": "정파 출정식 광장",
+      "file": "06_정파_출정식_광장.png",
+      "web": "assets/images/backgrounds/part-4/bg-06.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1112,
+        86,
+        1312,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 7,
+      "name": "척살대 행군길",
+      "file": "07_척살대_행군길.png",
+      "web": "assets/images/backgrounds/part-4/bg-07.webp",
+      "width": 1448,
+      "height": 1086,
+      "sourceRect": [
+        1318,
+        86,
+        1515,
+        201
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 8,
+      "name": "무관 교정 맑은 날",
+      "file": "08_무관_교정_맑은_날.png",
+      "web": "assets/images/backgrounds/part-4/bg-08.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        17,
+        259,
+        243,
+        365
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 9,
+      "name": "신입 수련장",
+      "file": "09_신입_수련장.png",
+      "web": "assets/images/backgrounds/part-4/bg-09.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        250,
+        259,
+        389,
+        365
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 10,
+      "name": "생활관",
+      "file": "10_생활관.png",
+      "web": "assets/images/backgrounds/part-4/bg-10.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        396,
+        259,
+        521,
+        365
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 11,
+      "name": "식당",
+      "file": "11_식당.png",
+      "web": "assets/images/backgrounds/part-4/bg-11.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        527,
+        259,
+        686,
+        365
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 12,
+      "name": "복도",
+      "file": "12_복도.png",
+      "web": "assets/images/backgrounds/part-4/bg-12.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        693,
+        259,
+        854,
+        365
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 13,
+      "name": "차고 뒤 골목",
+      "file": "13_차고_뒤_골목.png",
+      "web": "assets/images/backgrounds/part-4/bg-13.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        886,
+        259,
+        1055,
+        365
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 14,
+      "name": "무기 창고",
+      "file": "14_무기_창고.png",
+      "web": "assets/images/backgrounds/part-4/bg-14.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1062,
+        259,
+        1217,
+        365
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 15,
+      "name": "비 오는 연무장",
+      "file": "15_비_오는_연무장.png",
+      "web": "assets/images/backgrounds/part-4/bg-15.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1223,
+        259,
+        1384,
+        365
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 16,
+      "name": "어두운 복도",
+      "file": "16_어두운_복도.png",
+      "web": "assets/images/backgrounds/part-4/bg-16.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1391,
+        259,
+        1515,
+        365
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 17,
+      "name": "벚꽃길",
+      "file": "17_벚꽃길.png",
+      "web": "assets/images/backgrounds/part-4/bg-17.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        17,
+        427,
+        182,
+        531
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 18,
+      "name": "연못가",
+      "file": "18_연못가.png",
+      "web": "assets/images/backgrounds/part-4/bg-18.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        189,
+        427,
+        393,
+        531
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 19,
+      "name": "전서율의 집 외부",
+      "file": "19_전서율의_집_외부.png",
+      "web": "assets/images/backgrounds/part-4/bg-19.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        414,
+        427,
+        558,
+        531
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 20,
+      "name": "작은 마당",
+      "file": "20_작은_마당.png",
+      "web": "assets/images/backgrounds/part-4/bg-20.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        564,
+        427,
+        686,
+        531
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 21,
+      "name": "거실",
+      "file": "21_거실.png",
+      "web": "assets/images/backgrounds/part-4/bg-21.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        692,
+        427,
+        825,
+        531
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 22,
+      "name": "처형장",
+      "file": "22_처형장.png",
+      "web": "assets/images/backgrounds/part-4/bg-22.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        831,
+        427,
+        985,
+        531
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 23,
+      "name": "사건이 발생한 방",
+      "file": "23_사건이_발생한_방.png",
+      "web": "assets/images/backgrounds/part-4/bg-23.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1004,
+        427,
+        1133,
+        531
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 24,
+      "name": "선배의 마당",
+      "file": "24_선배의_마당.png",
+      "web": "assets/images/backgrounds/part-4/bg-24.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1139,
+        427,
+        1240,
+        531
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 25,
+      "name": "피로 물든 바닥",
+      "file": "25_피로_물든_바닥.png",
+      "web": "assets/images/backgrounds/part-4/bg-25.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1247,
+        427,
+        1396,
+        531
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 26,
+      "name": "도망치는 길",
+      "file": "26_도망치는_길.png",
+      "web": "assets/images/backgrounds/part-4/bg-26.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        1403,
+        427,
+        1515,
+        531
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 27,
+      "name": "생존자 만남 장소",
+      "file": "27_생존자_만남_장소.png",
+      "web": "assets/images/backgrounds/part-4/bg-27.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        17,
+        588,
+        169,
+        688
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 28,
+      "name": "생존자 대화 장소",
+      "file": "28_생존자_대화_장소.png",
+      "web": "assets/images/backgrounds/part-4/bg-28.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        175,
+        588,
+        327,
+        688
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 29,
+      "name": "진실을 말하는 순간",
+      "file": "29_진실을_말하는_순간.png",
+      "web": "assets/images/backgrounds/part-4/bg-29.webp",
+      "width": 150,
+      "height": 100,
+      "sourceRect": [
+        333,
+        588,
+        483,
+        688
+      ]
+    },
+    {
+      "id": 30,
+      "name": "태허진인의 거처",
+      "file": "30_태허진인의_거처.png",
+      "web": "assets/images/backgrounds/part-4/bg-30.webp",
+      "width": 1672,
+      "height": 941,
+      "sourceRect": [
+        509,
+        588,
+        650,
+        688
+      ],
+      "status": "고화질 에셋 교체 완료 (v0.9.10.4)"
+    },
+    {
+      "id": 31,
+      "name": "매화숲",
+      "file": "31_매화숲.png",
+      "web": "assets/images/backgrounds/part-4/bg-31.webp",
+      "width": 139,
+      "height": 100,
+      "sourceRect": [
+        656,
+        588,
+        795,
+        688
+      ]
+    },
+    {
+      "id": 32,
+      "name": "절벽 위 결전 장소",
+      "file": "32_절벽_위_결전_장소.png",
+      "web": "assets/images/backgrounds/part-4/bg-32.webp",
+      "width": 143,
+      "height": 100,
+      "sourceRect": [
+        801,
+        588,
+        944,
+        688
+      ]
+    },
+    {
+      "id": 33,
+      "name": "결전 후 절벽",
+      "file": "33_결전_후_절벽.png",
+      "web": "assets/images/backgrounds/part-4/bg-33.webp",
+      "width": 129,
+      "height": 100,
+      "sourceRect": [
+        950,
+        588,
+        1079,
+        688
+      ]
+    },
+    {
+      "id": 34,
+      "name": "비밀 회의실",
+      "file": "34_비밀_회의실.png",
+      "web": "assets/images/backgrounds/part-4/bg-34.webp",
+      "width": 144,
+      "height": 100,
+      "sourceRect": [
+        1099,
+        588,
+        1243,
+        688
+      ]
+    },
+    {
+      "id": 35,
+      "name": "기록 조작 공간",
+      "file": "35_기록_조작_공간.png",
+      "web": "assets/images/backgrounds/part-4/bg-35.webp",
+      "width": 133,
+      "height": 100,
+      "sourceRect": [
+        1249,
+        588,
+        1382,
+        688
+      ]
+    },
+    {
+      "id": 36,
+      "name": "불태워지는 문서",
+      "file": "36_불태워지는_문서.png",
+      "web": "assets/images/backgrounds/part-4/bg-36.webp",
+      "width": 127,
+      "height": 100,
+      "sourceRect": [
+        1388,
+        588,
+        1515,
+        688
+      ]
+    },
+    {
+      "id": 37,
+      "name": "마교 분거지 입구",
+      "file": "37_마교_분거지_입구.png",
+      "web": "assets/images/backgrounds/part-4/bg-37.webp",
+      "width": 147,
+      "height": 95,
+      "sourceRect": [
+        17,
+        750,
+        164,
+        845
+      ]
+    },
+    {
+      "id": 38,
+      "name": "연서의 대청",
+      "file": "38_연서의_대청.png",
+      "web": "assets/images/backgrounds/part-4/bg-38.webp",
+      "width": 165,
+      "height": 95,
+      "sourceRect": [
+        170,
+        750,
+        335,
+        845
+      ]
+    },
+    {
+      "id": 39,
+      "name": "마교 회의실",
+      "file": "39_마교_회의실.png",
+      "web": "assets/images/backgrounds/part-4/bg-39.webp",
+      "width": 158,
+      "height": 95,
+      "sourceRect": [
+        341,
+        750,
+        499,
+        845
+      ]
+    },
+    {
+      "id": 40,
+      "name": "폭포가 보이는 계곡",
+      "file": "40_폭포가_보이는_계곡.png",
+      "web": "assets/images/backgrounds/part-4/bg-40.webp",
+      "width": 128,
+      "height": 95,
+      "sourceRect": [
+        518,
+        750,
+        646,
+        845
+      ]
+    },
+    {
+      "id": 41,
+      "name": "붉은 절벽 전망대",
+      "file": "41_붉은_절벽_전망대.png",
+      "web": "assets/images/backgrounds/part-4/bg-41.webp",
+      "width": 136,
+      "height": 95,
+      "sourceRect": [
+        652,
+        750,
+        788,
+        845
+      ]
+    },
+    {
+      "id": 42,
+      "name": "대나무 숲",
+      "file": "42_대나무_숲.png",
+      "web": "assets/images/backgrounds/part-4/bg-42.webp",
+      "width": 111,
+      "height": 95,
+      "sourceRect": [
+        794,
+        750,
+        905,
+        845
+      ]
+    },
+    {
+      "id": 43,
+      "name": "천류관 부지 건설 전",
+      "file": "43_천류관_부지_건설_전.png",
+      "web": "assets/images/backgrounds/part-4/bg-43.webp",
+      "width": 140,
+      "height": 95,
+      "sourceRect": [
+        911,
+        750,
+        1051,
+        845
+      ]
+    },
+    {
+      "id": 44,
+      "name": "천류관 정문",
+      "file": "44_천류관_정문.png",
+      "web": "assets/images/backgrounds/part-4/bg-44.webp",
+      "width": 124,
+      "height": 95,
+      "sourceRect": [
+        1072,
+        750,
+        1196,
+        845
+      ]
+    },
+    {
+      "id": 45,
+      "name": "천류관 전경",
+      "file": "45_천류관_전경.png",
+      "web": "assets/images/backgrounds/part-4/bg-45.webp",
+      "width": 160,
+      "height": 95,
+      "sourceRect": [
+        1202,
+        750,
+        1362,
+        845
+      ]
+    },
+    {
+      "id": 46,
+      "name": "천류관 내부",
+      "file": "46_천류관_내부.png",
+      "web": "assets/images/backgrounds/part-4/bg-46.webp",
+      "width": 147,
+      "height": 95,
+      "sourceRect": [
+        1368,
+        750,
+        1515,
+        845
+      ]
+    }
+  ]
+}

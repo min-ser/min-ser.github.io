@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Markdown → JSON 변환기 | 천류관</title>
+<link rel="stylesheet" href="../../../assets/css/common.css?v=0.9.9.2">
+<link rel="stylesheet" href="../manuscript.css?v=0.9.9.2">
+<link rel="stylesheet" href="./converter.css?v=0.9.9.2">
+</head>
+<body>
+<header class="site-header" data-site-header data-active="manuscript" data-subtitle="천류관 : Markdown → JSON 변환기"></header>
+
+<main class="converter-page">
+  <section class="converter-hero">
+    <div>
+      <p class="eyebrow">MARKDOWN → JSON CONVERTER · 0.9.9.5</p>
+      <h1>게임 시나리오 JSON 변환기</h1>
+      <p>원본 또는 편집 중인 Markdown을 분석해 천류관 게임용 선형 Scene JSON으로 변환합니다.</p>
+    </div>
+    <div class="converter-state">
+      <span id="parse-state">입력 대기</span>
+      <span id="warning-state">경고 0</span>
+    </div>
+  </section>
+
+  <section class="source-panel panel">
+    <div class="panel-title"><strong>1. Markdown 입력</strong></div>
+    <div class="source-controls">
+      <label>원본 문서
+        <select id="source-document"></select>
+      </label>
+      <button id="load-source" type="button">원본 불러오기</button>
+      <button id="load-editor-draft" type="button">에디터 내용 불러오기</button>
+      <button id="import-md" type="button">로컬 MD 가져오기</button>
+      <input id="import-md-file" type="file" accept=".md,text/markdown,text/plain" hidden>
+    </div>
+    <textarea id="markdown-input" spellcheck="false" aria-label="변환할 Markdown"></textarea>
+  </section>
+
+  <section class="settings-panel panel">
+    <div class="panel-title"><strong>2. 변환 설정</strong></div>
+    <div class="settings-grid">
+      <label>챕터 ID
+        <input id="chapter-id" value="volume-01-part-01-chapter-01">
+      </label>
+      <label>챕터 제목
+        <input id="chapter-title" value="1장">
+      </label>
+      <label>Scene 접두사
+        <input id="scene-prefix" value="c01">
+      </label>
+      <label>Scene 시작 번호
+        <input id="scene-start" type="number" min="1" value="1">
+      </label>
+      <label>장면 최대 글자
+        <input id="max-chars" type="number" min="30" max="300" value="110">
+      </label>
+      <label>기본 배경
+        <select id="default-background"></select>
+      </label>
+      <label>기본 BGM
+        <select id="default-bgm"><option value="">없음</option></select>
+      </label>
+      <label>기본 환경음
+        <select id="default-ambient"><option value="">없음</option></select>
+      </label>
+      <label class="check-label">
+        <input id="auto-background" type="checkbox" checked>
+        키워드 기반 배경 추천
+      </label>
+      <label class="check-label">
+        <input id="auto-effect" type="checkbox" checked>
+        키워드 기반 Effect/SFX 추천
+      </label>
+      <label class="check-label">
+        <input id="speaker-only" type="checkbox" checked disabled>
+        화자 대사에서만 스탠딩 표시
+      </label>
+    </div>
+  </section>
+
+  <section class="mapping-panel panel">
+    <div class="panel-title">
+      <strong>3. 화자 / 캐릭터 매핑</strong>
+      <button id="refresh-speakers" type="button">화자 다시 분석</button>
+    </div>
+    <p class="help">`인물명: 대사` 형식은 화자를 확정합니다. 인용문만 있는 대사는 '화자 미확정'으로 경고합니다.</p>
+    <div id="speaker-mapping" class="speaker-mapping"></div>
+  </section>
+
+  <section class="action-panel">
+    <button id="convert-btn" class="primary" type="button">JSON 변환 실행</button>
+    <button id="reset-btn" type="button">결과 초기화</button>
+    <a href="../editor/">Markdown 에디터</a>
+    <a href="../index.html">원본 목록</a>
+  </section>
+
+  <section class="analysis-grid">
+    <div><span>예상 Scene</span><strong id="scene-count">0</strong></div>
+    <div><span>대사 Scene</span><strong id="dialogue-count">0</strong></div>
+    <div><span>나레이션 Scene</span><strong id="narration-count">0</strong></div>
+    <div><span>예상 플레이</span><strong id="play-time">0분</strong></div>
+    <div><span>경고</span><strong id="warning-count">0</strong></div>
+  </section>
+
+  <section class="result-layout">
+    <div class="result-panel panel">
+      <div class="panel-title">
+        <strong>생성 JSON</strong>
+        <div>
+          <button id="copy-json" type="button">복사</button>
+          <button id="download-json" type="button">JSON 다운로드</button>
+          <button id="download-report" type="button">분석 보고서</button>
+          <button id="send-scene-editor" type="button">Scene Editor로 보내기</button>
+        </div>
+      </div>
+      <textarea id="json-output" spellcheck="false" readonly></textarea>
+    </div>
+
+    <div class="warnings-panel panel">
+      <div class="panel-title"><strong>변환 경고 / 추천</strong></div>
+      <div id="warnings-list"></div>
+    </div>
+  </section>
+
+  <section class="scene-preview-panel panel">
+    <div class="panel-title">
+      <strong>Scene 미리보기</strong>
+      <input id="scene-filter" type="search" placeholder="Scene ID / 화자 / 본문 검색">
+    </div>
+    <div id="scene-preview-list" class="scene-preview-list"></div>
+  </section>
+</main>
+
+<script src="../../../assets/js/site-header.js?v=0.9.9.2"></script>
+<script type="module" src="./converter.js?v=0.9.9.2"></script>
+</body>
+</html>

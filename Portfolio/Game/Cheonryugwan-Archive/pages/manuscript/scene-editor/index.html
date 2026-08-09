@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scene Editor | 천류관</title>
+<link rel="stylesheet" href="../../../assets/css/common.css?v=0.9.9.3">
+<link rel="stylesheet" href="../manuscript.css?v=0.9.9.3">
+<link rel="stylesheet" href="./scene-editor.css?v=0.9.9.3">
+</head>
+<body>
+<header class="site-header" data-site-header data-active="manuscript" data-subtitle="천류관 : Scene Editor"></header>
+
+<main class="scene-editor-page">
+  <section class="scene-editor-hero">
+    <div>
+      <p class="eyebrow">SCENE EDITOR · 0.9.9.5</p>
+      <h1>Scene Editor</h1>
+      <p>게임 JSON을 Scene 카드 단위로 편집하고 에셋 매핑과 규칙 위반을 검증합니다.</p>
+    </div>
+    <div class="scene-editor-state">
+      <span id="scene-state">JSON 입력 대기</span>
+      <span id="validation-state">검증 전</span>
+    </div>
+  </section>
+
+  <section class="load-panel panel">
+    <div class="panel-title"><strong>1. JSON 불러오기</strong></div>
+    <div class="load-controls">
+      <button id="load-converter" type="button">Converter 결과 불러오기</button>
+      <button id="import-json" type="button">로컬 JSON 가져오기</button>
+      <input id="import-json-file" type="file" accept=".json,application/json" hidden>
+      <button id="new-json" type="button">새 Scene JSON</button>
+      <button id="raw-mode" type="button">JSON 원문 편집</button>
+    </div>
+    <div class="chapter-meta">
+      <label>챕터 ID <input id="chapter-id"></label>
+      <label>제목 <input id="chapter-title"></label>
+      <label>부제 <input id="chapter-subtitle"></label>
+      <label>엔진 버전 <input id="engine-version" value="0.9.9.3"></label>
+    </div>
+  </section>
+
+  <section class="toolbar-panel">
+    <div>
+      <button id="add-scene" type="button">Scene 추가</button>
+      <button id="renumber-scenes" type="button">ID 재정렬</button>
+      <button id="validate-scenes" type="button">전체 검증</button>
+    </div>
+    <div>
+      <input id="scene-search" type="search" placeholder="Scene ID / Speaker / Text 검색">
+      <select id="scene-filter">
+        <option value="all">전체</option>
+        <option value="dialogue">대사만</option>
+        <option value="narration">나레이션만</option>
+        <option value="cg">CG만</option>
+        <option value="error">오류만</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="stats-grid">
+    <div><span>Scene</span><strong id="stat-scenes">0</strong></div>
+    <div><span>대사</span><strong id="stat-dialogue">0</strong></div>
+    <div><span>나레이션</span><strong id="stat-narration">0</strong></div>
+    <div><span>CG</span><strong id="stat-cg">0</strong></div>
+    <div><span>오류</span><strong id="stat-errors">0</strong></div>
+  </section>
+
+  <section id="raw-json-panel" class="raw-json-panel panel" hidden>
+    <div class="panel-title">
+      <strong>JSON 원문 편집</strong>
+      <div>
+        <button id="apply-raw-json" type="button">원문 적용</button>
+        <button id="close-raw-json" type="button">닫기</button>
+      </div>
+    </div>
+    <textarea id="raw-json-textarea" spellcheck="false"></textarea>
+  </section>
+
+  <section class="scene-layout">
+    <div id="scene-list" class="scene-list"></div>
+
+    <aside class="validation-panel panel">
+      <div class="panel-title"><strong>Validation</strong></div>
+      <div id="validation-list"></div>
+    </aside>
+  </section>
+
+  <section class="export-panel">
+    <button id="download-json" type="button">수정 JSON 다운로드</button>
+    <button id="download-report" type="button">Validation Report</button>
+    <button id="send-preview" type="button">Game Preview로 보내기</button>
+    <a href="../converter/">JSON 변환기</a>
+    <a href="../editor/">Markdown Editor</a>
+  </section>
+</main>
+
+<template id="scene-card-template">
+  <article class="scene-card" draggable="true">
+    <div class="scene-card-head">
+      <div class="drag-handle" title="드래그해서 순서 변경">⋮⋮</div>
+      <input class="scene-id" aria-label="Scene ID">
+      <span class="scene-type-badge"></span>
+      <div class="scene-actions">
+        <button class="copy-scene" type="button">복제</button>
+        <button class="delete-scene" type="button">삭제</button>
+      </div>
+    </div>
+
+    <div class="scene-grid">
+      <label>Speaker
+        <input class="scene-speaker" placeholder="나레이션이면 비움">
+      </label>
+      <label class="wide">Text
+        <textarea class="scene-text" rows="4"></textarea>
+      </label>
+
+      <label>Character
+        <select class="scene-character"></select>
+      </label>
+      <label>Expression
+        <select class="scene-expression"></select>
+      </label>
+      <label>Position
+        <select class="scene-position">
+          <option value="left">left</option>
+          <option value="center">center</option>
+          <option value="right">right</option>
+        </select>
+      </label>
+
+      <label>Background
+        <select class="scene-background"></select>
+      </label>
+      <label>BGM
+        <select class="scene-bgm"></select>
+      </label>
+      <label>Ambient
+        <select class="scene-ambient"></select>
+      </label>
+      <label>SFX
+        <select class="scene-sfx"></select>
+      </label>
+      <label>Effect
+        <select class="scene-effect">
+          <option value="">없음</option>
+          <option value="fade-in">fade-in</option>
+          <option value="fade-out">fade-out</option>
+          <option value="flash">flash</option>
+          <option value="shake">shake</option>
+          <option value="memory">memory</option>
+          <option value="dark-vignette">dark-vignette</option>
+          <option value="cross-fade">cross-fade</option>
+        </select>
+      </label>
+      <label>Camera
+        <select class="scene-camera">
+          <option value="">없음</option>
+          <option value="wide-shot">wide-shot</option>
+          <option value="portrait-close-up">portrait-close-up</option>
+          <option value="hand-close-up">hand-close-up</option>
+          <option value="object-close-up">object-close-up</option>
+          <option value="ground-close-up">ground-close-up</option>
+          <option value="slow-zoom">slow-zoom</option>
+          <option value="sword-tip-close-up">sword-tip-close-up</option>
+        </select>
+      </label>
+
+      <label>CG
+        <select class="scene-cg"></select>
+      </label>
+      <label class="check-field">
+        <input class="scene-end" type="checkbox">
+        End Scene
+      </label>
+    </div>
+
+    <div class="scene-validation"></div>
+  </article>
+</template>
+
+<script src="../../../assets/js/site-header.js?v=0.9.9.3"></script>
+<script type="module" src="./scene-editor.js?v=0.9.9.3"></script>
+</body>
+</html>

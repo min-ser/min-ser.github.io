@@ -12,6 +12,7 @@
     ["game", "게임", "game/"],
     ["archive", "아카이브", "pages/archive/"],
     ["story", "스토리", "pages/story/"],
+    ["manuscript", "원본 스토리", "pages/manuscript/"],
     ["characters", "캐릭터", "pages/characters/"],
     ["world", "세계관", "pages/world/"],
     ["backgrounds", "배경", "pages/backgrounds/"],
@@ -78,3 +79,4 @@
 
   document.querySelectorAll("[data-site-header]").forEach(render);
 })();
+

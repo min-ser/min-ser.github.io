@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Markdown 시나리오 에디터 | 천류관</title>
+<link rel="stylesheet" href="../../../assets/css/common.css?v=0.9.9.1">
+<link rel="stylesheet" href="../manuscript.css?v=0.9.9.1">
+<link rel="stylesheet" href="./editor.css?v=0.9.9.1">
+</head>
+<body>
+<header class="site-header" data-site-header data-active="manuscript" data-subtitle="천류관 : 시나리오 에디터"></header>
+
+<main class="editor-page">
+  <section class="editor-hero">
+    <div>
+      <p class="eyebrow">MARKDOWN SCENARIO EDITOR · 0.9.9.5</p>
+      <h1>Markdown 시나리오 에디터</h1>
+      <p>원본 파일을 직접 덮어쓰지 않고 브라우저에서 편집·검토한 뒤 다운로드합니다.</p>
+    </div>
+    <div class="save-state">
+      <span id="dirty-indicator">변경 없음</span>
+      <span id="autosave-state">자동 저장 준비</span>
+    </div>
+  </section>
+
+  <section class="document-controls">
+    <label>문서
+      <select id="document-select"></select>
+    </label>
+    <button id="load-document" type="button">원본 불러오기</button>
+    <button id="new-document" type="button">새 문서</button>
+    <button id="import-document" type="button">로컬 MD 가져오기</button>
+    <input id="import-file" type="file" accept=".md,text/markdown,text/plain" hidden>
+    <button id="restore-autosave" type="button">임시 저장 복원</button>
+  </section>
+
+  <section class="metadata-panel">
+    <label>파일명 <input id="filename" value="1권-1부.md"></label>
+    <label>제목 <input id="document-title"></label>
+    <label>권 <input id="volume-number" type="number" min="1" value="1"></label>
+    <label>부 <input id="part-number" type="number" min="1" value="1"></label>
+    <label>상태
+      <select id="document-status">
+        <option value="draft">초안</option>
+        <option value="published">공개</option>
+        <option value="archived">보관</option>
+      </select>
+    </label>
+    <label>버전 메모 <input id="version-note" placeholder="변경 목적 또는 버전 메모"></label>
+  </section>
+
+  <section class="editor-tools">
+    <div class="tool-group">
+      <button id="undo-btn" type="button">실행 취소</button>
+      <button id="redo-btn" type="button">다시 실행</button>
+      <button id="fullscreen-btn" type="button">전체 화면</button>
+    </div>
+    <div class="search-replace">
+      <input id="find-text" placeholder="찾기">
+      <input id="replace-text" placeholder="바꾸기">
+      <button id="find-next" type="button">다음 찾기</button>
+      <button id="replace-one" type="button">바꾸기</button>
+      <button id="replace-all" type="button">모두 바꾸기</button>
+    </div>
+    <div class="mobile-tabs" role="tablist">
+      <button data-view="editor" class="active" type="button">편집</button>
+      <button data-view="preview" type="button">미리보기</button>
+      <button data-view="diff" type="button">Diff</button>
+    </div>
+  </section>
+
+  <section id="workspace" class="workspace view-editor">
+    <div class="editor-pane">
+      <div class="pane-head">
+        <strong>Markdown</strong>
+        <span id="cursor-position">1행 1열</span>
+      </div>
+      <textarea id="markdown-editor" spellcheck="false" aria-label="Markdown 편집기"></textarea>
+    </div>
+
+    <div class="preview-pane">
+      <div class="pane-head">
+        <strong>실시간 미리보기</strong>
+        <span id="preview-title"></span>
+      </div>
+      <article id="markdown-preview" class="reader-article editor-preview"></article>
+    </div>
+
+    <div class="diff-pane">
+      <div class="pane-head">
+        <strong>원본 대비 Diff</strong>
+        <span id="diff-summary">추가 0 · 삭제 0 · 변경 0</span>
+      </div>
+      <div id="diff-output" class="diff-output"></div>
+    </div>
+  </section>
+
+  <section class="analysis-panel">
+    <div><span>글자 수</span><strong id="char-count">0</strong></div>
+    <div><span>문단 수</span><strong id="paragraph-count">0</strong></div>
+    <div><span>장 수</span><strong id="chapter-count">0</strong></div>
+    <div><span>화 수</span><strong id="episode-count">0</strong></div>
+    <div><span>변경 줄</span><strong id="changed-line-count">0</strong></div>
+  </section>
+
+  <section class="export-panel">
+    <button id="download-markdown" type="button">Markdown 다운로드</button>
+    <button id="download-manifest" type="button">manifest 다운로드</button>
+    <button id="download-zip" type="button">작업 결과 ZIP 다운로드</button>
+    <button id="send-converter" type="button">JSON 변환기로 보내기</button>
+    <a href="../index.html">원본 목록으로 돌아가기</a>
+  </section>
+
+  <section class="editor-notice">
+    <strong>정적 웹사이트 편집 규칙</strong>
+    <p>브라우저에서는 서버의 원본 파일을 직접 수정할 수 없습니다. 편집 결과를 다운로드한 뒤 프로젝트의 원본 경로에 교체해야 합니다.</p>
+    <code>story/manuscript/volume-XX/original/파일명.md</code>
+  </section>
+</main>
+
+<script src="../../../assets/js/site-header.js?v=0.9.9.1"></script>
+<script type="module" src="./editor.js?v=0.9.9.1"></script>
+</body>
+</html>

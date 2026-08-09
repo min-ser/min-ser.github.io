@@ -1,5 +1,5 @@
 {
-  "version": "0.9.8.5",
+  "version": "0.9.8.6",
   "chapterId": "volume-01-part-01-chapter-01",
   "items": {
     "c01-s005": {
@@ -47,5 +47,8 @@
       "height": 1024,
       "sceneId": "c01-s156"
     }
-  }
+  },
+  "mappingMode": "scene-id-automatic",
+  "displayDuration": "exact-scene-only",
+  "hideCharacters": true
 }
