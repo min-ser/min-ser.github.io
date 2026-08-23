@@ -19,15 +19,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # --------------------------------------------------
-      # 1. Repository Checkout
-      # --------------------------------------------------
       - name: Checkout
         uses: actions/checkout@v4
 
-      # --------------------------------------------------
-      # 2. Node.js Setup
-      # --------------------------------------------------
+      # ------------------------------------------
+      # NeuralScope
+      # ------------------------------------------
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -35,9 +32,6 @@ jobs:
           cache: npm
           cache-dependency-path: Portfolio/study/ai/package-lock.json
 
-      # --------------------------------------------------
-      # 3. NeuralScope Build
-      # --------------------------------------------------
       - name: Install NeuralScope dependencies
         working-directory: Portfolio/study/ai
         run: npm ci
@@ -48,34 +42,30 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: /Portfolio/study/ai
         run: npm run build
 
-      # --------------------------------------------------
-      # 4. GitHub Pages Setup
-      # --------------------------------------------------
+      # ------------------------------------------
+      # Jekyll Blog
+      # ------------------------------------------
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      # --------------------------------------------------
-      # 5. Existing Jekyll Blog Build
-      # --------------------------------------------------
       - name: Build Jekyll Blog
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
 
-      # --------------------------------------------------
-      # 6. Replace AI path with NeuralScope static build
-      # --------------------------------------------------
-      - name: Deploy NeuralScope into Jekyll site
+      # ------------------------------------------
+      # Merge NeuralScope
+      # ------------------------------------------
+      - name: Merge NeuralScope into Jekyll site
         shell: bash
         run: |
-          rm -rf ./_site/Portfolio/study/ai
           mkdir -p ./_site/Portfolio/study/ai
           cp -a ./Portfolio/study/ai/out/. ./_site/Portfolio/study/ai/
 
-      # --------------------------------------------------
-      # 7. Upload complete site
-      # --------------------------------------------------
+      # ------------------------------------------
+      # Upload
+      # ------------------------------------------
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
