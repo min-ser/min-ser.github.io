@@ -165,7 +165,7 @@ exclude:
   - README.md
 
   # Next.js - NeuralScope
-  - Portfolio/study/ai
+  - Portfolio/
 
 
 # ============================================================

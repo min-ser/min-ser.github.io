@@ -1,8 +1,10 @@
-name: Deploy Git Blog + NeuralScope
+name: Deploy Git Blog + Portfolio Projects
 
 on:
   push:
-    branches: ["main", "master"]
+    branches:
+      - main
+      - master
   workflow_dispatch:
 
 permissions:
@@ -19,58 +21,234 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # ==================================================
+      # 1. Checkout Repository
+      # ==================================================
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ------------------------------------------
-      # NeuralScope
-      # ------------------------------------------
+      # ==================================================
+      # 2. Setup Node.js
+      # ==================================================
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-          cache-dependency-path: Portfolio/study/ai/package-lock.json
 
-      - name: Install NeuralScope dependencies
-        working-directory: Portfolio/study/ai
-        run: npm ci
+      # ==================================================
+      # 3. Discover & Build Portfolio Projects
+      #
+      # Portfolio/** 하위에서 package.json이 존재하는
+      # 디렉터리를 독립 웹 프로젝트로 판단합니다.
+      #
+      # 예:
+      #   Portfolio/study/ai
+      #   Portfolio/study/cs
+      #   Portfolio/resume
+      #   Portfolio/Game/project-a
+      #
+      # 각 프로젝트 경로를 그대로 basePath로 사용합니다.
+      # ==================================================
+      - name: Build Portfolio Projects
+        shell: bash
+        run: |
+          set -euo pipefail
 
-      - name: Build NeuralScope
-        working-directory: Portfolio/study/ai
-        env:
-          NEXT_PUBLIC_BASE_PATH: /Portfolio/study/ai
-        run: npm run build
+          PORTFOLIO_ROOT="Portfolio"
 
-      # ------------------------------------------
-      # Jekyll Blog
-      # ------------------------------------------
+          echo "=========================================="
+          echo "Portfolio Project Build"
+          echo "=========================================="
+
+          if [ ! -d "$PORTFOLIO_ROOT" ]; then
+            echo "[INFO] Portfolio directory not found."
+            exit 0
+          fi
+
+          # package.json이 있는 프로젝트 루트를 재귀적으로 탐색
+          while IFS= read -r package_file; do
+
+            project="$(dirname "$package_file")"
+
+            # node_modules 내부 package.json 제외
+            if [[ "$project" == *"/node_modules/"* ]] || [[ "$project" == *"/node_modules" ]]; then
+              continue
+            fi
+
+            # Next.js build 결과물 또는 기타 생성 디렉터리 제외
+            if [[ "$project" == *"/.next/"* ]] || [[ "$project" == *"/out/"* ]]; then
+              continue
+            fi
+
+            project_name="$(basename "$project")"
+
+            # GitHub Pages URL 경로
+            base_path="/${project}"
+
+            echo ""
+            echo "------------------------------------------"
+            echo "[BUILD]"
+            echo "Project  : $project_name"
+            echo "Path     : $project"
+            echo "BasePath : $base_path"
+            echo "------------------------------------------"
+
+            pushd "$project" > /dev/null
+
+            # package-lock.json 존재 시 npm ci 사용
+            if [ -f "package-lock.json" ]; then
+              echo "[INSTALL] npm ci"
+              npm ci
+            else
+              echo "[INSTALL] npm install"
+              npm install
+            fi
+
+            # build script 존재 여부 확인
+            if ! npm run | grep -qE '^[[:space:]]+build$'; then
+              echo "[SKIP] build script not found: $project"
+              popd > /dev/null
+              continue
+            fi
+
+            echo "[BUILD] npm run build"
+
+            NEXT_PUBLIC_BASE_PATH="$base_path" npm run build
+
+            # 정적 배포 결과물 확인
+            if [ ! -d "out" ]; then
+              echo ""
+              echo "[ERROR] out/ directory was not created."
+              echo "Project: $project"
+              echo ""
+              echo "Portfolio 프로젝트는 GitHub Pages 배포를 위해"
+              echo "정적 build 결과를 out/에 생성해야 합니다."
+              exit 1
+            fi
+
+            popd > /dev/null
+
+            echo "[SUCCESS] $project"
+
+          done < <(
+            find "$PORTFOLIO_ROOT" \
+              -type f \
+              -name "package.json" \
+              -not -path "*/node_modules/*" \
+              -not -path "*/.next/*" \
+              -not -path "*/out/*" \
+              | sort
+          )
+
+      # ==================================================
+      # 4. Configure GitHub Pages
+      # ==================================================
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      # ==================================================
+      # 5. Build Existing Jekyll Blog
+      #
+      # _config.yml 에서 Portfolio/ 전체를 제외합니다.
+      #
+      # 예:
+      #
+      # exclude:
+      #   - Portfolio/
+      #
+      # 따라서 Portfolio 소스는 Jekyll이 처리하지 않습니다.
+      # ==================================================
       - name: Build Jekyll Blog
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
 
-      # ------------------------------------------
-      # Merge NeuralScope
-      # ------------------------------------------
-      - name: Merge NeuralScope into Jekyll site
+      # ==================================================
+      # 6. Merge Portfolio Projects
+      #
+      # 프로젝트의 원래 Repository 경로를 그대로
+      # GitHub Pages 경로로 사용합니다.
+      #
+      # Portfolio/study/ai/out
+      #        ↓
+      # _site/Portfolio/study/ai
+      #
+      # Portfolio/resume/out
+      #        ↓
+      # _site/Portfolio/resume
+      # ==================================================
+      - name: Merge Portfolio Projects into Jekyll Site
         shell: bash
         run: |
-          mkdir -p ./_site/Portfolio/study/ai
-          cp -a ./Portfolio/study/ai/out/. ./_site/Portfolio/study/ai/
+          set -euo pipefail
 
-      # ------------------------------------------
-      # Upload
-      # ------------------------------------------
-      - name: Upload Pages artifact
+          PORTFOLIO_ROOT="Portfolio"
+
+          echo "=========================================="
+          echo "Portfolio Project Merge"
+          echo "=========================================="
+
+          if [ ! -d "$PORTFOLIO_ROOT" ]; then
+            echo "[INFO] Portfolio directory not found."
+            exit 0
+          fi
+
+          while IFS= read -r package_file; do
+
+            project="$(dirname "$package_file")"
+
+            if [[ "$project" == *"/node_modules/"* ]] || [[ "$project" == *"/node_modules" ]]; then
+              continue
+            fi
+
+            if [[ "$project" == *"/.next/"* ]] || [[ "$project" == *"/out/"* ]]; then
+              continue
+            fi
+
+            output_dir="$project/out"
+            target_dir="_site/$project"
+
+            # build script이 없는 npm 프로젝트는 Merge 대상 제외
+            if [ ! -d "$output_dir" ]; then
+              echo "[SKIP] no out/: $project"
+              continue
+            fi
+
+            echo ""
+            echo "[MERGE]"
+            echo "$output_dir"
+            echo "    ↓"
+            echo "$target_dir"
+
+            rm -rf "$target_dir"
+            mkdir -p "$target_dir"
+
+            cp -a "$output_dir"/. "$target_dir"/
+
+            echo "[SUCCESS] $project"
+
+          done < <(
+            find "$PORTFOLIO_ROOT" \
+              -type f \
+              -name "package.json" \
+              -not -path "*/node_modules/*" \
+              -not -path "*/.next/*" \
+              -not -path "*/out/*" \
+              | sort
+          )
+
+      # ==================================================
+      # 7. Upload Final Pages Artifact
+      # ==================================================
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
+  # ======================================================
+  # 8. Deploy GitHub Pages
+  # ======================================================
   deploy:
     environment:
       name: github-pages
