@@ -1,13 +1,20 @@
 import type { NextConfig } from "next";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const basePath =
+  process.env.NEXT_PUBLIC_BASE_PATH || "/Portfolio/study/ai";
 
 const nextConfig: NextConfig = {
   output: "export",
-  trailingSlash: true,
-  images: { unoptimized: true },
+
   basePath,
-  assetPrefix: basePath || undefined
+
+  assetPrefix: basePath,
+
+  trailingSlash: true,
+
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
