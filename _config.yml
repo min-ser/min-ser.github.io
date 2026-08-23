@@ -1,38 +1,62 @@
-# Site settings
+# ============================================================
+# Site Settings
+# ============================================================
+
 title: "김민서"
-description: The BlockCode for dream
+description: "The BlockCode for dream"
 
 # 보안 비밀번호 변수 설정
 password: "whitecode"
 
-# Files
+
+# ============================================================
+# Files / Paths
+# ============================================================
+
 baseurl:
 pagesdir: pages
+
 assets:
   libs: assets/libs
   owner: assets/owner
+
 logo: logo.png
 discus_shortname: MADness
 email: iiblackcode@gmail.com
+
 url: "https://min-ser.github.io/"
+
 search: true
 share: true
 comments: true
 
-# Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.
+
+# ============================================================
+# Read Time
+# ============================================================
+
+# Read Time is a calculator to provide post read-time
+# based on word count.
 readtime: true
 
-# Specify the average Words per minute. If not defined, 180 will be used
+# Average words per minute
 wpm: 200
 
-# Owner/author information
-owner:
-  name:   김민서
-  avatar: avatar.jpg
-  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    The BlackCode got Dream
 
-# Social networking links used in footer. Update and remove as you like.
+# ============================================================
+# Owner / Author
+# ============================================================
+
+owner:
+  name: 김민서
+  avatar: avatar.jpg
+  description: "The BlackCode got Dream"
+
+
+# ============================================================
+# Social Networking
+# ============================================================
+
 twitter_username: MAD4Jekyll
 facebook_username: MAD4Jekyll
 github_username: MAD4Jekyll
@@ -42,7 +66,10 @@ flickr_username: MAD4Jekyll
 instagram_username: MAD4Jekyll
 
 
-# Internal nav
+# ============================================================
+# Internal Navigation
+# ============================================================
+
 nav:
   writing: "root_url/writing/"
   gallery: "root_url/gallery/"
@@ -50,55 +77,121 @@ nav:
   about: "root_url/about/"
   theme: "root_url/theme/"
 
+
+# ============================================================
 # Server
-destination:      	 ./_site
-port:             	 4000
+# ============================================================
+
+destination: ./_site
+port: 4000
 
 
-#dependencies
-# Gems > Plugins 수정 2024.01.08
+# ============================================================
+# Plugins
+# ============================================================
+
 plugins:
   - jekyll-paginate
 
 
-# Build settings
-highlighter:         rouge
-markdown:           kramdown
+# ============================================================
+# Build Settings
+# ============================================================
+
+highlighter: rouge
+markdown: kramdown
+
 kramdown:
-    extensions:     
-      - Hard_wrap
-      - no_intra_emphasis
-      - strikethrough
-      - fenced_code_blocks
-      - autolink
-      - tables
-      - with_toc_data
-      - highlight
-      - footnotes
-    input:          GFM
+  extensions:
+    - Hard_wrap
+    - no_intra_emphasis
+    - strikethrough
+    - fenced_code_blocks
+    - autolink
+    - tables
+    - with_toc_data
+    - highlight
+    - footnotes
+  input: GFM
+
+
+# ============================================================
+# Sass
+# ============================================================
+
 sass:
-    style: compressed
+  style: compressed
+
+
+# ============================================================
+# Pagination
+# ============================================================
+
 paginate: 5
 paginate_path: "/writing/page:num/"
+
+
+# ============================================================
+# Permalink
+# ============================================================
+
 permalink: "/writing/:title/"
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+
+# ============================================================
+# Jekyll Exclude
+# ============================================================
+#
+# NeuralScope는 Next.js 프로젝트이므로 Jekyll에서 빌드하지 않습니다.
+#
+# GitHub Actions에서:
+#
+#   Portfolio/study/ai
+#           ↓
+#       npm run build
+#           ↓
+#          out/
+#           ↓
+#   _site/Portfolio/study/ai/
+#
+# 순서로 별도 빌드 후 최종 Jekyll 결과물에 병합합니다.
+#
+
+exclude:
+  - less
+  - node_modules
+  - Gruntfile.js
+  - package.json
+  - README.md
+
+  # Next.js - NeuralScope
+  - Portfolio/study/ai
+
+
+# ============================================================
+# Slug
+# ============================================================
+
 slugify: "pretty"
 
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:   UA-xxxxxxxx-x
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+# ============================================================
+# Analytics / Webmaster
+# ============================================================
 
+google_analytics: UA-xxxxxxxx-x
+google_verify:
+
+# https://ssl.bing.com/webmaster/configure/verify/ownership
+bing_verify:
+
+
+# ============================================================
 # Analytics
+# ============================================================
+
 analytics:
-  provider               : "google-gtag" 
-                          # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider: "google-gtag"
   google:
-    tracking_id          : "G-LNHNDTXBCV"
-    anonymize_ip         : false 
-                          # true, false (default)
-# 플러그인
-plugins:
-- jekyll-paginate
+    tracking_id: "G-LNHNDTXBCV"
+    anonymize_ip: false
