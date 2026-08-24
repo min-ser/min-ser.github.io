@@ -7,4 +7,4 @@
 - v0.5.x Dialogue Engine
 - v0.6.x Character/Record Archive
 - v0.7.x PWA and Mobile UX
-- v1.0.0 First public playable demo
+- v0.10.0 First public playable demo

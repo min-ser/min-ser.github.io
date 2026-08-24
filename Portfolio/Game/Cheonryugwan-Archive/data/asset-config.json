@@ -1,0 +1,27 @@
+{
+  "version": "0.9.10.10",
+  "repository": "https://github.com/min-ser/Cheonryugwan-Image/tree/master",
+  "rawBase": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan",
+  "policy": {
+    "background": "remote-first-hybrid",
+    "part1": "remote",
+    "part2": "remote",
+    "part3": "remote",
+    "part4": "remote-where-present-local-fallback",
+    "note": "GitHub 파일명/번호가 검증된 배경은 원격 저장소를 직접 사용하고, 미업로드 항목만 로컬 fallback을 사용한다."
+  },
+  "verifiedRemote": {
+    "part1": 29,
+    "part2": 32,
+    "part3": 40,
+    "part4": 29
+  },
+  "localFallback": {
+    "part1": 0,
+    "part2": 0,
+    "part3": 0,
+    "part4": 17
+  },
+  "verifiedRemoteTotal": 130,
+  "localFallbackTotal": 17
+}

@@ -42,13 +42,7 @@
       "speaker": "",
       "text": "좁은 산길 한가운데, 검은 장포를 입은 사내가 서 있었다.",
       "background": "part1-rainy-mountain-road",
-      "camera": "slow-zoom-center",
-      "cg": {
-        "id": "c01-s005",
-        "mode": "full",
-        "transition": "fade",
-        "title": "폭우 속 포위"
-      }
+      "camera": "slow-zoom-center"
     },
     {
       "id": "c01-s006",
@@ -163,12 +157,6 @@
         "expression": "stern",
         "position": "left",
         "visible": true
-      },
-      "cg": {
-        "id": "c01-s022",
-        "mode": "full",
-        "transition": "fade",
-        "title": "정파 추적대와의 대치"
       }
     },
     {
@@ -1026,13 +1014,7 @@
       "text": "현재와 과거가 빗물 속에서 뒤섞였다.",
       "effect": "memory-distortion",
       "background": "part1-memory-overlay",
-      "sfx": "memory-drone",
-      "cg": {
-        "id": "c01-s136",
-        "mode": "full",
-        "transition": "fade",
-        "title": "현재와 과거의 혼선"
-      }
+      "sfx": "memory-drone"
     },
     {
       "id": "c01-s137",
@@ -1112,12 +1094,6 @@
         "expression": "terrified",
         "position": "left",
         "visible": true
-      },
-      "cg": {
-        "id": "c01-s146",
-        "mode": "full",
-        "transition": "fade",
-        "title": "웃고 있다고 오해한 순간"
       }
     },
     {
@@ -1190,13 +1166,7 @@
       "text": "첫 번째 무인이 검을 내리쳤다.",
       "effect": "slash",
       "background": "part1-bloodied-mountain-road",
-      "sfx": "sword-swing-heavy",
-      "cg": {
-        "id": "c01-s156",
-        "mode": "full",
-        "transition": "fade",
-        "title": "최후의 집단 공격"
-      }
+      "sfx": "sword-swing-heavy"
     },
     {
       "id": "c01-s157",
@@ -2070,11 +2040,12 @@
       "end": true
     }
   ],
-  "engineVersion": "0.9.8.5",
+  "engineVersion": "0.9.8.6",
   "dataVersion": "1.1.0",
   "playMode": "linear",
   "choices": false,
   "characterDisplayRule": "speaker-only",
   "nextChapter": "volume-01-part-01-chapter-02",
-  "sceneCgRule": "scene-id-manifest"
+  "sceneCgRule": "automatic-scene-id-exact",
+  "sceneCgDuration": "current-scene-only"
 }

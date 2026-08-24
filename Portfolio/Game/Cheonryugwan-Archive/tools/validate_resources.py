@@ -63,6 +63,8 @@ def check_manifests() -> list[str]:
         (ROOT / "game/data/system/backgrounds.json").read_text(encoding="utf-8")
     )
     for asset_id, value in backgrounds.items():
+        if value.startswith(("http://", "https://")):
+            continue
         if not game_path(value).exists():
             errors.append(f"Background missing: {asset_id} -> {value}")
 

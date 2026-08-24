@@ -1,0 +1,13 @@
+{
+  "version": "0.9.10.10",
+  "part2Remote": 32,
+  "part2Local": 0,
+  "localPart2FilesDeleted": 64,
+  "galleryPart2Cards": 32,
+  "validators": {
+    "audit-ui-controls.py": 0,
+    "validate_resources.py": 0,
+    "validate_project.py": 0
+  },
+  "zipIntegrity": "PASS"
+}

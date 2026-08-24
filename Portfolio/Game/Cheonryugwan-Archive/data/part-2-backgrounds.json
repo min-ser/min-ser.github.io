@@ -1,5 +1,5 @@
 {
-  "version": "0.9.10.7",
+  "version": "0.9.10.10",
   "part": 2,
   "title": "2부 배경 개별 이미지",
   "source": "에셋/배경/2부/목록원본/2부_배경_목록_원본.png",
@@ -9,7 +9,7 @@
       "id": 1,
       "name": "사파 성문",
       "file": "01_사파_성문.png",
-      "web": "assets/images/backgrounds/part-2/bg-01.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/01_%EC%82%AC%ED%8C%8C_%EC%84%B1%EB%AC%B8.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -20,15 +20,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "사파 도시",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "01_사파_성문.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/01_%EC%82%AC%ED%8C%8C_%EC%84%B1%EB%AC%B8.png"
     },
     {
       "id": 2,
       "name": "사파 거리 (낮)",
       "file": "02_사파_거리_낮.png",
-      "web": "assets/images/backgrounds/part-2/bg-02.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/02_%EC%82%AC%ED%8C%8C_%EA%B1%B0%EB%A6%AC_%EB%82%AE.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -39,15 +42,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "사파 도시",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "02_사파_거리_낮.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/02_%EC%82%AC%ED%8C%8C_%EA%B1%B0%EB%A6%AC_%EB%82%AE.png"
     },
     {
       "id": 3,
       "name": "사파 거리 (밤)",
       "file": "03_사파_거리_밤.png",
-      "web": "assets/images/backgrounds/part-2/bg-03.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/03_%EC%82%AC%ED%8C%8C_%EA%B1%B0%EB%A6%AC_%EB%B0%A4.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -58,15 +64,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "사파 도시",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "03_사파_거리_밤.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/03_%EC%82%AC%ED%8C%8C_%EA%B1%B0%EB%A6%AC_%EB%B0%A4.png"
     },
     {
       "id": 4,
       "name": "붉은 등불 거리",
       "file": "04_붉은_등불_거리.png",
-      "web": "assets/images/backgrounds/part-2/bg-04.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/04_%EB%B6%89%EC%9D%80_%EB%93%B1%EB%B6%88_%EA%B1%B0%EB%A6%AC.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -77,15 +86,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "사파 도시",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "04_붉은_등불_거리.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/04_%EB%B6%89%EC%9D%80_%EB%93%B1%EB%B6%88_%EA%B1%B0%EB%A6%AC.png"
     },
     {
       "id": 5,
       "name": "중심 광장",
       "file": "05_중심_광장.png",
-      "web": "assets/images/backgrounds/part-2/bg-05.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/05_%EC%A4%91%EC%8B%AC_%EA%B4%91%EC%9E%A5.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -96,15 +108,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "사파 도시",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "05_중심_광장.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/05_%EC%A4%91%EC%8B%AC_%EA%B4%91%EC%9E%A5.png"
     },
     {
       "id": 6,
       "name": "시장",
       "file": "06_시장.png",
-      "web": "assets/images/backgrounds/part-2/bg-06.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/06_%EC%8B%9C%EC%9E%A5.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -115,15 +130,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "사파 도시",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "06_시장.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/06_%EC%8B%9C%EC%9E%A5.png"
     },
     {
       "id": 7,
       "name": "암시장",
       "file": "07_암시장.png",
-      "web": "assets/images/backgrounds/part-2/bg-07.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/07_%EC%95%94%EC%8B%9C%EC%9E%A5.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -134,15 +152,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "사파 도시",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "07_암시장.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/07_%EC%95%94%EC%8B%9C%EC%9E%A5.png"
     },
     {
       "id": 8,
-      "name": "피로 물든 중앙 경기장",
+      "name": "골목길",
       "file": "08_골목길.png",
-      "web": "assets/images/backgrounds/part-2/bg-08.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/08_%EA%B3%A8%EB%AA%A9%EA%B8%B8.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -153,15 +174,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "투기장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "08_골목길.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/08_%EA%B3%A8%EB%AA%A9%EA%B8%B8.png"
     },
     {
       "id": 9,
-      "name": "좁은 붉은 뒷골목",
+      "name": "붉은 뒷골목",
       "file": "09_붉은_뒷골목.png",
-      "web": "assets/images/backgrounds/part-2/bg-09.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/09_%EB%B6%89%EC%9D%80_%EB%92%B7%EA%B3%A8%EB%AA%A9.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -172,15 +196,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "사파 도시",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "09_붉은_뒷골목.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/09_%EB%B6%89%EC%9D%80_%EB%92%B7%EA%B3%A8%EB%AA%A9.png"
     },
     {
       "id": 10,
-      "name": "투기장 입구 외곽",
+      "name": "투기장 입구",
       "file": "10_투기장_입구.png",
-      "web": "assets/images/backgrounds/part-2/bg-10.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/10_%ED%88%AC%EA%B8%B0%EC%9E%A5_%EC%9E%85%EA%B5%AC.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -191,15 +218,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "투기장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
-      "mappingConfidence": "medium",
-      "version": "0.9.10.6"
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
+      "mappingConfidence": "high",
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "10_투기장_입구.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/10_%ED%88%AC%EA%B8%B0%EC%9E%A5_%EC%9E%85%EA%B5%AC.png"
     },
     {
       "id": 11,
-      "name": "절벽 길",
+      "name": "경기장 내부",
       "file": "11_경기장_내부.png",
-      "web": "assets/images/backgrounds/part-2/bg-11.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/11_%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EB%82%B4%EB%B6%80.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -210,15 +240,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "전서율 여행",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "11_경기장_내부.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/11_%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EB%82%B4%EB%B6%80.png"
     },
     {
       "id": 12,
-      "name": "혼자 걷는 산길",
+      "name": "중앙 경기장",
       "file": "12_중앙_경기장.png",
-      "web": "assets/images/backgrounds/part-2/bg-12.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/12_%EC%A4%91%EC%95%99_%EA%B2%BD%EA%B8%B0%EC%9E%A5.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -229,15 +262,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "2부 엔딩",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "12_중앙_경기장.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/12_%EC%A4%91%EC%95%99_%EA%B2%BD%EA%B8%B0%EC%9E%A5.png"
     },
     {
       "id": 13,
-      "name": "매화정 연못",
+      "name": "관객석",
       "file": "13_관객석.png",
-      "web": "assets/images/backgrounds/part-2/bg-13.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/13_%EA%B4%80%EA%B0%9D%EC%84%9D.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -248,15 +284,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "혈천무후 진하연",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "13_관객석.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/13_%EA%B4%80%EA%B0%9D%EC%84%9D.png"
     },
     {
       "id": 14,
-      "name": "붉은 등불 골목",
+      "name": "VIP석",
       "file": "14_VIP석.png",
-      "web": "assets/images/backgrounds/part-2/bg-14.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/14_VIP%EC%84%9D.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -267,15 +306,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "사파 도시",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "14_VIP석.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/14_VIP%EC%84%9D.png"
     },
     {
       "id": 15,
-      "name": "안개 낀 거리",
+      "name": "선수 대기실",
       "file": "15_선수_대기실.png",
-      "web": "assets/images/backgrounds/part-2/bg-15.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/15_%EC%84%A0%EC%88%98_%EB%8C%80%EA%B8%B0%EC%8B%A4.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -286,15 +328,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "2부 엔딩",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "15_선수_대기실.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/15_%EC%84%A0%EC%88%98_%EB%8C%80%EA%B8%B0%EC%8B%A4.png"
     },
     {
       "id": 16,
-      "name": "투기장 입구 (밤)",
+      "name": "관리실",
       "file": "16_관리실.png",
-      "web": "assets/images/backgrounds/part-2/bg-16.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/16_%EA%B4%80%EB%A6%AC%EC%8B%A4.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -305,15 +350,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "투기장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
-      "mappingConfidence": "medium",
-      "version": "0.9.10.6"
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
+      "mappingConfidence": "high",
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "16_관리실.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/16_%EA%B4%80%EB%A6%AC%EC%8B%A4.png"
     },
     {
       "id": 17,
-      "name": "불타는 거리와 도망치는 군중",
+      "name": "피로 물든 경기장",
       "file": "17_피로_물든_경기장.png",
-      "web": "assets/images/backgrounds/part-2/bg-17.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/17_%ED%94%BC%EB%A1%9C_%EB%AC%BC%EB%93%A0_%EA%B2%BD%EA%B8%B0%EC%9E%A5.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -324,15 +372,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "폭주 이후",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "17_피로_물든_경기장.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/17_%ED%94%BC%EB%A1%9C_%EB%AC%BC%EB%93%A0_%EA%B2%BD%EA%B8%B0%EC%9E%A5.png"
     },
     {
       "id": 18,
       "name": "경기 종료 후",
       "file": "18_경기_종료_후.png",
-      "web": "assets/images/backgrounds/part-2/bg-18.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/18_%EA%B2%BD%EA%B8%B0_%EC%A2%85%EB%A3%8C_%ED%9B%84.png",
       "width": 332,
       "height": 152,
       "sourceRect": [
@@ -341,14 +392,19 @@
         853,
         690
       ],
-      "galleryStatus": "restored",
-      "note": "이전 웹 갤러리 노출 항목 보존"
+      "version": "0.9.10.10",
+      "category": "참고 이미지",
+      "assetSource": "remote",
+      "remoteFile": "18_경기_종료_후.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/18_%EA%B2%BD%EA%B8%B0_%EC%A2%85%EB%A3%8C_%ED%9B%84.png",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
+      "mappingConfidence": "high"
     },
     {
       "id": 19,
-      "name": "대련장",
+      "name": "사파 회의실",
       "file": "19_사파_회의실.png",
-      "web": "assets/images/backgrounds/part-2/bg-19.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/19_%EC%82%AC%ED%8C%8C_%ED%9A%8C%EC%9D%98%EC%8B%A4.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -359,15 +415,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "혈천무후 진하연",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "19_사파_회의실.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/19_%EC%82%AC%ED%8C%8C_%ED%9A%8C%EC%9D%98%EC%8B%A4.png"
     },
     {
       "id": 20,
-      "name": "매화정",
+      "name": "진하연 집무실",
       "file": "20_진하연_집무실.png",
-      "web": "assets/images/backgrounds/part-2/bg-20.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/20_%EC%A7%84%ED%95%98%EC%97%B0_%EC%A7%91%EB%AC%B4%EC%8B%A4.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -378,15 +437,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "혈천무후 진하연",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "20_진하연_집무실.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/20_%EC%A7%84%ED%95%98%EC%97%B0_%EC%A7%91%EB%AC%B4%EC%8B%A4.png"
     },
     {
       "id": 21,
-      "name": "불타는 거리",
+      "name": "전략실",
       "file": "21_전략실.png",
-      "web": "assets/images/backgrounds/part-2/bg-21.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/21_%EC%A0%84%EB%9E%B5%EC%8B%A4.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -397,15 +459,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "폭주 이후",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "21_전략실.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/21_%EC%A0%84%EB%9E%B5%EC%8B%A4.png"
     },
     {
       "id": 22,
-      "name": "중앙 경기장",
+      "name": "붉은 정원",
       "file": "22_붉은_정원.png",
-      "web": "assets/images/backgrounds/part-2/bg-22.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/22_%EB%B6%89%EC%9D%80_%EC%A0%95%EC%9B%90.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -416,15 +481,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "투기장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "22_붉은_정원.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/22_%EB%B6%89%EC%9D%80_%EC%A0%95%EC%9B%90.png"
     },
     {
       "id": 23,
-      "name": "경기장 내부",
+      "name": "매화정",
       "file": "23_매화정.png",
-      "web": "assets/images/backgrounds/part-2/bg-23.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/23_%EB%A7%A4%ED%99%94%EC%A0%95.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -435,15 +503,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "투기장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "23_매화정.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/23_%EB%A7%A4%ED%99%94%EC%A0%95.png"
     },
     {
       "id": 24,
-      "name": "관객석이 보이는 경기장",
+      "name": "연못",
       "file": "24_연못.png",
-      "web": "assets/images/backgrounds/part-2/bg-24.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/24_%EC%97%B0%EB%AA%BB.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -454,15 +525,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "투기장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "24_연못.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/24_%EC%97%B0%EB%AA%BB.png"
     },
     {
       "id": 25,
-      "name": "VIP석",
+      "name": "대련장",
       "file": "25_대련장.png",
-      "web": "assets/images/backgrounds/part-2/bg-25.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/25_%EB%8C%80%EB%A0%A8%EC%9E%A5.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -473,15 +547,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "투기장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "25_대련장.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/25_%EB%8C%80%EB%A0%A8%EC%9E%A5.png"
     },
     {
       "id": 26,
-      "name": "선수 대기실",
+      "name": "불타는 거리",
       "file": "26_불타는_거리.png",
-      "web": "assets/images/backgrounds/part-2/bg-26.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/26_%EB%B6%88%ED%83%80%EB%8A%94_%EA%B1%B0%EB%A6%AC.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -492,15 +569,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "투기장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "26_불타는_거리.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/26_%EB%B6%88%ED%83%80%EB%8A%94_%EA%B1%B0%EB%A6%AC.png"
     },
     {
       "id": 27,
-      "name": "관리실",
+      "name": "시체가 남은 경기장",
       "file": "27_시체가_남은_경기장.png",
-      "web": "assets/images/backgrounds/part-2/bg-27.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/27_%EC%8B%9C%EC%B2%B4%EA%B0%80_%EB%82%A8%EC%9D%80_%EA%B2%BD%EA%B8%B0%EC%9E%A5.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -511,15 +591,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "투기장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
-      "mappingConfidence": "medium",
-      "version": "0.9.10.6"
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
+      "mappingConfidence": "high",
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "27_시체가_남은_경기장.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/27_%EC%8B%9C%EC%B2%B4%EA%B0%80_%EB%82%A8%EC%9D%80_%EA%B2%BD%EA%B8%B0%EC%9E%A5.png"
     },
     {
       "id": 28,
-      "name": "선수 준비실",
+      "name": "도망치는 군중",
       "file": "28_도망치는_군중.png",
-      "web": "assets/images/backgrounds/part-2/bg-28.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/28_%EB%8F%84%EB%A7%9D%EC%B9%98%EB%8A%94_%EA%B5%B0%EC%A4%91.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -530,15 +613,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "투기장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
-      "mappingConfidence": "medium",
-      "version": "0.9.10.6"
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
+      "mappingConfidence": "high",
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "28_도망치는_군중.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/28_%EB%8F%84%EB%A7%9D%EC%B9%98%EB%8A%94_%EA%B5%B0%EC%A4%91.png"
     },
     {
       "id": 29,
-      "name": "경기 종료 후",
+      "name": "새벽 거리",
       "file": "29_새벽_거리.png",
-      "web": "assets/images/backgrounds/part-2/bg-29.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/29_%EC%83%88%EB%B2%BD_%EA%B1%B0%EB%A6%AC.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -549,15 +635,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "투기장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "29_새벽_거리.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/29_%EC%83%88%EB%B2%BD_%EA%B1%B0%EB%A6%AC.png"
     },
     {
       "id": 30,
-      "name": "야외 대련장",
+      "name": "도시 출구",
       "file": "30_도시_출구.png",
-      "web": "assets/images/backgrounds/part-2/bg-30.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/30_%EB%8F%84%EC%8B%9C_%EC%B6%9C%EA%B5%AC.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -568,15 +657,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "혈천무후 진하연",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
-      "mappingConfidence": "medium",
-      "version": "0.9.10.6"
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
+      "mappingConfidence": "high",
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "30_도시_출구.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/30_%EB%8F%84%EC%8B%9C_%EC%B6%9C%EA%B5%AC.png"
     },
     {
       "id": 31,
-      "name": "사파 회의실",
+      "name": "절벽 길",
       "file": "31_절벽_길.png",
-      "web": "assets/images/backgrounds/part-2/bg-31.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/31_%EC%A0%88%EB%B2%BD_%EA%B8%B8.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -587,15 +679,18 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "사파 회의장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "31_절벽_길.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/31_%EC%A0%88%EB%B2%BD_%EA%B8%B8.png"
     },
     {
       "id": 32,
-      "name": "진하연 집무실",
+      "name": "혼자 걷는 산길",
       "file": "32_혼자_걷는_산길.png",
-      "web": "assets/images/backgrounds/part-2/bg-32.webp",
+      "web": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/32_%ED%98%BC%EC%9E%90_%EA%B1%B7%EB%8A%94_%EC%82%B0%EA%B8%B8.png",
       "width": 1672,
       "height": 941,
       "sourceRect": [
@@ -606,9 +701,14 @@
       ],
       "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
       "category": "사파 회의장",
-      "mappingStatus": "실제 고화질 이미지 육안 검수 반영",
+      "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.9.10.6"
+      "version": "0.9.10.10",
+      "assetSource": "remote",
+      "remoteFile": "32_혼자_걷는_산길.png",
+      "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/32_%ED%98%BC%EC%9E%90_%EA%B1%B7%EB%8A%94_%EC%82%B0%EA%B8%B8.png"
     }
-  ]
+  ],
+  "sourceRepository": "min-ser/Cheonryugwan-Image",
+  "sourcePath": "cheonryugwan/Backgrounds/part2"
 }

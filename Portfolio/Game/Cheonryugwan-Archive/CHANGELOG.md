@@ -1,5 +1,82 @@
 # Changelog
 
+## v0.10.3 - Shared UI Architecture
+
+- Header 공통화에 이어 UI 기반 구조 전면 공통화
+- Design Token / Base / Layout / Component CSS 분리
+- Storage / Utils / Asset Registry 공통 Core 모듈 추가
+- Footer / Sidebar / Page Header / Modal / Toast 공통 컴포넌트 추가
+- 모든 HTML에 공통 App Bootstrap 적용
+- Scenario Editor의 로컬 저장, 다운로드, 배경 로딩, 알림을 공통 모듈 기반으로 전환
+- 배경 데이터는 Asset Registry를 통해 단일 로딩 경로 사용
+- 향후 Character / CG / Audio Registry를 동일 구조로 확장 가능
+
+## v0.10.2 - Shared Global Header
+
+- 페이지마다 별도로 존재하던 Header 구현 제거
+- `assets/js/shared-header.js`를 공통 Header의 Single Source of Truth로 지정
+- 모든 HTML 페이지에서 동일 Header를 동적으로 삽입
+- Dashboard / Scenario / Story / Assets / Characters / Lore / Roadmap / Play 메뉴 통합
+- 현재 경로 기반 Active 메뉴 자동 표시
+- 모바일 햄버거 메뉴 추가
+- 기존 `site-header.js` 삽입 제거로 중복 Header 방지
+- Header 버전 표기도 공통 컴포넌트 한 곳에서 관리
+
+## v0.10.1 - Unified Editor UI
+
+- 기존 홈 외 페이지에 남아 있던 구형 금색/갈색 테마 전면 제거
+- 모든 HTML 페이지에 Editor Console 공통 다크 스타일 적용
+- 기존 페이지 상단에 Dashboard / Scenario / Assets / Play 제작 툴 네비게이션 추가
+- 카드, 패널, 폼, 표, 코드, Footer까지 다크 IDE 스타일 통일
+- 기존 콘텐츠와 기능은 유지하고 표현 계층을 Editor Console 기준으로 재구성
+- 모바일에서도 공통 Editor navigation 사용
+
+
+## v0.10.0 - Editor Console Editor Tool Update
+
+- v0.10.0 메인 버전 승격
+- 웹을 다크 터미널/게임 제작도구 스타일로 전환
+- Visual Scenario Editor, JSON Import/Export, Scene CRUD, Inspector, Background Browser, Live Preview, Local Draft 구현
+
+## v0.9.10.10 - Part 2 Remote Image Integration
+
+- GitHub `Backgrounds/part2`를 다시 확인하여 한글 번호 PNG 32개 존재 확인
+- 2부 01~32 전체를 Cheonryugwan-Image 원격 PNG로 전환
+- 2부 manifest 이름/파일명을 GitHub 실제 파일명 기준으로 재정렬
+- 이전 임시 재매핑 이름 제거 및 공식 2부 번호 체계 복원
+- 프로젝트 내부 2부 중복 WebP/썸네일 64개 제거
+- 웹 배경 갤러리 2부 32장 모두 GitHub 원격 이미지 사용
+- `asset-config.json`의 part2 정책을 `remote`로 변경
+- 로컬 fallback은 현재 4부 미업로드 항목에만 유지
+
+## v0.9.10.9 - Remote Image Repository Integration
+
+- Cheonryugwan-Image 저장소를 배경 이미지 원격 원본으로 연동
+- 1부 29개 원격 PNG 전환
+- 3부 40개 원격 PNG 전환
+- 4부 현재 저장소에서 확인 가능한 29개만 원격 PNG 전환
+- 2부는 영문 자동 생성 파일명 문제를 확인하여 원격 매핑 중단, 기존 로컬 이미지 유지
+- 검증된 원격 이미지의 프로젝트 내부 중복 WebP/썸네일 205개 삭제
+- 게임 1부 배경 런타임 경로를 원격 PNG로 전환
+- 웹 배경 갤러리 원격/로컬 혼합 로딩 적용
+- `data/asset-config.json` 추가
+- 원격 미확인 이미지는 삭제하지 않는 안전 정책 적용
+
+## v0.9.10.8 - Filename & Background Full Audit
+
+- 깨진 ZIP 한글 파일/폴더명 12건 복구
+- `1권-1부.md` ~ `1권-4부.md` 정상 한글 파일명 복원
+- 게임 시나리오 원본/확장 JSON 파일명 정상화
+- `story/게임_시나리오_원본/1부/` 깨진 폴더 및 테스트 MD 파일명 정상화
+- 1~4부 147개 배경 파일/Manifest/웹 카드 전수검수
+- 2부 `file` 메타데이터를 실제 HD WebP 파일 기준으로 정리
+- 2부 bg-18은 삭제하지 않고 `참고 이미지`로 명확하게 분류
+- 3부 31 `연구 분석 대청`의 잘못된 무기 보관소 이미지 교체
+- 4부 명백한 타 장소/타 세력 오매핑 12건 교정
+- 4부 원본 목록의 19번 누락을 `originalNumber`로 보존
+- 웹 갤러리에서 4부 원본 번호 1~18, 20~47 표시
+- 파일명 및 배경 전수검수 보고서 추가
+
 ## v0.9.10.7 - Background Gallery Restore
 
 - v0.9.10.6에서 누락된 웹 배경 갤러리 섹션 재구성

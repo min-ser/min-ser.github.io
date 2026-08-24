@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0b0c0e">
   <title>천류관 : 흐름의 기록</title>
   <link rel="stylesheet" href="./styles.css?v=0.9.8.9">
-</head>
+<link rel="stylesheet" href="../assets/css/editor-console.css"><link rel="stylesheet" href="../assets/css/tokens.css"><link rel="stylesheet" href="../assets/css/base.css"><link rel="stylesheet" href="../assets/css/layout.css"><link rel="stylesheet" href="../assets/css/components.css"></head>
 <body>
 <main id="vn-app">
   <section id="title-screen" class="screen active">
@@ -39,68 +39,7 @@
       <div class="rain"></div>
       <div class="vignette"></div>
 
-      <header class="topbar">
-        <button id="back-title" class="topbar-home">제목 화면</button>
-        <span id="chapter-title">1화 — 비 내리는 산길</span>
-        <div class="topbar-compact-actions">
-          <button id="mute-btn" class="icon-button" aria-label="음소거 전환">🔊</button>
-          <button id="control-menu-toggle" class="control-menu-toggle"
-                  type="button" aria-expanded="false"
-                  aria-controls="top-actions">☰ 메뉴</button>
-        </div>
-
-        <div id="control-menu-backdrop" class="control-menu-backdrop" hidden></div>
-
-        <aside id="top-actions" class="top-actions" aria-hidden="true">
-          <div class="control-panel-header">
-            <div>
-              <strong>게임 메뉴</strong>
-              <span id="runtime-status" class="runtime-status">리소스 준비 중</span>
-            </div>
-            <button id="control-menu-close" class="icon-button" type="button"
-                    aria-label="메뉴 닫기">✕</button>
-          </div>
-
-          <section class="control-group">
-            <h2>진행</h2>
-            <div class="control-grid">
-              <button id="auto-btn">자동 진행</button>
-              <button id="skip-btn">읽은 대사 건너뛰기</button>
-              <button id="log-btn">대화 기록</button>
-            </div>
-          </section>
-
-          <section class="control-group">
-            <h2>저장</h2>
-            <div class="control-grid">
-              <button id="save-btn">저장</button>
-              <button id="load-btn">불러오기</button>
-              <button id="quick-save-btn">퀵 저장</button>
-              <button id="quick-load-btn">퀵 불러오기</button>
-              <button id="auto-history-btn">자동 저장 이력</button>
-            </div>
-          </section>
-
-          <section class="control-group">
-            <h2>설정</h2>
-            <div class="control-grid">
-              <button id="settings-btn">설정</button>
-              <button id="sound-test-btn">소리 테스트</button>
-            </div>
-          </section>
-
-          <details class="advanced-controls">
-            <summary>고급 관리</summary>
-            <div class="control-grid">
-              <button id="export-save-btn">저장 내보내기</button>
-              <button id="import-save-btn">저장 가져오기</button>
-              <button id="debug-btn">엔진 진단</button>
-            </div>
-          </details>
-
-          <input id="import-save-file" type="file" accept="application/json" hidden>
-        </aside>
-      </header>
+      
 
       <div id="choice-panel" class="choice-panel hidden"></div>
 
@@ -128,5 +67,5 @@
   </dialog>
 </main>
 <script type="module" src="./engine/app.js?v=0.9.8.9"></script>
-</body>
+<script type="module" src="../assets/js/shared-header.js"></script><script type="module" src="../assets/js/core/app.js"></script></body>
 </html>

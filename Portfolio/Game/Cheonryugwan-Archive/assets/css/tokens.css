@@ -1,0 +1,7 @@
+
+:root{
+ --bg:#05080b;--bg-soft:#070c10;--panel:#0a1117;--panel-2:#0c151c;
+ --line:#19303a;--line-strong:#274550;--text:#d7e7e4;--muted:#71868a;
+ --green:#63f5b0;--cyan:#5ee7ff;--amber:#ffd166;--danger:#ff667d;
+ --radius:7px;--header-h:58px;--sidebar-w:230px;
+}
