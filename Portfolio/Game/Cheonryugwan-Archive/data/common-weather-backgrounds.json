@@ -1,5 +1,5 @@
 {
-  "version": "0.10.7",
+  "version": "0.10.8",
   "title": "공통 날씨·시간 배경",
   "source": "에셋/배경/4부/목록원본/4부_배경_목록_원본.png",
   "count": 11,
@@ -20,8 +20,8 @@
       "assetSource": "remote",
       "remoteFile": "01_맑은_낮.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/common/01_%EB%A7%91%EC%9D%80_%EB%82%AE.png",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
-      "version": "0.10.7"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
+      "version": "0.10.8"
     },
     {
       "id": 2,
@@ -39,8 +39,8 @@
       "assetSource": "remote",
       "remoteFile": "02_흐린_낮.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/common/02_%ED%9D%90%EB%A6%B0_%EB%82%AE.png",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
-      "version": "0.10.7"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
+      "version": "0.10.8"
     },
     {
       "id": 3,
@@ -58,8 +58,8 @@
       "assetSource": "remote",
       "remoteFile": "03_비_오는_낮.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/common/03_%EB%B9%84_%EC%98%A4%EB%8A%94_%EB%82%AE.png",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
-      "version": "0.10.7"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
+      "version": "0.10.8"
     },
     {
       "id": 4,
@@ -77,8 +77,8 @@
       "assetSource": "remote",
       "remoteFile": "04_폭우.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/common/04_%ED%8F%AD%EC%9A%B0.png",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
-      "version": "0.10.7"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
+      "version": "0.10.8"
     },
     {
       "id": 5,
@@ -96,8 +96,8 @@
       "assetSource": "remote",
       "remoteFile": "05_안개_낀_낮.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/common/05_%EC%95%88%EA%B0%9C_%EB%82%80_%EB%82%AE.png",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
-      "version": "0.10.7"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
+      "version": "0.10.8"
     },
     {
       "id": 6,
@@ -115,8 +115,8 @@
       "assetSource": "remote",
       "remoteFile": "06_눈_오는_낮.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/common/06_%EB%88%88_%EC%98%A4%EB%8A%94_%EB%82%AE.png",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
-      "version": "0.10.7"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
+      "version": "0.10.8"
     },
     {
       "id": 7,
@@ -134,8 +134,8 @@
       "assetSource": "remote",
       "remoteFile": "07_밤.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/common/07_%EB%B0%A4.png",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
-      "version": "0.10.7"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
+      "version": "0.10.8"
     },
     {
       "id": 8,
@@ -153,8 +153,8 @@
       "assetSource": "remote",
       "remoteFile": "08_붉은_노을.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/common/08_%EB%B6%89%EC%9D%80_%EB%85%B8%EC%9D%84.png",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
-      "version": "0.10.7"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
+      "version": "0.10.8"
     },
     {
       "id": 9,
@@ -172,8 +172,8 @@
       "assetSource": "remote",
       "remoteFile": "09_새벽.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/common/09_%EC%83%88%EB%B2%BD.png",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
-      "version": "0.10.7"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
+      "version": "0.10.8"
     },
     {
       "id": 10,
@@ -191,8 +191,8 @@
       "assetSource": "remote",
       "remoteFile": "10_보름달_밤.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/common/10_%EB%B3%B4%EB%A6%84%EB%8B%AC_%EB%B0%A4.png",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
-      "version": "0.10.7"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
+      "version": "0.10.8"
     },
     {
       "id": 11,
@@ -210,8 +210,8 @@
       "assetSource": "remote",
       "remoteFile": "11_붉은_달_밤.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/common/11_%EB%B6%89%EC%9D%80_%EB%8B%AC_%EB%B0%A4.png",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
-      "version": "0.10.7"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
+      "version": "0.10.8"
     }
   ]
 }

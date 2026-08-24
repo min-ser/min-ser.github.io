@@ -1,5 +1,5 @@
 {
-  "version": "0.10.7",
+  "version": "0.10.8",
   "part": 4,
   "title": "4부 배경 — 최종 원작 검수 기준",
   "count": 33,
@@ -17,7 +17,7 @@
       "remoteFile": "01_연합_회의장.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 2,
@@ -29,7 +29,7 @@
       "remoteFile": "02_정파_임시_심문실.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 3,
@@ -41,7 +41,7 @@
       "remoteFile": "03_정파_기록_보관실.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 4,
@@ -53,7 +53,7 @@
       "remoteFile": "04_장문인_회의실.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 5,
@@ -65,7 +65,7 @@
       "remoteFile": "05_지하_감옥.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 6,
@@ -77,7 +77,7 @@
       "remoteFile": "06_정파_출정식_광장.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 7,
@@ -89,7 +89,7 @@
       "remoteFile": "07_척살대_행군길.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 8,
@@ -101,7 +101,7 @@
       "remoteFile": "08_무관_교정_맑은_날.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 9,
@@ -113,7 +113,7 @@
       "remoteFile": "09_신입_수련장.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 10,
@@ -125,7 +125,7 @@
       "remoteFile": "10_생활관.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 11,
@@ -137,7 +137,7 @@
       "remoteFile": "11_식당.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 12,
@@ -149,7 +149,7 @@
       "remoteFile": "12_복도.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 13,
@@ -161,7 +161,7 @@
       "remoteFile": "13_차고_뒤_골목.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 14,
@@ -173,7 +173,7 @@
       "remoteFile": "14_무기_창고.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 15,
@@ -185,7 +185,7 @@
       "remoteFile": "15_비_오는_연무장.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 16,
@@ -197,7 +197,7 @@
       "remoteFile": "16_어두운_복도.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 17,
@@ -209,7 +209,7 @@
       "remoteFile": "17_벚꽃길.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 18,
@@ -221,7 +221,7 @@
       "remoteFile": "18_연못가.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 19,
@@ -233,7 +233,7 @@
       "remoteFile": "19_전서율의_집_외부.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 20,
@@ -245,7 +245,7 @@
       "remoteFile": "20_작은_마당.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 21,
@@ -257,7 +257,7 @@
       "remoteFile": "21_거실.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 22,
@@ -269,7 +269,7 @@
       "remoteFile": "22_가족_처형장.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 23,
@@ -281,7 +281,7 @@
       "remoteFile": "23_사건이_발생한_방.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 24,
@@ -293,7 +293,7 @@
       "remoteFile": "24_선배의_마당.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 25,
@@ -305,7 +305,7 @@
       "remoteFile": "25_첫_살인_현장.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 26,
@@ -317,7 +317,7 @@
       "remoteFile": "26_도망치는_길.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 27,
@@ -329,7 +329,7 @@
       "remoteFile": "27_산속_척살대_조우_장소.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 28,
@@ -341,7 +341,7 @@
       "remoteFile": "28_정파_진형_전투장.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 29,
@@ -354,7 +354,7 @@
       "assetSource": "remote-reuse",
       "mappingType": "reuse",
       "reuseOf": 9,
-      "status": "09. 신입 수련장 고화질 이미지 재사용 (v0.10.7)"
+      "status": "09. 신입 수련장 고화질 이미지 재사용 (v0.10.8)"
     },
     {
       "id": 30,
@@ -366,7 +366,7 @@
       "remoteFile": "30_태허진인_최후_조우_장소.png",
       "assetSource": "remote",
       "mappingType": "unique",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 31,
@@ -379,7 +379,7 @@
       "assetSource": "remote-reuse",
       "mappingType": "reuse",
       "reuseOf": 30,
-      "status": "30. 태허진인 최후 조우 장소 고화질 이미지 재사용 (v0.10.7)"
+      "status": "30. 태허진인 최후 조우 장소 고화질 이미지 재사용 (v0.10.8)"
     },
     {
       "id": 32,
@@ -392,7 +392,7 @@
       "assetSource": "remote-reuse",
       "mappingType": "reuse",
       "reuseOf": 3,
-      "status": "03. 정파 기록 보관실 고화질 이미지 재사용 (v0.10.7)"
+      "status": "03. 정파 기록 보관실 고화질 이미지 재사용 (v0.10.8)"
     },
     {
       "id": 33,
@@ -405,7 +405,7 @@
       "assetSource": "remote-reuse",
       "mappingType": "cross-part-reuse",
       "reuseOf": "part3-01",
-      "status": "기존 자연/산악 고화질 배경 재사용: 3부 01 황무지 (v0.10.7)"
+      "status": "기존 자연/산악 고화질 배경 재사용: 3부 01 황무지 (v0.10.8)"
     }
   ]
 }

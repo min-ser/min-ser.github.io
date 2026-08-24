@@ -1,4 +1,15 @@
-## v0.10.7 - HD Background Canonical Mapping
+# Changelog
+
+## v0.10.8 - Deployment Path Fix
+
+- Release ZIP internal root normalized to `Cheonryugwan-Archive/`.
+- Fixes GitHub Pages 404 at `/Portfolio/Game/Cheonryugwan-Archive/index.html`.
+- Removed stale internal directory name `Cheonryugwan-Archive-v0.10.5-Game-Runtime-Fix`.
+- Added `.nojekyll` for static GitHub Pages deployment.
+- Added `docs/DEPLOYMENT_PATH.md`.
+- v0.10.7 background canonical mapping retained unchanged.
+
+## v0.10.8 - HD Background Canonical Mapping
 
 - 사용자 확정 배경 목록을 canonical 기준으로 재정의
 - 1부 29 / 2부 32 / 3부 40 / 4부 33장면 / 공통 11 매핑

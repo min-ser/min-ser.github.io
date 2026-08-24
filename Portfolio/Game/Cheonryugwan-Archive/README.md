@@ -3,7 +3,7 @@
 > **천류관 : 흐름의 기록**  
 > 원본 소설을 기준으로 세계관, 캐릭터, 기록, 복선, 이미지, 분석 결과와 모바일 인터랙티브 노벨을 함께 관리하는 장기 IP 프로젝트입니다.
 
-현재 버전: **v0.10.7 — HD Background Canonical Mapping**
+현재 버전: **v0.10.8 — HD Background Canonical Mapping**
 
 ## 목표
 

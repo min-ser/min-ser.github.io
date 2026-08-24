@@ -1,5 +1,5 @@
 {
-  "version": "0.10.7",
+  "version": "0.10.8",
   "part": 2,
   "title": "2부 배경 개별 이미지",
   "source": "에셋/배경/2부/목록원본/2부_배경_목록_원본.png",
@@ -18,11 +18,11 @@
         297,
         200
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "사파 도시",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "01_사파_성문.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/01_%EC%82%AC%ED%8C%8C_%EC%84%B1%EB%AC%B8.png"
@@ -40,11 +40,11 @@
         585,
         200
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "사파 도시",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "02_사파_거리_낮.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/02_%EC%82%AC%ED%8C%8C_%EA%B1%B0%EB%A6%AC_%EB%82%AE.png"
@@ -62,11 +62,11 @@
         888,
         200
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "사파 도시",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "03_사파_거리_밤.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/03_%EC%82%AC%ED%8C%8C_%EA%B1%B0%EB%A6%AC_%EB%B0%A4.png"
@@ -84,11 +84,11 @@
         1186,
         200
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "사파 도시",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "04_붉은_등불_거리.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/04_%EB%B6%89%EC%9D%80_%EB%93%B1%EB%B6%88_%EA%B1%B0%EB%A6%AC.png"
@@ -106,11 +106,11 @@
         1515,
         200
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "사파 도시",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "05_중심_광장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/05_%EC%A4%91%EC%8B%AC_%EA%B4%91%EC%9E%A5.png"
@@ -128,11 +128,11 @@
         322,
         353
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "사파 도시",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "06_시장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/06_%EC%8B%9C%EC%9E%A5.png"
@@ -150,11 +150,11 @@
         611,
         353
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "사파 도시",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "07_암시장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/07_%EC%95%94%EC%8B%9C%EC%9E%A5.png"
@@ -172,11 +172,11 @@
         886,
         353
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "투기장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "08_골목길.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/08_%EA%B3%A8%EB%AA%A9%EA%B8%B8.png"
@@ -194,11 +194,11 @@
         1161,
         353
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "사파 도시",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "09_붉은_뒷골목.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/09_%EB%B6%89%EC%9D%80_%EB%92%B7%EA%B3%A8%EB%AA%A9.png"
@@ -216,11 +216,11 @@
         1515,
         353
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "투기장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "10_투기장_입구.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/10_%ED%88%AC%EA%B8%B0%EC%9E%A5_%EC%9E%85%EA%B5%AC.png"
@@ -238,11 +238,11 @@
         291,
         515
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "전서율 여행",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "11_경기장_내부.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/11_%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EB%82%B4%EB%B6%80.png"
@@ -260,11 +260,11 @@
         696,
         515
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "2부 엔딩",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "12_중앙_경기장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/12_%EC%A4%91%EC%95%99_%EA%B2%BD%EA%B8%B0%EC%9E%A5.png"
@@ -282,11 +282,11 @@
         1008,
         515
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "혈천무후 진하연",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "13_관객석.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/13_%EA%B4%80%EA%B0%9D%EC%84%9D.png"
@@ -304,11 +304,11 @@
         1337,
         515
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "사파 도시",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "14_VIP석.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/14_VIP%EC%84%9D.png"
@@ -326,11 +326,11 @@
         1515,
         515
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "2부 엔딩",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "15_선수_대기실.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/15_%EC%84%A0%EC%88%98_%EB%8C%80%EA%B8%B0%EC%8B%A4.png"
@@ -348,11 +348,11 @@
         169,
         690
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "투기장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "16_관리실.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/16_%EA%B4%80%EB%A6%AC%EC%8B%A4.png"
@@ -370,11 +370,11 @@
         515,
         690
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "폭주 이후",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "17_피로_물든_경기장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/17_%ED%94%BC%EB%A1%9C_%EB%AC%BC%EB%93%A0_%EA%B2%BD%EA%B8%B0%EC%9E%A5.png"
@@ -392,14 +392,14 @@
         853,
         690
       ],
-      "version": "0.10.7",
+      "version": "0.10.8",
       "category": "참고 이미지",
       "assetSource": "remote",
       "remoteFile": "18_경기_종료_후.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/18_%EA%B2%BD%EA%B8%B0_%EC%A2%85%EB%A3%8C_%ED%9B%84.png",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)"
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)"
     },
     {
       "id": 19,
@@ -414,11 +414,11 @@
         1164,
         690
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "혈천무후 진하연",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "19_사파_회의실.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/19_%EC%82%AC%ED%8C%8C_%ED%9A%8C%EC%9D%98%EC%8B%A4.png"
@@ -436,11 +436,11 @@
         1515,
         690
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "혈천무후 진하연",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "20_진하연_집무실.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/20_%EC%A7%84%ED%95%98%EC%97%B0_%EC%A7%91%EB%AC%B4%EC%8B%A4.png"
@@ -458,11 +458,11 @@
         347,
         852
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "폭주 이후",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "21_전략실.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/21_%EC%A0%84%EB%9E%B5%EC%8B%A4.png"
@@ -480,11 +480,11 @@
         621,
         852
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "투기장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "22_붉은_정원.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/22_%EB%B6%89%EC%9D%80_%EC%A0%95%EC%9B%90.png"
@@ -502,11 +502,11 @@
         858,
         852
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "투기장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "23_매화정.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/23_%EB%A7%A4%ED%99%94%EC%A0%95.png"
@@ -524,11 +524,11 @@
         1088,
         852
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "투기장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "24_연못.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/24_%EC%97%B0%EB%AA%BB.png"
@@ -546,11 +546,11 @@
         1515,
         852
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "투기장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "25_대련장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/25_%EB%8C%80%EB%A0%A8%EC%9E%A5.png"
@@ -568,11 +568,11 @@
         113,
         1013
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "투기장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "26_불타는_거리.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/26_%EB%B6%88%ED%83%80%EB%8A%94_%EA%B1%B0%EB%A6%AC.png"
@@ -590,11 +590,11 @@
         234,
         1013
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "투기장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "27_시체가_남은_경기장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/27_%EC%8B%9C%EC%B2%B4%EA%B0%80_%EB%82%A8%EC%9D%80_%EA%B2%BD%EA%B8%B0%EC%9E%A5.png"
@@ -612,11 +612,11 @@
         592,
         1013
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "투기장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "28_도망치는_군중.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/28_%EB%8F%84%EB%A7%9D%EC%B9%98%EB%8A%94_%EA%B5%B0%EC%A4%91.png"
@@ -634,11 +634,11 @@
         992,
         1013
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "투기장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "29_새벽_거리.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/29_%EC%83%88%EB%B2%BD_%EA%B1%B0%EB%A6%AC.png"
@@ -656,11 +656,11 @@
         1095,
         1013
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "혈천무후 진하연",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "30_도시_출구.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/30_%EB%8F%84%EC%8B%9C_%EC%B6%9C%EA%B5%AC.png"
@@ -678,11 +678,11 @@
         1316,
         1013
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "사파 회의장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "31_절벽_길.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/31_%EC%A0%88%EB%B2%BD_%EA%B8%B8.png"
@@ -700,11 +700,11 @@
         1515,
         1013
       ],
-      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.8)",
       "category": "사파 회의장",
       "mappingStatus": "GitHub part2 한글 번호 파일 직접 매핑",
       "mappingConfidence": "high",
-      "version": "0.10.7",
+      "version": "0.10.8",
       "assetSource": "remote",
       "remoteFile": "32_혼자_걷는_산길.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part2/32_%ED%98%BC%EC%9E%90_%EA%B1%B7%EB%8A%94_%EC%82%B0%EA%B8%B8.png"
