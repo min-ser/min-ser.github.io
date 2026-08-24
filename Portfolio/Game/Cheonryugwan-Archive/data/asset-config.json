@@ -1,27 +1,30 @@
 {
-  "version": "0.9.10.10",
+  "version": "0.10.7",
   "repository": "https://github.com/min-ser/Cheonryugwan-Image/tree/master",
   "rawBase": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan",
   "policy": {
-    "background": "remote-first-hybrid",
+    "background": "remote-only-hd",
     "part1": "remote",
     "part2": "remote",
     "part3": "remote",
-    "part4": "remote-where-present-local-fallback",
-    "note": "GitHub 파일명/번호가 검증된 배경은 원격 저장소를 직접 사용하고, 미업로드 항목만 로컬 fallback을 사용한다."
+    "part4": "remote-with-explicit-reuse",
+    "common": "remote",
+    "note": "배경은 Cheonryugwan-Image 고화질 원격 PNG만 사용한다. 저화질 로컬 fallback은 금지한다."
   },
   "verifiedRemote": {
     "part1": 29,
     "part2": 32,
     "part3": 40,
-    "part4": 29
+    "part4Unique": 29,
+    "common": 11
   },
   "localFallback": {
     "part1": 0,
     "part2": 0,
     "part3": 0,
-    "part4": 17
+    "part4": 0,
+    "common": 0
   },
   "verifiedRemoteTotal": 130,
-  "localFallbackTotal": 17
+  "localFallbackTotal": 0
 }

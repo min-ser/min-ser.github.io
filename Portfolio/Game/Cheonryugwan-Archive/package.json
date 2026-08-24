@@ -1,7 +1,7 @@
 {
   "name": "cheonryugwan-archive-quality-gate",
   "private": true,
-  "version": "0.9.4",
+  "version": "0.10.7",
   "scripts": {
     "test:e2e": "playwright test",
     "test:syntax": "node --check game/engine/app.js"

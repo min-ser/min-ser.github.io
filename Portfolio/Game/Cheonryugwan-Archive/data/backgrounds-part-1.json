@@ -1,5 +1,5 @@
 {
-  "version": "0.9.10.9",
+  "version": "0.10.7",
   "source": "에셋/배경/1부/목록원본/1부_배경_목록_원본.png",
   "count": 29,
   "backgrounds": [
@@ -13,11 +13,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-01.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "01_비_오는_산길_밤.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/01_%EB%B9%84_%EC%98%A4%EB%8A%94_%EC%82%B0%EA%B8%B8_%EB%B0%A4.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-02",
@@ -29,11 +29,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-02.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "02_안개_낀_산길.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/02_%EC%95%88%EA%B0%9C_%EB%82%80_%EC%82%B0%EA%B8%B8.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-03",
@@ -45,11 +45,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-03.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "03_피가_흐르는_산길.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/03_%ED%94%BC%EA%B0%80_%ED%9D%90%EB%A5%B4%EB%8A%94_%EC%82%B0%EA%B8%B8.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-04",
@@ -61,11 +61,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-04.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "04_숲속_입구.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/04_%EC%88%B2%EC%86%8D_%EC%9E%85%EA%B5%AC.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-05",
@@ -77,11 +77,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-05.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "05_폭우_속_숲.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/05_%ED%8F%AD%EC%9A%B0_%EC%86%8D_%EC%88%B2.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-06",
@@ -93,11 +93,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-06.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "06_산길_전투.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/06_%EC%82%B0%EA%B8%B8_%EC%A0%84%ED%88%AC.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-07",
@@ -109,11 +109,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-07.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "07_숲속_공터.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/07_%EC%88%B2%EC%86%8D_%EA%B3%B5%ED%84%B0.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-08",
@@ -125,11 +125,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-08.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "08_계곡_근처.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/08_%EA%B3%84%EA%B3%A1_%EA%B7%BC%EC%B2%98.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-09",
@@ -141,11 +141,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-09.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "09_절벽_끝.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/09_%EC%A0%88%EB%B2%BD_%EB%81%9D.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-10",
@@ -157,11 +157,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-10.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "10_정문.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/10_%EC%A0%95%EB%AC%B8.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-11",
@@ -173,11 +173,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-11.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "11_교정.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/11_%EA%B5%90%EC%A0%95.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-12",
@@ -189,11 +189,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-12.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "12_수련장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/12_%EC%88%98%EB%A0%A8%EC%9E%A5.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-13",
@@ -205,11 +205,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-13.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "13_무기_보관소.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/13_%EB%AC%B4%EA%B8%B0_%EB%B3%B4%EA%B4%80%EC%86%8C.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-14",
@@ -221,11 +221,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-14.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "14_교관_연무장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/14_%EA%B5%90%EA%B4%80_%EC%97%B0%EB%AC%B4%EC%9E%A5.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-15",
@@ -237,11 +237,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-15.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "15_복도.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/15_%EB%B3%B5%EB%8F%84.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-16",
@@ -253,11 +253,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-16.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "16_생활관.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/16_%EC%83%9D%ED%99%9C%EA%B4%80.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-17",
@@ -269,11 +269,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-17.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "17_식당.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/17_%EC%8B%9D%EB%8B%B9.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-18",
@@ -285,11 +285,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-18.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "18_의무실.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/18_%EC%9D%98%EB%AC%B4%EC%8B%A4.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-19",
@@ -301,11 +301,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-19.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "19_뒷마당.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/19_%EB%92%B7%EB%A7%88%EB%8B%B9.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-20",
@@ -317,11 +317,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-20.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "20_피로_물든_교정.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/20_%ED%94%BC%EB%A1%9C_%EB%AC%BC%EB%93%A0_%EA%B5%90%EC%A0%95.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-21",
@@ -333,11 +333,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-21.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "21_무너진_연무장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/21_%EB%AC%B4%EB%84%88%EC%A7%84_%EC%97%B0%EB%AC%B4%EC%9E%A5.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-22",
@@ -349,11 +349,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-22.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "22_불타는_건물.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/22_%EB%B6%88%ED%83%80%EB%8A%94_%EA%B1%B4%EB%AC%BC.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-23",
@@ -365,11 +365,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-23.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "23_쓰러진_매화나무.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/23_%EC%93%B0%EB%9F%AC%EC%A7%84_%EB%A7%A4%ED%99%94%EB%82%98%EB%AC%B4.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-24",
@@ -381,11 +381,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-24.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "24_장문인_회의실.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/24_%EC%9E%A5%EB%AC%B8%EC%9D%B8_%ED%9A%8C%EC%9D%98%EC%8B%A4.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-25",
@@ -397,11 +397,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-25.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "25_긴_회의_테이블.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/25_%EA%B8%B4_%ED%9A%8C%EC%9D%98_%ED%85%8C%EC%9D%B4%EB%B8%94.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-26",
@@ -413,11 +413,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-26.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "26_기록_보관실.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/26_%EA%B8%B0%EB%A1%9D_%EB%B3%B4%EA%B4%80%EC%8B%A4.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-27",
@@ -429,11 +429,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-27.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "27_매화정원.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/27_%EB%A7%A4%ED%99%94%EC%A0%95%EC%9B%90.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-28",
@@ -445,11 +445,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-28.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "28_고요한_연무장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/28_%EA%B3%A0%EC%9A%94%ED%95%9C_%EC%97%B0%EB%AC%B4%EC%9E%A5.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     },
     {
       "id": "part1-bg-29",
@@ -461,11 +461,11 @@
       "thumb": "assets/images/backgrounds/thumbnails/part-1/bg-29.webp",
       "width": 1672,
       "height": 941,
-      "status": "고화질 에셋 교체 완료 (v0.9.10.4)",
+      "status": "GitHub 원격 고화질 PNG 사용 (v0.10.7)",
       "assetSource": "remote",
       "remoteFile": "29_비_오는_대련장.png",
       "remoteUrl": "https://raw.githubusercontent.com/min-ser/Cheonryugwan-Image/refs/heads/master/cheonryugwan/Backgrounds/part1/29_%EB%B9%84_%EC%98%A4%EB%8A%94_%EB%8C%80%EB%A0%A8%EC%9E%A5.png",
-      "version": "0.9.10.9"
+      "version": "0.10.7"
     }
   ]
 }

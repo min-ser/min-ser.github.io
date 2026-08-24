@@ -1,0 +1,11 @@
+{
+  "version": "0.10.5",
+  "requiredRuntimeIds": 29,
+  "missingRuntimeIds": [],
+  "bindClickControls": 23,
+  "missingBindClickControls": [],
+  "validators": {
+    "validate_resources.py": 0,
+    "validate_project.py": 0
+  }
+}

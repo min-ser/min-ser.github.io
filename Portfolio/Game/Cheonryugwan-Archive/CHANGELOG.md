@@ -1,4 +1,41 @@
+## v0.10.7 - HD Background Canonical Mapping
+
+- 사용자 확정 배경 목록을 canonical 기준으로 재정의
+- 1부 29 / 2부 32 / 3부 40 / 4부 33장면 / 공통 11 매핑
+- 4부 실제 고유 원격 이미지 29장 + 명시적 재사용 4장면
+- 4부 29→09, 31→30, 32→03 재사용
+- 4부 33은 기존 자연/산악 고화질 배경 재사용
+- 모든 로컬 저화질 배경/썸네일 삭제 및 fallback 제거
+- GitHub Cheonryugwan-Image 원격 PNG를 배경 단일 소스로 사용
+
 # Changelog
+
+## v0.10.6 - Background Repository Audit & Cleanup
+
+- GitHub Cheonryugwan-Image 기준 1~4부 및 공통 배경 재검수
+- 1~3부와 공통 배경을 원격 고화질 PNG 기준으로 통일
+- 4부 저장소 실제 파일 01~28, 30을 제목/의미 기준으로 원격 연결하고 원본 목록의 19번 결번에 따른 번호 밀림 수정
+- 4부 원본 목록의 19번 결번을 데이터에 명시
+- 원격 미등록 4부 31~47은 로컬 분리본을 보존하고 고화질로 오표기하지 않음
+- 배경 갤러리를 manifest 기반 동적 렌더링으로 변경하여 데이터/화면 매핑 이중관리 제거
+- 공통 저해상도 분리본, 목록 원본 이미지, 중복 썸네일 제거
+
+## v0.10.5 - Game Runtime Start Fix
+
+- 공통 Header 정리 과정에서 삭제된 게임 내부 HUD 복구
+- Shared Header가 게임 내부 `header.topbar`를 삭제하지 않도록 범위 수정
+- 게임 시작 필수 DOM 컨트롤 회귀 검증 추가
+
+## v0.10.5 - Scenario Editor Functional Upgrade
+
+- Scenario Editor를 단순 CRUD 화면에서 실제 제작 툴 구조로 확장
+- 게임 연출 필드, Drag & Drop, Undo/Redo, 검색, Validation 구현
+- Background / Character / CG / Audio Registry Picker 추가
+- Live Preview의 이전/다음/자동 진행 및 Runtime 실행 추가
+- 하단 Validation / Scene JSON / Console 패널 추가
+- 선택지 JSON 검사 및 중복 Scene ID 검사
+- Export 전 오류 확인
+- 키보드 단축키 Ctrl+S / Ctrl+Z / Ctrl+Y 지원
 
 ## v0.10.3 - Shared UI Architecture
 

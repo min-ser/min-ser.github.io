@@ -55,7 +55,7 @@
         <nav class="ce-global-nav" aria-label="공통 메뉴">
           ${links.map(link => `<a data-key="${link.key}" href="${href(link.path)}">${link.label}</a>`).join("")}
         </nav>
-        <div class="ce-global-status"><span></span>v0.10.2</div>
+        <div class="ce-global-status"><span></span>v0.10.6</div>
       </div>
     `;
 
@@ -76,7 +76,7 @@
   function init() {
     // Remove every legacy/topbar header instance so exactly one common header remains.
     document.querySelectorAll(
-      ".ce-global-header,.ce-legacy-bar,header.topbar,.site-header,.global-header,.main-header"
+      "body > .ce-global-header, body > .ce-legacy-bar, body > header.topbar, body > .site-header, body > .global-header, body > .main-header"
     ).forEach(el => el.remove());
 
     const body = document.body;
