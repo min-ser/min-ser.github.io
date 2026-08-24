@@ -38,54 +38,52 @@ jobs:
       # ==================================================
       # 3. Build Portfolio Projects
       #
-      # Portfolio/** 하위에서 package.json을 재귀 탐색합니다.
-      # build script가 있는 프로젝트만 빌드합니다.
+      # GitHub Pages 배포를 위해 실제 빌드가 필요한
+      # 프로젝트만 명시적으로 관리합니다.
       #
-      # Next.js Static Export 프로젝트는
-      # npm run build 이후 out/을 생성해야 합니다.
+      # 중요:
+      # - Portfolio 전체 package.json 자동 탐색 금지
+      # - 천류관 등 Static 프로젝트는 빌드하지 않음
+      #
+      # 신규 Build 프로젝트 추가 시
+      # BUILD_PROJECTS 배열에 경로만 추가합니다.
       # ==================================================
       - name: Build Portfolio Projects
         shell: bash
         run: |
           set -euo pipefail
 
-          PORTFOLIO_ROOT="Portfolio"
+          BUILD_PROJECTS=(
+            "Portfolio/study/ai"
+            "Portfolio/study/cs"
+          )
 
           echo "=========================================="
-          echo "Portfolio Project Build"
+          echo "Portfolio Build Projects"
           echo "=========================================="
 
-          if [ ! -d "$PORTFOLIO_ROOT" ]; then
-            echo "[INFO] Portfolio directory not found."
-            exit 0
-          fi
-
-          while IFS= read -r package_file; do
-
-            project="$(dirname "$package_file")"
-
-            # ------------------------------------------
-            # Generated/Internal directories 제외
-            # ------------------------------------------
-            if [[ "$project" == *"/node_modules/"* ]] || \
-               [[ "$project" == *"/node_modules" ]] || \
-               [[ "$project" == *"/.next/"* ]] || \
-               [[ "$project" == *"/.next" ]] || \
-               [[ "$project" == *"/out/"* ]] || \
-               [[ "$project" == *"/out" ]]; then
-              continue
-            fi
-
-            PROJECT_NAME="$(basename "$project")"
-            BASE_PATH="/${project}"
-
+          for project in "${BUILD_PROJECTS[@]}"; do
             echo ""
             echo "------------------------------------------"
             echo "[PROJECT]"
-            echo "Name     : $PROJECT_NAME"
-            echo "Path     : $project"
-            echo "BasePath : $BASE_PATH"
+            echo "Path : $project"
             echo "------------------------------------------"
+
+            # ------------------------------------------
+            # 프로젝트 디렉터리 존재 확인
+            # ------------------------------------------
+            if [ ! -d "$project" ]; then
+              echo "[ERROR] Project directory not found: $project"
+              exit 1
+            fi
+
+            # ------------------------------------------
+            # package.json 존재 확인
+            # ------------------------------------------
+            if [ ! -f "$project/package.json" ]; then
+              echo "[ERROR] package.json not found: $project"
+              exit 1
+            fi
 
             pushd "$project" > /dev/null
 
@@ -94,13 +92,14 @@ jobs:
             # ------------------------------------------
             if ! node -e '
               const p = require("./package.json");
-              process.exit(
-                p.scripts && p.scripts.build ? 0 : 1
-              );
+
+              if (!p.scripts || !p.scripts.build) {
+                process.exit(1);
+              }
             '; then
-              echo "[SKIP] build script not found."
+              echo "[ERROR] build script not found: $project/package.json"
               popd > /dev/null
-              continue
+              exit 1
             fi
 
             # ------------------------------------------
@@ -115,6 +114,17 @@ jobs:
             fi
 
             # ------------------------------------------
+            # GitHub Pages Base Path
+            #
+            # 예:
+            # Portfolio/study/ai
+            # → /Portfolio/study/ai
+            # ------------------------------------------
+            BASE_PATH="/${project}"
+
+            echo "[INFO] BasePath: $BASE_PATH"
+
+            # ------------------------------------------
             # Build
             # ------------------------------------------
             echo "[BUILD] npm run build"
@@ -127,30 +137,19 @@ jobs:
             # ------------------------------------------
             if [ ! -d "out" ]; then
               echo ""
-              echo "[WARN] out/ directory was not created."
+              echo "[ERROR] out/ directory was not created."
               echo "Project: $project"
               echo ""
-              echo "This project will not be merged into"
-              echo "GitHub Pages automatically."
+              echo "GitHub Pages requires a static export."
               echo ""
-
               popd > /dev/null
-              continue
+              exit 1
             fi
 
             popd > /dev/null
 
-            echo "[SUCCESS] $project"
-
-          done < <(
-            find "$PORTFOLIO_ROOT" \
-              -type f \
-              -name "package.json" \
-              -not -path "*/node_modules/*" \
-              -not -path "*/.next/*" \
-              -not -path "*/out/*" \
-              | sort
-          )
+            echo "[SUCCESS] Build completed: $project"
+          done
 
       # ==================================================
       # 4. Configure GitHub Pages
@@ -161,7 +160,10 @@ jobs:
       # ==================================================
       # 5. Build Existing Jekyll Blog
       #
-      # _config.yml 에서 Portfolio/ 전체를 제외합니다.
+      # 기존 _config.yml 정책에 따라 Jekyll 본체를
+      # _site 디렉터리에 빌드합니다.
+      #
+      # Portfolio는 이후 별도로 원본을 복사합니다.
       # ==================================================
       - name: Build Jekyll Blog
         uses: actions/jekyll-build-pages@v1
@@ -170,11 +172,10 @@ jobs:
           destination: ./_site
 
       # ==================================================
-      # 6. Prepare Writable Final Site
+      # 6. Prepare Final Site
       #
-      # jekyll-build-pages가 생성한 _site에 직접 쓰면
-      # Permission denied가 발생할 수 있으므로
-      # 별도의 최종 디렉터리에 복사합니다.
+      # 최종 GitHub Pages artifact를 만들기 위한
+      # writable 디렉터리를 생성합니다.
       # ==================================================
       - name: Prepare Final Site
         shell: bash
@@ -195,30 +196,29 @@ jobs:
 
           cp -a ./_site/. ./_final_site/
 
-          echo "[SUCCESS] Final site prepared."
+          echo "[SUCCESS] Jekyll site copied."
 
       # ==================================================
-      # 7. Merge Portfolio Projects
+      # 7. Copy Static Portfolio
       #
-      # Repository 경로를 그대로 URL 경로로 유지합니다.
+      # Portfolio는 기본적으로 STATIC 프로젝트로
+      # 취급합니다.
       #
-      # Portfolio/study/ai/out
-      #   ↓
-      # _final_site/Portfolio/study/ai
+      # 천류관을 포함한 기존 HTML/JS/CSS 프로젝트는
+      # 원본 디렉터리 구조를 그대로 유지합니다.
       #
-      # Portfolio/resume/out
-      #   ↓
-      # _final_site/Portfolio/resume
+      # 빌드 산출물 및 dependency는 제외합니다.
       # ==================================================
-      - name: Merge Portfolio Projects
+      - name: Copy Static Portfolio
         shell: bash
         run: |
           set -euo pipefail
 
           PORTFOLIO_ROOT="Portfolio"
+          TARGET_ROOT="_final_site/Portfolio"
 
           echo "=========================================="
-          echo "Portfolio Project Merge"
+          echo "Copy Static Portfolio"
           echo "=========================================="
 
           if [ ! -d "$PORTFOLIO_ROOT" ]; then
@@ -226,32 +226,56 @@ jobs:
             exit 0
           fi
 
-          while IFS= read -r package_file; do
+          mkdir -p "$TARGET_ROOT"
 
-            project="$(dirname "$package_file")"
+          echo "[COPY]"
+          echo "./Portfolio/"
+          echo "   ↓"
+          echo "./_final_site/Portfolio/"
 
-            # ------------------------------------------
-            # Generated/Internal directories 제외
-            # ------------------------------------------
-            if [[ "$project" == *"/node_modules/"* ]] || \
-               [[ "$project" == *"/node_modules" ]] || \
-               [[ "$project" == *"/.next/"* ]] || \
-               [[ "$project" == *"/.next" ]] || \
-               [[ "$project" == *"/out/"* ]] || \
-               [[ "$project" == *"/out" ]]; then
-              continue
-            fi
+          rsync -a \
+            --exclude='node_modules/' \
+            --exclude='.next/' \
+            --exclude='out/' \
+            --exclude='.git/' \
+            "$PORTFOLIO_ROOT/" \
+            "$TARGET_ROOT/"
 
+          echo "[SUCCESS] Static Portfolio copied."
+
+      # ==================================================
+      # 8. Merge Built Portfolio Projects
+      #
+      # BUILD_PROJECTS에 등록된 프로젝트만
+      # source 대신 out/ 결과로 교체합니다.
+      #
+      # 예:
+      #
+      # Portfolio/study/ai/out/
+      #       ↓
+      # _final_site/Portfolio/study/ai/
+      #
+      # Portfolio/study/cs/out/
+      #       ↓
+      # _final_site/Portfolio/study/cs/
+      # ==================================================
+      - name: Merge Built Portfolio Projects
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BUILD_PROJECTS=(
+            "Portfolio/study/ai"
+            "Portfolio/study/cs"
+          )
+
+          echo "=========================================="
+          echo "Merge Built Portfolio Projects"
+          echo "=========================================="
+
+          for project in "${BUILD_PROJECTS[@]}"; do
             OUTPUT_DIR="$project/out"
             TARGET_DIR="_final_site/$project"
-
-            # ------------------------------------------
-            # out/ 없는 프로젝트는 SKIP
-            # ------------------------------------------
-            if [ ! -d "$OUTPUT_DIR" ]; then
-              echo "[SKIP] no out/: $project"
-              continue
-            fi
 
             echo ""
             echo "------------------------------------------"
@@ -260,25 +284,27 @@ jobs:
             echo "Target : $TARGET_DIR"
             echo "------------------------------------------"
 
+            if [ ! -d "$OUTPUT_DIR" ]; then
+              echo "[ERROR] Build output missing: $OUTPUT_DIR"
+              exit 1
+            fi
+
+            # ------------------------------------------
+            # Static source를 Build 결과로 교체
+            # ------------------------------------------
             rm -rf "$TARGET_DIR"
             mkdir -p "$TARGET_DIR"
 
             cp -a "$OUTPUT_DIR"/. "$TARGET_DIR"/
 
-            echo "[SUCCESS] $project"
-
-          done < <(
-            find "$PORTFOLIO_ROOT" \
-              -type f \
-              -name "package.json" \
-              -not -path "*/node_modules/*" \
-              -not -path "*/.next/*" \
-              -not -path "*/out/*" \
-              | sort
-          )
+            echo "[SUCCESS] Merged: $project"
+          done
 
       # ==================================================
-      # 8. Validate Final Site
+      # 9. Validate Final Site
+      #
+      # 핵심 서비스가 최종 artifact에서 누락되면
+      # 배포하지 않고 Build 자체를 실패시킵니다.
       # ==================================================
       - name: Validate Final Site
         shell: bash
@@ -294,27 +320,75 @@ jobs:
             exit 1
           fi
 
-          echo ""
-          echo "[INFO] Root files:"
-          ls -la ./_final_site | head -50
+          # ------------------------------------------
+          # 반드시 존재해야 하는 파일
+          # ------------------------------------------
+          REQUIRED_FILES=(
+            "_final_site/index.html"
+            "_final_site/Portfolio/Game/Cheonryugwan-Archive/index.html"
+            "_final_site/Portfolio/study/ai/index.html"
+            "_final_site/Portfolio/study/cs/index.html"
+          )
 
+          echo ""
+          echo "[CHECK] Required files"
+          echo ""
+
+          for file in "${REQUIRED_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "[ERROR] Required file missing:"
+              echo "$file"
+              exit 1
+            fi
+
+            echo "[OK] $file"
+          done
+
+          # ------------------------------------------
+          # 천류관 주요 디렉터리 확인
+          # ------------------------------------------
+          CHEONRYUGWAN_ROOT="_final_site/Portfolio/Game/Cheonryugwan-Archive"
+
+          REQUIRED_CHEONRYUGWAN_DIRS=(
+            "$CHEONRYUGWAN_ROOT/assets"
+            "$CHEONRYUGWAN_ROOT/data"
+            "$CHEONRYUGWAN_ROOT/game"
+            "$CHEONRYUGWAN_ROOT/pages"
+          )
+
+          echo ""
+          echo "[CHECK] Cheonryugwan directories"
+          echo ""
+
+          for dir in "${REQUIRED_CHEONRYUGWAN_DIRS[@]}"; do
+            if [ ! -d "$dir" ]; then
+              echo "[ERROR] Required directory missing:"
+              echo "$dir"
+              exit 1
+            fi
+
+            echo "[OK] $dir"
+          done
+
+          # ------------------------------------------
+          # Portfolio 배포 결과 출력
+          # ------------------------------------------
           echo ""
           echo "[INFO] Portfolio index files:"
+          echo ""
 
-          if [ -d "./_final_site/Portfolio" ]; then
-            find ./_final_site/Portfolio \
-              -type f \
-              -name "index.html" \
-              | sort
-          else
-            echo "[INFO] No Portfolio directory."
-          fi
+          find ./_final_site/Portfolio \
+            -type f \
+            -name "index.html" \
+            | sort
 
           echo ""
-          echo "[SUCCESS] Validation completed."
+          echo "=========================================="
+          echo "[SUCCESS] Final Site Validation Completed"
+          echo "=========================================="
 
       # ==================================================
-      # 9. Upload GitHub Pages Artifact
+      # 10. Upload GitHub Pages Artifact
       # ==================================================
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
@@ -322,7 +396,7 @@ jobs:
           path: ./_final_site
 
   # ======================================================
-  # 10. Deploy GitHub Pages
+  # 11. Deploy GitHub Pages
   # ======================================================
   deploy:
     environment:
