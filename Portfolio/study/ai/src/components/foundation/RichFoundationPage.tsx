@@ -2,8 +2,7 @@
 import { useState } from "react";
 import { foundationPath } from "@/data/foundationPath";
 import { foundationDetails, type DetailTab } from "@/data/foundationDetails";
-import FoundationProgress from "./FoundationProgress";
-import FoundationSidebar from "./FoundationSidebar";
+import CommonLearningNav from "@/components/learning/CommonLearningNav";
 import FoundationRightInspector from "./FoundationRightInspector";
 import FoundationMap from "./FoundationMap";
 
@@ -31,9 +30,8 @@ export default function RichFoundationPage({id}:{id:string}){
   const d=foundationDetails[id];
 
   return <div className="foundation-learning-page">
-    <FoundationProgress currentId={id}/>
     <div className="foundation-3col">
-      <FoundationSidebar currentId={id}/>
+      <CommonLearningNav/>
 
       <main className="foundation-center">
         <div className="rich-title">

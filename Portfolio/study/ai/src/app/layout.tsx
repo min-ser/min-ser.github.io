@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ConceptProvider from "@/components/concept/ConceptProvider";
+import GlobalLearningFlow from "@/components/learning/GlobalLearningFlow";
 
 export const metadata: Metadata = {
   title: "NeuralScope",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ConceptProvider>
         <Header />
+        <GlobalLearningFlow />
         <main className="site-main">{children}</main>
         <Footer />
         </ConceptProvider>

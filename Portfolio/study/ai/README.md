@@ -1,28 +1,46 @@
-# NeuralScope v0.4.0
+# NeuralScope v0.6.0
 
-**Interactive Visual AI Learning Platform**
+v0.6.0은 학습 Navigation Architecture를 통합한 Minor Release입니다.
 
-v0.4.0은 Foundation 학습 화면을 전면 개편한 Minor Release입니다.
+## 문제
 
-## 핵심 변경
+v0.5.0에서는 상단 Global Learning Flow는 전체 Curriculum을 사용했지만,
+좌측 Navigation은 페이지 종류에 따라 서로 다른 데이터 구조를 사용했습니다.
 
-- 모든 Foundation 상세 페이지 상단에 공통 학습 Flow 표시
-- 현재 학습 위치 Highlight
-- AI → ML → DL → Neural Network → Transformer → LLM 진행률 표시
-- 좌측: 학습 경로 선택 + 전체 AI 개념 Navigation
-- 중앙: 풍부한 학습 콘텐츠와 시각화
-- 우측: Definition / Why / Where / How Deep / Next / Related Inspector
-- Deep Learning 페이지에 개요/상세/수학/역사/사례 탭
-- ML vs DL 비교 테이블
-- AI 관계도 재사용
+- Foundation: `FoundationSidebar`
+- Neuron ~ Transformer: 기존 `Sidebar`
+- 상단 Flow: `curriculum.ts`
 
-## Versioning
+따라서 같은 학습 경로인데 화면마다 목차와 번호 체계가 달라지는 충돌이 있었습니다.
+
+## v0.6.0 변경
+
+이제 학습 UI는 모두 `src/data/curriculum.ts` 하나를 기준으로 동작합니다.
 
 ```text
-v0.4.0  = 기능/화면 구조가 추가된 Minor Release
-v0.4.1  = 버그 수정 Patch
-v1.0.0  = 핵심 학습 흐름이 완성된 첫 Stable Release
+curriculum.ts
+   │
+   ├─ GlobalLearningFlow
+   ├─ CommonLearningNav
+   └─ CurriculumStepNav
 ```
+
+### 모든 /learn 페이지 공통
+
+- 상단: 전체 Global Learning Flow
+- 좌측: 전체 21 Step Navigation
+- 중앙: 현재 학습 콘텐츠
+- 하단: Curriculum 기준 Previous / Next
+
+Foundation, Neuron, Training, Transformer, LLM에서 모두 같은 Navigation 구조를 사용합니다.
+
+## 전체 Curriculum
+
+AI → ML → DL → Neural Network
+→ Neuron → Activation → Layer → Vector & Matrix → Forward
+→ Loss → Gradient → Backpropagation → Optimizer → Training
+→ Token & Embedding → Transformer → Self Attention → Language Model
+→ Generative AI → RAG → AI Agent
 
 ## 실행
 
@@ -31,8 +49,8 @@ npm install
 npm run dev
 ```
 
-## Build
+## 버전 정책
 
-```bash
-npm run build
-```
+- 기능/구조 변경: Minor (`v0.6.0`)
+- 버그 수정: Patch (`v0.6.1`)
+- Stable Release: `v1.0.0`

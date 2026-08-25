@@ -1,7 +1,7 @@
 import StepShell from "@/components/learning/StepShell";
-import { getStep } from "@/data/steps";
-import StepVisualPreview from "@/components/simulations/StepVisualPreview";
-export default function Page(){
-  const step=getStep(13)!;
-  return <StepShell id={13}><StepVisualPreview step={step}/></StepShell>
-}
+export default function Page(){return <StepShell id={13}>
+ <section className="learning-context"><div className="context-main"><div className="eyebrow">WHY THIS MATTERS</div><h2>왜 Transformer가 중요한가?</h2><p>Transformer는 현대 LLM의 핵심 구조입니다. Token과 Embedding을 입력으로 받아 Self Attention으로 토큰 간 관계를 계산하고, Residual과 Feed Forward를 반복하면서 표현을 정교하게 바꿉니다.</p><div className="question-grid"><div>왜 RNN 대신 Transformer가 주류가 되었을까?</div><div>Attention은 어떤 토큰을 중요하게 볼까?</div><div>LLM의 한 Block 안에서는 무슨 일이 일어날까?</div></div></div><div className="context-side"><div className="concept-label">WHERE THIS IS USED</div><strong>현대 LLM의 핵심 아키텍처</strong><p>GPT · 번역 · 요약 · 코드 생성 · 멀티모달</p></div></section>
+ <section className="sim-card"><div className="sim-toolbar"><span>TRANSFORMER BLOCK FLOW</span><span className="live-dot">● ARCHITECTURE</span></div><div className="transformer-flow">
+ {[["01","Token Input","문장이 Token으로 분리됨"],["02","Embedding","Token을 Vector로 변환"],["03","Self Attention","각 Token이 다른 Token을 얼마나 참고할지 계산"],["04","Add & Norm","Residual Connection과 정규화"],["05","Feed Forward","각 Token 표현을 MLP로 변환"],["06","Add & Norm","다시 Residual + 정규화"],["07","Next Block / Output","다음 Block 또는 출력층으로 전달"]].map(([n,t,d],i)=><div className="transformer-flow-item" key={n}><div className="tf-no">{n}</div><div><strong>{t}</strong><p>{d}</p></div>{i<6&&<div className="tf-arrow">↓</div>}</div>)}</div></section>
+ <section className="rich-card" style={{marginTop:16}}><div className="rich-card-title">Transformer 선수 개념</div><div className="prereq-grid">{[["Vector & Matrix","Linear 계산의 기반"],["Token & Embedding","문장을 숫자 Vector로 변환"],["Softmax","Attention Score를 비율로 변환"],["Self Attention","Token 간 관계 계산"],["Residual","원래 정보를 유지하며 계산을 더함"],["Feed Forward","각 Token 표현을 비선형 변환"]].map(([a,b])=><div className="prereq-item" key={a}><strong>{a}</strong><span>{b}</span></div>)}</div></section>
+ </StepShell>}
