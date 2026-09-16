@@ -1,6 +1,6 @@
 # 김민서 Web Resume
 
-> **Version 0.2.2 — TOS Korea Career Content
+> **Version 0.2.6 — Expertise Interactive Workspace**
 >
 > 김민서의 경력, 프로젝트, 기술 경험과 기술 기록을 장기적으로 관리하기 위한 Markdown 기반 Web Resume입니다.
 
@@ -574,7 +574,7 @@ Dark
 현재 버전:
 
 ```text
-v0.1.17
+v0.2.6
 ```
 
 초기 Foundation 단계에서는 구조와 UI를 빠르게 검증합니다.
@@ -1671,30 +1671,42 @@ The deployment workflow builds this repository root as the primary Next.js site,
 
 ## v0.2.4 — GitHub Pages Portfolio & Mobile Foundation
 
-- 모바일 Header MENU/CLOSE Navigation과 반응형 Home Canvas를 추가했습니다.
-- 모바일 오른쪽 대형 공백을 방지하고 Hero/Home/Common Section 폭을 보정했습니다.
-- `04 PORTFOLIO`를 추가하고 Cheonryugwan Archive, NeuralScope, CS Study를 연결했습니다.
-- 구버전 `/Portfolio/2026/index.html`은 Portfolio 목록에서 제외했습니다.
-- Root TypeScript가 독립 `Portfolio/study/*` 프로젝트를 검사하지 않도록 Build 범위를 격리했습니다.
+- 모바일 Header에 `MENU / CLOSE` Navigation을 추가했습니다.
+- 모바일 Hero / Home / 공통 Section의 폭과 Grid를 반응형으로 조정하고 오른쪽에 큰 공백이 생기는 문제를 방지했습니다.
+- `04 PORTFOLIO` 페이지를 추가했습니다.
+  - Cheonryugwan Archive
+  - NeuralScope
+  - CS Study
+- 구버전 웹 이력서인 `/Portfolio/2026/index.html`은 Portfolio 목록에서 제외했습니다.
+- Navigation을 `00 HOME / 01 PROFILE / 02 CAREER / 03 PROJECTS / 04 PORTFOLIO / 05 GITHUB / 06 EXPERTISE / 07 TRAINING / 08 ARCHIVE`로 정리했습니다.
+- Sitemap에 `/portfolio`를 추가했습니다.
+- Root TypeScript Build가 `Portfolio/study/*`의 독립 Next.js 프로젝트를 검사하지 않도록 `tsconfig.json` 범위를 격리했습니다.
+- 기존 `Portfolio/` 내부 프로젝트 소스는 수정하지 않습니다.
 
-## v0.2.5 — Responsive Content Foundation
+## v0.2.5 — Responsive UI & Expertise Reader
 
-- 모바일 Full Viewport Menu와 Body Scroll Lock을 적용했습니다.
-- Identity의 긴 COMPANY/CLIENT/ROLE/POSITION 문자열 Overflow를 보정했습니다.
-- Modal Viewport/CLOSE 접근성, Markdown 이미지 Auto-fit/Lightbox, iframe 16:9 Embed, Code/Table/Mermaid Overflow 처리를 추가했습니다.
-- Expertise의 PC Content Canvas를 넓혀 기술 문서와 대형 이미지를 더 효율적으로 표시하도록 조정했습니다.
+- 모바일 메뉴를 Full Viewport Overlay 방식으로 변경하고 메뉴 활성화 중 Body Scroll Lock을 적용했습니다.
+- 모바일 Identity Card의 긴 `COMPANY / CLIENT / ROLE / POSITION` 문자열 겹침과 Overflow를 개선했습니다.
+- 모바일/PC Typography를 `clamp()` 기반 반응형 크기로 보정했습니다.
+- 공통 Markdown / Modal을 Viewport에 맞게 조정하고 `CLOSE` 컨트롤이 항상 보이도록 개선했습니다.
+- Expertise 게시글 클릭 시 Modal 대신 `/expertise/[slug]` 독립 Reader를 사용하는 구조를 추가했습니다.
+- Expertise Reader의 최대 폭을 확대하고 일반 텍스트와 이미지 / 표 / 코드 영역의 폭 정책을 분리했습니다.
+- Markdown 이미지는 화면보다 클 경우 자동으로 축소하고 클릭 시 Lightbox로 확대할 수 있도록 개선했습니다.
+- Markdown의 YouTube 등 `iframe` 콘텐츠를 반응형 16:9 Embed로 처리하도록 개선했습니다.
+- Code / Table / Mermaid 콘텐츠가 Reader 영역을 깨지 않도록 Overflow 처리를 추가했습니다.
 
-## v0.2.6 — Expertise HUD Interactive Workspace
+## v0.2.6 — Expertise Interactive Workspace
 
-- v0.2.5에서 사라졌던 Expertise의 HUD/Terminal 전환 감성을 복원했습니다.
-- 게시글 클릭 시 별도 페이지/Modal로 이동하지 않고 현재 Knowledge Board가 Article Reader로 전환됩니다.
-- 문서 전환 시 Scan/Loading Effect와 `DOCUMENT LOADED` 상태를 표시합니다.
-- `BACK TO ARTICLES`로 같은 Workspace에서 목록으로 복귀합니다.
-- 현재 문서는 `/expertise?article=<slug>`로 주소에 반영되어 새로고침 시에도 해당 Article을 복원합니다.
-- 기존 v0.2.5의 Responsive, Image Fit/Lightbox, iframe, Code/Table/Mermaid Overflow 개선은 그대로 유지합니다.
-- 모바일 Reader는 가용 폭 전체를 사용하고 Explorer는 Reading 상태에서 숨깁니다.
+- Expertise 게시글 클릭 시 별도 페이지 이동이나 Modal 대신 현재 Knowledge Board 영역 자체가 Article Reader로 전환되는 Interactive Workspace 구조를 적용했습니다.
+- Article 전환 시 HUD Scan / Loading 효과와 `DOCUMENT LOADED` 상태 UI를 추가했습니다.
+- `BACK TO ARTICLES`를 통해 동일 화면에서 게시글 목록으로 복귀할 수 있습니다.
+- 모바일에서는 Knowledge Explorer를 숨기고 Reader가 전체 작업영역을 사용합니다.
+- 주소는 `/expertise?article=<slug>` 형태로 표시하지만 실제 Next.js 페이지 이동 없이 현재 Workspace에서 콘텐츠를 전환합니다.
+- 기존 `Portfolio/study` 프로젝트에는 영향을 주지 않습니다.
 
 ### Release documentation policy
 
-버전별 `APPLY_vX.Y.Z.md` 파일은 생성하지 않습니다. 변경 이력과 적용 정책은 `README.md`에 순서대로 누적하며, 새 버전은 직전 버전의 기능과 UI를 보존한 상태에서 변경사항을 추가합니다.
+`APPLY_vX.Y.Z.md` 형태의 버전별 적용 문서는 더 이상 별도로 생성하지 않습니다.
+
+앞으로 Release 변경사항, 적용 구조, 운영상의 주의사항은 이 `README.md`에 버전 순서대로 누적 기록합니다. 새 버전을 생성할 때는 직전 버전의 README를 기준으로 기존 History를 보존하고 새 버전 Section만 추가합니다.
 

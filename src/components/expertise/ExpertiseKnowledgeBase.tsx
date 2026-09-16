@@ -1,6 +1,6 @@
 "use client";
 import {useEffect,useMemo,useState} from "react";
-import {useRouter} from "next/navigation";
+import MarkdownRenderer from "@/components/content/MarkdownRenderer";
 
 export type KnowledgeGroup={id:string;title:string;description:string;order:number};
 export type KnowledgeArticle={
@@ -21,7 +21,8 @@ export default function ExpertiseKnowledgeBase({groups,articles,config}:{groups:
  const [activeGroup,setActiveGroup]=useState("");
  const [query,setQuery]=useState("");
  const [page,setPage]=useState(1);
- const router=useRouter();
+ const [activeArticle,setActiveArticle]=useState<KnowledgeArticle|null>(null);
+ const [transitioning,setTransitioning]=useState(false);
 
  const filtered=useMemo(()=>articles.filter(article=>{
   const groupMatch=!activeGroup||article.group===activeGroup;
@@ -35,7 +36,10 @@ export default function ExpertiseKnowledgeBase({groups,articles,config}:{groups:
  useEffect(()=>{setPage(1)},[activeGroup,query]);
  useEffect(()=>{if(page>totalPages)setPage(totalPages)},[page,totalPages]);
 
- const open=(article:KnowledgeArticle)=>router.push(`/expertise/${article.slug}`);
+ const syncUrl=(slug?:string)=>{const url=new URL(window.location.href);if(slug)url.searchParams.set("article",slug);else url.searchParams.delete("article");window.history.replaceState({},"",`${url.pathname}${url.search}${url.hash}`);};
+ const open=(article:KnowledgeArticle)=>{setTransitioning(true);window.setTimeout(()=>{setActiveArticle(article);syncUrl(article.slug);setTransitioning(false);window.scrollTo({top:0,behavior:"smooth"});},220);};
+ const closeArticle=()=>{setTransitioning(true);window.setTimeout(()=>{setActiveArticle(null);syncUrl();setTransitioning(false);},180);};
+ useEffect(()=>{const slug=new URLSearchParams(window.location.search).get("article");if(slug){const found=articles.find(a=>a.slug===slug);if(found)setActiveArticle(found);}},[articles]);
  const toggleGroup=(id:string)=>setActiveGroup(current=>current===id?"":id);
 
  return <div className="knowledgeLayout">
@@ -61,7 +65,15 @@ export default function ExpertiseKnowledgeBase({groups,articles,config}:{groups:
    })}</nav>
   </aside>
 
-  <main className="knowledgeMain">
+  <main className={`knowledgeMain ${activeArticle?"isReading":""}`}>
+   {transitioning&&<div className="knowledgeScan" aria-hidden="true"><i/><span>LOADING DOCUMENT...</span></div>}
+   {activeArticle?<article className="knowledgeReader">
+    <header className="knowledgeReaderHead"><button type="button" onClick={closeArticle}>← BACK TO ARTICLES</button><span>DOCUMENT LOADED</span></header>
+    <div className="knowledgeReaderMeta"><span>{activeArticle.category}</span><time>{config.updatedLabel} {date(activeArticle.updatedDate)}</time></div>
+    <h1>{activeArticle.title}</h1><p className="knowledgeReaderLead">{activeArticle.summary}</p>
+    <div className="knowledgeReaderTags">{activeArticle.tags.map(tag=><em key={`${activeArticle.slug}:${tag}`}>{tag}</em>)}</div>
+    <div className="knowledgeReaderBody"><MarkdownRenderer>{activeArticle.markdown}</MarkdownRenderer></div>
+   </article>:<>
    <div className="knowledgeToolbar">
     <div><span>{config.recentTitle}</span><b>{filtered.length} {config.articleCountLabel}</b></div>
     <label><span>{config.searchLabel}</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder={config.searchPlaceholder}/></label>
@@ -92,6 +104,7 @@ export default function ExpertiseKnowledgeBase({groups,articles,config}:{groups:
      <span>{config.pageLabel} {page} / {totalPages}</span>
      <button type="button" disabled={page>=totalPages} onClick={()=>setPage(v=>Math.min(totalPages,v+1))}>{config.nextLabel} ›</button>
     </div>
+   </>}
    </>}
   </main>
  </div>;
