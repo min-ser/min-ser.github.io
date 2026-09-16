@@ -1,6 +1,6 @@
 "use client";
+import Link from "next/link";
 import {useEffect,useMemo,useState} from "react";
-import MarkdownDetailModal,{MarkdownModalDocument} from "@/components/content/MarkdownDetailModal";
 
 export type KnowledgeGroup={id:string;title:string;description:string;order:number};
 export type KnowledgeArticle={
@@ -21,7 +21,6 @@ export default function ExpertiseKnowledgeBase({groups,articles,config}:{groups:
  const [activeGroup,setActiveGroup]=useState("");
  const [query,setQuery]=useState("");
  const [page,setPage]=useState(1);
- const [modal,setModal]=useState<MarkdownModalDocument|null>(null);
 
  const filtered=useMemo(()=>articles.filter(article=>{
   const groupMatch=!activeGroup||article.group===activeGroup;
@@ -35,11 +34,6 @@ export default function ExpertiseKnowledgeBase({groups,articles,config}:{groups:
  useEffect(()=>{setPage(1)},[activeGroup,query]);
  useEffect(()=>{if(page>totalPages)setPage(totalPages)},[page,totalPages]);
 
- const open=(article:KnowledgeArticle)=>setModal({
-  slug:article.slug,title:article.title,subtitle:article.category,
-  period:`${config.updatedLabel} ${date(article.updatedDate)}`,markdown:article.markdown,
-  detailHref:`/expertise/${article.slug}`,sourceLabel:config.modalSourceLabel
- });
  const toggleGroup=(id:string)=>setActiveGroup(current=>current===id?"":id);
 
  return <div className="knowledgeLayout">
@@ -59,7 +53,7 @@ export default function ExpertiseKnowledgeBase({groups,articles,config}:{groups:
       <button type="button" aria-pressed={activeGroup===group.id} className={`knowledgeGroupFilter ${activeGroup===group.id?"active":""}`} onClick={()=>toggleGroup(group.id)}>●</button>
      </div>
      {isOpen&&<div className="knowledgeGroupArticles">{docs.map(article=>
-      <button type="button" key={`${article.group}:${article.slug}`} onClick={()=>open(article)}>{article.title}</button>
+      <Link key={`${article.group}:${article.slug}`} href={`/expertise/${article.slug}`}>{article.title}</Link>
      )}</div>}
     </section>
    })}</nav>
@@ -79,13 +73,13 @@ export default function ExpertiseKnowledgeBase({groups,articles,config}:{groups:
      </div>
      {paged.map((article,rowIndex)=>{
       const absoluteIndex=(page-1)*pageSize+rowIndex+1;
-      return <button type="button" className="knowledgeBoardRow" key={`${article.group}:${article.slug}`} onClick={()=>open(article)}>
+      return <Link className="knowledgeBoardRow" key={`${article.group}:${article.slug}`} href={`/expertise/${article.slug}`}>
        <span className="knowledgeBoardIndex">{String(absoluteIndex).padStart(3,"0")}</span>
        <time>{date(article.updatedDate)}</time>
        <span className="knowledgeBoardCategory">{article.category}</span>
        <span className="knowledgeBoardArticle"><strong>{article.title}</strong><small>{article.summary}</small></span>
        <span className="knowledgeBoardTags">{article.tags.slice(0,4).map(tag=><em key={`${article.slug}:${tag}`}>{tag}</em>)}</span>
-      </button>
+      </Link>
      })}
     </div>
     <div className="knowledgePagination">
@@ -98,6 +92,5 @@ export default function ExpertiseKnowledgeBase({groups,articles,config}:{groups:
     </div>
    </>}
   </main>
-  <MarkdownDetailModal item={modal} closeLabel={config.modalCloseLabel} detailLabel={config.fullArticleLabel} onClose={()=>setModal(null)}/>
  </div>;
 }
