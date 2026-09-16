@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>배경 갤러리 | 천류관</title>
+<link rel="stylesheet" href="../../assets/css/common.css?v=0.9.8">
+<style>
+.section-title{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:0 auto 18px;max-width:1440px}
+.section-title h2{margin:0;font-size:32px}.section-title p{margin:0;color:#bdb3a5}
+.part1-grid,.part2-grid,.part3-grid,.part4-grid,.common-weather-grid,.background-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+  max-width:1440px;
+  margin:0 auto 54px;
+}
+.background-card,.catalog-card,.runtime-card{border:1px solid #4b4235;border-radius:11px;overflow:hidden;background:#15171b;min-width:0}
+.background-card a{display:block;aspect-ratio:16/9;overflow:hidden;background:#08090b}
+.background-card img{display:block;width:100%;height:100%;object-fit:cover;background:#08090b}
+.background-card .meta{display:flex;align-items:center;gap:12px;padding:12px;min-height:72px}
+.background-card .number{display:inline-flex;flex:0 0 38px;width:38px;height:38px;align-items:center;justify-content:center;border:1px solid #765f37;border-radius:50%;color:#e0b862;font-weight:700}
+.background-card h3,.catalog-card h3,.runtime-card h3{margin:0 0 4px}.background-card h3{font-size:15px;line-height:1.35}
+.background-card p{margin:0;color:#9f9688;font-size:12px;line-height:1.4}
+.catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:1440px;margin:0 auto 54px}
+.catalog-card img{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;background:#08090b}
+.catalog-card .meta,.runtime-card .meta{padding:13px}
+.badge{display:inline-block;border:1px solid #756142;border-radius:999px;padding:3px 8px;color:#d8b66f}
+.runtime-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1440px;margin:0 auto}
+.runtime-preview{height:240px;background-size:cover;background-position:center}
+.mapping-note{max-width:1440px;margin:0 auto 18px;padding:12px 14px;border:1px solid #5f4e37;border-radius:9px;background:#1a1713;color:#c9bda8}
+.mapping-note strong{color:#e0b862}
+code{display:block;color:#a89d8d;word-break:break-all}.asset-error{border-color:#9b3f3f}.asset-error img{opacity:.25}
+@media(max-width:1100px){
+ .part1-grid,.part2-grid,.part3-grid,.part4-grid,.common-weather-grid,.background-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .runtime-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+ .part1-grid,.part2-grid,.part3-grid,.part4-grid,.common-weather-grid,.background-grid,.catalog-grid,.runtime-grid{grid-template-columns:1fr}
+ .section-title{display:block}
+ .background-card .meta{min-height:0}
+}
+</style>
+<link rel="stylesheet" href="../../assets/css/editor-console.css"><link rel="stylesheet" href="../../assets/css/tokens.css"><link rel="stylesheet" href="../../assets/css/base.css"><link rel="stylesheet" href="../../assets/css/layout.css"><link rel="stylesheet" href="../../assets/css/components.css"></head>
+<body>
+<header class="site-header" data-site-header data-active="backgrounds" data-subtitle="천류관 : 흐름의 기록"></header>
+<main>
+<section class="page-hero">
+  <p class="eyebrow">BACKGROUND IMAGE SPLIT · v0.10.6</p>
+  <h1>배경</h1>
+  <p>1~4부 고화질 배경을 동일한 카드 배열로 확인합니다. GitHub 이미지 저장소와 파일명·번호를 다시 대조한 결과를 표시합니다.</p>
+</section>
+
+<section class="content-wrap">
+<div class="mapping-note"><strong>v0.10.6 전수 재검수</strong> — 1~3부와 공통 배경은 GitHub 원격 PNG를 기준으로 통일했습니다. 4부는 저장소에 실제 존재하는 01~28, 30만 원격 사용하며, 없는 항목을 임의 URL로 연결하지 않습니다.</div>
+<div class="mapping-note"><strong>4부 번호 주의</strong> — 원본 목록 자체가 18 다음 20으로 이어져 19번이 없습니다. 화면에는 원본 번호를 그대로 표시합니다.</div>
+<div id="background-gallery"></div>
+</section></main>
+<footer class="site-footer"><span>v0.10.6 · GitHub 고화질 배경 저장소 재검수</span></footer>
+<script type="module">
+const specs=[
+ [1,"../../data/backgrounds-part-1.json","backgrounds","1부 배경"],
+ [2,"../../data/part-2-backgrounds.json","items","2부 배경"],
+ [3,"../../data/part-3-backgrounds.json","items","3부 배경"],
+ [4,"../../data/part-4-backgrounds.json","items","4부 배경"],
+ [0,"../../data/common-weather-backgrounds.json","items","공통 날씨·시간 배경"]
+];
+const root=document.querySelector("#background-gallery");
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+for(const [part,url,key,title] of specs){
+ const r=await fetch(url); const d=await r.json(); const items=d[key]||[];
+ const remote=items.filter(x=>x.assetSource==="remote"||/^https?:/.test(x.remoteUrl||x.web||"")).length;
+ root.insertAdjacentHTML("beforeend",`<div class="section-title"><div><p class="eyebrow">${part?`PART ${String(part).padStart(2,"0")}`:"COMMON"} · ASSET GALLERY</p><h2>${esc(title)} ${items.length}종</h2><p>GitHub 원격 ${remote} · 프로젝트 로컬 ${items.length-remote}</p></div></div><div class="background-grid" data-gallery="${part||"common"}"></div>`);
+ const grid=root.lastElementChild;
+ for(const x of items){
+  const src=x.remoteUrl||x.web; const n=part===4?(x.originalNumber??x.id):(x.number??x.id); const remote=/^https?:/.test(src||"");
+  const resolved=remote?src:new URL("../../"+src,location.href).href;
+  grid.insertAdjacentHTML("beforeend",`<article class="background-card" data-part="${part}" data-id="${esc(x.id)}" data-source="${remote?"remote":"local"}"><a href="${esc(resolved)}" target="_blank" rel="noopener"><img src="${esc(resolved)}" alt="${esc(n)}. ${esc(x.title||x.name)}" loading="lazy" onerror="this.closest('article').classList.add('asset-error');this.alt='이미지 로드 실패';"></a><div class="meta"><span class="number">${String(n).padStart(2,"0")}</span><div><h3>${esc(x.title||x.name)}</h3><p>${remote?"GitHub 원격 PNG":"원격 미등록 · 로컬 보존"}</p></div></div></article>`);
+ }
+}
+</script>
+<script type="module" src="../../assets/js/shared-header.js"></script><script type="module" src="../../assets/js/core/app.js"></script></body></html>

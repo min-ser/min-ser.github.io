@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "authMode": "WORKLOAD_IDENTITY",
+  "response": "PONG",
+  "tls": "TLSv1.3",
+  "latencyMs": 34,
+  "token": "eyJ...DEMO_SIGNATURE_NOT_VALID"
+}

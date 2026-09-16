@@ -1,0 +1,9 @@
+{
+  "name": "천류관 : 흐름의 기록",
+  "short_name": "천류관",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#15120f",
+  "theme_color": "#15120f",
+  "icons": []
+}

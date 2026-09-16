@@ -1,0 +1,5 @@
+2026-07-31 13:16:00.104 [INFO ] [REQUEST   ] Network validation request received
+2026-07-31 13:16:00.241 [PASS ] [DNS       ] Resolved address=10.10.20.15
+2026-07-31 13:16:00.378 [PASS ] [TCP       ] Connected remote=10.10.20.15:443
+2026-07-31 13:16:00.515 [PASS ] [TLS       ] Negotiated protocol=TLSv1.3
+2026-07-31 13:16:00.652 [PASS ] [SUMMARY   ] Overall result=PASS, totalElapsedMs=119

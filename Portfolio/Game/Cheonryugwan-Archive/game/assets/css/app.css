@@ -1,0 +1,13 @@
+:root{--panel:rgba(20,17,14,.9);--gold:#c8a96b;--text:#f2eadc;--muted:#aca191}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#0e0c0a;color:var(--text);font-family:Georgia,"Noto Serif KR",serif}
+button{font:inherit}.app{min-height:100dvh}.screen{display:none;min-height:100dvh}.screen.active{display:flex}
+#menu{position:relative;overflow:hidden;flex-direction:column;align-items:center;justify-content:center;padding:32px 24px;background:radial-gradient(circle at 50% 30%,#393026 0,#18130f 48%,#0b0908 100%)}
+.mist{position:absolute;inset:-20%;background:radial-gradient(ellipse,rgba(255,255,255,.08),transparent 60%);animation:drift 12s ease-in-out infinite alternate}
+.title-wrap,.menu,.version{position:relative;z-index:1;text-align:center}.eyebrow{font:11px Arial;letter-spacing:.28em;color:var(--muted)}
+h1{margin:16px 0 0;font-size:clamp(56px,18vw,88px);font-weight:500;letter-spacing:.08em}.subtitle{margin:4px 0 24px;color:var(--gold);letter-spacing:.4em}.slogan{color:var(--muted);line-height:1.9;font-size:14px}
+.menu{display:grid;gap:10px;width:min(100%,360px);margin-top:36px}.menu button{min-height:52px;border:1px solid rgba(200,169,107,.45);background:rgba(10,8,7,.55);color:var(--text);border-radius:8px}.menu button:disabled{opacity:.48}.menu small{display:block;color:var(--muted);font-size:10px}
+.version{margin-top:28px;color:#766d62;font:11px Arial}.topbar{height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:#100d0b}.topbar button{border:0;background:none;color:var(--text);font-size:30px}
+#novel{flex-direction:column}.scene{flex:1;background:radial-gradient(circle at 50% 25%,#554636,#1a1511 70%);display:flex;align-items:flex-end;padding:18px}
+.dialogue{width:min(100%,720px);margin:0 auto 12px;background:var(--panel);border:1px solid rgba(200,169,107,.32);border-radius:14px;padding:20px}.speaker{color:var(--gold);font-weight:700}.text{min-height:88px;line-height:1.9;font-size:17px;white-space:pre-line}
+.next,.choices button{width:100%;min-height:48px;margin-top:12px;border:1px solid #6d593a;border-radius:8px;background:#211a13;color:var(--text)}.choices{display:grid;gap:8px}
+@keyframes drift{from{transform:translate(-2%,-1%)}to{transform:translate(3%,2%)}}

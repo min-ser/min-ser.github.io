@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "operation": "STORED_PROCEDURE",
+  "code": "SQL 0",
+  "rows": 1,
+  "procedure": "[dbo].[usp_validation_gate]",
+  "resultSets": [[{
+    "TEST_RESULT": 1,
+    "REQUEST_ID": "kms-demo-001",
+    "STATUS": "COMPLETED"
+  }]],
+  "demoMode": true
+}

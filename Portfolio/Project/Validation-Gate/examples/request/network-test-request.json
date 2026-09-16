@@ -1,0 +1,8 @@
+{
+  "environment": "prd",
+  "host": "kms-prd-fabric.privatelink.fabric.microsoft.com",
+  "port": 443,
+  "protocol": "https",
+  "timeoutMs": 5000,
+  "demoMode": true
+}

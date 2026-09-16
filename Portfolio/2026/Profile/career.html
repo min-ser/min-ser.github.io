@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Career | Kim Minseo</title>
+<meta name="description" content="김민서의 Backend, Platform, Azure AI, Microsoft Fabric 경력 상세 포트폴리오">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07111f;--surface:#10213a;--text:#f5f9ff;--muted:#93a9c1;--p:#2b9cff;--p2:#75d4ff;--border:rgba(255,255,255,.085)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,"Noto Sans KR",sans-serif;background:radial-gradient(circle at 88% 3%,rgba(43,156,255,.14),transparent 24%),var(--bg);color:var(--text);line-height:1.7}
+.container{width:min(1200px,calc(100% - 40px));margin:auto}.header{position:sticky;top:0;z-index:50;background:rgba(7,17,31,.86);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}.header-inner{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{text-decoration:none;font-weight:900;letter-spacing:.08em}.nav{display:flex;gap:20px}.nav a{text-decoration:none;color:var(--muted);font-size:13px;font-weight:700}
+.hero{position:relative;overflow:hidden;padding:108px 0 88px;border-bottom:1px solid var(--border)}.hero:before{content:"";position:absolute;inset:0;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent)}.hero .container{position:relative}.eyebrow{color:var(--p2);font-size:12px;font-weight:900;letter-spacing:.13em}.hero h1{max-width:1000px;margin:18px 0;font-size:clamp(52px,7vw,92px);line-height:1;letter-spacing:-.07em}.gradient{background:linear-gradient(135deg,#fff,#7edaff,#2b9cff);-webkit-background-clip:text;color:transparent}.hero p{max-width:900px;color:#d8e5f3;font-size:19px}.hero-tags,.stack{display:flex;flex-wrap:wrap;gap:8px}.hero-tags span,.stack span{padding:7px 10px;border:1px solid rgba(117,212,255,.16);border-radius:999px;color:#cceeff;background:rgba(43,156,255,.055);font-size:11px;font-weight:700}
+.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative;margin-top:-28px}.metrics div{padding:22px;border:1px solid var(--border);border-radius:17px;background:linear-gradient(180deg,#10213a,#0b1728);box-shadow:0 24px 70px rgba(0,0,0,.28)}.metrics strong{display:block;color:var(--p2);font-size:25px}.metrics span{color:var(--muted);font-size:12px}
+.section{padding:88px 0}.section-title{margin-bottom:34px}.section-title h2{margin:8px 0;font-size:clamp(38px,5vw,58px);line-height:1.08;letter-spacing:-.055em}.section-title p{max-width:840px;color:var(--muted)}
+.career-timeline{position:relative;display:grid;gap:28px}.career-timeline:before{content:"";position:absolute;left:29px;top:5px;bottom:5px;width:2px;background:linear-gradient(var(--p),rgba(117,212,255,.08))}.career-block{display:grid;grid-template-columns:60px 1fr;gap:28px}.career-marker{position:relative;z-index:2;padding-top:25px}.career-marker span{display:grid;place-items:center;width:58px;height:58px;border-radius:17px;color:#04111c;background:linear-gradient(135deg,var(--p),var(--p2));font-weight:900}.career-card{padding:32px;border:1px solid var(--border);border-radius:21px;background:linear-gradient(180deg,#10213a,#0b1728)}.career-head{padding-bottom:20px;border-bottom:1px solid var(--border)}.period{color:var(--p2);font-size:12px;font-weight:900;letter-spacing:.07em}.career-head h3{margin:7px 0 0;font-size:32px;letter-spacing:-.04em}.org{margin:2px 0;color:var(--muted);font-size:13px}.title{display:block;margin-top:8px}.summary{color:#d8e5f3;font-size:17px}.career-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}.panel,.projects-panel{padding:20px;border:1px solid var(--border);border-radius:15px;background:rgba(255,255,255,.02)}.panel h4,.projects-panel h4{margin:0 0 10px}.panel li{color:var(--muted);font-size:13px}.panel li+li{margin-top:5px}.projects-panel{margin-top:18px}.project-mini-list{display:grid;gap:11px}.project-mini{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:16px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.018)}.project-mini-date{color:var(--p2);font-size:11px;font-weight:800}.project-mini h5{margin:0;font-size:15px}.project-mini p{margin:5px 0 0;color:var(--muted);font-size:12px}.stack{margin-top:20px}
+.values{background:rgba(255,255,255,.016);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.value{padding:25px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(180deg,#10213a,#0b1728)}.value span{color:var(--p2);font-size:11px;font-weight:900}.value h3{font-size:21px}.value p{color:var(--muted);font-size:13px}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.edu-card{padding:25px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(180deg,#10213a,#0b1728)}.edu-card span{color:var(--p2);font-size:11px;font-weight:900}.edu-card h3{font-size:23px}.edu-card strong{display:block}.edu-card p{color:var(--muted);font-size:13px}
+.award-list{display:grid;gap:12px}.award-card{display:grid;grid-template-columns:110px 1fr;gap:22px;padding:20px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.02)}.award-card>span{color:var(--p2);font-size:12px;font-weight:900}.award-card h3{margin:0;font-size:18px}.award-card p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.closing{text-align:center;padding:100px 0}.closing h2{font-size:clamp(46px,7vw,78px);line-height:1;letter-spacing:-.065em;margin:12px 0}.closing p{max-width:760px;margin:auto;color:var(--muted)}.footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted);font-size:12px}.reveal{opacity:0;transform:translateY(18px)}.reveal.show{opacity:1;transform:none;transition:.65s ease}
+@media(max-width:980px){.metrics{grid-template-columns:repeat(2,1fr)}.career-grid,.value-grid,.edu-grid{grid-template-columns:1fr 1fr}.project-mini{grid-template-columns:1fr}.nav{display:none}}@media(max-width:680px){.metrics,.career-grid,.value-grid,.edu-grid{grid-template-columns:1fr}.career-block{grid-template-columns:1fr;padding-left:34px}.career-marker{position:absolute;left:0}.career-timeline:before{left:29px}.career-card{margin-left:28px}.award-card{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><div class="container header-inner"><a class="brand" href="../index.html">KIM MINSEO</a><nav class="nav"><a href="../index.html">Home</a><a href="./index.html">Profile</a><a href="./career.html">Career</a><a href="./projects.html">Projects</a><a href="./architecture.html">Architecture</a><a href="./contact.html">Contact</a></nav></div></header>
+<main>
+<section class="hero"><div class="container"><span class="eyebrow">CAREER JOURNEY · 2017—PRESENT</span><h1>운영에서 시작해<br><span class="gradient">Enterprise AI Platform Architect로.</span></h1><p>방송 관제, Mission Critical PMS 운영, 전자상거래 Backend 개발, Azure Infrastructure, AKS, DevOps, 생성형 AI, Microsoft Fabric까지 실제 문제를 직접 구현하고 해결하며 역할을 확장해 왔습니다.</p><div class="hero-tags"><span>Backend Engineering</span><span>Production Operations</span><span>Azure Architecture</span><span>Enterprise AI</span><span>Microsoft Fabric</span><span>Platform Engineering</span></div></div></section>
+<div class="container metrics"><div><strong>6+ Years</strong><span>실무 경력</span></div><div><strong>4 Companies</strong><span>운영 · 개발 · Cloud</span></div><div><strong>10+ Projects</strong><span>엔터프라이즈 프로젝트</span></div><div><strong>100+</strong><span>Azure/Fabric 이슈 해결</span></div><div><strong>30m → 1m30s</strong><span>Query Optimization</span></div></div>
+<section class="section"><div class="container"><div class="section-title reveal"><span class="eyebrow">PROFESSIONAL EXPERIENCE</span><h2>경력 상세</h2><p>회사와 직책뿐 아니라 어떤 문제를 맡았고 무엇을 구현했으며 어떤 역량으로 확장되었는지를 함께 정리했습니다.</p></div><div class="career-timeline">
+    <article class="career-block reveal">
+      <div class="career-marker"><span>01</span></div>
+      <div class="career-card">
+        <header class="career-head">
+          <div>
+            <span class="period">2022.07 — Present</span>
+            <h3>메가존클라우드㈜</h3>
+            <p class="org">Microsoft Technology Center → AIDataCenter / AIR Ops</p>
+            <strong class="title">Manager · Azure AI Platform Engineer · Platform Architect</strong>
+          </div>
+        </header>
+        <p class="summary">Backend와 운영 경험을 기반으로 Azure AI, Microsoft Fabric, AKS, APIM, Zero Trust 중심의 엔터프라이즈 AI·데이터 플랫폼을 설계하고 운영하고 있습니다.</p>
+        <div class="career-grid">
+          <section class="panel"><h4>주요 역할</h4><ul><li>Azure AI / Data Platform 영역 PA(Platform Architect)</li><li>Azure Part PL 및 Azure SME</li><li>Application Architect / Solution Architect</li><li>고객사 기술 의사결정 지원과 고난이도 이슈 조율</li><li>보안·네트워크·인증·배포·관측성 운영 기준 수립</li><li>개발 가이드, 샘플 코드, Architecture Decision, Runbook 문서화</li></ul></section>
+          <section class="panel"><h4>핵심 성과</h4><ul><li>Azure/Fabric 관련 기술 이슈 및 티켓 100건 이상 해결</li><li>Azure AI Foundry / Microsoft Fabric 운영 표준 수립</li><li>Access Key 중심 구조를 Workload Identity 중심 아키텍처로 전환</li><li>FastAPI 기반 Self-Service Validation Gate 구축</li><li>Fabric Notebook/Pipeline CI/CD 자동화</li><li>Fabric Capacity Dynamic Autoscale 구조 설계 및 구현</li><li>Private Link, DNS, NSG, 방화벽, TLS 문제의 반복 진단 체계 구축</li><li>Azure Naming Rule과 재사용 가능한 프로젝트 표준 문서화</li></ul></section>
+        </div>
+        <section class="projects-panel">
+          <h4>주요 프로젝트 및 수행 내용</h4>
+          <div class="project-mini-list"><article class="project-mini"><div class="project-mini-date">2025.07 — Present</div><div><h5>아모레퍼시픽 Enterprise Azure AI &amp; Data Platform</h5><p>Azure AI Foundry, Azure OpenAI, AI Search, Document Intelligence, Microsoft Fabric, AKS, APIM, Datadog, Snowflake, AWS S3/RDS를 연결한 엔터프라이즈 플랫폼을 설계·운영했습니다. Access Key 구조를 Workload Identity 중심으로 전환하고, Private Endpoint·Private DNS·RBAC·NSG 기반 Zero Trust 기준을 수립했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2025.03 — 2025.07</div><div><h5>삼성증권 해외 투자정보 번역·요약 서비스</h5><p>Azure OpenAI, APIM Premium, Private Endpoint, Managed Identity, Prompt Shield, Content Safety를 적용해 보안성과 운영 통제력을 갖춘 AI 서비스 아키텍처를 구축했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2024.09 — 2024.12</div><div><h5>GenAI360 생성형 AI 플랫폼</h5><p>LangChain, FastAPI, Azure OpenAI, Azure AI Search를 이용해 문서 Chunking, Embedding, Vector Search, Prompt 실행을 연결한 RAG 서비스 표준 구조를 설계했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2024.07 — 2024.08</div><div><h5>가제트코리아 Azure Subscription Migration</h5><p>Azure Sponsorship 만료에 따른 CSP 이전을 위해 195개 리소스의 종속성과 이전 제약을 분석하고 Migration 순서, Risk, Rollback 관점을 정리했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2024.07 — 2024.08</div><div><h5>AIA생명 Azure DevOps Architecture POC</h5><p>Jenkins, AKS, Azure App Service 기반 배포 구조를 비교하고 고객 환경에 적합한 CI/CD 아키텍처를 제안·검증했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2024.04 — 2024.05</div><div><h5>포스코이앤씨 Azure Functions POC</h5><p>Azure Functions와 Managed Identity 기반 서버리스 샘플을 구현하고 Secret 없는 인증 패턴을 검증했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2023.08 — 2024.01</div><div><h5>KB헬스케어 B2B/B2C Platform</h5><p>MySQL/PostgreSQL 이중화, Failover, JPA Replica, Kubernetes Proxy 장애 분석, Spring Boot 성능 테스트를 수행했습니다. Microsoft Partner Award 수상 사례에 참여했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2023.08</div><div><h5>TKG태광 GitHub Actions CI/CD</h5><p>GitHub Actions Workflow를 이용해 Azure 배포 자동화를 구성하고 환경별 Secret과 배포 단계를 표준화했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2023.05</div><div><h5>Azure SpaceOne</h5><p>Azure Cost Management API와 Partner Center API 연동을 통해 비용·구독 정보를 플랫폼에서 활용할 수 있는 기반을 마련했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2023.04 — 2024.01</div><div><h5>밀버스 Azure Infrastructure</h5><p>Azure VM, MySQL, WAF, SSL, DNS, Snapshot 기반 인프라를 구축하고 서비스 오픈과 운영 안정화를 지원했습니다.</p></div></article></div>
+        </section>
+        <div class="stack"><span>Azure AI Foundry</span><span>Azure OpenAI</span><span>Azure AI Search</span><span>Document Intelligence</span><span>Microsoft Fabric</span><span>AKS</span><span>APIM</span><span>Private Endpoint</span><span>Workload Identity</span><span>Managed Identity</span><span>Datadog</span><span>GitLab</span><span>ArgoCD</span><span>GitHub Actions</span><span>FastAPI</span><span>Python</span><span>Java</span><span>Snowflake</span><span>AWS S3</span><span>AWS RDS</span><span>OPDG</span></div>
+      </div>
+    </article>
+    
+
+    <article class="career-block reveal">
+      <div class="career-marker"><span>02</span></div>
+      <div class="career-card">
+        <header class="career-head">
+          <div>
+            <span class="period">2021.12 — 2022.06</span>
+            <h3>㈜지호아이앤씨</h3>
+            <p class="org">개발팀</p>
+            <strong class="title">Backend Engineer · SI Developer</strong>
+          </div>
+        </header>
+        <p class="summary">현대백화점 온라인 식품몰과 E-슈퍼마켓 고도화 프로젝트에서 정기구독, 주문, 결제, 배송, 마이페이지, 관리자 기능을 개발했습니다.</p>
+        <div class="career-grid">
+          <section class="panel"><h4>주요 역할</h4><ul><li>정기구독 메인 서비스와 배송 관리 기능 개발</li><li>회원 자동결제 및 주문 상태 처리</li><li>PC/Mobile 장바구니·주문현황·주문내역·마이페이지 개발</li><li>관리자 픽업 리스트와 운영 리포트 지원</li><li>Oracle 쿼리 설계와 성능 튜닝</li><li>단위·통합 테스트와 운영 오류 수정</li></ul></section>
+          <section class="panel"><h4>핵심 성과</h4><ul><li>정기구독 핵심 기능과 자동결제 프로세스 구현</li><li>사용자와 관리자 주문 운영 흐름 안정화</li><li>테스트 과정에서 발견된 주문·결제 오류 수정</li><li>전시구좌 및 정기구독 관련 Oracle 쿼리 설계</li></ul></section>
+        </div>
+        <section class="projects-panel">
+          <h4>주요 프로젝트 및 수행 내용</h4>
+          <div class="project-mini-list"><article class="project-mini"><div class="project-mini-date">2021.12 — 2022.06</div><div><h5>현대백화점 온라인 식품몰 고도화</h5><p>정기구독의 주기·배송일·주문 생성·자동결제 흐름을 구현하고 주문 취소와 배송 상태 변경을 보완했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2021.12 — 2022.06</div><div><h5>현대백화점 E-슈퍼마켓</h5><p>장바구니, 주문, 관리자 시스템, 픽업 리스트, 운영 리포트 기능을 개발하고 Oracle 기반 쿼리를 설계했습니다.</p></div></article></div>
+        </section>
+        <div class="stack"><span>Java</span><span>Spring</span><span>JSP</span><span>Oracle</span><span>MyBatis</span><span>Xplatform</span><span>OZ Report</span></div>
+      </div>
+    </article>
+    
+
+    <article class="career-block reveal">
+      <div class="career-marker"><span>03</span></div>
+      <div class="career-card">
+        <header class="career-head">
+          <div>
+            <span class="period">2019.04 — 2020.04</span>
+            <h3>㈜코디더매니저</h3>
+            <p class="org">기술개발본부</p>
+            <strong class="title">Backend Engineer · Production Platform Engineer</strong>
+          </div>
+        </header>
+        <p class="summary">호텔 운영의 핵심 시스템인 PMS를 개발·운영하며 Application, Linux, Web Server, Database, 배포, 장애 대응을 End-to-End로 수행했습니다.</p>
+        <div class="career-grid">
+          <section class="panel"><h4>주요 역할</h4><ul><li>Java/Spring Backend 개발 및 운영</li><li>AngularJS Frontend 유지보수</li><li>Linux 서버, Nginx, Tomcat 운영</li><li>Docker Container 및 L4 기반 서비스 구조 관리</li><li>CUBRID / MariaDB 운영과 Query Tuning</li><li>SVN / Jenkins 기반 배포 운영</li><li>신규 호텔 구축과 PMS 버전 업그레이드</li><li>운영 장애 분석 및 복구</li></ul></section>
+          <section class="panel"><h4>핵심 성과</h4><ul><li>연간 리포트 조회 시간 30분 이상 → 약 1분 30초 개선</li><li>Mission Critical PMS 운영 안정성 향상</li><li>예약번호 중복, F&amp;B 정산 누락, Deadlock, Application Hang 장애 복구</li><li>신규 호텔 온보딩과 배포 절차 표준화</li><li>Database 운영 안정성과 장애 복구 시간 개선</li></ul></section>
+        </div>
+        <section class="projects-panel">
+          <h4>주요 프로젝트 및 수행 내용</h4>
+          <div class="project-mini-list"><article class="project-mini"><div class="project-mini-date">2019.04 — 2020.04</div><div><h5>Hotel PMS Application Development</h5><p>예약, 객실, 결제, F&amp;B, 정산 기능을 개발·유지보수하고 키오스크 연동 REST API를 구현했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2019.04 — 2020.04</div><div><h5>Production Infrastructure Operation</h5><p>Linux, Nginx, Tomcat, Docker, L4 환경을 운영하며 서비스 장애와 Application Hang을 분석했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2019.04 — 2020.04</div><div><h5>Database Migration &amp; Optimization</h5><p>CUBRID에서 MariaDB로 데이터 마이그레이션을 수행하고 Replication, Lock, Deadlock, Transaction 문제를 해결했습니다.</p></div></article><article class="project-mini"><div class="project-mini-date">2019.04 — 2020.04</div><div><h5>Hotel Onboarding</h5><p>신규 호텔 도메인 생성, PMS 버전 업그레이드, 운영 데이터 Migration, 배포를 수행했습니다.</p></div></article></div>
+        </section>
+        <div class="stack"><span>Java</span><span>Spring</span><span>AngularJS</span><span>Linux</span><span>Nginx</span><span>Tomcat</span><span>Docker</span><span>Jenkins</span><span>SVN</span><span>CUBRID</span><span>MariaDB</span></div>
+      </div>
+    </article>
+    
+
+    <article class="career-block reveal">
+      <div class="career-marker"><span>04</span></div>
+      <div class="career-card">
+        <header class="career-head">
+          <div>
+            <span class="period">2017.12 — 2018.04</span>
+            <h3>㈜티오에스코리아</h3>
+            <p class="org">멀티미디어팀 · SK브로드밴드 파견</p>
+            <strong class="title">Broadcast Monitoring Engineer</strong>
+          </div>
+        </header>
+        <p class="summary">방송 송출 장비와 관제 시스템을 모니터링하며 운영 장애 대응과 Failover의 기본기를 익혔습니다.</p>
+        <div class="career-grid">
+          <section class="panel"><h4>주요 역할</h4><ul><li>지상파 Main / Backup 송출 모니터링</li><li>STB Video / Audio 상태 점검</li><li>WFM Jitter와 RF-IRD 원격 확인</li><li>장애 발생 시 Failover 대응</li><li>상황실 관제 및 방송통신장비 유지보수</li></ul></section>
+          <section class="panel"><h4>핵심 성과</h4><ul><li>실시간 관제와 장애 대응 경험 확보</li><li>서비스 연속성 및 Failover 개념 체득</li><li>운영 환경에서의 신속한 상황 판단 역량 형성</li></ul></section>
+        </div>
+        <section class="projects-panel">
+          <h4>주요 프로젝트 및 수행 내용</h4>
+          <div class="project-mini-list"><article class="project-mini"><div class="project-mini-date">2017.12 — 2018.04</div><div><h5>Broadcast Operations</h5><p>실시간 방송 송출 상태를 감시하고 Main/Backup 전환과 장비 이상 여부를 확인했습니다.</p></div></article></div>
+        </section>
+        <div class="stack"><span>Broadcast Monitoring</span><span>STB</span><span>WFM</span><span>RF-IRD</span><span>Failover</span><span>Operations</span></div>
+      </div>
+    </article>
+    </div></div></section>
+<section class="section values"><div class="container"><div class="section-title reveal"><span class="eyebrow">ENGINEERING IDENTITY</span><h2>일하는 방식</h2></div><div class="value-grid">
+<article class="value reveal"><span>01 · RECORD</span><h3>기록형 엔지니어</h3><p>복잡한 이슈를 기억에 의존하지 않고 재현 절차, 원인, 해결 방법, 공식 문서로 남깁니다.</p></article>
+<article class="value reveal"><span>02 · OPERATIONS</span><h3>운영 중심 설계</h3><p>구축 완료보다 배포 이후의 장애 대응, 관측성, 보안, 비용과 변경 가능성을 중요하게 봅니다.</p></article>
+<article class="value reveal"><span>03 · DEVELOPMENT</span><h3>개발자 관점</h3><p>아키텍처를 문서로만 제안하지 않고 FastAPI, Python, Java, CI/CD 코드로 직접 검증합니다.</p></article>
+<article class="value reveal"><span>04 · STANDARD</span><h3>재사용 가능한 표준</h3><p>한 번 해결한 문제를 Naming Rule, Sample Code, Validation Gate, Runbook으로 변환합니다.</p></article>
+</div></div></section>
+<section class="section"><div class="container"><div class="section-title reveal"><span class="eyebrow">EDUCATION</span><h2>학력</h2></div><div class="edu-grid"><article class="edu-card reveal"><span>2024.02 — 2026.02</span><h3>한국방송통신대학교 프라임칼리지</h3><strong>첨단공학부 AI 전공 · GPA 4.045 / 4.5</strong><p>실무에서 다뤄온 AI, 데이터, 클라우드 경험을 이론적으로 확장하고 체계화했습니다.</p></article>
+<article class="edu-card reveal"><span>2012.02 — 2014.02</span><h3>울산대학교</h3><strong>경찰학과 졸업</strong><p>문제 분석, 제도 이해, 논리적 사고의 기반을 형성했습니다.</p></article>
+<article class="edu-card reveal"><span>2007.02 — 2009.02</span><h3>경주대학교</h3><strong>정보통신공학 전공 후 자퇴 · GPA 3.54 / 4.5</strong><p>정보통신과 컴퓨팅 기초를 학습했습니다.</p></article></div></div></section>
+<section class="section values"><div class="container"><div class="section-title reveal"><span class="eyebrow">CERTIFICATIONS & AWARDS</span><h2>자격 및 수상</h2></div><div class="award-list"><article class="award-card reveal"><span>2024.11</span><div><h3>Microsoft AZ-140</h3><p>Azure Virtual Desktop Specialty</p></div></article>
+<article class="award-card reveal"><span>2024.02</span><div><h3>Microsoft Partner Award</h3><p>Digital &amp; App Innovation 분야 수상 프로젝트 참여</p></div></article>
+<article class="award-card reveal"><span>2021.06</span><div><h3>정보처리기사</h3><p>한국산업인력공단</p></div></article>
+<article class="award-card reveal"><span>2021.01</span><div><h3>공로상</h3><p>대한상공회의소 서울기술교육센터 · 학업 성적 우수</p></div></article>
+<article class="award-card reveal"><span>2021.01</span><div><h3>대상</h3><p>딥러닝 기반 주가 예측 서비스 프로젝트</p></div></article>
+<article class="award-card reveal"><span>2020.12</span><div><h3>우수상</h3><p>웹 기반 코로나 정보 공유 챗봇 서비스</p></div></article>
+<article class="award-card reveal"><span>2020.10</span><div><h3>과정 대표 임명</h3><p>대한상공회의소 서울기술교육센터</p></div></article></div></div></section>
+<section class="closing"><div class="container reveal"><span class="eyebrow">CAREER DIRECTION</span><h2>개발자 지향의<br><span class="gradient">Platform Architect.</span></h2><p>Backend와 운영에서 얻은 현실적인 문제 해결 감각을 바탕으로, Azure AI와 Microsoft Fabric을 실제로 운영 가능한 엔터프라이즈 플랫폼으로 설계합니다.</p></div></section>
+</main>
+<footer class="footer"><div class="container">© 2026 Kim Minseo Portfolio · Backend · Azure · Enterprise AI · Microsoft Fabric</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+ const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');o.unobserve(e.target)}}),{threshold:.07});
+ document.querySelectorAll('.reveal').forEach(x=>o.observe(x));
+});
+</script>
+</body></html>

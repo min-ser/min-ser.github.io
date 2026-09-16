@@ -1,0 +1,4 @@
+import {getAreaConfig,getDocuments} from "@/lib/content";
+import PageHeader from "@/components/content/PageHeader";
+import MarkdownView from "@/components/content/MarkdownView";
+export default function Page(){const config=getAreaConfig("07_ARCHIVE"),docs=getDocuments("archive");return <section className="section pageTop"><PageHeader config={config} count={docs.length}/><article className="archiveItem legacyArchiveCard"><p className="pageEyebrow">LEGACY SITE</p><h2>BlackCode · Original Git Blog</h2><p>신규 디자인 적용 전 사용하던 Jekyll 블로그의 HUD 기반 메인 디자인과 원본 소스를 보존합니다.</p><div className="legacyArchiveActions"><a href="/legacy-blog/index.html" target="_blank" rel="noreferrer">OPEN LEGACY DESIGN ↗</a><span>Source: /legacy-blog-source</span></div></article>{docs.map(d=><article className="archiveItem" key={d.slug}><h2>{String(d.meta.title||"")}</h2><MarkdownView content={d.content}/></article>)}</section>}

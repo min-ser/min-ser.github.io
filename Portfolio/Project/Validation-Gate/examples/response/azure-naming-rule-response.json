@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "resourceName": "kms-prd-openai-chat-001",
+  "recommendedName": "kms-prd-openai-chat-001",
+  "summary": { "passed": 11, "warned": 0, "failed": 0 },
+  "demoMode": true
+}

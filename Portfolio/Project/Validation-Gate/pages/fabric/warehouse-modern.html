@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fabric Warehouse Future UI | Validation Gate</title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/console.css">
+  <link rel="stylesheet" href="../../assets/css/animation.css">
+  <link rel="stylesheet" href="../../assets/css/pages/fabric.css">
+</head>
+<body data-page="fabric-warehouse-modern" data-depth="2">
+<div id="app">
+  <div id="appHeader"></div>
+  <div id="appSidebar"></div>
+  <main class="app-main fabric-page">
+    <div class="fabric-page-inner">
+      <div class="breadcrumb"><span>Validation Gate</span><span>/</span><strong>Fabric Warehouse</strong></div>
+
+      <section class="page-intro fabric-intro">
+        <div>
+          <span class="section-kicker">MICROSOFT FABRIC</span>
+          <h1>Warehouse Connection / Stored Procedure</h1>
+          <p>Entra 토큰, Private Endpoint, SQL 연결 및 Pipeline Stored Procedure 실행 흐름을 재현하는 정적 데모입니다.</p>
+        </div>
+        <span class="status-chip warning">NO REAL API CALL</span>
+      </section>
+
+      <section class="warehouse-top-grid">
+        <article class="warehouse-card connection-card">
+          <header><span class="step-no">01</span><h2>Warehouse 연결 정보</h2><span class="mini-chip">SQL</span></header>
+          <div class="field-grid two-col">
+            <label><span>Warehouse Endpoint</span><input id="warehouseEndpoint" value="kms-prd-warehouse.datawarehouse.fabric.microsoft.com"></label>
+            <label><span>Database</span><input id="databaseName" value="kms_demo_warehouse"></label>
+            <label><span>Workspace</span><input id="workspaceName" value="kms-prd-fabric"></label>
+            <label><span>Client ID</span><input id="clientId" value="00000000-0000-4000-8000-000000000010"></label>
+          </div>
+          <div class="button-row">
+            <button class="btn-primary-wide" type="button" data-action="token">Entra 토큰 확인</button>
+            <button class="btn-secondary-wide" type="button" data-action="connection">Warehouse 연결 테스트</button>
+          </div>
+        </article>
+
+        <article class="warehouse-card procedure-card">
+          <header><span class="step-no">02</span><h2>Stored Procedure 실행</h2><span class="mini-chip cyan">SP</span></header>
+          <div class="field-grid two-col">
+            <label><span>Schema</span><input id="schemaName" value="dbo"></label>
+            <label><span>Procedure</span><input id="procedureName" value="usp_validation_gate"></label>
+            <label class="span-two"><span>Parameter JSON</span><textarea id="procedureParams" rows="4">{
+  "environment": "prd",
+  "requestId": "kms-demo-001"
+}</textarea></label>
+          </div>
+          <div class="button-row">
+            <button class="btn-success-wide" type="button" data-action="procedure">Stored Procedure 실행</button>
+            <button class="btn-warning-wide" type="button" data-action="permission">권한 오류 재현</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="warehouse-status-strip">
+        <article><span>AUTHENTICATION</span><strong id="authStatus">READY</strong></article>
+        <article><span>NETWORK</span><strong id="networkStatus">READY</strong></article>
+        <article><span>DATABASE</span><strong id="databaseStatus">READY</strong></article>
+        <article><span>PROCEDURE</span><strong id="procedureStatus">READY</strong></article>
+      </section>
+
+      <section class="warehouse-output-grid">
+        <article class="warehouse-card result-card">
+          <header><h2>Validation Result</h2><span id="resultBadge" class="result-badge neutral">READY</span></header>
+          <div id="resultSummary" class="result-summary">검증 항목을 실행하면 결과가 표시됩니다.</div>
+          <div class="result-metrics">
+            <div><span>Operation</span><strong id="metricOperation">-</strong></div>
+            <div><span>HTTP / SQL</span><strong id="metricCode">-</strong></div>
+            <div><span>Elapsed</span><strong id="metricElapsed">-</strong></div>
+            <div><span>Rows</span><strong id="metricRows">-</strong></div>
+          </div>
+          <details class="raw-panel" open>
+            <summary>Raw Result</summary>
+            <pre id="rawResult">{}</pre>
+          </details>
+        </article>
+
+        <article class="warehouse-card console-card">
+          <header>
+            <h2>Unified Execution Console</h2>
+            <div class="console-actions"><button id="sampleButton" type="button">Sample</button><button id="clearButton" type="button">Clear</button><button id="copyButton" type="button">Copy</button></div>
+          </header>
+          <div id="warehouseConsole" class="warehouse-console" role="log" aria-live="polite"></div>
+        </article>
+      </section>
+
+      <section class="warehouse-card flow-card">
+        <header><h2>Pipeline → Warehouse 실행 흐름</h2><span class="mini-chip">DEMO FLOW</span></header>
+        <div class="flow-track">
+          <div><strong>Pipeline</strong><span>Activity Request</span></div><i>→</i>
+          <div><strong>Entra ID</strong><span>Access Token</span></div><i>→</i>
+          <div><strong>Private Endpoint</strong><span>DNS / TLS</span></div><i>→</i>
+          <div><strong>Warehouse</strong><span>Database Login</span></div><i>→</i>
+          <div><strong>Stored Procedure</strong><span>Execute / Result</span></div>
+        </div>
+      </section>
+      <div id="appFooter"></div>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/router.js"></script>
+<script src="../../assets/js/utils.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/api/warehouse.js"></script>
+<script src="../../assets/js/pages/fabric-warehouse-modern.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "version": "0.5.2",
+  "received_date": "2026-08-04",
+  "policy": "Original user-provided images are preserved without modification.",
+  "assets": [
+    {
+      "id": "jeon-seoyul",
+      "name": "전서율",
+      "file": "archive/characters/_SOURCE/2026-08-04/visual-references/jeon-seoyul/jeon-seoyul-reference-01.png",
+      "sha256": "2ef1b4a25b3fea976860e90266b7f7abd9857d3c45ba47b1763980dbc2dbef10",
+      "purpose": "author-provided visual reference",
+      "status": "source-original-do-not-edit",
+      "notes": "검은 장발, 창백한 피부, 붉은 기운의 눈, 검은 장포와 차분하고 위험한 분위기의 공식 비주얼 기준."
+    },
+    {
+      "id": "seo-harin",
+      "name": "서하린",
+      "file": "archive/characters/_SOURCE/2026-08-04/visual-references/seo-harin/seo-harin-front-reference-01.png",
+      "sha256": "ab88f95ec18abbf768db584c1b8b41d03b4b040629365be18a193828a7275136",
+      "purpose": "author-provided visual reference",
+      "status": "source-original-do-not-edit",
+      "notes": "긴 흑발, 흑백 계열 복장, 쌍검, 중립 세력의 정제된 분위기를 보여주는 정면 기준 이미지."
+    },
+    {
+      "id": "seol-yujin",
+      "name": "설유진",
+      "file": "archive/characters/_SOURCE/2026-08-04/visual-references/seol-yujin/seol-yujin-front-reference-01.png",
+      "sha256": "b254180796171c2d0a37c9343ea849b513c46a0c8bd28de1c47f0fc989f5f3c0",
+      "purpose": "author-provided visual reference",
+      "status": "source-original-do-not-edit",
+      "notes": "은백색 장발, 푸른 장식, 정파적 절제와 고귀함을 강조한 정면 기준 이미지."
+    },
+    {
+      "id": "yeon-museol",
+      "name": "연무설",
+      "file": "archive/characters/_SOURCE/2026-08-04/visual-references/yeon-museol/yeon-museol-front-reference-01.png",
+      "sha256": "92749518a036530637821959688853e7cfcbd7cc85cc2209113f51cd7b830034",
+      "purpose": "author-provided visual reference",
+      "status": "source-original-do-not-edit",
+      "notes": "긴 흑발, 붉은 눈, 검붉은 전투복, 마교 계열의 위압감과 집착성을 나타내는 정면 기준 이미지."
+    },
+    {
+      "id": "jeok-wola",
+      "name": "적월아",
+      "file": "archive/characters/_SOURCE/2026-08-04/visual-references/jeok-wola/jeok-wola-front-reference-01.png",
+      "sha256": "92ff1f8d110aade901f297036d391d79574fd329888f5de75f1148e29f32fe7b",
+      "purpose": "author-provided visual reference",
+      "status": "source-original-do-not-edit",
+      "notes": "붉은 장발, 검붉은 쌍검 복장, 자유롭고 자신감 있는 사파 계열 분위기의 정면 기준 이미지."
+    },
+    {
+      "id": "jin-hayeon-yeon-seo",
+      "name": "혈천무후 진하연 · 천마교주 연서",
+      "file": "archive/characters/_SOURCE/2026-08-04/visual-references/jin-hayeon-yeon-seo/jin-hayeon-and-yeon-seo-reference-01.png",
+      "sha256": "a60b426d4b80436af50c61e15be378a04061f43cb490e7fe713de31d7669f168",
+      "purpose": "author-provided visual reference",
+      "status": "source-original-do-not-edit",
+      "notes": "붉은 계열의 진하연과 검은 계열의 연서를 함께 표현한 후반부 관계·대치·이벤트 CG 스타일 기준."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+---
+id: legacy-java-03
+type: expertise
+title: '[WEB] 1. JSP 서버 IP 가져오기'
+enabled: true
+sample: false
+group: software-engineering
+category: Java / Web
+createdDate: '2022-08-23'
+updatedDate: '2022-08-23'
+featured: false
+summary: 'JSP 서버 IP 가져오기 1. jsp 디렉티브 태그를 통해 java소스로 시스템 ip 호출 2. <% % 스크립트릿 태그 : HTML코드안에
+  자바 코드를 사용할수 있게 해주는 태그 디렉티브 <%@ 디렉티브이름 속성1="값1" 속성2="값2" ... % <%@ page'
+tags:
+- 이클립스
+---
+
+> **Legacy Engineering Note** · 기존 기술 블로그에서 선별 이관한 기록입니다. 작성 당시 환경과 버전을 기준으로 합니다.
+
+# JSP 서버 IP 가져오기
+  1. jsp 디렉티브 태그를 통해 java소스로 시스템 ip 호출
+  2. <% %> 스크립트릿 태그 : HTML코드안에 자바 코드를 사용할수 있게 해주는 태그 
+
+## 디렉티브
+  <%@ 디렉티브이름 속성1="값1" 속성2="값2" ... %> 
+  
+  <%@ page contentType = "text/html; charset=euc-kr" %> 
+
+### page
+- JSP 페이지에 대한 정보를 지정
+- JSP가 생성하는 문서의 타입, 출력 버퍼의 크기, 에러 페이지 등 JSP 페이지에서 필요로 하는 정보를 입력
+
+### taglib
+- JSP 페이지에서 사용할 태그 라이브러리를 지정
+
+### include
+- JSP 페이지의 특정 영역에 다른 문서 포함.
+
+
+# JSP 소스
+
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <%@ page import="java.net.InetAddress" %>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>TEST</title>
+    </head>
+    <body>
+            <p>클라이언트ip <%=request.getRemoteAddr()%></p>
+            <p>요청URI <%=request.getRequestURI()%></p>
+            <p>컨텍스트경로 <%=request.getContextPath()%></p>
+            <p>도메인 주소 <%=request.getServerName()%></p>
+            <p>서버포트 <%=request.getServerPort()%></p>
+            <p>requested URL: <%=request.getRequestURL()%></p>
+            <p>requested Info: <%=request.getRequestURI()%></p>
+
+            <% InetAddress  inet= InetAddress.getLocalHost(); %>
+            <p>server ip: <%=inet.getHostAddress()%></p>
+        
+    </body>
+    </html>

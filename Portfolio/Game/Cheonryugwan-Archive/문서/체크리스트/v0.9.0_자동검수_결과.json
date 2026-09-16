@@ -1,0 +1,17 @@
+{
+  "version": "0.9.0",
+  "json": "PASS",
+  "javascript": "PASS",
+  "javascript_files": {
+    "game/engine/app.js": 0,
+    "game/engine/modules/core.js": 0,
+    "game/engine/modules/debug-manager.js": 0,
+    "game/engine/modules/audio-manager.js": 0,
+    "game/engine/modules/character-manager.js": 0,
+    "game/engine/modules/chapter-manager.js": 0,
+    "game/engine/modules/storage-manager.js": 0,
+    "game/engine/legacy/novel-engine-v0.8.4.2.js": 0
+  },
+  "unicode_paths": "PASS",
+  "total_files": 493
+}

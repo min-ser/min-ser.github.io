@@ -1,0 +1,5 @@
+
+.app-shell{display:grid;grid-template-columns:var(--sidebar-w) minmax(0,1fr);min-height:calc(100vh - var(--header-h))}
+.app-main{padding:20px;min-width:0}.page-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 18px}
+.page-heading h1{margin:0;font-size:22px}.page-heading p{margin:5px 0 0;color:var(--muted);font-size:13px}
+@media(max-width:900px){.app-shell{grid-template-columns:1fr}.app-main{padding:12px}}

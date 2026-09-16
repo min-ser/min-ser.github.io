@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects | 김민서</title>
+  <meta
+    name="description"
+    content="김민서의 Enterprise AI, Microsoft Fabric, AKS, Azure OpenAI, Platform Engineering 프로젝트 상세 포트폴리오입니다."
+  />
+
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/profile.css" />
+  <link rel="stylesheet" href="../css/cards.css" />
+  <link rel="stylesheet" href="../css/dark.css" />
+
+  <style>
+    :root {
+      --bg: #08111f;
+      --surface: #111c2f;
+      --surface-2: #16243a;
+      --text: #f3f7ff;
+      --muted: #a9b8cb;
+      --line: rgba(255,255,255,.09);
+      --primary: #2196f3;
+      --primary-light: #6bc2ff;
+      --green: #4dd599;
+      --amber: #ffc857;
+      --max-width: 1200px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 5%, rgba(33,150,243,.15), transparent 31%),
+        radial-gradient(circle at 88% 12%, rgba(107,194,255,.08), transparent 27%),
+        var(--bg);
+      font-family:
+        Inter,
+        Pretendard,
+        "Noto Sans KR",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      line-height: 1.72;
+      letter-spacing: -.01em;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+      background: rgba(8,17,31,.82);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      color: #03111d;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      color: var(--text);
+    }
+
+    .back-link {
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.04);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 88px 0 52px;
+    }
+
+    .eyebrow {
+      color: var(--primary-light);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .15em;
+    }
+
+    h1 {
+      margin: 10px 0 16px;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: .98;
+      letter-spacing: -.065em;
+    }
+
+    .hero-copy {
+      max-width: 830px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .metric {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,.03);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 24px;
+      letter-spacing: -.04em;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .filter-bar {
+      position: sticky;
+      top: 68px;
+      z-index: 90;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(8,17,31,.88);
+      backdrop-filter: blur(14px);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .filter-button {
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,.035);
+      cursor: pointer;
+    }
+
+    .filter-button:hover,
+    .filter-button.is-active {
+      color: #03111d;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      font-weight: 800;
+    }
+
+    .section {
+      padding: 72px 0;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      color: var(--primary-light);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .15em;
+    }
+
+    .section-heading h2 {
+      margin: 6px 0 0;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -.06em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .project-list {
+      display: grid;
+      gap: 24px;
+    }
+
+    .project-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.048), rgba(255,255,255,.022));
+      box-shadow: 0 24px 60px rgba(0,0,0,.18);
+    }
+
+    .project-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      padding: 30px 30px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-header h3 {
+      margin: 5px 0 8px;
+      font-size: clamp(25px, 3vw, 36px);
+      line-height: 1.1;
+      letter-spacing: -.045em;
+    }
+
+    .project-subtitle {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .project-period {
+      min-width: 130px;
+      color: var(--primary-light);
+      font-size: 13px;
+      font-weight: 800;
+      text-align: right;
+    }
+
+    .project-role {
+      display: inline-flex;
+      margin-bottom: 6px;
+      color: var(--amber);
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .project-body {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 28px;
+      padding: 30px;
+    }
+
+    .project-overview {
+      padding-right: 26px;
+      border-right: 1px solid var(--line);
+    }
+
+    .project-overview h4,
+    .project-details h4 {
+      margin: 0 0 10px;
+      font-size: 15px;
+      letter-spacing: -.02em;
+    }
+
+    .project-overview p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .detail-box {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .detail-box ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .detail-box li + li {
+      margin-top: 7px;
+    }
+
+    .project-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 30px 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 7px 10px;
+      border: 1px solid rgba(107,194,255,.18);
+      border-radius: 999px;
+      color: #dceeff;
+      background: rgba(33,150,243,.07);
+      font-size: 12px;
+    }
+
+    .project-link {
+      flex-shrink: 0;
+      color: var(--primary-light);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .highlight {
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .compact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .compact-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,.028);
+    }
+
+    .compact-card h3 {
+      margin: 0 0 9px;
+      font-size: 20px;
+      letter-spacing: -.035em;
+    }
+
+    .compact-card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .compact-card .meta {
+      margin-bottom: 10px;
+      color: var(--primary-light);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .next-page {
+      padding: 20px 0 96px;
+    }
+
+    .next-box {
+      padding: 42px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(33,150,243,.15), rgba(255,255,255,.025));
+      text-align: center;
+    }
+
+    .next-box h2 {
+      margin: 0 0 10px;
+      font-size: clamp(32px, 4vw, 48px);
+      letter-spacing: -.055em;
+    }
+
+    .next-box p {
+      max-width: 720px;
+      margin: 0 auto 22px;
+      color: var(--muted);
+    }
+
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border-radius: 13px;
+      color: #04111d;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      font-weight: 800;
+    }
+
+    .site-footer {
+      padding: 28px 0 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 960px) {
+      .main-nav { display: none; }
+
+      .hero-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-heading,
+      .project-body {
+        grid-template-columns: 1fr;
+      }
+
+      .project-overview {
+        padding-right: 0;
+        padding-bottom: 24px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .compact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(var(--max-width), calc(100% - 20px));
+      }
+
+      .hero-metrics,
+      .detail-grid,
+      .compact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-header {
+        grid-template-columns: 1fr;
+      }
+
+      .project-period {
+        text-align: left;
+      }
+
+      .project-header,
+      .project-body,
+      .project-footer {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .project-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      h1 { font-size: 54px; }
+
+      .next-box { padding: 24px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">KM</span>
+        <span>Kim Minseo</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Profile 메뉴">
+        <a href="./index.html">Resume</a>
+        <a href="./career.html">Career</a>
+        <a href="./projects.html" aria-current="page">Projects</a>
+        <a href="./architecture.html">Architecture</a>
+        <a href="./skills.html">Skills</a>
+        <a href="./certifications.html">Certifications</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+      <a class="back-link" href="../index.html">← Home</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Enterprise Delivery</div>
+        <h1>Projects</h1>
+        <p class="hero-copy">
+          AI 서비스 구축만이 아니라 네트워크, 보안, Identity, CI/CD, Observability,
+          Capacity 운영까지 포함하는 엔터프라이즈 프로젝트를 수행했습니다.
+          각 프로젝트는 문제, 역할, 구현, 성과 중심으로 정리했습니다.
+        </p>
+
+        <div class="hero-metrics">
+          <article class="metric">
+            <strong>15+</strong>
+            <span>Enterprise & Platform Projects</span>
+          </article>
+          <article class="metric">
+            <strong>Azure AI</strong>
+            <span>Foundry · OpenAI · AI Search</span>
+          </article>
+          <article class="metric">
+            <strong>Fabric</strong>
+            <span>Warehouse · CI/CD · Autoscale</span>
+          </article>
+          <article class="metric">
+            <strong>Platform</strong>
+            <span>AKS · APIM · Zero Trust</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="filter-bar">
+      <div class="container filters">
+        <button class="filter-button is-active" type="button" data-filter="all">All</button>
+        <button class="filter-button" type="button" data-filter="ai">AI</button>
+        <button class="filter-button" type="button" data-filter="fabric">Fabric</button>
+        <button class="filter-button" type="button" data-filter="platform">Platform</button>
+        <button class="filter-button" type="button" data-filter="security">Security</button>
+        <button class="filter-button" type="button" data-filter="automation">Automation</button>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="featured-projects-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Featured Work</div>
+            <h2 id="featured-projects-title">대표 프로젝트</h2>
+          </div>
+          <p>
+            역할 범위와 기술 난이도, 운영 영향도가 높았던 프로젝트를 우선 배치했습니다.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card" id="amorepacific" data-category="ai fabric platform security automation">
+            <div class="project-header">
+              <div>
+                <div class="project-role">Azure Part Lead · Platform Architect</div>
+                <h3>Amorepacific Enterprise AI & Data Platform</h3>
+                <p class="project-subtitle">
+                  Azure AI Foundry와 Microsoft Fabric을 중심으로 한
+                  엔터프라이즈 AI·데이터 플랫폼 구축
+                </p>
+              </div>
+              <div class="project-period">2025.07 — Present</div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-overview">
+                <h4>Project Overview</h4>
+                <p>
+                  DEV·STG·PRD 환경에서 Azure AI Foundry, Microsoft Fabric,
+                  AKS, APIM Premium, Datadog, Private Endpoint,
+                  Private DNS, NSG, Workload Identity를 연계한 플랫폼을 구축했습니다.
+                  Azure 파트 리드와 Platform Architect 역할을 수행하며
+                  애플리케이션, 데이터, 보안, 운영 영역을 연결했습니다.
+                </p>
+              </div>
+
+              <div class="project-details">
+                <div class="detail-grid">
+                  <section class="detail-box">
+                    <h4>주요 문제</h4>
+                    <ul>
+                      <li>Enterprise 보안 정책에 맞춘 사설 통신 구조 필요</li>
+                      <li>Fabric·AKS·AI 서비스 간 Identity 표준화 필요</li>
+                      <li>수동 배포와 운영 검증 절차의 반복 비용</li>
+                      <li>Fabric Capacity 비용 및 성능 변동 대응 필요</li>
+                    </ul>
+                  </section>
+
+                  <section class="detail-box">
+                    <h4>해결 및 구현</h4>
+                    <ul>
+                      <li>Private Endpoint·Private DNS·NSG 기반 Zero Trust 구성</li>
+                      <li>Managed Identity·Workload Identity 기반 Access Key 제거</li>
+                      <li>Fabric Notebook·Pipeline 배포 자동화 및 검증 체계 구현</li>
+                      <li>Eventstream·Event Hub·AKS 기반 Capacity Autoscale 설계</li>
+                    </ul>
+                  </section>
+
+                  <section class="detail-box">
+                    <h4>주요 성과</h4>
+                    <ul>
+                      <li>Warehouse Private Link 및 Private IP 연결 구현</li>
+                      <li>Power BI API Private Link·Private DNS 구성</li>
+                      <li>OPDG 기반 AWS S3·RDS 연계 구조 확립</li>
+                      <li>환경별 공통 운영 코드와 재사용 샘플 제공</li>
+                    </ul>
+                  </section>
+
+                  <section class="detail-box">
+                    <h4>담당 범위</h4>
+                    <ul>
+                      <li>Azure 아키텍처 및 네트워크 설계</li>
+                      <li>AI·Fabric·AKS 기술 검증과 장애 분석</li>
+                      <li>CI/CD·Observability·Autoscale 운영 자동화</li>
+                      <li>고객·보안·인프라 조직 간 기술 조율</li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">Azure AI Foundry</span>
+                <span class="tag">Microsoft Fabric</span>
+                <span class="tag">AKS</span>
+                <span class="tag">APIM Premium</span>
+                <span class="tag">Private Endpoint</span>
+                <span class="tag">Workload Identity</span>
+                <span class="tag">Datadog</span>
+                <span class="tag">GitLab CI/CD</span>
+              </div>
+              <a class="project-link" href="./architecture.html#enterprise-ai-platform">
+                Architecture →
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" id="fabric-autoscale" data-category="fabric platform automation">
+            <div class="project-header">
+              <div>
+                <div class="project-role">Platform Engineer · Automation</div>
+                <h3>Microsoft Fabric Capacity Autoscaling</h3>
+                <p class="project-subtitle">
+                  사용률 기반으로 Fabric Capacity SKU를 동적으로 상향·하향하는 자동화
+                </p>
+              </div>
+              <div class="project-period">2026.07</div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-overview">
+                <h4>Project Overview</h4>
+                <p>
+                  Fabric Capacity Metrics를 기반으로 평균 사용률과 피크 사용률을 계산하고,
+                  Notebook 또는 AKS CronJob에서 Capacity SKU를 자동 조정하는 패턴을 설계했습니다.
+                  Activator 기반 POC와 Event Hub Consumer 기반 운영형 구조를 모두 검증했습니다.
+                </p>
+              </div>
+
+              <div class="project-details">
+                <div class="detail-grid">
+                  <section class="detail-box">
+                    <h4>AS-IS</h4>
+                    <ul>
+                      <li>수동 SKU 변경으로 운영 대응 지연</li>
+                      <li>Notebook 세션 로딩과 Fabric 자원 점유</li>
+                      <li>고정 Capacity로 인한 비용·성능 비효율</li>
+                    </ul>
+                  </section>
+
+                  <section class="detail-box">
+                    <h4>TO-BE</h4>
+                    <ul>
+                      <li>Eventstream → Event Hub → AKS CronJob 구조</li>
+                      <li>최근 N분 평균·피크 기준 자동 의사결정</li>
+                      <li>Managed Identity 기반 즉시 SKU 변경</li>
+                    </ul>
+                  </section>
+
+                  <section class="detail-box">
+                    <h4>Scaling Rule</h4>
+                    <ul>
+                      <li>평균 사용률 60% 초과 또는 피크 100% 초과 시 상향</li>
+                      <li>평균 30% 미만 및 피크 50% 미만 시 하향</li>
+                      <li>환경별 최소·최대 SKU와 업무시간 정책 적용</li>
+                    </ul>
+                  </section>
+
+                  <section class="detail-box">
+                    <h4>Result</h4>
+                    <ul>
+                      <li>로컬 Event Hub Consumer 수신 성공</li>
+                      <li>PRD Capacity F32 → F16 Downscale 성공</li>
+                      <li>Notebook 방식과 CronJob 방식 비교 검증</li>
+                      <li>Teams 알림 및 운영 로그 구조 설계</li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">Microsoft Fabric</span>
+                <span class="tag">Eventstream</span>
+                <span class="tag">Event Hub</span>
+                <span class="tag">Activator</span>
+                <span class="tag">AKS CronJob</span>
+                <span class="tag">Python</span>
+                <span class="tag">Managed Identity</span>
+              </div>
+              <a class="project-link" href="./architecture.html#fabric-autoscale">
+                Architecture →
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" id="samsung-securities" data-category="ai platform security">
+            <div class="project-header">
+              <div>
+                <div class="project-role">Application Architect</div>
+                <h3>Samsung Securities AI Translation & Summarization</h3>
+                <p class="project-subtitle">
+                  Azure OpenAI 기반 번역·요약 서비스의 내부 보안 아키텍처 구축
+                </p>
+              </div>
+              <div class="project-period">2025.03 — 2025.07</div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-overview">
+                <h4>Project Overview</h4>
+                <p>
+                  금융권 내부 서비스에 맞춰 Azure OpenAI 호출 경로를 APIM으로 통제하고,
+                  Managed Identity, Private Endpoint, Prompt Shield를 적용했습니다.
+                  애플리케이션 아키텍처와 보안 연계 구조를 담당했습니다.
+                </p>
+              </div>
+
+              <div class="project-details">
+                <div class="detail-grid">
+                  <section class="detail-box">
+                    <h4>주요 구현</h4>
+                    <ul>
+                      <li>APIM 기반 Azure OpenAI 호출 경로 통제</li>
+                      <li>Private Endpoint 기반 사설 네트워크 구성</li>
+                      <li>Managed Identity 기반 인증 구조</li>
+                      <li>Prompt Shield 기반 입력 보안 정책 적용</li>
+                    </ul>
+                  </section>
+
+                  <section class="detail-box">
+                    <h4>기여</h4>
+                    <ul>
+                      <li>AI 서비스와 내부 애플리케이션 간 연계 구조 설계</li>
+                      <li>보안·네트워크 요구사항 기술 검토</li>
+                      <li>장애 원인 분석과 운영 안정성 개선</li>
+                      <li>아키텍처 문서 및 검증 절차 정리</li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">Azure OpenAI</span>
+                <span class="tag">APIM</span>
+                <span class="tag">Private Endpoint</span>
+                <span class="tag">Managed Identity</span>
+                <span class="tag">Prompt Shield</span>
+              </div>
+              <a class="project-link" href="./architecture.html#secure-ai-api">
+                Architecture →
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" id="genai360" data-category="ai platform">
+            <div class="project-header">
+              <div>
+                <div class="project-role">Azure AI Engineer</div>
+                <h3>GenAI360 Enterprise RAG Platform</h3>
+                <p class="project-subtitle">
+                  Azure OpenAI와 AI Search를 활용한 엔터프라이즈 RAG 플랫폼
+                </p>
+              </div>
+              <div class="project-period">2024.09 — 2024.12</div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-overview">
+                <h4>Project Overview</h4>
+                <p>
+                  사내 문서와 업무 데이터를 기반으로 검색 증강 생성 서비스를 구성하고,
+                  문서 처리, 검색 인덱싱, 프롬프트 처리, API 연계 구조를 구현했습니다.
+                </p>
+              </div>
+
+              <div class="project-details">
+                <div class="detail-grid">
+                  <section class="detail-box">
+                    <h4>구현 범위</h4>
+                    <ul>
+                      <li>Azure OpenAI 기반 답변 생성</li>
+                      <li>AI Search 기반 Hybrid Search</li>
+                      <li>Document Intelligence 기반 문서 추출</li>
+                      <li>FastAPI 기반 서비스 API 구성</li>
+                    </ul>
+                  </section>
+
+                  <section class="detail-box">
+                    <h4>설계 관점</h4>
+                    <ul>
+                      <li>문서 수집·분할·임베딩·검색 파이프라인</li>
+                      <li>검색 결과와 프롬프트 컨텍스트 구조화</li>
+                      <li>환경별 설정 및 배포 구조 분리</li>
+                      <li>재사용 가능한 Azure AI 샘플화</li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">Azure OpenAI</span>
+                <span class="tag">AI Search</span>
+                <span class="tag">Document Intelligence</span>
+                <span class="tag">RAG</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Python</span>
+              </div>
+              <a class="project-link" href="./architecture.html#enterprise-rag">
+                Architecture →
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" id="validation-gate" data-category="platform security automation">
+            <div class="project-header">
+              <div>
+                <div class="project-role">Platform Engineering Asset</div>
+                <h3>Validation Gate & Workload Identity Samples</h3>
+                <p class="project-subtitle">
+                  AKS 내부 통신과 Azure 서비스 인증을 표준화하는 검증 도구
+                </p>
+              </div>
+              <div class="project-period">2025 — 2026</div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-overview">
+                <h4>Project Overview</h4>
+                <p>
+                  AKS Pod에서 Azure Storage, Redis, AI Search 등으로 연결되는
+                  통신·인증 상태를 빠르게 확인할 수 있도록 FastAPI 기반 Self-check UI와
+                  Workload Identity 샘플을 개발했습니다.
+                </p>
+              </div>
+
+              <div class="project-details">
+                <div class="detail-grid">
+                  <section class="detail-box">
+                    <h4>주요 기능</h4>
+                    <ul>
+                      <li>DNS, TCP, TLS, HTTP 단계별 통신 검증</li>
+                      <li>Managed Identity·Workload Identity 토큰 확인</li>
+                      <li>Raw Response와 Debug Console 제공</li>
+                      <li>서비스별 공통 진단 로직 제공</li>
+                    </ul>
+                  </section>
+
+                  <section class="detail-box">
+                    <h4>효과</h4>
+                    <ul>
+                      <li>네트워크와 인증 문제의 원인 분리</li>
+                      <li>배포 전 검증 절차 표준화</li>
+                      <li>Access Key 제거 전환 지원</li>
+                      <li>고객·개발·인프라 간 공통 확인 기준 확보</li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">FastAPI</span>
+                <span class="tag">AKS</span>
+                <span class="tag">Workload Identity</span>
+                <span class="tag">Python</span>
+                <span class="tag">DNS</span>
+                <span class="tag">TLS</span>
+                <span class="tag">Zero Trust</span>
+              </div>
+              <a class="project-link" href="./architecture.html#validation-gate">
+                Architecture →
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="other-projects-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Additional Experience</div>
+            <h2 id="other-projects-title">Additional Projects</h2>
+          </div>
+          <p>
+            다양한 산업과 기술 환경에서 수행한 프로젝트 경험입니다.
+          </p>
+        </div>
+
+        <div class="compact-grid">
+          <article class="compact-card" data-category="platform security">
+            <div class="meta">Healthcare · AKS</div>
+            <h3>KB Healthcare</h3>
+            <p>
+              AKS 기반 DB 이중화, Failover, Kubernetes Proxy 및 운영 구조 지원.
+            </p>
+            <div class="tags">
+              <span class="tag">AKS</span>
+              <span class="tag">Failover</span>
+              <span class="tag">Kubernetes</span>
+            </div>
+          </article>
+
+          <article class="compact-card" data-category="ai platform">
+            <div class="meta">Construction · AI</div>
+            <h3>POSCO E&C</h3>
+            <p>
+              Azure 기반 AI 서비스 검토와 클라우드 아키텍처 지원.
+            </p>
+            <div class="tags">
+              <span class="tag">Azure</span>
+              <span class="tag">AI</span>
+              <span class="tag">Architecture</span>
+            </div>
+          </article>
+
+          <article class="compact-card" data-category="platform">
+            <div class="meta">Insurance · Cloud</div>
+            <h3>AIA Life</h3>
+            <p>
+              엔터프라이즈 클라우드 환경의 기술 검토 및 플랫폼 지원.
+            </p>
+            <div class="tags">
+              <span class="tag">Azure</span>
+              <span class="tag">Platform</span>
+              <span class="tag">Enterprise</span>
+            </div>
+          </article>
+
+          <article class="compact-card" data-category="ai platform">
+            <div class="meta">Vector Database</div>
+            <h3>Milvus Platform</h3>
+            <p>
+              벡터 검색 및 AI 데이터 활용을 위한 Milvus 기반 플랫폼 기술 지원.
+            </p>
+            <div class="tags">
+              <span class="tag">Milvus</span>
+              <span class="tag">Vector DB</span>
+              <span class="tag">AI Search</span>
+            </div>
+          </article>
+
+          <article class="compact-card" data-category="platform automation">
+            <div class="meta">Cloud Operations</div>
+            <h3>SpaceONE</h3>
+            <p>
+              멀티클라우드 운영 플랫폼 환경에서 Azure 연계 및 기술 지원.
+            </p>
+            <div class="tags">
+              <span class="tag">Multi Cloud</span>
+              <span class="tag">Operations</span>
+              <span class="tag">Azure</span>
+            </div>
+          </article>
+
+          <article class="compact-card" data-category="platform">
+            <div class="meta">Commerce Platform</div>
+            <h3>Gadget Korea</h3>
+            <p>
+              애플리케이션과 Azure 클라우드 환경의 기술 검토 및 구축 지원.
+            </p>
+            <div class="tags">
+              <span class="tag">Azure</span>
+              <span class="tag">Application</span>
+              <span class="tag">Cloud</span>
+            </div>
+          </article>
+
+          <article class="compact-card" data-category="automation platform">
+            <div class="meta">Developer Tooling</div>
+            <h3>Azure Naming Rule</h3>
+            <p>
+              Azure 리소스 네이밍 규칙을 조회하고 검증하는 FastAPI 기반 내부 도구.
+            </p>
+            <div class="tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">Azure</span>
+              <span class="tag">Governance</span>
+            </div>
+          </article>
+
+          <article class="compact-card" data-category="fabric automation">
+            <div class="meta">Data Platform</div>
+            <h3>Fabric CI/CD</h3>
+            <p>
+              Notebook, Pipeline, 폴더 구조를 환경별로 배포하는 자동화 패턴 구현.
+            </p>
+            <div class="tags">
+              <span class="tag">Microsoft Fabric</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">Python</span>
+            </div>
+          </article>
+
+          <article class="compact-card" data-category="security platform">
+            <div class="meta">Enterprise Networking</div>
+            <h3>Private Link Standardization</h3>
+            <p>
+              Azure PaaS와 Fabric 서비스의 Private Endpoint·DNS 구성 표준화.
+            </p>
+            <div class="tags">
+              <span class="tag">Private Link</span>
+              <span class="tag">Private DNS</span>
+              <span class="tag">Zero Trust</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-page">
+      <div class="container">
+        <div class="next-box">
+          <div class="section-kicker">Next Page</div>
+          <h2>아키텍처 상세 보기</h2>
+          <p>
+            대표 프로젝트에서 사용한 Zero Trust, Enterprise RAG,
+            Fabric Autoscale, AKS Delivery 구조를 시각적으로 정리합니다.
+          </p>
+          <a class="button" href="./architecture.html">
+            Architecture 페이지로 이동 →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Kim Minseo.</span>
+      <span>Enterprise AI · Microsoft Fabric · Platform Engineering</span>
+    </div>
+  </footer>
+
+  <script src="../js/common.js" defer></script>
+  <script src="../js/animation.js" defer></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const filterTargets = document.querySelectorAll("[data-category]");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((item) => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+
+        filterTargets.forEach((target) => {
+          const categories = target.dataset.category.split(" ");
+          const visible = filter === "all" || categories.includes(filter);
+          target.style.display = visible ? "" : "none";
+        });
+      });
+    });
+  </script>
+</body>
+</html>

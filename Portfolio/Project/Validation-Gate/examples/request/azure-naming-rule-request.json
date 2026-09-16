@@ -1,0 +1,15 @@
+{
+  "mode": "DEMO",
+  "input": {
+    "companyPrefix": "kms",
+    "environment": "prd",
+    "domain": "ai",
+    "region": "koreacentral",
+    "resourceType": "openai",
+    "workload": "chat",
+    "instance": "001",
+    "includeRegion": false,
+    "resourceName": "kms-prd-openai-chat-001"
+  },
+  "correlationId": "vg-naming-20260731-001"
+}

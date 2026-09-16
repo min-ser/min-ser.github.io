@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projects | Kim Minseo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07111f;--surface:#10213a;--text:#f5f9ff;--muted:#93a9c1;--p:#2b9cff;--p2:#75d4ff;--border:rgba(255,255,255,.085)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,"Noto Sans KR",sans-serif;background:radial-gradient(circle at 85% 4%,rgba(43,156,255,.13),transparent 23%),var(--bg);color:var(--text);line-height:1.7}
+.container{width:min(1220px,calc(100% - 40px));margin:auto}.header{position:sticky;top:0;z-index:50;background:rgba(7,17,31,.86);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}.header-inner{height:72px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:900;letter-spacing:.08em;text-decoration:none}.nav{display:flex;gap:20px}.nav a{color:var(--muted);font-size:13px;text-decoration:none;font-weight:700}
+.hero{padding:105px 0 82px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent)}.hero .container{position:relative}.eyebrow{color:var(--p2);font-size:12px;font-weight:900;letter-spacing:.13em}.hero h1{font-size:clamp(50px,7vw,92px);line-height:1;letter-spacing:-.07em;margin:18px 0}.gradient{background:linear-gradient(135deg,#fff,#7edaff,#2b9cff);-webkit-background-clip:text;color:transparent}.hero p{max-width:900px;color:#d8e5f3;font-size:19px}.chips,.stack{display:flex;flex-wrap:wrap;gap:8px}.chips span,.stack span{padding:7px 10px;border:1px solid rgba(117,212,255,.16);border-radius:999px;color:#cceeff;background:rgba(43,156,255,.055);font-size:11px;font-weight:700}
+.summary{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:-28px;position:relative}.summary div{padding:22px;border:1px solid var(--border);border-radius:17px;background:linear-gradient(180deg,#10213a,#0b1728);box-shadow:0 24px 70px rgba(0,0,0,.3)}.summary strong{display:block;color:var(--p2);font-size:25px}.summary span{color:var(--muted);font-size:12px}
+.section{padding:88px 0}.section h2{font-size:clamp(36px,5vw,56px);line-height:1.08;letter-spacing:-.055em;margin:8px 0}.section-intro{max-width:840px;color:var(--muted)}.filters{display:flex;flex-wrap:wrap;gap:9px;margin:30px 0}.filter{padding:9px 14px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.025);color:var(--muted);cursor:pointer}.filter.active{background:var(--p2);color:#04111c;font-weight:800}
+.timeline{position:relative;display:grid;gap:25px}.timeline:before{content:"";position:absolute;left:128px;top:5px;bottom:5px;width:2px;background:linear-gradient(var(--p),rgba(117,212,255,.08))}.project{display:grid;grid-template-columns:110px 1fr;gap:42px;position:relative}.project-date{padding-top:27px;text-align:right;color:var(--p2);font-size:12px;font-weight:900}.project-content{position:relative;padding:31px;border:1px solid var(--border);border-radius:20px;background:linear-gradient(180deg,#10213a,#0b1728)}.project-content:before{content:"";position:absolute;left:-50px;top:34px;width:15px;height:15px;border-radius:50%;background:var(--p2);border:4px solid var(--bg);box-shadow:0 0 20px rgba(43,156,255,.6)}.project-header{border-bottom:1px solid var(--border);padding-bottom:20px}.project-company{color:var(--p2);font-size:11px;font-weight:900;letter-spacing:.09em}.project h3{font-size:29px;letter-spacing:-.04em;margin:7px 0}.role{color:var(--muted);font-size:13px;margin:0}.detail-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px;margin-top:22px}.detail{padding:19px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.02)}.detail h4{margin:0 0 9px}.detail p,.detail li{color:var(--muted);font-size:13px}.detail ul{margin:0;padding-left:18px}.detail li+li{margin-top:5px}.result{margin:18px 0;padding:18px;border-left:4px solid var(--p);border-radius:12px;background:rgba(43,156,255,.07)}.result p{margin:5px 0 0;color:#d8e5f3;font-size:13px}
+.assets-section{background:rgba(255,255,255,.016);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.assets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}.asset{padding:25px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(180deg,#10213a,#0b1728)}.asset span{color:var(--p2);font-size:11px;font-weight:900;letter-spacing:.1em}.asset h3{font-size:21px}.asset p{color:var(--muted);font-size:13px}.footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted);font-size:12px}.reveal{opacity:0;transform:translateY(18px)}.reveal.show{opacity:1;transform:none;transition:.65s ease}
+@media(max-width:950px){.summary{grid-template-columns:repeat(2,1fr)}.detail-grid,.assets{grid-template-columns:1fr}.timeline:before{left:11px}.project{grid-template-columns:1fr;padding-left:34px}.project-date{text-align:left;padding:0}.project-content:before{left:-32px}.nav{display:none}}@media(max-width:620px){.summary{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="header"><div class="container header-inner"><a class="brand" href="../index.html">KIM MINSEO</a><nav class="nav"><a href="../index.html">Home</a><a href="./index.html">Profile</a><a href="./career.html">Career</a><a href="./projects.html">Projects</a><a href="./architecture.html">Architecture</a><a href="./contact.html">Contact</a></nav></div></header>
+<main>
+<section class="hero"><div class="container"><span class="eyebrow">FULL PROJECT HISTORY · 2019—PRESENT</span><h1>Backend에서<br><span class="gradient">Enterprise AI Platform까지.</span></h1><p>코디더매니저의 호텔 PMS 운영과 데이터베이스 최적화부터 현대백화점 식품몰 Backend, Azure 인프라·AKS·생성형 AI·Microsoft Fabric·Zero Trust·멀티 클라우드·운영 자동화까지 실제로 설계하고 구현한 프로젝트를 시간순으로 정리했습니다.</p><div class="chips"><span>Backend Engineering</span><span>Production Operations</span><span>Azure Architecture</span><span>Enterprise AI</span><span>Microsoft Fabric</span><span>DevOps / SRE</span></div></div></section>
+<div class="container summary"><div><strong>2019—</strong><span>Production Platform 경험</span></div><div><strong>6+ Years</strong><span>Backend · Cloud · AI</span></div><div><strong>12+</strong><span>주요 프로젝트 및 기술 자산</span></div><div><strong>100+</strong><span>Azure / Fabric 이슈 해결</span></div><div><strong>30m → 1m30s</strong><span>Query Optimization</span></div></div>
+<section class="section"><div class="container"><span class="eyebrow">CHRONOLOGICAL PROJECTS</span><h2>프로젝트 상세 이력</h2><p class="section-intro">프로젝트 배경, 실제 구현 범위, 해결한 문제, 결과를 중심으로 정리했습니다.</p>
+<div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="backend">Backend</button><button class="filter" data-filter="platform">Platform</button><button class="filter" data-filter="azure">Azure</button><button class="filter" data-filter="ai">AI</button><button class="filter" data-filter="fabric">Fabric</button><button class="filter" data-filter="devops">DevOps</button></div>
+<div class="timeline">
+    <article class="project reveal" data-category="backend platform">
+      <div class="project-date">2019.04 — 2020.04</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">코디더매니저</span>
+            <h3>Hotel PMS 운영 및 플랫폼 엔지니어링</h3>
+            <p class="role">Backend Engineer · Production Platform Engineer</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>예약·객실·결제·F&amp;B·정산과 직접 연결되는 Mission Critical PMS를 개발·운영했습니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>Java/Spring Backend 및 AngularJS 화면 기능 개발·유지보수</li><li>Linux, Nginx, Tomcat, Docker 기반 운영 환경 관리</li><li>SVN/Jenkins 기반 배포와 신규 호텔 온보딩</li><li>CUBRID → MariaDB 데이터 마이그레이션과 스키마·정합성 검증</li><li>Replication, Transaction, Lock, Deadlock, Application Hang 장애 분석</li><li>키오스크 연동 REST API와 호텔별 도메인·버전 업그레이드 수행</li><li>10만 건 이상 복잡한 조회 쿼리와 운영 리포트 실행 계획 분석</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>연간 리포트 처리 시간을 30분 이상에서 약 1분 30초로 단축하고, 장애 복구와 호텔 온보딩 절차를 안정화했습니다.</p></div>
+        <div class="stack"><span>Java</span><span>Spring</span><span>AngularJS</span><span>Linux</span><span>Nginx</span><span>Tomcat</span><span>Docker</span><span>Jenkins</span><span>SVN</span><span>CUBRID</span><span>MariaDB</span></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-category="backend">
+      <div class="project-date">2021.12 — 2022.06</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">지호아이앤씨 · 현대백화점</span>
+            <h3>온라인 식품몰 고도화 및 E-슈퍼마켓</h3>
+            <p class="role">Backend Engineer · SI Developer</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>정기구독, 주문, 결제, 배송, 마이페이지, 관리자 운영 기능을 포함한 식품몰 고도화 프로젝트입니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>정기구독 메인 서비스와 배송 주기·배송일 관리 로직 구현</li><li>회원 자동결제, 실패 상태 처리, 주문 생성·취소 흐름 개발</li><li>PC/Mobile 장바구니·주문현황·주문내역·마이페이지 개발</li><li>관리자 픽업 리스트와 OZ Report 연계 지원</li><li>Oracle 기반 주문·전시구좌·정기구독 쿼리 설계 및 튜닝</li><li>단위·통합 테스트에서 발견된 주문·결제 오류 수정</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>정기구독 핵심 기능과 자동결제 프로세스를 구현하고 사용자·관리자 주문 운영 흐름을 안정화했습니다.</p></div>
+        <div class="stack"><span>Java</span><span>Spring</span><span>JSP</span><span>Oracle</span><span>MyBatis</span><span>Xplatform</span><span>OZ Report</span></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-category="azure platform">
+      <div class="project-date">2023.04 — 2024.01</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">메가존클라우드 · 밀버스</span>
+            <h3>Azure Infrastructure 구축 및 운영</h3>
+            <p class="role">Azure Solution Architect</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>Azure 기반 CRM 및 이벤트 서비스 인프라를 구축하고 서비스 오픈과 운영 안정화를 지원했습니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>Azure VM 및 Linux 운영 환경 구축</li><li>Azure Database for MySQL 구성</li><li>WAF, SSL 인증서, DNS 전환 및 HTTPS 안정화</li><li>Snapshot과 백업 구조 구성</li><li>서비스 오픈 전 네트워크·보안·도메인 전환 검증</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>Azure 인프라, WAF/SSL 보안, DNS 전환, 운영 백업 체계를 완료했습니다.</p></div>
+        <div class="stack"><span>Azure VM</span><span>Azure MySQL</span><span>WAF</span><span>SSL</span><span>DNS</span><span>Linux</span></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-category="azure backend">
+      <div class="project-date">2023.05</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">메가존클라우드 · Azure SpaceOne</span>
+            <h3>Azure Cost &amp; Partner API Integration</h3>
+            <p class="role">Cloud Application Engineer</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>클라우드 비용 및 파트너 구독 정보를 플랫폼에서 활용하기 위한 API 연동 프로젝트입니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>Azure Cost Management API 기반 비용 데이터 수집 흐름 구현</li><li>Microsoft Partner Center API의 인증·권한·응답 구조 분석</li><li>비용·구독 정보를 내부 플랫폼에서 재사용할 수 있는 REST API 연동 기반 마련</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>Azure 비용과 파트너 구독 정보를 통합할 수 있는 API 기반을 구성했습니다.</p></div>
+        <div class="stack"><span>Azure Cost Management API</span><span>Partner Center API</span><span>REST API</span><span>Python</span></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-category="azure devops platform">
+      <div class="project-date">2023.08</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">메가존클라우드 · TKG태광</span>
+            <h3>GitHub Actions 기반 Azure CI/CD 구축</h3>
+            <p class="role">DevOps Engineer</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>애플리케이션 변경을 Azure 환경에 반복 가능하게 배포하기 위한 자동화 프로젝트입니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>GitHub Actions Workflow 기반 Build·Deploy 단계 구성</li><li>환경별 Secret과 배포 변수 분리</li><li>YAML 기반 배포 절차 표준화</li><li>실패 시 원인 확인이 가능한 로그와 단계별 실행 구조 정리</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>수동 배포 절차를 반복 가능한 CI/CD Pipeline으로 전환했습니다.</p></div>
+        <div class="stack"><span>GitHub Actions</span><span>Azure</span><span>CI/CD</span><span>YAML</span></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-category="backend azure platform">
+      <div class="project-date">2023.08 — 2024.01</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">메가존클라우드 · KB헬스케어</span>
+            <h3>B2B / B2C Healthcare Platform</h3>
+            <p class="role">Backend Engineer · Infra Engineer</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>AKS와 데이터베이스 기반 B2B 플랫폼 구축 및 B2C 확장을 위한 안정성 검증 프로젝트입니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>MySQL/PostgreSQL Primary-Replica 및 Failover 시나리오 검증</li><li>JPA Replica 구성과 읽기·쓰기 분리 동작 확인</li><li>Kubernetes Forward/Reverse Proxy 경로와 네트워크 장애 분석</li><li>Spring Boot 기반 부하 테스트 코드 개발</li><li>병목 구간과 장애 복구 절차를 기술 가이드로 문서화</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>DB Failover 안정성과 Kubernetes Proxy 장애를 개선했고, 해당 프로젝트는 Microsoft Partner Award 사례로 선정되었습니다.</p></div>
+        <div class="stack"><span>Java</span><span>Spring Boot</span><span>AKS</span><span>MySQL</span><span>PostgreSQL</span><span>JPA</span><span>MyBatis</span><span>Cosmos DB</span></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-category="azure backend">
+      <div class="project-date">2024.04 — 2024.05</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">메가존클라우드 · 포스코이앤씨</span>
+            <h3>Azure Functions &amp; Managed Identity POC</h3>
+            <p class="role">Cloud Application Engineer</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>서버리스 애플리케이션과 Keyless 인증 방식을 검증하기 위한 POC입니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>Azure Functions 기반 샘플 애플리케이션 개발</li><li>Managed Identity를 사용한 Azure 리소스 접근 구성</li><li>Secret 없이 동작하는 인증 및 배포 흐름 검증</li><li>개발팀 재사용을 위한 샘플 구조와 가이드 제공</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>서버리스와 Managed Identity 기반 보안 접근 패턴을 검증했습니다.</p></div>
+        <div class="stack"><span>Azure Functions</span><span>Managed Identity</span><span>Python</span><span>Serverless</span></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-category="azure platform">
+      <div class="project-date">2024.07 — 2024.08</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">메가존클라우드 · 가제트코리아</span>
+            <h3>Azure Subscription Migration</h3>
+            <p class="role">Azure Solution Architect · Cloud Migration Engineer</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>Azure Sponsorship 만료에 따라 서비스를 CSP 구독으로 이전하기 위한 Migration 프로젝트입니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>Azure 리소스 195개의 유형·Region·종속성·이전 가능 여부 분석</li><li>SQL Database, Cosmos DB, Redis, NAT Gateway 등 서비스별 제약 확인</li><li>Migration 순서, 사전 점검, Rollback Risk Assessment</li><li>서비스 운영 영향을 최소화하는 단계별 전환 전략 수립</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>195개 리소스의 이전 위험을 사전에 식별하고 운영 영향 최소화 전략을 마련했습니다.</p></div>
+        <div class="stack"><span>Azure Subscription</span><span>Azure SQL</span><span>Cosmos DB</span><span>Redis</span><span>NAT Gateway</span></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-category="azure devops platform">
+      <div class="project-date">2024.07 — 2024.08</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">메가존클라우드 · AIA생명</span>
+            <h3>Azure DevOps Architecture 제안 및 POC</h3>
+            <p class="role">Application Architect</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>고객 환경에 적합한 애플리케이션 배포 방식과 운영 모델을 검토한 DevOps POC입니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>Jenkins 기반 CI/CD Pipeline 설계</li><li>AKS 배포 구조와 Azure App Service 방식 비교</li><li>Build·Image·Deploy 단계 검증</li><li>고객 환경 기준의 DevOps 아키텍처 제안서 작성</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>배포 대상과 운영 조건에 따른 Azure DevOps 선택 기준을 제시했습니다.</p></div>
+        <div class="stack"><span>Jenkins</span><span>AKS</span><span>Azure App Service</span><span>CI/CD</span></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-category="ai azure backend">
+      <div class="project-date">2024.09 — 2024.12</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">메가존클라우드 · GenAI360</span>
+            <h3>Azure OpenAI 기반 생성형 AI 플랫폼</h3>
+            <p class="role">Application Architect</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>문서 검색과 LLM 응답을 연결하는 RAG 서비스 표준 구조를 구축했습니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>LangChain 기반 Retrieval·Prompt 실행 흐름 설계</li><li>FastAPI Backend 및 REST API 구현</li><li>문서 Chunking, Embedding, Vector Search 구조 구성</li><li>Azure AI Search 인덱스와 검색 조건 최적화</li><li>재사용 가능한 RAG 모듈과 샘플 코드 제공</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>RAG 기반 AI 서비스의 표준 아키텍처와 개발 모듈을 구축했습니다.</p></div>
+        <div class="stack"><span>Python</span><span>FastAPI</span><span>Azure OpenAI</span><span>Azure AI Search</span><span>LangChain</span><span>RAG</span></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-category="ai azure platform">
+      <div class="project-date">2025.03 — 2025.07</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">메가존클라우드 · 삼성증권</span>
+            <h3>해외 투자정보 번역·요약 AI 서비스</h3>
+            <p class="role">Application Architect · AI &amp; Infra Engineer</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>Azure OpenAI 기반 번역·요약 서비스를 보안 요구에 맞게 구축한 프로젝트입니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>Azure OpenAI Model Deployment 및 Private Endpoint 구성</li><li>APIM Premium 기반 AI API Gateway와 정책 표준 수립</li><li>Managed Identity 기반 호출 방식과 개발 가이드 제공</li><li>Prompt Shield, Content Safety, PII 대응 흐름 검토</li><li>Azure Monitor 기반 운영 가시성 구성</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>AI 서비스 보안성과 운영 통제력을 강화하고 APIM·Managed Identity 운영 표준을 마련했습니다.</p></div>
+        <div class="stack"><span>Azure OpenAI</span><span>APIM Premium</span><span>Private Endpoint</span><span>Managed Identity</span><span>Prompt Shield</span><span>Content Safety</span></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-category="ai azure fabric platform devops">
+      <div class="project-date">2025.07 — Present</div>
+      <div class="project-content">
+        <header class="project-header">
+          <div>
+            <span class="project-company">메가존클라우드 · 아모레퍼시픽</span>
+            <h3>Enterprise Azure AI &amp; Data Platform</h3>
+            <p class="role">Platform Architect · Azure Part PL · Azure SME</p>
+          </div>
+        </header>
+        <div class="detail-grid">
+          <section class="detail"><h4>프로젝트 배경</h4><p>Zero Trust 환경에서 Azure AI Foundry, Microsoft Fabric, AKS, APIM과 멀티 클라우드 데이터를 연결해 운영 가능한 AI·데이터 플랫폼으로 전환하는 프로젝트입니다.</p></section>
+          <section class="detail"><h4>구현 및 문제 해결</h4><ul><li>Azure AI Foundry, Azure OpenAI, AI Search, Document Intelligence, AKS, APIM 통합 아키텍처 설계</li><li>Access Key 기반 AI Search·Storage·Redis 접근을 Workload Identity 중심 구조로 전환</li><li>Private Endpoint, Private DNS, NSG, RBAC 기반 보안 표준 수립</li><li>Fabric Warehouse, Lakehouse, Notebook, Pipeline, Semantic Model, Capacity 운영 및 장애 대응</li><li>Fabric Folder Mirror, Move API, Notebook/Pipeline 환경별 CI/CD 자동화</li><li>Snowflake, AWS S3, AWS RDS, Azure Blob, OPDG 멀티 클라우드 데이터 연계</li><li>FastAPI 기반 DNS·TCP·TLS·Identity·Storage·Redis·AI Search 검증 UI 개발</li><li>Datadog Private Logging과 운영 관측성 구조 설계</li><li>Notebook/Activator POC에서 Eventstream·Event Hub·AKS CronJob 기반 Fabric Autoscale로 발전</li><li>Fabric Warehouse Private Link, api.powerbi.com, Event Hub WebSocket 등 네트워크 이슈 분석</li><li>Azure Naming Rule, 개발 가이드, 배포 규칙, 운영 Runbook 문서화</li></ul></section>
+        </div>
+        <div class="result"><strong>핵심 성과</strong><p>Azure/Fabric 이슈 100건 이상을 해결하고 AI 운영 표준, Workload Identity 보안 기준, Self-Service Validation, Fabric CI/CD 및 Capacity 자동화 구조를 구축했습니다.</p></div>
+        <div class="stack"><span>Azure AI Foundry</span><span>Azure OpenAI</span><span>Azure AI Search</span><span>Document Intelligence</span><span>Microsoft Fabric</span><span>AKS</span><span>APIM</span><span>FastAPI</span><span>Python</span><span>Datadog</span><span>GitLab</span><span>ArgoCD</span><span>Workload Identity</span><span>Private Endpoint</span><span>Snowflake</span><span>AWS S3/RDS</span><span>OPDG</span></div>
+      </div>
+    </article></div></div></section>
+<section class="section assets-section"><div class="container"><span class="eyebrow">REUSABLE ENGINEERING ASSETS</span><h2>프로젝트를 넘어 남긴 기술 자산</h2><p class="section-intro">반복적으로 발생하는 문제를 코드, 가이드, 표준 아키텍처와 자동화 도구로 전환했습니다.</p><div class="assets"><article class="asset reveal"><span>VALIDATION</span><h3>AKS Validation Gate</h3><p>DNS, TCP, TLS, Managed Identity, Workload Identity, Storage, Redis, AI Search, AI Foundry 연결을 단계별로 검증하는 FastAPI UI.</p></article>
+<article class="asset reveal"><span>AUTOMATION</span><h3>Fabric Capacity Autoscaling</h3><p>Eventstream과 Event Hub로 Capacity Event를 수집하고 AKS CronJob이 평균·피크 정책에 따라 SKU를 자동 조정하는 구조.</p></article>
+<article class="asset reveal"><span>CI/CD</span><h3>Microsoft Fabric Deployment</h3><p>Service Principal, Folder Mirror, Move API, Notebook/Pipeline 규칙을 이용한 DEV·STG·PRD 자동 배포 패턴.</p></article>
+<article class="asset reveal"><span>SECURITY</span><h3>Workload Identity Standard</h3><p>Access Key를 제거하고 AKS Service Account와 Federated Credential을 이용해 Azure 서비스에 접근하는 표준.</p></article>
+<article class="asset reveal"><span>GOVERNANCE</span><h3>Azure Naming Rule</h3><p>환경·리소스 유형·서비스 소유권을 일관되게 표현하는 Azure 네이밍과 아키텍처 기준.</p></article>
+<article class="asset reveal"><span>DOCUMENTATION</span><h3>Engineering Knowledge Base</h3><p>Issue, Root Cause, Resolution, Architecture Decision, Sample Code, Runbook을 공식 문서 기반으로 정리한 기술 자산.</p></article></div></div></section>
+</main>
+<footer class="footer"><div class="container">© 2026 Kim Minseo Portfolio · Backend · Azure · Enterprise AI · Microsoft Fabric</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+ const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');o.unobserve(e.target)}}),{threshold:.07});
+ document.querySelectorAll('.reveal').forEach(x=>o.observe(x));
+ document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
+   document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+   const f=b.dataset.filter;document.querySelectorAll('.project').forEach(p=>p.style.display=(f==='all'||p.dataset.category.includes(f))?'grid':'none');
+ }));
+});
+</script>
+</body></html>

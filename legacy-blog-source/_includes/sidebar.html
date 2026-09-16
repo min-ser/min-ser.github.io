@@ -1,0 +1,165 @@
+<!-- 카테고리 리스트 변수 선언 -->
+{% assign categoryList = site.categories | sort %}
+
+<div class="sidebar-wapper1" style="overflow: hidden">
+<div class="sidebar-wapper2">
+	<div class="sidebar-item sidebar-header">
+		<hr>
+		<!-- 
+		<div class='sidebar-brand'>
+			<a href="/">{{ site.title }}</a>
+		</div>
+		<p class="nav-item sidebar-li"><a href="https://github.com/IIBlackCode">Blackcode-Git</a></p>
+		<p class="nav-item sidebar-li"><a href="https://blackcode42.pythonanywhere.com/">Blackcode-Site</a></p>
+		 -->
+		
+		<details>
+			<!-- <summary><a>{{ site.title }}</a></summary> -->
+			<summary><a>BLACKCODE</a></summary>
+			<ul class="nav">
+				{% for category in categoryList %}
+					{% if category[0] == "김민서" %}
+					<li>
+						<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
+							{{ category[0] | replace:'-', ' ' }}
+							<span class="badge">{{ category | last | size }}</span>
+						</a>
+					</li>
+					{% endif %}
+				{% endfor %}
+				<li><a class="nav-item sidebar-li" href="https://github.com/IIBlackCode">Blackcode-Git</a></li>
+				<li><a class="nav-item sidebar-li" href="https://blackcode42.pythonanywhere.com/">Blackcode-Site</a></li>
+			</ul>
+		</details>
+		
+		{%- if social.github -%}
+			<a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}">
+				<svg class="svg-icon grey">
+					<use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}" />
+				</svg></a></li>
+		{%- endif -%}
+	</div>
+
+	<hr>
+
+	<!-- Pages List -->
+	<details>
+		<summary><a>Pages</a></summary>
+		<ul class="nav">
+			<!-- <li class="nav-title">Pages</li> -->
+			{% assign pages_list = site.pages %}
+			{% for node in pages_list %}
+			{% if node.title != null %}
+				{% if node.layout == "page" %}
+					{% if node.title != "Writing" %}
+					<li>
+						<a class="nav-item sidebar-li" href="{{ node.url }}">
+							{{ node.title }}
+						</a>
+					</li>
+					{% endif %}
+				{% endif %}
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</details>
+
+	<hr>
+
+	<!-- categoryList -->
+	
+	<details open>
+		<summary><a>Category</a></summary>
+		<ul class="nav">
+			<!-- <li class="nav-title">categoryList</li> -->
+			{% for category in categoryList %}
+				{% if 
+					category[0] != "김민서" 
+				and category[0] != "Megazone"  
+				and category[0] != "Security_Project" 
+				and category[0] != "MegazoneCloud" 
+				and category[0] != "securitiestest" 
+				%}
+			<li>
+				<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
+					<span class="name">{{ category[0] | replace:'-', ' ' }}</span>
+					<span class="badge">{{ category | last | size }}</span>
+				</a>
+			</li>
+				{% endif %}
+			<!-- {% unless forloop.last %}&nbsp;{% endunless %} -->
+			{% endfor %}
+		</ul>
+	</details>
+
+	<hr>
+
+	<!-- Security categoryList  -->
+	<details>
+		<summary><a>Security[개발중]</a></summary>
+		<ul class="nav">
+			<!-- <li class="nav-title">categoryList</li> -->
+			{% for category in categoryList %}
+				{% if category[0] == "MegazoneCloud" %}
+				<li>
+					<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
+						<span class="name">{{ category[0] | replace:'-', ' ' }}</span>
+						<span class="badge">{{ category | last | size }}</span>
+					</a>
+				</li>
+				{% endif %}
+				{% if category[0] == "securitiestest" %}
+				<li>
+					<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
+						<span class="name">{{ category[0] | replace:'-', ' ' }}</span>
+						<span class="badge">{{ category | last | size }}</span>
+					</a>
+				</li>
+				{% endif %}
+				{% if category[0] == "Security_Project" %}
+				<li>
+					<a class="nav-item sidebar-li" href="/writing/category/{{ category | first | slugify }}/">
+						<span class="name">{{ category[0] | replace:'-', ' ' }}</span>
+						<span class="badge">{{ category | last | size }}</span>
+					</a>
+				</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</details>
+
+	<hr>
+
+	<!-- Tag List -->
+	<details>
+		<summary><a>TAG</a></summary>
+		<ul class="nav">
+			<!-- <li class="nav-title">categoryList</li> -->
+			{% assign tags = site.tags | sort %}
+			{% for tag in site.tags %}
+			<li>
+				<a class="nav-item sidebar-li" href="/writing/tag/{{ tag | first | slugify }}/">
+					<span class="name">{{ tag | first }}</span>
+					<span class="badge">{{ tag | last | size }}</span>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</details>
+
+	<hr>
+	
+	<div class="sidebar-item">
+		<embed
+		src="https://www.youtube.com/v/WVCM2o0E9ps?version=3&autoplay=1&mute=1&autohide=0&showinfo=0&loop=1&playlist=WVCM2o0E9ps&hl=ko_KR&rel=0"
+		type="application/x-shockwave-flash" width="276" height="100" allowscriptaccess="always" allowfullscreen="true"style="position:absolute; z-index: 1;">
+	</div>
+	<br><br><br><br>
+	<div class="sidebar-item sidebar-footer">
+		<p>BlackCode <a href="https://github.com/IIBlackCode">Github</a></p>
+	</div>
+	
+	<hr>
+
+</div>
+</div>

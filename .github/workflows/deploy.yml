@@ -1,0 +1,159 @@
+name: Deploy Personal Site + Portfolio Projects
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install root dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+
+      - name: Validate root content
+        run: npm run validate
+
+      - name: Build root personal site
+        env:
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_SITE_URL: "https://min-ser.github.io"
+        run: npm run build
+
+      - name: Verify root export
+        run: |
+          test -f out/index.html
+          test -d out/_next
+          test -f out/google071dd37aad747f5a.html
+          test -f out/expertise/index.html
+          test -f out/archive/index.html
+          test -f out/legacy-blog/index.html
+
+      - name: Build Portfolio Next.js projects
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Portfolio/kms is intentionally removed: its Career site is now the repository root.
+          BUILD_PROJECTS=(
+            "Portfolio/study/ai"
+            "Portfolio/study/cs"
+          )
+
+          for project in "${BUILD_PROJECTS[@]}"; do
+            if [ ! -d "$project" ]; then
+              echo "[INFO] Optional project not present in this checkout: $project"
+              continue
+            fi
+            if [ ! -f "$project/package.json" ]; then
+              echo "[ERROR] package.json missing: $project"
+              exit 1
+            fi
+
+            pushd "$project" >/dev/null
+            if [ -f package-lock.json ]; then npm ci; else npm install; fi
+            if node -e 'const p=require("./package.json");process.exit(p.scripts?.validate?0:1)'; then
+              npm run validate
+            fi
+            NEXT_PUBLIC_BASE_PATH="/$project" npm run build
+            test -f out/index.html
+            popd >/dev/null
+          done
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare final site
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf _final_site
+          mkdir -p _final_site
+          cp -a out/. _final_site/
+
+          # Keep all existing Portfolio assets/projects, except the retired kms path.
+          if [ -d Portfolio ]; then
+            mkdir -p _final_site/Portfolio
+            rsync -a \
+              --exclude='kms/' \
+              --exclude='node_modules/' \
+              --exclude='.next/' \
+              --exclude='out/' \
+              --exclude='.git/' \
+              Portfolio/ _final_site/Portfolio/
+          fi
+
+          # Replace source directories for build-based Portfolio projects with their static exports.
+          BUILD_PROJECTS=("Portfolio/study/ai" "Portfolio/study/cs")
+          for project in "${BUILD_PROJECTS[@]}"; do
+            if [ -f "$project/out/index.html" ]; then
+              rm -rf "_final_site/$project"
+              mkdir -p "_final_site/$project"
+              cp -a "$project/out/." "_final_site/$project/"
+            fi
+          done
+
+          # kms must never be published after the root migration.
+          rm -rf _final_site/Portfolio/kms
+          touch _final_site/.nojekyll
+
+      - name: Validate final site
+        shell: bash
+        run: |
+          set -euo pipefail
+          REQUIRED=(
+            "_final_site/index.html"
+            "_final_site/profile/index.html"
+            "_final_site/career/index.html"
+            "_final_site/projects/index.html"
+            "_final_site/github/index.html"
+            "_final_site/expertise/index.html"
+            "_final_site/training/index.html"
+            "_final_site/archive/index.html"
+            "_final_site/legacy-blog/index.html"
+            "_final_site/google071dd37aad747f5a.html"
+          )
+          for file in "${REQUIRED[@]}"; do test -f "$file" || { echo "[ERROR] Missing $file"; exit 1; }; done
+          test ! -e _final_site/Portfolio/kms || { echo "[ERROR] retired Portfolio/kms was published"; exit 1; }
+
+          # Validate optional Portfolio services only when their source exists.
+          for path in "Portfolio/study/ai" "Portfolio/study/cs"; do
+            if [ -d "$path" ]; then test -f "_final_site/$path/index.html"; fi
+          done
+          if [ -d Portfolio/Game/Cheonryugwan-Archive ]; then
+            test -f _final_site/Portfolio/Game/Cheonryugwan-Archive/index.html
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_final_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

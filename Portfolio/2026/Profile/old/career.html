@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Career | 김민서</title>
+  <meta
+    name="description"
+    content="김민서의 경력 상세 페이지입니다. Azure AI, Microsoft Fabric, AKS, 백엔드 개발 및 플랫폼 엔지니어링 경력을 소개합니다."
+  />
+
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/profile.css" />
+  <link rel="stylesheet" href="../css/timeline.css" />
+  <link rel="stylesheet" href="../css/cards.css" />
+  <link rel="stylesheet" href="../css/dark.css" />
+
+  <style>
+    :root {
+      --bg: #08111f;
+      --surface: #111c2f;
+      --surface-soft: #16243a;
+      --text: #f2f7ff;
+      --muted: #a8b7ca;
+      --line: rgba(255,255,255,.09);
+      --primary: #2196f3;
+      --primary-light: #6bc2ff;
+      --success: #4dd599;
+      --max-width: 1180px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 6%, rgba(33,150,243,.14), transparent 30%),
+        radial-gradient(circle at 88% 10%, rgba(107,194,255,.08), transparent 28%),
+        var(--bg);
+      font-family:
+        Inter,
+        Pretendard,
+        "Noto Sans KR",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      line-height: 1.72;
+      letter-spacing: -.01em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+      background: rgba(8,17,31,.8);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      color: #03111d;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      color: var(--text);
+    }
+
+    .back-link {
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.04);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 86px 0 44px;
+    }
+
+    .eyebrow {
+      color: var(--primary-light);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .15em;
+    }
+
+    h1 {
+      margin: 10px 0 16px;
+      font-size: clamp(46px, 7vw, 78px);
+      line-height: .98;
+      letter-spacing: -.06em;
+    }
+
+    .hero-copy {
+      max-width: 780px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .career-summary {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .summary-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,.03);
+    }
+
+    .summary-card strong {
+      display: block;
+      font-size: 24px;
+      letter-spacing: -.04em;
+    }
+
+    .summary-card span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .section {
+      padding: 48px 0 74px;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    .section-kicker {
+      color: var(--primary-light);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .15em;
+    }
+
+    .section-heading h2 {
+      margin: 6px 0 0;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -.06em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 20px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 179px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(var(--primary), rgba(33,150,243,.1));
+    }
+
+    .career-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 58px;
+    }
+
+    .career-item::before {
+      content: "";
+      position: absolute;
+      left: 171px;
+      top: 34px;
+      width: 14px;
+      height: 14px;
+      border: 3px solid var(--bg);
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 5px rgba(33,150,243,.12);
+    }
+
+    .career-period {
+      padding-top: 24px;
+      color: var(--primary-light);
+      font-weight: 800;
+      text-align: right;
+      font-size: 14px;
+    }
+
+    .career-card {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.022));
+      box-shadow: 0 20px 50px rgba(0,0,0,.18);
+    }
+
+    .career-card h3 {
+      margin: 0;
+      font-size: 27px;
+      letter-spacing: -.04em;
+    }
+
+    .career-role {
+      margin: 5px 0 18px;
+      color: #d9ebff;
+      font-weight: 800;
+    }
+
+    .career-description {
+      margin: 0 0 20px;
+      color: var(--muted);
+    }
+
+    .role-tags,
+    .stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .role-tags {
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      padding: 7px 10px;
+      border: 1px solid rgba(107,194,255,.18);
+      border-radius: 999px;
+      color: #dceeff;
+      background: rgba(33,150,243,.07);
+      font-size: 12px;
+    }
+
+    .achievement-list {
+      margin: 0 0 22px;
+      padding-left: 20px;
+    }
+
+    .achievement-list li + li {
+      margin-top: 8px;
+    }
+
+    .achievement-list strong {
+      color: #ffffff;
+    }
+
+    .stack-title {
+      margin: 0 0 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .career-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-left: 3px solid var(--success);
+      border-radius: 0 12px 12px 0;
+      color: #dcebe4;
+      background: rgba(77,213,153,.055);
+      font-size: 14px;
+    }
+
+    .career-focus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .focus-card {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,.028);
+    }
+
+    .focus-card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      letter-spacing: -.03em;
+    }
+
+    .focus-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .next-page {
+      padding: 20px 0 94px;
+    }
+
+    .next-box {
+      padding: 38px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(33,150,243,.14), rgba(255,255,255,.025));
+      text-align: center;
+    }
+
+    .next-box h2 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 46px);
+      letter-spacing: -.05em;
+    }
+
+    .next-box p {
+      margin: 0 auto 22px;
+      max-width: 700px;
+      color: var(--muted);
+    }
+
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border-radius: 13px;
+      color: #04111d;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      font-weight: 800;
+    }
+
+    .site-footer {
+      padding: 28px 0 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .main-nav {
+        display: none;
+      }
+
+      .career-summary {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-heading {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline::before {
+        left: 8px;
+      }
+
+      .career-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding-left: 34px;
+      }
+
+      .career-item::before {
+        left: 0;
+        top: 27px;
+      }
+
+      .career-period {
+        padding-top: 0;
+        text-align: left;
+      }
+
+      .career-focus-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(var(--max-width), calc(100% - 20px));
+      }
+
+      .career-summary {
+        grid-template-columns: 1fr;
+      }
+
+      .career-card,
+      .next-box {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 52px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">KM</span>
+        <span>Kim Minseo</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Profile 메뉴">
+        <a href="./index.html">Resume</a>
+        <a href="./career.html" aria-current="page">Career</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./architecture.html">Architecture</a>
+        <a href="./skills.html">Skills</a>
+        <a href="./certifications.html">Certifications</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+      <a class="back-link" href="../index.html">← Home</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Professional Career</div>
+        <h1>Career</h1>
+        <p class="hero-copy">
+          방송 관제와 백엔드 개발을 거쳐 Azure 기반 클라우드 플랫폼,
+          엔터프라이즈 AI, Microsoft Fabric 아키텍처로 전문 영역을 확장해 왔습니다.
+          운영 현장에서 발견한 문제를 구조화하고 자동화 가능한 플랫폼으로 바꾸는 것이
+          경력 전반을 관통하는 방향입니다.
+        </p>
+
+        <div class="career-summary">
+          <article class="summary-card">
+            <strong>8+ Years</strong>
+            <span>IT 운영·개발·클라우드 경력</span>
+          </article>
+
+          <article class="summary-card">
+            <strong>Azure AI</strong>
+            <span>AI Platform · Architecture</span>
+          </article>
+
+          <article class="summary-card">
+            <strong>Enterprise</strong>
+            <span>대기업 프로젝트 중심 경험</span>
+          </article>
+
+          <article class="summary-card">
+            <strong>Hands-on</strong>
+            <span>설계부터 구현·운영까지</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="career-timeline-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Career Timeline</div>
+            <h2 id="career-timeline-title">Professional Experience</h2>
+          </div>
+
+          <p>
+            최근 경력일수록 플랫폼 아키텍처, AI·데이터 플랫폼,
+            보안 네트워크, 자동화 역할의 비중이 높아졌습니다.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="career-item">
+            <div class="career-period">2022.07 — Present</div>
+
+            <div class="career-card">
+              <h3>메가존클라우드</h3>
+              <div class="career-role">
+                Manager · Azure AI Platform Engineer · Platform Architect
+              </div>
+
+              <div class="role-tags">
+                <span class="tag">Azure Part Lead</span>
+                <span class="tag">Platform Architect</span>
+                <span class="tag">Application Architect</span>
+                <span class="tag">Azure SME</span>
+              </div>
+
+              <p class="career-description">
+                Azure AI, Microsoft Fabric, AKS, APIM, Private Networking,
+                Workload Identity를 기반으로 대기업 AI·데이터 플랫폼을 설계하고 구축했습니다.
+                프로젝트에 따라 Azure 파트 리드, 플랫폼 아키텍트,
+                애플리케이션 아키텍트 역할을 수행했습니다.
+              </p>
+
+              <ul class="achievement-list">
+                <li>
+                  <strong>Amorepacific:</strong>
+                  Azure AI Foundry, Microsoft Fabric, AKS, APIM Premium 기반
+                  엔터프라이즈 AI·데이터 플랫폼 구축 및 Azure 파트 리딩
+                </li>
+                <li>
+                  Private Endpoint, Private DNS, NSG, Firewall,
+                  Managed Identity, Workload Identity 기반
+                  <strong>Zero Trust 아키텍처</strong> 설계
+                </li>
+                <li>
+                  Microsoft Fabric Warehouse·Lakehouse·Semantic Model,
+                  Deployment Pipeline, CI/CD 및 Capacity Autoscale 운영 자동화
+                </li>
+                <li>
+                  Eventstream, Event Hub, Activator, Notebook, AKS CronJob을 활용한
+                  Fabric Capacity 동적 확장·축소 POC 및 운영 코드 구현
+                </li>
+                <li>
+                  FastAPI 기반 통신 검증 UI, Workload Identity 샘플,
+                  Azure Naming Rule, Validation Gate 등
+                  <strong>재사용 가능한 기술 자산</strong> 개발
+                </li>
+                <li>
+                  <strong>Samsung Securities:</strong>
+                  Azure OpenAI 번역·요약 서비스의 APIM 내부화,
+                  Managed Identity, Private Endpoint, Prompt Shield 적용
+                </li>
+                <li>
+                  <strong>KB Healthcare:</strong>
+                  AKS 기반 DB 이중화, Failover, Kubernetes Proxy 및 운영 구조 지원
+                </li>
+                <li>
+                  GenAI360, POSCO E&C, AIA Life, Gadget Korea, SpaceONE 등
+                  Azure·AI·클라우드 프로젝트 수행
+                </li>
+              </ul>
+
+              <p class="stack-title">Primary Stack</p>
+              <div class="stack-tags">
+                <span class="tag">Azure AI Foundry</span>
+                <span class="tag">Microsoft Fabric</span>
+                <span class="tag">Azure OpenAI</span>
+                <span class="tag">AI Search</span>
+                <span class="tag">AKS</span>
+                <span class="tag">APIM</span>
+                <span class="tag">Private Endpoint</span>
+                <span class="tag">Workload Identity</span>
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">GitLab CI/CD</span>
+                <span class="tag">ArgoCD</span>
+                <span class="tag">Datadog</span>
+              </div>
+
+              <div class="career-note">
+                현재 경력의 핵심은 특정 Azure 서비스 구축이 아니라,
+                AI·데이터·보안·네트워크·배포·운영을 하나의 플랫폼으로 연결하는 것입니다.
+              </div>
+            </div>
+          </article>
+
+          <article class="career-item">
+            <div class="career-period">2021.12 — 2022.06</div>
+
+            <div class="career-card">
+              <h3>지호아이앤씨</h3>
+              <div class="career-role">Backend Engineer</div>
+
+              <p class="career-description">
+                현대백화점 식품몰 고도화 및 E-Supermarket 프로젝트에서
+                Java 기반 이커머스 백엔드 기능을 개발했습니다.
+              </p>
+
+              <ul class="achievement-list">
+                <li>정기구독 주문, 자동결제 및 배송관리 기능 개발</li>
+                <li>장바구니, 주문현황, 주문내역, 마이페이지 기능 구현</li>
+                <li>PC·모바일 주문 화면 및 관리자 픽업리스트 기능 개발</li>
+                <li>OZ Report 기반 리포트 화면 연계</li>
+                <li>계약 종료 후 클라우드·플랫폼 엔지니어링 영역으로 경력 확장</li>
+              </ul>
+
+              <p class="stack-title">Primary Stack</p>
+              <div class="stack-tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring</span>
+                <span class="tag">JSP</span>
+                <span class="tag">Oracle</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">OZ Report</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="career-item">
+            <div class="career-period">2019.04 — 2020.04</div>
+
+            <div class="career-card">
+              <h3>코디더매니저</h3>
+              <div class="career-role">Platform / Backend Engineer</div>
+
+              <p class="career-description">
+                호텔 PMS 운영 플랫폼을 개발하고, 애플리케이션과 인프라 운영을 함께 담당했습니다.
+                데이터베이스 전환과 성능 개선 경험을 통해 운영형 개발자로 성장했습니다.
+              </p>
+
+              <ul class="achievement-list">
+                <li>Java·Spring·AngularJS 기반 호텔 PMS 기능 개발 및 운영</li>
+                <li>CUBRID에서 MariaDB로 데이터베이스 마이그레이션 수행</li>
+                <li>Nginx·Tomcat·Linux 기반 서비스 운영 및 장애 대응</li>
+                <li>Jenkins 기반 배포 자동화와 Docker 운영 환경 적용</li>
+                <li>
+                  연간 리포트 쿼리 수행 시간을
+                  <strong>30분 이상에서 약 1분 30초로 단축</strong>
+                </li>
+              </ul>
+
+              <p class="stack-title">Primary Stack</p>
+              <div class="stack-tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring</span>
+                <span class="tag">AngularJS</span>
+                <span class="tag">CUBRID</span>
+                <span class="tag">MariaDB</span>
+                <span class="tag">Linux</span>
+                <span class="tag">Nginx</span>
+                <span class="tag">Tomcat</span>
+                <span class="tag">Jenkins</span>
+                <span class="tag">Docker</span>
+              </div>
+
+              <div class="career-note">
+                이 시기의 성능 개선 경험은 현재까지 이어지는
+                “문제를 기록하고 병목을 수치로 확인한 뒤 구조적으로 개선한다”는 업무 방식의 출발점입니다.
+              </div>
+            </div>
+          </article>
+
+          <article class="career-item">
+            <div class="career-period">2017.12 — 2018.12</div>
+
+            <div class="career-card">
+              <h3>티오에스코리아</h3>
+              <div class="career-role">Broadcast Monitoring Engineer</div>
+
+              <p class="career-description">
+                지상파 방송 송출 환경에서 Main/Backup 시스템을 모니터링하고
+                장애 발생 시 신속한 전환과 원격 대응을 수행했습니다.
+              </p>
+
+              <ul class="achievement-list">
+                <li>지상파 방송 Main·Backup 송출 상태 관제</li>
+                <li>STB Video·Audio 상태 및 WFM Jitter 점검</li>
+                <li>RF-IRD 원격 제어와 Failover 대응</li>
+                <li>운영 중단을 최소화하기 위한 상황 기록 및 장애 보고</li>
+              </ul>
+
+              <p class="stack-title">Primary Focus</p>
+              <div class="stack-tags">
+                <span class="tag">Monitoring</span>
+                <span class="tag">Incident Response</span>
+                <span class="tag">Failover</span>
+                <span class="tag">Broadcast Systems</span>
+                <span class="tag">Operations</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="career-focus-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Career Direction</div>
+            <h2 id="career-focus-title">경력의 중심축</h2>
+          </div>
+
+          <p>
+            운영 안정성, 백엔드 개발, 클라우드 아키텍처 경험이
+            현재의 Enterprise AI Platform 역할로 연결되었습니다.
+          </p>
+        </div>
+
+        <div class="career-focus-grid">
+          <article class="focus-card">
+            <h3>Operations First</h3>
+            <p>
+              방송 관제와 서비스 운영 경험을 바탕으로
+              장애 대응, 관측성, Failover, 운영 절차를 설계 단계부터 고려합니다.
+            </p>
+          </article>
+
+          <article class="focus-card">
+            <h3>Developer Mindset</h3>
+            <p>
+              Java 백엔드와 Python·FastAPI 개발 경험을 활용해
+              아키텍처를 문서에만 머물지 않고 실제 코드와 자동화로 구현합니다.
+            </p>
+          </article>
+
+          <article class="focus-card">
+            <h3>Platform Architecture</h3>
+            <p>
+              Azure AI, Fabric, AKS, APIM, Identity, Networking을
+              분리된 리소스가 아닌 하나의 엔터프라이즈 플랫폼으로 연결합니다.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-page">
+      <div class="container">
+        <div class="next-box">
+          <div class="section-kicker">Next Page</div>
+          <h2>프로젝트 상세 보기</h2>
+          <p>
+            경력에서 수행한 역할을 실제 문제, 해결 과정, 아키텍처,
+            기술 성과 단위로 확인할 수 있습니다.
+          </p>
+          <a class="button" href="./projects.html">Projects 페이지로 이동 →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Kim Minseo.</span>
+      <span>Career · Enterprise AI Platform Architect</span>
+    </div>
+  </footer>
+
+  <script src="../js/common.js" defer></script>
+  <script src="../js/animation.js" defer></script>
+  <script src="../js/timeline.js" defer></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
