@@ -1,5 +1,5 @@
 ---
-index: 6
+index: 7
 navLabel: Training
 href: /training
 enabled: true

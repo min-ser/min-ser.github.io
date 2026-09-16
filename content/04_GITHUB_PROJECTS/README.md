@@ -1,5 +1,5 @@
 ---
-index: 4
+index: 5
 navLabel: GitHub
 href: /github
 enabled: true

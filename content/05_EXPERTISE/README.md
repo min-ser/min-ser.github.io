@@ -1,5 +1,5 @@
 ---
-index: 5
+index: 6
 navLabel: Expertise
 href: /expertise
 enabled: true

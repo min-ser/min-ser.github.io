@@ -1,5 +1,5 @@
 ---
-index: 7
+index: 8
 navLabel: Archive
 href: /archive
 enabled: true
