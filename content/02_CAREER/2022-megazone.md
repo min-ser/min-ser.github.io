@@ -143,8 +143,8 @@ flowchart TB
 timeline
  title MEGAZONE CLOUD Project Timeline
  2023 : Azure SpaceONE API : 밀버스 Azure Infra : KB헬스케어 B2B/B2C : TKG태광 DevOps
- 2024 : 포스코이앤씨 Azure Functions : AIA생명 AKS CI/CD : 가제트코리아 Migration : GenAI360
- 2025 : 삼성증권 AI Platform : AMOREPACIFIC Data Highway / Fabric
+ 2024 : 포스코이앤씨 Azure Functions : AIA생명 Cloud 전환 제안 : 가제트코리아 Migration : GenAI360 : 현대퓨처넷 AI Azure 전환 제안
+ 2025 : 현대퓨처넷 제안/HOL : 삼성증권 AI Platform : AMOREPACIFIC Data Highway / Fabric
  2026 : AMOREPACIFIC Azure Part PL : Fabric Autoscale / Audit / Security : NEO AKS / GitOps
 ```
 
@@ -376,36 +376,45 @@ Python, FastAPI, REST API, Fabric Notebook, Stored Procedure, Kusto Query
 ### 2. 삼성증권 — 해외 투자정보 번역/요약 서비스 구축
 
 **기간:** 2025.03 ~ 2025.07  
-**역할:** Application Architect / AI & Infra 지원
+**구분:** Delivery / Enterprise AI Platform  
+**역할:** Application Architect / Azure AI·Infrastructure Technical Support
 
-- DEV/PRD Azure OpenAI 배포 및 Private Endpoint 구성
-- Azure API Management Premium / VNet Internal 구성 및 AI Backend 연계
-- Managed Identity 기반 API 인증, Inbound Policy 및 접근 제한 구성
-- Azure Monitor 기반 PTU Alert 등 운영 모니터링 구성
-- Content Safety / PII / Prompt Shield 관련 AI 서비스 구성 및 개발 지원
-- 고객 개발팀을 위한 Managed Identity 연동 샘플과 기술 가이드 제공
+제안·기술협상 단계부터 참여한 뒤 2025-03-04 정식 착수하여 실제 구축까지 수행했습니다. Azure OpenAI, APIM Premium/VNet Internal, Private Endpoint, Firewall/Squid Proxy, Managed Identity, Content Safety/PII, Monitoring 및 CI/CD 구조를 금융권 보안요건에 맞게 검토·구성했습니다. 초기 Azure DevOps 검토 후 고객 환경 제약을 반영해 Jenkins 기반 CI/CD로 조정했으며, PTU 운영방안, Active/Standby·Active/Active 가용성, Zone/DR, 전용선 및 Tenant 일정 Risk까지 함께 검토했습니다.
 
-### 3. GenAI360 — 생성형 AI Azure 기술지원
+### 3. 현대퓨처넷 — AI 서비스 Azure 전환 제안 기술지원
 
-**기간:** 2024.09 ~ 2024.12  
-**역할:** Application Architect
+**기간:** 2024.12 ~ 2025.02  
+**구분:** Pre-Sales / Proposal / Technical Documentation  
 
-- LangChain 기반 RAG 구조 설계 및 개발
-- FastAPI Backend 및 Web UI 설계
-- Azure AI Search + Vector Search 기반 검색 구조 검토 및 구현
-- Azure OpenAI 활용 기술 가이드와 재사용 가능한 샘플 코드 제공
+현대퓨처넷 AI 서비스 Azure 전환 제안 준비 과정에서 Azure OpenAI, Azure AI Search, APIM, Azure Functions, Azure DevOps를 연결하는 **AOAI CI/CD 구축 HOL을 직접 작성**했습니다. Self-hosted Agent/Agent Pool/Pipeline과 Application Test 절차까지 문서화했으나 실제 고객 구축 단계까지 수행한 프로젝트는 아니므로 Delivery 경력과 명확히 구분합니다. Terraform은 문서상 준비도구로 확인되지만 실제 Production IaC 수행으로 기록하지 않습니다.
 
-### 4. AIA생명 — Jenkins CI/CD 기반 AKS 환경 구축
+### 4. GenAI360 — AWS 기반 생성형 AI 플랫폼의 Azure 전환 기술지원
+
+**기간:** 2024.08 ~ 2024.12  
+**구분:** Technical Support / Application Architecture / GenAI RAG
+
+AWS 기반 GenAI360을 Azure에서도 제공하기 위한 Application Architecture와 Porting을 지원했습니다. `unstructured.io` 기반 Document Loader/Chunking, LangChain Retriever, AzureAISearchRetriever, Vector·Lexical·Semantic·Hybrid Search를 검토·구현하고 Azure OpenAI/Azure AI Search 기반 RAG 구조를 구체화했습니다. Infra 담당자와 Azure To-Be Architecture를 공동 설계하고 Azure DevOps CI/CD 및 Private Endpoint/VPN 연계 구조도 함께 검토했습니다.
+
+### 5. 가제트코리아 — Azure Sponsorship → CSP Subscription Migration
 
 **기간:** 2024.07 ~ 2024.08  
-**역할:** Application Architect
+**구분:** Delivery / Azure Migration
 
-- Jenkins CI/CD 환경 및 Pipeline 구성
-- Repository 연동과 개발환경 구성 가이드
-- AKS 기반 배포 Architecture 검토 및 구축 지원
-- Azure App Service CI/CD 구성 및 고객 교육
+Sponsorship 만료 대응을 위해 Azure Resource Inventory와 Dependency를 분석하고 Subscription Migration을 수행했습니다. 196개 Resource를 검토해 Direct Move와 Redeployment 대상을 분리했으며, Resource Group 재구성, Move Validation, App Service/Functions 종속성 검토, Migration 영향도 Test, 서비스 정상화 및 후속 Architecture Optimization까지 수행했습니다.
 
-### 5. 포스코이앤씨 — Azure Functions 개발·배포 기술가이드
+### 6. AIA생명 — 클라우드 전환 2차 사업 제안 기술지원
+
+**기간:** 2024.07 ~ 2024.08  
+**구분:** Pre-Sales / RFP / Proposal  
+**협업:** 삼성SDS
+
+삼성SDS와 공동으로 AIA생명 Cloud 전환 2차 사업 제안에 참여했습니다. 11개 Application의 Azure To-Be Architecture와 AKS/App Service 전환방안, Network/DR/Data 영역을 검토하고 제안서/발표자료 작성 및 Jenkins Build Agent 사전검증을 수행했습니다. 실제 구축 단계에는 참여하지 않았으므로 Pre-Sales 경력으로 구분합니다.
+
+### 7. 포스코이앤씨 — Azure Functions 기술 가이드
+
+Azure Functions의 HTTP/Timer/Blob Trigger와 Managed Identity 등을 대상으로 Hands-on 및 개발 가이드를 지원했습니다.
+
+### 8. 포스코이앤씨 — Azure Functions 개발·배포 기술가이드
 
 **기간:** 2024.04 ~ 2024.05  
 **역할:** Azure Functions 개발 / 기술가이드
@@ -414,36 +423,48 @@ Python, FastAPI, REST API, Fabric Notebook, Stored Procedure, Kusto Query
 - Managed Identity 기반 Azure Resource 인증 연동
 - Hands-On Lab 및 고객 개발팀 실습 지원
 
-### 6. KB헬스케어 — B2B/B2C 구축 기술지원
+### 9. KB헬스케어 — B2B/B2C 통합 플랫폼 구축 기술지원
 
 **기간:** 2023.08 ~ 2024.01  
-**역할:** Backend / Infra 기술지원
+**역할:** Backend Engineer / Cloud·Kubernetes Technical Support
 
-- MySQL / PostgreSQL DB 이중화 및 Failover 검증
-- JPA Replica 구성 및 성능 검증
-- Kubernetes Forward/Reverse Proxy 이슈 분석 및 매뉴얼 작성
-- Spring Boot 기반 부하 테스트 코드 개발
+고객 환경에 상주하며 AKS와 Database 사이의 실제 동작을 검증하고, Network/Proxy 장애를 Application 관점까지 연결하여 분석했습니다. 단순 Infrastructure 설정 확인이 아니라 **Spring Boot Sample Application을 직접 개발해 AKS에 배포하고 MySQL/PostgreSQL HA·Failover를 재현**했습니다.
 
-### 7. 밀버스 — Azure 인프라 환경 구축
+- 2023.08~10 1차, 2023.11~2024.01 2차 고객사 상주 기술지원
+- MySQL Primary/Replica 구성 및 Read/Write DataSource 동작 검증
+- Scheduler + Multi Thread 기반 자동 Insert/Select Test Logic 개발
+- MySQL Replica Load Balancing 및 Failover Test, Azure Metric/Log 확인
+- PostgreSQL Active/Standby, Availability Zone 및 Connection Pool 검증
+- Spring Boot + MySQL/PostgreSQL Sample Container 제작 및 AKS 배포
+- Kubernetes Pod / Deployment / ClusterIP Service / AGIC Ingress 구성
+- WAF 설치 및 AKS Application 연계 지원
+- Forward Proxy / Reverse Proxy 요청경로 Troubleshooting
+- Spring Boot `X-Forwarded-For` Header 처리 및 Client IP 전달구조 검토
+- MySQL/PostgreSQL Replica 개발자 가이드와 Forward/Reverse Proxy 운영 가이드 작성
+
+**핵심 경험:** `Application → Kubernetes → Network/Proxy → Database HA`를 하나의 End-to-End 경로로 직접 재현·검증하면서 Backend 경험을 Cloud Platform Troubleshooting 역량으로 확장했습니다.
+
+### 10. 밀버스 — Azure 인프라 구축·운영 및 서비스 안정화
 
 **기간:** 2023.04 ~ 2024.01  
-**역할:** Azure Solution Architect
+**역할:** Azure Solution Architect / Cloud Infrastructure Technical Support
 
-- Azure VM / WAF / Firewall 등 IaaS 환경 설계·배포
-- HTTPS 인증서 및 다중 Domain 환경 구성
-- VM OS Backup 및 보안정책 적용
-- 배포 결과서 작성 및 고객 기술지원
+Firstmall 및 연계 서비스의 Azure IaaS 환경을 초기 설계부터 구축하고 이후 장기간 운영을 지원했습니다. 초기 요구사항에는 Firstmall WEB/WAS, MyCRM, Tableau, DBMart(MariaDB), Redis, Tracking Server 등 **총 7대 수준의 Server Resource**가 포함됐으며, 구축 후 SSL/Domain, VM Clone, Database Connectivity, Proxy/IP 전달 등 실제 서비스 운영 이슈까지 대응했습니다.
 
-### 8. 가제트코리아 — Azure Sponsorship 구독 이전
+- Azure VM 기반 Firstmall WEB/WAS 및 연계 서비스 Infrastructure 설계·배포
+- WAF / Firewall / 고정 IP 등 Network Security 요구사항 검토 및 적용 지원
+- Azure Architecture Diagram 및 Resource 구성/견적 검토자료 작성
+- Linux Apache / PHP / MySQL Runtime 및 사용자·Directory Permission 운영 지원
+- Azure Backup / OS Disk Snapshot 기반 VM 복제 및 복구성 검증
+- Firstmall VM Snapshot → Managed Disk → Clone VM 생성/OS Disk 교체 작업
+- PC/Mobile Domain SSL Certificate 등록 및 HTTPS 서비스 운영 지원
+- Mobile 서비스의 Proxy IP 기록 문제에 대해 `X-Forwarded-For` 기반 Client IP 전달구조 분석
+- Firstmall VM 간 MySQL Connectivity Test 및 Application DB 연결 확인
+- 구축 결과보고서, Linux 운영가이드 및 고객 기술 질의 대응
 
-**기간:** 2024.08  
-**역할:** Azure Solution Architect
+**핵심 경험:** Azure IaaS를 `Compute → Network Security → Runtime → Database → SSL/Domain → Backup → Troubleshooting` 관점으로 운영하며 실제 고객 서비스 Lifecycle을 경험했습니다.
 
-- Sponsorship 구독 만료에 따른 Azure Resource 이전 지원
-- App Service / Azure Functions / Storage 등 서비스 이전
-- 비상 대응 절차 및 고객 가이드 작성
-
-### 9. Azure SpaceONE — API 개발 기술지원
+### 11. Azure SpaceONE — API 개발 기술지원
 
 **기간:** 2023.05  
 **역할:** API Developer
@@ -451,7 +472,7 @@ Python, FastAPI, REST API, Fabric Notebook, Stored Procedure, Kusto Query
 - Azure Cost Management API 개발
 - Azure Partner Center API 연동 개발
 
-### 10. TKG태광 — GSCM Apps & DevOps 서비스 구축
+### 12. TKG태광 — GSCM Apps & DevOps 서비스 구축
 
 **기간:** 2023.08  
 **역할:** DevOps 기술지원
