@@ -11,6 +11,18 @@ skills: ["Azure Functions", "Java", "Python", "Managed Identity", "Azure"]
 ---
 # 포스코이앤씨 Azure Functions 개발·배포 기술가이드
 
+## Azure Functions Trigger Map
+
+```mermaid
+flowchart LR
+ HTTP[HTTP] --> F[Azure Functions]
+ TIMER[Timer] --> F
+ BLOB[Blob] --> F
+ F --> ID[Managed Identity]
+ ID --> AZ[Azure Resources]
+```
+
+
 ## 01. Project Overview
 고객 개발팀이 Azure Functions를 직접 개발·배포하고 운영할 수 있도록 **Trigger 유형별 샘플 코드, Managed Identity 인증 패턴, Hands-On Lab**을 구성했습니다. 단순 제품 설명이 아니라 실제 코드와 실습을 통해 개발팀의 자립 운영을 지원한 기술가이드 프로젝트입니다.
 
@@ -35,3 +47,21 @@ skills: ["Azure Functions", "Java", "Python", "Managed Identity", "Azure"]
 
 ## 06. Technology
 Azure Functions / Java / Python / Managed Identity / Azure RBAC / Azure Storage
+
+## 07. Guide Design
+
+제품 기능을 설명하는 문서보다 개발자가 직접 실행해 볼 수 있는 Sample 중심으로 구성했습니다. HTTP/Timer/Blob Trigger를 각각 분리하여 Event Source에 따른 실행모델 차이를 확인하고, Azure Resource 연동에서는 Credential을 코드에 직접 포함하는 방식과 Managed Identity 방식의 차이를 설명했습니다.
+
+## 08. Hands-On Structure
+
+`Local Development → Trigger 실행 → Azure 배포 → Managed Identity → Azure Resource 접근 → Log/Result 확인` 흐름으로 실습을 구성하여 개발환경과 Azure Runtime의 차이를 이해할 수 있도록 지원했습니다.
+
+## 09. Deliverables
+
+- HTTP Trigger Sample
+- Timer Trigger Sample
+- Blob Trigger Sample
+- Java/Python 개발 및 실행 예제
+- Managed Identity 연동 예제
+- Azure 배포/검증 Hands-On Guide
+- 고객 개발팀 실습 및 오류 대응

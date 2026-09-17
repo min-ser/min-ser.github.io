@@ -8,6 +8,19 @@ status: living-document
 
 # AMOREPACIFIC Platform Troubleshooting Archive
 
+## Troubleshooting Pattern
+
+```mermaid
+flowchart LR
+ S[Symptom] --> E[Evidence / Logs]
+ E --> H[Hypothesis]
+ H --> V[Network / Identity / Config Validation]
+ V --> R[Root Cause]
+ R --> A[Action]
+ A --> O[Operational Verification]
+```
+
+
 ## 01. Purpose
 아모레퍼시픽 Data Highway / NEO 환경에서 실제로 다룬 **Microsoft Fabric / AKS / GitLab CI/CD / ArgoCD / Network / Identity / Monitoring** 이슈를 결과만 나열하지 않고 `Symptom → Analysis → Cause → Action → Validation` 순서로 기록합니다. Career/Project 본문에는 대표 성과를 남기고, 이 문서는 실제 운영 과정에서 어떤 방식으로 문제 범위를 좁혔는지를 보존하는 원천 기록입니다.
 

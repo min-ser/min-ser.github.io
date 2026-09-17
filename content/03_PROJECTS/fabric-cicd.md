@@ -21,6 +21,20 @@ skills:
 
 # Microsoft Fabric CI/CD
 
+## Deployment Flow
+
+```mermaid
+flowchart LR
+ DEV[Developer] --> G[GitLab Repository]
+ G --> P[GitLab CI/CD]
+ P --> SP[Service Principal]
+ SP --> API[Fabric REST API]
+ API --> D[DEV Workspace]
+ D --> Q[QA Workspace]
+ Q --> R[PRD Workspace]
+```
+
+
 ## 01. Overview
 Microsoft Fabric의 Notebook 등 개발 산출물을 수작업으로 환경별 반영하는 방식에서 벗어나기 위해 **GitLab CI/CD + Fabric REST API + Service Principal** 기반 배포 자동화 흐름을 구성했습니다. 단순 Pipeline 작성이 아니라 고객사의 DEV / QA / PRD 환경 분리 원칙과 Fabric Workspace 운영방식을 함께 고려하여 배포 절차를 표준화했습니다.
 

@@ -17,6 +17,23 @@ skills:
   - FinOps
 ---
 
+## Visual Architecture
+
+```mermaid
+flowchart LR
+ M[Fabric Capacity Metrics] --> E[Event Hub]
+ E -->|WebSocket 443| C[AKS CronJob]
+ C --> R[Rolling Utilization]
+ R --> D{Scale Decision}
+ D -->|UP| U[Higher SKU]
+ D -->|DOWN| L[Lower SKU]
+ D -->|KEEP| K[Current SKU]
+ U --> F[Fabric Capacity]
+ L --> F
+ K --> F
+```
+
+
 ## Overview
 
 Microsoft Fabric Capacity를 고정 SKU나 단순 시간표만으로 운영하지 않고, **실제 Capacity Utilization을 기준으로 Scale Up/Down**하도록 구성한 운영 자동화입니다. 기존 Schedule 기반 Capacity Control을 유지하면서 업무시간 일부 구간의 제어권을 Dynamic Autoscale에 위임하여 운영 안정성과 비용 효율을 함께 고려했습니다.

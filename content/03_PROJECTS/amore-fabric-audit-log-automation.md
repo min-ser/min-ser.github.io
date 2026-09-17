@@ -12,6 +12,20 @@ skills: ["Fabric Admin Activity API", "Notebook", "Pipeline", "Azure Storage", "
 ---
 # AMOREPACIFIC Fabric Audit Log 수집 자동화
 
+## Collection Pipeline
+
+```mermaid
+flowchart LR
+ A[Fabric Activity] --> B[Activity Events API]
+ B --> C[SP Auth]
+ C --> D[Notebook Pagination]
+ D --> E[Normalize / CSV]
+ E --> F[Pipeline]
+ F --> G[Azure Storage]
+ G --> H[Retention / Audit]
+```
+
+
 ## 01. Overview
 보안성 검토에서 요구한 Fabric 사용자 활동 감사 데이터를 장기간 보존하기 위해 **Admin Activity Events API → Fabric Notebook → Pipeline → Azure Storage** 형태의 일일 수집 자동화를 구현했습니다.
 

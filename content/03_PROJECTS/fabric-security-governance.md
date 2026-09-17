@@ -19,6 +19,23 @@ skills:
   - Datadog
 ---
 
+## Governance Model
+
+```mermaid
+flowchart TB
+ REQ[Security Requirements] --> IAM[Identity / RBAC]
+ REQ --> AC[Access Control]
+ REQ --> ENV[DEV / QA / PRD]
+ REQ --> AUD[Audit Logging]
+ REQ --> QL[Query Logging]
+ REQ --> DA[Data Agent Governance]
+ AUD --> API[Activity Events API]
+ API --> NB[Notebook / Pipeline]
+ NB --> ST[Storage / Retention]
+ DA --> QL
+```
+
+
 ## Overview
 
 Microsoft Fabric 도입에 대한 고객사 보안성 검토 요구사항을 분석하고, **계정/권한·접근통제·환경분리·Audit/Query Logging·Data Agent 권한**을 운영 가능한 통제 방식으로 구체화한 작업입니다.
