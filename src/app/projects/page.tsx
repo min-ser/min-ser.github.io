@@ -18,5 +18,5 @@ export default function Page(){
   skills:Array.isArray(d.meta.skills)?d.meta.skills.map(String):[],
   markdown:d.content
  }));
- return <section className="section pageTop"><PageHeader config={config} count={docs.length}/><ProjectModalList projects={projects}/></section>;
+ return <section className="section pageTop projectArchivePage"><PageHeader config={config} count={docs.length}/><ProjectModalList projects={projects}/></section>;
 }

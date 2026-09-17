@@ -1,6 +1,6 @@
 # 김민서 Web Resume
 
-> **Version 0.2.2 — TOS Korea Career Content
+> **Version 0.2.11 — Project Typography Hierarchy**
 >
 > 김민서의 경력, 프로젝트, 기술 경험과 기술 기록을 장기적으로 관리하기 위한 Markdown 기반 Web Resume입니다.
 
@@ -41,7 +41,7 @@
 | Source Control | Git | 버전 관리 |
 | Deployment | GitHub Pages 예정 | 정적 Web Resume 배포 |
 
-현재 v0.1.17은 별도의 UI Framework나 CSS Framework에 종속되지 않습니다.
+현재 버전은 별도의 UI Framework나 CSS Framework에 종속되지 않습니다.
 
 ---
 
@@ -574,7 +574,7 @@ Dark
 현재 버전:
 
 ```text
-v0.1.17
+v0.2.11
 ```
 
 초기 Foundation 단계에서는 구조와 UI를 빠르게 검증합니다.
@@ -1736,3 +1736,13 @@ The deployment workflow builds this repository root as the primary Next.js site,
 - Resume Table Header와 Data Row의 Grid Track이 동일한 시작 좌표와 너비를 사용하도록 Row Container를 정규화했습니다.
 - 여러 줄 POSITION/ROLE 데이터에서도 COMPANY와 POSITION 사이의 세로 경계선이 Header 경계선과 정확히 연결되도록 수정했습니다.
 - 기존 v0.2.8 반응형 Table 정책과 v0.2.9 Project Mission Operations Workspace를 유지했습니다.
+
+
+## v0.2.11 — Project Typography Hierarchy & README Consolidation
+
+- `03 PROJECTS`의 `Project Records` Page Hero 크기를 낮춰 Operations Board와의 시각적 비율을 조정했습니다.
+- Project Reader의 Mission Title 최대 크기를 낮추고 Desktop/Mobile `clamp()` 스케일을 재정의했습니다.
+- Project Markdown의 H1이 상위 `.section h1` Hero 규칙을 상속해 과도하게 커지던 문제를 Scoped Typography로 수정했습니다.
+- Project 본문의 H1/H2/H3 계층을 별도로 정의해 Page Title → Mission Title → Article Heading 순서가 명확하게 보이도록 조정했습니다.
+- 기존 `/projects/[slug]` 상세 Route에도 동일한 Project Typography 정책을 적용했습니다.
+- 중복 누적 README 문서를 루트 `README.md`로 통합했습니다. 이후 버전 변경 이력은 `README.md` 하나에만 누적합니다.
