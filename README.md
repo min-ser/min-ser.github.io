@@ -1,20 +1,10 @@
 # 김민서 Web Resume
 
-> **Version 0.2.11 — Project Typography Hierarchy**
+> **Version 0.2.2 — TOS Korea Career Content
 >
 > 김민서의 경력, 프로젝트, 기술 경험과 기술 기록을 장기적으로 관리하기 위한 Markdown 기반 Web Resume입니다.
 
 ---
-
-## v0.2.12 — Project Archive compact hero & pagination
-
-- `03 Projects`의 `Project Records` 타이틀을 Expertise 수준의 시각 비율로 축소했습니다.
-- 기존 페이지 디자인은 유지하고, 비어 보이던 타이틀 오른쪽에 프로젝트 아카이브 성격의 `BUILD / LEARN / DEPLOY / REPEAT` 미니 패널을 추가했습니다.
-- 1050px 이하에서는 보조 패널을 자동으로 숨겨 모바일/태블릿 레이아웃을 보호합니다.
-- Project 목록에 10개 단위 클라이언트 페이징을 추가했습니다. 35개 기준 4페이지로 표시됩니다.
-- 검색 또는 Domain 필터 변경 시 자동으로 1페이지로 복귀하며, 필터 결과 기준으로 페이지 수를 다시 계산합니다.
-- 기존 테이블, 검색, 필터, 상세 진입 UI와 색상/그리드 디자인은 유지했습니다.
-
 
 ## 1. 프로젝트 목적
 
@@ -51,7 +41,7 @@
 | Source Control | Git | 버전 관리 |
 | Deployment | GitHub Pages 예정 | 정적 Web Resume 배포 |
 
-현재 버전은 별도의 UI Framework나 CSS Framework에 종속되지 않습니다.
+현재 v0.1.17은 별도의 UI Framework나 CSS Framework에 종속되지 않습니다.
 
 ---
 
@@ -584,7 +574,7 @@ Dark
 현재 버전:
 
 ```text
-v0.2.11
+v0.1.17
 ```
 
 초기 Foundation 단계에서는 구조와 UI를 빠르게 검증합니다.
@@ -1747,12 +1737,8 @@ The deployment workflow builds this repository root as the primary Next.js site,
 - 여러 줄 POSITION/ROLE 데이터에서도 COMPANY와 POSITION 사이의 세로 경계선이 Header 경계선과 정확히 연결되도록 수정했습니다.
 - 기존 v0.2.8 반응형 Table 정책과 v0.2.9 Project Mission Operations Workspace를 유지했습니다.
 
-
-## v0.2.11 — Project Typography Hierarchy & README Consolidation
-
-- `03 PROJECTS`의 `Project Records` Page Hero 크기를 낮춰 Operations Board와의 시각적 비율을 조정했습니다.
-- Project Reader의 Mission Title 최대 크기를 낮추고 Desktop/Mobile `clamp()` 스케일을 재정의했습니다.
-- Project Markdown의 H1이 상위 `.section h1` Hero 규칙을 상속해 과도하게 커지던 문제를 Scoped Typography로 수정했습니다.
-- Project 본문의 H1/H2/H3 계층을 별도로 정의해 Page Title → Mission Title → Article Heading 순서가 명확하게 보이도록 조정했습니다.
-- 기존 `/projects/[slug]` 상세 Route에도 동일한 Project Typography 정책을 적용했습니다.
-- 중복 누적 README 문서를 루트 `README.md`로 통합했습니다. 이후 버전 변경 이력은 `README.md` 하나에만 누적합니다.
+## v0.2.13 — Unified Page Hero System
+- 01 Profile부터 08 Archive까지 공통 PageHeader 타이포그래피를 Expertise 기준 크기로 통일했습니다.
+- 각 영역의 우측 여백에 페이지 성격에 맞는 코드형 모션 비주얼을 추가했습니다. 별도 이미지 자산 없이 CSS로 동작합니다.
+- Projects 목록은 검색/필터 결과 기준 10개 단위 페이지네이션을 적용했습니다.
+- 모바일에서는 우측 비주얼을 숨겨 본문 가독성과 화면 폭을 우선합니다.
