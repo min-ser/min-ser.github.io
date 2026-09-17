@@ -1689,3 +1689,101 @@ body:has(.identityHero) .profileSection>.sectionHead span:first-child{
   .readmeMarkdown img,.readmeMarkdown video,.readmeMarkdown iframe,.readmeMarkdown svg{max-width:100%!important;height:auto}
   .readmeMarkdown pre,.readmeMarkdown .markdownTableScroll{width:100%;max-width:100%}
 }
+
+/* ===== v0.2.8 Resume table alignment + responsive policy ===== */
+/* Resume tables are CSS-grid tables. Keep every cell responsible for one
+   vertical rule so multiline content can grow without breaking the row grid. */
+.resumeProfileTables,
+.resumeProfileTables *,
+.careerTimelineFilter,
+.careerTimelineFilter *{box-sizing:border-box}
+.resumeProfileTables,
+.resumeTableBlock,
+.resumeTable,
+.resumeTableHeader,
+.resumeTableRow{width:100%;max-width:100%;min-width:0}
+.resumeTable{overflow:visible}
+.resumeTableHeader,.resumeTableRow{align-items:stretch}
+.resumeTableHeader>*,.resumeTableRow>*{
+  min-width:0;
+  height:100%;
+  margin:0;
+  border-right:1px solid rgba(0,216,255,.12);
+  border-top:0;
+  border-bottom:0;
+  border-left:0;
+  border-radius:0;
+}
+.resumeTableHeader>*:last-child,.resumeTableRow>*:last-child{border-right:0}
+.resumeTableRow>span,.resumeTableRow>strong,.resumeAwardDetailButton{
+  display:flex;
+  align-items:center;
+  padding:11px 13px;
+  line-height:1.5;
+  vertical-align:middle;
+}
+.resumeAwardDetailButton{height:100%}
+.resumeAwardGithubCell{height:100%}
+
+/* Wide data sets scroll inside their own HUD frame only. */
+@media(max-width:1050px){
+  .resumeCareerTable,.resumeEducationTable,.resumeTrainingTable,.resumeAwardsTable{
+    max-width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+    overscroll-behavior-inline:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+}
+
+/* Military is a compact two-column data set: it always fits the viewport. */
+.resumeMilitaryClickableTable{width:100%;max-width:100%;min-width:0;overflow:visible}
+.resumeMilitaryClickableTable .resumeTableHeader,
+.resumeMilitaryClickableTable .resumeTableRow{
+  width:100%;
+  min-width:0;
+  grid-template-columns:minmax(124px,clamp(124px,28vw,220px)) minmax(0,1fr);
+}
+.resumeMilitaryClickableTable .resumeTableRow>*{
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+
+/* Keep both Career filter labels on one line while retaining touch targets. */
+.careerTimelineFilter{width:min(100%,360px);min-width:0}
+.careerTimelineFilter button{
+  min-width:0;
+  min-height:44px;
+  padding-inline:clamp(10px,3vw,16px);
+  white-space:nowrap;
+  font-size:clamp(10px,2.8vw,12px);
+}
+
+/* Global overflow containment for media and layout children. */
+img,video,svg{max-width:100%;height:auto}
+.section,.profileSection,.resumeProfileTables,.careerTimelineContent,.markdown,.readmeMarkdown{min-width:0}
+pre{max-width:100%;overflow-x:auto}
+.markdownTableScroll{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain}
+.markdown,.readmeMarkdown{overflow-wrap:anywhere}
+
+@media(max-width:760px){
+  .resumeMilitaryClickableTable{min-width:0}
+  .resumeMilitaryClickableTable .resumeTableHeader,
+  .resumeMilitaryClickableTable .resumeTableRow{
+    min-width:0;
+    grid-template-columns:minmax(112px,34%) minmax(0,66%);
+  }
+  .resumeMilitaryClickableTable .resumeTableHeader>*{
+    padding:9px 10px;
+    font-size:9px;
+  }
+  .resumeMilitaryClickableTable .resumeTableRow>*{padding:11px 10px}
+  .careerTimelineFilter{width:100%}
+  .careerTimelineFilter button{flex:1 1 50%;line-height:1.2}
+}
+
+@media(max-width:360px){
+  .resumeMilitaryClickableTable .resumeTableHeader,
+  .resumeMilitaryClickableTable .resumeTableRow{grid-template-columns:minmax(104px,36%) minmax(0,64%)}
+  .careerTimelineFilter button{padding-inline:8px;font-size:10px;letter-spacing:.035em}
+}

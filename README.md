@@ -1707,3 +1707,12 @@ The deployment workflow builds this repository root as the primary Next.js site,
 - Code Block과 Table은 전체 화면을 밀어내지 않고 내부 가로 스크롤을 사용합니다.
 - 기존 GitHub HUD 디자인, LIVE API Repository Card, README Modal 동작과 Expertise HUD 효과는 변경하지 않았습니다.
 
+## v0.2.8 — Table Consistency & Mobile Responsive Refinement
+
+- Main / Profile의 공통 Resume Table 셀 경계 규칙을 통일해 여러 줄 데이터에서도 행·열 border가 정확히 연결되도록 개선했습니다.
+- Education, Awards, Career/Experience의 Long-row alignment와 셀 높이 일관성을 개선했습니다.
+- Military Service 2열 테이블은 모바일에서 `min-width`와 가로 스크롤 없이 Viewport 안에 맞도록 수정했습니다.
+- Career의 `경력만` / `경력 + 교육이수` 필터가 모바일에서도 한 줄을 유지하도록 버튼 너비와 Typography를 조정했습니다.
+- 열이 많은 테이블만 자체 Wrapper 영역에서 가로 스크롤하도록 Responsive Table Overflow 정책을 분리했습니다.
+- 이미지, Code, Table 및 주요 Flex/Grid 자식의 전역 Overflow 방어를 보강했습니다.
+- v0.2.7의 GitHub README 모바일 제목·본문·이미지·Code/Table 가독성 개선과 기존 HUD/Scan/Loading UI를 유지했습니다.
