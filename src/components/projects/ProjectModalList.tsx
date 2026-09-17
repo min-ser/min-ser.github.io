@@ -29,12 +29,19 @@ export default function ProjectModalList({projects}:{projects:ProjectItem[]}){
  const [activeDomain,setActiveDomain]=useState("ALL OPERATIONS");
  const [query,setQuery]=useState("");
  const [active,setActive]=useState<ProjectItem|null>(null);
+ const [page,setPage]=useState(1);
+ const pageSize=10;
  const [scanning,setScanning]=useState(false);
  const filtered=useMemo(()=>projects.filter(project=>{
   const domainMatch=activeDomain==="ALL OPERATIONS"||domain(project)===activeDomain;
   const haystack=[project.title,project.summary,project.status,...project.skills].join(" ").toLowerCase();
   return domainMatch&&(!query.trim()||haystack.includes(query.trim().toLowerCase()));
  }),[projects,activeDomain,query]);
+
+ const pageCount=Math.max(1,Math.ceil(filtered.length/pageSize));
+ const safePage=Math.min(page,pageCount);
+ const paged=filtered.slice((safePage-1)*pageSize,safePage*pageSize);
+ useEffect(()=>{setPage(1)},[activeDomain,query]);
 
  const syncUrl=(slug?:string)=>{const url=new URL(window.location.href);if(slug)url.searchParams.set("mission",slug);else url.searchParams.delete("mission");window.history.replaceState({},"",`${url.pathname}${url.search}${url.hash}`);};
  const open=(project:ProjectItem)=>{setScanning(true);window.setTimeout(()=>{setActive(project);syncUrl(project.slug);setScanning(false);window.scrollTo({top:0,behavior:"smooth"});},240);};
@@ -80,14 +87,22 @@ export default function ProjectModalList({projects}:{projects:ProjectItem[]}){
    </div>
    {filtered.length?<div className="projectOpsBoard">
     <div className="projectOpsBoardHead"><span>ID</span><span>STATUS</span><span>DOMAIN</span><span>MISSION / STACK</span><span>DATE</span><span>OPEN</span></div>
-    {filtered.map((project,index)=><button type="button" className="projectOpsRow" key={project.slug} onClick={()=>open(project)}>
-     <span>{String(index+1).padStart(3,"0")}</span>
+    {paged.map((project,index)=><button type="button" className="projectOpsRow" key={project.slug} onClick={()=>open(project)}>
+     <span>{String((safePage-1)*pageSize+index+1).padStart(3,"0")}</span>
      <b className={project.status==="ongoing"?"isActive":""}>{displayStatus(project.status)}</b>
      <span>{domain(project)}</span>
      <span className="projectOpsIdentity"><strong>{project.title}</strong><small>{project.skills.slice(0,5).join(" / ")}</small></span>
      <time>{project.startDate.replaceAll("-", ".")}</time><i>＋</i>
     </button>)}
    </div>:<div className="projectOpsEmpty">NO MISSION RECORDS DETECTED</div>}
+   {filtered.length>0&&<div className="projectOpsPagination">
+    <span>SHOWING {(safePage-1)*pageSize+1}–{Math.min(safePage*pageSize,filtered.length)} OF {filtered.length} RECORDS</span>
+    <nav aria-label="Project pages">
+     <button type="button" disabled={safePage===1} onClick={()=>setPage(p=>Math.max(1,p-1))}>‹</button>
+     {Array.from({length:pageCount},(_,i)=>i+1).map(n=><button type="button" key={n} className={safePage===n?"active":""} aria-current={safePage===n?"page":undefined} onClick={()=>setPage(n)}>{n}</button>)}
+     <button type="button" disabled={safePage===pageCount} onClick={()=>setPage(p=>Math.min(pageCount,p+1))}>›</button>
+    </nav>
+   </div>}
   </>}
  </div>;
 }

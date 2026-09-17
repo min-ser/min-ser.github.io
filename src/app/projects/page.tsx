@@ -18,5 +18,13 @@ export default function Page(){
   skills:Array.isArray(d.meta.skills)?d.meta.skills.map(String):[],
   markdown:d.content
  }));
- return <section className="section pageTop projectArchivePage"><PageHeader config={config} count={docs.length}/><ProjectModalList projects={projects}/></section>;
+ return <section className="section pageTop projectArchivePage">
+  <PageHeader config={config} count={docs.length}/>
+  <aside className="projectArchiveSignal" aria-label="Project archive overview">
+   <div className="projectArchiveSignalIcon" aria-hidden="true"><i/><i/></div>
+   <div><b>BUILD</b><b>LEARN</b><b>DEPLOY</b><b>REPEAT</b></div>
+   <span aria-hidden="true">// PROJECTS<br/>// TECHNICAL RECORDS<br/>// CONTINUOUS GROWTH</span>
+  </aside>
+  <ProjectModalList projects={projects}/>
+ </section>;
 }

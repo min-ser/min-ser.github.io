@@ -1990,3 +1990,19 @@ pre{max-width:100%;overflow-x:auto}
   .projectArchivePage>h1{font-size:clamp(36px,11.5vw,44px)}
   .projectOpsReader>h1,.projectDetailPage>h1{font-size:clamp(28px,8.8vw,38px)}
 }
+
+/* v0.2.12 — Projects archive hierarchy + pagination */
+.projectArchivePage{position:relative}
+.projectArchivePage>h1{max-width:720px;font-size:clamp(44px,5vw,64px);line-height:1.02;letter-spacing:-.05em;margin:24px 0 22px}
+.projectArchivePage>.lead{max-width:760px;margin-bottom:0}
+.projectArchiveSignal{position:absolute;top:172px;right:30px;display:grid;grid-template-columns:72px auto auto;align-items:center;gap:22px;width:min(390px,34%);min-height:112px;padding:18px 22px;border:1px solid rgba(0,216,255,.22);background:linear-gradient(135deg,rgba(0,216,255,.035),rgba(5,14,19,.72));color:#5d7a87;font:9px/1.7 Consolas,monospace;letter-spacing:.08em}
+.projectArchiveSignal:before,.projectArchiveSignal:after{content:"";position:absolute;width:11px;height:11px;border-color:var(--cyan);opacity:.65}.projectArchiveSignal:before{left:-1px;top:-1px;border-left:1px solid;border-top:1px solid}.projectArchiveSignal:after{right:-1px;bottom:-1px;border-right:1px solid;border-bottom:1px solid}
+.projectArchiveSignal>div:nth-child(2){display:flex;flex-direction:column;padding-right:18px;border-right:1px solid rgba(0,216,255,.18)}
+.projectArchiveSignal b{font-weight:400;color:#668692}.projectArchiveSignal span{white-space:nowrap;color:#496773}
+.projectArchiveSignalIcon{position:relative;width:54px;height:42px}
+.projectArchiveSignalIcon i{position:absolute;width:43px;height:31px;border:1px solid rgba(0,216,255,.65);border-radius:2px}.projectArchiveSignalIcon i:first-child{left:0;top:0}.projectArchiveSignalIcon i:last-child{left:9px;top:9px;background:rgba(0,216,255,.035)}
+.projectArchivePage>.projectOps{margin-top:58px}
+.projectOpsPagination{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0 0;color:#587582;font:9px/1 Consolas,monospace;letter-spacing:.08em}
+.projectOpsPagination nav{display:flex;gap:6px}.projectOpsPagination button{display:grid;place-items:center;min-width:34px;height:34px;padding:0 8px;border:1px solid rgba(0,216,255,.18);background:rgba(5,14,19,.6);color:#78909b;font:10px/1 Consolas,monospace;cursor:pointer}.projectOpsPagination button:hover:not(:disabled),.projectOpsPagination button.active{border-color:var(--cyan);color:var(--cyan);background:rgba(0,216,255,.07)}.projectOpsPagination button:disabled{opacity:.3;cursor:default}
+@media(max-width:1050px){.projectArchiveSignal{display:none}.projectArchivePage>h1{max-width:none}.projectArchivePage>.lead{max-width:820px}}
+@media(max-width:850px){.projectArchivePage>h1{font-size:clamp(38px,11vw,50px);margin:20px 0 18px}.projectArchivePage>.projectOps{margin-top:38px}.projectOpsPagination{align-items:flex-start;flex-direction:column}.projectOpsPagination nav{width:100%;overflow-x:auto;padding-bottom:3px}}
