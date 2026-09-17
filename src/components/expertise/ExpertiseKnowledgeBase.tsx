@@ -37,8 +37,8 @@ export default function ExpertiseKnowledgeBase({groups,articles,config}:{groups:
  useEffect(()=>{if(page>totalPages)setPage(totalPages)},[page,totalPages]);
 
  const syncUrl=(slug?:string)=>{const url=new URL(window.location.href);if(slug)url.searchParams.set("article",slug);else url.searchParams.delete("article");window.history.replaceState({},"",`${url.pathname}${url.search}${url.hash}`);};
- const open=(article:KnowledgeArticle)=>{setTransitioning(true);window.setTimeout(()=>{setActiveArticle(article);syncUrl(article.slug);setTransitioning(false);window.scrollTo({top:0,behavior:"smooth"});},1320);};
- const closeArticle=()=>{setTransitioning(true);window.setTimeout(()=>{setActiveArticle(null);syncUrl();setTransitioning(false);},780);};
+ const open=(article:KnowledgeArticle)=>{setTransitioning(true);window.setTimeout(()=>{setActiveArticle(article);syncUrl(article.slug);setTransitioning(false);window.scrollTo({top:0,behavior:"smooth"});},220);};
+ const closeArticle=()=>{setTransitioning(true);window.setTimeout(()=>{setActiveArticle(null);syncUrl();setTransitioning(false);},180);};
  useEffect(()=>{const slug=new URLSearchParams(window.location.search).get("article");if(slug){const found=articles.find(a=>a.slug===slug);if(found)setActiveArticle(found);}},[articles]);
  const toggleGroup=(id:string)=>setActiveGroup(current=>current===id?"":id);
 

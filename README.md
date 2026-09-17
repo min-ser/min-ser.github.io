@@ -1698,3 +1698,12 @@ The deployment workflow builds this repository root as the primary Next.js site,
 
 버전별 `APPLY_vX.Y.Z.md` 파일은 생성하지 않습니다. 변경 이력과 적용 정책은 `README.md`에 순서대로 누적하며, 새 버전은 직전 버전의 기능과 UI를 보존한 상태에서 변경사항을 추가합니다.
 
+## v0.2.7 — GitHub README Mobile Readability
+
+- GitHub Repository 카드에서 README를 연 뒤 모바일 화면에서 대형 제목이 Viewport 밖으로 잘리던 문제를 수정했습니다.
+- README Reader의 H1/H2/H3/H4 Typography를 모바일 Viewport에 맞춰 반응형으로 조정했습니다.
+- 한글 제목은 단어 단위 줄바꿈을 우선하고 긴 영문/경로/URL은 필요 시 안전하게 줄바꿈하도록 보정했습니다.
+- README 본문, 이미지, Video/iframe/SVG가 Reader 폭을 초과하지 않도록 제한했습니다.
+- Code Block과 Table은 전체 화면을 밀어내지 않고 내부 가로 스크롤을 사용합니다.
+- 기존 GitHub HUD 디자인, LIVE API Repository Card, README Modal 동작과 Expertise HUD 효과는 변경하지 않았습니다.
+

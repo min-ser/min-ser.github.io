@@ -1664,3 +1664,28 @@ body:has(.identityHero) .profileSection>.sectionHead span:first-child{
 .knowledgeReader{width:100%;min-width:0;animation:knowledgeReaderIn .32s ease both}.knowledgeReaderHead{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 0 18px;border-bottom:1px solid rgba(0,216,255,.24);font:11px/1 Consolas,monospace;letter-spacing:.12em}.knowledgeReaderHead button{border:0;background:transparent;color:var(--cyan);font:inherit;cursor:pointer;padding:8px 0}.knowledgeReaderHead span{color:#6fd9a9}.knowledgeReaderHead span:before{content:"●";margin-right:8px;animation:knowledgePulse 1.4s ease-in-out infinite}.knowledgeReaderMeta{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px;color:#6f8792;font:11px/1.5 Consolas,monospace;letter-spacing:.08em}.knowledgeReader h1{max-width:1400px;margin:18px 0 14px;font-size:clamp(36px,4.4vw,72px);line-height:1.08;letter-spacing:-.04em;overflow-wrap:anywhere}.knowledgeReaderLead{max-width:1120px;margin:0;color:#9db0b8;font-size:16px;line-height:1.75}.knowledgeReaderTags{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0 34px}.knowledgeReaderTags em{padding:5px 8px;border:1px solid rgba(0,216,255,.18);color:#78919c;font:10px/1 Consolas,monospace;font-style:normal}.knowledgeReaderBody{width:100%;min-width:0}.knowledgeReaderBody>*,.knowledgeReaderBody .markdown{max-width:none}.knowledgeReaderBody .markdown>p,.knowledgeReaderBody .markdown>ul,.knowledgeReaderBody .markdown>ol,.knowledgeReaderBody .markdown>blockquote{max-width:1120px}.knowledgeReaderBody .markdownImageButton,.knowledgeReaderBody .markdownEmbed,.knowledgeReaderBody .markdownCodeShell,.knowledgeReaderBody .markdownTableScroll,.knowledgeReaderBody .mermaidViewport{max-width:100%}@keyframes knowledgeReaderIn{from{opacity:0;transform:translateY(8px);filter:blur(2px)}to{opacity:1;transform:none;filter:none}}@keyframes knowledgePulse{50%{opacity:.25}}
 @media(max-width:850px){.knowledgeMain.isReading{width:100%;max-width:100%}.knowledgeLayout:has(.knowledgeMain.isReading){display:block!important}.knowledgeLayout:has(.knowledgeMain.isReading) .knowledgeExplorer{display:none!important}.knowledgeReaderHead{position:sticky;top:68px;z-index:10;margin:0 -18px;padding:12px 18px;background:rgba(4,11,15,.97);backdrop-filter:blur(10px)}.knowledgeReaderHead span{font-size:9px}.knowledgeReaderMeta{margin-top:24px}.knowledgeReader h1{font-size:clamp(30px,9vw,44px);line-height:1.12}.knowledgeReaderLead{font-size:15px}.knowledgeReaderBody{overflow:hidden}.knowledgeReaderBody .markdown{font-size:15px;line-height:1.75}.knowledgeScan{position:fixed;inset:68px 0 0;z-index:150}}
 @media(prefers-reduced-motion:reduce){.knowledgeScan i,.knowledgeReader,.knowledgeReaderHead span:before{animation:none!important}}
+
+/* ===== v0.2.7 GitHub README mobile readability ===== */
+.readmeModalHead>div,.readmeModalBody,.readmeMarkdown,.readmeMarkdown>*{min-width:0}
+.readmeModalHead span,.readmeModalHead small{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
+.readmeMarkdown{width:100%;max-width:100%;overflow-wrap:anywhere;word-break:normal}
+.readmeMarkdown h1,.readmeMarkdown h2,.readmeMarkdown h3,.readmeMarkdown h4{max-width:100%;overflow-wrap:anywhere;word-break:keep-all}
+.readmeMarkdown p,.readmeMarkdown li,.readmeMarkdown a{max-width:100%;overflow-wrap:anywhere}
+.readmeMarkdown pre{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.readmeMarkdown table{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+@media(max-width:850px){
+  .readmeModalHead{gap:10px!important;padding-left:16px!important;padding-right:10px!important}
+  .readmeModalHead>div{flex:1 1 auto;overflow:hidden}
+  .readmeModalHead span{font-size:clamp(10px,3.1vw,12px)!important;line-height:1.45;white-space:normal}
+  .readmeModalHead small{font-size:10px!important;line-height:1.45}
+  .readmeModalBody{width:100%;max-width:100%;overflow-x:hidden!important}
+  .readmeMarkdown{font-size:15px!important;line-height:1.72!important}
+  .readmeMarkdown h1{font-size:clamp(30px,9vw,42px)!important;line-height:1.16!important;letter-spacing:-.035em;margin-top:12px;margin-bottom:26px;padding-bottom:16px}
+  .readmeMarkdown h2{font-size:clamp(24px,7vw,32px)!important;line-height:1.22!important;letter-spacing:-.025em;margin-top:34px}
+  .readmeMarkdown h3{font-size:clamp(20px,5.7vw,26px)!important;line-height:1.28!important}
+  .readmeMarkdown h4{font-size:clamp(17px,4.8vw,21px)!important;line-height:1.35!important}
+  .readmeMarkdown p,.readmeMarkdown li{word-break:keep-all;overflow-wrap:anywhere}
+  .readmeMarkdown img,.readmeMarkdown video,.readmeMarkdown iframe,.readmeMarkdown svg{max-width:100%!important;height:auto}
+  .readmeMarkdown pre,.readmeMarkdown .markdownTableScroll{width:100%;max-width:100%}
+}
