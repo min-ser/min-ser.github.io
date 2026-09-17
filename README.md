@@ -1716,3 +1716,23 @@ The deployment workflow builds this repository root as the primary Next.js site,
 - 열이 많은 테이블만 자체 Wrapper 영역에서 가로 스크롤하도록 Responsive Table Overflow 정책을 분리했습니다.
 - 이미지, Code, Table 및 주요 Flex/Grid 자식의 전역 Overflow 방어를 보강했습니다.
 - v0.2.7의 GitHub README 모바일 제목·본문·이미지·Code/Table 가독성 개선과 기존 HUD/Scan/Loading UI를 유지했습니다.
+
+## v0.2.9 — Project Mission Operations Workspace
+
+- 기존 Projects 목록을 `MISSION OPERATIONS` 기반 Project Operations Board로 확장했습니다.
+- Project 선택 시 같은 화면에서 Scan/Loading 후 Project Detail Console로 전환됩니다.
+- `MISSION DATA LOADED` 및 `BACK TO PROJECT BOARD` 흐름과 URL `?mission=<slug>` 복원 기능을 추가했습니다.
+- 전체 Project, 진행 중 Project, GitHub Repository, Technology 수를 보여주는 Telemetry HUD를 추가했습니다.
+- Project Metadata를 기반으로 Cloud/Platform, AI/Data, Application, System Operations Domain을 자동 분류합니다.
+- Domain Filter와 Project/Stack/Status 통합 검색을 추가했습니다.
+- Project Reader에 Status, 기간, Career/Training 연계, 기술 Stack, Repository 상태 및 Featured 정보를 표시합니다.
+- Repository가 연결된 Project는 Reader에서 GitHub로 이동할 수 있습니다.
+- Desktop Board와 Mobile Card Layout을 분리하고 Scan/Reader 효과에 `prefers-reduced-motion`을 적용했습니다.
+- 기존 Project Markdown, 개별 `/projects/[slug]` 경로, GitHub Pages Export 및 Expertise HUD Workspace는 유지했습니다.
+
+## v0.2.10 — Resume Table Grid Alignment Fix
+
+- Career, Education, Training, Certification, Military의 클릭 가능한 Grid Row에 남아 있던 브라우저 기본 Button Padding을 제거했습니다.
+- Resume Table Header와 Data Row의 Grid Track이 동일한 시작 좌표와 너비를 사용하도록 Row Container를 정규화했습니다.
+- 여러 줄 POSITION/ROLE 데이터에서도 COMPANY와 POSITION 사이의 세로 경계선이 Header 경계선과 정확히 연결되도록 수정했습니다.
+- 기존 v0.2.8 반응형 Table 정책과 v0.2.9 Project Mission Operations Workspace를 유지했습니다.

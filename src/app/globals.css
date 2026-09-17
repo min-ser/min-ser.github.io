@@ -1787,3 +1787,137 @@ pre{max-width:100%;overflow-x:auto}
   .resumeMilitaryClickableTable .resumeTableRow{grid-template-columns:minmax(104px,36%) minmax(0,64%)}
   .careerTimelineFilter button{padding-inline:8px;font-size:10px;letter-spacing:.035em}
 }
+
+/* ===== v0.2.9 Project Mission Operations Workspace ===== */
+.projectOps{position:relative;isolation:isolate;width:100%;min-width:0;margin:52px 0 16px}
+.projectOpsTelemetry{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid rgba(0,216,255,.2);background:linear-gradient(135deg,rgba(0,216,255,.045),rgba(5,14,19,.75))}
+.projectOpsTelemetry>div{display:flex;align-items:center;justify-content:space-between;gap:14px;min-width:0;min-height:76px;padding:16px 18px;border-right:1px solid rgba(0,216,255,.14)}
+.projectOpsTelemetry>div:last-child{border-right:0}
+.projectOpsTelemetry span{font:10px/1.4 Consolas,monospace;letter-spacing:.1em;color:#66818e}
+.projectOpsTelemetry strong{font:500 clamp(17px,2.2vw,27px)/1 Consolas,monospace;color:#bdefff;white-space:nowrap}
+.projectOpsToolbar{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-top:34px;padding-bottom:14px;border-bottom:1px solid rgba(0,216,255,.22)}
+.projectOpsToolbar>div{display:flex;flex-direction:column;gap:7px}
+.projectOpsToolbar>div span{font:11px/1 Consolas,monospace;letter-spacing:.13em;color:var(--cyan)}
+.projectOpsToolbar>div b{font:400 10px/1 Consolas,monospace;letter-spacing:.08em;color:#647c88}
+.projectOpsToolbar label{display:flex;align-items:center;gap:12px;width:min(100%,390px);border:1px solid rgba(0,216,255,.2);background:rgba(4,12,17,.7);padding:8px 12px}
+.projectOpsToolbar label span{font:9px/1 Consolas,monospace;letter-spacing:.12em;color:#55727f}
+.projectOpsToolbar input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#c7dce4;font:11px/1.4 Consolas,monospace}
+.projectOpsToolbar input::placeholder{color:#415763}
+.projectOpsFilters{display:flex;flex-wrap:wrap;gap:7px;padding:16px 0 18px}
+.projectOpsFilters button{display:flex;align-items:center;gap:10px;min-height:36px;padding:0 12px;border:1px solid rgba(0,216,255,.16);background:rgba(5,14,19,.58);color:#768c97;font:9px/1 Consolas,monospace;letter-spacing:.07em;cursor:pointer}
+.projectOpsFilters button small{color:#435e6a;font:inherit}
+.projectOpsFilters button:hover,.projectOpsFilters button.active{border-color:rgba(0,216,255,.65);background:rgba(0,216,255,.07);color:#8ce8ff;box-shadow:inset 0 0 18px rgba(0,216,255,.035)}
+.projectOpsFilters button.active small{color:var(--cyan)}
+.projectOpsBoard{width:100%;min-width:0;border:1px solid rgba(0,216,255,.22);background:rgba(4,12,17,.7);overflow:hidden}
+.projectOpsBoardHead,.projectOpsRow{display:grid;grid-template-columns:52px 94px 150px minmax(280px,1fr) 104px 48px;align-items:stretch}
+.projectOpsBoardHead{background:rgba(0,216,255,.035);border-bottom:1px solid rgba(0,216,255,.22)}
+.projectOpsBoardHead>span{display:flex;align-items:center;min-width:0;padding:10px 12px;border-right:1px solid rgba(0,216,255,.1);font:9px/1.2 Consolas,monospace;letter-spacing:.1em;color:#567481}
+.projectOpsBoardHead>span:last-child{border-right:0}
+.projectOpsRow{width:100%;min-height:72px;padding:0;border:0;border-bottom:1px solid rgba(0,216,255,.1);background:transparent;color:inherit;text-align:left;cursor:pointer;transition:background .2s ease,box-shadow .2s ease}
+.projectOpsRow:last-child{border-bottom:0}
+.projectOpsRow:hover,.projectOpsRow:focus-visible{outline:0;background:linear-gradient(90deg,rgba(0,216,255,.075),rgba(0,216,255,.018));box-shadow:inset 3px 0 0 var(--cyan)}
+.projectOpsRow>*{display:flex;align-items:center;min-width:0;margin:0;padding:13px 12px;border-right:1px solid rgba(0,216,255,.08)}
+.projectOpsRow>*:last-child{border-right:0}
+.projectOpsRow>span:first-child,.projectOpsRow>time{font:10px/1.4 Consolas,monospace;color:#587582}
+.projectOpsRow>b{font:9px/1 Consolas,monospace;letter-spacing:.08em;color:#7a929c;font-weight:400}
+.projectOpsRow>b.isActive{color:var(--green)}
+.projectOpsRow>b.isActive:before{content:"";width:5px;height:5px;margin-right:7px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:projectOpsPulse 1.5s ease-in-out infinite}
+.projectOpsRow>span:nth-child(3){font:9px/1.35 Consolas,monospace;color:#5d7b88}
+.projectOpsIdentity{display:flex!important;align-items:flex-start!important;justify-content:center;flex-direction:column;gap:6px}
+.projectOpsIdentity strong{max-width:100%;font-size:14px;line-height:1.35;color:#d8e9f0;overflow-wrap:anywhere}
+.projectOpsIdentity small{max-width:100%;font:9px/1.5 Consolas,monospace;color:#5e7884;overflow-wrap:anywhere}
+.projectOpsRow>i{justify-content:center;color:var(--cyan);font-style:normal;font-size:17px;transition:transform .2s ease}
+.projectOpsRow:hover>i{transform:rotate(90deg)}
+.projectOpsEmpty{display:grid;place-items:center;min-height:220px;border:1px solid rgba(0,216,255,.2);color:#57717d;font:10px/1 Consolas,monospace;letter-spacing:.12em}
+.projectOpsScan{position:absolute;inset:0;z-index:30;display:grid;place-items:center;min-height:360px;overflow:hidden;border:1px solid rgba(0,216,255,.3);background:rgba(3,10,14,.96);color:var(--cyan);font:10px/1 Consolas,monospace;letter-spacing:.16em}
+.projectOpsScan i{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);box-shadow:0 0 20px rgba(0,216,255,.65);animation:projectOpsScanLine .62s linear infinite}
+.projectOpsScan span{position:relative;padding:11px 15px;border:1px solid rgba(0,216,255,.35);background:#071016}
+.projectOpsReader{width:100%;min-width:0;animation:projectOpsReaderIn .34s cubic-bezier(.22,1,.36,1) both}
+.projectOpsReaderHead{position:sticky;top:78px;z-index:12;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 0;border-bottom:1px solid rgba(0,216,255,.25);background:rgba(7,9,12,.94);backdrop-filter:blur(15px)}
+.projectOpsReaderHead button{border:0;background:transparent;color:var(--cyan);padding:8px 0;font:10px/1 Consolas,monospace;letter-spacing:.08em;cursor:pointer}
+.projectOpsReaderHead span{color:var(--green);font:10px/1 Consolas,monospace;letter-spacing:.1em}
+.projectOpsReaderHead span:before{content:"●";margin-right:7px;animation:projectOpsPulse 1.5s ease-in-out infinite}
+.projectOpsStatusLine{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin-top:34px;color:#69828e;font:10px/1.4 Consolas,monospace;letter-spacing:.08em}
+.projectOpsStatusLine b{padding:4px 7px;border:1px solid rgba(0,216,255,.22);color:#8ba1aa;font-weight:400}
+.projectOpsStatusLine b.isActive{border-color:rgba(110,231,168,.3);color:var(--green)}
+.projectOpsStatusLine time{margin-left:auto}
+.projectOpsReader>h1{max-width:1050px;margin:18px 0 16px;font-size:clamp(38px,5vw,72px);line-height:1.06;letter-spacing:-.045em;overflow-wrap:anywhere}
+.projectOpsLead{max-width:900px;margin:0;color:#91a5ae;font-size:16px;line-height:1.75}
+.projectOpsReaderTelemetry{margin-top:34px}
+.projectOpsReaderTelemetry strong{font-size:13px;line-height:1.35;text-align:right}
+.projectOpsTags{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0 28px}
+.projectOpsTags em{padding:5px 8px;border:1px solid rgba(0,216,255,.16);color:#78909b;font:9px/1 Consolas,monospace;font-style:normal}
+.projectOpsRepository{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:600px;padding:13px 15px;border:1px solid rgba(0,216,255,.35);background:rgba(0,216,255,.035);color:#728b96;font:9px/1.3 Consolas,monospace;letter-spacing:.08em}
+.projectOpsRepository b{color:var(--cyan);font-weight:400}
+.projectOpsBody{width:100%;min-width:0;margin-top:50px;padding-top:2px;border-top:1px solid rgba(0,216,255,.22)}
+.projectOpsBody>.markdown{max-width:none}
+.projectOpsBody>.markdown>p,.projectOpsBody>.markdown>ul,.projectOpsBody>.markdown>ol,.projectOpsBody>.markdown>blockquote{max-width:1050px}
+@keyframes projectOpsScanLine{from{top:-2px}to{top:100%}}
+@keyframes projectOpsPulse{50%{opacity:.28}}
+@keyframes projectOpsReaderIn{from{opacity:0;transform:translateY(10px);filter:blur(2px)}to{opacity:1;transform:none;filter:none}}
+
+@media(max-width:900px){
+ .projectOpsBoard{overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+ .projectOpsBoardHead,.projectOpsRow{min-width:850px}
+}
+@media(max-width:850px){
+ .projectOps{margin-top:38px}
+ .projectOpsTelemetry{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .projectOpsTelemetry>div:nth-child(2){border-right:0}.projectOpsTelemetry>div:nth-child(-n+2){border-bottom:1px solid rgba(0,216,255,.14)}
+ .projectOpsToolbar{align-items:stretch;flex-direction:column;gap:18px}.projectOpsToolbar label{width:100%}
+ .projectOpsReaderHead{top:68px;margin:0 -18px;padding:12px 18px}
+ .projectOpsReaderHead span{font-size:9px}
+ .projectOpsStatusLine time{width:100%;margin-left:0}
+ .projectOpsReader>h1{font-size:clamp(34px,10vw,48px);line-height:1.1}
+ .projectOpsLead{font-size:15px}
+ .projectOpsBody{overflow:hidden}
+}
+@media(max-width:600px){
+ .projectOpsBoard{border:0;overflow:visible;background:transparent}
+ .projectOpsBoardHead{display:none}
+ .projectOpsRow{position:relative;display:grid;grid-template-columns:52px minmax(0,1fr) 34px;min-width:0;min-height:0;margin-bottom:9px;border:1px solid rgba(0,216,255,.18)!important;background:rgba(4,12,17,.72)}
+ .projectOpsRow>*{border-right:0;padding:12px 10px}
+ .projectOpsRow>span:first-child{grid-row:1/4;justify-content:center;border-right:1px solid rgba(0,216,255,.1)}
+ .projectOpsRow>b{grid-column:2;grid-row:1;padding-bottom:5px}
+ .projectOpsRow>span:nth-child(3){grid-column:2;grid-row:3;padding-top:4px;border-top:1px solid rgba(0,216,255,.08)}
+ .projectOpsIdentity{grid-column:2;grid-row:2;padding-top:5px;padding-bottom:12px}
+ .projectOpsRow>time{position:absolute;top:10px;right:11px;padding:0;border:0;font-size:9px}
+ .projectOpsRow>i{grid-column:3;grid-row:1/4;border-left:1px solid rgba(0,216,255,.08)}
+ .projectOpsFilters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.projectOpsFilters button{justify-content:space-between}
+ .projectOpsReaderTelemetry>div{min-height:68px;padding:13px}.projectOpsReaderTelemetry strong{font-size:11px}
+ .projectOpsRepository{align-items:flex-start;flex-direction:column;gap:8px}
+}
+@media(max-width:390px){
+ .projectOpsTelemetry>div{min-height:66px;padding:12px}.projectOpsTelemetry span{font-size:8px}.projectOpsTelemetry strong{font-size:16px}
+ .projectOpsFilters{grid-template-columns:1fr}
+ .projectOpsReaderHead{gap:8px}.projectOpsReaderHead button{font-size:9px}.projectOpsReaderHead span{font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){.projectOpsScan i,.projectOpsReader,.projectOpsReaderHead span:before,.projectOpsRow>b.isActive:before{animation:none!important}.projectOpsRow,.projectOpsRow>i{transition:none!important}}
+
+/* ===== v0.2.10 Resume grid row alignment fix ===== */
+/* Clickable resume rows are native buttons. Remove the browser user-agent
+   inset so their grid tracks start at exactly the same x-coordinate as the header. */
+.resumeProfileTables button.resumeTableButton{
+  display:grid;
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  appearance:none;
+  -webkit-appearance:none;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  text-align:left;
+}
+.resumeProfileTables .resumeTableHeader,
+.resumeProfileTables .resumeTableRow{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+.resumeProfileTables .resumeTableHeader>*,
+.resumeProfileTables .resumeTableRow>*{box-sizing:border-box}

@@ -10,6 +10,11 @@ export default function Page(){
   summary:String(d.meta.summary||""),
   startDate:String(d.meta.startDate||""),
   endDate:String(d.meta.endDate||""),
+  status:String(d.meta.status||"completed"),
+  careerId:String(d.meta.careerId||""),
+  trainingId:String(d.meta.trainingId||""),
+  repository:String(d.meta.repository||""),
+  featured:Boolean(d.meta.featured),
   skills:Array.isArray(d.meta.skills)?d.meta.skills.map(String):[],
   markdown:d.content
  }));
