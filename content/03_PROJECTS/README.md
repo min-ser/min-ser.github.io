@@ -3,8 +3,8 @@ index: 3
 navLabel: Projects
 href: /projects
 enabled: true
-pageEyebrow: PROJECT INDEX
-pageTitle: Projects
+pageEyebrow: 03 / PROJECT ARCHIVE
+pageTitle: Project Records
 pageDescription: Cloud, Platform, Kubernetes, Fabric, DevOps, Security 및 운영 과정에서 수행한 프로젝트와 기술 작업입니다.
 terminalPath: ~/projects
 counterLabel: RECORDS
