@@ -6,7 +6,7 @@ index: 2
 order: 2
 title: Career Description
 note: 회사와 수행 프로젝트를 빠르게 탐색하는 경력 인덱스입니다. 상세 내용은 Career와 Project에서 확인합니다.
-projectLimit: 6
+projectLimit: 99
 labels:
   company: COMPANY
   client: CLIENT
@@ -23,7 +23,7 @@ modalSourceLabel: LOCAL MARKDOWN / PROJECT
 modalCloseLabel: ESC TO CLOSE
 projectDetailLabel: OPEN PROJECT PAGE
 presentLabel: PRESENT
-projectLimitPerCareer: 6
+projectLimitPerCareer: 99
 careerModalSourceLabel: LOCAL MARKDOWN / CAREER
 careerDetailLabel: OPEN CAREER PAGE
 ---
