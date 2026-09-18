@@ -1737,7 +1737,7 @@ The deployment workflow builds this repository root as the primary Next.js site,
 - 여러 줄 POSITION/ROLE 데이터에서도 COMPANY와 POSITION 사이의 세로 경계선이 Header 경계선과 정확히 연결되도록 수정했습니다.
 - 기존 v0.2.8 반응형 Table 정책과 v0.2.9 Project Mission Operations Workspace를 유지했습니다.
 
-## v0.2.14 — Unified Page Hero System
+## v0.2.15 — Unified Page Hero System
 - 01 Profile부터 08 Archive까지 공통 PageHeader 타이포그래피를 Expertise 기준 크기로 통일했습니다.
 - 각 영역의 우측 여백에 페이지 성격에 맞는 코드형 모션 비주얼을 추가했습니다. 별도 이미지 자산 없이 CSS로 동작합니다.
 - Projects 목록은 검색/필터 결과 기준 10개 단위 페이지네이션을 적용했습니다.
@@ -1749,3 +1749,16 @@ The deployment workflow builds this repository root as the primary Next.js site,
 - 페이지별 우측 visual을 Identity Orbit, Career Timeline, Deployment Stack, Showcase Matrix, Git Graph, Skill Tree, Data Vault로 분리.
 - 06 Expertise는 Knowledge Base 전용 compact header + Knowledge Graph로 차별화.
 - 모든 비주얼은 이미지/GIF가 아닌 React markup + CSS animation으로 구성하며 reduced-motion을 지원.
+
+
+### v0.2.15 — Page Hero Micro-Visualization 고도화
+- 01 Profile: Engineer Core orbit / technology-node pulse
+- 02 Career: 2020→2026 timeline signal flow
+- 03 Projects: SRC→BUILD→ACR→AKS→LIVE delivery pipeline
+- 04 Portfolio: live showcase window matrix
+- 05 GitHub: branch/merge repository flow
+- 06 Expertise: 별도 Knowledge Network 스타일 유지 및 강화
+- 07 Training: skill-tree unlock sequence
+- 08 Archive: record ingestion→Data Vault animation
+- 공통 Hero 위치/크기 유지, 페이지별 motion language 분리
+- Career/Projects Hero 보조 raw text 블록 노출 방지 스타일 추가
