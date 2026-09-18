@@ -1,11 +1,44 @@
 import Link from "next/link";
-import { steps } from "@/data/steps";
-export default function Learn(){
-  return <section className="section">
-    <div className="section-title"><div><div className="eyebrow">ROADMAP</div><h2>AI의 큰 그림부터 내부 계산까지</h2></div><div className="muted">Foundation + 16 Interactive Steps</div></div>
-    <Link className="card" href="/learn/foundation/" style={{display:"block",marginBottom:20}}><div className="n">START HERE · FOUNDATION MAP</div><h3>AI → ML → DL → Neural Network → Transformer → LLM</h3><p>AI라는 추상적인 개념부터 전체 관계를 먼저 이해합니다. 무엇을 지금 알아야 하고 무엇을 나중에 깊게 볼지도 안내합니다.</p><div className="status current">RECOMMENDED START</div></Link>
-    <div className="grid steps">
-      {steps.map(s=><Link className="card" key={s.id} href={`/learn/${s.slug}/`}><div className="n">STEP {String(s.id).padStart(2,"0")} · {s.group}</div><h3>{s.title}</h3><p>{s.subtitle}</p><div className={`status ${s.status}`}>{s.status==="current"?"INTERACTIVE":s.status==="completed"?"COMPLETED":"VISUAL PREVIEW"}</div></Link>)}
-    </div>
-  </section>
+import {
+  chapters,
+  allTopics,
+  topicHref,
+} from "@/data/hierarchicalCurriculum";
+
+export default function LearnPage() {
+  return (
+    <section className="section curriculum-index">
+      <div className="section-title">
+        <div>
+          <div className="eyebrow">LEARNING CURRICULUM</div>
+          <h2>Chapter → Topic → Concept</h2>
+          <p className="muted">
+            AI 전체 지도를 먼저 잡고 각 분야를 균형 있게 학습하도록 커리큘럼을 계층형으로 재설계했습니다.
+          </p>
+        </div>
+        <div className="muted">{chapters.length} Chapters · {allTopics.length} Topics</div>
+      </div>
+
+      <div className="curriculum-chapter-grid">
+        {chapters.map((chapter) => {
+          const first = chapter.topics[0];
+          return (
+            <Link
+              className="curriculum-chapter-card"
+              href={topicHref(chapter.slug, first.slug)}
+              key={chapter.id}
+            >
+              <div className="curriculum-chapter-number">{chapter.id}</div>
+              <div>
+                <strong>{chapter.title}</strong>
+                <span>{chapter.korean}</span>
+                <p>{chapter.description}</p>
+              </div>
+              <em>{chapter.topics.length} Topics</em>
+            </Link>
+          );
+        })}
+      </div>
+    </section>
+  );
 }

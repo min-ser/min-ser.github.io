@@ -8,7 +8,12 @@ export default function Home(){
       <h1>NeuralScope</h1>
       <h2>See the numbers. Touch the model. Understand the flow.</h2>
       <p>AI 개념을 글로만 읽지 않고, 값이 실제로 움직이고 계산되는 모습을 직접 조작하며 이해하기 위한 동적 학습 웹 프로젝트입니다.</p>
-      <div className="actions"><Link className="btn primary" href="/learn/foundation/">START FROM ZERO →</Link><Link className="btn" href="/learn/01-neuron/">NEURAL NETWORK PATH</Link><Link className="btn" href="/learn/13-transformer/">TRANSFORMER PATH</Link><Link className="btn" href="/lab/">LAB</Link></div>
+      <div className="actions">
+          <Link className="btn primary" href="/learn/curriculum/ai-foundation/what-is-ai/">START FROM ZERO →</Link>
+          <Link className="btn" href="/learn/curriculum/deep-learning/neuron/">NEURAL NETWORK PATH</Link>
+          <Link className="btn" href="/learn/curriculum/transformer/why-transformer/">TRANSFORMER PATH</Link>
+          <Link className="btn" href="/lab/">LAB</Link>
+        </div>
 
       <div className="live-stage">
         <div className="stage-top"><span>NEURAL NETWORK / LIVE PREVIEW</span><span className="live-dot">● VISUAL FIRST</span></div>
@@ -27,7 +32,7 @@ export default function Home(){
 
     <section className="section">
       <div className="section-title"><div><div className="eyebrow">STARTING POINT</div><h2>AI가 무엇인지부터 모르겠다면</h2></div><div className="muted">AI → ML → DL → NN → Transformer → LLM</div></div>
-      <div className="card" style={{marginBottom:18}}><h3>AI Concept Map</h3><p>AI, Machine Learning, Deep Learning, Neural Network, Transformer, LLM의 관계를 먼저 시각적으로 확인하세요.</p><div className="actions" style={{justifyContent:"flex-start"}}><Link className="btn primary" href="/learn/foundation/">OPEN FOUNDATION MAP →</Link></div></div>
+      <div className="card" style={{marginBottom:18}}><h3>AI Concept Map</h3><p>AI, Machine Learning, Deep Learning, Neural Network, Transformer, LLM의 관계를 먼저 시각적으로 확인하세요.</p><div className="actions" style={{justifyContent:"flex-start"}}><Link className="btn primary" href="/learn/curriculum/ai-foundation/what-is-ai/">OPEN FOUNDATION MAP →</Link></div></div>
     </section>
 
     <section className="section">

@@ -1,38 +1,29 @@
-# NeuralScope v0.3.0 Roadmap
+# NeuralScope Roadmap — v0.0.17
 
-## FOUNDATION MAP
-- [x] AI
-- [x] Machine Learning
-- [x] Deep Learning
-- [x] Neural Network
-- [x] CNN (Optional)
-- [x] RNN (Recommended)
-- [x] Transformer 연결
-- [x] LLM 연결
-- [x] Generative AI
-- [x] RAG
-- [x] AI Agent
+## Foundation curriculum — COMPLETE
+- [x] 29 Chapters / 467 Topics 구조
+- [x] 467 / 467 Topic 1차 학습 콘텐츠
+- [x] Chapter accordion navigation / global learning flow
+- [x] Topic 공통 Dynamic Concept Flow
+- [x] 핵심 영역별 Interactive Lab 기반
 
-## 학습 UX
-- [x] AI Concept Map
-- [x] 노드 클릭 Inspector
-- [x] REQUIRED / RECOMMENDED / OPTIONAL
-- [x] "왜 알아야 하나?"
-- [x] "어디에 사용되나?"
-- [x] "지금은 어디까지 알아야 하나?"
-- [x] 이후 개념 연결
-- [x] Start From Zero 경로
+## Phase 2 — Knowledge Map & deep interactive learning
+- [ ] prerequisite graph
+- [ ] related / used-by graph
+- [ ] Q/K/V matrix + attention heatmap
+- [ ] CNN sliding convolution + feature map
+- [ ] segmentation mask editor
+- [ ] positional encoding explorer
+- [ ] Top-P sampling visualizer
+- [ ] CORE Topic별 수식 → 계산 → TypeScript 연결 강화
 
-## 기존 Interactive Steps
-- [x] STEP 01 Neuron Simulation
-- [x] STEP 02 Activation Simulation
-- [x] STEP 03~15 Visual Preview
-- [x] Concept Deep Dive Modal
+## Phase 3 — Learning product features
+- [ ] completion state
+- [ ] CORE-only fast path
+- [ ] concept search / index
+- [ ] chapter summary
+- [ ] quiz / understanding checks
+- [ ] responsive UI regression pass
 
-## Next
-- [ ] Foundation 각 페이지에 미니 시각화 추가
-- [ ] ML Supervised / Unsupervised / Reinforcement 세부 Map
-- [ ] STEP 03 Layer 실제 Simulation
-- [ ] STEP 04 Matrix Animation
-- [ ] STEP 05 Forward Animation
-- [ ] STEP 11 3D Visualizer
+## Release policy
+구조/토대 설계와 2차 고도화 기간에는 `0.0.x` patch만 증가시킵니다. 전체 골격과 핵심 학습 경험이 안정화되는 시점에 `0.1.0` 진입 여부를 판단합니다.
