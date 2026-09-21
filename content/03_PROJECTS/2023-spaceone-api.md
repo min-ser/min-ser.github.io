@@ -5,7 +5,7 @@ title: "Azure SpaceONE API 개발 기술지원"
 startDate: "2023-05-01"
 endDate: "2023-05-31"
 status: completed
-careerId: megazone
+careerId: azure-ai-platform-engineer
 roles: ["API Developer"]
 skills: ["Azure Cost Management API", "Azure Partner Center API", "REST API", "Azure"]
 ---

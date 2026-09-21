@@ -2115,3 +2115,99 @@ pre{max-width:100%;overflow-x:auto}
 .vaultStage svg{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:rgba(0,216,255,.55);stroke-width:1.2}.vaultFlow{stroke:#d4f8ff!important;stroke-dasharray:5 5;animation:vaultDash 1s linear infinite}.inputs{position:absolute;left:15px;top:19px;display:flex;flex-direction:column;gap:8px}.inputs span{width:52px;height:22px;border:1px solid rgba(0,216,255,.65);display:grid;place-items:center;font-size:7px;background:#06141b}.indexer{position:absolute;left:170px;top:69px;width:70px;height:42px;border:1px solid rgba(0,216,255,.5);display:grid;place-items:center;background:#06141b}.indexer i{position:absolute;left:0;right:0;height:1px;background:#a9f4ff;box-shadow:0 0 8px #00d8ff;animation:indexScan 2s ease-in-out infinite}.indexer b{font-size:6px;font-weight:400}.vaultCube{position:absolute;left:318px;top:35px;width:105px;height:105px;transform-style:preserve-3d;transform:rotateX(-8deg) rotateY(-14deg);filter:drop-shadow(0 0 12px rgba(0,216,255,.25))}.cubeFront{position:absolute;inset:18px 0 0 0;border:1px solid #00d8ff;background:linear-gradient(135deg,rgba(0,216,255,.08),rgba(0,80,120,.12));display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:12px}.cubeFront i{border:1px solid rgba(0,216,255,.4);background:rgba(0,216,255,.05);animation:vaultStore 4s infinite}.cubeFront i:nth-child(2){animation-delay:1s}.cubeFront i:nth-child(3){animation-delay:2s}.cubeFront i:nth-child(4){animation-delay:3s}.cubeTop{position:absolute;left:12px;right:-12px;top:0;height:19px;border:1px solid #00d8ff;transform:skewX(-45deg);transform-origin:left bottom;background:rgba(0,216,255,.12)}.cubeSide{position:absolute;right:-19px;top:18px;width:20px;height:87px;border:1px solid #00d8ff;transform:skewY(-45deg);transform-origin:left top;background:rgba(0,130,180,.09)}.vaultTitle{position:absolute;left:335px;bottom:10px;font-size:10px;color:#bff4ff}.vaultWords{position:absolute;right:7px;top:47px;display:flex;flex-direction:column;gap:9px;border-left:1px solid #00d8ff;padding-left:8px;font-size:6px;color:#50c5e5}.vaultPacket{position:absolute;width:6px;height:6px;border-radius:50%;background:#d6fbff;box-shadow:0 0 10px #00d8ff;left:235px;top:87px;animation:vaultPacket 2.4s linear infinite}@keyframes vaultDash{to{stroke-dashoffset:-20}}@keyframes indexScan{0%,100%{top:5px}50%{top:35px}}@keyframes vaultStore{0%,20%{background:rgba(0,216,255,.03)}35%,70%{background:rgba(0,216,255,.35);box-shadow:inset 0 0 10px #00d8ff}100%{background:rgba(0,216,255,.06)}}@keyframes vaultPacket{0%{transform:translateX(0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(82px);opacity:0}}
 @media(max-width:900px){.mockVisual{display:none}}
 @media(prefers-reduced-motion:reduce){.mockVisual *{animation:none!important}}
+
+/* ===== v0.2.33 — global non-Home hero right-edge alignment =====
+   01 Profile ~ 08 Archive share the section content box as the hard boundary.
+   Visuals keep their authored size and move left inside a 520px visual column
+   instead of overflowing the grid by 40~60px. */
+@media (min-width:901px){
+  .unifiedPageHeader,
+  .unifiedPageHeader .unifiedHeroGrid{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+  }
+  .unifiedPageHeader .unifiedHeroGrid,
+  .expertiseHeader .unifiedHeroGrid,
+  .heroV16 .unifiedHeroGrid{
+    grid-template-columns:minmax(0,1fr) 520px!important;
+    column-gap:clamp(28px,3.4vw,52px)!important;
+    align-items:center;
+  }
+  .unifiedPageHeader .unifiedHeroGrid>*{
+    min-width:0;
+    box-sizing:border-box;
+  }
+  .unifiedPageHeader .unifiedHeroGrid>:last-child{
+    justify-self:end!important;
+    margin-left:auto!important;
+    margin-right:0!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+  }
+  .profileSystem,
+  .careerSystem,
+  .projectsMock,
+  .mockVisual{
+    margin-left:auto!important;
+    margin-right:0!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+  }
+}
+
+/* GitHub uses its own three-panel hero rather than PageHeader. Keep the whole
+   05 layout inside the same section boundary at every desktop width. */
+@media (min-width:851px){
+  .githubPage{overflow-x:clip}
+}
+
+/* ===== v0.2.34 — projects pager + visual detail polish ===== */
+.projectOpsPagination{margin-top:16px;border:1px solid rgba(0,216,255,.22);background:linear-gradient(180deg,rgba(4,16,22,.82),rgba(3,11,16,.78));box-shadow:inset 0 1px 0 rgba(0,216,255,.035);font-family:Consolas,monospace}
+.projectOpsPageMeta{min-height:38px;padding:0 13px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid rgba(0,216,255,.14);font-size:9px;letter-spacing:.08em;color:#587784}
+.projectOpsPageMeta b{font-weight:500;color:#9beaff}.projectOpsPageControls{min-height:52px;padding:8px 10px;display:grid;grid-template-columns:minmax(90px,1fr) auto minmax(90px,1fr);align-items:center;gap:12px}.projectOpsPageControls button{height:34px;border:1px solid rgba(0,216,255,.2);background:rgba(4,14,20,.72);color:#7597a4;font:9px/1 Consolas,monospace;letter-spacing:.08em;cursor:pointer;transition:border-color .18s ease,color .18s ease,background .18s ease,box-shadow .18s ease}.projectOpsPageControls button:hover:not(:disabled){border-color:rgba(0,216,255,.7);color:#b7f3ff;background:rgba(0,216,255,.06)}.projectOpsPageControls button:focus-visible{outline:1px solid #00d8ff;outline-offset:2px}.projectOpsPageControls button:disabled{opacity:.28;cursor:not-allowed}.projectOpsPageControls .pageNav{padding:0 14px}.projectOpsPageControls .pageNav:first-child{justify-self:start}.projectOpsPageControls .pageNav:last-child{justify-self:end}.pageNumbers{display:flex;align-items:center;gap:6px}.projectOpsPageControls .pageNumbers button{width:38px}.projectOpsPageControls .pageNumbers button.active{border-color:#00d8ff;color:#d5f9ff;background:rgba(0,216,255,.11);box-shadow:inset 0 0 15px rgba(0,216,255,.08),0 0 9px rgba(0,216,255,.08)}
+/* Expertise: visible network activity instead of a static constellation. */
+.expertiseMock .knowledgeStage:before{content:"";position:absolute;left:260px;top:90px;width:4px;height:4px;border-radius:50%;background:#d8fbff;box-shadow:0 0 9px #00d8ff;z-index:4;animation:knowledgePacketA 5.8s ease-in-out infinite}.expertiseMock .knowledgeStage:after{content:"";position:absolute;left:260px;top:90px;width:4px;height:4px;border-radius:50%;background:#72f8c5;box-shadow:0 0 9px #2dffb2;z-index:4;animation:knowledgePacketB 6.4s 1.2s ease-in-out infinite}.expertiseMock .knowledgeCore{animation:knowledgeCoreBreath 4.8s ease-in-out infinite}.expertiseMock .knowledgeNode i{animation:knowledgeNodeSignal 7s ease-in-out infinite}.expertiseMock .knowledgeNode.n1 i{animation-delay:.7s}.expertiseMock .knowledgeNode.n2 i{animation-delay:1.4s}.expertiseMock .knowledgeNode.n3 i{animation-delay:2.1s}.expertiseMock .knowledgeNode.n4 i{animation-delay:2.8s}.expertiseMock .knowledgeNode.n5 i{animation-delay:3.5s}.expertiseMock .knowledgeNode.n6 i{animation-delay:4.2s}@keyframes knowledgePacketA{0%,8%{transform:translate(0,0);opacity:0}15%{opacity:1}38%{transform:translate(145px,-42px);opacity:1}48%{opacity:0}55%{transform:translate(0,0);opacity:0}65%{opacity:1}88%{transform:translate(-125px,65px);opacity:1}100%{transform:translate(-125px,65px);opacity:0}}@keyframes knowledgePacketB{0%,10%{transform:translate(0,0);opacity:0}18%{opacity:1}43%{transform:translate(-215px,15px);opacity:1}52%{opacity:0}60%{transform:translate(0,0);opacity:0}70%{opacity:1}92%{transform:translate(115px,68px);opacity:1}100%{opacity:0}}@keyframes knowledgeCoreBreath{0%,100%{box-shadow:0 0 16px rgba(0,216,255,.12)}50%{box-shadow:0 0 30px rgba(0,216,255,.3)}}@keyframes knowledgeNodeSignal{0%,12%,100%{transform:scale(.82);background:#07303e;box-shadow:0 0 5px rgba(0,216,255,.5)}18%,27%{transform:scale(1.18);background:#00a7c8;box-shadow:0 0 14px #00d8ff}34%{transform:scale(1);background:#07303e}}
+/* Archive: lock the 3D faces to one cube geometry so the top/side no longer drift. */
+.archiveMock .vaultCube{left:320px;top:37px;width:96px;height:96px;transform:none;filter:drop-shadow(0 0 12px rgba(0,216,255,.2))}.archiveMock .cubeFront{left:0;right:auto;top:14px;bottom:auto;width:82px;height:78px;padding:10px;box-sizing:border-box}.archiveMock .cubeTop{left:0;right:auto;top:0;width:82px;height:15px;box-sizing:border-box;transform:skewX(-43deg);transform-origin:left bottom}.archiveMock .cubeSide{left:82px;right:auto;top:14px;width:15px;height:78px;box-sizing:border-box;transform:skewY(-47deg);transform-origin:left top}.archiveMock .vaultTitle{left:326px;bottom:9px}
+@media(max-width:650px){.projectOpsPageMeta{align-items:flex-start;flex-direction:column;gap:5px;padding:10px 11px}.projectOpsPageControls{grid-template-columns:34px 1fr 34px;gap:7px}.projectOpsPageControls .pageNav{width:34px;padding:0}.projectOpsPageControls .pageNav span{display:none}.pageNumbers{justify-content:center;gap:4px}.projectOpsPageControls .pageNumbers button{width:32px}}
+@media(prefers-reduced-motion:reduce){.expertiseMock .knowledgeStage:before,.expertiseMock .knowledgeStage:after,.expertiseMock .knowledgeCore,.expertiseMock .knowledgeNode i{animation:none!important}}
+
+/* ===== v0.2.35 — selective Education record disclosure ===== */
+.resumeHiddenRecordControl{
+  display:flex;
+  justify-content:flex-end;
+  padding-top:8px;
+}
+.resumeHiddenRecordToggle{
+  appearance:none;
+  border:1px solid rgba(0,220,255,.32);
+  background:rgba(6,20,25,.72);
+  color:#78dff3;
+  min-height:30px;
+  padding:0 12px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font:600 9px/1 var(--font-mono),monospace;
+  letter-spacing:.08em;
+  cursor:pointer;
+  transition:border-color .18s ease,background .18s ease,color .18s ease,box-shadow .18s ease;
+}
+.resumeHiddenRecordToggle:hover,
+.resumeHiddenRecordToggle:focus-visible{
+  outline:none;
+  border-color:#16d9ff;
+  background:rgba(7,35,43,.9);
+  color:#d9faff;
+  box-shadow:0 0 14px rgba(0,213,255,.10);
+}
+.resumeHiddenRecordToggle>span{
+  color:#38f7b2;
+  font-size:13px;
+  line-height:1;
+}
+@media(max-width:700px){
+  .resumeHiddenRecordControl{justify-content:stretch}
+  .resumeHiddenRecordToggle{width:100%;justify-content:center;min-height:36px}
+}

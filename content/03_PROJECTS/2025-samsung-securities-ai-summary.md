@@ -5,7 +5,7 @@ title: "금융권 고객 해외 투자정보 번역/요약 서비스 구축"
 startDate: "2025-03-04"
 endDate: "2025-07-04"
 status: completed
-careerId: megazone
+careerId: azure-ai-platform-engineer
 roles: ["Application Architect", "Azure AI / Infrastructure Technical Support"]
 skills: ["Azure OpenAI", "Azure API Management", "Azure Functions", "Private Endpoint", "Managed Identity", "Azure Firewall", "Squid Proxy", "Jenkins", "Azure Monitor", "Content Safety", "PII", "Prompt Shield"]
 ---

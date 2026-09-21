@@ -12,7 +12,7 @@ headline:
 - AI Platform
 - Kubernetes
 - Data Platform
-careerId: megazone
+careerId: azure-ai-platform-engineer
 image: /images/current-identity-workspace.png
 imageAlt: Cloud engineering workspace visual
 missionLabel: MISSION

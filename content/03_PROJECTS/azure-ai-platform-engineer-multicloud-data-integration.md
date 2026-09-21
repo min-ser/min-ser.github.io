@@ -1,15 +1,15 @@
 ---
-id: amore-multicloud-data-integration
+id: azure-ai-platform-engineer-multicloud-data-integration
 type: project
-title: Enterprise Customer Fabric Multi-Cloud / Hybrid Data Integration
-careerId: megazone
+title: Azure AI Platform Engineer - Enterprise Customer Fabric Multi-Cloud / Hybrid Data Integration
+careerId: azure-ai-platform-engineer
 startDate: "2025-07-01"
 endDate: null
 status: operating
 roles: ["Microsoft Fabric Engineer", "Azure Part PL"]
 skills: ["Microsoft Fabric", "Snowflake", "AWS S3", "Azure Storage", "OPDG", "Pipeline", "Copy Activity", "Shortcut"]
 ---
-# Enterprise Customer Fabric Multi-Cloud / Hybrid Data Integration
+# Azure AI Platform Engineer - Enterprise Customer Fabric Multi-Cloud / Hybrid Data Integration
 
 ## Multi-Cloud / Hybrid Data Map
 

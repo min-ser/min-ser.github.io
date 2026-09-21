@@ -13,7 +13,7 @@ export default async function Home(){
  const careerDescription=getHomeSection("career-description");
  const expertise=getHomeSection("expertise");
  const pc=getHomeSection("projects");
- const careerDocs=getDocuments("career");
+ const careerDocs=getDocuments("career").filter(doc=>doc.meta.collapsed!==true);
  const projectDocs=getDocuments("project");
  const current=hero?getDocumentById("career",String(hero.meta.careerId||"")):undefined;
  const projects=pc?getDocumentsByIds("project",Array.isArray(pc.meta.projects)?pc.meta.projects.map(String):[]):[];

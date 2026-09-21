@@ -27,7 +27,8 @@ export default function ProfileSection({config,careers,education,training,certif
  }));
  const educationRows=education.slice(0,Number(config.meta.educationLimit||education.length)).map(d=>({
   slug:d.slug,title:String(d.meta.school||""),subtitle:String(d.meta.major||""),period:range(d,presentLabel),markdown:d.content,
-  cells:[range(d,presentLabel),String(d.meta.school||""),`${String(d.meta.major||"")}${d.meta.degree?` · ${String(d.meta.degree)}`:""}`,String(d.meta.gpa||"—")]
+  cells:[range(d,presentLabel),String(d.meta.school||""),`${String(d.meta.major||"")}${d.meta.degree?` · ${String(d.meta.degree)}`:""}`,String(d.meta.gpa||"—")],
+  collapsed:d.meta.collapsed===true
  }));
  const trainingRows=training.slice(0,Number(config.meta.trainingLimit||training.length)).map(d=>({
   slug:d.slug,title:String(d.meta.institution||""),subtitle:String(d.meta.title||""),period:range(d,presentLabel),markdown:d.content,

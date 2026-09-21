@@ -2,7 +2,7 @@
 id: fabric-dynamic-autoscale
 type: project
 title: Microsoft Fabric Capacity Dynamic Autoscale
-careerId: megazone
+careerId: azure-ai-platform-engineer
 startDate: "2026-07-01"
 endDate: null
 status: operating

@@ -10,6 +10,7 @@ export interface ContentMeta {
   enabled?: boolean;
   sample?: boolean;
   featured?: boolean;
+  collapsed?: boolean;
   skills?: string[];
   projects?: string[];
   [key: string]: unknown;

@@ -5,7 +5,7 @@ title: "건설·엔지니어링 고객 Azure Functions 개발·배포 기술가�
 startDate: "2024-04-01"
 endDate: "2024-05-31"
 status: completed
-careerId: megazone
+careerId: azure-ai-platform-engineer
 roles: ["Azure Functions Developer", "Technical Guide"]
 skills: ["Azure Functions", "Java", "Python", "Managed Identity", "Azure"]
 ---

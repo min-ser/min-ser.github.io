@@ -5,7 +5,7 @@ title: "커머스 서비스 고객 Azure 인프라 구축·운영 및 서비스 
 startDate: "2023-04-01"
 endDate: "2024-01-31"
 status: completed
-careerId: megazone
+careerId: azure-ai-platform-engineer
 roles: ["Azure Solution Architect", "Cloud Infrastructure Technical Support"]
 skills: ["Azure IaaS", "Virtual Machine", "Azure Firewall", "WAF", "Linux", "Apache", "PHP", "MySQL", "SSL/TLS", "DNS", "Azure Backup", "Snapshot", "X-Forwarded-For"]
 ---

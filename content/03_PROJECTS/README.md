@@ -45,7 +45,7 @@ relatedCareer: company-client
 Project가 특정 Career 기간에 속하면 Front Matter에 `careerId`를 지정합니다.
 
 ```yaml
-careerId: megazone
+careerId: azure-ai-platform-engineer
 startDate: "2026-07-01"
 endDate: "2026-09-01"
 ```

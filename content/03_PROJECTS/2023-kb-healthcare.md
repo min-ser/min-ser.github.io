@@ -5,7 +5,7 @@ title: "헬스케어 플랫폼 고객 B2B/B2C 통합 플랫폼 구축 기술지�
 startDate: "2023-08-01"
 endDate: "2024-01-31"
 status: completed
-careerId: megazone
+careerId: azure-ai-platform-engineer
 roles: ["Backend Engineer", "Cloud / Kubernetes Technical Support"]
 skills: ["AKS", "Kubernetes", "Spring Boot", "MySQL", "PostgreSQL", "JPA", "MyBatis", "AGIC", "Ingress", "Forward Proxy", "Reverse Proxy", "WAF", "Azure Monitor"]
 ---

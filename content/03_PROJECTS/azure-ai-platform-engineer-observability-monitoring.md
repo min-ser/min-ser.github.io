@@ -1,15 +1,15 @@
 ---
-id: amore-observability-monitoring
+id: azure-ai-platform-engineer-observability-monitoring
 type: project
-title: Enterprise Customer Azure / AKS / Fabric Observability 운영
-careerId: megazone
+title: Azure AI Platform Engineer - Enterprise Customer Azure / AKS / Fabric Observability 운영
+careerId: azure-ai-platform-engineer
 startDate: "2026-01-01"
 endDate: null
 status: operating
 roles: ["Azure Part PL", "Platform Engineer"]
 skills: ["Grafana", "Datadog", "Log Analytics", "ContainerLogV2", "Azure Monitor", "Microsoft Fabric"]
 ---
-# Enterprise Customer Azure / AKS / Fabric Observability 운영
+# Azure AI Platform Engineer - Enterprise Customer Azure / AKS / Fabric Observability 운영
 
 ## Observability Flow
 

@@ -1,12 +1,12 @@
 ---
-id: amore-azure-ai-data-platform
+id: azure-ai-platform-engineer-ai-data-platform
 type: project
-title: "Enterprise Customer Azure AI / Data Platform 구축 및 운영 고도화"
+title: "Azure AI Platform Engineer - Enterprise Customer Azure AI / Data Platform 구축 및 운영 고도화"
 startDate: "2025-07-01"
 endDate: null
 status: ongoing
 featured: true
-careerId: megazone
+careerId: azure-ai-platform-engineer
 roles:
   - Azure AI Platform Engineer
   - Azure Part PL
@@ -105,7 +105,7 @@ Fabric CI/CD와 Private Connectivity, Capacity 자동화, Audit Logging, Multi-C
 
 ## 10. Detailed Workstream Index
 
-이 프로젝트는 단일 Azure Resource 구축이 아니라 여러 Platform Workstream을 동시에 담당한 장기 운영/고도화 프로젝트입니다. 상세 구현은 동일 `careerId: megazone`의 Project Record로 분리하여 Home → Career → Projects에서 자동 연결합니다.
+이 프로젝트는 단일 Azure Resource 구축이 아니라 여러 Platform Workstream을 동시에 담당한 장기 운영/고도화 프로젝트입니다. 상세 구현은 동일 `careerId: azure-ai-platform-engineer`의 Project Record로 분리하여 Home → Career → Projects에서 자동 연결합니다.
 
 ### Microsoft Fabric Platform
 - Capacity / Workspace 및 DEV·QA·PRD 환경 운영
@@ -164,7 +164,7 @@ Career 화면과 Project 상세 화면 모두에서 엔터프라이즈 고객 �
 ### 1. Enterprise Customer — Azure AI / Data Platform 구축 및 운영 고도화
 
 **기간:** 2025.07 ~ 현재  
-**소속:** 메가존클라우드  
+**소속:** Azure AI Platform Engineer  
 **역할:** Azure AI Platform Engineer / Azure Part PL / Azure SME / Microsoft Fabric·AKS 담당
 
 Microsoft Fabric 기술지원을 목적으로 프로젝트에 투입되었으며, 프로젝트 진행 과정에서 Azure AI, AKS, Network, Identity, Security, CI/CD 및 운영 자동화 영역으로 담당 범위가 확대되었습니다. 현재는 **Enterprise AI/Data Platform 프로젝트 Azure Part PL**로 Azure 영역의 기술 검토와 운영방안 수립을 지원하고, Microsoft Fabric 플랫폼과 Enterprise AI/Data Platform/AI Application Platform의 AKS 서비스 구축·운영을 함께 담당하고 있습니다.

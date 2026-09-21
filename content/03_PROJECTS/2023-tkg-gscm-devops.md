@@ -5,7 +5,7 @@ title: "제조·SCM 고객 GSCM Apps & DevOps 서비스 구축"
 startDate: "2023-08-01"
 endDate: "2023-08-31"
 status: completed
-careerId: megazone
+careerId: azure-ai-platform-engineer
 roles: ["DevOps Technical Support"]
 skills: ["GitHub Actions", "Azure App Service", "CI/CD", "DevOps"]
 ---

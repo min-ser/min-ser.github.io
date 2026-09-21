@@ -1,12 +1,12 @@
 ---
-id: 2026-amore-troubleshooting-archive
+id: 2026-azure-ai-platform-engineer-troubleshooting-archive
 type: technical-record
-title: Enterprise Customer Platform Troubleshooting Archive
-careerId: megazone
+title: Azure AI Platform Engineer - Enterprise Customer Platform Troubleshooting Archive
+careerId: azure-ai-platform-engineer
 status: living-document
 ---
 
-# Enterprise Customer Platform Troubleshooting Archive
+# Azure AI Platform Engineer - Enterprise Customer Platform Troubleshooting Archive
 
 ## Troubleshooting Pattern
 

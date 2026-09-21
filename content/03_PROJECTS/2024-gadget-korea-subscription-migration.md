@@ -5,7 +5,7 @@ title: "커머스 플랫폼 고객 Azure Sponsorship → CSP Subscription Migrat
 startDate: "2024-07-30"
 endDate: "2024-08-23"
 status: completed
-careerId: megazone
+careerId: azure-ai-platform-engineer
 engagementType: "Delivery / Azure Migration"
 roles: ["Azure Solution Architect", "Primary SA"]
 skills: ["Azure", "Subscription Migration", "App Service", "Azure Functions", "Managed Identity", "Application Insights", "Log Analytics", "Service Bus", "VNet Integration", "NAT Gateway", "GitHub Actions", "SQL Server"]

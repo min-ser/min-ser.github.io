@@ -11,7 +11,7 @@ export default function Page(){
     kind:"career" as const,id:String(c.meta.id||c.slug),slug:c.slug,
     company:String(c.meta.company||c.meta.title||""),position:String(c.meta.position||""),
     startDate:String(c.meta.startDate||""),endDate:c.meta.endDate?String(c.meta.endDate):null,status:String(c.meta.status||""),
-    roles:Array.isArray(c.meta.roles)?c.meta.roles.map(String):[],skills:Array.isArray(c.meta.skills)?c.meta.skills.map(String):[],markdown:c.content,
+    roles:Array.isArray(c.meta.roles)?c.meta.roles.map(String):[],skills:Array.isArray(c.meta.skills)?c.meta.skills.map(String):[],markdown:c.content,collapsed:c.meta.collapsed===true,
     projects:projects.filter(p=>String(p.meta.careerId||"")===String(c.meta.id||"")).map(p=>({
       id:String(p.meta.id||p.slug),slug:p.slug,title:String(p.meta.title||""),startDate:String(p.meta.startDate||""),
       endDate:p.meta.endDate?String(p.meta.endDate):null,status:String(p.meta.status||""),skills:Array.isArray(p.meta.skills)?p.meta.skills.map(String):[],markdown:p.content

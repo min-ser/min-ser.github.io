@@ -1,8 +1,8 @@
 ---
-id: enterprise-fabric-audit-log-automation
+id: azure-ai-platform-engineer-fabric-audit-log-automation
 type: project
-title: "Microsoft Fabric Audit Log 수집 자동화"
-careerId: cloud-platform-engineering
+title: Azure AI Platform Engineer - Enterprise Customer Fabric Audit Log 수집 자동화
+careerId: azure-ai-platform-engineer
 startDate: "2026-09-01"
 endDate: null
 status: operating
@@ -10,7 +10,7 @@ featured: true
 roles: ["Microsoft Fabric Engineer", "Azure Part PL"]
 skills: ["Fabric Admin Activity API", "Notebook", "Pipeline", "Azure Storage", "CSV", "Service Principal", "Python"]
 ---
-# Microsoft Fabric Audit Log 수집 자동화
+# Azure AI Platform Engineer - Enterprise Customer Fabric Audit Log 수집 자동화
 
 ## Collection Pipeline
 

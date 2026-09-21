@@ -1,9 +1,9 @@
 ---
-id: megazone
+id: azure-ai-platform-engineer
 type: career
-company: MEGAZONE CLOUD
-organization: Microsoft Technology Center / AIR
-position: Manager
+company: Azure AI Platform Engineer
+organization: Cloud / AI Platform Engineering
+position: Azure AI Platform Engineer
 startDate: "2022-07-01"
 endDate: null
 status: ongoing
@@ -141,7 +141,7 @@ flowchart TB
 
 ```mermaid
 timeline
- title MEGAZONE CLOUD Project Timeline
+ title Azure AI Platform Engineer Project Timeline
  2023 : Azure SpaceONE API : 커머스 서비스 고객 Azure Infra : 헬스케어 플랫폼 고객 B2B/B2C : 제조·SCM 고객 DevOps
  2024 : 건설·엔지니어링 고객 Azure Functions : 보험사 고객 Cloud 전환 제안 : 커머스 플랫폼 고객 Migration : Enterprise GenAI Platform : 미디어·IT 고객 AI Azure 전환 제안
  2025 : 미디어·IT 고객 제안/HOL : 금융권 고객 AI Platform : Enterprise Customer Enterprise AI/Data Platform / Fabric
@@ -153,7 +153,7 @@ timeline
 ### 1. Enterprise Customer — Azure AI / Data Platform 구축 및 운영 고도화
 
 **기간:** 2025.07 ~ 현재  
-**소속:** 메가존클라우드  
+**소속:** Azure AI Platform Engineer  
 **역할:** Azure AI Platform Engineer / Azure Part PL / Azure SME / Microsoft Fabric·AKS 담당
 
 Microsoft Fabric 기술지원을 목적으로 프로젝트에 투입되었으며, 프로젝트 진행 과정에서 Azure AI, AKS, Network, Identity, Security, CI/CD 및 운영 자동화 영역으로 담당 범위가 확대되었습니다. 현재는 **Enterprise AI/Data Platform 프로젝트 Azure Part PL**로 Azure 영역의 기술 검토와 운영방안 수립을 지원하고, Microsoft Fabric 플랫폼과 Enterprise AI/Data Platform/AI Application Platform의 AKS 서비스 구축·운영을 함께 담당하고 있습니다.
@@ -509,7 +509,7 @@ Python, FastAPI, Java, Spring Boot, REST API, LangChain
 
 ## Career Progression
 
-메가존클라우드 재직 기간 동안 담당 영역은 다음과 같이 확장되었습니다.
+Azure AI Platform Engineer 재직 기간 동안 담당 영역은 다음과 같이 확장되었습니다.
 
 - **2023 — Azure Infra / API / DevOps:** Azure Cost/Partner API, IaaS, GitHub Actions, Backend/Infra 기술지원
 - **2024 — Application Architecture / Kubernetes / GenAI:** Azure Functions, Jenkins/AKS, Subscription Migration, FastAPI/LangChain/RAG
@@ -522,8 +522,8 @@ Python, FastAPI, Java, Spring Boot, REST API, LangChain
 
 별도 상위 디렉토리를 만들지 않고 기존 웹 이력서 IA 안에서 상세 기록을 연결합니다.
 
-- `03_PROJECTS/2025-amore-azure-ai-data-platform.md` — 엔터프라이즈 고객 Azure AI / Data / AKS Platform Engineering 종합 기록
+- `03_PROJECTS/2025-azure-ai-platform-engineer-ai-data-platform.md` — 엔터프라이즈 고객 Azure AI / Data / AKS Platform Engineering 종합 기록
 - `03_PROJECTS/fabric-dynamic-autoscale.md` — Schedule + Utilization 기반 Fabric Capacity Dynamic Autoscale
 - `03_PROJECTS/fabric-security-governance.md` — Fabric Audit/Query Log 및 Security Governance
-- `03_PROJECTS/amore-neo-aks-platform.md` — AI Application Platform 신규 AKS 서비스와 GitOps 운영
-- `07_ARCHIVE/2026-amore-troubleshooting-archive.md` — 실제 장애 분석/조치 이력
+- `03_PROJECTS/azure-ai-platform-engineer-neo-aks-platform.md` — AI Application Platform 신규 AKS 서비스와 GitOps 운영
+- `07_ARCHIVE/2026-azure-ai-platform-engineer-troubleshooting-archive.md` — 실제 장애 분석/조치 이력

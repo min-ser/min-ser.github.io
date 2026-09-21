@@ -1,8 +1,8 @@
 ---
-id: amore-neo-aks-platform
+id: azure-ai-platform-engineer-neo-aks-platform
 type: project
-title: Enterprise Customer AI Application Platform AKS Service Platform 구축 및 GitOps 운영
-careerId: megazone
+title: Azure AI Platform Engineer - Enterprise Customer AI Application Platform AKS Service Platform 구축 및 GitOps 운영
+careerId: azure-ai-platform-engineer
 startDate: "2026-08-01"
 endDate: null
 status: ongoing

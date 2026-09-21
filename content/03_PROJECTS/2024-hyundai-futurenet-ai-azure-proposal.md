@@ -5,7 +5,7 @@ title: "미디어·IT 고객 AI 서비스 Azure 전환 제안 기술지원"
 startDate: "2024-12-01"
 endDate: "2025-02-28"
 status: completed
-careerId: megazone
+careerId: azure-ai-platform-engineer
 engagementType: "Pre-Sales / Proposal"
 roles: ["Azure Technical Support", "Technical Documentation"]
 skills: ["Azure OpenAI", "Azure AI Search", "Azure API Management", "Azure Functions", "Azure DevOps", "Self-hosted Agent", "Python"]

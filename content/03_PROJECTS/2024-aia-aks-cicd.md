@@ -5,7 +5,7 @@ title: "보험사 고객 클라우드 전환 2차 사업 제안 기술지원"
 startDate: "2024-07-01"
 endDate: "2024-08-31"
 status: completed
-careerId: megazone
+careerId: azure-ai-platform-engineer
 engagementType: "Pre-Sales / Proposal"
 roles: ["Application Architect", "Azure Architecture Technical Support"]
 skills: ["Azure", "AKS", "Kubernetes", "Azure App Service", "Jenkins", "ACR", "ExpressRoute", "PostgreSQL", "Redis Cache"]

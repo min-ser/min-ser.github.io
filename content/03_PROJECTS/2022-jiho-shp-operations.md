@@ -108,4 +108,4 @@ Server Infrastructure
 
 ## 05. Experience Summary
 
-Application Developer에서 Cloud Engineer로 이동하기 직전에 수행한 운영 경험으로, 개발 Source뿐 아니라 실행환경과 Server Infrastructure까지 업무 범위를 넓힌 시기다. 이후 메가존에서 Cloud Infrastructure와 Platform Engineering을 담당하게 되는 경력 흐름 사이를 연결하는 프로젝트로 볼 수 있다.
+Application Developer에서 Cloud Engineer로 이동하기 직전에 수행한 운영 경험으로, 개발 Source뿐 아니라 실행환경과 Server Infrastructure까지 업무 범위를 넓힌 시기다. 이후 Cloud Engineering 영역에서 Cloud Infrastructure와 Platform Engineering을 담당하게 되는 경력 흐름 사이를 연결하는 프로젝트로 볼 수 있다.

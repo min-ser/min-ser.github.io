@@ -1,15 +1,15 @@
 ---
-id: enterprise-fabric-query-log
+id: azure-ai-platform-engineer-fabric-query-log
 type: project
-title: "Microsoft Fabric Query Log / Execution History 수집"
-careerId: cloud-platform-engineering
+title: Azure AI Platform Engineer - Enterprise Customer Fabric Query Log / Execution History 수집
+careerId: azure-ai-platform-engineer
 startDate: "2026-03-01"
 endDate: null
 status: operating
 roles: ["Microsoft Fabric Engineer", "Security Technical Support"]
 skills: ["Microsoft Fabric", "Query Log", "Stored Procedure", "KST", "UTC", "Security Audit"]
 ---
-# Microsoft Fabric Query Log / Execution History 수집
+# Azure AI Platform Engineer - Enterprise Customer Fabric Query Log / Execution History 수집
 
 ## Query / Execution History Flow
 

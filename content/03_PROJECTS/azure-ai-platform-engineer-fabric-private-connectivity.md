@@ -1,8 +1,8 @@
 ---
-id: amore-fabric-private-connectivity
+id: azure-ai-platform-engineer-fabric-private-connectivity
 type: project
-title: Enterprise Customer Fabric Private Connectivity / MPEP 구축
-careerId: megazone
+title: Azure AI Platform Engineer - Enterprise Customer Fabric Private Connectivity / MPEP 구축
+careerId: azure-ai-platform-engineer
 startDate: "2026-01-01"
 endDate: null
 status: operating
@@ -10,7 +10,7 @@ featured: true
 roles: ["Azure Part PL", "Microsoft Fabric Engineer"]
 skills: ["Microsoft Fabric", "Private Link", "Managed Private Endpoint", "Private Endpoint", "Private DNS", "Azure Storage", "Firewall"]
 ---
-# Enterprise Customer Fabric Private Connectivity / MPEP 구축
+# Azure AI Platform Engineer - Enterprise Customer Fabric Private Connectivity / MPEP 구축
 
 ## Private Connectivity Map
 
