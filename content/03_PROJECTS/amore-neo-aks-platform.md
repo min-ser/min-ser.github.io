@@ -1,7 +1,7 @@
 ---
 id: amore-neo-aks-platform
 type: project
-title: AMOREPACIFIC NEO AKS Service Platform 구축 및 GitOps 운영
+title: Enterprise Customer AI Application Platform AKS Service Platform 구축 및 GitOps 운영
 careerId: megazone
 startDate: "2026-08-01"
 endDate: null
@@ -40,7 +40,7 @@ flowchart LR
 
 ## Overview
 
-NEO 프로젝트에서 Application / Batch / CronJob을 포함한 **총 7개 신규 서비스를 기존 AKS 플랫폼에 구성**하고, GitLab CI/CD → Container Image → Helm → ArgoCD로 이어지는 GitOps 배포체계와 Azure Resource 인증·권한 연계를 지원했습니다.
+AI Application Platform 프로젝트에서 Application / Batch / CronJob을 포함한 **총 7개 신규 서비스를 기존 AKS 플랫폼에 구성**하고, GitLab CI/CD → Container Image → Helm → ArgoCD로 이어지는 GitOps 배포체계와 Azure Resource 인증·권한 연계를 지원했습니다.
 
 ## Platform Build
 
@@ -138,7 +138,7 @@ ServiceAccount가 Application 화면에 별도 Resource로 표시되는 경우 H
 
 ## Operating Principle
 
-NEO 운영에서는 배포 실패를 `Kubernetes 문제` 하나로 묶지 않고 아래 경계로 나누어 진단했습니다.
+AI Application Platform 운영에서는 배포 실패를 `Kubernetes 문제` 하나로 묶지 않고 아래 경계로 나누어 진단했습니다.
 
 `Source/Pipeline → Docker/ACR → Helm → ArgoCD → Kubernetes Scheduler/Runtime → Workload Identity/RBAC → Azure/Fabric/Storage`
 

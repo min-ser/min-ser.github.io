@@ -1,7 +1,7 @@
 ---
 id: samsung-securities-ai-summary
 type: project
-title: "삼성증권 해외 투자정보 번역/요약 서비스 구축"
+title: "금융권 고객 해외 투자정보 번역/요약 서비스 구축"
 startDate: "2025-03-04"
 endDate: "2025-07-04"
 status: completed
@@ -9,12 +9,12 @@ careerId: megazone
 roles: ["Application Architect", "Azure AI / Infrastructure Technical Support"]
 skills: ["Azure OpenAI", "Azure API Management", "Azure Functions", "Private Endpoint", "Managed Identity", "Azure Firewall", "Squid Proxy", "Jenkins", "Azure Monitor", "Content Safety", "PII", "Prompt Shield"]
 ---
-# 삼성증권 해외 투자정보 번역/요약 서비스 구축
+# 금융권 고객 해외 투자정보 번역/요약 서비스 구축
 
 ## 01. Project Overview
-삼성증권의 해외 투자정보를 생성형 AI로 번역·요약하는 금융권 AI 서비스 구축 프로젝트에서 **Azure AI, Application, API Gateway, Private Network, Security/Safety 및 운영구조 기술지원**을 수행했습니다.
+금융권 고객의 해외 투자정보를 생성형 AI로 번역·요약하는 금융권 AI 서비스 구축 프로젝트에서 **Azure AI, Application, API Gateway, Private Network, Security/Safety 및 운영구조 기술지원**을 수행했습니다.
 
-2025년 1~2월 제안/기술협상 및 착수 준비 단계부터 Azure Architecture와 요구사항을 검토했고, **2025-03-04 정식 착수 이후 실제 구축 프로젝트로 이어진 Delivery 경력**입니다. 제안만 수행한 AIA생명/현대퓨처넷과 구분합니다.
+2025년 1~2월 제안/기술협상 및 착수 준비 단계부터 Azure Architecture와 요구사항을 검토했고, **2025-03-04 정식 착수 이후 실제 구축 프로젝트로 이어진 Delivery 경력**입니다. 제안만 수행한 보험사 고객/미디어·IT 고객과 구분합니다.
 
 ## 02. Service / Availability Requirements
 사전 요구사항 검토에서 서비스별 가용성 구조를 다음과 같이 구분했습니다.
@@ -134,7 +134,7 @@ Application 코드에서 Backend Endpoint, Authentication, Header Validation, Po
 CI/CD는 Azure DevOps 자체가 목표가 아니라 고객 내부망과 운영정책에 맞는 배포체계를 만드는 것이 목표였으므로, 검토 결과 Jenkins 기반 구조로 전환했습니다.
 
 ## 13. Result / Career Significance
-Azure OpenAI만 배포한 프로젝트가 아니라 **AI Model → APIM → Private Network → Identity → AI Safety → Monitoring → CI/CD**를 하나의 Enterprise AI 운영구조로 연결한 경험입니다. 이후 아모레퍼시픽에서 Azure AI Platform/Fabric/AKS를 함께 담당하는 Platform Engineering 역할로 확장되는 기반이 됐습니다.
+Azure OpenAI만 배포한 프로젝트가 아니라 **AI Model → APIM → Private Network → Identity → AI Safety → Monitoring → CI/CD**를 하나의 Enterprise AI 운영구조로 연결한 경험입니다. 이후 엔터프라이즈 고객에서 Azure AI Platform/Fabric/AKS를 함께 담당하는 Platform Engineering 역할로 확장되는 기반이 됐습니다.
 
 ## 14. Technology
 Azure OpenAI / Azure API Management Premium / Azure Functions / Private Endpoint / VNet / Azure Firewall / Squid Proxy / Managed Identity / Jenkins / Azure Monitor / Prometheus / Grafana / Content Safety / PII / Prompt Shield

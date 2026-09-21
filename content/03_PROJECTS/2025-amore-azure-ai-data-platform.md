@@ -1,7 +1,7 @@
 ---
 id: amore-azure-ai-data-platform
 type: project
-title: "AMOREPACIFIC Azure AI / Data Platform 구축 및 운영 고도화"
+title: "Enterprise Customer Azure AI / Data Platform 구축 및 운영 고도화"
 startDate: "2025-07-01"
 endDate: null
 status: ongoing
@@ -28,7 +28,7 @@ skills:
 flowchart TB
  DEV[Development Teams] --> GIT[GitLab CI/CD]
  GIT --> FAB[Microsoft Fabric]
- GIT --> AKS[AKS / NEO]
+ GIT --> AKS[AKS / AI Application Platform]
  APIM[Azure API Management] --> AI[Foundry / OpenAI / AI Search]
  FAB --> DATA[Snowflake / AWS S3 / Storage / OPDG]
  FAB --> EH[Event Hub]
@@ -44,7 +44,7 @@ flowchart TB
 
 ## 01 OVERVIEW
 
-Microsoft Fabric 기술지원을 시작으로 Data Highway 프로젝트의 Azure Part PL 역할까지 담당 범위를 확대하여 Azure AI, Data Platform, AKS, Private Network, Security Governance, CI/CD 및 운영 자동화를 지원한 장기 프로젝트입니다.
+Microsoft Fabric 기술지원을 시작으로 Enterprise AI/Data Platform 프로젝트의 Azure Part PL 역할까지 담당 범위를 확대하여 Azure AI, Data Platform, AKS, Private Network, Security Governance, CI/CD 및 운영 자동화를 지원한 장기 프로젝트입니다.
 
 ## 02 RESPONSIBILITIES
 
@@ -66,7 +66,7 @@ Microsoft Fabric 기술지원을 시작으로 Data Highway 프로젝트의 Azure
 
 ## 04 AKS / DEVOPS
 
-- Data Highway / NEO Application, Batch, CronJob 서비스 구축·운영
+- Enterprise AI/Data Platform / AI Application Platform Application, Batch, CronJob 서비스 구축·운영
 - GitLab CI/CD + Docker + Helm + ArgoCD 기반 GitOps 구성
 - Workload Identity + Azure RBAC 기반 Azure Resource 연계
 - Grafana / Log Analytics 기반 Container Log 모니터링
@@ -130,7 +130,7 @@ Fabric CI/CD와 Private Connectivity, Capacity 자동화, Audit Logging, Multi-C
 - Workload Identity / Managed Identity / RBAC 기반 인증 패턴
 - 반복적인 연결/권한 문의를 줄이기 위한 Self-Service 검증 방식 지원
 
-### AKS / NEO
+### AKS / AI Application Platform
 - Application / Batch / CronJob 포함 신규 서비스 구성
 - GitLab CI/CD → Docker/ACR → Helm → ArgoCD 배포체계
 - Workload Identity + Azure RBAC
@@ -145,7 +145,7 @@ Fabric CI/CD와 Private Connectivity, Capacity 자동화, Audit Logging, Multi-C
 - 최종 Query Log 수집 방식으로 운영방향 구체화
 
 ## 11. Role Expansion
-초기 투입 목적은 Microsoft Fabric 기술지원이었지만, 실제 프로젝트 진행 과정에서 Azure AI, AKS, Network, Identity, CI/CD, Security 요구가 연결되면서 담당 범위가 확대되었습니다. 이후 Data Highway의 **Azure Part PL** 역할로 Azure 영역의 기술 검토, 개발팀 지원, 고객 인프라/네트워크/보안 조직 협의 및 Microsoft 기술 협업까지 수행했습니다.
+초기 투입 목적은 Microsoft Fabric 기술지원이었지만, 실제 프로젝트 진행 과정에서 Azure AI, AKS, Network, Identity, CI/CD, Security 요구가 연결되면서 담당 범위가 확대되었습니다. 이후 Enterprise AI/Data Platform의 **Azure Part PL** 역할로 Azure 영역의 기술 검토, 개발팀 지원, 고객 인프라/네트워크/보안 조직 협의 및 Microsoft 기술 협업까지 수행했습니다.
 
 ## 12. Engineering Deliverables
 - Fabric CI/CD 및 운영 가이드
@@ -159,21 +159,21 @@ Fabric CI/CD와 Private Connectivity, Capacity 자동화, Audit Logging, Multi-C
 
 ## 20 FULL CAREER RECORD
 
-Career 화면과 Project 상세 화면 모두에서 아모레 수행 범위를 축약 없이 확인할 수 있도록 동일한 원천 경력 기록을 포함합니다.
+Career 화면과 Project 상세 화면 모두에서 엔터프라이즈 고객 수행 범위를 축약 없이 확인할 수 있도록 동일한 원천 경력 기록을 포함합니다.
 
-### 1. AMOREPACIFIC — Azure AI / Data Platform 구축 및 운영 고도화
+### 1. Enterprise Customer — Azure AI / Data Platform 구축 및 운영 고도화
 
 **기간:** 2025.07 ~ 현재  
 **소속:** 메가존클라우드  
 **역할:** Azure AI Platform Engineer / Azure Part PL / Azure SME / Microsoft Fabric·AKS 담당
 
-Microsoft Fabric 기술지원을 목적으로 프로젝트에 투입되었으며, 프로젝트 진행 과정에서 Azure AI, AKS, Network, Identity, Security, CI/CD 및 운영 자동화 영역으로 담당 범위가 확대되었습니다. 현재는 **Data Highway 프로젝트 Azure Part PL**로 Azure 영역의 기술 검토와 운영방안 수립을 지원하고, Microsoft Fabric 플랫폼과 Data Highway/NEO의 AKS 서비스 구축·운영을 함께 담당하고 있습니다.
+Microsoft Fabric 기술지원을 목적으로 프로젝트에 투입되었으며, 프로젝트 진행 과정에서 Azure AI, AKS, Network, Identity, Security, CI/CD 및 운영 자동화 영역으로 담당 범위가 확대되었습니다. 현재는 **Enterprise AI/Data Platform 프로젝트 Azure Part PL**로 Azure 영역의 기술 검토와 운영방안 수립을 지원하고, Microsoft Fabric 플랫폼과 Enterprise AI/Data Platform/AI Application Platform의 AKS 서비스 구축·운영을 함께 담당하고 있습니다.
 
 단일 Azure Resource의 구축·운영에 국한되지 않고 **Azure AI / Microsoft Fabric / AKS / Private Network / Identity & RBAC / DevOps / Security Governance / Observability / Multi-Cloud Data Integration / FinOps Automation**을 하나의 Enterprise Platform 관점에서 연결하여 업무를 수행했습니다.
 
 #### 담당 역할 — Azure Part PL / Azure SME
 
-- Data Highway 프로젝트 Azure 파트 담당 및 Azure 영역 기술 검토·업무 조율
+- Enterprise AI/Data Platform 프로젝트 Azure 파트 담당 및 Azure 영역 기술 검토·업무 조율
 - Azure AI / AKS / Microsoft Fabric 등 Azure 서비스 Architecture 및 운영방안 검토
 - 신규 Azure 서비스 도입 시 Network, Identity, RBAC, Private Connectivity, Security, 운영방안 검토
 - 개발팀의 Azure 기술지원 및 구축·운영 과정에서 발생하는 복합 장애 분석
@@ -181,7 +181,7 @@ Microsoft Fabric 기술지원을 목적으로 프로젝트에 투입되었으며
 - Microsoft와 Fabric/Azure 제품 이슈, 기능 제약, 권한·라이선스 및 신규 기능 관련 기술 협업
 - 반복되는 기술 문의를 가이드, 샘플 코드, Runbook 및 자동화 방식으로 전환
 
-#### Data Highway 프로젝트 [Main] — Microsoft Fabric / Azure AI / Platform Engineering
+#### Enterprise AI/Data Platform 프로젝트 [Main] — Microsoft Fabric / Azure AI / Platform Engineering
 
 **역할:** Azure Part PL / Microsoft Fabric 담당
 
@@ -290,11 +290,11 @@ Microsoft Fabric을 중심으로 Azure AI/Data Platform 구축 및 운영을 지
 - PRD Kusto Query의 SyntaxError 및 빈 LabelValue 원인 추적
 - Azure Monitor / Log Analytics / Datadog / Grafana를 활용하여 Platform과 Application 운영 가시성 지원
 
-#### NEO 프로젝트 — 신규 AKS Service Platform 구축
+#### AI Application Platform 프로젝트 — 신규 AKS Service Platform 구축
 
 **역할:** AKS / Azure 담당
 
-NEO 프로젝트의 Application / Batch / CronJob을 포함한 **총 7개 신규 서비스**를 기존 AKS 환경에 구성하고, CI/CD와 Azure Resource 및 Microsoft Fabric 연계를 담당했습니다.
+AI Application Platform 프로젝트의 Application / Batch / CronJob을 포함한 **총 7개 신규 서비스**를 기존 AKS 환경에 구성하고, CI/CD와 Azure Resource 및 Microsoft Fabric 연계를 담당했습니다.
 
 ##### AKS / Kubernetes Resource 구성
 
@@ -352,7 +352,7 @@ NEO 프로젝트의 Application / Batch / CronJob을 포함한 **총 7개 신규
 
 #### 주요 성과
 
-- Microsoft Fabric 단일 기술지원으로 투입된 이후 **Data Highway Azure Part PL / Azure SME**로 역할 확대
+- Microsoft Fabric 단일 기술지원으로 투입된 이후 **Enterprise AI/Data Platform Azure Part PL / Azure SME**로 역할 확대
 - GitLab CI/CD + Fabric REST API + Service Principal 기반 **Microsoft Fabric CI/CD 구축**
 - Event Hub + AKS CronJob 기반 **Fabric Capacity Dynamic Autoscale 개발 및 PRD 운영 적용**
 - Schedule + Utilization Hybrid 제어를 통해 고객사의 **FinOps 기반 Capacity 자동 Scale Up/Down 운영체계** 구축
@@ -362,7 +362,7 @@ NEO 프로젝트의 Application / Batch / CronJob을 포함한 **총 7개 신규
 - Fabric 운영 로그의 **Datadog 연계** 및 Grafana/Log Analytics 기반 AKS 모니터링 지원
 - Snowflake / AWS S3 / Azure Storage / OPDG 등 **Multi-Cloud·Hybrid Data Source 연계**
 - APIM 기반 **10개 Azure Subscription의 Microsoft Foundry 연결 및 Private 통신 지원**
-- NEO 프로젝트의 Application / Batch / CronJob **총 7개 신규 AKS 서비스 구축**
+- AI Application Platform 프로젝트의 Application / Batch / CronJob **총 7개 신규 AKS 서비스 구축**
 - GitLab CI/CD + Docker + Helm + ArgoCD 기반 AKS GitOps 배포환경 구성 및 운영
 - Workload Identity + Azure RBAC 기반 AKS ↔ Azure Resource 인증·권한 연계
 - Fabric 429, DNS, Private Network, ArgoCD, Image Pull, Immutable Selector, Pod Scheduling 등 **Cloud/Data/Kubernetes/Network/Identity가 결합된 복합 장애 분석 및 대응**

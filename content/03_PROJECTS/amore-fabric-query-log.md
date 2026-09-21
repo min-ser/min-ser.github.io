@@ -1,7 +1,7 @@
 ---
 id: amore-fabric-query-log
 type: project
-title: AMOREPACIFIC Fabric Query Log / Execution History 수집
+title: Enterprise Customer Fabric Query Log / Execution History 수집
 careerId: megazone
 startDate: "2026-03-01"
 endDate: null
@@ -9,7 +9,7 @@ status: operating
 roles: ["Microsoft Fabric Engineer", "Security Technical Support"]
 skills: ["Microsoft Fabric", "Query Log", "Stored Procedure", "KST", "UTC", "Security Audit"]
 ---
-# AMOREPACIFIC Fabric Query Log / Execution History 수집
+# Enterprise Customer Fabric Query Log / Execution History 수집
 
 ## Query / Execution History Flow
 

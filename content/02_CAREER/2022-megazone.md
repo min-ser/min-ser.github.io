@@ -8,7 +8,7 @@ startDate: "2022-07-01"
 endDate: null
 status: ongoing
 featured: true
-client: AMOREPACIFIC
+client: Enterprise Customer
 clientStartDate: "2025-07-01"
 roles:
   - Azure AI Platform Engineer
@@ -42,7 +42,7 @@ skills:
 
 Azure 기반 **Cloud / AI / Data Platform의 설계·구축·운영 및 기술지원**을 수행하고 있습니다. 초기에는 Application/Cloud 기술지원과 Azure 개발 가이드를 중심으로 업무를 수행했으며, 이후 Azure AI, AKS/Kubernetes, Microsoft Fabric, Private Network, Security Governance, CI/CD 및 운영 자동화 영역으로 담당 범위를 확장했습니다.
 
-현재 아모레퍼시픽 Data Highway 프로젝트에서는 **Azure AI Platform Engineer / Azure Part PL / Azure SME** 역할로 Azure AI, AKS, Microsoft Fabric 영역의 기술 검토와 구축·운영을 담당합니다. 개발팀뿐 아니라 고객사 인프라·네트워크·보안 조직 및 Microsoft와 협업하며 서비스 도입 검토부터 Private Connectivity, Identity/RBAC, CI/CD, Monitoring, Troubleshooting까지 플랫폼 전반을 지원합니다.
+현재 엔터프라이즈 고객 Enterprise AI/Data Platform 프로젝트에서는 **Azure AI Platform Engineer / Azure Part PL / Azure SME** 역할로 Azure AI, AKS, Microsoft Fabric 영역의 기술 검토와 구축·운영을 담당합니다. 개발팀뿐 아니라 고객사 인프라·네트워크·보안 조직 및 Microsoft와 협업하며 서비스 도입 검토부터 Private Connectivity, Identity/RBAC, CI/CD, Monitoring, Troubleshooting까지 플랫폼 전반을 지원합니다.
 
 
 ## Career Visual Overview
@@ -58,14 +58,14 @@ flowchart LR
  E --> F[2026<br/>Azure Part PL / Platform Engineering]
 ```
 
-### AMOREPACIFIC Platform Engineering Map
+### Enterprise Customer Platform Engineering Map
 
 ```mermaid
 flowchart TB
- PL[Data Highway<br/>Azure Part PL / Azure SME]
+ PL[Enterprise AI/Data Platform<br/>Azure Part PL / Azure SME]
  AI[Azure AI Platform<br/>Foundry · OpenAI · AI Search · APIM]
  FAB[Microsoft Fabric<br/>Capacity · Workspace · CI/CD · Audit]
- AKS[AKS / NEO<br/>Application · Batch · CronJob · GitOps]
+ AKS[AKS / AI Application Platform<br/>Application · Batch · CronJob · GitOps]
  NET[Platform Foundation<br/>Private Network · Identity · RBAC · Security]
  DATA[Data Integration<br/>Snowflake · AWS S3 · Azure Storage · OPDG]
  OPS[Operations<br/>Observability · Troubleshooting · FinOps]
@@ -80,7 +80,7 @@ flowchart TB
  DATA --> OPS
 ```
 
-### AMOREPACIFIC Engineering Workstreams
+### Enterprise Customer Engineering Workstreams
 
 | Workstream | 구현/운영 범위 | 대표 결과 |
 | --- | --- | --- |
@@ -91,7 +91,7 @@ flowchart TB
 | Audit & Governance | Activity Events API, Query Log, RBAC | 일일 Audit 수집 및 보안 요구 대응 |
 | Multi-Cloud Data | Snowflake, AWS S3, Storage, OPDG | Cloud/Hybrid Data Source 연결 |
 | AI Platform | Foundry, OpenAI, AI Search, APIM | 10개 Subscription AI Backend 연계 |
-| AKS / NEO | GitLab, ACR, Helm, ArgoCD, Workload Identity | 신규 7개 서비스 구축 |
+| AKS / AI Application Platform | GitLab, ACR, Helm, ArgoCD, Workload Identity | 신규 7개 서비스 구축 |
 | Observability | Grafana, Datadog, Log Analytics | Platform/Application 운영 가시성 |
 
 ## Core Responsibilities
@@ -129,7 +129,7 @@ flowchart TB
 
 ### Technical Leadership / Customer Support
 
-- Data Highway 프로젝트 Azure Part PL로 Azure 영역 기술 검토 및 업무 조율
+- Enterprise AI/Data Platform 프로젝트 Azure Part PL로 Azure 영역 기술 검토 및 업무 조율
 - 고객 요구사항을 Azure Architecture 및 운영 구성으로 구체화
 - 개발팀의 Azure 기술지원 및 신규 서비스 구축·운영 과정의 기술 의사결정 지원
 - 고객사 인프라·네트워크·보안 담당자와 Private Network 및 Security 요구사항 협의
@@ -142,27 +142,27 @@ flowchart TB
 ```mermaid
 timeline
  title MEGAZONE CLOUD Project Timeline
- 2023 : Azure SpaceONE API : 밀버스 Azure Infra : KB헬스케어 B2B/B2C : TKG태광 DevOps
- 2024 : 포스코이앤씨 Azure Functions : AIA생명 Cloud 전환 제안 : 가제트코리아 Migration : GenAI360 : 현대퓨처넷 AI Azure 전환 제안
- 2025 : 현대퓨처넷 제안/HOL : 삼성증권 AI Platform : AMOREPACIFIC Data Highway / Fabric
- 2026 : AMOREPACIFIC Azure Part PL : Fabric Autoscale / Audit / Security : NEO AKS / GitOps
+ 2023 : Azure SpaceONE API : 커머스 서비스 고객 Azure Infra : 헬스케어 플랫폼 고객 B2B/B2C : 제조·SCM 고객 DevOps
+ 2024 : 건설·엔지니어링 고객 Azure Functions : 보험사 고객 Cloud 전환 제안 : 커머스 플랫폼 고객 Migration : Enterprise GenAI Platform : 미디어·IT 고객 AI Azure 전환 제안
+ 2025 : 미디어·IT 고객 제안/HOL : 금융권 고객 AI Platform : Enterprise Customer Enterprise AI/Data Platform / Fabric
+ 2026 : Enterprise Customer Azure Part PL : Fabric Autoscale / Audit / Security : AI Application Platform AKS / GitOps
 ```
 
 ## Major Engagements
 
-### 1. AMOREPACIFIC — Azure AI / Data Platform 구축 및 운영 고도화
+### 1. Enterprise Customer — Azure AI / Data Platform 구축 및 운영 고도화
 
 **기간:** 2025.07 ~ 현재  
 **소속:** 메가존클라우드  
 **역할:** Azure AI Platform Engineer / Azure Part PL / Azure SME / Microsoft Fabric·AKS 담당
 
-Microsoft Fabric 기술지원을 목적으로 프로젝트에 투입되었으며, 프로젝트 진행 과정에서 Azure AI, AKS, Network, Identity, Security, CI/CD 및 운영 자동화 영역으로 담당 범위가 확대되었습니다. 현재는 **Data Highway 프로젝트 Azure Part PL**로 Azure 영역의 기술 검토와 운영방안 수립을 지원하고, Microsoft Fabric 플랫폼과 Data Highway/NEO의 AKS 서비스 구축·운영을 함께 담당하고 있습니다.
+Microsoft Fabric 기술지원을 목적으로 프로젝트에 투입되었으며, 프로젝트 진행 과정에서 Azure AI, AKS, Network, Identity, Security, CI/CD 및 운영 자동화 영역으로 담당 범위가 확대되었습니다. 현재는 **Enterprise AI/Data Platform 프로젝트 Azure Part PL**로 Azure 영역의 기술 검토와 운영방안 수립을 지원하고, Microsoft Fabric 플랫폼과 Enterprise AI/Data Platform/AI Application Platform의 AKS 서비스 구축·운영을 함께 담당하고 있습니다.
 
 단일 Azure Resource의 구축·운영에 국한되지 않고 **Azure AI / Microsoft Fabric / AKS / Private Network / Identity & RBAC / DevOps / Security Governance / Observability / Multi-Cloud Data Integration / FinOps Automation**을 하나의 Enterprise Platform 관점에서 연결하여 업무를 수행했습니다.
 
 #### 담당 역할 — Azure Part PL / Azure SME
 
-- Data Highway 프로젝트 Azure 파트 담당 및 Azure 영역 기술 검토·업무 조율
+- Enterprise AI/Data Platform 프로젝트 Azure 파트 담당 및 Azure 영역 기술 검토·업무 조율
 - Azure AI / AKS / Microsoft Fabric 등 Azure 서비스 Architecture 및 운영방안 검토
 - 신규 Azure 서비스 도입 시 Network, Identity, RBAC, Private Connectivity, Security, 운영방안 검토
 - 개발팀의 Azure 기술지원 및 구축·운영 과정에서 발생하는 복합 장애 분석
@@ -170,7 +170,7 @@ Microsoft Fabric 기술지원을 목적으로 프로젝트에 투입되었으며
 - Microsoft와 Fabric/Azure 제품 이슈, 기능 제약, 권한·라이선스 및 신규 기능 관련 기술 협업
 - 반복되는 기술 문의를 가이드, 샘플 코드, Runbook 및 자동화 방식으로 전환
 
-#### Data Highway 프로젝트 [Main] — Microsoft Fabric / Azure AI / Platform Engineering
+#### Enterprise AI/Data Platform 프로젝트 [Main] — Microsoft Fabric / Azure AI / Platform Engineering
 
 **역할:** Azure Part PL / Microsoft Fabric 담당
 
@@ -279,11 +279,11 @@ Microsoft Fabric을 중심으로 Azure AI/Data Platform 구축 및 운영을 지
 - PRD Kusto Query의 SyntaxError 및 빈 LabelValue 원인 추적
 - Azure Monitor / Log Analytics / Datadog / Grafana를 활용하여 Platform과 Application 운영 가시성 지원
 
-#### NEO 프로젝트 — 신규 AKS Service Platform 구축
+#### AI Application Platform 프로젝트 — 신규 AKS Service Platform 구축
 
 **역할:** AKS / Azure 담당
 
-NEO 프로젝트의 Application / Batch / CronJob을 포함한 **총 7개 신규 서비스**를 기존 AKS 환경에 구성하고, CI/CD와 Azure Resource 및 Microsoft Fabric 연계를 담당했습니다.
+AI Application Platform 프로젝트의 Application / Batch / CronJob을 포함한 **총 7개 신규 서비스**를 기존 AKS 환경에 구성하고, CI/CD와 Azure Resource 및 Microsoft Fabric 연계를 담당했습니다.
 
 ##### AKS / Kubernetes Resource 구성
 
@@ -341,7 +341,7 @@ NEO 프로젝트의 Application / Batch / CronJob을 포함한 **총 7개 신규
 
 #### 주요 성과
 
-- Microsoft Fabric 단일 기술지원으로 투입된 이후 **Data Highway Azure Part PL / Azure SME**로 역할 확대
+- Microsoft Fabric 단일 기술지원으로 투입된 이후 **Enterprise AI/Data Platform Azure Part PL / Azure SME**로 역할 확대
 - GitLab CI/CD + Fabric REST API + Service Principal 기반 **Microsoft Fabric CI/CD 구축**
 - Event Hub + AKS CronJob 기반 **Fabric Capacity Dynamic Autoscale 개발 및 PRD 운영 적용**
 - Schedule + Utilization Hybrid 제어를 통해 고객사의 **FinOps 기반 Capacity 자동 Scale Up/Down 운영체계** 구축
@@ -351,7 +351,7 @@ NEO 프로젝트의 Application / Batch / CronJob을 포함한 **총 7개 신규
 - Fabric 운영 로그의 **Datadog 연계** 및 Grafana/Log Analytics 기반 AKS 모니터링 지원
 - Snowflake / AWS S3 / Azure Storage / OPDG 등 **Multi-Cloud·Hybrid Data Source 연계**
 - APIM 기반 **10개 Azure Subscription의 Microsoft Foundry 연결 및 Private 통신 지원**
-- NEO 프로젝트의 Application / Batch / CronJob **총 7개 신규 AKS 서비스 구축**
+- AI Application Platform 프로젝트의 Application / Batch / CronJob **총 7개 신규 AKS 서비스 구축**
 - GitLab CI/CD + Docker + Helm + ArgoCD 기반 AKS GitOps 배포환경 구성 및 운영
 - Workload Identity + Azure RBAC 기반 AKS ↔ Azure Resource 인증·권한 연계
 - Fabric 429, DNS, Private Network, ArgoCD, Image Pull, Immutable Selector, Pod Scheduling 등 **Cloud/Data/Kubernetes/Network/Identity가 결합된 복합 장애 분석 및 대응**
@@ -373,7 +373,7 @@ Snowflake, AWS S3, Azure Storage, OPDG, Fabric Pipeline, Copy Activity, Grafana,
 **Development / Automation**  
 Python, FastAPI, REST API, Fabric Notebook, Stored Procedure, Kusto Query
 
-### 2. 삼성증권 — 해외 투자정보 번역/요약 서비스 구축
+### 2. 금융권 고객 — 해외 투자정보 번역/요약 서비스 구축
 
 **기간:** 2025.03 ~ 2025.07  
 **구분:** Delivery / Enterprise AI Platform  
@@ -381,40 +381,40 @@ Python, FastAPI, REST API, Fabric Notebook, Stored Procedure, Kusto Query
 
 제안·기술협상 단계부터 참여한 뒤 2025-03-04 정식 착수하여 실제 구축까지 수행했습니다. Azure OpenAI, APIM Premium/VNet Internal, Private Endpoint, Firewall/Squid Proxy, Managed Identity, Content Safety/PII, Monitoring 및 CI/CD 구조를 금융권 보안요건에 맞게 검토·구성했습니다. 초기 Azure DevOps 검토 후 고객 환경 제약을 반영해 Jenkins 기반 CI/CD로 조정했으며, PTU 운영방안, Active/Standby·Active/Active 가용성, Zone/DR, 전용선 및 Tenant 일정 Risk까지 함께 검토했습니다.
 
-### 3. 현대퓨처넷 — AI 서비스 Azure 전환 제안 기술지원
+### 3. 미디어·IT 고객 — AI 서비스 Azure 전환 제안 기술지원
 
 **기간:** 2024.12 ~ 2025.02  
 **구분:** Pre-Sales / Proposal / Technical Documentation  
 
-현대퓨처넷 AI 서비스 Azure 전환 제안 준비 과정에서 Azure OpenAI, Azure AI Search, APIM, Azure Functions, Azure DevOps를 연결하는 **AOAI CI/CD 구축 HOL을 직접 작성**했습니다. Self-hosted Agent/Agent Pool/Pipeline과 Application Test 절차까지 문서화했으나 실제 고객 구축 단계까지 수행한 프로젝트는 아니므로 Delivery 경력과 명확히 구분합니다. Terraform은 문서상 준비도구로 확인되지만 실제 Production IaC 수행으로 기록하지 않습니다.
+미디어·IT 고객 AI 서비스 Azure 전환 제안 준비 과정에서 Azure OpenAI, Azure AI Search, APIM, Azure Functions, Azure DevOps를 연결하는 **AOAI CI/CD 구축 HOL을 직접 작성**했습니다. Self-hosted Agent/Agent Pool/Pipeline과 Application Test 절차까지 문서화했으나 실제 고객 구축 단계까지 수행한 프로젝트는 아니므로 Delivery 경력과 명확히 구분합니다. Terraform은 문서상 준비도구로 확인되지만 실제 Production IaC 수행으로 기록하지 않습니다.
 
-### 4. GenAI360 — AWS 기반 생성형 AI 플랫폼의 Azure 전환 기술지원
+### 4. Enterprise GenAI Platform — AWS 기반 생성형 AI 플랫폼의 Azure 전환 기술지원
 
 **기간:** 2024.08 ~ 2024.12  
 **구분:** Technical Support / Application Architecture / GenAI RAG
 
-AWS 기반 GenAI360을 Azure에서도 제공하기 위한 Application Architecture와 Porting을 지원했습니다. `unstructured.io` 기반 Document Loader/Chunking, LangChain Retriever, AzureAISearchRetriever, Vector·Lexical·Semantic·Hybrid Search를 검토·구현하고 Azure OpenAI/Azure AI Search 기반 RAG 구조를 구체화했습니다. Infra 담당자와 Azure To-Be Architecture를 공동 설계하고 Azure DevOps CI/CD 및 Private Endpoint/VPN 연계 구조도 함께 검토했습니다.
+AWS 기반 Enterprise GenAI Platform을 Azure에서도 제공하기 위한 Application Architecture와 Porting을 지원했습니다. `unstructured.io` 기반 Document Loader/Chunking, LangChain Retriever, AzureAISearchRetriever, Vector·Lexical·Semantic·Hybrid Search를 검토·구현하고 Azure OpenAI/Azure AI Search 기반 RAG 구조를 구체화했습니다. Infra 담당자와 Azure To-Be Architecture를 공동 설계하고 Azure DevOps CI/CD 및 Private Endpoint/VPN 연계 구조도 함께 검토했습니다.
 
-### 5. 가제트코리아 — Azure Sponsorship → CSP Subscription Migration
+### 5. 커머스 플랫폼 고객 — Azure Sponsorship → CSP Subscription Migration
 
 **기간:** 2024.07 ~ 2024.08  
 **구분:** Delivery / Azure Migration
 
 Sponsorship 만료 대응을 위해 Azure Resource Inventory와 Dependency를 분석하고 Subscription Migration을 수행했습니다. 196개 Resource를 검토해 Direct Move와 Redeployment 대상을 분리했으며, Resource Group 재구성, Move Validation, App Service/Functions 종속성 검토, Migration 영향도 Test, 서비스 정상화 및 후속 Architecture Optimization까지 수행했습니다.
 
-### 6. AIA생명 — 클라우드 전환 2차 사업 제안 기술지원
+### 6. 보험사 고객 — 클라우드 전환 2차 사업 제안 기술지원
 
 **기간:** 2024.07 ~ 2024.08  
 **구분:** Pre-Sales / RFP / Proposal  
-**협업:** 삼성SDS
+**협업:** SI 파트너사
 
-삼성SDS와 공동으로 AIA생명 Cloud 전환 2차 사업 제안에 참여했습니다. 11개 Application의 Azure To-Be Architecture와 AKS/App Service 전환방안, Network/DR/Data 영역을 검토하고 제안서/발표자료 작성 및 Jenkins Build Agent 사전검증을 수행했습니다. 실제 구축 단계에는 참여하지 않았으므로 Pre-Sales 경력으로 구분합니다.
+SI 파트너사와 공동으로 보험사 고객 Cloud 전환 2차 사업 제안에 참여했습니다. 11개 Application의 Azure To-Be Architecture와 AKS/App Service 전환방안, Network/DR/Data 영역을 검토하고 제안서/발표자료 작성 및 Jenkins Build Agent 사전검증을 수행했습니다. 실제 구축 단계에는 참여하지 않았으므로 Pre-Sales 경력으로 구분합니다.
 
-### 7. 포스코이앤씨 — Azure Functions 기술 가이드
+### 7. 건설·엔지니어링 고객 — Azure Functions 기술 가이드
 
 Azure Functions의 HTTP/Timer/Blob Trigger와 Managed Identity 등을 대상으로 Hands-on 및 개발 가이드를 지원했습니다.
 
-### 8. 포스코이앤씨 — Azure Functions 개발·배포 기술가이드
+### 8. 건설·엔지니어링 고객 — Azure Functions 개발·배포 기술가이드
 
 **기간:** 2024.04 ~ 2024.05  
 **역할:** Azure Functions 개발 / 기술가이드
@@ -423,7 +423,7 @@ Azure Functions의 HTTP/Timer/Blob Trigger와 Managed Identity 등을 대상으�
 - Managed Identity 기반 Azure Resource 인증 연동
 - Hands-On Lab 및 고객 개발팀 실습 지원
 
-### 9. KB헬스케어 — B2B/B2C 통합 플랫폼 구축 기술지원
+### 9. 헬스케어 플랫폼 고객 — B2B/B2C 통합 플랫폼 구축 기술지원
 
 **기간:** 2023.08 ~ 2024.01  
 **역할:** Backend Engineer / Cloud·Kubernetes Technical Support
@@ -444,22 +444,22 @@ Azure Functions의 HTTP/Timer/Blob Trigger와 Managed Identity 등을 대상으�
 
 **핵심 경험:** `Application → Kubernetes → Network/Proxy → Database HA`를 하나의 End-to-End 경로로 직접 재현·검증하면서 Backend 경험을 Cloud Platform Troubleshooting 역량으로 확장했습니다.
 
-### 10. 밀버스 — Azure 인프라 구축·운영 및 서비스 안정화
+### 10. 커머스 서비스 고객 — Azure 인프라 구축·운영 및 서비스 안정화
 
 **기간:** 2023.04 ~ 2024.01  
 **역할:** Azure Solution Architect / Cloud Infrastructure Technical Support
 
-Firstmall 및 연계 서비스의 Azure IaaS 환경을 초기 설계부터 구축하고 이후 장기간 운영을 지원했습니다. 초기 요구사항에는 Firstmall WEB/WAS, MyCRM, Tableau, DBMart(MariaDB), Redis, Tracking Server 등 **총 7대 수준의 Server Resource**가 포함됐으며, 구축 후 SSL/Domain, VM Clone, Database Connectivity, Proxy/IP 전달 등 실제 서비스 운영 이슈까지 대응했습니다.
+Commerce Web 및 연계 서비스의 Azure IaaS 환경을 초기 설계부터 구축하고 이후 장기간 운영을 지원했습니다. 초기 요구사항에는 Commerce Web WEB/WAS, CRM Service, Tableau, DBMart(MariaDB), Redis, Tracking Server 등 **총 7대 수준의 Server Resource**가 포함됐으며, 구축 후 SSL/Domain, VM Clone, Database Connectivity, Proxy/IP 전달 등 실제 서비스 운영 이슈까지 대응했습니다.
 
-- Azure VM 기반 Firstmall WEB/WAS 및 연계 서비스 Infrastructure 설계·배포
+- Azure VM 기반 Commerce Web WEB/WAS 및 연계 서비스 Infrastructure 설계·배포
 - WAF / Firewall / 고정 IP 등 Network Security 요구사항 검토 및 적용 지원
 - Azure Architecture Diagram 및 Resource 구성/견적 검토자료 작성
 - Linux Apache / PHP / MySQL Runtime 및 사용자·Directory Permission 운영 지원
 - Azure Backup / OS Disk Snapshot 기반 VM 복제 및 복구성 검증
-- Firstmall VM Snapshot → Managed Disk → Clone VM 생성/OS Disk 교체 작업
+- Commerce Web VM Snapshot → Managed Disk → Clone VM 생성/OS Disk 교체 작업
 - PC/Mobile Domain SSL Certificate 등록 및 HTTPS 서비스 운영 지원
 - Mobile 서비스의 Proxy IP 기록 문제에 대해 `X-Forwarded-For` 기반 Client IP 전달구조 분석
-- Firstmall VM 간 MySQL Connectivity Test 및 Application DB 연결 확인
+- Commerce Web VM 간 MySQL Connectivity Test 및 Application DB 연결 확인
 - 구축 결과보고서, Linux 운영가이드 및 고객 기술 질의 대응
 
 **핵심 경험:** Azure IaaS를 `Compute → Network Security → Runtime → Database → SSL/Domain → Backup → Troubleshooting` 관점으로 운영하며 실제 고객 서비스 Lifecycle을 경험했습니다.
@@ -472,7 +472,7 @@ Firstmall 및 연계 서비스의 Azure IaaS 환경을 초기 설계부터 구�
 - Azure Cost Management API 개발
 - Azure Partner Center API 연동 개발
 
-### 12. TKG태광 — GSCM Apps & DevOps 서비스 구축
+### 12. 제조·SCM 고객 — GSCM Apps & DevOps 서비스 구축
 
 **기간:** 2023.08  
 **역할:** DevOps 기술지원
@@ -514,7 +514,7 @@ Python, FastAPI, Java, Spring Boot, REST API, LangChain
 - **2023 — Azure Infra / API / DevOps:** Azure Cost/Partner API, IaaS, GitHub Actions, Backend/Infra 기술지원
 - **2024 — Application Architecture / Kubernetes / GenAI:** Azure Functions, Jenkins/AKS, Subscription Migration, FastAPI/LangChain/RAG
 - **2025 — Enterprise AI Platform:** Azure OpenAI + APIM + Private Endpoint + Managed Identity, Microsoft Fabric 기술지원
-- **2026 — Azure Part PL / Platform Engineering:** Fabric CI/CD·Private Connectivity·Autoscale·Audit, NEO AKS/GitOps, Security Governance 및 복합 장애 대응
+- **2026 — Azure Part PL / Platform Engineering:** Fabric CI/CD·Private Connectivity·Autoscale·Audit, AI Application Platform AKS/GitOps, Security Governance 및 복합 장애 대응
 
 `Azure API / Infra` → `Backend & Kubernetes Support` → `Application Architecture / DevOps` → `GenAI Platform` → `Microsoft Fabric / AKS` → `Azure Part PL / Platform Engineering`
 
@@ -522,8 +522,8 @@ Python, FastAPI, Java, Spring Boot, REST API, LangChain
 
 별도 상위 디렉토리를 만들지 않고 기존 웹 이력서 IA 안에서 상세 기록을 연결합니다.
 
-- `03_PROJECTS/2025-amore-azure-ai-data-platform.md` — 아모레 Azure AI / Data / AKS Platform Engineering 종합 기록
+- `03_PROJECTS/2025-amore-azure-ai-data-platform.md` — 엔터프라이즈 고객 Azure AI / Data / AKS Platform Engineering 종합 기록
 - `03_PROJECTS/fabric-dynamic-autoscale.md` — Schedule + Utilization 기반 Fabric Capacity Dynamic Autoscale
 - `03_PROJECTS/fabric-security-governance.md` — Fabric Audit/Query Log 및 Security Governance
-- `03_PROJECTS/amore-neo-aks-platform.md` — NEO 신규 AKS 서비스와 GitOps 운영
+- `03_PROJECTS/amore-neo-aks-platform.md` — AI Application Platform 신규 AKS 서비스와 GitOps 운영
 - `07_ARCHIVE/2026-amore-troubleshooting-archive.md` — 실제 장애 분석/조치 이력

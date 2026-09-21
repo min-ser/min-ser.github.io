@@ -2,7 +2,7 @@
 id: fabric-security-governance
 type: project
 title: Microsoft Fabric Security Governance & Audit Logging
-careerId: cloud-platform-engineering
+careerId: megazone
 startDate: "2026-03-01"
 endDate: null
 status: operating

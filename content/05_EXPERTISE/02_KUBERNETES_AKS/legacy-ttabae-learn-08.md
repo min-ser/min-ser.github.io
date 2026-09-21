@@ -63,11 +63,11 @@ Connect-AzAccount
 ```
 PS D:\GIT> Connect-AzAccount
 경고: Unable to acquire token for tenant '4aed9820-113d-4f48-9f53-4d91f37ad279' with error 'SharedTokenCacheCredential authentication unavailable. Token acquisition 
-failed for user minseo_kim89@cloud-platform-engineering.com. Ensure that you have authenticated with a developer tool that supports Azure single sign on.'
+failed for user minseo_kim89@megazone.com. Ensure that you have authenticated with a developer tool that supports Azure single sign on.'
 
 Account                   SubscriptionName TenantId                             Environment
 -------                   ---------------- --------                             -----------
-minseo_kim89@cloud-platform-engineering.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx AzureCloud
+minseo_kim89@megazone.com kms-limited      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx AzureCloud
 ```
 3. [AzurePotal] Azure Potal에 접속
     

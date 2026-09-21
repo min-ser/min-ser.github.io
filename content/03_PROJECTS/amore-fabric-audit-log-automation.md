@@ -1,7 +1,7 @@
 ---
 id: amore-fabric-audit-log-automation
 type: project
-title: AMOREPACIFIC Fabric Audit Log 수집 자동화
+title: Enterprise Customer Fabric Audit Log 수집 자동화
 careerId: megazone
 startDate: "2026-09-01"
 endDate: null
@@ -10,7 +10,7 @@ featured: true
 roles: ["Microsoft Fabric Engineer", "Azure Part PL"]
 skills: ["Fabric Admin Activity API", "Notebook", "Pipeline", "Azure Storage", "CSV", "Service Principal", "Python"]
 ---
-# AMOREPACIFIC Fabric Audit Log 수집 자동화
+# Enterprise Customer Fabric Audit Log 수집 자동화
 
 ## Collection Pipeline
 

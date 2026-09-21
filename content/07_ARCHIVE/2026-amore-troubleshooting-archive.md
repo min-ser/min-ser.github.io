@@ -1,12 +1,12 @@
 ---
 id: 2026-amore-troubleshooting-archive
 type: technical-record
-title: AMOREPACIFIC Platform Troubleshooting Archive
+title: Enterprise Customer Platform Troubleshooting Archive
 careerId: megazone
 status: living-document
 ---
 
-# AMOREPACIFIC Platform Troubleshooting Archive
+# Enterprise Customer Platform Troubleshooting Archive
 
 ## Troubleshooting Pattern
 
@@ -22,7 +22,7 @@ flowchart LR
 
 
 ## 01. Purpose
-아모레퍼시픽 Data Highway / NEO 환경에서 실제로 다룬 **Microsoft Fabric / AKS / GitLab CI/CD / ArgoCD / Network / Identity / Monitoring** 이슈를 결과만 나열하지 않고 `Symptom → Analysis → Cause → Action → Validation` 순서로 기록합니다. Career/Project 본문에는 대표 성과를 남기고, 이 문서는 실제 운영 과정에서 어떤 방식으로 문제 범위를 좁혔는지를 보존하는 원천 기록입니다.
+엔터프라이즈 고객 Enterprise AI/Data Platform / AI Application Platform 환경에서 실제로 다룬 **Microsoft Fabric / AKS / GitLab CI/CD / ArgoCD / Network / Identity / Monitoring** 이슈를 결과만 나열하지 않고 `Symptom → Analysis → Cause → Action → Validation` 순서로 기록합니다. Career/Project 본문에는 대표 성과를 남기고, 이 문서는 실제 운영 과정에서 어떤 방식으로 문제 범위를 좁혔는지를 보존하는 원천 기록입니다.
 
 ---
 
@@ -241,7 +241,7 @@ Values의 `status` 값이 STG에서 기대값과 다르게 설정된 부분을 `
 
 ## 18. CronJob / ServiceAccount / HPA Resource 검토
 
-NEO 신규 서비스 구축 과정에서 Application과 ServiceAccount가 ArgoCD에 함께 표시되는 경우를 분석하고 `.Values.serviceAccount.create` 조건과 Template 생성 여부를 확인했습니다. HPA가 활성화된 Deployment에서 `replicas`를 직접 선언하지 않는 Helm 조건문, `minReplicas/maxReplicas`, CronJob `suspend`, `concurrencyPolicy`, `backoffLimit`, `activeDeadlineSeconds` 등 Resource별 운영 설정도 함께 검토했습니다.
+AI Application Platform 신규 서비스 구축 과정에서 Application과 ServiceAccount가 ArgoCD에 함께 표시되는 경우를 분석하고 `.Values.serviceAccount.create` 조건과 Template 생성 여부를 확인했습니다. HPA가 활성화된 Deployment에서 `replicas`를 직접 선언하지 않는 Helm 조건문, `minReplicas/maxReplicas`, CronJob `suspend`, `concurrencyPolicy`, `backoffLimit`, `activeDeadlineSeconds` 등 Resource별 운영 설정도 함께 검토했습니다.
 
 ---
 

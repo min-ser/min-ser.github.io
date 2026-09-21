@@ -1,7 +1,7 @@
 ---
 id: amore-foundry-apim-private-platform
 type: project
-title: AMOREPACIFIC Microsoft Foundry / APIM Private Platform 지원
+title: Enterprise Customer Microsoft Foundry / APIM Private Platform 지원
 careerId: megazone
 startDate: "2025-07-01"
 endDate: null
@@ -9,7 +9,7 @@ status: operating
 roles: ["Azure Part PL", "Azure AI Platform Engineer"]
 skills: ["Microsoft Foundry", "Azure OpenAI", "Azure AI Search", "API Management", "Private Endpoint", "Private DNS", "Workload Identity", "RBAC"]
 ---
-# AMOREPACIFIC Microsoft Foundry / APIM Private Platform 지원
+# Enterprise Customer Microsoft Foundry / APIM Private Platform 지원
 
 ## AI Platform Connectivity
 
@@ -28,7 +28,7 @@ flowchart LR
 
 
 ## 01. Overview
-Data Highway 및 AI 서비스 개발팀이 Microsoft Foundry/Azure AI 서비스를 Enterprise Private 환경에서 사용할 수 있도록 **APIM, Private Endpoint, Private DNS, Identity/RBAC** 관점의 기술지원을 수행했습니다.
+Enterprise AI/Data Platform 및 AI 서비스 개발팀이 Microsoft Foundry/Azure AI 서비스를 Enterprise Private 환경에서 사용할 수 있도록 **APIM, Private Endpoint, Private DNS, Identity/RBAC** 관점의 기술지원을 수행했습니다.
 
 ## 02. Platform Support
 - Microsoft Foundry Project/Resource 생성 및 접근 구성 지원
@@ -68,7 +68,7 @@ flowchart TB
 
 ## 07. Multi-Subscription Support
 
-Data Highway에서 다수 Subscription에 분산된 AI Resource를 공통 플랫폼에서 사용할 수 있도록 **10개 Azure Subscription의 Microsoft Foundry 연결 요구사항**을 지원했습니다. Subscription별 Resource/권한/Private Endpoint 조건이 달라질 수 있으므로 공통 연결 패턴과 환경별 차이를 분리하여 검토했습니다.
+Enterprise AI/Data Platform에서 다수 Subscription에 분산된 AI Resource를 공통 플랫폼에서 사용할 수 있도록 **10개 Azure Subscription의 Microsoft Foundry 연결 요구사항**을 지원했습니다. Subscription별 Resource/권한/Private Endpoint 조건이 달라질 수 있으므로 공통 연결 패턴과 환경별 차이를 분리하여 검토했습니다.
 
 ## 08. Representative Troubleshooting
 

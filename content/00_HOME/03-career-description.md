@@ -5,11 +5,11 @@ section: career-description
 index: 2
 order: 2
 title: Career Description
-note: 경력 분야와 수행 프로젝트를 빠르게 탐색하는 경력 인덱스입니다. 상세 내용은 Career와 Project에서 확인합니다.
+note: 회사와 수행 프로젝트를 빠르게 탐색하는 경력 인덱스입니다. 상세 내용은 Career와 Project에서 확인합니다.
 projectLimit: 99
 labels:
-  company: CAREER TRACK
-  client: PROJECT DOMAIN
+  company: COMPANY
+  client: CLIENT
   position: POSITION
   role: ROLE
   period: PERIOD

@@ -1,7 +1,7 @@
 ---
 id: gadget-korea-subscription-migration
 type: project
-title: "가제트코리아 Azure Sponsorship → CSP Subscription Migration"
+title: "커머스 플랫폼 고객 Azure Sponsorship → CSP Subscription Migration"
 startDate: "2024-07-30"
 endDate: "2024-08-23"
 status: completed
@@ -10,7 +10,7 @@ engagementType: "Delivery / Azure Migration"
 roles: ["Azure Solution Architect", "Primary SA"]
 skills: ["Azure", "Subscription Migration", "App Service", "Azure Functions", "Managed Identity", "Application Insights", "Log Analytics", "Service Bus", "VNet Integration", "NAT Gateway", "GitHub Actions", "SQL Server"]
 ---
-# 가제트코리아 Azure Sponsorship → CSP Subscription Migration
+# 커머스 플랫폼 고객 Azure Sponsorship → CSP Subscription Migration
 
 ## 01. Project Overview
 Azure Sponsorship 구독 만료에 대응하여 운영 중인 Azure Resource를 CSP 구독으로 이전하기 위해 **Resource Assessment, Dependency 분석, 사전 Migration Test, Resource Group 재구성, Subscription Move, 서비스 정상화 및 Architecture Optimization**을 수행했습니다.

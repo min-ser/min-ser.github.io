@@ -1,7 +1,7 @@
 ---
 id: amore-fabric-private-connectivity
 type: project
-title: AMOREPACIFIC Fabric Private Connectivity / MPEP 구축
+title: Enterprise Customer Fabric Private Connectivity / MPEP 구축
 careerId: megazone
 startDate: "2026-01-01"
 endDate: null
@@ -10,7 +10,7 @@ featured: true
 roles: ["Azure Part PL", "Microsoft Fabric Engineer"]
 skills: ["Microsoft Fabric", "Private Link", "Managed Private Endpoint", "Private Endpoint", "Private DNS", "Azure Storage", "Firewall"]
 ---
-# AMOREPACIFIC Fabric Private Connectivity / MPEP 구축
+# Enterprise Customer Fabric Private Connectivity / MPEP 구축
 
 ## Private Connectivity Map
 

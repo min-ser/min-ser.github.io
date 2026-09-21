@@ -1,7 +1,7 @@
 ---
 id: hyundai-futurenet-ai-azure-proposal
 type: project
-title: "현대퓨처넷 AI 서비스 Azure 전환 제안 기술지원"
+title: "미디어·IT 고객 AI 서비스 Azure 전환 제안 기술지원"
 startDate: "2024-12-01"
 endDate: "2025-02-28"
 status: completed
@@ -10,15 +10,15 @@ engagementType: "Pre-Sales / Proposal"
 roles: ["Azure Technical Support", "Technical Documentation"]
 skills: ["Azure OpenAI", "Azure AI Search", "Azure API Management", "Azure Functions", "Azure DevOps", "Self-hosted Agent", "Python"]
 ---
-# 현대퓨처넷 AI 서비스 Azure 전환 제안 기술지원
+# 미디어·IT 고객 AI 서비스 Azure 전환 제안 기술지원
 
 > **Engagement Type:** Pre-Sales / Proposal / Technical Documentation & Validation  
 > **Scope Boundary:** 실제 고객 환경 구축·운영을 수행한 Delivery 프로젝트가 아니라 제안 준비 단계에서 기술 검토와 HOL 작성까지 수행했습니다.
 
 ## 01. Project Overview
-현대퓨처넷 AI 서비스의 Azure 전환 제안 준비 과정에서 Azure AI/Application/DevOps 구성방안을 검토하고, 개발·배포 과정을 재현할 수 있도록 **Azure DevOps 기반 AOAI CI/CD 구축 HOL을 직접 작성**했습니다.
+미디어·IT 고객 AI 서비스의 Azure 전환 제안 준비 과정에서 Azure AI/Application/DevOps 구성방안을 검토하고, 개발·배포 과정을 재현할 수 있도록 **Azure DevOps 기반 AOAI CI/CD 구축 HOL을 직접 작성**했습니다.
 
-2025-01-13 초안 이후 Azure OpenAI 설정, APIM 설정, Application Test 환경, 작업환경/Version 정보 등을 단계적으로 보강했고 2025-02-03 문서명을 기존 `현대퓨처넷 인프라 구성 메뉴얼`에서 **`Azure DevOps 기반 AOAI CI/CD 구축 HOL`**로 정리했습니다.
+2025-01-13 초안 이후 Azure OpenAI 설정, APIM 설정, Application Test 환경, 작업환경/Version 정보 등을 단계적으로 보강했고 2025-02-03 문서명을 기존 `미디어·IT 고객 인프라 구성 메뉴얼`에서 **`Azure DevOps 기반 AOAI CI/CD 구축 HOL`**로 정리했습니다.
 
 ## 02. Proposed Technical Flow
 ```mermaid
@@ -78,7 +78,7 @@ flowchart LR
 - 2025-02-03: `Azure DevOps 기반 AOAI CI/CD 구축 HOL`로 문서 목적 명확화
 
 ## 08. Scope Clarification / Result
-제안 준비와 기술 문서 작성, 사전 검증까지 수행했으며 **실제 현대퓨처넷 고객 환경의 Azure 전환 구축을 수행한 것으로 기록하지 않습니다.** 결과보다 중요한 경력 포인트는 Azure AI + API + Serverless + DevOps를 하나의 재현 가능한 구축 절차로 설계하고 문서화한 경험입니다.
+제안 준비와 기술 문서 작성, 사전 검증까지 수행했으며 **실제 미디어·IT 고객 고객 환경의 Azure 전환 구축을 수행한 것으로 기록하지 않습니다.** 결과보다 중요한 경력 포인트는 Azure AI + API + Serverless + DevOps를 하나의 재현 가능한 구축 절차로 설계하고 문서화한 경험입니다.
 
 ## 09. Technology
 Azure OpenAI / Azure AI Search / Azure API Management / Azure Functions / Azure Storage / Azure DevOps / Self-hosted Agent / Python / Azure CLI / Git / VS Code

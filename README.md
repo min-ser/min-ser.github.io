@@ -1,10 +1,24 @@
-# Gitblog v0.2.29 — 05 GitHub CSS isolation hotfix
+# Gitblog v0.2.32
 
-- v0.2.28에서 GitHub Hero 스타일이 깨지는 문제 수정
-- GitHub Hero/Repository Graph 스타일을 globals.css append 방식에서 CSS Module로 분리
-- 시안 기준 3열(소개 / GitHub Information / Repository Graph) 유지
-- 3개 패널 높이 430px 통일
-- Information 8개 semantic SVG icon 포함
-- GitHub mark SVG, main/feature/merge graph, release rail 유지
-- 기존 Repository Explorer / README 기능 유지
-- 신규 dependency 없음
+Personal engineering archive and portfolio built with Next.js.
+
+## v0.2.32
+
+- 02 Career 하단 불필요 요약 통계 UI 제거 상태 재검증
+- 03 Projects 하단 불필요 슬로건/보조 라벨 제거 상태 재검증
+- CareerTimeline의 미사용 통계 계산 코드 제거
+- package.json / package-lock.json 버전을 0.2.32로 동기화
+- Header 버전 표시는 package.json 기준으로 v0.2.32 표시
+
+## Local
+
+```bash
+npm install
+npm run dev
+```
+
+## Validation
+
+```bash
+npm run build
+```

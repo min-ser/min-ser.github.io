@@ -1,7 +1,7 @@
 ---
 id: amore-observability-monitoring
 type: project
-title: AMOREPACIFIC Azure / AKS / Fabric Observability 운영
+title: Enterprise Customer Azure / AKS / Fabric Observability 운영
 careerId: megazone
 startDate: "2026-01-01"
 endDate: null
@@ -9,7 +9,7 @@ status: operating
 roles: ["Azure Part PL", "Platform Engineer"]
 skills: ["Grafana", "Datadog", "Log Analytics", "ContainerLogV2", "Azure Monitor", "Microsoft Fabric"]
 ---
-# AMOREPACIFIC Azure / AKS / Fabric Observability 운영
+# Enterprise Customer Azure / AKS / Fabric Observability 운영
 
 ## Observability Flow
 

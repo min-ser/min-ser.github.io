@@ -1,7 +1,7 @@
 ---
 id: posco-azure-functions-guide
 type: project
-title: "포스코이앤씨 Azure Functions 개발·배포 기술가이드"
+title: "건설·엔지니어링 고객 Azure Functions 개발·배포 기술가이드"
 startDate: "2024-04-01"
 endDate: "2024-05-31"
 status: completed
@@ -9,7 +9,7 @@ careerId: megazone
 roles: ["Azure Functions Developer", "Technical Guide"]
 skills: ["Azure Functions", "Java", "Python", "Managed Identity", "Azure"]
 ---
-# 포스코이앤씨 Azure Functions 개발·배포 기술가이드
+# 건설·엔지니어링 고객 Azure Functions 개발·배포 기술가이드
 
 ## Azure Functions Trigger Map
 

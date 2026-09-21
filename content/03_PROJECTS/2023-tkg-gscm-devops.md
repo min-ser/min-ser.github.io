@@ -1,7 +1,7 @@
 ---
 id: tkg-gscm-devops
 type: project
-title: "TKG태광 GSCM Apps & DevOps 서비스 구축"
+title: "제조·SCM 고객 GSCM Apps & DevOps 서비스 구축"
 startDate: "2023-08-01"
 endDate: "2023-08-31"
 status: completed
@@ -9,7 +9,7 @@ careerId: megazone
 roles: ["DevOps Technical Support"]
 skills: ["GitHub Actions", "Azure App Service", "CI/CD", "DevOps"]
 ---
-# TKG태광 GSCM Apps & DevOps 서비스 구축
+# 제조·SCM 고객 GSCM Apps & DevOps 서비스 구축
 
 ## DevOps Pipeline
 

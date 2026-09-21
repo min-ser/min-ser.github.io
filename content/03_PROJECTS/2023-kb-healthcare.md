@@ -1,7 +1,7 @@
 ---
 id: kb-healthcare
 type: project
-title: "KB헬스케어 B2B/B2C 통합 플랫폼 구축 기술지원"
+title: "헬스케어 플랫폼 고객 B2B/B2C 통합 플랫폼 구축 기술지원"
 startDate: "2023-08-01"
 endDate: "2024-01-31"
 status: completed
@@ -9,7 +9,7 @@ careerId: megazone
 roles: ["Backend Engineer", "Cloud / Kubernetes Technical Support"]
 skills: ["AKS", "Kubernetes", "Spring Boot", "MySQL", "PostgreSQL", "JPA", "MyBatis", "AGIC", "Ingress", "Forward Proxy", "Reverse Proxy", "WAF", "Azure Monitor"]
 ---
-# KB헬스케어 B2B/B2C 통합 플랫폼 구축 기술지원
+# 헬스케어 플랫폼 고객 B2B/B2C 통합 플랫폼 구축 기술지원
 
 ## Project at a Glance
 
@@ -29,13 +29,13 @@ flowchart TB
 **기간:** 2023.08 ~ 2024.01  
 **역할:** Backend Engineer / Cloud·Kubernetes Technical Support
 
-KB헬스케어 B2B/B2C 통합 플랫폼 구축 과정에 참여하여 고객 환경에 상주하며 **AKS Application 배포, Database HA/Replica 기능검증, Forward/Reverse Proxy Troubleshooting, WAF 적용지원, Spring Boot 기반 검증 Application 개발 및 운영 가이드 작성**을 수행했습니다.
+헬스케어 플랫폼 고객 B2B/B2C 통합 플랫폼 구축 과정에 참여하여 고객 환경에 상주하며 **AKS Application 배포, Database HA/Replica 기능검증, Forward/Reverse Proxy Troubleshooting, WAF 적용지원, Spring Boot 기반 검증 Application 개발 및 운영 가이드 작성**을 수행했습니다.
 
 Infrastructure 구성 자체만 확인하는 방식이 아니라 실제 Application을 직접 만들어 AKS에 배포하고, 장애/Failover 상황에서 Application과 Database가 어떻게 동작하는지를 검증한 것이 핵심입니다.
 
 ## 01. On-site Platform Technical Support
 
-- KB헬스케어 고객 환경 상주 기술지원
+- 헬스케어 플랫폼 고객 고객 환경 상주 기술지원
 - 1차 상주: 2023.08 ~ 2023.10
 - 2차 상주: 2023.11 ~ 2024.01
 - WAF 설치 및 서비스 연계 지원

@@ -1,5 +1,5 @@
 "use client";
-import {useMemo,useState} from "react";
+import {useState} from "react";
 import MarkdownDetailModal,{MarkdownModalDocument} from "@/components/content/MarkdownDetailModal";
 
 export type TimelineProject={id:string;slug:string;title:string;startDate:string;endDate?:string|null;status?:string;skills:string[];markdown:string;};
@@ -20,7 +20,6 @@ export default function CareerTimeline({careers,config}:{careers:TimelineCareer[
  const [includeTraining,setIncludeTraining]=useState(false);
  const [switching,setSwitching]=useState(false);
  const visibleCareers=includeTraining?careers:careers.filter(c=>c.kind!=="training");
- const intelligence=useMemo(()=>({careers:careers.filter(c=>c.kind!=="training").length,trainings:careers.filter(c=>c.kind==="training").length,projects:careers.reduce((total,c)=>total+c.projects.length,0),technologies:new Set(careers.flatMap(c=>c.skills)).size}),[careers]);
  const changeMode=(next:boolean)=>{if(next===includeTraining)return;setSwitching(true);window.setTimeout(()=>{setIncludeTraining(next);setSwitching(false);},180);};
  const openCareer=(c:TimelineCareer)=>{const training=c.kind==="training";setModal({detailLabel:training?config.trainingDetailLabel:config.careerDetailLabel,doc:{slug:c.slug,title:c.company,subtitle:c.position,period:period(c.startDate,c.endDate,c.status,config.presentLabel),markdown:c.markdown,detailHref:training?"/training":`/career/${c.slug}`,sourceLabel:training?config.trainingModalSourceLabel:config.careerModalSourceLabel}});};
  const openProject=(p:TimelineProject)=>setModal({detailLabel:config.projectDetailLabel,doc:{slug:p.slug,title:p.title,period:period(p.startDate,p.endDate,p.status,config.presentLabel),markdown:p.markdown,detailHref:`/projects/${p.slug}`,sourceLabel:config.projectModalSourceLabel}});

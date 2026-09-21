@@ -1,7 +1,7 @@
 ---
 id: aia-cloud-migration-proposal
 type: project
-title: "AIA생명 클라우드 전환 2차 사업 제안 기술지원"
+title: "보험사 고객 클라우드 전환 2차 사업 제안 기술지원"
 startDate: "2024-07-01"
 endDate: "2024-08-31"
 status: completed
@@ -10,14 +10,14 @@ engagementType: "Pre-Sales / Proposal"
 roles: ["Application Architect", "Azure Architecture Technical Support"]
 skills: ["Azure", "AKS", "Kubernetes", "Azure App Service", "Jenkins", "ACR", "ExpressRoute", "PostgreSQL", "Redis Cache"]
 ---
-# AIA생명 클라우드 전환 2차 사업 제안 기술지원
+# 보험사 고객 클라우드 전환 2차 사업 제안 기술지원
 
 > **Engagement Type:** Pre-Sales / RFP / Cloud Migration Proposal  
 > **Collaboration:** Samsung SDS  
 > **Scope Boundary:** 제안·Architecture 설계·기술검증 단계까지 수행했으며 실제 구축 Delivery에는 참여하지 않았습니다.
 
 ## 01. Project Overview
-삼성SDS와 공동으로 AIA생명 클라우드 전환 2차 사업 제안에 참여하여 RFP 요구사항을 분석하고, On-Premises Application을 Azure PaaS/Container 환경으로 전환하기 위한 **To-Be Architecture와 Application Modernization 방안**을 검토했습니다.
+SI 파트너사와 공동으로 보험사 고객 클라우드 전환 2차 사업 제안에 참여하여 RFP 요구사항을 분석하고, On-Premises Application을 Azure PaaS/Container 환경으로 전환하기 위한 **To-Be Architecture와 Application Modernization 방안**을 검토했습니다.
 
 ## 02. Proposal Scope
 - 전환 대상 11개 Application + ODS DB + Security + DR 전체 To-Be 구성 검토
@@ -59,9 +59,9 @@ flowchart TB
 
 ## 06. Proposal Deliverables
 - 제안서 26~31 Page 담당 영역 작성 완료
-- 삼성SDS 추가 요청 장표 작성
-- 삼성SDS 제안 발표 장표 검토 및 Governing Message/AKS 도입 장점 등 수정
-- 삼성SDS 본사에서 제안서 작성 및 제출 검토
+- SI 파트너사 추가 요청 장표 작성
+- SI 파트너사 제안 발표 장표 검토 및 Governing Message/AKS 도입 장점 등 수정
+- SI 파트너사 본사에서 제안서 작성 및 제출 검토
 - 프로젝트 버전별 배포 확인 여부 문서 작성
 
 ## 07. Technical Validation — Jenkins Build Agent

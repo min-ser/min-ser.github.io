@@ -5,13 +5,13 @@ href: /career
 enabled: true
 pageEyebrow: CAREER
 pageTitle: Career
-pageDescription: 경력 분야와 전문교육 이력을 수행 프로젝트와 함께 하나의 시간축으로 관리합니다.
+pageDescription: 회사 경력과 전문교육 이력을 프로젝트와 함께 하나의 시간축으로 관리합니다.
 terminalPath: ~/career
 counterLabel: RECORDS
 detailEyebrow: CAREER DETAIL
 timelineTitle: CAREER & TRAINING JOURNEY
-timelineDescription: 기본 화면은 실무 경력만 표시하며, 필터를 통해 전문교육 이력을 같은 시간축에 함께 표시할 수 있습니다.
-filterCareerLabel: 실무 경력
+timelineDescription: 기본 화면은 회사 경력만 표시하며, 필터를 통해 전문교육 이력을 같은 시간축에 함께 표시할 수 있습니다.
+filterCareerLabel: 경력만
 filterTrainingLabel: 경력 + 교육이수
 presentLabel: PRESENT
 projectLabel: PROJECTS

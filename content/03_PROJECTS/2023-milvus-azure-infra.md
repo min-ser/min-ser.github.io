@@ -1,7 +1,7 @@
 ---
 id: milvus-azure-infra
 type: project
-title: "밀버스 Azure 인프라 구축·운영 및 서비스 안정화"
+title: "커머스 서비스 고객 Azure 인프라 구축·운영 및 서비스 안정화"
 startDate: "2023-04-01"
 endDate: "2024-01-31"
 status: completed
@@ -9,15 +9,15 @@ careerId: megazone
 roles: ["Azure Solution Architect", "Cloud Infrastructure Technical Support"]
 skills: ["Azure IaaS", "Virtual Machine", "Azure Firewall", "WAF", "Linux", "Apache", "PHP", "MySQL", "SSL/TLS", "DNS", "Azure Backup", "Snapshot", "X-Forwarded-For"]
 ---
-# 밀버스 Azure 인프라 구축·운영 및 서비스 안정화
+# 커머스 서비스 고객 Azure 인프라 구축·운영 및 서비스 안정화
 
 ## Project at a Glance
 
 ```mermaid
 flowchart LR
     USER[Web / Mobile User] --> SEC[WAF / Firewall]
-    SEC --> WEB[Firstmall WEB/WAS]
-    WEB --> CRM[MyCRM]
+    SEC --> WEB[Commerce Web WEB/WAS]
+    WEB --> CRM[CRM Service]
     WEB --> DATA[Tableau / DBMart / Redis]
     OPS[Azure Operations] --> WEB
     OPS --> BAK[Backup / Snapshot]
@@ -27,7 +27,7 @@ flowchart LR
 **기간:** 2023.04 ~ 2024.01  
 **역할:** Azure Solution Architect / Cloud Infrastructure Technical Support
 
-밀버스의 Firstmall 및 연계 서비스 운영을 위한 Azure 인프라를 설계·구축하고, 구축 이후 실제 서비스 운영 과정에서 발생한 **VM, Network Security, SSL/Domain, Linux, Database 연결, Proxy/IP 전달, Backup** 이슈를 지속적으로 지원했습니다.
+커머스 서비스 고객의 Commerce Web 및 연계 서비스 운영을 위한 Azure 인프라를 설계·구축하고, 구축 이후 실제 서비스 운영 과정에서 발생한 **VM, Network Security, SSL/Domain, Linux, Database 연결, Proxy/IP 전달, Backup** 이슈를 지속적으로 지원했습니다.
 
 단순 VM 생성에 그치지 않고 초기 요구사항 정리와 Architecture 작성부터 Resource 배포, WEB/WAS 실행환경, 보안 구성, 운영 변경, 장애 분석까지 이어지는 **IaaS Lifecycle**을 경험한 프로젝트입니다.
 
@@ -35,15 +35,15 @@ flowchart LR
 
 초기 미팅에서 운영 대상 워크로드와 필요한 인프라를 정리했습니다.
 
-- Firstmall WEB/WAS 2대
-- MyCRM 발송 솔루션 WEB/WAS
+- Commerce Web WEB/WAS 2대
+- CRM Service 발송 솔루션 WEB/WAS
 - Tableau Server
 - DBMart(MariaDB)
 - Redis
 - Tracking Server 예비 환경
 - 총 7대 수준의 서버 Resource 요구사항 검토
 - Azure Subscription 생성 및 초기 Resource 배포 일정 조율
-- Firstmall을 우선 구축 대상으로 선정하여 고객 작업 일정과 Infrastructure 배포 일정을 조정
+- Commerce Web을 우선 구축 대상으로 선정하여 고객 작업 일정과 Infrastructure 배포 일정을 조정
 - Apache / PHP 등 Application Runtime 설치 범위 검토
 
 ## 02. Azure Infrastructure Architecture / Build
@@ -51,8 +51,8 @@ flowchart LR
 ```mermaid
 flowchart TB
     INTERNET[Internet] --> WAF[WAF / Network Security]
-    WAF --> VM1[Firstmall VM A1]
-    WAF --> VM2[Firstmall VM A2]
+    WAF --> VM1[Commerce Web VM A1]
+    WAF --> VM2[Commerce Web VM A2]
     VM1 --> DB[(MySQL / MariaDB)]
     VM2 --> DB
     SNAP[OS Disk Snapshot] --> CLONE[VM Clone / Recovery]
@@ -71,11 +71,11 @@ flowchart TB
 
 ## 03. VM Clone / Snapshot 기반 운영 작업
 
-실제 운영 요청에 따라 기존 Firstmall VM을 기준으로 복제 환경을 구성했습니다.
+실제 운영 요청에 따라 기존 Commerce Web VM을 기준으로 복제 환경을 구성했습니다.
 
 ```mermaid
 flowchart LR
-    A1[Firstmall A1 VM] --> SNAP[OS Disk Snapshot]
+    A1[Commerce Web A1 VM] --> SNAP[OS Disk Snapshot]
     SNAP --> DISK[Managed Disk 생성]
     DISK --> COPY[Copy VM 생성]
     COPY --> SWAP[OS Disk 교체 / 검증]
@@ -117,7 +117,7 @@ flowchart LR
 
 ## 06. Database / Application Connectivity Validation
 
-- Firstmall VM 간 MySQL 접속 테스트
+- Commerce Web VM 간 MySQL 접속 테스트
 - Application Database Connection 설정 확인
 - DB 연결용 Test User 생성/삭제를 통한 접근 검증
 - PHP/Application Runtime에서 Database Connectivity 확인

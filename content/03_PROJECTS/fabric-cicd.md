@@ -2,7 +2,7 @@
 id: fabric-cicd
 type: project
 title: Microsoft Fabric CI/CD
-careerId: cloud-platform-engineering
+careerId: megazone
 startDate: "2025-10-01"
 endDate: null
 status: operating

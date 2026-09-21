@@ -1,7 +1,7 @@
 ---
 id: amore-multicloud-data-integration
 type: project
-title: AMOREPACIFIC Fabric Multi-Cloud / Hybrid Data Integration
+title: Enterprise Customer Fabric Multi-Cloud / Hybrid Data Integration
 careerId: megazone
 startDate: "2025-07-01"
 endDate: null
@@ -9,7 +9,7 @@ status: operating
 roles: ["Microsoft Fabric Engineer", "Azure Part PL"]
 skills: ["Microsoft Fabric", "Snowflake", "AWS S3", "Azure Storage", "OPDG", "Pipeline", "Copy Activity", "Shortcut"]
 ---
-# AMOREPACIFIC Fabric Multi-Cloud / Hybrid Data Integration
+# Enterprise Customer Fabric Multi-Cloud / Hybrid Data Integration
 
 ## Multi-Cloud / Hybrid Data Map
 
