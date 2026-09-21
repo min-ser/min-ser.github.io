@@ -1,0 +1,72 @@
+{
+  "id": "condition-multi-character-test",
+  "engineVersion": "0.9.2",
+  "title": "조건 분기와 다중 캐릭터 테스트",
+  "scenes": [
+    {
+      "id": "condition-multi-character-test-001",
+      "speaker": "서하린",
+      "text": "저 사람은 누구지?",
+      "background": "rainy-mountain-road",
+      "ambient": "rain",
+      "characters": [
+        {
+          "id": "seo-harin",
+          "expression": "expression-01",
+          "position": "left",
+          "visible": true,
+          "speaking": true
+        },
+        {
+          "id": "jeon-seoyul",
+          "expression": "default",
+          "position": "right",
+          "visible": true,
+          "speaking": false
+        }
+      ]
+    },
+    {
+      "id": "condition-multi-character-test-002",
+      "speaker": "전서율",
+      "text": "길을 막지 마라.",
+      "set": {
+        "trust": 1
+      },
+      "flag": {
+        "name": "met_seoyul",
+        "value": true
+      },
+      "wait": 300
+    },
+    {
+      "id": "condition-multi-character-test-003",
+      "speaker": "서하린",
+      "text": "적의는 없어 보이지만, 경계해야 해.",
+      "if": {
+        "source": "variable",
+        "key": "trust",
+        "operator": "gte",
+        "value": 1
+      },
+      "effect": "flash"
+    },
+    {
+      "id": "condition-multi-character-test-004",
+      "speaker": "시스템",
+      "text": "이 문장은 분기 조건이 실패할 때만 표시됩니다.",
+      "if": {
+        "source": "flag",
+        "key": "met_seoyul",
+        "operator": "eq",
+        "value": true
+      },
+      "jump": "branch-end"
+    },
+    {
+      "id": "branch-end",
+      "speaker": "시스템",
+      "text": "branch-end"
+    }
+  ]
+}

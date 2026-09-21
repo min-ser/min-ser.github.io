@@ -1,0 +1,9 @@
+{
+  "account": "kmsprdsa01",
+  "container": "validation-demo",
+  "authMode": "entra",
+  "endpointMode": "private",
+  "operation": "list",
+  "timeout": 8000,
+  "demoMode": true
+}

@@ -1,0 +1,37 @@
+{
+  "version": "0.9.8.4",
+  "originalMarkdownFiles": [
+    "1권-1부.md",
+    "1권-2부.md",
+    "1권-3부.md",
+    "1권-4부.md"
+  ],
+  "removedOldSourceFiles": [
+    "story/_INBOX/2026-08-04/volume-01/01-part-01-revised-expanded.md",
+    "story/_INBOX/2026-08-04/volume-01/02-part-02-2026-05-31.txt",
+    "story/_INBOX/2026-08-04/volume-01/04-part-04-2026-05-29.txt",
+    "story/_INBOX/2026-08-04/volume-01/03-part-03-to-be.txt"
+  ],
+  "characterVisibilityPolicy": "speaker-only",
+  "removedEpisodeCharacterCommands": 20,
+  "remainingEpisodeCharacterCommands": 0,
+  "existingAssetsChanged": 0,
+  "validators": {
+    "validate_scene_schema.py": {
+      "returnCode": 0,
+      "stdout": "PASS: 5 chapter files",
+      "stderr": ""
+    },
+    "validate_resources.py": {
+      "returnCode": 0,
+      "stdout": "PASS: HTML links and manifest resources",
+      "stderr": ""
+    },
+    "validate_project.py": {
+      "returnCode": 0,
+      "stdout": "PASS\nPASS: v0.9.1 modules\nPASS: story compiler output\nPASS: v0.9.2 scene commands\nPASS: 5 chapter files\nPASS: v0.9.3 save/playback files\nPASS: v0.9.4 quality gate\nPASS: HTML links and manifest resources",
+      "stderr": ""
+    }
+  },
+  "zipIntegrity": "PASS"
+}

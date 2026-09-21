@@ -1,0 +1,39 @@
+{
+  "version": "0.9.8.4",
+  "volume": "1권",
+  "policy": "원본 시나리오는 게임 데이터와 분리하며 내용은 임의 수정하지 않는다.",
+  "files": [
+    {
+      "name": "1권-1부.md",
+      "path": "story/manuscript/volume-01/original/1권-1부.md",
+      "sourceFile": "1부 26-05-29(2).txt",
+      "sha256": "299191209b22146cd249a3d151718da824f08a8291c3a80990cf03dd127c8026",
+      "bytes": 39651,
+      "status": "원본 보존"
+    },
+    {
+      "name": "1권-2부.md",
+      "path": "story/manuscript/volume-01/original/1권-2부.md",
+      "sourceFile": "2부 26-05-31(2).txt",
+      "sha256": "ba8f99f700f9aaf95c0af6119976e9d32ab2934abff41abb6812858df955ac5f",
+      "bytes": 41448,
+      "status": "원본 보존"
+    },
+    {
+      "name": "1권-3부.md",
+      "path": "story/manuscript/volume-01/original/1권-3부.md",
+      "sourceFile": "3부 TO-BE(2).txt",
+      "sha256": "281c0df6583126b452fe99d26c6eb02abd781655514500f2624781ddb2c81ffa",
+      "bytes": 9469,
+      "status": "원본 보존"
+    },
+    {
+      "name": "1권-4부.md",
+      "path": "story/manuscript/volume-01/original/1권-4부.md",
+      "sourceFile": "4부 26-05-29(2).txt",
+      "sha256": "31b17fe1c3c1fd5d25773b5dc065ed9a5018d13fbd9f513363be73ddd2b25adb",
+      "bytes": 40599,
+      "status": "원본 보존"
+    }
+  ]
+}

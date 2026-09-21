@@ -1,0 +1,106 @@
+---
+id: legacy-database-01
+type: expertise
+title: CUBRID service 자동실행
+enabled: true
+sample: false
+group: data-database
+category: Database
+createdDate: '2024-06-27'
+updatedDate: '2024-06-27'
+featured: false
+summary: 부팅 시 CUBRID Service 자동 시작 설정 0. 구성환경 Cubrid OS 1. CUBRID 서비스 파일 생성 먼저, CUBRID
+  DB 서버를 위한 systemd 서비스 파일을 만듭니다. 이 파일을 /etc/systemd/system 디렉토리에 생성합니다 2.
+tags:
+- CUBRID
+---
+
+> **Legacy Engineering Note** · 기존 기술 블로그에서 선별 이관한 기록입니다. 작성 당시 환경과 버전을 기준으로 합니다.
+
+# 부팅 시 CUBRID Service 자동 시작 설정
+
+## 0. 구성환경
+- Cubrid
+```shell
+# 명령어
+cubrid --version
+
+cubrid (CUBRID utilities)
+CUBRID 9.3 (9.3.9.0002) (64bit release build for linux_gnu) (Aug  4 2017 11:55:22)
+Copyright (C) 2008 Search Solution Corporation. All rights reserved by Search Solution.
+```
+
+- OS
+```shell
+# 명령어
+lsb_release -a
+
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 20.04.6 LTS
+Release:        20.04
+Codename:       focal
+```
+
+## 1. CUBRID 서비스 파일 생성
+먼저, CUBRID DB 서버를 위한 systemd 서비스 파일을 만듭니다. 이 파일을 /etc/systemd/system 디렉토리에 생성합니다
+
+```shell
+sudo su -
+cat > /etc/systemd/system/cubrid.service
+```
+
+## 2. 서비스 파일 내용 작성
+
+다음 내용을 cubrid.service 파일에 작성합니다. 경로는 CUBRID가 설치된 위치에 맞게 조정해야 합니다.
+
+```shell
+[Unit]
+Description=CUBRID Database Service
+After=network.target
+
+[Service]
+Type=forking
+
+# 환경변수 지정
+Environment="CUBRID=/home/<user>/<CUBRID 설치 디렉토리>"
+Environment="CUBRID_DATABASES=/home/<user>/<CUBRID 설치 디렉토리>/databases"
+Environment="LD_LIBRARY_PATH=/home/<user>/<CUBRID 설치 디렉토리>/lib"
+Environment="PATH=/home/<user>/<CUBRID 설치 디렉토리>/bin:/home/<user>/<CUBRID 설치 디렉토리>/cubridmanager:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+# EnvironmentFile=/home/<user>/<CUBRID 설치 디렉토리>/bin/.cubrid.sh
+
+# service & server 실행 명령어
+ExecStart=/home/<user>/<CUBRID 설치 디렉토리>/bin/cubrid service start
+ExecStartPost=/home/<user>/<CUBRID 설치 디렉토리>/bin/cubrid server start <데이터베이스 이름>
+# ExecStop=/home/<user>/<CUBRID 설치 디렉토리>/bin/cubrid service stop
+# ExecStopPost=/home/cody/CUBRID/bin/cubrid server stop <데이터베이스 이름>
+# ExecReload=/home/<user>/<CUBRID 설치 디렉토리>/bin/cubrid service restart
+
+User=<user>
+Group=<user>
+
+[Install]
+WantedBy=multi-user.target
+```
+
+위 예시에서는 CUBRID가 /usr/local/cubrid에 설치되어 있다고 가정합니다. 실제 경로에 맞게 수정해야 합니다.
+
+## 3. 서비스 파일 저장 및 systemd에 알림
+파일을 저장한 후, systemd에게 새로운 서비스를 인식시킵니다.
+
+```shell
+sudo systemctl daemon-reload
+```
+
+## 4. 서비스 자동 시작 설정
+```shell
+sudo systemctl daemon-reload
+sudo systemctl enable cubrid
+sudo systemctl restart cubrid
+```
+
+## 5. 서비스 시작 및 상태 확인
+```shell
+cubrid service status
+cubrid server status
+```

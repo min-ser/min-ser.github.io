@@ -1,0 +1,86 @@
+---
+id: legacy-terraform-4
+type: expertise
+title: '[Terraform] 4. 변수 Parameter 관리'
+enabled: true
+sample: false
+group: devops-automation
+category: Terraform
+createdDate: '2023-03-30'
+updatedDate: '2023-03-30'
+featured: false
+summary: 1. variables.tf 파일 생성 변수가 선언되는 파일 <br <br 2. terraform.tfvars 파일 생성 변수에 데이터를
+  넣는 파일 <br <br 3. main.tf 수정 resource group 변수 관련 기존 argument 방식에서 paramet
+tags:
+- Terraform
+---
+
+> **Legacy Engineering Note** · 기존 기술 블로그에서 선별 이관한 기록입니다. 작성 당시 환경과 버전을 기준으로 합니다.
+
+# 1. variables.tf 파일 생성
+변수가 선언되는 파일
+```
+## 리소스 관련 변수 [리소스명_속성]
+variable "resource_group_name" {}
+variable "location" {}
+```
+<br><br>
+
+# 2. terraform.tfvars 파일 생성
+변수에 데이터를 넣는 파일
+```
+# 리소스 관련 변수
+resource_group_name   = "test-rg"
+location              = "koreacentral"
+```
+<br><br>
+
+# 3. main.tf 수정[resource group 변수 관련]
+기존 argument 방식에서 parameter로 바꿔줌
+```
+# Probider 설정
+provider "azurerm" {
+    # Azure 고급기능 정의
+    features{}
+
+    # 인증정보를 등록할 경우 사용
+    # subscription_id = "<your-subscription-id>"
+    # client_id       = "<your-client-id>"
+    # client_secret   = "<your-client-secret>"
+    # tenant_id       = "<your-tenant-id>"
+}
+
+resource "azurerm_resource_group" "rg" {
+  ## 수정된 부분
+  name     = var.resource_group_name         # Resource Group name
+  location = var.location                    # Rigion
+}
+```
+<br><br>
+
+# Q. 변수는 마음대로 변경이 가능한지?
+- `location` 변수를 `resource_group_location`로 변경
+  - variables.tf
+    ```
+    ## 리소스그룹 관련 변수 [리소스명_속성]
+    variable "resource_group_name" {}
+    variable "resource_group_location" {}
+    ```
+  - terraform.tfvars
+    ```
+    resource_group_name = "test-rg"
+    resource_group_location = "koreacentral"
+    ```
+- terraform plan 진행
+<br><br>
+
+# A. 변수의 커스터마이징 가능 확인
+```
+PS D:\GIT\PROJECT\Terraform\Test> terraform plan
+azurerm_resource_group.rg: Refreshing state... [id=/subscriptions/ade73f1a-8f29-49ca-8e29-08e5a51bcd61/resourceGroups/test-rg]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration and found no
+differences, so no changes are needed.
+```

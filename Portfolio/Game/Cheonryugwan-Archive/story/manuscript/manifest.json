@@ -1,0 +1,61 @@
+{
+  "version": "0.9.9.0",
+  "documents": [
+    {
+      "id": "volume-01-part-01",
+      "volume": 1,
+      "part": 1,
+      "title": "천류관 1권",
+      "filename": "1권-1부.md",
+      "path": "../../story/manuscript/volume-01/original/1권-1부.md",
+      "status": "published",
+      "chapters": 5,
+      "episodes": 17,
+      "characters": 16166,
+      "paragraphs": 644,
+      "sha256": "299191209b22146cd249a3d151718da824f08a8291c3a80990cf03dd127c8026"
+    },
+    {
+      "id": "volume-01-part-02",
+      "volume": 1,
+      "part": 2,
+      "title": "2부 — 승(承)",
+      "filename": "1권-2부.md",
+      "path": "../../story/manuscript/volume-01/original/1권-2부.md",
+      "status": "published",
+      "chapters": 4,
+      "episodes": 20,
+      "characters": 16404,
+      "paragraphs": 754,
+      "sha256": "ba8f99f700f9aaf95c0af6119976e9d32ab2934abff41abb6812858df955ac5f"
+    },
+    {
+      "id": "volume-01-part-03",
+      "volume": 1,
+      "part": 3,
+      "title": "3부 — 전(轉)",
+      "filename": "1권-3부.md",
+      "path": "../../story/manuscript/volume-01/original/1권-3부.md",
+      "status": "published",
+      "chapters": 5,
+      "episodes": 19,
+      "characters": 3754,
+      "paragraphs": 269,
+      "sha256": "281c0df6583126b452fe99d26c6eb02abd781655514500f2624781ddb2c81ffa"
+    },
+    {
+      "id": "volume-01-part-04",
+      "volume": 1,
+      "part": 4,
+      "title": "천류관 1권",
+      "filename": "1권-4부.md",
+      "path": "../../story/manuscript/volume-01/original/1권-4부.md",
+      "status": "published",
+      "chapters": 4,
+      "episodes": 23,
+      "characters": 16112,
+      "paragraphs": 761,
+      "sha256": "31b17fe1c3c1fd5d25773b5dc065ed9a5018d13fbd9f513363be73ddd2b25adb"
+    }
+  ]
+}

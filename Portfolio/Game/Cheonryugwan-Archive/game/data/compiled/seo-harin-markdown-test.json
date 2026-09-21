@@ -1,0 +1,38 @@
+{
+  "id": "seo-harin-markdown-test",
+  "engineVersion": "0.9.1",
+  "title": "서하린 Markdown 변환 테스트",
+  "scenes": [
+    {
+      "id": "seo-harin-markdown-test-001",
+      "speaker": "시스템",
+      "text": "Markdown 시나리오 변환 테스트를 시작합니다.",
+      "background": "rainy-mountain-road",
+      "ambient": "rain",
+      "character": {
+        "id": "seo-harin",
+        "expression": "expression-01",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "seo-harin-markdown-test-002",
+      "speaker": "서하린",
+      "text": "이 문서를 수정한 뒤 변환기를 실행하면 게임 JSON이 생성됩니다.",
+      "character": {
+        "id": "seo-harin",
+        "expression": "expression-02",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "seo-harin-markdown-test-003",
+      "speaker": "서하린",
+      "text": "검을 뽑겠습니다.",
+      "sfx": "sword-draw",
+      "effect": "shake"
+    }
+  ]
+}

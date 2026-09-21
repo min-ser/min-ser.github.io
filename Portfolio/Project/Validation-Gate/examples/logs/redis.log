@@ -1,0 +1,4 @@
+12:00:00 [INFO] REQUEST WORKLOAD_IDENTITY validation started; demoMode=true
+12:00:00 [PASS] TOKEN Microsoft Entra token acquired from demo credential chain
+12:00:01 [PASS] TLS Encrypted Redis channel established
+12:00:01 [PASS] COMMAND PING returned PONG

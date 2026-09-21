@@ -1,0 +1,14 @@
+{
+  "version": "0.9.4",
+  "source": "Cheonryugwan-Archive-v0.9.3-Save-Playback-Convenience.zip",
+  "jsonFilesChecked": 13,
+  "javascriptFilesChecked": 17,
+  "pythonFilesChecked": 4,
+  "resourceValidation": "PASS: HTML links and manifest resources",
+  "projectValidation": "PASS",
+  "playwrightTestsIncluded": 3,
+  "playwrightExecuted": false,
+  "playwrightNote": "테스트 코드와 CI는 포함했으며 npm 의존성 설치 후 실행",
+  "unicodePaths": "PASS",
+  "totalFiles": 528
+}

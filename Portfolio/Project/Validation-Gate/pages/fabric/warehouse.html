@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fabric Warehouse | Validation Gate</title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/console.css">
+  <link rel="stylesheet" href="../../assets/css/animation.css">
+  <link rel="stylesheet" href="../../assets/css/pages/fabric.css">
+</head>
+<body data-page="fabric-warehouse" data-depth="2">
+<div id="app">
+  <div id="appHeader"></div>
+  <div id="appSidebar"></div>
+  <main class="app-main fabric-page warehouse-legacy-page">
+    <div class="warehouse-legacy-inner">
+      <div class="warehouse-titlebar">
+        <div>
+          <h1>Microsoft Fabric <small>Warehouse-Ver3</small></h1>
+          <p>실제 구현 UI의 접속 정보 입력, 쿼리 실행, 결과 테이블, 연결 로그 흐름을 정적 데모로 재현합니다.</p>
+        </div>
+        <div class="warehouse-title-actions">
+          <span class="status-chip warning">NO REAL API CALL</span>
+          <a class="future-ui-link" href="warehouse-modern.html">Future UI</a>
+        </div>
+      </div>
+
+      <section class="warehouse-legacy-grid">
+        <div class="warehouse-left-column">
+          <article class="legacy-panel connection-panel">
+            <header class="legacy-panel-header green-line">
+              <h2>▣ Fabric 접속 정보 입력</h2>
+            </header>
+            <div class="legacy-panel-body">
+              <label class="legacy-field full">
+                <span>Warehouse 서버 주소 (FQDN)</span>
+                <input id="warehouseEndpoint" value="kms-prd-warehouse.datawarehouse.fabric.microsoft.com">
+              </label>
+
+              <div class="legacy-field-row three">
+                <label class="legacy-field">
+                  <span>데이터베이스 (Warehouse)</span>
+                  <input id="databaseName" value="KMS_DEMO_WH">
+                </label>
+                <label class="legacy-field">
+                  <span>스키마</span>
+                  <input id="schemaName" value="KMS">
+                </label>
+                <label class="legacy-field">
+                  <span>테이블</span>
+                  <input id="tableName" value="KMS_SAMPLE_DATA">
+                </label>
+              </div>
+
+              <div class="legacy-divider"></div>
+
+              <div class="legacy-field-row two">
+                <label class="legacy-field">
+                  <span>조회 모드</span>
+                  <select id="queryMode">
+                    <option value="recent">최근 데이터 조회 (Recent)</option>
+                    <option value="all">전체 데이터 조회 (All)</option>
+                    <option value="code">코드순 조회 (Code)</option>
+                  </select>
+                </label>
+                <label class="legacy-field">
+                  <span>조회 건수 (Top N)</span>
+                  <input id="topCount" type="number" min="1" max="100" value="5">
+                </label>
+              </div>
+
+              <button id="executeQuery" class="legacy-execute-button" type="button">⌕ 쿼리 실행 (Execute via Private Link)</button>
+            </div>
+          </article>
+
+          <article class="legacy-log-panel">
+            <header>
+              <h2>&gt;_ System Connection Log</h2>
+              <div>
+                <button id="sampleButton" type="button">Sample</button>
+                <button id="clearButton" type="button">Clear</button>
+                <button id="copyButton" type="button">Copy</button>
+              </div>
+            </header>
+            <div id="warehouseConsole" class="legacy-console" role="log" aria-live="polite"></div>
+          </article>
+        </div>
+
+        <article class="legacy-panel query-panel">
+          <header class="legacy-panel-header">
+            <h2>▦ Query Result</h2>
+            <span id="rowCountBadge" class="rows-badge">Rows: 0</span>
+          </header>
+          <div id="queryState" class="query-state">쿼리를 실행하면 결과가 표시됩니다.</div>
+          <div class="query-table-wrap">
+            <table class="query-result-table">
+              <thead>
+                <tr>
+                  <th>MATERIAL_NUMBER</th>
+                  <th>MATERIAL_CODE</th>
+                  <th>TEMPORARY_MATERIAL_CODE</th>
+                  <th>SAP_MATERIAL_NAME</th>
+                  <th>MATERIAL_TYPE_CODE</th>
+                  <th>MATERIAL_VERSION</th>
+                </tr>
+              </thead>
+              <tbody id="queryResultBody"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <details class="warehouse-debug-panel">
+        <summary>Raw Request / Response</summary>
+        <div class="warehouse-debug-grid">
+          <pre id="rawRequest">{}</pre>
+          <pre id="rawResponse">{}</pre>
+        </div>
+      </details>
+
+      <div id="appFooter"></div>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/router.js"></script>
+<script src="../../assets/js/utils.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/api/warehouse.js"></script>
+<script src="../../assets/js/pages/fabric-warehouse.js"></script>
+</body>
+</html>

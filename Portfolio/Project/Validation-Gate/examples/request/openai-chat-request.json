@@ -1,0 +1,1 @@
+{"authentication":"WORKLOAD_IDENTITY","endpoint":"https://kms-openai.openai.azure.com/","apiVersion":"2024-10-21","deployment":"kms-gpt-4o-mini","message":"Private Endpoint validation summary","demoMode":true}

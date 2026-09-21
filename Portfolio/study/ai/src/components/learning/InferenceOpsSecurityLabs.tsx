@@ -1,0 +1,31 @@
+"use client";
+import { useMemo, useState } from "react";
+
+function InferenceLab(){
+  const [prompt,setPrompt]=useState(512),[generated,setGenerated]=useState(48),[precision,setPrecision]=useState(16),[batch,setBatch]=useState(4),[cache,setCache]=useState(true);
+  const modelB=7;
+  const weightGB=modelB*1e9*(precision/8)/1e9;
+  const kvGB=(cache?prompt*batch*.00055:0);
+  const ttft=Math.round(110+prompt*.18+batch*7);
+  const tps=Math.max(4,Math.round(72/(1+batch*.10)*(cache?1.35:.72)));
+  return <div className="special-lab"><div className="special-grid"><div className="inference-timeline"><div className="phase prefill"><b>PREFILL</b><span>{prompt} prompt tokens</span><i style={{width:`${Math.min(100,prompt/12)}%`}}/></div><div className="decode-track"><b>DECODE</b><div>{Array.from({length:Math.min(12,generated)},(_,i)=><span key={i}>t{i+1}</span>)}</div></div><div className="cache-rack"><strong>KV CACHE {cache?'ON':'OFF'}</strong><span>{cache?'K/V를 재사용해 이전 Token 재계산을 줄임':'이전 Attention 상태를 재사용하지 않음'}</span></div></div><div className="special-controls"><h4>LLM INFERENCE WORKBENCH</h4><label>Prompt tokens <input type="range" min="64" max="2048" step="64" value={prompt} onChange={e=>setPrompt(+e.target.value)}/><b>{prompt}</b></label><label>Generated tokens <input type="range" min="8" max="128" step="8" value={generated} onChange={e=>setGenerated(+e.target.value)}/><b>{generated}</b></label><label>Batch <input type="range" min="1" max="16" value={batch} onChange={e=>setBatch(+e.target.value)}/><b>{batch}</b></label><label>Precision <select value={precision} onChange={e=>setPrecision(+e.target.value)}><option value="32">FP32</option><option value="16">FP16/BF16</option><option value="8">INT8</option><option value="4">INT4</option></select></label><label className="lab-toggle"><input type="checkbox" checked={cache} onChange={e=>setCache(e.target.checked)}/> KV Cache</label><div className="serving-metrics"><span>WEIGHTS* <b>{weightGB.toFixed(1)} GB</b></span><span>KV CACHE* <b>{kvGB.toFixed(2)} GB</b></span><span>TTFT* <b>{ttft} ms</b></span><span>TOKENS/S* <b>{tps}</b></span></div><div className="formula-box"><small>* 교육용 상대 모델입니다. 실제 메모리·속도는 아키텍처, GPU, KV dtype, hidden size, scheduler에 따라 달라집니다.</small></div></div></div></div>
+}
+
+function MlOpsLab(){
+ const stages=['DATA','EXPERIMENT','TRAIN','EVALUATE','REGISTRY','DEPLOY','MONITOR']; const [stage,setStage]=useState(0),[candidate,setCandidate]=useState(15),[drift,setDrift]=useState(18); const unhealthy=drift>55;
+ return <div className="special-lab"><div className="special-grid"><div className="ops-lifecycle"><div className="ops-track">{stages.map((s,i)=><button type="button" key={s} className={i===stage?'active':i<stage?'passed':''} onClick={()=>setStage(i)}><b>{s}</b><span>{i<stage?'✓':i===stage?'●':'○'}</span></button>)}</div><div className="deployment-lanes"><div><b>STABLE v12</b><span style={{width:`${100-candidate}%`}}/></div><div><b>CANDIDATE v13</b><span style={{width:`${candidate}%`}}/></div></div><div className={`drift-meter ${unhealthy?'warn':''}`}><b>DATA DRIFT {drift}%</b><i style={{width:`${drift}%`}}/><span>{unhealthy?'Threshold exceeded → investigate / rollback':'within monitoring threshold'}</span></div></div><div className="special-controls"><h4>MLOPS RELEASE CONTROL</h4><label>Candidate traffic <input type="range" min="0" max="100" step="5" value={candidate} onChange={e=>setCandidate(+e.target.value)}/><b>{candidate}%</b></label><label>Simulated drift <input type="range" min="0" max="100" value={drift} onChange={e=>setDrift(+e.target.value)}/><b>{drift}%</b></label><button type="button" className="lab-step-button" onClick={()=>setStage(s=>(s+1)%stages.length)}>NEXT LIFECYCLE STAGE</button><div className="formula-box">현재 단계: <strong>{stages[stage]}</strong><br/><small>버전·평가·배포·모니터링이 끊긴 작업이 아니라 하나의 피드백 루프라는 점을 보여주는 교육용 시뮬레이터입니다.</small></div></div></div></div>
+}
+
+function SecurityLab(){
+ const [attack,setAttack]=useState<'none'|'prompt'|'rag'|'tool'>('prompt'),[guard,setGuard]=useState(true),[least,setLeast]=useState(true),[audit,setAudit]=useState(true);
+ const blocked=guard&&(attack==='prompt'||attack==='rag') || least&&attack==='tool';
+ const nodes=useMemo(()=>['INPUT','INPUT GUARD','RAG','MODEL','TOOL','OUTPUT GUARD','AUDIT'],[]);
+ return <div className="special-lab"><div className="special-grid"><div className="security-path"><div className="threat-source"><b>{attack==='none'?'NORMAL REQUEST':attack.toUpperCase()+' THREAT'}</b><span>{blocked?'CONTROL BLOCKED / CONTAINED':'REQUEST CONTINUES'}</span></div><div className="security-nodes">{nodes.map((n,i)=><div key={n} className={(blocked&&((attack==='prompt'&&i===1)||(attack==='rag'&&i===2)||(attack==='tool'&&i===4)))?'blocked':''}><b>{n}</b><span>{i<nodes.length-1?'→':''}</span></div>)}</div><div className="audit-strip">{audit?'AUDIT EVENT: identity · input class · retrieval · tool decision · result':'AUDIT OFF: investigation evidence is missing'}</div></div><div className="special-controls"><h4>AI TRUST BOUNDARY LAB</h4><label>Scenario <select value={attack} onChange={e=>setAttack(e.target.value as typeof attack)}><option value="none">Normal request</option><option value="prompt">Prompt injection</option><option value="rag">Indirect / RAG injection</option><option value="tool">Unauthorized tool action</option></select></label><label className="lab-toggle"><input type="checkbox" checked={guard} onChange={e=>setGuard(e.target.checked)}/> Input/RAG Guardrails</label><label className="lab-toggle"><input type="checkbox" checked={least} onChange={e=>setLeast(e.target.checked)}/> Least-privilege Tool Policy</label><label className="lab-toggle"><input type="checkbox" checked={audit} onChange={e=>setAudit(e.target.checked)}/> Audit Logging</label><div className="formula-box">Result: <strong>{blocked?'BLOCK / CONTAIN':'ALLOW / REQUIRES REVIEW'}</strong><br/><small>단일 Guardrail이 모든 위협을 해결하지 않습니다. Identity, data boundary, retrieval trust, tool permission, output control, audit를 계층적으로 배치하는 개념 실험입니다.</small></div></div></div></div>
+}
+
+export default function InferenceOpsSecurityLabs({code}:{code:string}){
+ if(code.startsWith('23.')) return <InferenceLab/>;
+ if(code.startsWith('24.')) return <MlOpsLab/>;
+ if(code.startsWith('25.')) return <SecurityLab/>;
+ return null;
+}

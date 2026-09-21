@@ -1,0 +1,180 @@
+
+.app-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  color: #fff;
+  background: linear-gradient(110deg, #075fae, #137fd9);
+  box-shadow: 0 8px 24px rgba(7, 95, 174, .23);
+  z-index: 1000;
+}
+
+.header-left, .header-right, .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-toggle, .header-action {
+  border: 1px solid rgba(255,255,255,.26);
+  color: #fff;
+  background: rgba(255,255,255,.10);
+  border-radius: 11px;
+  transition: .18s ease;
+}
+
+.menu-toggle {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+}
+
+.header-action {
+  padding: 10px 13px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.menu-toggle:hover, .header-action:hover { background: rgba(255,255,255,.18); }
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 12px;
+  background: rgba(255,255,255,.14);
+  font-weight: 900;
+}
+
+.brand-title {
+  font-size: 17px;
+  font-weight: 950;
+  letter-spacing: .06em;
+}
+
+.brand-subtitle {
+  margin-top: 3px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  opacity: .82;
+}
+
+.app-sidebar {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 8px 0 30px rgba(25,55,85,.04);
+  transition: width .24s ease, transform .24s ease;
+  z-index: 800;
+}
+
+.profile {
+  padding: 22px 19px 18px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(#fff, #f8fbff);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, #0e6bb9, #18a0f4);
+  font-weight: 900;
+}
+
+.profile-name { margin-top: 12px; font-size: 16px; font-weight: 900; }
+.profile-role { margin-top: 4px; color: var(--muted); font-size: 13px; font-weight: 700; }
+.profile-stack { margin-top: 8px; color: var(--primary); font-size: 12px; font-weight: 800; }
+
+.sidebar-nav { padding: 16px 12px 30px; }
+.nav-section { margin-bottom: 16px; }
+.nav-title {
+  padding: 7px 12px;
+  color: #9aa7b8;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 43px;
+  margin: 3px 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #4d5b6d;
+  font-size: 13px;
+  font-weight: 800;
+  transition: .18s ease;
+}
+
+.nav-link:hover { color: var(--primary-dark); background: #f0f6fc; }
+.nav-link.active {
+  color: var(--primary-dark);
+  background: linear-gradient(90deg, #e9f4ff, #f6fbff);
+  box-shadow: inset 3px 0 0 var(--primary);
+}
+.nav-icon { width: 22px; flex: 0 0 22px; text-align: center; }
+.nav-sub { padding-left: 28px; }
+
+.app-main {
+  min-height: 100vh;
+  margin-left: var(--sidebar-width);
+  padding: calc(var(--header-height) + 27px) 28px 26px;
+  transition: margin-left .24s ease;
+}
+
+.app-footer {
+  margin-top: 30px;
+  padding: 22px 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  color: #8895a7;
+  font-size: 12px;
+}
+
+.mobile-backdrop {
+  display: none;
+  position: fixed;
+  inset: var(--header-height) 0 0;
+  background: rgba(12,24,39,.46);
+  z-index: 700;
+}
+
+.sidebar-collapsed .app-sidebar { width: var(--sidebar-collapsed-width); }
+.sidebar-collapsed .app-main { margin-left: var(--sidebar-collapsed-width); }
+.sidebar-collapsed .profile { display: flex; justify-content: center; padding-left: 0; padding-right: 0; }
+.sidebar-collapsed .profile-copy,
+.sidebar-collapsed .nav-title,
+.sidebar-collapsed .nav-label { display: none; }
+.sidebar-collapsed .nav-link { justify-content: center; padding-left: 0; padding-right: 0; }
+.sidebar-collapsed .nav-sub { padding-left: 0; }
+
+@media (max-width: 820px) {
+  .app-header { padding: 0 14px; }
+  .header-action:not(:last-child) { display: none; }
+  .app-sidebar { width: min(86vw, 300px); transform: translateX(-100%); }
+  .app-main { margin-left: 0 !important; padding: calc(var(--header-height) + 20px) 14px 24px; }
+  .mobile-open .app-sidebar { transform: translateX(0); }
+  .mobile-open .mobile-backdrop { display: block; }
+}

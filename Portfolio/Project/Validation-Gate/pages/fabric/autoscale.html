@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabric Capacity Automation | Validation Gate</title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/console.css">
+  <link rel="stylesheet" href="../../assets/css/animation.css">
+  <link rel="stylesheet" href="../../assets/css/pages/fabric-autoscale.css">
+</head>
+<body data-page="fabric-autoscale" data-depth="2">
+<div id="app">
+  <div id="appHeader"></div>
+  <div id="appSidebar"></div>
+  <main class="app-main automation-page">
+    <div class="automation-inner">
+      <div class="automation-title-row">
+        <div><h1>Microsoft Fabric <small>Automation-Ver3</small></h1></div>
+        <div class="breadcrumb"><span>Validation Gate</span><span>/</span><strong>Fabric Automation</strong></div>
+      </div>
+
+      <section class="summary-grid fade-in">
+        <article class="summary-card cyan"><span>스케줄러 상태</span><strong id="schedulerState">Stopped</strong><small id="schedulerHint">시간 설정 대기 중</small></article>
+        <article class="summary-card teal"><span>현재 SKU / 상태</span><strong id="currentSkuStatus">-</strong><small id="capacityState">조회 전</small></article>
+        <article class="summary-card red"><span>Eventstream 실시간 CU 사용량</span><strong id="liveUtilization">- CU</strong><small id="thresholdHint">조회 대기</small></article>
+        <article class="summary-card orange"><span>프로비저닝</span><strong id="provisionState">-</strong><small>Azure Resource Manager</small></article>
+        <article class="summary-card purple"><span>마지막 엔진 동작</span><strong id="lastAction">-</strong><small id="lastActionHint">No Action</small></article>
+      </section>
+
+      <section class="workspace-grid fade-in">
+        <div class="left-column">
+          <article class="panel config-panel">
+            <header><h2>⚙ 리소스 및 자율 엔진 설정</h2></header>
+            <div class="resource-row">
+              <label><span>구독 ID</span><input id="subscriptionId" value="00000000-0000-4000-8000-000000000012"></label>
+              <label><span>리소스 그룹</span><input id="resourceGroup" value="kms-dev-fabric-rg"></label>
+              <label><span>리소스 명</span><input id="capacityName" value="kms-dev-fabric"></label>
+              <button id="lookupButton" class="btn ghost" type="button">조회</button>
+            </div>
+
+            <div class="metrics-config">
+              <div class="metrics-head"><strong>🔧 Eventstream CU 추적 설정 (Workload Identity)</strong><button id="toggleEditor" class="mini-button">Change</button></div>
+              <div class="identity-row">
+                <input id="tenantId" value="00000000-0000-4000-8000-000000000101" aria-label="Tenant ID">
+                <input id="clientId" value="00000000-0000-4000-8000-000000000102" aria-label="Client ID">
+                <input id="workspaceId" value="00000000-0000-4000-8000-000000000103" aria-label="Workspace ID">
+                <input id="datasetName" value="Fabric Capacity Metrics" aria-label="Dataset Name">
+              </div>
+              <label class="editor-label"><span>&lt;/&gt; DAX Query Diagnostic Editor</span>
+                <textarea id="daxQuery" spellcheck="false">EVALUATE
+SUMMARIZECOLUMNS(
+    FILTER(
+        'Capacities',
+        'Capacities'[Capacity Name] = "kms-dev-fabric"
+    ),
+    "Total_CU_Seconds", SUM('Usage Summary (Last 24 hours)'[CU (s)]),
+    "Current_CU_Usage",
+        DIVIDE(
+            SUM('Usage Summary (Last 24 hours)'[CU (s)]),
+            86400
+        )
+)</textarea>
+              </label>
+            </div>
+
+            <div class="engine-row">
+              <label><span>업무 시작</span><input id="startTime" type="time" value="08:00"></label>
+              <label><span>시작 타겟 SKU</span><select id="startSku"><option>F2</option><option selected>F4</option><option>F8</option><option>F16</option><option>F32</option></select></label>
+              <label><span>업무 종료</span><input id="endTime" type="time" value="22:00"></label>
+              <label><span>비업무 타겟 SKU</span><select id="idleSku"><option selected>F2</option><option>F4</option><option>F8</option><option>F16</option></select></label>
+              <label><span>부하 임계치 (CU)</span><input id="threshold" type="number" value="1.60" min="0.10" max="256" step="0.10"></label>
+              <button id="engineButton" class="btn success" type="button">엔진 가동</button>
+            </div>
+
+            <div class="manual-row">
+              <select id="manualSku"><option value="">즉시 수동 변경할 SKU 선택</option><option>F2</option><option>F4</option><option>F8</option><option>F16</option><option>F32</option><option>F64</option></select>
+              <button id="manualApplyButton" class="btn blue" type="button">수동 적용</button>
+            </div>
+          </article>
+
+          <article class="panel console-panel">
+            <header><h2>›_ System Console Output</h2><div><button id="sampleLog">Sample</button><button id="clearConsole">Clear</button><button id="copyConsole">Copy</button></div></header>
+            <div id="systemConsole" class="system-console"></div>
+          </article>
+        </div>
+
+        <aside class="right-column">
+          <div class="notice-box"><strong>수동 변경:</strong> 즉시 리소트를 조정합니다. 긴급 대응 시 사용하세요.<br><strong>자율 엔진:</strong> Eventstream Capacity Summary를 1분 단위로 확인해 CU 사용량 기준으로 자동 조절합니다.</div>
+          <article class="panel sku-panel">
+            <header><h2>SKU별 상세 단가표</h2></header>
+            <div class="sku-table-wrap"><table><thead><tr><th>SKU</th><th>CU</th><th>COST (MONTH / EST.)</th></tr></thead><tbody id="skuTableBody"></tbody></table></div>
+          </article>
+          <article class="panel code-panel">
+            <header><h2>&lt;/&gt; API 호출 샘플 (Python)</h2><button id="copyApi">Copy</button></header>
+            <pre id="apiSample"># Fabric SKU Update Sample
+url = (
+  "https://management.azure.com/subscriptions/{SUB_ID}"
+  "/resourceGroups/{RG}/providers/Microsoft.Fabric/capacities/{NAME}"
+  "?api-version=2023-11-01"
+)
+payload = {"sku": {"name": "F4", "tier": "Fabric"}}
+requests.patch(url, headers=headers, json=payload)</pre>
+          </article>
+        </aside>
+      </section>
+      <div id="appFooter"></div>
+    </div>
+  </main>
+</div>
+<script src="../../assets/js/router.js"></script>
+<script src="../../assets/js/utils.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/api/fabric-autoscale.js"></script>
+<script src="../../assets/js/pages/fabric-autoscale.js"></script>
+</body>
+</html>

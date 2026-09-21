@@ -1,0 +1,8 @@
+{
+  "method": "POST",
+  "url": "https://kms-demo.webhook.office.com/webhookb2/DEMO_SIGNATURE_NOT_VALID",
+  "headers": {"Content-Type": "application/json"},
+  "demoMode": true,
+  "payloadType": "AdaptiveCard",
+  "resource": "kms-prd-fabric"
+}

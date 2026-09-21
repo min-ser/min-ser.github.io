@@ -1,0 +1,34 @@
+{
+  "version": "0.8.4.1",
+  "javascript_syntax": {
+    "assets/js/common.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "game/engine/novel-engine.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "json_files_checked": [
+    "game/data/system/audio.json",
+    "game/data/system/backgrounds.json",
+    "game/data/system/characters.json",
+    "game/data/volume-01/part-01/chapter-01.json",
+    "data/characters-gallery.json"
+  ],
+  "required_event_tokens": [
+    "bindClick(\"#new-game\"",
+    "bindClick(\"#continue-game\"",
+    "bindClick(\"#title-load\"",
+    "bindClick(\"#title-settings\"",
+    "bindClick(\"#back-title\"",
+    "\"#sound-test-btn\"",
+    "\"#mute-btn\"",
+    "\"#auto-btn\"",
+    "\"#log-btn\""
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "engine-test-seo-harin",
+  "engineVersion": "0.9.0",
+  "title": "서하린 엔진 테스트",
+  "scenes": [
+    {
+      "id": "h1",
+      "speaker": "시스템",
+      "text": "서하린 표정 테스트를 시작합니다.",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "seo-harin",
+        "expression": "expression-01",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "h2",
+      "speaker": "서하린",
+      "text": "여기가 천류관으로 향하는 길인가요?",
+      "background": "rainy-mountain-road",
+      "character": {
+        "id": "seo-harin",
+        "expression": "expression-02",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "h3",
+      "speaker": "시스템",
+      "text": "전투 대기 자세를 표시합니다.",
+      "background": "rainy-mountain-road",
+      "battle": {
+        "characterId": "seo-harin",
+        "action": "battle-01",
+        "position": "center"
+      },
+      "sfx": "sword-draw"
+    },
+    {
+      "id": "h4",
+      "speaker": "서하린",
+      "text": "물러서세요. 이 검은 장식이 아니니까.",
+      "background": "rainy-mountain-after-battle",
+      "battle": {
+        "characterId": "seo-harin",
+        "action": "battle-04",
+        "position": "center"
+      },
+      "effect": "shake"
+    },
+    {
+      "id": "h5",
+      "type": "choice",
+      "prompt": "테스트 결과를 선택하세요.",
+      "choices": [
+        {
+          "label": "정상 표시",
+          "set": {
+            "harin_test": "pass"
+          },
+          "next": "h6"
+        },
+        {
+          "label": "보정 필요",
+          "set": {
+            "harin_test": "review"
+          },
+          "next": "h6"
+        }
+      ],
+      "background": "rainy-mountain-after-battle"
+    },
+    {
+      "id": "h6",
+      "speaker": "시스템",
+      "text": "서하린 엔진 테스트가 종료되었습니다.",
+      "background": "rainy-mountain-after-battle",
+      "character": {
+        "id": "seo-harin",
+        "expression": "expression-01",
+        "position": "right",
+        "visible": true
+      }
+    }
+  ]
+}

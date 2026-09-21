@@ -1,0 +1,7 @@
+{
+  "status": 202,
+  "code": "ACCEPTED",
+  "message": "Adaptive Card accepted by Teams webhook.",
+  "requestId": "kms-demo-request",
+  "demoMode": true
+}

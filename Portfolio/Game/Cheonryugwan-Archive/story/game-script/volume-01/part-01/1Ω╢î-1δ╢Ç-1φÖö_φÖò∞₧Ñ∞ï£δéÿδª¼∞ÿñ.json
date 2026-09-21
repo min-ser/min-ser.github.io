@@ -1,0 +1,2051 @@
+{
+  "id": "volume-01-part-01-chapter-01",
+  "title": "비 내리는 산길",
+  "subtitle": "1부 — 흐르지 못한 검",
+  "episode": 1,
+  "status": "playable",
+  "canon": "source-based-expanded",
+  "background": "part1-rainy-mountain-road",
+  "bgm": "rain-theme",
+  "scenes": [
+    {
+      "id": "c01-s001",
+      "speaker": "",
+      "text": "비는 산을 깎아낼 듯 쏟아지고 있었다.",
+      "effect": "fade-in",
+      "background": "part1-rainy-mountain-road",
+      "ambient": "heavy-rain"
+    },
+    {
+      "id": "c01-s002",
+      "speaker": "",
+      "text": "굵은 빗줄기가 산허리를 두드렸다. 나뭇가지마다 맺힌 물방울이 무게를 견디지 못하고 쉴 새 없이 떨어졌다.",
+      "background": "part1-rainy-mountain-road",
+      "ambient": "heavy-rain"
+    },
+    {
+      "id": "c01-s003",
+      "speaker": "",
+      "text": "산허리를 휘감은 길은 오래전에 길의 모양을 잃었다. 흙탕물이 발목을 삼켰고, 검은 물줄기가 비탈 아래로 흘러내렸다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s004",
+      "speaker": "",
+      "text": "낮게 깔린 먹구름 사이에서 번개가 번뜩였다. 한 박자 늦게 울린 천둥이 산 전체를 뒤흔들었다.",
+      "effect": "flash",
+      "background": "part1-rainy-mountain-road",
+      "sfx": "thunder-distant"
+    },
+    {
+      "id": "c01-s005",
+      "speaker": "",
+      "text": "좁은 산길 한가운데, 검은 장포를 입은 사내가 서 있었다.",
+      "background": "part1-rainy-mountain-road",
+      "camera": "slow-zoom-center"
+    },
+    {
+      "id": "c01-s006",
+      "speaker": "",
+      "text": "비에 젖은 장포는 그의 가느다란 몸을 따라 무겁게 늘어졌다. 검은 옷자락 끝에서는 빗물이 끊임없이 떨어졌다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s007",
+      "speaker": "",
+      "text": "삿갓 아래로 드러난 피부는 지나치게 창백했다. 젖은 머리카락 사이로 보이는 입술만이 피를 머금은 듯 붉었다.",
+      "background": "part1-rainy-mountain-road",
+      "camera": "portrait-close-up"
+    },
+    {
+      "id": "c01-s008",
+      "speaker": "",
+      "text": "사내의 앞과 뒤에는 정파의 무인 열두 명이 길을 막고 있었다.",
+      "background": "part1-rainy-mountain-road",
+      "camera": "wide-shot"
+    },
+    {
+      "id": "c01-s009",
+      "speaker": "",
+      "text": "그들이 두른 흰색과 청색의 장포는 진흙으로 얼룩져 있었지만, 허리춤의 검집에 새겨진 문양만큼은 선명했다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s010",
+      "speaker": "",
+      "text": "정파의 이름을 등에 업은 자들이었다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s011",
+      "speaker": "",
+      "text": "횃불은 비에 젖어 거의 꺼져가고 있었다. 붉은 불빛이 흔들릴 때마다 무인들의 얼굴도 일그러져 보였다.",
+      "background": "part1-rainy-mountain-road",
+      "ambient": "rain-and-torch"
+    },
+    {
+      "id": "c01-s012",
+      "speaker": "",
+      "text": "포위의 중심에 선 사내는 아무 말도 하지 않았다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s013",
+      "speaker": "",
+      "text": "허리춤에는 검 한 자루가 매여 있었다. 검은 아직 검집 안에 있었다.",
+      "background": "part1-rainy-mountain-road",
+      "camera": "weapon-close-up"
+    },
+    {
+      "id": "c01-s014",
+      "speaker": "",
+      "text": "무인들은 사내가 검을 뽑기를 기다렸다. 그러나 그의 손은 검병에조차 닿아 있지 않았다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s015",
+      "speaker": "",
+      "text": "이상한 일이었다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s016",
+      "speaker": "",
+      "text": "고수라면 기세가 있어야 했다. 살수라면 감추려 해도 새어 나오는 살기가 있어야 했다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s017",
+      "speaker": "",
+      "text": "마교의 무인이라면 숨길 수 없는 광기나 탁한 마기가 있어야 했다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s018",
+      "speaker": "",
+      "text": "그러나 검은 장포의 사내에게서는 아무것도 느껴지지 않았다.",
+      "background": "part1-rainy-mountain-road",
+      "effect": "dim"
+    },
+    {
+      "id": "c01-s019",
+      "speaker": "",
+      "text": "기세도 없었다. 살기도 없었다. 분노도, 두려움도, 싸우려는 의지조차 보이지 않았다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s020",
+      "speaker": "",
+      "text": "그는 그저 그곳에 서 있었다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s021",
+      "speaker": "",
+      "text": "그래서 더 불길했다.",
+      "effect": "slow-pulse",
+      "background": "part1-rainy-mountain-road",
+      "bgm": "uneasy-rain-theme"
+    },
+    {
+      "id": "c01-s022",
+      "speaker": "정파 추적대장",
+      "text": "마교의 끄나풀이냐.",
+      "background": "part1-rainy-mountain-road",
+      "character": {
+        "id": "orthodox-captain-01",
+        "expression": "stern",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s023",
+      "speaker": "",
+      "text": "굵은 목소리가 빗소리를 밀어냈다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s024",
+      "speaker": "",
+      "text": "사내는 대답하지 않았다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s024a",
+      "speaker": "전서율",
+      "speakerId": "jeon-seoyul",
+      "text": "……비켜라.",
+      "background": "part1-rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s025",
+      "speaker": "정파 추적대장",
+      "text": "아니면 사파에서 보낸 살수인가.",
+      "background": "part1-rainy-mountain-road",
+      "character": {
+        "id": "orthodox-captain-01",
+        "expression": "suspicious",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s026",
+      "speaker": "",
+      "text": "대장은 사내의 침묵을 살폈다. 대답하지 못하는 것인지, 대답할 가치가 없다고 여기는 것인지 판단할 수 없었다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s027",
+      "speaker": "정파 추적대장",
+      "text": "어느 쪽이든 정파의 영역을 침범한 대가는 치르게 될 것이다.",
+      "background": "part1-rainy-mountain-road",
+      "character": {
+        "id": "orthodox-captain-01",
+        "expression": "commanding",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s028",
+      "speaker": "",
+      "text": "사내의 눈이 아주 천천히 움직였다.",
+      "background": "part1-rainy-mountain-road",
+      "camera": "eye-close-up"
+    },
+    {
+      "id": "c01-s029",
+      "speaker": "",
+      "text": "검붉은 눈동자가 포위한 무인들을 한 명씩 훑었다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s030",
+      "speaker": "",
+      "text": "그 시선에는 분노도 조롱도 없었다. 사람을 보고 있으면서도, 그들 너머의 다른 무언가를 보는 듯했다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s031",
+      "speaker": "젊은 무인",
+      "text": "무례한 놈. 대장께서 묻고 계시지 않느냐!",
+      "effect": "shake-small",
+      "background": "part1-rainy-mountain-road",
+      "character": {
+        "id": "orthodox-young-warrior-01",
+        "expression": "angry",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s032",
+      "speaker": "",
+      "text": "대열 오른쪽에 서 있던 젊은 무인이 한 걸음 앞으로 나섰다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s033",
+      "speaker": "",
+      "text": "그의 발이 진흙을 밟으며 깊게 파고들었다. 허리와 어깨가 자연스럽게 이어지고, 손은 곧게 검병을 향했다.",
+      "background": "part1-rainy-mountain-road",
+      "camera": "stance-close-up"
+    },
+    {
+      "id": "c01-s034",
+      "speaker": "",
+      "text": "잘 다듬어진 정파의 자세였다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s035",
+      "speaker": "",
+      "text": "무게 중심은 안정되어 있었고, 검을 뽑는 동작에는 군더더기가 없었다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s036",
+      "speaker": "정파 무인",
+      "text": "기다려라. 저자의 기척이 이상하다.",
+      "background": "part1-rainy-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-02",
+        "expression": "uneasy",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s037",
+      "speaker": "젊은 무인",
+      "text": "기척이 없으니 허세를 부리는 것이겠지요.",
+      "background": "part1-rainy-mountain-road",
+      "character": {
+        "id": "orthodox-young-warrior-01",
+        "expression": "confident",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s038",
+      "speaker": "",
+      "text": "젊은 무인은 사내의 창백한 얼굴과 가느다란 손목을 보았다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s039",
+      "speaker": "",
+      "text": "그리고 자신보다 약하다고 판단했다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s040",
+      "speaker": "젊은 무인",
+      "text": "허세 부리지 마라!",
+      "effect": "shake",
+      "background": "part1-rainy-mountain-road",
+      "sfx": "sword-draw",
+      "character": {
+        "id": "orthodox-young-warrior-01",
+        "expression": "attack",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s041",
+      "speaker": "",
+      "text": "검광이 빗속을 갈랐다.",
+      "effect": "slash",
+      "background": "part1-rainy-mountain-road",
+      "sfx": "sword-swing-fast"
+    },
+    {
+      "id": "c01-s042",
+      "speaker": "",
+      "text": "젊은 무인은 세 걸음 만에 거리를 지웠다. 검 끝은 흔들림 없이 사내의 가슴을 향했다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s043",
+      "speaker": "",
+      "text": "정석적인 찌르기였다. 빠르고 곧았으며, 힘의 낭비가 없었다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s044",
+      "speaker": "",
+      "text": "포위한 무인들 가운데 몇몇은 이미 승부가 끝났다고 생각했다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s045",
+      "speaker": "",
+      "text": "검은 장포의 사내는 피하지 않았다.",
+      "background": "part1-rainy-mountain-road",
+      "effect": "slow-motion"
+    },
+    {
+      "id": "c01-s046",
+      "speaker": "",
+      "text": "검을 뽑지도 않았다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s047",
+      "speaker": "",
+      "text": "다만 검집 끝이 아주 조금 기울었다.",
+      "background": "part1-rainy-mountain-road",
+      "camera": "weapon-close-up"
+    },
+    {
+      "id": "c01-s048",
+      "speaker": "",
+      "text": "손가락 한 마디보다도 작은 움직임이었다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s049",
+      "speaker": "",
+      "text": "검집 끝이 젊은 무인의 검등을 스쳤다.",
+      "effect": "impact-small",
+      "background": "part1-rainy-mountain-road",
+      "sfx": "metal-tap"
+    },
+    {
+      "id": "c01-s050",
+      "speaker": "",
+      "text": "쇳소리조차 빗소리에 묻힐 만큼 가벼운 접촉이었다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s051",
+      "speaker": "",
+      "text": "그러나 검로가 반 치 어긋났다.",
+      "effect": "distortion",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s052",
+      "speaker": "",
+      "text": "앞으로 뻗어야 할 힘이 갈 곳을 잃었다. 검에 실린 내공이 손목에서 막혔고, 막힌 힘은 그대로 팔을 타고 되돌아왔다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s053",
+      "speaker": "",
+      "text": "젊은 무인의 손목이 비틀렸다.",
+      "effect": "shake-small",
+      "background": "part1-rainy-mountain-road",
+      "sfx": "joint-twist"
+    },
+    {
+      "id": "c01-s054",
+      "speaker": "",
+      "text": "팔꿈치가 들리고 어깨의 축이 무너졌다. 단단히 박아두었던 앞발마저 진흙 위에서 미끄러졌다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s055",
+      "speaker": "",
+      "text": "검을 휘두른 사람은 젊은 무인이었다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s056",
+      "speaker": "",
+      "text": "그러나 자신의 검에 밀려 무너진 것도 그였다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s057",
+      "speaker": "젊은 무인",
+      "text": "왜……?",
+      "effect": "flash",
+      "background": "part1-rainy-mountain-road",
+      "sfx": "heartbeat-heavy",
+      "character": {
+        "id": "orthodox-young-warrior-01",
+        "expression": "shocked",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s057a",
+      "speaker": "전서율",
+      "speakerId": "jeon-seoyul",
+      "text": "네 검은 이미 무너져 있었다.",
+      "background": "part1-rainy-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s058",
+      "speaker": "",
+      "text": "젊은 무인의 눈이 크게 뜨였다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s059",
+      "speaker": "",
+      "text": "그는 아직 자신에게 일어난 일을 이해하지 못했다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s060",
+      "speaker": "",
+      "text": "그때 처음으로 검은 장포의 사내가 검을 뽑았다.",
+      "effect": "flash-white",
+      "background": "part1-rainy-mountain-road",
+      "sfx": "sword-draw-low"
+    },
+    {
+      "id": "c01-s061",
+      "speaker": "",
+      "text": "빠르지 않았다.",
+      "background": "part1-rainy-mountain-road",
+      "effect": "slow-motion"
+    },
+    {
+      "id": "c01-s062",
+      "speaker": "",
+      "text": "화려하지도 않았다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s063",
+      "speaker": "",
+      "text": "검은 젊은 무인의 무너진 자세 사이로 조용히 스며들었다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s064",
+      "speaker": "",
+      "text": "힘이 끊긴 순간과 다음 호흡이 시작되기 전의 짧은 틈.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s065",
+      "speaker": "",
+      "text": "검은 정확히 그 틈을 베었다.",
+      "effect": "slash-red",
+      "background": "part1-rainy-mountain-road",
+      "sfx": "sword-cut"
+    },
+    {
+      "id": "c01-s066",
+      "speaker": "",
+      "text": "붉은 선이 젊은 무인의 가슴 위에 그어졌다.",
+      "background": "part1-rainy-mountain-road"
+    },
+    {
+      "id": "c01-s067",
+      "speaker": "",
+      "text": "뒤늦게 피가 솟았다.",
+      "effect": "blood-splash",
+      "background": "part1-rainy-mountain-road",
+      "sfx": "blood-drop"
+    },
+    {
+      "id": "c01-s068",
+      "speaker": "",
+      "text": "젊은 무인은 검을 놓쳤다. 무릎이 진흙 속으로 꺼졌고, 몸은 힘없이 앞으로 쓰러졌다.",
+      "background": "part1-rainy-mountain-road",
+      "sfx": "body-fall-mud"
+    },
+    {
+      "id": "c01-s069",
+      "speaker": "",
+      "text": "피가 빗물에 씻겨 산길 아래로 흘렀다.",
+      "background": "part1-bloodied-mountain-road",
+      "ambient": "heavy-rain"
+    },
+    {
+      "id": "c01-s070",
+      "speaker": "",
+      "text": "정파 무인들의 표정이 굳었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s071",
+      "speaker": "",
+      "text": "한 사람도 사내가 무엇을 했는지 제대로 보지 못했다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s072",
+      "speaker": "정파 무인",
+      "text": "사술이다!",
+      "effect": "shake",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-03",
+        "expression": "afraid",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s073",
+      "speaker": "정파 무인",
+      "text": "기이한 수법에 흔들리지 마라! 놈은 검조차 제대로 휘두르지 못했다!",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-03",
+        "expression": "shouting",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s074",
+      "speaker": "",
+      "text": "외침은 동료들을 독려하기 위한 것이었지만, 정작 말한 자의 목소리부터 흔들리고 있었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s075",
+      "speaker": "정파 추적대장",
+      "text": "셋이 함께 친다. 좌우를 봉쇄하고 퇴로를 끊어라.",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-captain-01",
+        "expression": "commanding",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s076",
+      "speaker": "",
+      "text": "세 명의 무인이 동시에 움직였다.",
+      "effect": "shake-small",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "multiple-footsteps"
+    },
+    {
+      "id": "c01-s077",
+      "speaker": "",
+      "text": "한 명은 정면을 압박했다. 한 명은 오른쪽 측면을 파고들었고, 나머지 한 명은 뒤로 돌아 사내의 퇴로를 끊었다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "wide-combat-shot"
+    },
+    {
+      "id": "c01-s078",
+      "speaker": "",
+      "text": "훈련된 협공이었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s079",
+      "speaker": "",
+      "text": "정면의 검이 시선을 붙들고, 측면의 검이 몸을 몰아낸다. 뒤에 선 자는 물러날 공간을 지운다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s080",
+      "speaker": "",
+      "text": "그러나 그들의 호흡은 완전히 같지 않았다.",
+      "background": "part1-bloodied-mountain-road",
+      "effect": "flow-vision"
+    },
+    {
+      "id": "c01-s081",
+      "speaker": "",
+      "text": "정면의 무인은 동료의 죽음에 분노해 반 박자 빨랐다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s082",
+      "speaker": "",
+      "text": "측면의 무인은 방금 본 광경을 잊지 못해 반 박자 늦었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s083",
+      "speaker": "",
+      "text": "뒤를 막은 무인은 자신이 가장 안전하다고 생각했다. 그 작은 안도감이 검 끝을 느슨하게 만들었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s084",
+      "speaker": "",
+      "text": "검은 장포의 사내는 그 차이를 보았다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "eye-close-up"
+    },
+    {
+      "id": "c01-s085",
+      "speaker": "",
+      "text": "아니, 보았다는 말로는 부족했다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s086",
+      "speaker": "",
+      "text": "발밑으로 전달되는 무게, 빗속에서 끊기는 호흡, 검 끝이 향하는 방향과 살기가 솟아오르는 순간.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s087",
+      "speaker": "",
+      "text": "그 모든 것이 하나의 물줄기처럼 이어져 있었다.",
+      "background": "part1-bloodied-mountain-road",
+      "effect": "flow-lines"
+    },
+    {
+      "id": "c01-s088",
+      "speaker": "",
+      "text": "사내는 가장 앞선 흐름을 피하지 않았다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s089",
+      "speaker": "",
+      "text": "오히려 검 끝을 아주 조금 밀어주었다.",
+      "effect": "impact-small",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "metal-slide"
+    },
+    {
+      "id": "c01-s090",
+      "speaker": "",
+      "text": "분노에 쫓기던 정면의 검이 예상보다 깊게 들어왔다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s091",
+      "speaker": "",
+      "text": "그 검이 측면에서 다가오던 동료의 길을 막았다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s092",
+      "speaker": "정파 무인",
+      "text": "비켜!",
+      "effect": "shake",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-04",
+        "expression": "panic",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s093",
+      "speaker": "",
+      "text": "그러나 이미 늦었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s094",
+      "speaker": "",
+      "text": "두 자루의 검이 서로 얽혔다.",
+      "effect": "flash",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "sword-clash-heavy"
+    },
+    {
+      "id": "c01-s095",
+      "speaker": "",
+      "text": "뒤에서 퇴로를 끊던 무인은 앞으로 나서야 할지 자리를 지켜야 할지 망설였다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s096",
+      "speaker": "",
+      "text": "그 한순간의 망설임으로 포위에는 빈틈이 생겼다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s097",
+      "speaker": "",
+      "text": "사내의 검이 그 틈을 따라 흘렀다.",
+      "effect": "slash",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "sword-swing-low"
+    },
+    {
+      "id": "c01-s098",
+      "speaker": "",
+      "text": "첫 번째 검은 손목을 끊었다.",
+      "effect": "blood-splash-small",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s099",
+      "speaker": "",
+      "text": "두 번째 움직임은 옆으로 흘러가던 검세를 밀었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s100",
+      "speaker": "",
+      "text": "방향을 잃은 검이 동료의 옆구리를 깊게 파고들었다.",
+      "effect": "shake",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "blade-impact"
+    },
+    {
+      "id": "c01-s101",
+      "speaker": "정파 무인",
+      "text": "끄윽…….",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-05",
+        "expression": "wounded",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s102",
+      "speaker": "",
+      "text": "마지막 무인이 뒤늦게 검을 내질렀다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s103",
+      "speaker": "",
+      "text": "사내는 칼날을 정면으로 막지 않았다. 검면을 비스듬히 맞대고 힘을 옆으로 흘렸다.",
+      "effect": "flow-deflect",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "metal-slide-long"
+    },
+    {
+      "id": "c01-s104",
+      "speaker": "",
+      "text": "밀어붙이려던 힘이 허공으로 빠져나갔다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s105",
+      "speaker": "",
+      "text": "무인은 당황해 더 많은 내공을 검에 밀어 넣었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s106",
+      "speaker": "",
+      "text": "그 순간 사내의 검이 방향을 틀었다.",
+      "effect": "distortion",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s107",
+      "speaker": "",
+      "text": "갈 곳을 잃은 내공이 무인의 팔 안으로 되돌아왔다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s108",
+      "speaker": "",
+      "text": "팔뚝의 혈관이 부풀었다. 어깨가 뒤틀리고 손가락이 검병에서 떨어졌다.",
+      "effect": "shake-small",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "energy-reversal"
+    },
+    {
+      "id": "c01-s109",
+      "speaker": "정파 무인",
+      "text": "내공이…… 돌아온다……!",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-06",
+        "expression": "terrified",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s110",
+      "speaker": "",
+      "text": "그는 피를 토하며 무릎을 꿇었다.",
+      "effect": "blood-splash-small",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "cough-blood"
+    },
+    {
+      "id": "c01-s111",
+      "speaker": "",
+      "text": "협공은 끝났다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s112",
+      "speaker": "",
+      "text": "검은 장포의 사내가 협공을 부순 것이 아니었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s113",
+      "speaker": "",
+      "text": "분노와 두려움과 불신으로 어긋나 있던 세 사람의 흐름이 서로를 무너뜨렸다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s114",
+      "speaker": "",
+      "text": "사내는 그 흐름에 손끝을 얹었을 뿐이었다.",
+      "background": "part1-bloodied-mountain-road",
+      "effect": "flow-fade"
+    },
+    {
+      "id": "c01-s115",
+      "speaker": "정파 무인",
+      "text": "진형을 갖춰라! 혼자 움직이지 마라!",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-07",
+        "expression": "shouting",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s116",
+      "speaker": "",
+      "text": "남은 무인들이 간격을 좁혔다.",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "multiple-footsteps-mud"
+    },
+    {
+      "id": "c01-s117",
+      "speaker": "",
+      "text": "하지만 처음과 같은 대열은 아니었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s118",
+      "speaker": "",
+      "text": "누군가는 사내의 검을 보았고, 누군가는 동료가 자신의 힘에 무너지는 모습을 보았다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s119",
+      "speaker": "",
+      "text": "그들이 세운 진형 사이에는 이미 보이지 않는 두려움이 흐르고 있었다.",
+      "background": "part1-bloodied-mountain-road",
+      "effect": "dark-vignette"
+    },
+    {
+      "id": "c01-s120",
+      "speaker": "",
+      "text": "사내는 천천히 검을 내렸다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s121",
+      "speaker": "",
+      "text": "그의 검 끝에서 피가 흘렀다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "weapon-close-up"
+    },
+    {
+      "id": "c01-s122",
+      "speaker": "",
+      "text": "빗물이 피를 씻어냈지만 검은 완전히 깨끗해지지 않았다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s123",
+      "speaker": "",
+      "text": "사내의 손끝이 미세하게 떨렸다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "hand-close-up"
+    },
+    {
+      "id": "c01-s124",
+      "speaker": "",
+      "text": "남은 무인 중 하나가 그 떨림을 발견했다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s125",
+      "speaker": "정파 무인",
+      "text": "놈도 지쳤다! 검 끝이 떨리고 있다!",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-08",
+        "expression": "hopeful",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s126",
+      "speaker": "",
+      "text": "그 말에 무인들의 눈빛이 잠시 살아났다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s127",
+      "speaker": "",
+      "text": "그들은 떨림을 두려움이라고 생각했다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s128",
+      "speaker": "",
+      "text": "검은 장포의 사내가 자신들의 수와 기세에 눌리기 시작했다고 믿었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s129",
+      "speaker": "",
+      "text": "아무도 그의 눈에 겹쳐지는 얼굴들을 보지 못했다.",
+      "background": "part1-memory-overlay",
+      "effect": "memory"
+    },
+    {
+      "id": "c01-s130",
+      "speaker": "",
+      "text": "방금 쓰러진 젊은 무인의 얼굴 위로 다른 얼굴이 떠올랐다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s131",
+      "speaker": "",
+      "text": "웃고 있는 얼굴이었다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s132",
+      "speaker": "",
+      "text": "입을 가린 채 비웃는 얼굴.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s133",
+      "speaker": "",
+      "text": "무언가를 보았으면서도 고개를 돌리는 얼굴.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s134",
+      "speaker": "",
+      "text": "말없이 눈을 피한 얼굴.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s135",
+      "speaker": "",
+      "text": "누구인지는 알 수 없었다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s136",
+      "speaker": "",
+      "text": "현재와 과거가 빗물 속에서 뒤섞였다.",
+      "effect": "memory-distortion",
+      "background": "part1-memory-overlay",
+      "sfx": "memory-drone"
+    },
+    {
+      "id": "c01-s137",
+      "speaker": "오래된 목소리",
+      "text": "예를 지켜라.",
+      "effect": "memory",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s138",
+      "speaker": "",
+      "text": "낮고 희미한 목소리가 빗소리 사이로 스며들었다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s139",
+      "speaker": "오래된 목소리",
+      "text": "윗사람 앞에서 함부로 고개를 들지 마라.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s140",
+      "speaker": "",
+      "text": "사내의 손가락이 검병을 세게 움켜쥐었다.",
+      "background": "part1-memory-overlay",
+      "camera": "hand-close-up"
+    },
+    {
+      "id": "c01-s141",
+      "speaker": "정파 추적대장",
+      "text": "지금이다. 놈의 호흡이 흐트러졌다!",
+      "effect": "shake",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-captain-01",
+        "expression": "attack",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s142",
+      "speaker": "",
+      "text": "현실의 외침이 기억을 찢었다.",
+      "effect": "flash",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "heartbeat-stop"
+    },
+    {
+      "id": "c01-s143",
+      "speaker": "",
+      "text": "남은 무인들이 일제히 달려들었다.",
+      "effect": "shake",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "mass-charge"
+    },
+    {
+      "id": "c01-s144",
+      "speaker": "",
+      "text": "검은 장포의 사내가 고개를 들었다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "portrait-close-up"
+    },
+    {
+      "id": "c01-s145",
+      "speaker": "",
+      "text": "그의 입꼬리가 아주 조금 올라가 있었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s146",
+      "speaker": "정파 무인",
+      "text": "웃고 있어…….",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-02",
+        "expression": "terrified",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s147",
+      "speaker": "",
+      "text": "달려들던 무인 하나의 발이 순간적으로 느려졌다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s148",
+      "speaker": "정파 무인",
+      "text": "저 마도가 사람을 죽이며 웃고 있다!",
+      "effect": "shake-small",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-07",
+        "expression": "panic",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s149",
+      "speaker": "",
+      "text": "그러나 사내의 눈은 웃고 있지 않았다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "eye-close-up"
+    },
+    {
+      "id": "c01-s150",
+      "speaker": "",
+      "text": "검붉은 눈동자 안에는 아무런 기쁨도 없었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s151",
+      "speaker": "",
+      "text": "턱은 미세하게 떨리고 있었다. 입꼬리는 웃음이 아니라 경련처럼 굳어 있었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s152",
+      "speaker": "",
+      "text": "금방이라도 울 것 같은 얼굴이었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s153",
+      "speaker": "",
+      "text": "그런데 입만 웃고 있는 것처럼 보였다.",
+      "effect": "dark-vignette",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s154",
+      "speaker": "",
+      "text": "무인들은 그 차이를 알아보지 못했다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s155",
+      "speaker": "",
+      "text": "그들은 공포 속에서 사내를 괴물로 확정했다.",
+      "background": "part1-bloodied-mountain-road",
+      "bgm": "disaster-sword-theme"
+    },
+    {
+      "id": "c01-s156",
+      "speaker": "",
+      "text": "첫 번째 무인이 검을 내리쳤다.",
+      "effect": "slash",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "sword-swing-heavy"
+    },
+    {
+      "id": "c01-s157",
+      "speaker": "",
+      "text": "사내의 검이 아래에서 위로 흘렀다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s158",
+      "speaker": "",
+      "text": "두 검이 맞닿았다.",
+      "effect": "flash",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "sword-clash-heavy"
+    },
+    {
+      "id": "c01-s159",
+      "speaker": "",
+      "text": "무인은 분명 검을 밀어붙였다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s160",
+      "speaker": "",
+      "text": "그러나 힘은 사내에게 닿지 않았다.",
+      "background": "part1-bloodied-mountain-road",
+      "effect": "flow-deflect"
+    },
+    {
+      "id": "c01-s161",
+      "speaker": "",
+      "text": "검면을 타고 옆으로 흘러나간 힘이 두 번째 무인의 검과 충돌했다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s162",
+      "speaker": "",
+      "text": "두 번째 무인은 갑작스러운 충격을 견디지 못하고 자세를 틀었다.",
+      "effect": "shake-small",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s163",
+      "speaker": "",
+      "text": "그가 피하려던 방향에는 세 번째 무인이 있었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s164",
+      "speaker": "정파 무인",
+      "text": "멈춰!",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-09",
+        "expression": "panic",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s165",
+      "speaker": "",
+      "text": "검과 검이 부딪혔다. 어깨와 어깨가 충돌했다.",
+      "effect": "shake",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "body-collision"
+    },
+    {
+      "id": "c01-s166",
+      "speaker": "",
+      "text": "완성되어야 할 진형이 안쪽에서 뒤엉켰다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s167",
+      "speaker": "",
+      "text": "사내는 그 사이를 걸었다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "tracking-center"
+    },
+    {
+      "id": "c01-s168",
+      "speaker": "",
+      "text": "달리지 않았다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s169",
+      "speaker": "",
+      "text": "서두르지도 않았다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s170",
+      "speaker": "",
+      "text": "무너지는 흐름의 끝에 검을 한 번씩 놓았을 뿐이었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s171",
+      "speaker": "",
+      "text": "검광이 한 차례 번뜩였다.",
+      "effect": "flash-white",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "sword-cut-fast"
+    },
+    {
+      "id": "c01-s172",
+      "speaker": "",
+      "text": "한 명이 목을 움켜쥐고 쓰러졌다.",
+      "effect": "blood-splash-small",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s173",
+      "speaker": "",
+      "text": "다시 검광이 번뜩였다.",
+      "effect": "flash-white",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "sword-cut-fast"
+    },
+    {
+      "id": "c01-s174",
+      "speaker": "",
+      "text": "두 번째 무인의 허벅지가 갈라졌다. 중심을 잃은 몸이 진흙 속으로 굴렀다.",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "body-fall-mud"
+    },
+    {
+      "id": "c01-s175",
+      "speaker": "",
+      "text": "세 번째 무인은 검을 버리고 뒤로 물러났다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s176",
+      "speaker": "정파 무인",
+      "text": "오지 마라…….",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-10",
+        "expression": "terrified",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s177",
+      "speaker": "",
+      "text": "사내는 그를 향해 가지 않았다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s178",
+      "speaker": "",
+      "text": "그저 옆으로 한 걸음 움직였다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s179",
+      "speaker": "",
+      "text": "도망치던 무인의 발이 쓰러진 동료의 검집에 걸렸다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s180",
+      "speaker": "",
+      "text": "그가 넘어지는 순간, 뒤에서 날아온 동료의 검이 등을 꿰뚫었다.",
+      "effect": "shake",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "blade-impact"
+    },
+    {
+      "id": "c01-s181",
+      "speaker": "정파 무인",
+      "text": "아니야…… 나는…….",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-warrior-10",
+        "expression": "dying",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s182",
+      "speaker": "",
+      "text": "그의 말은 끝나지 못했다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s183",
+      "speaker": "",
+      "text": "정파 추적대장은 이를 악물었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s184",
+      "speaker": "",
+      "text": "열두 명으로 시작한 추적대 가운데 제대로 서 있는 사람은 이제 셋뿐이었다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "wide-shot"
+    },
+    {
+      "id": "c01-s185",
+      "speaker": "정파 추적대장",
+      "text": "네놈은 대체 누구냐.",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-captain-01",
+        "expression": "fearful",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s185a",
+      "speaker": "전서율",
+      "speakerId": "jeon-seoyul",
+      "text": "길을 막은 건 너희다.",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s186",
+      "speaker": "",
+      "text": "처음의 오만은 사라져 있었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s187",
+      "speaker": "",
+      "text": "그의 목소리에는 대답을 원하는 마음보다, 정체를 모르는 것에 대한 공포가 더 짙었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s188",
+      "speaker": "",
+      "text": "검은 장포의 사내는 대답하지 않았다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s189",
+      "speaker": "",
+      "text": "대신 추적대장의 발을 보았다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "stance-close-up"
+    },
+    {
+      "id": "c01-s190",
+      "speaker": "",
+      "text": "앞발에 너무 많은 힘이 실려 있었다.",
+      "background": "part1-bloodied-mountain-road",
+      "effect": "flow-vision"
+    },
+    {
+      "id": "c01-s191",
+      "speaker": "",
+      "text": "그는 두려움을 숨기기 위해 몸을 앞으로 밀고 있었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s192",
+      "speaker": "",
+      "text": "어깨는 굳었고, 호흡은 짧았다. 검을 내리칠 때마다 오른쪽 무릎이 아주 조금 안으로 기울었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s193",
+      "speaker": "",
+      "text": "이미 흐름은 무너져 있었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s194",
+      "speaker": "정파 추적대장",
+      "text": "대답하라!",
+      "effect": "shake",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-captain-01",
+        "expression": "desperate",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s195",
+      "speaker": "",
+      "text": "추적대장이 땅을 박찼다.",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "footstep-heavy"
+    },
+    {
+      "id": "c01-s196",
+      "speaker": "",
+      "text": "검에 실린 기세가 빗물을 밀어냈다.",
+      "effect": "wind-burst",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "energy-surge"
+    },
+    {
+      "id": "c01-s197",
+      "speaker": "",
+      "text": "처음으로 산길 위의 빗줄기가 갈라졌다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s198",
+      "speaker": "",
+      "text": "검은 장포의 사내가 한 걸음 앞으로 나섰다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s199",
+      "speaker": "",
+      "text": "두 검이 맞부딪히기 직전, 사내의 검 끝이 추적대장의 검 아래로 스며들었다.",
+      "effect": "slow-motion",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s200",
+      "speaker": "",
+      "text": "사내는 검을 막지 않았다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s201",
+      "speaker": "",
+      "text": "추적대장이 스스로 무너지도록 검의 방향만 바꾸었다.",
+      "effect": "flow-reversal",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "energy-reversal"
+    },
+    {
+      "id": "c01-s202",
+      "speaker": "",
+      "text": "앞으로 쏟아낸 힘이 비스듬히 틀어졌다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s203",
+      "speaker": "",
+      "text": "추적대장의 오른쪽 무릎이 안으로 꺾였다.",
+      "effect": "shake-small",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "joint-impact"
+    },
+    {
+      "id": "c01-s204",
+      "speaker": "",
+      "text": "몸이 기울었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s205",
+      "speaker": "",
+      "text": "사내의 검은 이미 그의 목 앞에 도착해 있었다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "weapon-close-up"
+    },
+    {
+      "id": "c01-s206",
+      "speaker": "정파 추적대장",
+      "text": "잠깐…….",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-captain-01",
+        "expression": "shocked",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s207",
+      "speaker": "",
+      "text": "검이 지나갔다.",
+      "effect": "slash-red",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "sword-cut"
+    },
+    {
+      "id": "c01-s208",
+      "speaker": "",
+      "text": "추적대장의 몸이 진흙 위로 무너졌다.",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "body-fall-mud"
+    },
+    {
+      "id": "c01-s209",
+      "speaker": "",
+      "text": "남은 두 무인은 검을 들고 있었지만 더는 다가오지 못했다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s210",
+      "speaker": "",
+      "text": "사내가 그들을 바라보았다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s211",
+      "speaker": "",
+      "text": "검붉은 눈동자와 마주친 순간, 한 명은 검을 떨어뜨렸다.",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "sword-drop"
+    },
+    {
+      "id": "c01-s212",
+      "speaker": "정파 무인",
+      "text": "살려…….",
+      "background": "part1-bloodied-mountain-road",
+      "character": {
+        "id": "orthodox-survivor-01",
+        "expression": "pleading",
+        "position": "right",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s213",
+      "speaker": "",
+      "text": "마지막 말은 빗소리에 삼켜졌다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s214",
+      "speaker": "",
+      "text": "사내의 검이 움직였다.",
+      "effect": "flash-white",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "sword-swing-fast"
+    },
+    {
+      "id": "c01-s215",
+      "speaker": "",
+      "text": "비명이 산속으로 번졌다.",
+      "effect": "shake",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "distant-scream"
+    },
+    {
+      "id": "c01-s216",
+      "speaker": "",
+      "text": "그리고 곧 끊어졌다.",
+      "background": "part1-bloodied-mountain-road",
+      "bgm": "silence"
+    },
+    {
+      "id": "c01-s217",
+      "speaker": "",
+      "text": "마지막 비명이 그친 뒤에도 비는 멈추지 않았다.",
+      "background": "part1-bloodied-mountain-road",
+      "ambient": "heavy-rain"
+    },
+    {
+      "id": "c01-s218",
+      "speaker": "",
+      "text": "산길에는 쓰러진 무인들과 부러진 검, 진흙에 반쯤 잠긴 횃불만이 남았다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "wide-shot"
+    },
+    {
+      "id": "c01-s219",
+      "speaker": "",
+      "text": "정파의 문양은 피와 빗물에 번져 형태를 잃어가고 있었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s220",
+      "speaker": "",
+      "text": "검은 장포의 사내는 시체들 사이에 홀로 서 있었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s221",
+      "speaker": "",
+      "text": "승리한 사람의 모습은 아니었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s222",
+      "speaker": "",
+      "text": "기쁨도 없었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s223",
+      "speaker": "",
+      "text": "분노가 풀린 흔적도 없었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s224",
+      "speaker": "",
+      "text": "사내는 멍하니 죽은 자들을 내려다보았다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "slow-zoom-center"
+    },
+    {
+      "id": "c01-s225",
+      "speaker": "",
+      "text": "죽은 자들의 얼굴이 빗물 아래에서 흔들렸다.",
+      "background": "part1-memory-overlay",
+      "effect": "memory"
+    },
+    {
+      "id": "c01-s226",
+      "speaker": "",
+      "text": "방금 전까지 자신을 죽이려 했던 얼굴 위로 오래된 얼굴들이 겹쳐졌다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s227",
+      "speaker": "",
+      "text": "웃던 얼굴.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s228",
+      "speaker": "",
+      "text": "비웃던 얼굴.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s229",
+      "speaker": "",
+      "text": "말없이 고개를 돌리던 얼굴.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s230",
+      "speaker": "",
+      "text": "사내의 손에서 힘이 빠졌다.",
+      "background": "part1-memory-overlay",
+      "camera": "hand-close-up"
+    },
+    {
+      "id": "c01-s231",
+      "speaker": "",
+      "text": "검 끝이 아래로 처졌다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s232",
+      "speaker": "그리운 목소리",
+      "text": "시기와 질투를 조심하라.",
+      "effect": "memory",
+      "background": "part1-memory-overlay",
+      "sfx": "memory-drone"
+    },
+    {
+      "id": "c01-s233",
+      "speaker": "",
+      "text": "이번 목소리는 앞서 들린 것보다 따뜻했다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s234",
+      "speaker": "",
+      "text": "너무 오래되어 잊은 줄 알았지만, 한 번도 잊은 적 없는 목소리였다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s235",
+      "speaker": "그리운 목소리",
+      "text": "먼저 맞서지 마라.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s236",
+      "speaker": "",
+      "text": "사내의 눈꺼풀이 천천히 내려왔다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s237",
+      "speaker": "그리운 목소리",
+      "text": "선배를 존중하라.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s238",
+      "speaker": "",
+      "text": "검을 쥔 손이 다시 떨렸다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s239",
+      "speaker": "그리운 목소리",
+      "text": "가르치는 이를 공경하라.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s240",
+      "speaker": "",
+      "text": "사내는 아무런 대답도 하지 않았다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s240a",
+      "speaker": "전서율",
+      "speakerId": "jeon-seoyul",
+      "text": "……알고 있습니다.",
+      "effect": "memory",
+      "background": "part1-memory-overlay",
+      "character": {
+        "id": "jeon-seoyul",
+        "expression": "default",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s241",
+      "speaker": "",
+      "text": "다만 굳어 있던 입꼬리가 아주 천천히 내려왔다.",
+      "background": "part1-memory-overlay",
+      "camera": "portrait-close-up"
+    },
+    {
+      "id": "c01-s242",
+      "speaker": "",
+      "text": "웃는 것처럼 보이던 얼굴에는 아무것도 남지 않았다.",
+      "background": "part1-memory-overlay"
+    },
+    {
+      "id": "c01-s243",
+      "speaker": "",
+      "text": "사내가 눈을 떴다.",
+      "effect": "memory-end",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "memory-drone-stop"
+    },
+    {
+      "id": "c01-s244",
+      "speaker": "",
+      "text": "죽은 자들의 얼굴은 다시 낯선 정파 무인들의 얼굴로 돌아와 있었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s245",
+      "speaker": "",
+      "text": "그는 검을 털지 않았다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s246",
+      "speaker": "",
+      "text": "검에 남아 있던 피는 빗물이 대신 씻어냈다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s247",
+      "speaker": "",
+      "text": "사내는 천천히 검을 검집에 넣었다.",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "sword-sheath"
+    },
+    {
+      "id": "c01-s248",
+      "speaker": "",
+      "text": "찰칵.",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "sword-sheath-click"
+    },
+    {
+      "id": "c01-s249",
+      "speaker": "",
+      "text": "짧은 쇳소리가 학살의 끝을 알렸다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s250",
+      "speaker": "",
+      "text": "그는 쓰러진 자들을 돌아보지 않고 산길을 걸었다.",
+      "background": "part1-bloodied-mountain-road",
+      "camera": "tracking-back"
+    },
+    {
+      "id": "c01-s251",
+      "speaker": "",
+      "text": "검은 장포의 옷자락이 진흙과 피 위를 끌었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s252",
+      "speaker": "",
+      "text": "빗속으로 멀어지는 걸음에는 승리자의 가벼움이 없었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s253",
+      "speaker": "",
+      "text": "무거웠다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s254",
+      "speaker": "",
+      "text": "마치 자신이 죽인 자들의 무게를 모두 짊어진 사람처럼.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s255",
+      "speaker": "",
+      "text": "산길 아래쪽의 덤불이 작게 흔들렸다.",
+      "background": "part1-bloodied-mountain-road",
+      "sfx": "bush-rustle"
+    },
+    {
+      "id": "c01-s256",
+      "speaker": "",
+      "text": "진흙과 피를 뒤집어쓴 무인 하나가 죽은 동료의 몸 아래에서 숨을 죽이고 있었다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s257",
+      "speaker": "",
+      "text": "그는 검은 장포의 사내가 완전히 사라질 때까지 움직이지 못했다.",
+      "background": "part1-bloodied-mountain-road"
+    },
+    {
+      "id": "c01-s258",
+      "speaker": "",
+      "text": "훗날 살아남은 무인은 정파의 전각에서 그날의 일을 증언했다.",
+      "effect": "fade-to-black",
+      "background": "part1-orthodox-report-room",
+      "bgm": "aftermath-theme"
+    },
+    {
+      "id": "c01-s259",
+      "speaker": "생존한 정파 무인",
+      "text": "그자는 거의 움직이지 않았습니다.",
+      "background": "part1-orthodox-report-room",
+      "character": {
+        "id": "orthodox-survivor-01",
+        "expression": "traumatized",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s260",
+      "speaker": "생존한 정파 무인",
+      "text": "우리의 검은 분명 그자에게 닿았습니다. 그런데 힘이 사라졌습니다.",
+      "background": "part1-orthodox-report-room",
+      "character": {
+        "id": "orthodox-survivor-01",
+        "expression": "traumatized",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s261",
+      "speaker": "생존한 정파 무인",
+      "text": "사라진 힘이 다시 우리에게 돌아왔습니다.",
+      "background": "part1-orthodox-report-room",
+      "character": {
+        "id": "orthodox-survivor-01",
+        "expression": "fearful",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s262",
+      "speaker": "",
+      "text": "보고를 받던 이들 가운데 누구도 쉽게 입을 열지 못했다.",
+      "background": "part1-orthodox-report-room"
+    },
+    {
+      "id": "c01-s263",
+      "speaker": "정파 관리",
+      "text": "그자의 얼굴은 보았느냐.",
+      "background": "part1-orthodox-report-room",
+      "character": {
+        "id": "orthodox-official-01",
+        "expression": "stern",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s264",
+      "speaker": "생존한 정파 무인",
+      "text": "창백했습니다. 눈은 붉었고…….",
+      "background": "part1-orthodox-report-room",
+      "character": {
+        "id": "orthodox-survivor-01",
+        "expression": "remembering",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s265",
+      "speaker": "",
+      "text": "생존자는 말을 잇지 못하고 입술을 떨었다.",
+      "background": "part1-orthodox-report-room"
+    },
+    {
+      "id": "c01-s266",
+      "speaker": "정파 관리",
+      "text": "계속 말하라.",
+      "background": "part1-orthodox-report-room",
+      "character": {
+        "id": "orthodox-official-01",
+        "expression": "commanding",
+        "position": "left",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s267",
+      "speaker": "생존한 정파 무인",
+      "text": "그자는 사람을 죽이는 동안 웃고 있었습니다.",
+      "effect": "memory-flash",
+      "background": "part1-orthodox-report-room",
+      "sfx": "memory-drone",
+      "character": {
+        "id": "orthodox-survivor-01",
+        "expression": "terrified",
+        "position": "center",
+        "visible": true
+      }
+    },
+    {
+      "id": "c01-s268",
+      "speaker": "",
+      "text": "그 증언은 곧 정파 전역으로 퍼졌다.",
+      "background": "part1-black"
+    },
+    {
+      "id": "c01-s269",
+      "speaker": "",
+      "text": "기척 없는 검객.",
+      "background": "part1-black"
+    },
+    {
+      "id": "c01-s270",
+      "speaker": "",
+      "text": "검을 맞대면 힘이 사라지는 마도.",
+      "background": "part1-black"
+    },
+    {
+      "id": "c01-s271",
+      "speaker": "",
+      "text": "사람을 죽이면서 웃는 검은 장포의 괴물.",
+      "background": "part1-black"
+    },
+    {
+      "id": "c01-s272",
+      "speaker": "",
+      "text": "하지만 그 증언에서 단 하나만은 틀렸다.",
+      "background": "part1-black",
+      "bgm": "tragic-reveal-theme"
+    },
+    {
+      "id": "c01-s273",
+      "speaker": "",
+      "text": "그는 웃고 있지 않았다.",
+      "effect": "fade-out",
+      "background": "part1-black",
+      "end": true
+    }
+  ],
+  "engineVersion": "0.9.8.6",
+  "dataVersion": "1.1.0",
+  "playMode": "linear",
+  "choices": false,
+  "characterDisplayRule": "speaker-only",
+  "nextChapter": "volume-01-part-01-chapter-02",
+  "sceneCgRule": "automatic-scene-id-exact",
+  "sceneCgDuration": "current-scene-only"
+}

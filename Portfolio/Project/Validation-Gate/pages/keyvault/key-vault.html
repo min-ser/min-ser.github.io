@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure Key Vault | Validation Gate</title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/console.css">
+  <link rel="stylesheet" href="../../assets/css/animation.css">
+  <link rel="stylesheet" href="../../assets/css/pages/key-vault.css">
+</head>
+<body data-page="key-vault" data-depth="2">
+  <div id="app">
+    <div id="appHeader"></div>
+    <div id="appSidebar"></div>
+
+    <main class="app-main keyvault-page">
+      <div class="keyvault-page-inner">
+        <div class="breadcrumb"><span>Validation Gate</span><span>/</span><strong>Azure</strong><span>/</span><strong>AzureKeyVault</strong></div>
+
+        <section class="kv-page-titlebar">
+          <div>
+            <span class="section-kicker">AZURE SECURITY SERVICE</span>
+            <h1>Key Vault Certificates / Secrets</h1>
+          </div>
+          <div class="kv-summary-pills" aria-label="summary">
+            <span class="kv-pill success">성공 <strong id="successCount">0</strong></span>
+            <span class="kv-pill fail">실패 <strong id="failureSummaryCount">0</strong></span>
+            <span class="kv-pill vault">Vaults <strong id="vaultSummaryCount">1</strong></span>
+          </div>
+        </section>
+
+        <section class="kv-workspace">
+          <div class="kv-left-column">
+            <article class="kv-control-panel">
+              <section class="kv-control-section">
+                <h2>리소스 연결</h2>
+                <label for="kvVaultName">Vault Name</label>
+                <div class="vault-input-wrap">
+                  <span class="prefix">https://</span>
+                  <input id="kvVaultName" value="kms-prd-kv" aria-label="Vault name">
+                  <span class="suffix">.vault.azure.net</span>
+                </div>
+                <input id="kvClientId" type="hidden" value="00000000-0000-4000-8000-000000000009">
+                <button id="collectKvCertificates" class="kv-btn primary">인증서 수집 시작</button>
+              </section>
+
+              <section class="kv-control-section secret-section">
+                <h2>Secret 조회</h2>
+                <label for="secretName">Secret Name</label>
+                <input id="secretName" value="kms-demo-secret">
+                <input id="secretVersion" type="hidden" value="">
+                <button id="getKvSecret" class="kv-btn success">Secret 값 확인</button>
+                <div class="secret-value-box">
+                  <span>Secret Value</span>
+                  <code id="secretValueDisplay">값 조회 전입니다.</code>
+                </div>
+              </section>
+            </article>
+
+            <article class="kv-log-panel">
+              <header>
+                <h2>EXECUTION LOG</h2>
+                <button id="clearKvConsole" type="button" title="로그 초기화">↻</button>
+              </header>
+              <div id="kvConsole" class="kv-console" role="log"></div>
+              <div class="kv-log-actions">
+                <button id="loadKvSample">Sample</button>
+                <button id="copyKvConsole">Copy</button>
+              </div>
+            </article>
+          </div>
+
+          <article class="kv-inventory-panel">
+            <header class="inventory-header">
+              <div class="inventory-tabs" role="tablist">
+                <button id="inventoryTab" class="inventory-tab active" type="button" role="tab">Inventory</button>
+                <button id="failureTab" class="inventory-tab" type="button" role="tab">Failures</button>
+              </div>
+              <button id="resetKvInventory" class="reset-button" type="button">전체 초기화</button>
+            </header>
+
+            <div class="inventory-table-wrap">
+              <table class="inventory-table">
+                <thead id="kvInventoryHead">
+                  <tr>
+                    <th>VAULT</th>
+                    <th>인증서 이름</th>
+                    <th>상태</th>
+                    <th>생성일</th>
+                    <th>만료일</th>
+                  </tr>
+                </thead>
+                <tbody id="kvInventoryBody">
+                  <tr class="inventory-empty"><td colspan="5">인증서 수집 시작을 누르면 보유 인증서가 표시됩니다.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <details class="kv-debug-panel">
+          <summary>Demo Validation Result / Raw Result</summary>
+          <div class="kv-debug-grid">
+            <div>
+              <h3>Validation Result</h3>
+              <div id="kvResult"><p>대기 중입니다.</p></div>
+            </div>
+            <div>
+              <h3>Raw Result</h3>
+              <pre id="kvRawResult">{}</pre>
+            </div>
+          </div>
+          <span id="kvResultBadge" class="result-badge idle">READY</span>
+          <select id="permissionScenario" hidden>
+            <option value="allowed">Secret Get 허용</option>
+            <option value="forbidden">RBAC 권한 부족</option>
+            <option value="network">Private Endpoint 연결 실패</option>
+          </select>
+          <input id="principalType" value="ServicePrincipal" hidden>
+          <button id="testKvAuth" hidden>인증 테스트</button>
+          <button id="checkKvPermission" hidden>권한 상태 점검</button>
+        </details>
+
+        <div id="appFooter"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../assets/js/router.js"></script>
+  <script src="../../assets/js/utils.js"></script>
+  <script src="../../assets/js/theme.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script src="../../assets/js/api/keyvault.js"></script>
+  <script src="../../assets/js/pages/key-vault.js"></script>
+</body>
+</html>
