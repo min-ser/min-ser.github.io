@@ -17,5 +17,12 @@ for (const asset of data.assets || []) {
   if (!asset.url?.startsWith('assets/archive/')) fail(`Invalid asset URL: ${asset.url}`);
   if (!fs.existsSync(path.join(site, asset.url))) fail(`Missing copied asset: ${asset.url}`);
 }
+const academy = data.items.filter(x=>/^01_NOVEL\/PART_01_ACADEMY\/chapter-\d+\.md$/i.test(x.path));
+const nums=academy.map(x=>Number(x.path.match(/chapter-(\d+)\.md$/i)[1]));
+if(new Set(nums).size!==nums.length)fail('Duplicate academy chapter numbers');
+if(nums.length&&Array.from({length:Math.max(...nums)},(_,i)=>i+1).some(n=>!nums.includes(n)))fail('Academy chapter gap');
+const expected=Number(process.env.NOVEL_EXPECT_ACADEMY_CHAPTERS||0);
+if(expected&&academy.length<expected)fail(`Academy chapters ${academy.length} below expected ${expected}`);
+if(data.audit&&data.audit.academyChapters!==academy.length)fail('Manifest chapter audit mismatch');
 if (fs.existsSync(path.join(site, 'package.json'))) fail('Source package.json published');
 console.log(`[NOVEL VERIFY] OK: ${data.items.filter(x=>x.kind==='novel').length} chapters, ${(data.assets||[]).length} assets, revision=${data.revision}`);

@@ -17,7 +17,11 @@ for(const section of ['01_NOVEL','02_CANON'])walk(path.join(root,section),file=>
  const part=rel.startsWith('01_NOVEL/')?rel.split('/')[1]:'';
  const assetPrefix='assets/archive/';
  const resolveAsset=value=>{if(!value)return '';let v=value.trim();if(/^https:\/\//.test(v))return v;if(v.startsWith('03_ASSETS/'))return assetPrefix+v.slice('03_ASSETS/'.length);if(v.startsWith('assets/'))return v;if(/^chapter-[0-9]+\//.test(v))return assetPrefix+'NOVEL/'+part+'/'+v;if(/^([a-z0-9_-]+\.(png|webp|jpe?g|avif))$/i.test(v))return assetPrefix+'NOVEL/'+part+'/'+path.basename(file,'.md')+'/'+v;return ''};
- const title=body.match(/^#\s+(.+)$/m)?.[1]||path.basename(file,'.md').replace(/_/g,' ');
+ // Prefer the explicit chapter heading; repeated part headings are not chapter titles.
+ const headings=[...body.matchAll(/^#{1,3}\s+(.+)$/gm)].map(m=>m[1].trim());
+ const chapterMatch=rel.match(/\/chapter-(\d+)\.md$/i);
+ const chapterTitle=headings.find(h=>/제\s*\d+\s*화|\d+화|제\s*\d+\s*장/.test(h))||headings.find(h=>!/^《?천류관》?\s*제?\d+부/.test(h));
+ const title=chapterMatch?(chapterTitle||`제${Number(chapterMatch[1])}화`):(headings[0]||path.basename(file,'.md').replace(/_/g,' '));
  items.push({path:rel,title,kind:rel.startsWith('01_NOVEL/')?'novel':'canon',body,part,id:rel,cover:resolveAsset(front.cover||front.thumbnail||'')});
 });
 const assetRoot=path.join(root,'03_ASSETS');walk(assetRoot,file=>{
@@ -48,5 +52,14 @@ if(fs.existsSync(mappingFile)){
  fs.writeFileSync(mappingFile,JSON.stringify(cleaned,null,2));
  console.log(`[NOVEL] 공식 이미지 매핑 검증: 대표 ${Object.keys(cleaned.portraits).length}개, 갤러리 ${Object.values(cleaned.galleries).reduce((n,a)=>n+a.length,0)}개`);
 }
-fs.mkdirSync(target,{recursive:true});fs.writeFileSync(path.join(target,'content.json'),JSON.stringify({schemaVersion:1,source:'min-ser/NOVEL',sourcePath:'CHEONRYUGWAN',branch:'master',revision,count:items.length,assets,items}));
+const academy=items.filter(x=>/^01_NOVEL\/PART_01_ACADEMY\/chapter-\d+\.md$/i.test(x.path));
+const numbers=academy.map(x=>Number(x.path.match(/chapter-(\d+)\.md$/i)[1]));
+const unique=[...new Set(numbers)].sort((a,b)=>a-b);
+const missing=unique.length?Array.from({length:unique.at(-1)},(_,i)=>i+1).filter(n=>!unique.includes(n)):[];
+const expected=Number(process.env.NOVEL_EXPECT_ACADEMY_CHAPTERS||0);
+if(missing.length)throw Error(`학관편 회차 누락: ${missing.join(', ')}화 (실제 ${unique.join(', ')})`);
+if(expected&&unique.length<expected)throw Error(`학관편 회차 부족: ${unique.length}/${expected}화. NOVEL checkout revision=${revision}`);
+const audit={academyChapters:unique.length,academyChapterNumbers:unique,academyMissing:missing,expectedAcademyChapters:expected,generatedAt:new Date().toISOString()};
+fs.mkdirSync(target,{recursive:true});fs.writeFileSync(path.join(target,'content.json'),JSON.stringify({schemaVersion:1,source:'min-ser/NOVEL',sourcePath:'CHEONRYUGWAN',branch:'master',revision,count:items.length,assets,audit,items}));
+console.log(`[NOVEL] 학관편 회차 검증 ${unique.length}편, 누락 ${missing.length}편, 최소 기준 ${expected||'미지정'}`);
 console.log(`Generated ${items.length} public Markdown documents, ${assets.length} assets`);
