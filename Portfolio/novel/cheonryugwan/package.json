@@ -1,14 +1,14 @@
 {
   "name": "cheonryugwan-novel-archive",
   "private": true,
-  "version": "0.7.0",
+  "version": "0.9.0",
   "type": "module",
   "scripts": {
     "dev": "node scripts/sync-source.mjs && node scripts/dev.mjs",
     "build": "node scripts/sync-source.mjs && node scripts/build.mjs",
     "preview": "node scripts/dev.mjs",
     "sync:local": "node scripts/build-novel.mjs .novel-source/CHEONRYUGWAN static",
-    "check": "node --check app.js && node --check scripts/build-novel.mjs && node --check scripts/dev.mjs && node --check scripts/build.mjs && node --check scripts/sync-source.mjs",
+    "check": "node --check app.js && node --check scripts/build-novel.mjs && node --check scripts/dev.mjs && node --check scripts/build.mjs && node --check scripts/sync-source.mjs && node --check scripts/verify-dist.mjs",
     "verify:dist": "node scripts/verify-dist.mjs dist",
     "test:integration": "node scripts/test-integration.mjs"
   }

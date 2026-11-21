@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "description": "공개 승인된 캐릭터 이미지의 상대 경로만 수동 등록합니다. 운영 데이터에 예시 이미지를 넣지 않습니다.",
+  "portraits": {},
+  "galleries": {}
+}

@@ -7,6 +7,11 @@ const target=path.join(root,'static');
 // Never leave a stale successful export behind after a failed sync.
 fs.rmSync(path.join(root,'dist'),{recursive:true,force:true});
 const override=process.env.NOVEL_SOURCE_DIR;
+// CI must consume the already authenticated checkout; never silently re-clone a private repository.
+if(process.env.CI==='true'&&!override){
+ console.error('[NOVEL] CI 환경에서 NOVEL_SOURCE_DIR이 비어 있습니다. Checkout NOVEL content 및 env 전달을 확인하세요.');
+ process.exit(1);
+}
 const repo=process.env.NOVEL_REPOSITORY||'https://github.com/min-ser/NOVEL.git';
 const branch=process.env.NOVEL_BRANCH||'master';
 const run=(args)=>execFileSync('git',args,{cwd:root,stdio:'inherit',timeout:120000});
@@ -16,6 +21,7 @@ try {
     const candidate=path.resolve(override);
     checkout=fs.existsSync(path.join(candidate,'CHEONRYUGWAN'))?path.join(candidate,'CHEONRYUGWAN'):candidate;
     console.log(`[NOVEL] 사전 체크아웃 사용: ${checkout}`);
+    if(!fs.existsSync(path.join(checkout,'01_NOVEL')))throw Error(`사전 체크아웃에 01_NOVEL이 없습니다: ${checkout}`);
   } else {
     checkout=path.join(source,'CHEONRYUGWAN');
     if(!fs.existsSync(path.join(source,'.git'))){

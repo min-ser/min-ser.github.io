@@ -27,5 +27,26 @@ const assetRoot=path.join(root,'03_ASSETS');walk(assetRoot,file=>{
  assets.push({path:'03_ASSETS/'+rel,url:'assets/archive/'+rel,bytes:fs.statSync(file).size});
 });
 let revision='unknown';try{revision=execFileSync('git',['-C',root,'rev-parse','HEAD'],{encoding:'utf8'}).trim()}catch{}
+// Validate the manually approved gallery manifest against assets actually published.
+// Do not auto-assign character identity from ambiguous image filenames.
+const mappingFile=path.join(target,'character-images.json');
+if(fs.existsSync(mappingFile)){
+ const mapping=JSON.parse(fs.readFileSync(mappingFile,'utf8'));
+ const available=new Set(assets.map(a=>a.url));
+ // Bundled public images are also permitted; these are shipped with the site.
+ const bundled=path.resolve(import.meta.dirname,'..','static');
+ const valid=u=>typeof u==='string'&&/^assets\/[a-zA-Z0-9_./-]+\.(webp|png|jpg|jpeg|avif)$/i.test(u)&&!u.includes('..')&&(available.has(u)||fs.existsSync(path.join(bundled,u)));
+ const characters=new Set(items.filter(i=>i.path.startsWith('02_CANON/CHARACTERS/')&&!/\/(RELATIONSHIPS|COSTUMES)\//i.test(i.path)).map(i=>i.path));
+ const cleaned={schemaVersion:1,description:'공개 문서와 실제 배포 이미지로 검증된 매핑',portraits:{},galleries:{}};
+ for(const [key,url] of Object.entries(mapping.portraits||{}))if(characters.has(key)&&valid(url))cleaned.portraits[key]=url;else console.warn('[NOVEL] 미검증 대표 이미지 제외:',key,url);
+ for(const [key,entries] of Object.entries(mapping.galleries||{})){
+  if(!characters.has(key)||!Array.isArray(entries))continue;
+  const accepted=entries.filter(e=>e&&valid(e.url)&&['stand','battle','outfit','expression','event'].includes(e.type));
+  if(accepted.length)cleaned.galleries[key]=accepted;
+  if(accepted.length!==entries.length)console.warn('[NOVEL] 미검증 갤러리 이미지 제외:',key,entries.length-accepted.length);
+ }
+ fs.writeFileSync(mappingFile,JSON.stringify(cleaned,null,2));
+ console.log(`[NOVEL] 공식 이미지 매핑 검증: 대표 ${Object.keys(cleaned.portraits).length}개, 갤러리 ${Object.values(cleaned.galleries).reduce((n,a)=>n+a.length,0)}개`);
+}
 fs.mkdirSync(target,{recursive:true});fs.writeFileSync(path.join(target,'content.json'),JSON.stringify({schemaVersion:1,source:'min-ser/NOVEL',sourcePath:'CHEONRYUGWAN',branch:'master',revision,count:items.length,assets,items}));
 console.log(`Generated ${items.length} public Markdown documents, ${assets.length} assets`);

@@ -79,8 +79,7 @@ jobs:
           done
 
       # The NOVEL repository is separate from the blog repository.
-      # For private NOVEL repositories, add NOVEL_TOKEN with Contents: Read permission.
-      # For public repositories, github.token is sufficient.
+      # Private NOVEL repository: repository secret NOVEL_TOKEN (Contents: Read).
       - name: Checkout NOVEL content
         uses: actions/checkout@v4
         with:
