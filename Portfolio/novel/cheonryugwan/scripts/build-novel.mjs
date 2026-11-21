@@ -3,10 +3,12 @@ const root=path.resolve(process.argv[2]||'./.novel-source/CHEONRYUGWAN');
 const target=path.resolve(process.argv[3]||'./static');
 if(!fs.existsSync(root))throw Error(`Missing novel source: ${root}`);
 const items=[];const assets=[];
+// Clear previously synchronized archive images to prevent stale/private assets leaking.
+fs.rmSync(path.join(target,'assets','archive'),{recursive:true,force:true});
 function walk(dir,cb){if(!fs.existsSync(dir))return;for(const d of fs.readdirSync(dir,{withFileTypes:true})){if(d.name.startsWith('.')||d.isSymbolicLink())continue;const f=path.join(dir,d.name);if(d.isDirectory())walk(f,cb);else if(d.isFile())cb(f)}}
 for(const section of ['01_NOVEL','02_CANON'])walk(path.join(root,section),file=>{
  const rel=path.relative(root,file).split(path.sep).join('/');
- if(!rel.endsWith('.md')||rel.includes('/_DRAFTS/')||rel.includes('/REJECTED/')||rel.includes('/INTERNAL/'))return;
+ if(!rel.endsWith('.md')||rel.split('/').some(segment=>segment.startsWith('_')||['REJECTED','INTERNAL','LEGACY','PREVIOUS_VERSIONS','SNAPSHOTS'].includes(segment)))return;
  if(rel.startsWith('01_NOVEL/')&&!/^01_NOVEL\/PART_(01_ACADEMY|02|03|04)\//.test(rel))return;
  if(['README.md','INDEX.md','CANON_INDEX.md'].includes(path.basename(file)))return;
  if(fs.statSync(file).size>750000)return;
@@ -14,12 +16,13 @@ for(const section of ['01_NOVEL','02_CANON'])walk(path.join(root,section),file=>
  let front={};if(body.startsWith('---\n')){const m=body.match(/^---\n([\s\S]*?)\n---\n/);if(m){for(const line of m[1].split('\n')){const x=line.match(/^([A-Za-z_]+):\s*(.+)$/);if(x)front[x[1]]=x[2].trim().replace(/^[\"']|[\"']$/g,'')}body=body.slice(m[0].length)}}
  const part=rel.startsWith('01_NOVEL/')?rel.split('/')[1]:'';
  const assetPrefix='assets/archive/';
- const resolveAsset=value=>{if(!value)return '';let v=value.trim();if(/^https:\/\//.test(v))return v;if(v.startsWith('03_ASSETS/'))return assetPrefix+v.slice(10);if(v.startsWith('assets/'))return v;if(/^chapter-[0-9]+\//.test(v))return assetPrefix+'NOVEL/'+part+'/'+v;if(/^([a-z0-9_-]+\.(png|webp|jpe?g|avif))$/i.test(v))return assetPrefix+'NOVEL/'+part+'/'+path.basename(file,'.md')+'/'+v;return ''};
+ const resolveAsset=value=>{if(!value)return '';let v=value.trim();if(/^https:\/\//.test(v))return v;if(v.startsWith('03_ASSETS/'))return assetPrefix+v.slice('03_ASSETS/'.length);if(v.startsWith('assets/'))return v;if(/^chapter-[0-9]+\//.test(v))return assetPrefix+'NOVEL/'+part+'/'+v;if(/^([a-z0-9_-]+\.(png|webp|jpe?g|avif))$/i.test(v))return assetPrefix+'NOVEL/'+part+'/'+path.basename(file,'.md')+'/'+v;return ''};
  const title=body.match(/^#\s+(.+)$/m)?.[1]||path.basename(file,'.md').replace(/_/g,' ');
  items.push({path:rel,title,kind:rel.startsWith('01_NOVEL/')?'novel':'canon',body,part,id:rel,cover:resolveAsset(front.cover||front.thumbnail||'')});
 });
 const assetRoot=path.join(root,'03_ASSETS');walk(assetRoot,file=>{
  if(!/\.(png|jpe?g|webp|gif|svg|avif)$/i.test(file)||fs.statSync(file).size>12000000)return;
+ if(path.relative(assetRoot,file).split(path.sep).some(segment=>segment.startsWith('_')||['REJECTED','INTERNAL','LEGACY','PREVIOUS_VERSIONS','SNAPSHOTS'].includes(segment)))return;
  const rel=path.relative(assetRoot,file).split(path.sep).join('/');const dst=path.join(target,'assets','archive',rel);fs.mkdirSync(path.dirname(dst),{recursive:true});fs.copyFileSync(file,dst);
  assets.push({path:'03_ASSETS/'+rel,url:'assets/archive/'+rel,bytes:fs.statSync(file).size});
 });

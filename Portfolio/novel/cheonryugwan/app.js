@@ -2,6 +2,9 @@
 const main=document.querySelector('#main');
 const EMBLEMS={orthodox:'assets/orthodox-crest.webp',unorthodox:'assets/unorthodox-crest.webp',demonic:'assets/demonic-crest.webp'};
 const factions=[['정파','正','정통 무학과 학관의 질서','orthodox'],['사파','邪','자유로운 경쟁과 서로 다른 무학','unorthodox'],['마교','魔','특이점과 끝없는 무학 탐구','demonic']];
+const bookmarkKey=path=>'crg-read-v1:'+path;
+function savedPage(path){try{return Math.max(0,Number(localStorage.getItem(bookmarkKey(path)))||0)}catch{return 0}}
+function savePage(){if(!selected||!bookOpened)return;try{localStorage.setItem(bookmarkKey(selected),String(bookPage))}catch{}}
 let page='home',tab='novel',selected='',docs=[],status='loading',sourceRevision='',readerSize=16,readerSpacing=2.4,readerTheme='paper',motionEnabled=localStorage.getItem('crg-motion')!=='off',transitioning=false,bookPage=0,bookOpened=false,bookPages=[];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const attr=s=>esc(s);
@@ -10,12 +13,26 @@ const entry=(d)=>`<button class="archive-entry" data-doc="${attr(d.path)}">${d.k
 const list=(arr)=>arr.length?arr.map(entry).join(''):'<div class="notice">현재 공개된 문서가 없습니다. 원본 저장소와 콘텐츠 빌드 결과를 확인하세요.</div>';
 const coverFor=d=>safeImage(d.cover)||'assets/academy.webp';
 const safeImage=u=>typeof u==='string'&&(/^(assets\/|https:\/\/)/i.test(u))&&!/[\s"'<>]/.test(u)?u:'';
-const resolveImage=(raw,doc)=>{let u=String(raw||'').trim();if(/^https:\/\//i.test(u))return safeImage(u);if(/^assets\//.test(u))return safeImage(u);if(/^03_ASSETS\//.test(u))return 'assets/archive/'+u.slice(10);if(/^\.\.\//.test(u)||u.startsWith('/'))return '';if(/^chapter-[0-9]+\//.test(u))return 'assets/archive/NOVEL/'+doc.part+'/'+u;if(/^scene-[0-9]+\./.test(u)||u==='cover.webp')return 'assets/archive/NOVEL/'+doc.part+'/'+doc.path.split('/').pop().replace(/\.md$/,'')+'/'+u;return ''};
+const resolveImage=(raw,doc)=>{let u=String(raw||'').trim();if(/^https:\/\//i.test(u))return safeImage(u);if(/^assets\//.test(u))return safeImage(u);if(/^03_ASSETS\//.test(u))return 'assets/archive/'+u.slice('03_ASSETS/'.length);if(/^\.\.\//.test(u)||u.startsWith('/'))return '';if(/^chapter-[0-9]+\//.test(u))return 'assets/archive/NOVEL/'+doc.part+'/'+u;if(/^scene-[0-9]+\./.test(u)||u==='cover.webp')return 'assets/archive/NOVEL/'+doc.part+'/'+doc.path.split('/').pop().replace(/\.md$/,'')+'/'+u;return ''};
 const motionAllowed=()=>motionEnabled&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const chapters=()=>docs.filter(d=>d.kind==='novel').sort((a,b)=>a.path.localeCompare(b.path,undefined,{numeric:true}));
 const canon=()=>docs.filter(d=>d.kind==='canon');
 const filterPath=(prefix)=>canon().filter(d=>d.path.startsWith(prefix));
 const section=(t,desc,items)=>`<div class="page">${heading(t,desc)}<div class="archive-list">${list(items)}</div></div>`;
+
+
+// Character atlas: populated exclusively from published 02_CANON character documents.
+let characterQuery='';
+const characterDocs=()=>canon().filter(d=>/^02_CANON\/CHARACTERS\//.test(d.path)&&!/\/(RELATIONSHIPS|COSTUMES)\//i.test(d.path));
+const characterSummary=d=>String(d.body||'').split(/\r?\n/).map(s=>s.trim()).filter(s=>s&&!/^#|^\||^---|^>|^!\[/.test(s)).slice(0,2).join(' ').replace(/\*\*/g,'').slice(0,160);
+function characterAtlas(){
+ const all=characterDocs();const q=characterQuery.trim().toLocaleLowerCase('ko');
+ const filtered=all.filter(d=>(d.title+' '+d.path+' '+d.body).toLocaleLowerCase('ko').includes(q));
+ return `<div class="page atlas-page">${heading('인물 도감','확정된 02_CANON/CHARACTERS 문서에서 자동 구성 · 미공개 자료 제외')}
+ <div class="atlas-toolbar"><label for="character-search">인물·설정 검색</label><input id="character-search" type="search" placeholder="이름 또는 설정 검색" value="${attr(characterQuery)}" autocomplete="off"><span aria-live="polite">${filtered.length} / ${all.length} 문서</span></div>
+ ${all.length?`<div class="atlas-grid">${filtered.map((d,i)=>`<button class="atlas-card" data-doc="${attr(d.path)}"><span class="atlas-index">PERSON · ${String(i+1).padStart(2,'0')}</span><span class="atlas-emblem">❖</span><strong>${esc(d.title)}</strong><span class="atlas-summary">${esc(characterSummary(d)||'상세 설정 문서 보기')}</span><span class="atlas-open">인물 기록 열기 ↗</span></button>`).join('')}</div>${filtered.length?'':'<div class="notice">검색 결과가 없습니다.</div>'}`:'<div class="notice">현재 공개 가능한 캐릭터 설정 문서가 없습니다. NOVEL 저장소의 02_CANON/CHARACTERS 경로와 공개 정책을 확인하세요. 임의의 인물 설정은 표시하지 않습니다.</div>'}
+ <div class="atlas-secondary"><button class="btn alt" data-go="relationships">관계·감정 문서 ❯</button><button class="btn alt" data-go="costumes">의상·일러스트 문서 ❯</button></div></div>`;
+}
 
 const DESIGN_SHEETS=[
   ['novel-library','소설 목록 · 작품 소개','회차 탐색, 작품 표지, 읽기 시작 동선'],
@@ -66,34 +83,72 @@ function reader(){
     <div class="chapter-vision" id="chapterVision" aria-hidden="true">${cover?`<img src="${attr(cover)}" alt="">`:''}<div class="vision-title">${esc(d.title)}</div></div>
    </div>
   </div>
-  <div class="reader-bottom"><button id="prevSpread" data-spread="prev" aria-label="이전 두 페이지">❮ 이전</button><span id="readingProgress" aria-live="polite">${bookOpened?'페이지 준비 중':'표지를 눌러 책을 펼치세요'}</span><button id="nextSpread" data-spread="next" aria-label="다음 두 페이지">다음 ❯</button></div>
+  <div class="reader-bottom"><button id="prevSpread" data-spread="prev" aria-label="이전 두 페이지">❮ 이전</button><span class="reader-progress-wrap"><span id="readingProgress" aria-live="polite">${bookOpened?'페이지 준비 중':'표지를 눌러 책을 펼치세요'}</span><button id="nextSpread" data-spread="next" aria-label="다음 두 페이지">다음 ❯</button></div>
   <div id="chapterMarkdown" hidden>${markdown(d.body,d)}</div>
   <div id="chapterLinks" hidden data-previous="${i>0?attr(all[i-1].path):''}" data-next="${i>=0&&i<all.length-1?attr(all[i+1].path):''}"></div>
  </section>`;
 }
-function fitPage(page,items){page.replaceChildren();for(const item of items)page.append(item.cloneNode(true));return page.scrollHeight<=page.clientHeight+2}
-function paginateBook(){
- const source=document.querySelector('#chapterMarkdown'),test=document.querySelector('#leftPage');if(!source||!test)return;
- const fragments=[];for(const node of [...source.children]){
-  if(node.tagName==='P'&&node.textContent.length>120){const words=node.textContent.split(/(?<=\s)/);let chunk='';for(const word of words){chunk+=word;if(chunk.length>95){const el=document.createElement('p');el.textContent=chunk;fragments.push(el);chunk=''}}if(chunk){const el=document.createElement('p');el.textContent=chunk;fragments.push(el)}}else fragments.push(node.cloneNode(true));
- }
- const pages=[];let group=[];
- for(const item of fragments){if(fitPage(test,[...group,item])){group.push(item);continue}if(group.length){pages.push(group);group=[]}if(fitPage(test,[item])){group=[item];continue}
-  // Oversized image/table: keep as a single page, constrained by page CSS.
-  pages.push([item]);
- }
- if(group.length)pages.push(group);bookPages=pages.length?pages:[[]];showSpread();
+// Pagination must measure a hidden probe rather than mutating the visible page.
+// The content block identity is retained so a font/viewport change can restore position.
+function paginationProbe(){
+ const leaf=document.querySelector('.left-leaf');if(!leaf)return null;
+ let probe=document.querySelector('#paginationProbe');if(probe)return probe;
+ probe=document.createElement('div');probe.id='paginationProbe';probe.className='leaf-content';
+ probe.setAttribute('aria-hidden','true');
+ Object.assign(probe.style,{position:'absolute',visibility:'hidden',pointerEvents:'none',overflow:'hidden',left:'0',top:'0',zIndex:'-1'});
+ leaf.append(probe);return probe;
 }
-function showSpread(){const l=document.querySelector('#leftPage'),r=document.querySelector('#rightPage');if(!l||!r)return;fitPage(l,bookPages[bookPage]||[]);fitPage(r,bookPages[bookPage+1]||[]);document.querySelector('#leftNumber').textContent=bookPage+1;document.querySelector('#rightNumber').textContent=bookPage+2<=bookPages.length?bookPage+2:'';document.querySelector('#readingProgress').textContent=`${Math.min(bookPage+2,bookPages.length)} / ${bookPages.length}쪽`;document.querySelector('#prevSpread').disabled=bookPage===0;document.querySelector('#nextSpread').textContent=bookPage+2>=bookPages.length?'다음 회차 ❯':'다음 ❯'}
-function openBook(){if(bookOpened)return;bookOpened=true;const book=document.querySelector('#antiqueBook');book.classList.remove('closed');book.classList.add('opened');document.querySelector('#bookSpread').hidden=false;paginateBook();if(motionAllowed()){book.classList.add('opening');const vision=document.querySelector('#chapterVision');vision.classList.add('visible');setTimeout(()=>{vision.classList.remove('visible');book.classList.remove('opening')},2200)}}
-function flipSpread(dir){if(transitioning)return;const next=bookPage+dir*2;if(next<0)return;if(next>=bookPages.length){const path=document.querySelector('#chapterLinks')?.dataset.next;if(path)turnChapter(path);return}const book=document.querySelector('#antiqueBook');if(!motionAllowed()){bookPage=next;showSpread();return}transitioning=true;book.classList.add(dir>0?'flipping-next':'flipping-prev');setTimeout(()=>{bookPage=next;showSpread()},340);setTimeout(()=>{book.classList.remove('flipping-next','flipping-prev');transitioning=false},700)}
-function turnChapter(path){if(transitioning)return;bookOpened=false;bookPage=0;bookPages=[];navigate('reader',path)}
+function measurePage(items){
+ const probe=paginationProbe(),visible=document.querySelector('#leftPage');if(!probe||!visible)return true;
+ const rect=visible.getBoundingClientRect();
+ probe.style.width=rect.width+'px';probe.style.height=rect.height+'px';
+ probe.replaceChildren(...items.map(n=>n.cloneNode(true)));
+ return probe.scrollHeight<=probe.clientHeight+1;
+}
+function splitParagraph(node){
+ if(node.tagName!=='P'||node.children.length||!node.textContent.trim())return [node.cloneNode(true)];
+ if(measurePage([node]))return [node.cloneNode(true)];
+ const result=[];let rest=node.textContent;
+ while(rest.length){
+  let lo=1,hi=rest.length,best=0;
+  while(lo<=hi){const mid=Math.floor((lo+hi)/2);const p=document.createElement('p');p.textContent=rest.slice(0,mid);if(measurePage([p])){best=mid;lo=mid+1}else hi=mid-1}
+  if(best===0){console.warn('Reader viewport too small to fit a single character');break}
+  let cut=best;
+  if(best<rest.length){const candidates=[' ','\n','。','!','?','.'].map(ch=>rest.lastIndexOf(ch,best-1));const boundary=Math.max(...candidates);if(boundary>best*.6)cut=boundary+1}
+  const p=document.createElement('p');p.textContent=rest.slice(0,cut);result.push(p);rest=rest.slice(cut);
+ }
+ return result.length?result:[node.cloneNode(true)];
+}
+function paginateBook(){
+ const source=document.querySelector('#chapterMarkdown'),left=document.querySelector('#leftPage');if(!source||!left)return;
+ const anchor=bookPages[bookPage]?.[0]?.dataset?.sourceIndex;
+ const pages=[];let current=[];const append=node=>{
+  if(measurePage([...current,node])){current.push(node);return}
+  if(current.length){pages.push(current);current=[]}
+  if(measurePage([node])){current=[node];return}
+  // An oversized image/table/code block is kept intact and flagged instead of silently clipped.
+  node.classList.add('reader-oversize');current=[node];pages.push(current);current=[];
+ };
+ [...source.children].forEach((node,index)=>{
+  for(const fragment of splitParagraph(node)){fragment.dataset.sourceIndex=String(index);append(fragment)}
+ });
+ if(current.length)pages.push(current);
+ bookPages=pages.length?pages:[[]];
+ if(anchor!==undefined){const idx=bookPages.findIndex(nodes=>nodes.some(n=>n.dataset.sourceIndex===anchor));bookPage=idx<0?0:Math.floor(idx/2)*2}
+ bookPage=Math.min(bookPage,Math.floor((bookPages.length-1)/2)*2);
+ showSpread();
+}
+function showSpread(){const l=document.querySelector('#leftPage'),r=document.querySelector('#rightPage');if(!l||!r)return;l.replaceChildren(...(bookPages[bookPage]||[]).map(n=>n.cloneNode(true)));r.replaceChildren(...(bookPages[bookPage+1]||[]).map(n=>n.cloneNode(true)));document.querySelector('#leftNumber').textContent=bookPage+1;document.querySelector('#rightNumber').textContent=bookPage+2<=bookPages.length?bookPage+2:'';document.querySelector('#readingProgress').textContent=`${Math.min(bookPage+2,bookPages.length)} / ${bookPages.length}쪽`;document.querySelector('#prevSpread').disabled=bookPage===0;document.querySelector('#nextSpread').textContent=bookPage+2>=bookPages.length?'다음 회차 ❯':'다음 ❯';savePage()}
+function openBook(){if(bookOpened)return;bookOpened=true;const book=document.querySelector('#antiqueBook');book.classList.remove('closed');book.classList.add('opened');document.querySelector('#bookSpread').hidden=false;const resumeAt=savedPage(selected);paginateBook();bookPage=Math.min(Math.floor(resumeAt/2)*2,Math.floor((bookPages.length-1)/2)*2);showSpread();if(motionAllowed()){book.classList.add('opening');const vision=document.querySelector('#chapterVision');vision.classList.add('visible');setTimeout(()=>{vision.classList.remove('visible');book.classList.remove('opening')},2200)}}
+function flipSpread(dir){if(transitioning)return;const next=bookPage+dir*2;if(next<0){const path=document.querySelector('#chapterLinks')?.dataset.previous;if(path)turnChapter(path);return}if(next>=bookPages.length){const path=document.querySelector('#chapterLinks')?.dataset.next;if(path)turnChapter(path);return}const book=document.querySelector('#antiqueBook');if(!motionAllowed()){bookPage=next;showSpread();return}transitioning=true;book.classList.add(dir>0?'flipping-next':'flipping-prev');setTimeout(()=>{bookPage=next;showSpread()},340);setTimeout(()=>{book.classList.remove('flipping-next','flipping-prev');transitioning=false},700)}
+function turnChapter(path){if(transitioning)return;savePage();bookOpened=false;bookPage=0;bookPages=[];navigate('reader',path)}
 function openIllustration(src,alt){const dialog=document.createElement('dialog');dialog.className='illustration-dialog';dialog.innerHTML=`<button class="close-illustration" aria-label="이미지 닫기">✕ 닫기</button><img src="${attr(src)}" alt="${attr(alt)}"><p>${esc(alt)}</p>`;document.body.append(dialog);dialog.addEventListener('click',e=>{if(e.target===dialog||e.target.closest('.close-illustration'))dialog.close()});dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal()}
-function render(){let out=status==='loading'?section('콘텐츠 불러오는 중','content.json을 확인하고 있습니다',[]):status==='error'?`<div class="page">${heading('콘텐츠를 불러오지 못했습니다','content.json 생성 또는 배포 경로를 확인하세요')}<div class="notice">NOVEL 원본 저장소 동기화에 실패했습니다. Git 접근 권한 및 네트워크를 확인하세요. 예시 원고는 실제 프로젝트에 표시하지 않습니다.</div></div>`:page==='home'?home():page==='design'?designGallery():page==='novel'?novel():page==='characters'?section('캐릭터 설정','02_CANON/CHARACTERS',filterPath('02_CANON/CHARACTERS/')):page==='relationships'?section('관계·감정','02_CANON/CHARACTERS/RELATIONSHIPS',filterPath('02_CANON/CHARACTERS/RELATIONSHIPS/')):page==='costumes'?section('의상·일러스트','02_CANON/CHARACTERS/COSTUMES',filterPath('02_CANON/CHARACTERS/COSTUMES/')):page==='world'?world():page==='canon'?section('통합 설정집','02_CANON/MASTER_REFERENCE.md',canon().filter(d=>d.path==='02_CANON/MASTER_REFERENCE.md'||d.path==='02_CANON/CANON_INDEX.md')):page==='history'?`<div class="page">${heading('개정 기록','04_ARCHIVE는 기본적으로 공개 빌드에서 제외됩니다')}<div class="notice">과거 원본 및 폐기 자료는 공개 정책 확정 후 별도로 제공할 수 있습니다. 현재는 정식 원고와 확정 설정만 게시합니다.</div></div>`:page==='reader'?reader():home();main.innerHTML=out;document.body.classList.toggle('reading-mode',page==='reader'&&docs.find(x=>x.path===selected)?.kind==='novel');if(page==='reader'&&bookOpened)requestAnimationFrame(()=>paginateBook());document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.go===page))}
-function navigate(p,doc){page=p;if(doc!==undefined){if(selected!==doc){bookOpened=false;bookPage=0;bookPages=[]}selected=doc}else{selected='';bookOpened=false;bookPage=0;bookPages=[]}history.pushState({page,selected},'',`#${encodeURIComponent(page)}${selected&&page==='reader'?'?doc='+encodeURIComponent(selected):''}`);render();window.scrollTo(0,0)}
-document.addEventListener('click',e=>{let b=e.target.closest('button');if(!b)return;if(b.dataset.design)openDesign(b.dataset.design);else if(b.dataset.openBook!==undefined)openBook();else if(b.dataset.spread)flipSpread(b.dataset.spread==='next'?1:-1);else if(b.dataset.doc!==undefined)page==='reader'?turnChapter(b.dataset.doc):navigate('reader',b.dataset.doc);else if(b.dataset.go)navigate(b.dataset.go);else if(b.dataset.part){tab=b.dataset.part;render()}else if(b.dataset.theme){readerTheme=readerTheme==='paper'?'dark':'paper';render()}else if(b.dataset.motion){motionEnabled=!motionEnabled;localStorage.setItem('crg-motion',motionEnabled?'on':'off');render()}else if(b.dataset.zoom){openIllustration(b.dataset.zoom,b.dataset.alt||'삽화')}});
-document.addEventListener('input',e=>{if(e.target.id==='fontSize'){readerSize=Number(e.target.value);document.querySelector('.immersive-reader')?.style.setProperty('--reader-size',readerSize+'px');if(bookOpened)paginateBook()}if(e.target.id==='lineSpacing'){readerSpacing=Number(e.target.value)/10;document.querySelector('.archive-reader')?.style.setProperty('--reader-spacing',readerSpacing)}});
-window.addEventListener('resize',()=>{if(bookOpened)paginateBook()});document.addEventListener('keydown',e=>{if(page!=='reader'||!bookOpened||e.target.closest('input,textarea,dialog'))return;if(e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();flipSpread(1)}else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();flipSpread(-1)}});window.addEventListener('popstate',()=>{readHash();render()});
+function render(){let out=status==='loading'?section('콘텐츠 불러오는 중','content.json을 확인하고 있습니다',[]):status==='error'?`<div class="page">${heading('콘텐츠를 불러오지 못했습니다','content.json 생성 또는 배포 경로를 확인하세요')}<div class="notice">NOVEL 원본 저장소 동기화에 실패했습니다. Git 접근 권한 및 네트워크를 확인하세요. 예시 원고는 실제 프로젝트에 표시하지 않습니다.</div></div>`:page==='home'?home():page==='design'?designGallery():page==='novel'?novel():page==='characters'?characterAtlas():page==='relationships'?section('관계·감정','02_CANON/CHARACTERS/RELATIONSHIPS',filterPath('02_CANON/CHARACTERS/RELATIONSHIPS/')):page==='costumes'?section('의상·일러스트','02_CANON/CHARACTERS/COSTUMES',filterPath('02_CANON/CHARACTERS/COSTUMES/')):page==='world'?world():page==='canon'?section('통합 설정집','02_CANON/MASTER_REFERENCE.md',canon().filter(d=>d.path==='02_CANON/MASTER_REFERENCE.md'||d.path==='02_CANON/CANON_INDEX.md')):page==='history'?`<div class="page">${heading('개정 기록','04_ARCHIVE는 기본적으로 공개 빌드에서 제외됩니다')}<div class="notice">과거 원본 및 폐기 자료는 공개 정책 확정 후 별도로 제공할 수 있습니다. 현재는 정식 원고와 확정 설정만 게시합니다.</div></div>`:page==='reader'?reader():home();main.innerHTML=out;document.body.classList.toggle('reading-mode',page==='reader'&&docs.find(x=>x.path===selected)?.kind==='novel');if(page==='reader'&&bookOpened)requestAnimationFrame(()=>paginateBook());document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.go===page))}
+function navigate(p,doc){savePage();page=p;if(doc!==undefined){if(selected!==doc){bookOpened=false;bookPage=0;bookPages=[]}selected=doc}else{selected='';bookOpened=false;bookPage=0;bookPages=[]}history.pushState({page,selected},'',`#${encodeURIComponent(page)}${selected&&page==='reader'?'?doc='+encodeURIComponent(selected):''}`);render();window.scrollTo(0,0)}
+document.addEventListener('input',e=>{if(e.target.id==='character-search'){const pos=e.target.selectionStart;characterQuery=e.target.value;const container=document.querySelector('.atlas-grid');const newHtml=characterAtlas();const temp=document.createElement('div');temp.innerHTML=newHtml;const newGrid=temp.querySelector('.atlas-grid');if(container&&newGrid){container.innerHTML=newGrid.innerHTML;const notice=document.querySelector('.atlas-page > .notice');if(notice)notice.remove()}else {const current=document.querySelector('.atlas-page');if(current){const input=e.target;const parent=input.parentElement;const rest=temp.querySelector('.atlas-page');current.replaceWith(rest);rest.querySelector('#character-search')?.focus()}}document.querySelector('.atlas-toolbar [aria-live]')?.replaceChildren(document.createTextNode(`${characterDocs().filter(d=>(d.title+' '+d.path+' '+d.body).toLocaleLowerCase('ko').includes(characterQuery.trim().toLocaleLowerCase('ko'))).length} / ${characterDocs().length} 문서`));}});
+document.addEventListener('click',e=>{let b=e.target.closest('button');if(!b)return;if(b.dataset.design)openDesign(b.dataset.design);else if(b.dataset.openBook!==undefined)openBook();else if(b.dataset.spread)flipSpread(b.dataset.spread==='next'?1:-1);else if(b.dataset.doc!==undefined)page==='reader'?turnChapter(b.dataset.doc):navigate('reader',b.dataset.doc);else if(b.dataset.go)navigate(b.dataset.go);else if(b.dataset.part){tab=b.dataset.part;render()}else if(b.dataset.theme){readerTheme=readerTheme==='paper'?'dark':'paper';render()}else if(b.dataset.restart!==undefined){try{localStorage.removeItem(bookmarkKey(selected))}catch{}bookPage=0;if(bookOpened)showSpread()}else if(b.dataset.motion){motionEnabled=!motionEnabled;localStorage.setItem('crg-motion',motionEnabled?'on':'off');b.textContent='효과 '+(motionEnabled?'ON':'OFF');b.setAttribute('aria-pressed',String(motionEnabled))}else if(b.dataset.zoom){openIllustration(b.dataset.zoom,b.dataset.alt||'삽화')}});
+document.addEventListener('input',e=>{if(e.target.id==='fontSize'){readerSize=Number(e.target.value);document.querySelector('.immersive-reader')?.style.setProperty('--reader-size',readerSize+'px');if(bookOpened)requestAnimationFrame(paginateBook)}if(e.target.id==='lineSpacing'){readerSpacing=Number(e.target.value)/10;document.querySelector('.archive-reader')?.style.setProperty('--reader-spacing',readerSpacing)}});
+let resizeFrame=0;window.addEventListener('resize',()=>{if(bookOpened){cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(paginateBook)}});document.addEventListener('load',e=>{if(bookOpened&&e.target.matches?.('.leaf-content img'))paginateBook()},true);document.addEventListener('keydown',e=>{if(page!=='reader'||!bookOpened||e.target.closest('input,textarea,dialog'))return;if(e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();flipSpread(1)}else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();flipSpread(-1)}});window.addEventListener('popstate',()=>{readHash();render()});
 function readHash(){let hash=decodeURIComponent(location.hash.slice(1));let split=hash.indexOf('?doc=');page=split>=0?hash.slice(0,split):hash||'home';selected=split>=0?hash.slice(split+5):''}
 readHash();render();
-fetch('./content.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(data=>{if(!Array.isArray(data.items))throw Error('Invalid manifest');if(data.source==='demo-preview'||data.revision==='SAMPLE-CONTENT-NOT-SYNCED')throw Error('Demo content prohibited in production');docs=data.items.filter(d=>d&&typeof d.path==='string'&&typeof d.body==='string'&&['novel','canon'].includes(d.kind));sourceRevision=data.revision||'';status='ready';render()}).catch(err=>{console.error('Novel Archive content load failed',err);status='error';render()});
+fetch('./content.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(data=>{if(!Array.isArray(data.items))throw Error('Invalid manifest');if(data.source==='demo-preview'||data.revision==='SAMPLE-CONTENT-NOT-SYNCED')throw Error('Demo content prohibited in production');if(data.syncStatus==='failed'||data.syncStatus==='not_synced'||data.revision==='SYNC_FAILED'||data.revision==='NOT_SYNCED'||!data.items.some(d=>d.kind==='novel'))throw Error('NOVEL content was not synchronized: '+(data.message||data.revision));docs=data.items.filter(d=>d&&typeof d.path==='string'&&typeof d.body==='string'&&['novel','canon'].includes(d.kind));sourceRevision=data.revision||'';status='ready';render()}).catch(err=>{console.error('Novel Archive content load failed',err);status='error';render()});

@@ -7,5 +7,5 @@
   "assets": [],
   "items": [],
   "syncStatus": "failed",
-  "message": "Command failed: git clone --depth 1 --branch master https://github.com/min-ser/NOVEL.git /mnt/data/cheonryugwan_gitblog_v0.6.2/.novel-source"
+  "message": "Command failed: git clone --depth 1 --single-branch --branch master https://github.com/min-ser/NOVEL.git /mnt/data/cheonryugwan_gitblog_v0.6.8/.novel-source"
 }
