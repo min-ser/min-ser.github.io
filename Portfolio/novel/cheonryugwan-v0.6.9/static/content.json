@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "source": "min-ser/NOVEL",
+  "branch": "master",
+  "revision": "SYNC_FAILED",
+  "count": 0,
+  "assets": [],
+  "items": [],
+  "syncStatus": "failed",
+  "message": "Command failed: git clone --depth 1 --single-branch --branch master https://github.com/min-ser/NOVEL.git /mnt/data/cheonryugwan_gitblog_v0.6.8/.novel-source"
+}
