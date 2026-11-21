@@ -91,9 +91,8 @@ jobs:
           done
 
       # The NOVEL repository is separate from the blog repository.
-      # For private NOVEL repositories, add NOVEL_READ_TOKEN
+      # For private NOVEL repositories, add NOVEL_TOKEN
       # with Contents: Read permission.
-      # For public repositories, github.token is sufficient.
       - name: Checkout NOVEL content
         uses: actions/checkout@v4
         with:
@@ -123,6 +122,25 @@ jobs:
           }
 
           pushd "$project" >/dev/null
+
+          # ==========================================
+          # DIAGNOSTICS: GitHub Actions source check
+          # ==========================================
+          echo "===== CHECKOUT DIAGNOSTICS ====="
+          echo "Commit: $(git rev-parse HEAD)"
+          echo "Branch: ${GITHUB_REF_NAME}"
+          echo "Working directory: $(pwd)"
+
+          echo "===== PACKAGE CHECK SCRIPT ====="
+          node -p "JSON.stringify(require('./package.json').scripts.check)"
+
+          echo "===== SCRIPT FILE ====="
+          ls -l scripts/build-reference-preview.mjs
+
+          echo "===== PACKAGE VERSION ====="
+          node -p "require('./package.json').version"
+
+          echo "===== END DIAGNOSTICS ====="
 
           if [ -f package-lock.json ]; then
             npm ci
