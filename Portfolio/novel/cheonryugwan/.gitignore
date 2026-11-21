@@ -1,0 +1,4 @@
+node_modules/
+dist/
+.novel-source/
+.DS_Store
