@@ -52,3 +52,8 @@
 
 ## v0.9.10 배포 복구
 전체 프로젝트 디렉터리를 덮어쓰기하고 `npm run check`로 스크립트 파일 누락을 검사하세요. 자세한 내용은 `docs/DEPLOYMENT_FIX_v0.9.10.md`를 참조하세요.
+
+## v0.9.15 디자인 업데이트
+- 공식 `docs/design/world-atlas.png` 기준 세계관 탐색 3영역 시각 개선.
+- 지도 선택 시 관련 공개 CANON 기록 표시, 지리 정보는 임의로 확정하지 않음.
+- 상세 상태: `docs/DESIGN_CHECKLIST_v0.9.15.md`.
