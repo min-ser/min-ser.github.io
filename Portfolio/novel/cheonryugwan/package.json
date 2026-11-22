@@ -1,7 +1,7 @@
 {
   "name": "cheonryugwan-novel-archive",
   "private": true,
-  "version": "0.9.15",
+  "version": "0.9.23",
   "type": "module",
   "scripts": {
     "dev": "node scripts/sync-source.mjs && node scripts/dev.mjs",
@@ -12,6 +12,8 @@
     "verify:dist": "node scripts/verify-dist.mjs dist",
     "test:integration": "node scripts/test-integration.mjs",
     "test:preview": "node scripts/build-reference-preview.mjs",
-    "preflight": "node scripts/preflight.mjs"
+    "preflight": "node scripts/preflight.mjs",
+    "test:viewport": "node scripts/test-viewport.mjs",
+    "test:browser": "node scripts/test-browser.mjs"
   }
 }
