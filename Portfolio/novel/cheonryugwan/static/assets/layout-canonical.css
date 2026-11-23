@@ -1,0 +1,73 @@
+/* Cheonryugwan Novel Archive v0.9.27 — canonical responsive layout.
+   Single owner for final desktop/tablet/mobile layout. Avoid appending per-version overrides. */
+:root{--crg-panel-min:0px;--crg-touch:44px}
+html,body{max-width:100%;overflow-x:clip}
+.shell{width:100%;max-width:1680px;margin-inline:auto;overflow:clip}
+.shell main,.world-page,.cinema-library-inner{min-width:0}
+/* World atlas: ornamental spans must never consume grid tracks. */
+.world-page{width:100%;max-width:1660px;margin-inline:auto;padding:18px clamp(14px,2vw,30px) 80px;overflow:visible}
+.world-page .world-hero{min-height:180px;margin-top:12px}
+.world-page .world-atlas-layout{display:grid!important;grid-template-columns:minmax(205px,245px) minmax(0,1fr) minmax(210px,255px)!important;grid-template-areas:"nav book side";gap:clamp(14px,1.5vw,24px)!important;align-items:start!important;width:100%;max-width:100%;margin:24px auto 36px!important}
+.world-page .world-atlas-layout>.atlas-ornament{display:none!important;position:absolute!important;pointer-events:none}
+.world-page .world-atlas-nav{grid-area:nav!important;grid-column:auto!important;grid-row:auto!important;min-width:0;width:100%;align-self:start}
+.world-page .world-atlas-book{grid-area:book!important;grid-column:auto!important;grid-row:auto!important;min-width:0;width:100%;max-width:100%;padding:clamp(7px,1vw,14px)!important;align-self:start}
+.world-page .world-atlas-side{grid-area:side!important;grid-column:auto!important;grid-row:auto!important;min-width:0;width:100%;display:block!important;align-self:start}
+.world-page .world-atlas-paper{min-width:0;min-height:560px!important;overflow:visible;padding:clamp(16px,2vw,30px)!important}
+.world-page .atlas-book-heading h3{font-size:clamp(25px,2.4vw,38px)!important;word-break:keep-all}
+.world-page .atlas-landscape{min-width:0;height:clamp(255px,25vw,390px)!important}
+.world-page .atlas-book-bottom{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:clamp(12px,1.4vw,24px)!important}
+.world-page .atlas-book-bottom>div{min-width:0;overflow-wrap:break-word;word-break:keep-all}
+.world-page .atlas-book-bottom h4,.world-page .atlas-book-bottom p{word-break:keep-all;overflow-wrap:break-word}
+.world-page .world-atlas-side .atlas-side-faction{display:flex!important;width:100%!important;min-width:0;margin:10px 0!important}
+.world-page .world-atlas-nav button{min-height:var(--crg-touch);word-break:keep-all}
+/* Library: three independent tracks, book remains dominant. */
+.cinema-library-layout{display:grid!important;grid-template-columns:minmax(210px,1fr) minmax(0,1.7fr) minmax(210px,1fr)!important;gap:clamp(14px,1.7vw,30px)!important;align-items:stretch!important}
+.cinema-library-layout>*{min-width:0}
+.cinema-library-center{min-width:0}
+.cinema-book-scene{max-width:100%}
+/* Reader: maintain usable controls and avoid hidden font/theme actions. */
+.reader-settings button[data-motion]{display:inline-flex!important;min-height:var(--crg-touch)}
+.reader-top button,.reader-bottom button{min-height:var(--crg-touch)}
+@media(max-width:1180px) and (min-width:761px){
+ .world-page .world-atlas-layout{grid-template-columns:minmax(180px,220px) minmax(0,1fr)!important;grid-template-areas:"nav book" "side side"}
+ .world-page .world-atlas-side{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+ .world-page .world-atlas-side>.atlas-label,.world-page .world-atlas-side>h3,.world-page .world-atlas-side>.atlas-side-note,.world-page .world-atlas-side>.atlas-selection{grid-column:1/-1}
+ .world-page .world-atlas-side .atlas-side-faction{margin:0!important}
+ .cinema-library-layout{grid-template-columns:minmax(205px,1fr) minmax(0,1.5fr)!important}
+ .cinema-library-info{grid-column:1/-1}
+}
+@media(max-width:760px){
+ .world-page{padding:10px 10px 60px}
+ .world-page .world-atlas-layout{display:flex!important;flex-direction:column!important;gap:14px!important;margin-top:14px!important}
+ .world-page .world-atlas-nav{order:0;display:flex!important;flex-wrap:wrap;gap:8px;width:100%;padding:14px!important}
+ .world-page .world-atlas-nav button{flex:1 1 135px;width:auto!important;min-height:var(--crg-touch)}
+ .world-page .world-atlas-book{order:1;width:100%!important;border-width:5px!important;padding:6px!important}
+ .world-page .world-atlas-side{order:2;width:100%!important;display:block!important}
+ .world-page .world-atlas-paper{min-height:0!important;padding:16px 12px!important}
+ .world-page .atlas-landscape{height:clamp(230px,62vw,340px)!important}
+ .world-page .atlas-book-bottom{grid-template-columns:1fr!important}
+ .world-page .atlas-book-bottom>div+div{border-left:0!important;border-top:1px solid #ad8655;padding:12px 0 0!important}
+ .cinema-library-layout{display:flex!important;flex-direction:column!important;gap:18px!important}
+ .cinema-library-center{order:0;min-height:0}
+ .cinema-library-index{order:1;width:100%}
+ .cinema-library-info{order:2;width:100%}
+ .book-spread{grid-template-columns:minmax(0,1fr)!important}
+ .book-spread .right-leaf,.book-spine{display:none!important}
+ .reading-mode .book-leaf{padding:clamp(12px,4vw,24px)!important}
+ .reader-preferences,.reader-chapter-drawer{max-height:min(75dvh,600px);overflow-y:auto;overscroll-behavior:contain}
+}
+@media(max-width:420px){
+ .reader-settings{flex-wrap:wrap;justify-content:flex-end}
+ .reader-settings button{min-height:var(--crg-touch);padding:7px!important}
+ .reader-bottom{display:flex!important;flex-wrap:wrap;gap:4px!important}
+ .reader-bottom button{min-height:var(--crg-touch)!important}
+ .reader-progress-wrap{min-width:0;flex:1}
+ .world-page .atlas-map-pin{width:48px!important;height:48px!important;font-size:18px!important}
+ .world-page .atlas-book-heading h3{font-size:26px!important}
+}
+@media(max-height:570px) and (max-width:760px){
+ .reading-mode .top{display:none}
+ .immersive-reader{height:100dvh;min-height:0}
+ .reading-stage{padding:2px 6px}
+}
+@media(prefers-reduced-motion:reduce){.cinema-book-cover,.antique-book,.atlas-map-pin{transition:none!important;animation:none!important}}

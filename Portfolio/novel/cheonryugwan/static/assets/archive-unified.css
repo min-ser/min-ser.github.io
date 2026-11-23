@@ -1,0 +1,11 @@
+/* v0.9.32 — Unified archive chrome. Shared visual language, not page geometry. */
+/* Consistent background and framing across all archive sections except the reader and home */
+#main>.page:not(.reader-page):not(.edition-home){position:relative;isolation:isolate;min-height:65vh;background:var(--crg-archive-bg);color:var(--crg-text);padding-bottom:clamp(36px,5vw,88px)}
+#main>.page:not(.reader-page):not(.edition-home):before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.065;background:url('lattice.svg') center top/210px repeat}
+/* Shared title system; specialized cinematic heroes retain their own typography */
+#main>.page .heading{position:relative;margin-bottom:clamp(18px,3vw,36px);padding-block:clamp(14px,2vw,28px);text-align:center}
+#main>.page .heading:after{content:"";display:block;width:min(280px,65%);height:1px;margin:20px auto 0;background:var(--crg-gold-gradient)}
+#main>.page .edition-inner-hero{position:relative;overflow:hidden;border:1px solid var(--crg-border);box-shadow:var(--crg-shadow-panel)}
+#main>.page .edition-inner-hero:after{content:"";position:absolute;inset:10px;border:1px solid var(--crg-ornament);pointer-events:none}
+@media(max-width:760px){#main>.page:not(.reader-page):not(.edition-home){min-height:55vh}#main>.page .heading{padding-block:14px}#main>.page .edition-inner-hero:after{inset:6px}}
+

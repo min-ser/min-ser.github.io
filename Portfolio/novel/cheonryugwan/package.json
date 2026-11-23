@@ -1,19 +1,25 @@
 {
   "name": "cheonryugwan-novel-archive",
   "private": true,
-  "version": "0.9.23",
+  "version": "0.9.53",
   "type": "module",
   "scripts": {
     "dev": "node scripts/sync-source.mjs && node scripts/dev.mjs",
     "build": "node scripts/sync-source.mjs && node scripts/build.mjs",
     "preview": "node scripts/dev.mjs",
     "sync:local": "node scripts/build-novel.mjs .novel-source/CHEONRYUGWAN static",
-    "check": "node scripts/preflight.mjs && node --check app.js && node --check scripts/build-novel.mjs && node --check scripts/dev.mjs && node --check scripts/build.mjs && node --check scripts/sync-source.mjs && node --check scripts/verify-dist.mjs && node --check scripts/build-reference-preview.mjs",
+    "check": "node scripts/preflight.mjs && node --check app.js && node --check scripts/build-novel.mjs && node --check scripts/dev.mjs && node --check scripts/build.mjs && node --check scripts/sync-source.mjs && node --check scripts/verify-dist.mjs && node --check scripts/build-reference-preview.mjs && node --check scripts/test-layout.mjs && npm run test:styles && npm run audit:css && node scripts/test-archive-unified.mjs && npm run test:css-duplicates && npm run test:css-ownership",
     "verify:dist": "node scripts/verify-dist.mjs dist",
     "test:integration": "node scripts/test-integration.mjs",
     "test:preview": "node scripts/build-reference-preview.mjs",
     "preflight": "node scripts/preflight.mjs",
     "test:viewport": "node scripts/test-viewport.mjs",
-    "test:browser": "node scripts/test-browser.mjs"
+    "test:browser": "node scripts/test-browser.mjs",
+    "test:layout": "node scripts/test-layout.mjs",
+    "test:styles": "node scripts/test-styles.mjs",
+    "audit:css": "node scripts/audit-css.mjs",
+    "test:design-system": "node scripts/test-archive-unified.mjs",
+    "test:css-duplicates": "node scripts/test-css-duplicates.mjs",
+    "test:css-ownership": "node scripts/test-css-ownership.mjs"
   }
 }

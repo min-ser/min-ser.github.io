@@ -1,0 +1,27 @@
+/* v0.9.49 — 운영 서가: 고서형 UI, 신규 애니메이션 없음 */
+:root{--goso-ink:#302719;--goso-paper:#e9d9b5;--goso-gold:#c8a66b;--goso-wood:#2b1c15;--goso-edge:#82603b}
+.cinema-library{background:radial-gradient(ellipse at 50% 20%,#49372a 0%,#231b17 54%,#130f0e 100%);color:#ead8b5;min-height:80vh}
+.cinema-library-inner{max-width:1560px;margin:auto;padding:clamp(22px,3vw,52px)}
+.cinema-library-eyebrow{font-size:.76rem;letter-spacing:.28em;color:#d7b984;text-align:center;margin:0 0 24px}
+.cinema-library-layout{display:grid;grid-template-columns:minmax(240px,.92fr) minmax(300px,1.45fr) minmax(245px,.92fr);gap:clamp(16px,2vw,30px);align-items:stretch}
+.cinema-library-panel{border:1px solid #8c6c46;background:linear-gradient(135deg,rgba(80,53,33,.85),rgba(28,22,19,.96));box-shadow:inset 0 0 0 5px rgba(16,12,10,.55),inset 0 0 0 6px rgba(201,160,96,.18),0 14px 32px #08060566;border-radius:3px;padding:23px 19px}
+.cinema-panel-title{color:#e6c98f;text-align:center;font-family:serif;letter-spacing:.15em;border-bottom:1px solid #9e7c4a;padding-bottom:15px;margin-bottom:15px}
+.cinema-volume{border-radius:2px!important;background:linear-gradient(90deg,#4b3022,#30221b)!important;border:1px solid #8b663e!important;color:#f2dfbd!important;min-height:44px}
+.cinema-volume.active{background:linear-gradient(90deg,#78502c,#3d281c)!important;border-color:#c5a16a!important}
+.cinema-chapter-scroll{scrollbar-color:#977349 #2c2019;max-height:480px;overflow:auto}
+.cinema-chapter{min-height:43px;border-bottom:1px solid #9b805033!important;color:#ddc9a9!important;text-align:left}
+.cinema-chapter.selected{background:#d3b77b20!important;color:#ffe6ae!important;border-left:3px solid #d2b274!important}
+.cinema-library-center{background:radial-gradient(ellipse at center,#60452c55,transparent 75%);padding:14px 16px 26px;text-align:center;min-width:0}
+.cinema-book-scene{perspective:950px;min-height:380px;display:flex;align-items:center;justify-content:center}
+.cinema-book-cover{position:relative;width:min(72%,255px);aspect-ratio: .7;background:linear-gradient(90deg,#24150e 0%,#624027 9%,#3e251b 15%,#5c3825 80%,#2b1a13 100%);border:3px solid #bd985a;box-shadow:-12px 8px 0 -4px #b9a47f,-17px 12px 0 -5px #39281b,18px 23px 34px #08060599,inset 0 0 0 6px #2c1b15,inset 0 0 0 8px #b99a6255;transform:rotateY(-9deg) rotateZ(-2deg);border-radius:3px 9px 9px 3px}
+.cinema-book-cover:before{content:'';position:absolute;left:10%;top:5%;bottom:5%;width:1px;background:#dfbd7d66}
+.cinema-book-frame{position:absolute;inset:8% 12%;border:1px solid #c2a16b;outline:1px solid #6e512d;outline-offset:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#ead4a1;font-family:serif}
+.cinema-book-title{font-family:serif;font-weight:700;letter-spacing:.15em;line-height:1.3;text-shadow:0 2px 4px #120c09;font-size:clamp(2rem,3vw,3.3rem)}
+.cinema-read-button{min-height:48px;border:1px solid #d4b778!important;border-radius:2px!important;background:linear-gradient(110deg,#7a542e,#4b301c)!important;color:#fff0c9!important;box-shadow:inset 0 0 0 3px #28180e88}
+.cinema-info-landscape{border:5px solid #3b291d;outline:1px solid #98764c;max-width:100%;object-fit:cover}
+.cinema-info-section{border-top:1px solid #98754c66;margin-top:17px;padding-top:15px}
+.cinema-info-section h2{color:#dfbf85;font-family:serif}
+.cinema-library-bottom{border-top:1px solid #9e805a55;margin-top:28px;padding-top:20px;color:#b9a27f}
+@media(max-width:980px){.cinema-library-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.cinema-library-center{grid-column:1/-1;grid-row:1}.cinema-library-index{grid-column:1}.cinema-library-info{grid-column:2}.cinema-book-scene{min-height:350px}}
+@media(max-width:640px){.cinema-library-inner{padding:16px 12px 30px}.cinema-library-layout{display:flex;flex-direction:column;gap:16px}.cinema-library-center{order:0;padding:10px 4px 18px}.cinema-library-index{order:1}.cinema-library-info{order:2}.cinema-book-scene{min-height:330px}.cinema-book-cover{width:min(56vw,230px)}.cinema-library-panel{padding:17px 14px}.cinema-chapter-scroll{max-height:250px}.cinema-library-eyebrow{letter-spacing:.13em;font-size:.67rem}.cinema-read-button{width:min(100%,340px);min-height:52px}.cinema-library-bottom{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}}
+@media(prefers-reduced-motion:reduce){.cinema-book-cover{transition:none!important}}

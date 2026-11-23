@@ -1,0 +1,29 @@
+/* Cheonryugwan design system v0.9.30 — canonical shared values. */
+:root {
+  --crg-paper-ink: #33291f;
+  --crg-ornament: rgba(216,179,123,.36);
+  --crg-gold-gradient: linear-gradient(90deg,transparent,var(--crg-gold-muted),var(--crg-gold),var(--crg-gold-muted),transparent);
+  --crg-archive-bg: radial-gradient(ellipse at 50% -20%,#253a4c 0%,#101b29 54%,#0a111c 100%);
+  --crg-ink: #0a111c;
+  --crg-surface: #172536;
+  --crg-surface-raised: #223448;
+  --crg-gold: #d8b37b;
+  --crg-gold-muted: #a9895c;
+  --crg-parchment: #f0dfbf;
+  --crg-text: #f7e8cd;
+  --crg-text-muted: #c6b8a4;
+  --crg-border: rgba(216,179,123,.52);
+  --crg-radius: 3px;
+  --crg-space-1: 4px;
+  --crg-space-2: 8px;
+  --crg-space-3: 12px;
+  --crg-space-4: 16px;
+  --crg-space-6: 24px;
+  --crg-space-8: 32px;
+  --crg-content-max: 1440px;
+  --crg-shadow-panel: 0 12px 30px rgba(0,0,0,.35);
+  --gold: var(--crg-gold);
+  --night: var(--crg-ink);
+  --ivory: var(--crg-text);
+  --border: var(--crg-border);
+}

@@ -1,0 +1,27 @@
+/* v0.9.52 — cumulative antique manuscript art direction, shared by app and preview. */
+:root{--goso-ivory:#ead7ad;--goso-brass:#bb9257;--goso-charcoal:#19130f;--goso-brown:#352419}
+.cinema-library{background:radial-gradient(ellipse at 50% -8%,#6a4d33 0%,#2c211a 35%,#15100e 85%)!important}
+.cinema-library-inner{position:relative;isolation:isolate}
+.cinema-library-inner:before{content:"";position:absolute;inset:12px;pointer-events:none;border:1px solid #c9a26945;box-shadow:inset 0 0 0 5px #0f0a0933;z-index:-1}
+.cinema-library-eyebrow{font-family:Georgia,'Noto Serif KR',serif;letter-spacing:.32em!important;color:#e4c591!important}
+.cinema-library-panel{position:relative;background:linear-gradient(155deg,#473020f0,#251a15f7 64%,#1b1512)!important;border:1px solid #a18150!important;box-shadow:inset 0 0 0 3px #201510,inset 0 0 0 4px #aa86553f,0 18px 40px #08060580!important}
+.cinema-library-panel:before,.cinema-library-panel:after{content:"❖";position:absolute;color:#c19a5e;font-size:13px;line-height:1;opacity:.7;pointer-events:none}.cinema-library-panel:before{top:7px;left:9px}.cinema-library-panel:after{right:9px;bottom:7px}
+.cinema-panel-title{font-family:Georgia,'Noto Serif KR',serif!important;letter-spacing:.2em!important;text-shadow:0 1px 1px #000}
+.cinema-book-scene{filter:drop-shadow(0 18px 24px #05030290)}
+.cinema-book-cover{border:3px solid #d0ac6f!important;box-shadow:-9px 7px 0 -3px #dac7a3,-14px 10px 0 -4px #7b5a37,-19px 13px 0 -5px #dac7a3,19px 25px 40px #080605c0,inset 0 0 0 5px #21140f,inset 0 0 0 7px #c7a46e88!important;background:linear-gradient(90deg,#21140f 0%,#593723 11%,#392218 19%,#69432b 78%,#2a1812)!important}
+.cinema-book-frame{border:1px solid #e0bd7f!important;outline-color:#ad8147!important;box-shadow:inset 0 0 0 8px #24170e55}
+.cinema-book-title{text-shadow:0 2px 8px #0b0705,0 0 20px #dfbd7744!important}
+.cinema-volume,.cinema-chapter{transition:background-color .12s,border-color .12s}
+.cinema-volume:focus-visible,.cinema-chapter:focus-visible,.cinema-read-button:focus-visible{outline:2px solid #f4d99f!important;outline-offset:3px}
+.cinema-chapter:hover{background:#b9925330!important}
+.reading-mode .immersive-reader{background:radial-gradient(ellipse at 50% -15%,#6b4a30,#241911 55%,#100d0b)!important}
+.reading-mode .reader-top,.reading-mode .reader-bottom{border-top:1px solid #ad8857!important;border-bottom:1px solid #ad8857!important;box-shadow:inset 0 1px 0 #e7c88a22}
+.reading-mode .book-spread{border-color:#563822!important;outline:1px solid #d1aa72;outline-offset:-5px;box-shadow:0 0 0 2px #bd985d,0 14px 0 -8px #d8bf91,0 21px 0 -10px #4d3525,0 32px 65px #050302d9!important}
+.reading-mode .book-leaf{background:radial-gradient(ellipse at 35% 22%,#f9f0d9,#e9d4ab 65%,#cbb084)!important}
+.reading-mode .book-leaf:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 5px,#8d6d3908 6px 7px);mix-blend-mode:multiply;opacity:.28}
+.reading-mode .leaf-content{position:relative;z-index:1;font-family:'Noto Serif KR',Georgia,serif!important;letter-spacing:.015em;word-break:keep-all;overflow-wrap:break-word}
+.reading-mode .leaf-content p{line-height:1.95;margin-block:.65em}
+.reading-mode .reader-chapter-drawer{background:linear-gradient(160deg,#49301e,#1d1510)!important;border:1px solid #b48d57!important;box-shadow:0 20px 55px #000b}
+.reading-mode .reader-preferences{background:linear-gradient(140deg,#45301f,#211811)!important;border:1px solid #a88454!important}
+@media(max-width:760px){.cinema-library-inner{padding:18px 13px 30px!important}.cinema-library-inner:before{inset:5px}.cinema-library-center{padding:8px 4px 18px!important}.cinema-book-scene{min-height:315px!important}.cinema-book-cover{width:min(57vw,235px)!important}.cinema-library-panel{padding:21px 17px!important}.cinema-chapter{min-height:48px!important}.reading-mode .book-spread{border-width:6px!important;outline-offset:-3px}.reading-mode .book-leaf{min-width:0}.reading-mode .leaf-content{letter-spacing:0;line-height:1.8}.reading-mode .reader-top button,.reading-mode .reader-bottom button{min-height:44px}}
+@media(prefers-reduced-motion:reduce){.cinema-volume,.cinema-chapter{transition:none!important}}

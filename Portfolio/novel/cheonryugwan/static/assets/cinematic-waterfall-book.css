@@ -1,0 +1,21 @@
+/* v0.9.36 — cinematic waterfall and antique reader. Isolated to home and reader. */
+.edition-home .edition-cover{overflow:hidden}
+.edition-home .waterfall-fx{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden;opacity:.65;mix-blend-mode:screen;mask:url('waterfall-mask.svg') center/100% 100% no-repeat;-webkit-mask:url('waterfall-mask.svg') center/100% 100% no-repeat}
+.edition-home .waterfall-fx::before{content:"";position:absolute;inset:-100% 0 0;background:repeating-linear-gradient(178deg,transparent 0 9px,rgba(207,234,241,.13) 10px 14px,rgba(238,249,255,.55) 15px 18px,transparent 19px 38px);animation:cheonWaterFlow 2.7s linear infinite}
+.edition-home .waterfall-mist{position:absolute;inset:auto 0 7% 48%;height:25%;z-index:2;pointer-events:none;background:radial-gradient(ellipse at 65% 90%,rgba(195,217,224,.25),transparent 67%);filter:blur(14px);animation:cheonMist 7s ease-in-out infinite alternate}
+@keyframes cheonWaterFlow{to{transform:translateY(45%)}}
+@keyframes cheonMist{to{transform:translateX(-3%) scale(1.12);opacity:.6}}
+/* A book, rather than a flat brown rectangle: gilded tooling, leather grain, binding and page block. */
+.reading-mode .reading-stage{background:radial-gradient(ellipse at 50% 80%,rgba(119,76,37,.22),transparent 62%)}
+.reading-mode .book-cover-face{isolation:isolate;overflow:visible;border:9px solid #5b321c!important;border-left:20px solid #301a16!important;border-radius:7px 17px 17px 7px!important;outline:1px solid #e5b96d!important;outline-offset:-22px!important;background-image:radial-gradient(ellipse at 45% 30%,rgba(170,111,57,.28),transparent 62%),repeating-linear-gradient(110deg,rgba(255,222,161,.035) 0 1px,transparent 1px 5px),linear-gradient(110deg,#251513,#583529 28%,#39211d 67%,#241617)!important;box-shadow:inset 0 0 0 5px #9b6637,inset 0 0 0 9px #251513,inset 0 0 0 11px #d3a35e,inset 0 0 0 17px #281714,inset 0 0 65px 18px #130a08,12px 16px 0 -5px #c8b08a,17px 20px 0 -6px #6c4c31,23px 29px 55px #000d!important;gap:clamp(9px,2.4vh,22px)}
+.reading-mode .book-cover-face::before{content:"";position:absolute;inset:35px 34px;z-index:-1;border:1px solid rgba(230,180,95,.75);box-shadow:0 0 0 5px rgba(32,17,12,.65),0 0 0 6px rgba(205,152,75,.45),inset 0 0 45px rgba(9,5,3,.65);pointer-events:none}
+.reading-mode .book-cover-face::after{content:"❖";position:absolute;top:13%;left:50%;transform:translateX(-50%);color:#c99b59;font-size:27px;text-shadow:0 2px 7px #000;pointer-events:none}
+.reading-mode .cover-emblem{font-family:Georgia,serif;font-size:clamp(32px,4vw,64px);color:#f0d39b;letter-spacing:.2em;text-shadow:0 3px 2px #120a08,0 0 26px #d5a65a66}
+.reading-mode .cover-book-title{font-family:Georgia,'Noto Serif KR',serif;font-size:clamp(20px,2.6vw,36px);max-width:80%;color:#f3dfb8;text-shadow:0 3px 9px #120a08}
+.reading-mode .cover-ornament{color:#d4a76a;letter-spacing:.2em}
+.reading-mode .cover-subtitle{color:#e2c595;letter-spacing:.22em}
+.reading-mode .open-book-button{position:relative;background:linear-gradient(#5c3826,#231715);border:1px solid #d3a35e;color:#f4deb1;box-shadow:inset 0 0 0 2px #231714,0 5px 18px #0008;transition:transform .2s,box-shadow .2s}
+.reading-mode .open-book-button:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 2px #231714,0 9px 24px #000a}
+.reading-mode .book-spread{box-shadow:inset 0 0 0 2px #bba078,12px 16px 0 -7px #c9b38c,16px 22px 0 -8px #674b31,0 25px 60px #000b}
+@media(max-width:760px){.reading-mode .book-cover-face{inset:4% 7%!important;border-left-width:13px!important}.reading-mode .book-cover-face::before{inset:21px 19px}.reading-mode .book-cover-face::after{top:11%;font-size:19px}.edition-home .waterfall-fx{opacity:.45}}
+@media(prefers-reduced-motion:reduce){.edition-home .waterfall-fx::before,.edition-home .waterfall-mist{animation:none!important}}

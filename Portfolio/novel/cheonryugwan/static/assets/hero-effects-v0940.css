@@ -1,0 +1,21 @@
+/* v0.9.40: hero-local motion; no character image and no content hitboxes. */
+.edition-home .edition-cover{isolation:isolate}
+.edition-home .faction-aura-layer{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden;opacity:.72}
+.edition-home .faction-aura{position:absolute;width:17%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);mix-blend-mode:screen;filter:blur(1px);animation:auraBreathe 6s ease-in-out infinite alternate}
+.edition-home .aura-orthodox{left:50%;top:28%;--glow:174,209,231;--size:2px}
+.edition-home .aura-unorthodox{left:42%;top:45%;--glow:213,73,73;--size:2px;animation-delay:-2s}
+.edition-home .aura-demonic{left:60%;top:45%;--glow:159,95,222;--size:2px;animation-delay:-4s}
+.edition-home .faction-aura::before{content:"";position:absolute;inset:3%;border-radius:50%;background:radial-gradient(circle,rgba(var(--glow),.12) 0%,rgba(var(--glow),.09) 24%,transparent 68%);box-shadow:0 0 30px rgba(var(--glow),.14),inset 0 0 24px rgba(var(--glow),.13)}
+.edition-home .faction-aura::after{content:"";position:absolute;inset:-12%;border-radius:50%;background-image:radial-gradient(circle,rgba(var(--glow),.92) 0 1px,transparent 2px),radial-gradient(circle,rgba(var(--glow),.75) 0 1px,transparent 2px),radial-gradient(circle,rgba(var(--glow),.55) 0 1px,transparent 2px);background-size:33px 39px,49px 47px,65px 57px;background-position:3px 8px,17px 24px,29px 12px;mask-image:radial-gradient(circle,transparent 12%,black 37%,transparent 72%);-webkit-mask-image:radial-gradient(circle,transparent 12%,black 37%,transparent 72%);animation:auraDrift 12s linear infinite}
+.edition-home .aura-unorthodox::after{animation-direction:reverse;animation-duration:9s}
+.edition-home .aura-demonic::after{animation-duration:15s}
+@keyframes auraBreathe{from{opacity:.38;scale:.94}to{opacity:.9;scale:1.1}}
+@keyframes auraDrift{from{transform:rotate(0deg) translateY(0)}to{transform:rotate(360deg) translateY(-12px)}}
+/* Waterfall uses a mask limited to the original falls, with fine vertical flow rather than horizontal bands. */
+.edition-home .waterfall-fx{opacity:.54!important;filter:blur(.5px)!important;mix-blend-mode:screen;z-index:2!important}
+.edition-home .waterfall-fx::before{inset:-80% 0 0!important;background:repeating-linear-gradient(90deg,transparent 0 5px,rgba(207,234,241,.13) 6px 7px,rgba(241,251,255,.25) 8px 9px,transparent 10px 15px)!important;background-size:100% 100%!important;animation:waterfallVerticalFlow 2.9s linear infinite!important}
+.edition-home .waterfall-fx::after{content:"";position:absolute;inset:-90% 0 0;background:repeating-linear-gradient(90deg,transparent 0 12px,rgba(236,250,255,.18) 13px 15px,transparent 17px 24px);animation:waterfallVerticalFlow 4.3s linear infinite reverse}
+@keyframes waterfallVerticalFlow{from{transform:translateY(-16%)}to{transform:translateY(38%)}}
+.edition-home .edition-cover-copy{position:relative;z-index:5}
+@media(max-width:760px){.edition-home .faction-aura-layer{opacity:.42}.edition-home .faction-aura{width:24%}.edition-home .waterfall-fx{opacity:.32!important}}
+@media(prefers-reduced-motion:reduce){.edition-home .faction-aura,.edition-home .faction-aura::after,.edition-home .waterfall-fx::before,.edition-home .waterfall-fx::after{animation:none!important}}

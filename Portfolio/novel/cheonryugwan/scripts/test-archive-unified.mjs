@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const cssNames=[...html.matchAll(/href="assets\/([^" ]+\.css)"/g)].map(m=>m[1]);
+const expected=['design-tokens.css','foundation-legacy.css','components-legacy.css','layout-canonical.css','home-v0928.css','design-components.css','archive-unified.css','cinematic-waterfall-book.css','visual-polish-v0937.css','mobile-v0938.css'];
+if(JSON.stringify(cssNames)!==JSON.stringify(expected))throw Error('Unexpected CSS cascade order: '+cssNames);
+const css=fs.readFileSync(path.join(root,'static/assets/archive-unified.css'),'utf8');
+for(const name of ['#main>.page','.edition-inner-hero'])if(!css.includes(name))throw Error('Missing page style '+name);
+const tokens=fs.readFileSync(path.join(root,'static/assets/design-tokens.css'),'utf8');
+const shared=fs.readFileSync(path.join(root,'static/assets/design-components.css'),'utf8');
+for(const name of ['--crg-archive-bg','--crg-gold-gradient'])if(!tokens.includes(name))throw Error('Missing token '+name);
+for(const name of ['.shell>.top','.shell>.footer',':where(.archive-list'])if(!shared.includes(name))throw Error('Missing shared component '+name);
+const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
+for(const name of ['home','novel','characters','relationships','costumes','world','canon','history','design','reader'])if(!app.includes(`page==='${name}'`))throw Error('Missing route '+name);
+for(const file of cssNames)if(!fs.existsSync(path.join(root,'static/assets',file)))throw Error('Missing '+file);
+if(/<style(?:\s|>)/i.test(html))throw Error('Inline styles returned');
+console.log('[DESIGN] 10 ordered CSS layers, 10 routes, shared chrome, assets: OK');

@@ -1,0 +1,181 @@
+[
+  {
+    "file": "foundation-legacy.css",
+    "bytes": 115441,
+    "important": 151,
+    "selectorRepetitions": 227,
+    "mostRepeated": [
+      [
+        ".top",
+        8
+      ],
+      [
+        ".hero",
+        7
+      ],
+      [
+        ".atlas-grid",
+        7
+      ],
+      [
+        ".nav",
+        6
+      ],
+      [
+        ".nav button",
+        6
+      ],
+      [
+        ".hero h1",
+        6
+      ],
+      [
+        ".reader-top,.reader-bottom",
+        6
+      ],
+      [
+        ".book-leaf",
+        6
+      ]
+    ]
+  },
+  {
+    "file": "components-legacy.css",
+    "bytes": 52717,
+    "important": 150,
+    "selectorRepetitions": 93,
+    "mostRepeated": [
+      [
+        ".cinema-library-layout",
+        14
+      ],
+      [
+        ".cinema-book-scene",
+        13
+      ],
+      [
+        ".reader-bottom",
+        9
+      ],
+      [
+        ".cinema-library-inner",
+        9
+      ],
+      [
+        ".reading-stage",
+        8
+      ],
+      [
+        ".reading-mode .book-leaf",
+        8
+      ],
+      [
+        ".cinema-library-panel",
+        8
+      ],
+      [
+        ".cinema-book-cover",
+        8
+      ]
+    ]
+  },
+  {
+    "file": "layout-canonical.css",
+    "bytes": 6046,
+    "important": 71,
+    "selectorRepetitions": 13,
+    "mostRepeated": [
+      [
+        ".world-page .world-atlas-layout",
+        3
+      ],
+      [
+        ".world-page .world-atlas-side",
+        3
+      ],
+      [
+        ".world-page .world-atlas-nav",
+        2
+      ],
+      [
+        ".world-page .world-atlas-book",
+        2
+      ],
+      [
+        ".world-page .world-atlas-paper",
+        2
+      ],
+      [
+        ".world-page .atlas-book-heading h3",
+        2
+      ],
+      [
+        ".world-page .atlas-landscape",
+        2
+      ],
+      [
+        ".world-page .atlas-book-bottom",
+        2
+      ]
+    ]
+  },
+  {
+    "file": "home-v0928.css",
+    "bytes": 8350,
+    "important": 62,
+    "selectorRepetitions": 11,
+    "mostRepeated": [
+      [
+        ".edition-home .edition-route-grid",
+        4
+      ],
+      [
+        ".edition-home .edition-route",
+        3
+      ],
+      [
+        ".edition-home .edition-latest",
+        3
+      ],
+      [
+        ".edition-home .edition-cover",
+        2
+      ],
+      [
+        ".edition-home .edition-cover-copy",
+        2
+      ],
+      [
+        ".edition-home .edition-cover h1",
+        2
+      ],
+      [
+        ".edition-home .edition-chapter,.edition-home .edition-factions",
+        2
+      ],
+      [
+        ".edition-home .edition-section-head h2",
+        2
+      ]
+    ]
+  },
+  {
+    "file": "design-components.css",
+    "bytes": 2922,
+    "important": 1,
+    "selectorRepetitions": 0,
+    "mostRepeated": []
+  },
+  {
+    "file": "archive-unified.css",
+    "bytes": 1370,
+    "important": 0,
+    "selectorRepetitions": 1,
+    "mostRepeated": [
+      [
+        "#main>.page .edition-inner-hero:after",
+        2
+      ]
+    ]
+  }
+]

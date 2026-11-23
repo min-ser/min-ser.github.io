@@ -57,3 +57,31 @@
 - 공식 `docs/design/world-atlas.png` 기준 세계관 탐색 3영역 시각 개선.
 - 지도 선택 시 관련 공개 CANON 기록 표시, 지리 정보는 임의로 확정하지 않음.
 - 상세 상태: `docs/DESIGN_CHECKLIST_v0.9.15.md`.
+
+## v0.9.28 홈 시안 반영
+- 홈 CSS: `static/assets/home-v0928.css` (배포 시 `assets/home-v0928.css`)
+- 홈 캐릭터 일러스트 제거: `app.js`의 `home()`
+- 누적 체크리스트: `docs/DESIGN_CHECKLIST_v0.9.28.md`
+
+## v0.9.29 스타일 구조 정리
+
+`docs/CODE_CLEANUP_v0.9.29.md` 참고. `npm run test:styles`로 CSS 참조 및 계층 순서를 검증합니다.
+
+
+## v0.9.49 운영 서가 디자인
+
+고서형 서가의 1차 운영 스타일은 `static/assets/goso-library-v0949.css`에 반영됨. 세부 진행률은 `docs/UPDATE_CHECKLIST.md` 참조. 특수효과 개발은 v0.10.x부터 진행.
+
+
+## v0.9.51 동일 소스 미리보기
+`design-previews/v0.9.51_unified.html`은 운영 `index.html`, `app.js`, CSS를 인라인한 검수본입니다. 더미 원고는 `design-previews/demo-content-v0951.json`에 분리되어 있고 운영 `static/content.json`에는 포함되지 않습니다.
+
+
+## v0.9.51 동일 소스 미리보기
+`design-previews/v0.9.51_unified.html`은 운영 `index.html`, `app.js`, CSS를 인라인한 검수본입니다. 더미 원고는 `design-previews/demo-content-v0951.json`에 분리되어 있고 운영 `static/content.json`에는 포함되지 않습니다.
+
+
+## v0.9.55 누적 퍼블리싱
+- `publishing/index.html`: 모바일에서 JavaScript 없이 동작하는 전체 화면 퍼블리싱 검수본 (홈 유지, 서가/독서 고도화, 더미 데이터)
+- `static/assets/goso-archive-v0955.css`: 신규 고서 디자인 토큰/스타일. 운영 앱에도 연결됨.
+- 실제 운영 데이터 및 app.js는 보존. 독립 퍼블리싱과 운영 앱의 DOM 구조는 여전히 일부 상이하며 통합 검증 필요.

@@ -1,0 +1,28 @@
+/* Cheonryugwan v0.9.31 — shared interaction primitives.
+   Layout is intentionally owned by page styles, not these common rules. */
+:where(.top,.footer){border-color:var(--crg-gold-muted)}
+:where(.panel,.record,.character,.design-sheet,.world-atlas-nav,.world-atlas-side){border-color:var(--crg-border);box-shadow:var(--crg-shadow-panel)}
+:where(.tile,.sect,.character,.record,.panel,.design-sheet){border-radius:var(--crg-radius)}
+:where(.heading h2,.panel h3,.character strong){text-wrap:balance}
+:where(.intro,.notice,.character p,.record p){overflow-wrap:anywhere}
+/* All interactive components share one focus and transition policy. */
+:where(.nav button,.tabs button,.btn,.tile,.sect,.record,.character,.reader-top button,.reader-bottom button,.menu-toggle){transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+:where(.nav button,.tabs button,.btn,.tile,.sect,.record,.character,.reader-top button,.reader-bottom button,.menu-toggle):focus-visible{outline:2px solid var(--crg-gold);outline-offset:3px}
+:where(.nav button,.tabs button,.btn,.tile,.sect,.record,.character,.reader-top button,.reader-bottom button,.menu-toggle):disabled{opacity:.55;cursor:not-allowed}
+:where(button,[role=button],a){-webkit-tap-highlight-color:transparent}
+@media (prefers-reduced-motion:reduce){:where(.nav button,.tabs button,.btn,.tile,.sect,.record,.character,.reader-top button,.reader-bottom button,.menu-toggle){transition:none}}
+
+/* Shared archive chrome and reusable panels — extracted from archive-unified v0.9.34. */
+/* Site-wide header/footer, consistent on every route */
+.shell>.top{position:relative;z-index:50;border-bottom:1px solid var(--crg-gold-muted);box-shadow:0 8px 26px #0005}
+.shell>.top:after{content:"";position:absolute;bottom:-3px;left:2%;right:2%;height:1px;background:var(--crg-gold-gradient);pointer-events:none}
+.shell>.footer{position:relative;text-align:center;letter-spacing:.14em;border-top:1px solid var(--crg-gold-muted);background:#0a111c;color:var(--crg-gold)}
+.shell>.footer:before{content:"";display:block;height:1px;max-width:900px;margin:0 auto 14px;background:var(--crg-gold-gradient)}
+/* Common panel framing — deliberately low specificity to preserve reader/world layout */
+:where(.archive-list,.design-sheet,.character,.record,.panel,.cinema-info-panel,.world-atlas-nav,.world-atlas-side){border-color:var(--crg-border);box-shadow:var(--crg-shadow-panel)}
+:where(.archive-list,.design-sheet,.character,.record,.panel){background-clip:padding-box}
+:where(.nav button,.btn,.tabs button,.menu-toggle){touch-action:manipulation}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important}}
+
+/* Shared title typography; spacing and ornament remain page-owned. */
+#main>.page .heading h1,#main>.page .heading h2{color:var(--crg-text);text-shadow:0 3px 12px #0007;letter-spacing:.045em;word-break:keep-all}

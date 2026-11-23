@@ -1,0 +1,18 @@
+/* v0.9.50 — 고서 표지와 펼침 화면: 운영 앱 통합, 이펙트 개발 없음 */
+.reading-mode .immersive-reader{background:radial-gradient(ellipse at 50% 10%,#59412c,#201811 57%,#100e0c)!important;color:#ead8b7}
+.reading-mode .reader-top,.reading-mode .reader-bottom{background:linear-gradient(180deg,#32231b,#211913)!important;border-color:#99754a!important}
+.reading-mode .reader-top button,.reading-mode .reader-bottom button,.reading-mode .reader-settings button{background:#443020!important;border:1px solid #ad8754!important;color:#f2dfbd!important;border-radius:2px!important}
+.reading-mode .reading-stage{background:radial-gradient(ellipse at center,#97724620,transparent 70%)}
+.reading-mode .book-cover-face{border-radius:4px 15px 15px 4px!important;border:10px solid #4a2b1e!important;border-left:23px solid #21140f!important;background:radial-gradient(ellipse at 55% 35%,#775039,#36221b 75%)!important;box-shadow:inset 0 0 0 5px #a9824c,inset 0 0 0 11px #25160f,inset 0 0 0 13px #bd9861,inset 0 0 0 23px #24150f,14px 13px 0 -6px #d6c29a,18px 19px 0 -7px #62482e,0 27px 60px #090604d9!important}
+.reading-mode .book-cover-face:before{inset:40px!important;border:1px solid #d3aa68!important;box-shadow:0 0 0 6px #26160f,0 0 0 7px #ad814a!important}
+.reading-mode .cover-emblem{font-family:serif;letter-spacing:.28em;font-size:clamp(30px,5vw,65px);color:#e7c789}
+.reading-mode .cover-book-title{font-family:serif;writing-mode:vertical-rl;letter-spacing:.35em;font-size:clamp(24px,3vw,44px);line-height:1.5;color:#f3deb2}
+.reading-mode .cover-subtitle{font-family:serif;letter-spacing:.13em}
+.reading-mode .open-book-button{background:#3d281a;border:1px solid #d4b077;color:#f3e0bc;min-height:48px}
+.reading-mode .book-spread{border:12px solid #5d3c26!important;border-radius:7px!important;box-shadow:0 0 0 2px #c19a61,0 24px 0 -11px #b8a17d,0 28px 0 -12px #5d422c,0 34px 75px #090503d9!important}
+.reading-mode .book-leaf{background:radial-gradient(ellipse at 47% 38%,#f5e9d0,#ddc49a 94%)!important;color:#382a1f!important}
+.reading-mode .book-leaf:before{inset:17px!important;border:1px solid #9c784a99!important;box-shadow:inset 0 0 0 5px #f4e6c533!important}
+.reading-mode .leaf-content{font-family:Georgia,'Noto Serif KR',serif;line-height:1.9}
+.reading-mode .book-spine{background:linear-gradient(90deg,transparent,#6c4d3160 43%,#fff4db80 52%,transparent)}
+@media(max-width:760px){.reading-mode .book-spread{grid-template-columns:1fr!important;border-width:6px!important}.reading-mode .left-leaf{display:none!important}.reading-mode .right-leaf{display:flex!important}.reading-mode .book-spine{display:none!important}.reading-mode .book-cover-face{inset:3% 6%!important;border-left-width:13px!important}.reading-mode .book-cover-face:before{inset:20px!important}.reading-mode .book-leaf:before{inset:9px!important}.reading-mode .leaf-content{font-size:var(--reader-size)!important;line-height:1.75!important}.reading-mode .reader-settings{gap:5px}}
+@media(prefers-reduced-motion:reduce){.reading-mode .book-cover-face,.reading-mode .book-flip-sheet{animation:none!important;transition:none!important}}

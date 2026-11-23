@@ -1,0 +1,4 @@
+/* v0.9.51 — real-source reader parity and responsive refinement */
+.reading-mode .reader-progress-wrap{display:inline-flex;align-items:center;justify-content:center;min-width:88px;font-variant-numeric:tabular-nums;color:#eed2a6}
+.reading-mode .reader-bottom button:focus-visible,.reading-mode .reader-top button:focus-visible{outline:2px solid #f6d596;outline-offset:3px}
+@media(max-width:760px){.reading-mode .book-leaf.left-leaf{display:none!important}.reading-mode .book-leaf.right-leaf{display:flex!important;min-width:0;width:100%}.reading-mode .reader-bottom{gap:6px;flex-wrap:wrap}.reading-mode .reader-bottom button{min-height:42px}.reading-mode .book-spread{grid-template-columns:minmax(0,1fr)!important}.reading-mode .reader-top{gap:8px;flex-wrap:wrap}.reading-mode .reader-chapter-name{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}

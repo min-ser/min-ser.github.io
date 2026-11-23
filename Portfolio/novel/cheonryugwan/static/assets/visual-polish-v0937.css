@@ -1,0 +1,29 @@
+/* v0.9.37 visual correction: scoped fixes from user screenshots. */
+/* Restore a single continuous hero image. Prevent the inherited pseudo layers from drawing a navy strip at the top. */
+.edition-home .edition-cover{isolation:isolate;min-height:clamp(660px,calc(100svh - 72px),870px)!important;background-position:center 48%!important}
+.edition-home .edition-cover:after{top:auto!important;left:0!important;right:0!important;bottom:-1px!important;height:46px!important;clip-path:polygon(0 64%,14% 79%,31% 57%,47% 76%,66% 54%,83% 73%,100% 59%,100% 100%,0 100%)!important;border:0!important;background:#14202e!important;z-index:4!important}
+.edition-home .edition-cover-frame{z-index:5;inset:14px!important}
+.edition-home .edition-cover-frame:before,.edition-home .edition-cover-frame:after{background:#111c2b!important}
+.edition-home .edition-cover-copy{z-index:7!important}
+/* Waterfall is a narrow visual feature on the right cliff, not an overlay across the academy. */
+.edition-home .waterfall-fx{z-index:3!important;opacity:.37!important;mix-blend-mode:screen!important;filter:blur(1px)}
+.edition-home .waterfall-fx::before{inset:0!important;background:repeating-linear-gradient(180deg,rgba(227,244,247,0) 0 13px,rgba(225,244,250,.24) 19px 33px,rgba(225,244,250,0) 49px 92px)!important;background-size:100% 240px!important;animation:cheonWaterFlowRefined 4.5s linear infinite!important}
+.edition-home .waterfall-mist{inset:auto 2% 9% auto!important;width:31%!important;height:19%!important;opacity:.42!important;filter:blur(25px)!important}
+@keyframes cheonWaterFlowRefined{from{background-position:0 0}to{background-position:0 240px}}
+/* Library cover: frame must be INSIDE the cover. Existing rules had multiple contradictory sizes. */
+.cinema-library .cinema-library-center{min-width:0!important;overflow:visible}
+.cinema-library .cinema-book-scene{width:min(100%,390px)!important;height:clamp(365px,42vw,490px)!important;min-height:0!important;max-height:none!important;margin:0 auto 22px!important;filter:drop-shadow(12px 22px 19px #000a)!important;perspective:1200px!important}
+.cinema-library .cinema-book-cover{position:relative!important;box-sizing:border-box!important;width:min(76%,315px)!important;height:94%!important;max-width:100%!important;min-width:0!important;transform:perspective(1100px) rotateY(-7deg) rotateZ(-1.5deg)!important;border:6px solid #9b7447!important;border-left:15px solid #5b3926!important;border-radius:7px 16px 16px 6px!important;box-shadow:inset 5px 0 13px #0009,inset -6px 0 15px #0007,8px 9px 0 #9e7a52,13px 14px 0 #281b16,18px 24px 25px #000b!important;background:radial-gradient(ellipse at 65% 35%,#60402f,#251b1c 76%)!important;overflow:hidden!important}
+.cinema-library .cinema-book-cover:before{inset:10px!important;border:1px solid #d9b477!important;box-shadow:inset 0 0 0 5px #261b1b,inset 0 0 0 6px #ad8454!important}
+.cinema-library .cinema-book-frame{position:absolute!important;inset:23px 22px!important;width:auto!important;height:auto!important;min-width:0!important;max-width:none!important;box-sizing:border-box!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:10px!important;overflow:hidden!important;transform:none!important;border:1px solid #d7af6d!important;background:radial-gradient(ellipse at 50% 30%,#51392d77,#171923d9),url('academy.webp') center bottom/cover!important;box-shadow:inset 0 0 0 5px #20191c,inset 0 0 0 6px #a47b4a!important}
+.cinema-library .cinema-book-frame:before{inset:8px!important;opacity:.12!important}
+.cinema-library .cinema-book-title{font-size:clamp(38px,4.2vw,62px)!important;line-height:1.14!important;letter-spacing:.04em!important;white-space:normal!important;flex:0 0 auto!important}
+.cinema-library .cinema-book-mark{font-size:10px!important;letter-spacing:.2em!important}
+.cinema-library .cinema-book-divider{font-size:11px!important}
+.cinema-library .cinema-book-subtitle{font-size:8px!important;letter-spacing:.15em!important}
+.cinema-library .cinema-book-landscape{height:28px!important;flex:0 0 28px!important}
+.cinema-library .cinema-book-tassel{left:9%!important;top:42%!important;height:105px!important;width:4px!important;z-index:1!important}
+.cinema-library .cinema-library-center>h1{margin:0 0 5px!important;font-size:clamp(27px,3vw,40px)!important}
+.cinema-library .cinema-feature-chapter{margin:5px 0!important}
+@media(max-width:780px){.cinema-library .cinema-book-scene{height:360px!important;width:min(100%,320px)!important;margin-bottom:14px!important}.cinema-library .cinema-book-cover{width:75%!important}.cinema-library .cinema-book-frame{inset:19px 17px!important}.cinema-library .cinema-book-title{font-size:42px!important}.edition-home .waterfall-fx{opacity:.25!important}}
+@media(prefers-reduced-motion:reduce){.edition-home .waterfall-fx::before{animation:none!important}}
