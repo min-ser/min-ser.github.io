@@ -1,0 +1,12 @@
+
+/* v0.9.58 cumulative functional reader; scope all additions */
+.v58-reader-controls{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:9px;margin:10px auto 18px;max-width:1120px;padding:14px;border:1px solid #b38b55;background:linear-gradient(100deg,#151e28,#302519,#151e28);box-shadow:0 10px 30px #0006}
+.v58-reader-controls button{background:#2d241d;color:#f0d6aa;border:1px solid #ad8b58;padding:12px 15px;min-height:44px;font-size:13px;cursor:pointer}
+.v58-reader-controls button:hover,.v58-reader-controls button:focus-visible{background:#705132;color:#fff0d5}
+#v58-current{font:12px Georgia,serif;color:#ddc6a0;min-width:55px;text-align:center}
+#reader .folio-recto{--v58-font:17px}#reader .folio-recto p.v58-prose{font-size:var(--v58-font)!important;line-height:2.05}
+#novel .item-link[data-chapter]{cursor:pointer}#novel .item-link.v58-active{background:#ab865a30;color:#ffe1a9;border-left:3px solid #d5b071;padding-left:12px}
+.v58-selection{border:1px solid #a48156;padding:9px 11px;color:#f1d7ac;font-size:12px}
+#canon .canon-toc a.v58-active,#world .atlas-node.v58-active{background:#a7824d;color:#23170e}
+.v58-reader-hint{text-align:center;color:#c7b394;font-size:12px;line-height:1.7}
+@media(max-width:600px){.v58-reader-controls{position:sticky;top:69px;z-index:20;margin:0 -12px 14px;gap:6px;padding:8px;background:#111a24f5}.v58-reader-controls button{font-size:11px;padding:9px 8px}.v58-reader-controls button[data-v58="toc"]{order:1}.v58-reader-controls button[data-v58="prev"]{order:2}.v58-reader-controls #v58-current{order:3}.v58-reader-controls button[data-v58="next"]{order:4}.v58-reader-controls button[data-v58="smaller"]{order:5}.v58-reader-controls button[data-v58="larger"]{order:6}#reader .folio-recto p.v58-prose{font-size:var(--v58-font)!important}}

@@ -1,0 +1,19 @@
+/* Unified archival finish: actual operational markup, desktop/mobile */
+:root{--archive-parchment:#ecd9b5;--archive-wood:#302116;--archive-gold:#c8a46a}
+body{background:radial-gradient(ellipse at 50% -10%,#25303a 0%,#111923 54%,#0a1017 100%)}
+.top{border-bottom:1px solid #c6a36a6b;box-shadow:0 12px 35px #0006}
+.nav button:focus-visible,.page button:focus-visible,.immersive-reader button:focus-visible{outline:3px solid #f6d69d!important;outline-offset:3px}
+.cinema-library,.atlas-page,.world-atlas-layout,.immersive-reader{isolation:isolate}
+.cinema-library{background:linear-gradient(180deg,#171f28e8,#0d141bdc),url('academy.webp') center top/cover;box-shadow:inset 0 0 0 1px #c19a5960,0 22px 60px #0008}
+.cinema-book-cover,.antique-book.closed .book-cover-face{box-shadow:inset 0 0 0 2px #c29d64,inset 0 0 0 11px #2b1a16,12px 11px 0 -2px #d7c099,18px 17px 0 -4px #73553a,24px 30px 40px #0009}
+.atlas-card{transition:transform .18s ease,box-shadow .18s ease;box-shadow:0 12px 30px #0007,inset 0 0 0 1px #c6a16a75}
+.atlas-card:hover{transform:translateY(-4px);box-shadow:0 18px 35px #0009,inset 0 0 0 2px #e0c18b}
+.atlas-portrait img{object-fit:contain;object-position:center bottom}
+.book-leaf{background:radial-gradient(ellipse at 40% 30%,#f7e9c9,#dec49d 85%)!important;color:#392c21}
+.book-spine{pointer-events:none}
+.reader-bottom{position:relative;z-index:3}
+.reader-progress-wrap{display:flex;align-items:center;justify-content:center;gap:12px}
+.reader-preferences[hidden],.reader-chapter-drawer[hidden],.book-spread[hidden]{display:none!important}
+@media(max-width:760px){.reader-top{flex-wrap:wrap;gap:10px}.reader-settings{flex-wrap:wrap}.reader-bottom{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.reader-progress-wrap{width:100%;order:2}.atlas-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.atlas-grid{grid-template-columns:1fr}.atlas-card{min-width:0}.reader-settings{width:100%;justify-content:center}.book-leaf{padding:25px 18px!important}}
+@media(prefers-reduced-motion:reduce){.atlas-card{transition:none}}

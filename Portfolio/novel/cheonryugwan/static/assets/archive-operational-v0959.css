@@ -1,0 +1,29 @@
+/* v0.9.59 REAL APP design integration: applies to production-rendered markup */
+:root{--archive-ink:#0c141c;--archive-brass:#c5a16b;--archive-parchment:#e7d3ab}
+.cinema-library{position:relative;isolation:isolate;background:linear-gradient(180deg,#111822e8,#111820f2),url('academy.webp') center/cover!important;min-height:760px;border-top:2px solid #a17b49;border-bottom:2px solid #a17b49;box-shadow:inset 0 0 90px #000b}
+.cinema-library:before{content:'';position:absolute;inset:18px;border:1px solid #c39b5d40;pointer-events:none}
+.cinema-library-inner{position:relative;z-index:1}
+.cinema-library-layout{align-items:stretch!important;gap:clamp(16px,2.2vw,38px)!important}
+.cinema-library-panel{background:linear-gradient(145deg,#2c251ef2,#121b23f5)!important;border:1px solid #aa8654!important;box-shadow:inset 0 0 0 5px #121920b0,0 18px 38px #0008!important}
+.cinema-book-scene{perspective:1200px;filter:drop-shadow(0 24px 20px #0009)}
+.cinema-book-cover{transform:rotateY(-7deg) rotateZ(-1deg);box-shadow:inset 0 0 0 3px #c29c64,inset 0 0 0 11px #271812,8px 7px 0 #c8b188,14px 13px 0 #806047,25px 30px 35px #000b!important}
+.cinema-book-frame{box-shadow:inset 0 0 0 1px #d6b27a}
+.cinema-chapter,.cinema-volume{min-height:44px}
+.cinema-chapter:focus-visible,.cinema-volume:focus-visible,.cinema-read-button:focus-visible{outline:3px solid #f2d6a4;outline-offset:3px}
+.immersive-reader{background:radial-gradient(ellipse at 50% 25%,#3a3229,#121923 75%)!important;min-height:calc(100vh - 80px)}
+.antique-book.opened{filter:drop-shadow(0 28px 36px #0009)}
+.antique-book .book-leaf{background:radial-gradient(ellipse at 48% 32%,#f5e8ce,#dcc39c)!important;color:#49351f}
+.antique-book .left-leaf{box-shadow:inset -23px 0 29px #6d47282c}
+.antique-book .right-leaf{box-shadow:inset 23px 0 29px #6d47282c}
+.antique-book .book-spine{background:linear-gradient(90deg,#5b3d26a8,#e7d1a522,#3f2b1d99)!important}
+.reader-top,.reader-bottom{background:linear-gradient(100deg,#1a232c,#332719,#1a232c)!important;border-color:#b08c59!important}
+.reader-top button,.reader-bottom button,.reader-chapter-drawer button{min-height:44px}
+.atlas-page,.profile-page,.relation-page{background:radial-gradient(ellipse at 50% 0%,#3c3026,#101923 75%)}
+.atlas-card{border:1px solid #b4925d!important;background:linear-gradient(145deg,#2c251f,#141b23)!important;box-shadow:inset 0 0 0 5px #c49d4920,0 15px 28px #0006!important;min-height:350px}
+.atlas-portrait{background:radial-gradient(ellipse at 50% 35%,#ae926c,#493d32 65%,#252b30)!important;min-height:230px;overflow:hidden}
+.atlas-portrait img{object-fit:contain!important;object-position:bottom}
+.atlas-card:focus-visible{outline:3px solid #f0d6a4;outline-offset:3px}
+.world-atlas-map,.world-atlas-stage,.world-map-canvas{background-color:#d8be91!important;box-shadow:inset 0 0 0 3px #977348,0 20px 38px #0007}
+.canon-page .archive-entry,.world-records .archive-entry{border:1px solid #a58a60;background:linear-gradient(125deg,#2b261f,#17212b);box-shadow:0 9px 20px #0004}
+@media(max-width:760px){.cinema-library{min-height:0}.cinema-library:before{inset:8px}.cinema-library-layout{display:flex!important;flex-direction:column!important}.cinema-library-center{order:-1}.cinema-library-panel{width:100%!important}.cinema-book-cover{transform:none}.reader-top,.reader-bottom{flex-wrap:wrap}.atlas-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))!important}.atlas-portrait{min-height:250px}}
+@media(prefers-reduced-motion:reduce){.cinema-book-cover{transition:none!important}}

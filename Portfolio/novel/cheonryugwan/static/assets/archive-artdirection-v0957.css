@@ -1,0 +1,30 @@
+
+/* v0.9.57 cumulative antique archive redesign */
+#novel .archive-scene{position:relative;isolation:isolate;padding:44px 24px;background:linear-gradient(180deg,#101722bb,#10151df2),url("academy.webp") center/cover;border:2px solid #a78a5b;box-shadow:inset 0 0 0 9px #1a1a1b88,0 25px 65px #0009}
+#novel .book-layout{display:grid;grid-template-columns:minmax(170px,.85fr) minmax(260px,1.6fr) minmax(170px,.85fr);gap:22px;align-items:center}
+#novel .book-layout>.panel,#novel .archive-ledger{min-height:390px;padding:25px 20px;background:linear-gradient(130deg,#33291fe8,#141b23f5);border:1px solid #af8c5d;box-shadow:inset 0 0 0 5px #13171dcc,0 18px 30px #0007}
+#novel .book-plinth{perspective:900px;position:relative;padding-bottom:45px}
+#novel .book-plinth:before{content:"";position:absolute;bottom:38px;left:8%;right:8%;height:24px;background:linear-gradient(#a78655,#3a281d);border:2px solid #d2ac72;box-shadow:0 12px 25px #000a}
+#novel .book-cover{width:min(84%,380px);min-height:440px;margin:auto;position:relative;background:linear-gradient(105deg,#1d100d 0 7%,#67452f 12%,#36211b 22%,#62402c 60%,#2b1a16);border:9px solid #81512e;border-left:21px solid #23130f;box-shadow:inset 0 0 0 3px #d5b17a,inset 0 0 0 10px #2a1b17,inset 0 0 0 12px #c29c67,8px 8px 0 #e1c99e,13px 14px 0 #8d6a46,23px 28px 35px #000b;transform:rotateY(-7deg) rotateZ(-1deg)}
+#novel .book-cover:after{content:"";position:absolute;inset:23px;border:1px solid #caa46d;pointer-events:none}
+#novel .book-title{font-size:clamp(35px,4vw,56px);letter-spacing:.12em;color:#f2d4a0;text-shadow:0 3px 0 #1a0d09,0 0 20px #a9844b55}
+#novel .item-link{display:block;padding:14px 3px;border-bottom:1px solid #a88a5b55;color:#ead7b9}
+#novel .item-link:hover{background:#a88a5b22;color:white}
+#characters .character-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+#characters .character-scroll{background:linear-gradient(140deg,#ead9b7,#bca077);color:#392b20;border:9px solid #62452f;box-shadow:inset 0 0 0 2px #d5b681,0 17px 34px #0008;padding:20px}
+#characters .character-portrait{height:245px;background:radial-gradient(ellipse,#bea482,#67513f);overflow:hidden}
+#characters .character-portrait img{width:100%;height:100%;object-fit:contain;object-position:bottom}
+#characters .character-scroll h3,#characters .character-scroll p{color:#4c3321}
+#world .world-atlas{display:grid;grid-template-columns:minmax(165px,.7fr) minmax(320px,1.8fr) minmax(165px,.8fr);gap:16px}
+#world .atlas-map{min-height:470px;background:radial-gradient(ellipse at 35% 30%,#f5e4c3,#c9ac7d);border:12px solid #62462f;box-shadow:inset 0 0 0 3px #b99664,0 17px 34px #0008;color:#513b27}
+#world .atlas-mountains{font-size:65px;color:#806447;opacity:.6}
+#world .atlas-node{background:#ead5ac;color:#543a26;border:1px solid #947044;padding:9px}
+#canon .canon-layout{display:grid;grid-template-columns:minmax(190px,.7fr) minmax(0,2fr);gap:22px}
+#canon .canon-sheet{background:linear-gradient(120deg,#c3a77e,#f0dfba 10%,#e3cba1 90%,#b99767);border:12px solid #5c412c;box-shadow:inset 0 0 0 2px #a58451,0 20px 35px #0008;color:#483320;padding:clamp(24px,4vw,58px);line-height:2}
+#reader .folio-frame{position:relative;display:grid;grid-template-columns:1fr 1fr;border:13px solid #64422a;box-shadow:0 9px 0 #e5d1a8,0 17px 0 #785539,0 35px 60px #000b}
+#reader .folio-frame:after{content:"";position:absolute;left:calc(50% - 16px);top:0;bottom:0;width:32px;background:linear-gradient(90deg,#50351d77,transparent 48%,#50351d77);pointer-events:none}
+#reader .folio-leaf{min-height:580px;background:radial-gradient(ellipse,#f4e5c7,#dbc097);color:#4b321e;padding:clamp(26px,4vw,58px)}
+#reader .folio-leaf p{line-height:2.15;font-size:clamp(15px,1.3vw,18px)}
+.v57-chapter-guide{margin-top:22px;color:#e5d0a9;font-size:12px}.v57-chapter-guide summary{cursor:pointer;border:1px solid #a88a5b;padding:12px}.v57-chapter-guide p{line-height:1.7;border-bottom:1px solid #94774c44;padding:9px 0}
+@media(max-width:900px){#novel .book-layout{grid-template-columns:1fr}#novel .book-plinth{order:-1}#novel .book-layout>.panel,#novel .archive-ledger{min-height:0}#characters .character-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}#world .world-atlas,#canon .canon-layout{grid-template-columns:1fr}}
+@media(max-width:600px){#novel .archive-scene{padding:20px 12px}#novel .book-cover{min-height:345px;width:min(76%,270px)}#characters .character-gallery{grid-template-columns:1fr}#reader .folio-frame{display:block;border-width:8px}#reader .folio-frame:after,#reader .folio-verso{display:none}#reader .folio-leaf{min-height:470px;padding:32px 23px}}
