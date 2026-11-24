@@ -1,0 +1,234 @@
+/* 天流館 / v0.9.59.2 — dedicated reader visual system.
+   Scope only .reading-mode, preserving every other operational screen.
+   The rendered book, paper, ornaments and controls are true HTML/CSS, not a screenshot background. */
+:root{--crg-reader-amber:#e6c18a;--crg-reader-deep:#101725;--crg-reader-line:#ad8050}
+body.reading-mode{background:#0a101a!important;overflow:hidden}
+body.reading-mode .shell{width:100%!important;max-width:none!important;height:100dvh!important;border:0!important;background:#0c1420!important;overflow:hidden!important}
+body.reading-mode #main{height:100%;width:100%;flex:1 1 auto!important;min-width:0;overflow:hidden!important}
+body.reading-mode .top{height:58px;min-height:58px;flex:0 0 58px;padding:0 clamp(15px,2.5vw,42px)!important;background:linear-gradient(90deg,#0a111c,#101c2d 52%,#0a111c)!important;box-shadow:0 1px 0 #c8a06c66,0 12px 30px #0007!important;z-index:15!important}
+body.reading-mode .brand{font-size:18px;letter-spacing:2px}
+body.reading-mode .brand small{font-size:8px;letter-spacing:3px}
+body.reading-mode .nav{display:flex;gap:0}
+body.reading-mode .nav button{padding:13px clamp(5px,.9vw,13px);font-size:11px}
+body.reading-mode .nav button.active{background:transparent;color:#ffe0a2;border-color:transparent;border-bottom:2px solid #edc37f}
+body.reading-mode .immersive-reader{
+ --reader-size:16px;--reader-spacing:1.95;
+ background:linear-gradient(0deg,#080f1bcc,#0b1622a5 24%,#0c1722aa 80%,#071321de),url('academy.webp') center 54%/cover no-repeat!important;
+ position:relative;isolation:isolate;display:flex;flex-direction:column;height:100%!important;min-height:0!important;width:100%;overflow:hidden!important;color:#f0d5ac;
+}
+body.reading-mode .immersive-reader:before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 50% 43%,transparent 12%,#050a12bd 84%);opacity:.95}
+body.reading-mode .reader-top,body.reading-mode .reader-bottom{background:linear-gradient(90deg,#0d1725ed,#1a2330f6 50%,#0d1725ed)!important;border-color:#b9915c85!important;box-shadow:0 5px 20px #0005;z-index:16;min-width:0}
+body.reading-mode .reader-top{flex:0 0 60px!important;min-height:60px!important;padding:6px clamp(12px,2.5vw,48px)!important;display:flex!important;align-items:center;justify-content:space-between;gap:15px;flex-wrap:nowrap!important}
+body.reading-mode .reader-heading-group{display:flex;align-items:center;gap:17px;min-width:0}
+body.reading-mode .reader-heading-title{display:flex;flex-direction:column;gap:3px;min-width:0}
+body.reading-mode .reader-heading-title small{font:10px/1.3 Georgia,serif;color:#c5a171;letter-spacing:.22em}
+body.reading-mode .reader-top .reader-chapter-name{display:block;min-width:0;max-width:50vw;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-family:'Noto Serif CJK KR','Nanum Myeongjo',serif;font-weight:600;color:#f7e0b9;font-size:clamp(13px,1.4vw,20px);line-height:1.15}
+body.reading-mode .reader-top button,body.reading-mode .reader-bottom button{
+ background:linear-gradient(140deg,#1a2532,#101721)!important;border:1px solid #ab88594d!important;color:#ead2ab!important;border-radius:3px!important;box-shadow:inset 0 0 0 1px #060e17,0 4px 12px #0003;
+ min-height:40px!important;min-width:40px;padding:8px 13px!important;font-size:12px!important;letter-spacing:.025em;
+}
+body.reading-mode .reader-top button:hover,body.reading-mode .reader-bottom button:not(:disabled):hover{background:linear-gradient(150deg,#513b2a,#1e2731)!important;border-color:#e2bc7d!important;color:#fff5da!important}
+body.reading-mode .reader-top button:focus-visible,body.reading-mode .reader-bottom button:focus-visible{outline:3px solid #fff0bf!important;outline-offset:3px}
+body.reading-mode .reader-return{white-space:nowrap;border-color:#cba06d88!important;color:#f6deb7!important}
+body.reading-mode .reader-settings{width:auto!important;display:flex!important;align-items:center;justify-content:flex-end;gap:7px;flex-wrap:nowrap!important;flex:0 0 auto}
+body.reading-mode .reader-toolbar-btn{white-space:nowrap}
+body.reading-mode .reader-mark-btn.is-marked{color:#ffdd91!important;border-color:#cf9d53!important;background:#44311e!important}
+body.reading-mode .reader-preferences,body.reading-mode .reader-chapter-drawer{
+ position:absolute!important;z-index:50!important;top:69px!important;margin:0!important;border:1px solid #d1ad76!important;
+ background:linear-gradient(150deg,#243041f8,#0d1726fb)!important;color:#f5dfb7!important;
+ box-shadow:0 20px 60px #000e,inset 0 0 0 5px #0c1420,inset 0 0 0 6px #9c785078!important;border-radius:5px!important;
+ padding:24px!important;max-height:min(76dvh,710px)!important;overflow-y:auto!important;overscroll-behavior:contain
+}
+body.reading-mode .reader-preferences{right:clamp(15px,3vw,60px)!important;width:min(455px,calc(100vw - 30px))!important;left:auto!important;bottom:auto!important}
+body.reading-mode .reader-preferences[hidden],body.reading-mode .reader-chapter-drawer[hidden]{display:none!important}
+body.reading-mode .reader-preferences-heading{align-items:start;border-bottom:1px solid #cba16c66;margin-bottom:18px;padding-bottom:13px}
+body.reading-mode .reader-preferences-heading div{display:grid;gap:8px}
+body.reading-mode .reader-preferences-heading small,body.reading-mode .reader-drawer-head small{color:#bfa06f;letter-spacing:.22em;font:10px Georgia}
+body.reading-mode .reader-preferences-heading strong{font-size:24px;font-family:'Noto Serif CJK KR',serif}
+body.reading-mode .reader-preferences-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+body.reading-mode .reader-preferences-grid label{grid-column:1/-1;display:grid;gap:7px;color:#ddc7a4;font-size:13px}
+body.reading-mode .reader-range-line{display:flex;align-items:center;gap:15px}
+body.reading-mode .reader-range-line input{width:100%;accent-color:#deb275;cursor:pointer}
+body.reading-mode .reader-range-line output{min-width:43px;text-align:right;font:14px Georgia;color:#ffdda0}
+body.reading-mode .reader-preferences-grid button{background:#1c2b3b;border:1px solid #ac895a;border-radius:3px;min-height:44px;color:#e6cfaa;padding:10px;font-size:12px}
+body.reading-mode .reader-preferences-grid button:last-child{grid-column:1/-1;background:#3f2e26}
+body.reading-mode .reader-preferences p{color:#ac9c88;margin-top:18px;font-size:11px;line-height:1.7}
+body.reading-mode .reader-chapter-drawer{left:clamp(15px,3vw,60px)!important;right:auto!important;bottom:92px!important;width:min(385px,calc(100vw - 30px))!important;display:flex;flex-direction:column}
+body.reading-mode .reader-drawer-head div{display:grid;gap:8px}
+body.reading-mode .reader-drawer-head strong{color:#f4dcaa;font-size:20px}
+body.reading-mode .reader-drawer-list{min-height:0;overflow-y:auto}
+body.reading-mode .reader-drawer-item{width:100%;display:grid;grid-template-columns:33px 1fr;gap:10px;align-items:center;text-align:left;padding:13px 9px;border:0;border-bottom:1px solid #9a744a5c;background:transparent;color:#e3d3b9;font-size:13px}
+body.reading-mode .reader-drawer-item>span:first-child{font:14px Georgia;color:#b9925d}
+body.reading-mode .reader-drawer-item.is-current{color:#ffe8b8;background:#80613a47;box-shadow:inset 3px 0 #f1c681}
+body.reading-mode .reading-stage{
+ flex:1 1 auto;min-height:0!important;position:relative;display:flex;align-items:center;justify-content:center;
+ background:transparent!important;padding:clamp(17px,2.7vh,28px) clamp(52px,7.5vw,130px) clamp(18px,3vh,32px)!important;overflow:hidden!important;
+}
+body.reading-mode .reading-stage:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#05091462 0%,transparent 24%,transparent 76%,#05091469 100%),radial-gradient(ellipse at 50% 85%,#b88e4a24,transparent 56%);opacity:1!important;pointer-events:none}
+body.reading-mode .reader-stage-caption{position:absolute;left:clamp(12px,3vw,55px);top:20px;writing-mode:vertical-rl;font-size:21px;letter-spacing:.2em;color:#d9b9828a;text-shadow:0 2px 12px #000a;pointer-events:none}
+body.reading-mode .reader-stage-caption span{color:#cfa46f5c}
+body.reading-mode .reader-stage-caption i{display:block;font:12px/2 'Noto Serif CJK KR',serif;color:#dbc59a70;font-style:normal;margin-top:12px;letter-spacing:.15em}
+body.reading-mode .antique-book{position:relative;z-index:2;width:min(100%,1310px)!important;height:100%!important;max-height:790px!important;max-width:1310px!important;filter:drop-shadow(0 28px 30px #000e)!important;perspective:1700px}
+body.reading-mode .antique-book::after{content:"";position:absolute;left:4%;right:4%;bottom:-13px;height:18px;border-radius:0 0 42% 42%;background:repeating-linear-gradient(0deg,#ad8962 0 1px,#e5cc9e 2px 4px,#7e603e 5px 6px);box-shadow:0 6px 0 #51351d,0 13px 16px #0008;pointer-events:none;z-index:-1}
+body.reading-mode .antique-book.closed::after{left:20%;right:20%}
+body.reading-mode .book-cover-face{
+ inset:3% 22%!important;border:12px solid #6b402b!important;border-left-width:21px!important;border-radius:5px 16px 16px 5px!important;
+ background-image:url('ornament-book.svg'),radial-gradient(ellipse at 42% 28%,#794b39,#412a23 48%,#211716 100%)!important;background-size:100% 100%,cover!important;background-position:center!important;
+ box-shadow:inset 0 0 0 3px #d6b378,inset 0 0 0 11px #37241f,inset 0 0 0 13px #8f6941,18px 13px 0 -6px #e1c393,26px 20px 0 -8px #8c6948,30px 33px 43px #000b!important;
+ gap:clamp(10px,2.8vh,26px)!important;padding:55px 16px!important;
+}
+body.reading-mode .book-cover-face:before{content:"";position:absolute;inset:20px;border:1px solid #cf9e5b7a;pointer-events:none;border-radius:4px}
+body.reading-mode .cover-edition{font:11px Georgia,serif;color:#dfbd85;letter-spacing:.33em}
+body.reading-mode .cover-emblem{font-size:clamp(37px,4.2vw,64px);font-family:'Noto Serif CJK KR',serif;color:#f8d59d;letter-spacing:.22em;text-shadow:0 3px 0 #241813,0 0 28px #b88d4e55}
+body.reading-mode .cover-ornament{letter-spacing:.24em;color:#e3b6778c;font-size:11px}
+body.reading-mode .cover-book-title{font-family:'Noto Serif CJK KR','Nanum Myeongjo',serif;font-size:clamp(23px,2.3vw,35px);font-weight:500;line-height:1.6;max-width:85%;color:#f7dbad}
+body.reading-mode .cover-subtitle{font-size:10px;letter-spacing:.19em;color:#ddbe8f}
+body.reading-mode .open-book-button{position:relative;z-index:4;background:linear-gradient(135deg,#d8b071,#946a3f)!important;border:1px solid #edd69c!important;color:#1e1716!important;box-shadow:0 5px 0 #38261c,0 10px 23px #0007;font-family:'Noto Serif CJK KR',serif;font-size:14px;padding:13px 27px;border-radius:3px}
+body.reading-mode .open-book-button:hover{filter:brightness(1.12)}
+body.reading-mode .book-spread{
+ position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:100%;width:100%;padding:12px 12px 14px;
+ border:10px solid #714629!important;border-bottom-width:14px!important;outline:2px solid #d2a362!important;outline-offset:-5px!important;border-radius:22px 22px 16px 16px!important;
+ background:linear-gradient(0deg,#2f1f17,#8f6241 11%,#38231b 42%,#70472e 90%,#261c1b)!important;
+ box-shadow:0 0 0 2px #382419,0 13px 0 -8px #a07a50,0 21px 0 -12px #d2b286,0 32px 0 -17px #48321f,0 34px 52px #000b,inset 0 0 0 2px #d2ae75!important;
+ overflow:visible!important;
+}
+body.reading-mode .book-spread[hidden]{display:none!important}
+body.reading-mode .book-spread:before{content:"";position:absolute;inset:5px;border:2px solid #d5b37e8a;border-radius:8px;pointer-events:none;z-index:4}
+body.reading-mode .book-leaf{
+ position:relative;z-index:1;min-width:0;min-height:0;display:flex!important;flex-direction:column;overflow:hidden;
+ padding:clamp(49px,6vh,69px) clamp(37px,4.5vw,73px) clamp(33px,4.4vh,49px)!important;
+ background-image:url('paper-ornament.svg'),repeating-linear-gradient(4deg,transparent 0 22px,#80502f06 23px 24px),radial-gradient(ellipse at 52% 35%,#f7e7c7,#ecd4a8 73%,#cfa77e 100%)!important;
+ background-size:100% 100%,auto,cover!important;color:#302419!important;
+ box-shadow:inset 0 0 38px #8055295c;
+}
+body.reading-mode .book-leaf:before{content:"";position:absolute;inset:21px 18px!important;border:1px solid #85614069!important;pointer-events:none;z-index:2;box-shadow:inset 0 0 0 5px #f6e5c01c!important}
+body.reading-mode .book-leaf:after{content:""!important;position:absolute!important;inset:auto 18% 18px!important;height:1px;width:auto;transform:none!important;background:linear-gradient(90deg,transparent,#966f49,#966f49,transparent);pointer-events:none}
+body.reading-mode .book-leaf.left-leaf{border-radius:12px 1px 1px 10px;box-shadow:inset -36px 0 36px #62391933,inset 5px 0 7px #fff4d773!important;background-position:center;background-color:#ead6b5}
+body.reading-mode .book-leaf.right-leaf{border-radius:1px 10px 10px 1px;box-shadow:inset 34px 0 36px #62391935,inset -5px 0 7px #fff4d773!important;background-position:center;background-color:#ead6b5}
+body.reading-mode .book-spine{z-index:6!important;display:block!important;left:calc(50% - 19px)!important;top:0!important;bottom:0!important;width:38px!important;background:linear-gradient(90deg,#734d2877 0%,#3d291b73 22%,#28190f7c 49%,#e8c38e6e 65%,#895a345c 85%,transparent)!important;box-shadow:inset 5px 0 9px #341b1255,inset -3px 0 7px #fff4d750;pointer-events:none}
+body.reading-mode .leaf-head{position:absolute;top:31px;left:52px;right:52px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:10px;letter-spacing:.2em;color:#9f754b;z-index:2;opacity:.8;white-space:nowrap}
+body.reading-mode .leaf-head i{font-size:14px;font-style:normal;color:#9c7045}
+body.reading-mode .leaf-footer{display:flex;justify-content:space-between;align-items:center;position:absolute;bottom:19px;left:52px;right:52px;font:10px Georgia,serif;color:#97734c;letter-spacing:.12em;z-index:2}
+body.reading-mode .leaf-number{margin:0!important;font:14px Georgia,serif;color:#6e4b2e!important}
+body.reading-mode .leaf-content{position:relative;z-index:3;min-height:0;overflow:hidden!important;flex:1;font-size:var(--reader-size)!important;line-height:var(--reader-spacing)!important;font-family:'Noto Serif CJK KR','Nanum Myeongjo',serif;color:#33271e!important;word-break:keep-all;overflow-wrap:anywhere;text-wrap:pretty}
+body.reading-mode .leaf-content p{margin:0 0 .94em!important;line-height:inherit!important;font-size:inherit!important;letter-spacing:.012em;white-space:pre-wrap;text-indent:0}
+body.reading-mode .leaf-content h1,body.reading-mode .leaf-content h2{font-family:'Noto Serif CJK KR',serif;text-align:center;color:#52351e!important;font-size:clamp(21px,2.1vw,31px)!important;margin:8px 0 1.3em!important;letter-spacing:.04em;line-height:1.65!important}
+body.reading-mode .leaf-content h1:before{content:"❦ ───── ❦";display:block;color:#977046;font:12px Georgia;margin-bottom:11px;letter-spacing:.2em}
+body.reading-mode .leaf-content h1:after{content:"❖";display:block;font:15px Georgia;color:#977046;margin-top:8px}
+body.reading-mode .leaf-content h3{font-size:1.13em!important;margin:15px 0!important;color:#70482e!important}
+body.reading-mode .leaf-content blockquote{border-left:2px solid #b8915a;background:#ac8c4a14;padding:8px 14px;margin:13px 0;color:#715137}
+body.reading-mode .leaf-content ul,body.reading-mode .leaf-content ol{padding-left:22px}
+body.reading-mode .leaf-content img{max-height:min(39vh,340px);object-fit:contain}
+body.reading-mode .leaf-content .reader-oversize{max-height:100%;max-width:100%;overflow:auto}
+body.reading-mode .book-opening-art{display:none}
+body.reading-mode .book-spread.is-opening-spread .right-leaf{
+ background-image:linear-gradient(180deg,#ead6b5d6,#f6e6c9e8 65%,#ebd4ae),url('academy.webp'),url('paper-ornament.svg')!important;
+ background-size:cover,cover,100% 100%!important;background-position:center,76% 50%,center!important;
+}
+body.reading-mode .book-spread.is-opening-spread .right-leaf .leaf-content{background:linear-gradient(180deg,transparent 0%,#f5e4c9a8 42%,#f0d9b8d1 75%,transparent 100%);border-radius:3px}
+body.reading-mode .book-flip-sheet{z-index:7;box-shadow:inset 12px 0 20px #6f4f2f44;}
+body.reading-mode .antique-book.dark .book-leaf{background-image:url('paper-ornament.svg'),radial-gradient(ellipse at 50% 25%,#3a352d,#222a32)!important;color:#e4d1b0!important;box-shadow:inset 0 0 30px #05070a70!important}
+body.reading-mode .antique-book.dark .leaf-content{color:#eadbc0!important}
+body.reading-mode .antique-book.dark .leaf-content h1,body.reading-mode .antique-book.dark .leaf-content h2,body.reading-mode .antique-book.dark .leaf-content h3{color:#ffdb9e!important}
+body.reading-mode .antique-book.dark .book-spread.is-opening-spread .right-leaf{background-image:linear-gradient(180deg,#222934dd,#1c232fea),url('academy.webp')!important}
+body.reading-mode .antique-book.dark .book-spread.is-opening-spread .right-leaf .leaf-content{background:linear-gradient(180deg,#172333aa,#212833dd)!important}
+body.reading-mode .reader-edge-arrow{position:absolute;z-index:7;top:50%;transform:translateY(-50%);width:45px;height:75px;border:0!important;background:linear-gradient(90deg,transparent,#111923aa,transparent)!important;color:#f3ce90;font-size:30px;filter:drop-shadow(0 0 8px #cd9c576e);transition:color .15s,scale .15s;cursor:pointer}
+body.reading-mode .reader-edge-prev{left:clamp(6px,3vw,48px)}body.reading-mode .reader-edge-next{right:clamp(6px,3vw,48px)}
+body.reading-mode .reader-edge-arrow:hover{color:#fff2ce;scale:1.1}
+body.reading-mode .reader-edge-arrow:disabled{opacity:.22;cursor:default;scale:1}
+body.reading-mode .reading-stage:has(.antique-book.closed) .reader-edge-arrow{display:none}
+body.reading-mode .reader-bottom{flex:0 0 72px!important;min-height:72px!important;display:flex!important;justify-content:space-between!important;align-items:center!important;flex-wrap:nowrap!important;padding:7px clamp(14px,2.8vw,48px)!important;gap:13px!important;z-index:15!important}
+body.reading-mode .reader-bottom .reader-bottom-navigation{display:flex;align-items:center;justify-content:center;gap:18px;min-width:0;flex:1}
+body.reading-mode .reader-bottom-navigation button{min-width:113px!important;font-size:13px!important;font-family:'Noto Serif CJK KR',serif}
+body.reading-mode .reader-bottom .reader-chapter-toggle,body.reading-mode .reader-bottom .reader-bottom-settings{white-space:nowrap;flex:0 0 auto}
+body.reading-mode .reader-progress-wrap{flex:0 1 255px!important;display:flex;flex-direction:column;gap:7px;justify-content:center;align-items:center;order:0!important;min-width:100px!important}
+body.reading-mode #readingProgress{font-family:Georgia,'Noto Serif CJK KR',serif;font-size:13px;line-height:1.2;letter-spacing:.08em;color:#f6ddb2}
+body.reading-mode .reader-meter{height:3px;width:100%;background:#68523b;border-radius:5px;overflow:hidden;box-shadow:0 1px 1px #000}
+body.reading-mode #readerMeterFill{display:block;height:100%;width:0;background:linear-gradient(90deg,#bd8d55,#f2d39a);transition:width .22s}
+@media(max-width:1060px){
+ body.reading-mode .top{height:48px;min-height:48px;flex-basis:48px!important;padding-inline:10px!important}
+ body.reading-mode .nav button{padding:8px 5px;font-size:10px}
+ body.reading-mode .brand{font-size:15px}
+ body.reading-mode .reading-stage{padding-inline:50px!important;padding-block:15px!important}
+ body.reading-mode .book-leaf{padding:49px 37px 36px!important}
+ body.reading-mode .leaf-head{left:39px;right:39px;top:27px}
+ body.reading-mode .leaf-footer{left:39px;right:39px}
+}
+@media(max-width:760px){
+ body.reading-mode .top{display:none!important}
+ body.reading-mode .immersive-reader{background:linear-gradient(#07101bdc,#141b22c8),url('academy.webp') center/cover!important}
+ body.reading-mode .reader-top{flex:0 0 62px!important;min-height:62px!important;gap:6px!important;padding:5px 9px!important}
+ body.reading-mode .reader-heading-group{gap:8px;flex:1 1 auto;min-width:0}
+ body.reading-mode .reader-heading-title small{font-size:8px;letter-spacing:.09em}
+ body.reading-mode .reader-top .reader-chapter-name{max-width:37vw;font-size:12px;line-height:1.2}
+ body.reading-mode .reader-settings{gap:5px!important;width:auto!important;justify-content:flex-end}
+ body.reading-mode .reader-toolbar-btn{font-size:17px!important;min-height:42px!important;min-width:42px;padding:7px!important}
+ body.reading-mode .reader-toolbar-btn span{display:none}
+ body.reading-mode .reader-return{padding:8px!important;font-size:18px!important;min-width:39px!important}
+ body.reading-mode .reader-return span{display:none}
+ body.reading-mode .reader-stage-caption{display:none}
+ body.reading-mode .reading-stage{padding:13px 12px 23px!important}
+ body.reading-mode .antique-book{width:100%!important;max-height:none!important;height:100%!important;filter:drop-shadow(0 20px 22px #000a)!important}
+ body.reading-mode .antique-book::after{left:7px;right:7px;bottom:-9px;height:10px;box-shadow:0 3px 0 #573b26,0 8px 12px #0007}
+ body.reading-mode .book-spread{display:grid!important;grid-template-columns:minmax(0,1fr)!important;padding:6px!important;border:7px solid #6e482b!important;border-bottom-width:10px!important;outline-offset:-4px!important;border-radius:12px 15px 16px 9px!important}
+ body.reading-mode .book-spread .left-leaf,body.reading-mode .book-spine{display:none!important}
+ body.reading-mode .book-spread .right-leaf{display:flex!important;width:100%!important;min-width:0!important;border-radius:6px!important}
+ body.reading-mode .book-leaf{padding:44px clamp(21px,5.3vw,43px) 36px!important;background-size:100% 100%,auto,cover!important}
+ body.reading-mode .book-leaf:before{inset:13px 10px!important}
+ body.reading-mode .leaf-head{top:23px;left:29px;right:29px;font-size:8px;letter-spacing:.06em}
+ body.reading-mode .leaf-footer{bottom:18px;left:29px;right:29px;font-size:9px}
+ body.reading-mode .leaf-content{font-size:max(14px,var(--reader-size))!important;line-height:var(--reader-spacing)!important}
+ body.reading-mode .leaf-content h1,body.reading-mode .leaf-content h2{font-size:clamp(21px,5.2vw,28px)!important}
+ body.reading-mode .book-spread.is-opening-spread .right-leaf{background-image:url('paper-ornament.svg'),radial-gradient(ellipse,#f8e9ce,#dfc09a)!important}
+ body.reading-mode .reader-edge-arrow{display:none!important}
+ body.reading-mode .book-cover-face{inset:3% 10%!important;border:9px solid #73492e!important;border-left-width:17px!important;padding:20px 12px!important;gap:16px!important}
+ body.reading-mode .cover-emblem{font-size:33px!important}
+ body.reading-mode .cover-book-title{font-size:22px}
+ body.reading-mode .reader-bottom{flex:0 0 77px!important;min-height:77px!important;gap:6px!important;padding:5px 8px 8px!important}
+ body.reading-mode .reader-bottom .reader-chapter-toggle,body.reading-mode .reader-bottom .reader-bottom-settings{font-size:17px!important;min-width:38px!important;padding:6px!important;flex:0 0 40px}
+ body.reading-mode .reader-bottom .reader-chapter-toggle span,body.reading-mode .reader-bottom .reader-bottom-settings span{display:none}
+ body.reading-mode .reader-bottom .reader-bottom-navigation{gap:5px;min-width:0;flex:1}
+ body.reading-mode .reader-bottom-navigation button{min-width:47px!important;padding:7px!important;min-height:42px!important;font-size:14px!important}
+ body.reading-mode .reader-bottom-navigation button span{display:none}
+ body.reading-mode .reader-progress-wrap{min-width:75px!important;flex:1 1 auto!important;gap:7px}
+ body.reading-mode #readingProgress{font-size:11px;letter-spacing:0}
+ body.reading-mode .reader-preferences,body.reading-mode .reader-chapter-drawer{top:64px!important;bottom:82px!important;left:8px!important;right:8px!important;width:auto!important;max-height:none!important;padding:19px!important}
+ body.reading-mode .reader-preferences-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:400px){
+ body.reading-mode .reader-top .reader-chapter-name{max-width:32vw}
+ body.reading-mode .book-leaf{padding:43px 18px 31px!important}
+ body.reading-mode .leaf-head{left:25px;right:25px}
+ body.reading-mode .leaf-footer{left:25px;right:25px}
+ body.reading-mode .leaf-content{font-size:max(13px,var(--reader-size))!important}
+ body.reading-mode .reading-stage{padding:8px 7px 18px!important}
+}
+@media(max-height:580px){
+ body.reading-mode .top{display:none!important}
+ body.reading-mode .reader-top{flex-basis:48px!important;min-height:48px!important}
+ body.reading-mode .reader-bottom{flex-basis:57px!important;min-height:57px!important}
+ body.reading-mode .reading-stage{padding-block:7px!important}
+ body.reading-mode .book-leaf{padding-top:35px!important;padding-bottom:25px!important}
+ body.reading-mode .leaf-head{top:17px}
+ body.reading-mode .leaf-footer{bottom:11px}
+}
+@media(prefers-reduced-motion:reduce){body.reading-mode .book-cover-face,body.reading-mode .book-flip-sheet,body.reading-mode .reader-meter span{transition:none!important;animation:none!important}}
+/* Opening state is not allowed to occlude the actual manuscript while an animation runs. */
+body.reading-mode .antique-book.opened .book-cover-face{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:rotateY(-110deg)!important}
+@media (min-width:761px) and (max-width:900px){
+ body.reading-mode .book-spread{grid-template-columns:minmax(0,1fr)!important;max-width:750px;margin:auto}
+ body.reading-mode .book-spread .left-leaf,body.reading-mode .book-spine{display:none!important}
+ body.reading-mode .book-spread .right-leaf{display:flex!important;border-radius:10px!important}
+ body.reading-mode .book-leaf{padding:53px 51px 39px!important}
+ body.reading-mode .book-spread.is-opening-spread .right-leaf{background-image:url('paper-ornament.svg'),radial-gradient(ellipse,#f8e9ce,#dfc09a)!important}
+}
+/* An illustrated opening folio, rendered as measured content and reflowed by paginateBook(). */
+body.reading-mode .book-spread.is-opening-spread .right-leaf{background-image:url('paper-ornament.svg'),repeating-linear-gradient(4deg,transparent 0 22px,#80502f06 23px 24px),radial-gradient(ellipse at 52% 35%,#f7e7c7,#ecd4a8 73%,#cfa77e 100%)!important;background-size:100% 100%,auto,cover!important}
+body.reading-mode .book-spread.is-opening-spread .right-leaf .leaf-content{background:transparent!important}
+body.reading-mode .leaf-content .reader-scenery{height:clamp(160px,27vh,255px);min-height:0;max-height:38%;position:relative;border:1px solid #94724d66;border-radius:2px;padding:0;margin:0 0 19px!important;overflow:hidden;background:#ccb492}
+body.reading-mode .reader-scenery-illustration{position:absolute;inset:0;background-image:linear-gradient(180deg,#f1dcb020,transparent 55%,#cfb28f9c),url('academy.webp');background-size:cover,205% auto;background-position:center,100% 43%;filter:sepia(.6) saturate(.65) brightness(1.13);mask-image:radial-gradient(ellipse at 50% 50%,black 48%,transparent 100%)}
+body.reading-mode .leaf-content .reader-scenery figcaption{position:absolute;bottom:6px;left:0;right:0;text-align:center;font:10px Georgia,'Noto Serif CJK KR',serif;letter-spacing:.24em;color:#65482d;background:#e2c49a6e}
+body.reading-mode .antique-book.dark .reader-scenery-illustration{filter:sepia(.85) brightness(.7) saturate(.8)}
+/* Crop the approved academy background to its architectural landscape only;
+   faction emblems are not illustrative chapter canon. */
+body.reading-mode .reader-scenery-illustration{background-size:cover,300% auto;background-position:center,100% 45%}
